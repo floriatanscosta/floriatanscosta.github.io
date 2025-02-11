@@ -1,5 +1,5 @@
-// Função para carregar o conteúdo dinâmico
-function carregarConteudo() {
+// Função para carregar o template e o conteúdo
+function carregarPagina() {
     // Obtém o nome da página atual (ex: "sobre.html")
     const pagina = window.location.pathname.split("/").pop();
 
@@ -19,15 +19,24 @@ function carregarConteudo() {
             arquivoConteudo = "index.html"; // Página inicial
     }
 
-    // Busca o conteúdo da página
-    fetch(arquivoConteudo)
+    // Carrega o template
+    fetch("template.html")
         .then(response => response.text())
         .then(data => {
-            // Injeta o conteúdo no elemento <main>
-            document.getElementById("conteudo").innerHTML = data;
+            // Injeta o template no corpo da página
+            document.body.innerHTML = data;
+
+            // Carrega o conteúdo específico
+            fetch(arquivoConteudo)
+                .then(response => response.text())
+                .then(conteudo => {
+                    // Injeta o conteúdo no elemento <main>
+                    document.getElementById("conteudo").innerHTML = conteudo;
+                })
+                .catch(error => console.error("Erro ao carregar o conteúdo:", error));
         })
-        .catch(error => console.error("Erro ao carregar o conteúdo:", error));
+        .catch(error => console.error("Erro ao carregar o template:", error));
 }
 
 // Executa a função ao carregar a página
-window.onload = carregarConteudo;
+window.onload = carregarPagina;
