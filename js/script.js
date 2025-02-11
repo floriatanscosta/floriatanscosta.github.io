@@ -1,63 +1,44 @@
-// Função para carregar o template e o conteúdo
-async function carregarPagina() {
+document.addEventListener("DOMContentLoaded", async function () {
+    console.log("Iniciando carregamento...");
+
     try {
-        // Esconde o conteúdo inicialmente
-        document.body.style.visibility = 'hidden';
-
         // Obtém o nome da página atual
-        const pagina = window.location.pathname.split("/").pop();
+        const pagina = window.location.pathname.split("/").pop() || "index.html";
+        console.log(`Página detectada: ${pagina}`);
 
-        // Define o arquivo de conteúdo com base na página atual
-        let arquivoConteudo = "index.html"; // Página inicial como padrão
-
-        if (pagina === "educacao.html") {
-            arquivoConteudo = "educacao.html";
-        } else if (pagina === "sobre.html") {
-            arquivoConteudo = "sobre.html";
-        } else if (pagina === "formacao.html") {
-            arquivoConteudo = "formacao.html";
-        } else if (pagina === "publicacoes.html") {
-            arquivoConteudo = "publicacoes.html";
-        } else if (pagina === "contato.html") {
-            arquivoConteudo = "contato.html";
-        } else if (pagina === "arquivos.html") {
-            arquivoConteudo = "arquivos.html";
-        }
+        // Lista de páginas válidas
+        const paginasValidas = ["index.html", "educacao.html", "sobre.html", "formacao.html", "publicacoes.html", "contato.html", "arquivos.html"];
+        const arquivoConteudo = paginasValidas.includes(pagina) ? pagina : "index.html";
 
         // Carrega o template
+        console.log("Carregando template...");
         const templateResponse = await fetch("template.html");
-        if (!templateResponse.ok) {
-            throw new Error(`Erro ao carregar template: ${templateResponse.statusText}`);
-        }
-        const templateText = await templateResponse.text();
+        if (!templateResponse.ok) throw new Error(`Erro ao carregar template: ${templateResponse.status}`);
 
-        // Injeta o template no corpo da página
-        document.body.innerHTML = templateText;
+        const templateHTML = await templateResponse.text();
+        console.log("Template carregado!");
 
-        // Garante que o elemento #conteudo exista antes de inserir conteúdo
+        // Insere o template no <body> sem remover scripts
+        document.body.innerHTML = templateHTML;
+
+        // Confirma se o elemento #conteudo existe
         const conteudoElemento = document.getElementById("conteudo");
-        if (!conteudoElemento) {
-            throw new Error("Elemento #conteudo não encontrado no template.");
-        }
+        if (!conteudoElemento) throw new Error("Elemento #conteudo não encontrado no template!");
 
-        // Carrega o conteúdo específico
+        // Carrega o conteúdo específico da página
+        console.log(`Carregando conteúdo de ${arquivoConteudo}...`);
         const conteudoResponse = await fetch(arquivoConteudo);
-        if (!conteudoResponse.ok) {
-            throw new Error(`Erro ao carregar ${arquivoConteudo}: ${conteudoResponse.statusText}`);
-        }
-        const conteudoText = await conteudoResponse.text();
+        if (!conteudoResponse.ok) throw new Error(`Erro ao carregar ${arquivoConteudo}: ${conteudoResponse.status}`);
 
-        // Injeta o conteúdo no elemento <main>
+        const conteudoText = await conteudoResponse.text();
+        console.log(`Conteúdo de ${arquivoConteudo} carregado!`);
+
+        // Insere o conteúdo dentro do #conteudo
         conteudoElemento.innerHTML = conteudoText;
 
-        // Mostra o conteúdo após tudo estar carregado
-        document.body.style.visibility = 'visible';
+        console.log("Página carregada com sucesso!");
     } catch (error) {
-        console.error("Estamos com problemas. Erro ao carregar a página:", error);
-        // Mostra o conteúdo mesmo em caso de erro para que o usuário não veja uma página em branco
-        document.body.style.visibility = 'visible';
+        console.error("Erro ao carregar a página:", error);
+        document.body.innerHTML = `<h1>Erro ao carregar a página</h1><p>${error.message}</p>`;
     }
-}
-
-// Executa a função ao carregar a página
-window.onload = carregarPagina;
+});
