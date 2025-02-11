@@ -5,23 +5,41 @@
     box-sizing: border-box;
 }
 
-p {
-    padding: 8px 0;
-    margin: 0;
-}
-
+/* estrutura */
 body {
     font-family: Roboto, Arial, sans-serif;
-    line-height: 1.5;
-    background-color: #f4f4f4;
-    color: #333;
+    line-height: 1.3em;
+    background-color: #fff;
+    color: #383838;
 }
 
 .container {
     width: 95%;
     max-width: 1200px;
     margin: 0 auto;
-    padding: 30px;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+/* gerais basicos */
+p {
+    padding: 8px 0;
+    margin: 0;
+}
+
+h1 {
+    font-size: 150%;
+}
+
+h2 {
+    font-size: 140%;
+    padding: 1em 0;
+}
+
+h3 {
+    font-size: 120%;
+    font-weight: 900;
+    padding: 30px 0 0 0;
 }
 
 /* Header */
@@ -29,18 +47,23 @@ header {
     background-color: #4b6f85;
     color: #fff;
     padding: 20px 0;
+    margin: 0 0 30px 0;
     text-align: center;
+    border-bottom: 8px solid #365061;
 }
 
 header h1 {
     margin-bottom: 20px;
+    font-size: 35px;
 }
 
+/* Menu */
 header nav ul {
     list-style: none;
     display: flex;
     justify-content: center;
-    gap: 30px;
+    gap: 25px;
+    padding: 8px 0;
 }
 
 header nav ul li a {
@@ -51,14 +74,21 @@ header nav ul li a {
 
 header nav ul li a:hover {
     text-decoration: underline;
+    color: rgb(183, 197, 239);
 }
 
-/* Footer */
+/* conteudo */
+#conteudo {
+    min-height: 300px;
+}
+
+/* Rodape, Footer */
 footer {
     background-color: #243b49;
     color: #fff;
     text-align: center;
     padding: 20px 0;
+    margin: 30px 0;
 }
 
 footer a {
