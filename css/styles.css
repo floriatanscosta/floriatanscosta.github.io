@@ -67,8 +67,9 @@ header .container {
 
 header h1 {
     margin-bottom: 20px;
-    font-size: 35px;
+    font-size: 30px;
     color: #90bfe1;
+    font-weight: 300;
 }
 
 /* Menu */
@@ -140,20 +141,16 @@ footer a:hover {
         gap: 10px;
     }
 
-    header h1 {
-        font-size: 28px;
-    }
-
     h1 {
-        font-size: 130%;
+        font-size: 22px !important;
     }
 
     h2 {
-        font-size: 120%;
+        font-size: 110%;
     }
 
     h3 {
-        font-size: 110%;
+        font-size: 100%;
     }
 
     footer {
