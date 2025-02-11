@@ -5,6 +5,11 @@
     box-sizing: border-box;
 }
 
+p {
+    padding: 8px 0;
+    margin: 0;
+}
+
 body {
     font-family: Roboto, Arial, sans-serif;
     line-height: 1.5;
@@ -21,7 +26,7 @@ body {
 
 /* Header */
 header {
-    background-color: #333;
+    background-color: #4b6f85;
     color: #fff;
     padding: 20px 0;
     text-align: center;
@@ -50,7 +55,7 @@ header nav ul li a:hover {
 
 /* Footer */
 footer {
-    background-color: #333;
+    background-color: #243b49;
     color: #fff;
     text-align: center;
     padding: 20px 0;
