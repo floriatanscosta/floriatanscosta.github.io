@@ -2,6 +2,14 @@ document.addEventListener("DOMContentLoaded", async function () {
     console.log("Iniciando carregamento...");
 
     try {
+        // Oculta a página antes do carregamento
+        document.body.style.opacity = "0";
+
+        // Carrega o CSS antes de qualquer outra coisa
+        console.log("Carregando CSS...");
+        await carregarCSS("../css/styles.css"); // Altere para o caminho do seu CSS
+        console.log("CSS carregado!");
+
         // Obtém o nome da página atual
         const pagina = window.location.pathname.split("/").pop() || "index.html";
         console.log(`Página detectada: ${pagina}`);
@@ -14,11 +22,10 @@ document.addEventListener("DOMContentLoaded", async function () {
         console.log("Carregando template...");
         const templateResponse = await fetch("template.html");
         if (!templateResponse.ok) throw new Error(`Erro ao carregar template: ${templateResponse.status}`);
-
         const templateHTML = await templateResponse.text();
         console.log("Template carregado!");
 
-        // Insere o template no <body> sem remover scripts
+        // Insere o template no <body>
         document.body.innerHTML = templateHTML;
 
         // Confirma se o elemento #conteudo existe
@@ -29,7 +36,6 @@ document.addEventListener("DOMContentLoaded", async function () {
         console.log(`Carregando conteúdo de ${arquivoConteudo}...`);
         const conteudoResponse = await fetch(arquivoConteudo);
         if (!conteudoResponse.ok) throw new Error(`Erro ao carregar ${arquivoConteudo}: ${conteudoResponse.status}`);
-
         const conteudoText = await conteudoResponse.text();
         console.log(`Conteúdo de ${arquivoConteudo} carregado!`);
 
@@ -37,8 +43,24 @@ document.addEventListener("DOMContentLoaded", async function () {
         conteudoElemento.innerHTML = conteudoText;
 
         console.log("Página carregada com sucesso!");
+
+        // 9️⃣ Exibe a página suavemente
+        document.body.style.opacity = "1";
     } catch (error) {
         console.error("Erro ao carregar a página:", error);
         document.body.innerHTML = `<h1>Erro ao carregar a página</h1><p>${error.message}</p>`;
+        document.body.style.opacity = "1"; // Garante visibilidade mesmo em erro
     }
 });
+
+// Função para carregar CSS antes do conteúdo
+async function carregarCSS(arquivoCSS) {
+    return new Promise((resolve, reject) => {
+        const link = document.createElement("link");
+        link.rel = "stylesheet";
+        link.href = arquivoCSS;
+        link.onload = resolve;  // Chama resolve quando o CSS carregar
+        link.onerror = () => reject(new Error(`Erro ao carregar CSS: ${arquivoCSS}`));
+        document.head.appendChild(link);
+    });
+}
