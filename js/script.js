@@ -1,6 +1,9 @@
 // Função para carregar o template e o conteúdo
 async function carregarPagina() {
     try {
+        // Esconde o conteúdo inicialmente
+        document.body.style.visibility = 'hidden';
+
         // Obtém o nome da página atual
         const pagina = window.location.pathname.split("/").pop();
 
@@ -13,6 +16,8 @@ async function carregarPagina() {
             arquivoConteudo = "sobre.html";
         } else if (pagina === "formacao.html") {
             arquivoConteudo = "formacao.html";
+        } else if (pagina === "publicacoes.html") {
+            arquivoConteudo = "publicacoes.html";
         } else if (pagina === "contato.html") {
             arquivoConteudo = "contato.html";
         } else if (pagina === "arquivos.html") {
@@ -44,8 +49,13 @@ async function carregarPagina() {
 
         // Injeta o conteúdo no elemento <main>
         conteudoElemento.innerHTML = conteudoText;
+
+        // Mostra o conteúdo após tudo estar carregado
+        document.body.style.visibility = 'visible';
     } catch (error) {
         console.error("Estamos com problemas. Erro ao carregar a página:", error);
+        // Mostra o conteúdo mesmo em caso de erro para que o usuário não veja uma página em branco
+        document.body.style.visibility = 'visible';
     }
 }
 

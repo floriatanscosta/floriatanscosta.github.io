@@ -44,21 +44,23 @@ h3 {
 
 /* Header */
 header {
-    background-color: #4b6f85;
+    background-color: #004B7F;
     color: #fff;
     padding: 20px 0 0 0;
     margin: 0 0 30px 0;
     text-align: center;
-    border-bottom: 8px solid #365061;
+    border: none;
 }
 
 header h1 {
     margin-bottom: 20px;
     font-size: 35px;
+    color: #90bfe1;
 }
 
 /* Menu */
 header nav ul {
+    border-bottom: 6px solid #0076CC;
     list-style: none;
     display: flex;
     justify-content: center;
@@ -85,11 +87,12 @@ header nav ul li a:hover {
 
 /* Rodape, Footer */
 footer {
-    background-color: #243b49;
-    color: #fff;
+    background-color: #ffffff;
+    color: #a5a5a5;
     text-align: center;
     padding: 20px 0;
-    margin: 30px 0;
+    margin: 40px 0 0 0;
+    border-top: 3px solid #0076cc;
 }
 
 footer a {
@@ -106,7 +109,8 @@ footer a:hover {
 @media screen and (max-width: 768px) {
     .container {
         width: 100%;
-        padding: 10px;
+        padding: 25px;
+        box-sizing: border-box;
     }
 
     header nav ul {
