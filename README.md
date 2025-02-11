@@ -1,2 +1,3 @@
 #Currículo de Floriatan Santos Costa
-floriatanscosta.github.io/
+
+#http://floriatanscosta.github.io/

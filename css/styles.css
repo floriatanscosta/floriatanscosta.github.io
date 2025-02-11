@@ -14,8 +14,8 @@ body {
 }
 
 .container {
-    width: 95%;
-    max-width: 1200px;
+    width: 100%;
+    max-width: 1100px;
     margin: 0 auto;
     padding: 20px;
     box-sizing: border-box;
@@ -23,33 +23,46 @@ body {
 
 /* gerais basicos */
 p {
-    padding: 8px 0;
-    margin: 0;
+    padding: 0;
+    margin: 10px 0 0 0;
+}
+
+a {
+    text-decoration: underline;
+    color: #b7c5ef;
 }
 
 h1 {
-    font-size: 150%;
+    font-size: 160%;
 }
 
 h2 {
-    font-size: 140%;
+    font-size: 160%;
     padding: 1em 0;
+    color: #80abca;
+    font-weight: 900;
 }
 
 h3 {
     font-size: 120%;
-    font-weight: 900;
-    padding: 30px 0 0 0;
+    font-weight: 700;
+    padding: 5px 0;
+    margin: 10px 0;
 }
 
 /* Header */
 header {
     background-color: #004B7F;
     color: #fff;
-    padding: 20px 0 0 0;
+    padding: 20px 0;
     margin: 0 0 30px 0;
     text-align: center;
     border: none;
+}
+
+header .container {
+    background: transparent;
+    padding: 0;
 }
 
 header h1 {
@@ -64,8 +77,8 @@ header nav ul {
     list-style: none;
     display: flex;
     justify-content: center;
-    gap: 25px;
-    padding: 8px 0;
+    gap: 35px;
+    padding: 10px 0;
     flex-wrap: wrap;
 }
 
@@ -77,25 +90,25 @@ header nav ul li a {
 
 header nav ul li a:hover {
     text-decoration: underline;
-    color: rgb(183, 197, 239);
+    color: #b7c5ef;
 }
 
 /* conteudo */
 #conteudo {
-    min-height: 300px;
+    min-height: 400px;
     line-height: 1.3em;
 }
 
-/* Rodape, Footer */
+/* Footer */
 footer p {
     margin: 0;
     padding: 0;
 }
 
 footer {
-    background-color: #ffffff;
-    color: #a5a5a5;
-    text-align: center;
+    background-color: #fff;
+    color: #899;
+    font-size: 90%;
     padding: 20px 0;
     margin: 40px 0 0 0;
     border-top: 3px solid #0076cc;
@@ -118,7 +131,7 @@ footer a:hover {
 @media screen and (max-width: 768px) {
     .container {
         width: 100%;
-        padding: 25px;
+        padding: 30px;
         box-sizing: border-box;
     }
 
