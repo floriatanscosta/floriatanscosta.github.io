@@ -6,17 +6,17 @@
 }
 
 body {
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
+    font-family: Roboto, Arial, sans-serif;
+    line-height: 1.5;
     background-color: #f4f4f4;
     color: #333;
 }
 
 .container {
-    width: 90%;
+    width: 95%;
     max-width: 1200px;
     margin: 0 auto;
-    padding: 20px;
+    padding: 30px;
 }
 
 /* Header */
@@ -28,14 +28,14 @@ header {
 }
 
 header h1 {
-    margin-bottom: 10px;
+    margin-bottom: 20px;
 }
 
 header nav ul {
     list-style: none;
     display: flex;
     justify-content: center;
-    gap: 20px;
+    gap: 30px;
 }
 
 header nav ul li a {

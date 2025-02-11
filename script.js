@@ -26,7 +26,7 @@ async function carregarPagina() {
         // Injeta o conteúdo no elemento <main>
         document.getElementById("conteudo").innerHTML = conteudoText;
     } catch (error) {
-        console.error("Erro ao carregar a página:", error);
+        console.error("Estamos com problemas. Erro ao carregar a página:", error);
     }
 }
 
