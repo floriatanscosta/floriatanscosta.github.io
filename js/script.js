@@ -44,7 +44,7 @@ document.addEventListener("DOMContentLoaded", async function () {
 
         console.log("Página carregada com sucesso!");
 
-        // 9️⃣ Exibe a página suavemente
+        // Exibe a página suavemente
         document.body.style.opacity = "1";
     } catch (error) {
         console.error("Erro ao carregar a página:", error);
