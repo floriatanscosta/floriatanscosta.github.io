@@ -7,6 +7,13 @@
     box-sizing: border-box;
 }
 
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    transition: opacity 0.3s;
+}
+
 /* estrutura */
 body {
     font-family: Roboto, Arial, sans-serif;
@@ -101,6 +108,34 @@ header nav ul li a:hover {
 #conteudo {
     min-height: 400px;
     line-height: 1.3em;
+}
+
+/* imagens e legendas */
+.img-container {
+    text-align: center;
+    max-width: 100%;
+    margin: 30px auto;
+}
+
+.img-container img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 10px;
+    transition: opacity 0.3s;
+    margin: 0 auto;
+}
+
+.img-container img:hover {
+    opacity: 0.8;
+}
+
+.caption {
+    font-size: 85%;
+    color: #555;
+    margin-top: 10px;
+    font-style: italic;
+    text-align: center;
 }
 
 /* Footer */
@@ -202,6 +237,7 @@ footer a:hover {
         flex-direction: column;
         width: 100%;
     }
+
     .conlun2 .col {
         width: 100%;
     }
