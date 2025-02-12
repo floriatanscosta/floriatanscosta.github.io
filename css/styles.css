@@ -165,21 +165,29 @@ footer a:hover {
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
-    max-width: 100%;
     width: 100%;
-    gap: 20px;
+    gap: 10px;
     margin: 1em 0;
+}
+
+.conlun2 #col1 {
+    background-color: rgb(77, 109, 169);
+    max-width: 35%;
+}
+
+.conlun2 #col2 {
+    background-color: #f1f1f1;
+    font-size: 120%;
+    line-height: 140%;
 }
 
 .col {
     flex: 1;
-    width: 50%;
+    width: 10%;
     box-sizing: border-box;
-    padding: 20px 25px;
-    background-color: #f1f1f1;
-    border-radius: 0;
+    padding: 20px;
     border: none;
-    text-align: center;
+    background-color: #565;
 }
 
 .col h3 {
