@@ -1,3 +1,5 @@
+/************************* GERAL *************************/
+
 /* Reset básico */
 * {
     margin: 0;
@@ -23,8 +25,8 @@ body {
 
 /* gerais basicos */
 p {
-    padding: 0;
-    margin: 10px 0 0 0;
+    padding: 10px 0;
+    margin: 1em 0;
 }
 
 a {
@@ -159,9 +161,9 @@ footer a:hover {
     }
 }
 
-/***** ESTRUTURA BASE FIM ******/
 
-/* elementos colunas */
+/************************* ESTRUTURA BASE FIM ************************* /
+/* COLUNAS */
 .conlun2 {
     display: flex;
     flex-wrap: wrap;
@@ -169,17 +171,18 @@ footer a:hover {
     width: 100%;
     gap: 10px;
     margin: 1em 0;
+    border-bottom: 6px solid #0f5e7e;
 }
 
 .conlun2 #col1 {
-    background-color: rgb(77, 109, 169);
-    max-width: 35%;
+    max-width: 20%;
+    padding: 0;
 }
 
 .conlun2 #col2 {
-    background-color: #f1f1f1;
     font-size: 120%;
     line-height: 140%;
+    padding: 0 20px 20px 40px;
 }
 
 .col {
@@ -188,7 +191,6 @@ footer a:hover {
     box-sizing: border-box;
     padding: 20px;
     border: none;
-    background-color: #565;
 }
 
 .col h3 {
@@ -207,3 +209,43 @@ footer a:hover {
         width: 100%;
     }
 }
+
+/* PÁGINAS ESPECIFICAS */
+
+/* Publicações */
+#publicacoes p {
+    margin: 20px;
+}
+#publicacoes {
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 0px;
+    box-sizing: border-box;
+    background: #f1f1f1;
+    color: #383838;
+}
+
+#publicacoes a {
+    color: rgb(12, 83, 134);
+    text-decoration: underline;
+}
+
+.artigos {
+    border-left: 6px solid #179a65;
+}
+
+.cap {
+    border-left: 6px solid #da4ab3;
+}
+
+.resumos {
+    border-left: 6px solid #2883b8;
+}
+
+@media (max-width: 600px) {
+    #publicacoes {
+        font-size: 14px;
+        padding: 10px;
+    }
+}
+
