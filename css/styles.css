@@ -14,7 +14,17 @@ img {
     transition: opacity 0.3s;
 }
 
-/* estrutura */
+a {
+    color: #b7c5ef;
+    text-decoration: underline;
+}
+
+a:hover {
+    color: #0e2760;
+    text-decoration: underline;
+}
+
+/* ESTRUTURA */
 body {
     font-family: Roboto, Arial, sans-serif;
     line-height: 1;
@@ -36,11 +46,6 @@ p {
     margin: 1em 0;
 }
 
-a {
-    text-decoration: underline;
-    color: #b7c5ef;
-}
-
 h1 {
     font-size: 160%;
 }
@@ -57,6 +62,7 @@ h3 {
     font-weight: 600;
     padding: 0.6em 0;
     margin: 1em 0;
+    color: #6489a3;
 }
 
 /* Header */
@@ -84,7 +90,7 @@ header h1 {
 
 /* Menu */
 header nav ul {
-    border-bottom: 4px solid #b4d2ea;
+    border-bottom: 6px solid #b4d2ea;
     list-style: none;
     display: flex;
     justify-content: center;
@@ -199,6 +205,10 @@ footer a:hover {
 
 /************************* ESTRUTURA BASE FIM ************************* /
 /* COLUNAS LAYOUT */
+#descricao {
+    margin: 20px 0 30px 0;
+    padding: 1em 0;
+}
 .conlun2 {
     display: flex;
     flex-wrap: wrap;
@@ -215,9 +225,15 @@ footer a:hover {
 }
 
 .conlun2 #col2 {
-    font-size: 120%;
-    line-height: 140%;
-    padding: 20px;
+    font-size: 110%;
+    line-height: 120%;
+    padding: 0px;
+}
+
+.conlun2 #col3 {
+    max-width: 15%;
+    padding: 0;
+    border: none;
 }
 
 .col {
@@ -243,24 +259,24 @@ footer a:hover {
     }
 }
 
-/* PÁGINAS ESPECIFICAS */
+/* ESTRUTURA PÁGINAS ESPECIFICAS */
 
 /* Publicações */
 #publicacoes p {
-    margin: 20px;
+    margin: 0 0 10px 0;
 }
 
 #publicacoes {
-    padding: 20px;
-    margin: 20px 0;
-    border-radius: 0px;
+    padding: 30px;
+    margin: 0;
     box-sizing: border-box;
-    background: #f1f1f1;
+    background: #efefef;
     color: #383838;
+    font-weight: 400;
 }
 
 #publicacoes a {
-    color: rgb(12, 83, 134);
+    color: #0c5386;
     text-decoration: underline;
 }
 
