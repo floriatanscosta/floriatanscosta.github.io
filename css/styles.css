@@ -108,6 +108,7 @@ footer p {
 
 footer {
     background-color: #fff;
+    box-sizing: border-box;
     color: #899;
     font-size: 85%;
     padding: 20px 0;
@@ -154,7 +155,7 @@ footer a:hover {
     }
 
     footer {
-        padding: 15px 0;
+        padding: 20px 35px;
     }
 }
 
