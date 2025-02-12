@@ -226,6 +226,7 @@ footer a:hover {
     font-size: 110%;
     font-weight: 300;
 }
+
 .conlun2 {
     display: flex;
     flex-wrap: wrap;
@@ -320,4 +321,38 @@ footer a:hover {
         font-size: 14px;
         padding: 10px;
     }
+}
+
+/* ícones redes sociais*/
+.social-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 5px;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.social-box {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 8px 20px;
+    border-radius: 10px;
+    box-shadow: 2px 5px 10px rgba(0, 0, 0, 0.1);
+    background-color: #ffffff;
+    text-decoration: none;
+    color: #777777;
+    font-size: 1em;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+.social-box:hover {
+    transform: scale(1.1);
+}
+
+.social-box img {
+    width: 35px;
+    height: 35px;
 }
