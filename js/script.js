@@ -1,20 +1,20 @@
 document.addEventListener("DOMContentLoaded", async function () {
     console.log("Iniciando carregamento...");
-
+    
     try {
         // Oculta a página antes do carregamento
         document.body.style.opacity = "0";
 
         // Carrega o CSS antes de qualquer outra coisa
         console.log("Carregando CSS...");
-        await carregarCSS("../css/styles.css"); // Altere para o caminho do seu CSS
+        await carregarCSS("../css/styles.css");
         console.log("CSS carregado!");
 
         // Obtém o nome da página atual
         const pagina = window.location.pathname.split("/").pop() || "index.html";
         console.log(`Página detectada: ${pagina}`);
 
-        // Lista de páginas válidas
+        // Lista de páginas
         const paginasValidas = ["index.html", "educacao.html", "historico.html", "premiacoes.html", "sobre.html", "formacao.html", "publicacoes.html", "contato.html", "arquivos.html"];
         const arquivoConteudo = paginasValidas.includes(pagina) ? pagina : "index.html";
 
@@ -25,10 +25,10 @@ document.addEventListener("DOMContentLoaded", async function () {
         const templateHTML = await templateResponse.text();
         console.log("Template carregado!");
 
-        // Insere o template no <body>
+        // Insere o template
         document.body.innerHTML = templateHTML;
 
-        // Confirma se o elemento #conteudo existe
+        // Confirma se o elemento #conteudo é valido
         const conteudoElemento = document.getElementById("conteudo");
         if (!conteudoElemento) throw new Error("Elemento #conteudo não encontrado no template!");
 
