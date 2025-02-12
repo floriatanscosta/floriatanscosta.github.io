@@ -279,7 +279,7 @@ footer a:hover {
     padding: 30px;
     margin: 0;
     box-sizing: border-box;
-    background: #f9f9f9;
+    background: #f1f6fd;
     color: #383838;
     font-weight: 400;
 }
@@ -294,7 +294,7 @@ footer a:hover {
 }
 
 .cap {
-    border-left: 6px solid #da4ab3;
+    border-left: 6px solid #ce91be;
 }
 
 .resumos {
