@@ -287,7 +287,7 @@ footer a:hover {
     padding: 30px;
     margin: 0;
     box-sizing: border-box;
-    background: #f1f6fd;
+    background: #fdfdfd;
     color: #383838;
     font-weight: 400;
 }
@@ -302,11 +302,11 @@ footer a:hover {
 }
 
 .cap {
-    border-left: 6px solid #ce91be;
+    border-left: 6px solid #a02d5b;
 }
 
 .resumos {
-    border-left: 6px solid #2883b8;
+    border-left: 6px solid #1565c0;
 }
 
 @media (max-width: 600px) {

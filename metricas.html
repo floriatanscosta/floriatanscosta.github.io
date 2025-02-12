@@ -7,15 +7,77 @@
 <!-- conteudo da página abaixo -->
 <h2>Métricas e Indicadores</h2>
 
-<!-- conteudo da página abaixo -->
-<div class="conlun2">
-    <div class="col" id="col1">
-        <!-- conteudo coluna 1 -->
-        <p>Descrição</p>
-    </div>
+<!--descrição da página-->
+<div id="descricao">
+    Métricas de indicadores de produção científica.
+</div>
 
-    <div class="col" id="col2">
-        <!-- conteudo coluna 2 -->
-        <p>Esta página...</p>        
+<style type="text/css">
+    .data {
+        display: flex;
+        justify-content: space-around;
+        gap: 30px;
+        padding: 20px;
+        flex-wrap: wrap;
+    }
+
+    .data p {
+        padding: 0 0 13px 0;
+        margin: 0;
+        font-size: 19px;
+    }
+
+    .box {
+        flex: 1;
+        min-width: 250px;
+        padding: 20px;
+        text-align: center;
+        border-radius: 16px;
+        box-shadow: 0px 6px 20px rgba(158, 158, 158, 0.2);
+    }
+
+    .green {
+        background-color: #e0f7e9;
+        color: #2e7d32;
+        border: 1px solid #b8e4ba;
+    }
+
+    .blue {
+        background-color: #e3f2fd;
+        color: #1565c0;
+        border: 1px solid #c9d9e4;
+    }
+
+    .pink {
+        background-color: #fce4ec;
+        color: #a02d5b;
+        border: 1px solid #ebc7d3;
+    }
+
+    .number {
+        font-size: 3em;
+        font-weight: bold;
+        display: block;
+        margin-top: 10px;
+    }
+</style>
+
+<div class="data">
+    <div class="box green">
+        <p>Artigos publicados</p>
+        <span class="number">29</span>
+    </div>
+    <div class="box blue">
+        <p>Total de citações</p>
+        <span class="number">200</span>
+    </div>
+    <div class="box pink">
+        <p>H-index</p>
+        <span class="number">10</span>
     </div>
 </div>
+
+<p style="font-size: 90%;">
+    <b>Atualização:</b> 10 de fevereiro de 2025</br>
+    <b>Fonte:</b> Scopus, Elsevier</br>
+</p>
