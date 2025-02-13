@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", async function () {
     console.log("Iniciando carregamento...");
-    
+
     try {
         // Oculta a página antes do carregamento
         document.body.style.opacity = "0";
@@ -15,7 +15,7 @@ document.addEventListener("DOMContentLoaded", async function () {
         console.log(`Página detectada: ${pagina}`);
 
         // Lista de páginas
-        const paginasValidas = ["index.html", "educacao.html", "metricas.html", "testes.html", "historico.html", "premiacoes.html", "sobre.html", "formacao.html", "publicacoes.html", "contato.html", "arquivos.html", "projetos.html"];
+        const paginasValidas = ["index.html", "educacao.html", "metricas.html", "testes.html", "historico.html", "premiacoes.html", "sobre.html", "formacao.html", "publicacoes.html", "contato.html", "arquivos.html", "projetos.html", "experiencia.html"];
         const arquivoConteudo = paginasValidas.includes(pagina) ? pagina : "index.html";
 
         // Carrega o template
