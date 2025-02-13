@@ -6,15 +6,12 @@
     <!-- edição do formulário de contato-->
     <script>
             function mostrarConfirmacao() {
-                // Exibe a mensagem de confirmação imediatamente
                 document.getElementById("confirmacao").style.display = "block";
 
-                // Limpa os campos do formulário após 2 segundos
                 setTimeout(function () {
                     document.querySelector("form").reset();
                 }, 2000);
 
-                // Esconde a mensagem após 10 segundos
                 setTimeout(function () {
                     document.getElementById("confirmacao").style.display = "none";
                 }, 10000);
