@@ -10,6 +10,11 @@
     box-sizing: border-box;
 }
 
+::selection {
+  background-color: #1b497b; /* Cor de fundo */
+  color: white; /* Cor do texto */
+}
+
 img {
     max-width: 100%;
     height: auto;
@@ -47,6 +52,13 @@ body {
 p {
     padding: 10px 0;
     margin: 1em 0;
+}
+
+span {
+    padding: 0 0 10px 0;
+    margin: 10px 0;
+    width: 100%;
+    display: inline-block;
 }
 
 h1 {
@@ -205,8 +217,9 @@ footer a:hover {
     }
 
     header nav ul {
-        flex-direction: column;
-        gap: 10px;
+        flex-direction: row;
+        gap: 9px;
+        justify-content: center;
     }
 
     h1 {
@@ -242,7 +255,9 @@ footer a:hover {
         padding: 30px;
     }
     header nav ul {
-        gap: 20px;
+        flex-direction: row;
+        gap: 8px;
+        justify-content: center;
     }
 }
 
@@ -482,7 +497,6 @@ footer a:hover {
     max-width: 600px;
     margin: 0 auto;
     padding: 0;
-    background: #ffffff;
 }
 
 .col label {

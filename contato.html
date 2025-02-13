@@ -5,18 +5,18 @@
 
     <!-- edição do formulário de contato-->
     <script>
-            function mostrarConfirmacao() {
-                document.getElementById("confirmacao").style.display = "block";
+        function mostrarConfirmacao() {
+            document.getElementById("confirmacao").style.display = "block";
 
-                setTimeout(function () {
-                    document.querySelector("form").reset();
-                }, 2000);
+            setTimeout(function () {
+                document.querySelector("form").reset();
+            }, 2000);
 
-                setTimeout(function () {
-                    document.getElementById("confirmacao").style.display = "none";
-                }, 10000);
-            }
-        </script>
+            setTimeout(function () {
+                document.getElementById("confirmacao").style.display = "none";
+            }, 10000);
+        }
+    </script>
 </head>
 
 <!-- conteudo da página abaixo -->
@@ -32,15 +32,18 @@
     <div class="col" id="col4" style="margin: 0 0 30px 0">
         <!-- conteudo coluna 1 -->
         <h3 style="font-size: 140%;">Floriatan Santos Costa</h3>
-        <div style="font-size: 120%; padding: 10px 0;">Pesquisador de Pós-Doutorado</div>
-        <div style="padding: 30px 0 0 0;">Laboratório de Espectrometria, Sensores e Biossensores (LAESB)</div>
+        <span style="font-size: 120%;">Pesquisador de Pós-Doutorado</span>
+        <span style="padding: 0; margin: 0;">Laboratório de Espectrometria, Sensores e Biossensores (LAESB)</span>
         Departamento de Química</br>
         Universidade Federal do Paraná (UFPR)</br>
-        <div style="margin: 20px 0 30px 0">Av. Cel. Francisco H. dos Santos, 100, Jardim das Américas, Curitiba, Paraná, Brasil</br>
-        CEP: 81531-980</div>
-        <h3 style="margin: 20px 0 10px 0;">E-mail:</h3>
-        Institucional: <a href="mailto:floriatancosta@ufpr.br?subject=Contato%20-%20CV%20Floriatan">floriatancosta@ufpr.br</a></br>
-        Acadêmico: <a href="mailto:floriatanscosta@gmail.com?subject=Contato%20-%20CV%20Floriatan">floriatanscosta@gmail.com</a></br>
+        <span style="margin-top: 15px; font-weight: 300;">Av. Cel. Francisco H. dos Santos, 100, Jardim das Américas,
+            Curitiba, Paraná, Brasil</br>
+            CEP: 81531-980</span>
+        <div style="background-color: #eeeeee;padding: 20px; border-radius: 8px; margin: 20px 0;">
+            <h3 style="margin: 0px 0 10px 0;">E-mail:</h3>
+            <span style="margin: 0; padding: 0 0 6px 0;">Institucional: <a href="mailto:floriatancosta@ufpr.br?subject=Contato%20-%20CV%20Floriatan">floriatancosta@ufpr.br</a></span>
+            <span style="margin: 0; padding: 0;">Acadêmico: <a href="mailto:floriatanscosta@gmail.com?subject=Contato%20-%20CV%20Floriatan">floriatanscosta@gmail.com</a></span>
+        </div>
     </div>
 
     <div class="col" id="col2">
@@ -108,7 +111,7 @@
             style="display:none; margin-top:10px; padding:10px; background-color:#fff8c4; color:#665c00; border:1px solid #e6db55; border-radius:5px;transition: 0.3s;">
             Sua mensagem foi enviada com sucesso!
         </div>
-        
+
         <!-- conteudo fim coluna 2-->
     </div>
 </div>
