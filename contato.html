@@ -7,6 +7,11 @@
 <!-- conteudo da página abaixo -->
 <h2>Contato</h2>
 
+<!--descrição da página-->
+<div id="descricao">
+    Descrição da página aqui
+</div>
+
 <!-- conteudo da página abaixo -->
 <div class="conlun2">
     <div class="col" id="col4">
@@ -19,121 +24,50 @@
         Av. Cel. Francisco H. dos Santos, 100, Jardim das Américas, Curitiba, Paraná, Brasil</br>
         CEP: 81531-980</br></br>
         <h3 style="margin-bottom: 8px;">E-mail:</h3>
-        Institucional: <a
-            href="mailto:floriatancosta@ufpr.br?subject=Contato%20-%20CV%20Floriatan">floriatancosta@ufpr.br</a></br>
-        Acadêmico: <a
-            href="mailto:floriatanscosta@gmail.com?subject=Contato%20-%20CV%20Floriatan">floriatanscosta@gmail.com</a></br>
+        Institucional: <a href="mailto:floriatancosta@ufpr.br?subject=Contato%20-%20CV%20Floriatan">floriatancosta@ufpr.br</a></br>
+        Acadêmico: <a href="mailto:floriatanscosta@gmail.com?subject=Contato%20-%20CV%20Floriatan">floriatanscosta@gmail.com</a></br>
     </div>
-
 
     <div class="col" id="col2">
         <!-- conteudo coluna 2 -->
-
-        <style>
-            form {
-                max-width: 600px;
-                margin: 0 auto;
-                padding: 0;
-                background: #ffffff;
-            }
-
-            label {
-                font-weight: bold;
-                display: block;
-                margin-bottom: 5px;
-            }
-
-            input[type="text"],
-            input[type="email"],
-            textarea {
-                width: 100%;
-                padding: 10px;
-                margin-bottom: 15px;
-                border: 1px solid #dedede;
-                background-color: #f8f8f8;
-                border-radius: 6px;
-                font-size: 16px;
-                transition: border 0.3s;
-            }
-
-            input[type="text"]:focus,
-            input[type="email"]:focus,
-            textarea:focus {
-                border-color: #007bff;
-                outline: none;
-            }
-
-            textarea {
-                height: 120px;
-                width: 100%;
-                resize: vertical;
-            }
-
-            input[type="submit"] {
-                width: 100%;
-                background: #142e4a;
-                color: #fff;
-                border: none;
-                padding: 12px 20px;
-                font-size: 16px;
-                cursor: pointer;
-                border-radius: 6px;
-                transition: 0.3s;
-            }
-
-            input[type="submit"]:hover {
-                background: #244e7b;
-            }
-        </style>
-        <form action="https://docs.google.com/forms/d/e/1FAIpQLSd3d7FKDmyAThxq-XY7exYxQTH6gtYghoyTwpyquyxBY2zmWw/formResponse" method="POST" target="_blank">
+        <!-- formulário -->
+        <form
+            action="https://docs.google.com/forms/d/e/1FAIpQLSd3d7FKDmyAThxq-XY7exYxQTH6gtYghoyTwpyquyxBY2zmWw/formResponse"
+            method="POST" target="_blank" onsubmit="mostrarConfirmacao()">
             <ol role="list" style="padding-left:0;list-style-type:none">
                 <div role="listitem">
                     <div>
-                        <div
-                            style="margin-bottom:10px;vertical-align:middle;margin-left:0;margin-top:0;max-width:100%">
-                            <label for="m_-8682885519856189403entry_49077365">
+                        <div style="margin-bottom:10px;vertical-align:middle;margin-left:0;margin-top:0;max-width:100%">
+                            <label>
                                 <div style="display:block;font-weight:bold;margin: 10px 0">
                                     Nome
-                                    <label for="m_-8682885519856189403itemView.getDomIdToLabel()"
-                                        aria-label="(campo obrigatório)"></label>
-                                </div>
-                                <div style="display:block;margin:.1em 0 .25em 0;color:#666">
                                 </div>
                             </label>
-                            <input type="text" name="entry.49077365" value="" aria-label="Nome  " title="">
+                            <input type="text" name="entry.49077365" required>
                         </div>
                     </div>
                 </div>
                 <div role="listitem">
                     <div>
                         <div style="margin-bottom:10px;vertical-align:middle;margin-left:0;margin-top:0;max-width:100%">
-                            <label for="m_-8682885519856189403entry_313408561">
+                            <label>
                                 <div style="display:block;font-weight:bold;margin: 10px 0">
                                     E-mail
-                                    <label for="m_-8682885519856189403itemView.getDomIdToLabel()"
-                                        aria-label="(campo obrigatório)"></label>
-                                </div>
-                                <div style="display:block;margin:.1em 0 .25em 0;color:#666">
                                 </div>
                             </label>
-                            <input type="email" name="entry.313408561" value=""
-                                aria-label="E-mail  Precisa ser um e-mail válido."
-                                title="Precisa ser um e-mail válido.">
+                            <input type="email" name="entry.313408561" required>
                         </div>
                     </div>
                 </div>
                 <div role="listitem">
                     <div style="margin:12px 0">
-                        <div
-                            style="margin-bottom:10px;vertical-align:middle;margin-left:0;margin-top:0;max-width:100%">
-                            <label for="m_-8682885519856189403entry_1043416349">
+                        <div style="margin-bottom:10px;vertical-align:middle;margin-left:0;margin-top:0;max-width:100%">
+                            <label>
                                 <div style="display:block;font-weight:bold;margin: 10px 0">
                                     Mensagem
                                 </div>
-                                <div style="display:block;margin:.1em 0 .25em 0;color:#666">
-                                </div>
                             </label>
-                            <textarea name="entry.1043416349" aria-label="Mensagem  " style="width:100%"></textarea>
+                            <textarea name="entry.1043416349" style="width:100%" required></textarea>
                         </div>
                     </div>
                 </div>
@@ -145,8 +79,9 @@
                     <table style="width: 100%;">
                         <tbody style="width: 100%;">
                             <tr style="width: 100%;">
-                                <td dir="ltr" style="margin:10px 0;vertical-align:middle;width:100%;display:inline-block">
-                                    <input type="submit" value="Enviar mensagen">
+                                <td dir="ltr"
+                                    style="margin:10px 0;vertical-align:middle;width:100%;display:inline-block">
+                                    <input type="submit" value="Enviar mensagem">
                                 </td>
                             </tr>
                         </tbody>
@@ -154,6 +89,30 @@
                 </div>
             </ol>
         </form>
+
+        <div id="confirmacao"
+            style="display:none; margin-top:10px; padding:10px; background-color:#fff8c4; color:#665c00; border:1px solid #e6db55; border-radius:5px;transition: 0.3s;">
+            Sua mensagem foi enviada com sucesso!
+        </div>
+
+        <script>
+            function mostrarConfirmacao() {
+                // Exibe a mensagem de confirmação imediatamente
+                document.getElementById("confirmacao").style.display = "block";
+
+                // Limpa os campos do formulário após 2 segundos
+                setTimeout(function () {
+                    document.querySelector("form").reset();
+                }, 2000);
+
+                // Esconde a mensagem após 10 segundos
+                setTimeout(function () {
+                    document.getElementById("confirmacao").style.display = "none";
+                }, 10000);
+            }
+        </script>
+
+
         <!-- conteudo fim coluna 2-->
     </div>
 </div>
