@@ -241,11 +241,22 @@ footer a:hover {
     .container {
         padding: 30px;
     }
-
     header nav ul {
         gap: 20px;
     }
 }
+
+/* Responsividade 768 - 1100px */
+@media (min-width: 769px) and (max-width: 1109px) {
+    .container {
+        padding: 30px;
+    }
+
+    header nav ul {
+        gap: 10px;
+    }
+}
+
 
 /*---------------- Estrutura base fim ----------------*/
 /* COLUNAS LAYOUT */

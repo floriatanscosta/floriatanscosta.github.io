@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Creator: CorelDRAW -->
+<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" width="320px" height="200px" version="1.1" style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
+viewBox="0 0 320 200"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ xmlns:xodm="http://www.corel.com/coreldraw/odm/2003">
+ <defs>
+  <style type="text/css">
+   <![CDATA[
+    .fil1 {fill:#2668B1}
+    .fil0 {fill:white}
+   ]]>
+  </style>
+ </defs>
+ <g id="Fundo">
+  <metadata id="CorelCorpID_0Corel-Layer"/>
+  <polygon class="fil0" points="0,0 320,0 320,200 0,200 "/>
+  <path class="fil1" d="M260 113.37l-26.51 0.32c0.93,-19.28 -1.92,-32.82 -19.83,-35.3l-49.57 -0.19c0.09,-20.45 -0.17,-40.63 -0.17,-61.3l26.68 0 0 34.36 26.53 0c24.44,1.55 38.45,14.78 42.44,39.7l0.43 22.41zm-200 0l0.44 -22.41c3.99,-24.92 17.99,-38.15 42.43,-39.7l52.92 0 0.12 26.94 -49.56 0.19c-17.92,2.48 -20.77,16.02 -19.83,35.3l-26.52 -0.32zm95.91 -26.74l-26.52 -0.32c0.94,19.27 -1.92,32.82 -19.83,35.3l-49.56 0.18 0.12 26.95 52.91 0c24.45,-1.55 38.45,-14.79 42.44,-39.7l0.44 -22.41zm8.01 0l0.44 22.41c3.99,24.91 17.99,38.15 42.44,39.7l26.53 0 0 34.36 26.67 0c0,-20.68 -0.26,-40.86 -0.17,-61.31l-49.56 -0.18c-17.91,-2.49 -20.76,-16.02 -19.83,-35.3l-26.52 0.32z"/>
+ </g>
+</svg>
