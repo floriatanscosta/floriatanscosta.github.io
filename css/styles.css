@@ -23,7 +23,7 @@ img {
 }
 
 a {
-    color: #b7c5ef;
+    color: #3a4a78;
     text-decoration: underline;
 }
 
@@ -361,8 +361,8 @@ footer a:hover {
 /*---------------- Páginas espécificas ----------------*/
 /* Projetos */
 #boxline {
-    margin: 0 0 40px 0;
-    padding: 0 0 40px 0;
+    margin: 0 0 25px 0;
+    padding: 0 0 25px 0;
     border-bottom: 1px solid #ccc;
 }
 
