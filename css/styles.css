@@ -333,7 +333,7 @@ footer a:hover {
 }
 
 /*---------------- Páginas espécificas ----------------*/
-/*Projetos*/
+/* Projetos */
 #boxline {
     margin: 0 0 40px 0;
     padding: 0 0 40px 0;
@@ -345,7 +345,6 @@ footer a:hover {
     color: #8ba0b1;
 
 }
-
 
 /* Publicações */
 #publicacoes p {
@@ -429,6 +428,41 @@ footer a:hover {
     height: 35px;
 }
 
+/* botão baixar */
+.button-container {
+    text-align: right;
+    margin: 10px 0;
+}
+
+.btn:hover {
+    text-decoration: none;
+}
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    padding: 8px 12px;
+    text-decoration: none;
+    border-radius: 22px;
+    font-size: 14px;
+    font-weight: 500;
+    color: #404040;
+    margin-right: 10px;
+}
+
+.researchgate {
+    background-color: #92E0D0;
+}
+
+.download {
+    background-color: #ED8B8F;
+}
+
+.icon {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+}
 
 /*---------------- PÁGINAS ----------------*/
 /* Contato */
