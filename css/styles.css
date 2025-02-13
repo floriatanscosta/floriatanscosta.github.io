@@ -173,7 +173,7 @@ footer .container {
     width: 100%;
     background-color: #fff;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     gap: 30px;
     flex-wrap: wrap;
 
@@ -187,8 +187,8 @@ footer a:hover {
     text-decoration: underline;
 }
 
-/* Responsividade */
-@media screen and (max-width: 768px) {
+/* Responsividade 425px */
+@media screen and (max-width: 425px) {
     .container {
         width: 100%;
         padding: 30px;
@@ -205,18 +205,33 @@ footer a:hover {
     }
 
     h2 {
-        font-size: 110%;
+        font-size: 120%;
     }
 
     h3 {
-        font-size: 100%;
+        font-size: 105%;
     }
 
+    /*footer*/
     footer {
         padding: 20px 35px;
     }
+
+    footer .container {
+        justify-content: center;
+        gap: 8px;
+    }
 }
 
+/* Responsividade 426-768px */
+@media (min-width: 426px) and (max-width: 768px) {
+    .container {
+        padding: 30px;
+    }
+    header nav ul {
+    gap: 20px;
+    }
+}
 
 /************************* ESTRUTURA BASE FIM ************************* /
 /* COLUNAS LAYOUT */
@@ -272,7 +287,7 @@ footer a:hover {
     padding: 0;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 768px) {
     .conlun2 {
         flex-direction: column;
         width: 100%;
@@ -281,6 +296,11 @@ footer a:hover {
     .conlun2 .col {
         width: 100%;
     }
+
+    .conlun2 #col4 {
+        max-width: 100%;
+    }
+
 }
 
 /* ESTRUTURA PÁGINAS ESPECIFICAS */
@@ -327,19 +347,28 @@ footer a:hover {
 .social-container {
     display: flex;
     justify-content: center;
-    gap: 20px;
-    padding: 5px;
+    gap: 25px;
+    padding: 0px;
+    margin: 30px 0;
     flex-wrap: wrap;
     width: 100%;
+}
+
+.social-container a:hover {
+    text-decoration: none;
+}
+
+.social-container span {
+    display: none;
 }
 
 .social-box {
     display: flex;
     align-items: center;
-    gap: 16px;
-    padding: 8px 20px;
+    gap: 0px;
+    padding: 8px 16px;
     border-radius: 10px;
-    box-shadow: 2px 5px 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 2px 5px 10px #0000001b;
     background-color: #ffffff;
     text-decoration: none;
     color: #777777;
