@@ -233,6 +233,10 @@ footer a:hover {
     h3 {
         font-size: 105%;
     }
+    
+    #col3, #col1 {
+        min-width: 100%;
+    }
 
     /*footer*/
     footer {
