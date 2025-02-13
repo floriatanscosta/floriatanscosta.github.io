@@ -2,6 +2,24 @@
     <link rel="shortcut icon" href="./icons/favicon.svg" />
     <title>Contato - Currículo - Floriatan Santos Costa</title>
     <script src="./js/script.js"></script>
+    
+    <!-- edição do formulário de contato-->
+    <script>
+            function mostrarConfirmacao() {
+                // Exibe a mensagem de confirmação imediatamente
+                document.getElementById("confirmacao").style.display = "block";
+
+                // Limpa os campos do formulário após 2 segundos
+                setTimeout(function () {
+                    document.querySelector("form").reset();
+                }, 2000);
+
+                // Esconde a mensagem após 10 segundos
+                setTimeout(function () {
+                    document.getElementById("confirmacao").style.display = "none";
+                }, 10000);
+            }
+        </script>
 </head>
 
 <!-- conteudo da página abaixo -->
@@ -9,7 +27,7 @@
 
 <!--descrição da página-->
 <div id="descricao">
-    Descrição da página aqui
+    Fique à vontade para me enviar um e-mail ou deixar sua mensagem aqui no formulário. Estou à disposição!
 </div>
 
 <!-- conteudo da página abaixo -->
@@ -89,29 +107,12 @@
                 </div>
             </ol>
         </form>
-
         <div id="confirmacao"
             style="display:none; margin-top:10px; padding:10px; background-color:#fff8c4; color:#665c00; border:1px solid #e6db55; border-radius:5px;transition: 0.3s;">
             Sua mensagem foi enviada com sucesso!
         </div>
 
-        <script>
-            function mostrarConfirmacao() {
-                // Exibe a mensagem de confirmação imediatamente
-                document.getElementById("confirmacao").style.display = "block";
-
-                // Limpa os campos do formulário após 2 segundos
-                setTimeout(function () {
-                    document.querySelector("form").reset();
-                }, 2000);
-
-                // Esconde a mensagem após 10 segundos
-                setTimeout(function () {
-                    document.getElementById("confirmacao").style.display = "none";
-                }, 10000);
-            }
-        </script>
-
+        
 
         <!-- conteudo fim coluna 2-->
     </div>
