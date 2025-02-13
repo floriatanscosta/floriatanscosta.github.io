@@ -219,7 +219,7 @@ footer a:hover {
 
     footer .container {
         justify-content: center;
-        gap: 8px;
+        gap: 5px;
     }
 }
 
@@ -228,8 +228,9 @@ footer a:hover {
     .container {
         padding: 30px;
     }
+
     header nav ul {
-    gap: 20px;
+        gap: 20px;
     }
 }
 
@@ -301,9 +302,26 @@ footer a:hover {
         max-width: 100%;
     }
 
+    footer .container {
+        justify-content: center;
+        gap: 5px;
+
+    }
 }
 
 /* ESTRUTURA PÁGINAS ESPECIFICAS */
+/*Projetos*/
+#projeto {
+    margin: 0 0 40px 0;
+    padding: 0 0 40px 0;
+    border-bottom: 1px solid #ccc;
+}
+
+#projeto h4 {
+    margin: 0 0 20px 0;
+    color: #8ba0b1;
+
+}
 
 /* Publicações */
 #publicacoes p {

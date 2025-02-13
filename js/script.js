@@ -15,7 +15,7 @@ document.addEventListener("DOMContentLoaded", async function () {
         console.log(`Página detectada: ${pagina}`);
 
         // Lista de páginas
-        const paginasValidas = ["index.html", "educacao.html", "metricas.html", "testes.html", "historico.html", "premiacoes.html", "sobre.html", "formacao.html", "publicacoes.html", "contato.html", "arquivos.html"];
+        const paginasValidas = ["index.html", "educacao.html", "metricas.html", "testes.html", "historico.html", "premiacoes.html", "sobre.html", "formacao.html", "publicacoes.html", "contato.html", "arquivos.html", "projetos.html"];
         const arquivoConteudo = paginasValidas.includes(pagina) ? pagina : "index.html";
 
         // Carrega o template
