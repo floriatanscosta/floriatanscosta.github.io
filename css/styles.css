@@ -254,12 +254,10 @@ footer {
 footer .container {
     padding: 3px 0;
     width: 100%;
-    background-color: #fff;
     display: flex;
     justify-content: space-between;
     gap: 30px;
     flex-wrap: wrap;
-
 }
 
 footer a {
@@ -269,7 +267,6 @@ footer a {
 footer a:hover {
     text-decoration: underline;
 }
-
 
 /* Responsividade 430px */
 @media screen and (max-width: 430px) {
