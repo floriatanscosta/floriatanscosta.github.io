@@ -324,8 +324,8 @@ footer a:hover {
 }
 
 .conlun2 #col5 {
-    max-width: 50%;
-    padding: 0 1em 0 0;
+    width: 100%;
+    padding: 0;
     border: none;
     background-color: #fff;
 }
