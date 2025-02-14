@@ -317,7 +317,7 @@ footer a:hover {
     max-width: 50%;
     padding: 0 1em 0 0;
     border: none;
-    background-image: url(./img/svg/fundo.svg);
+    background-image: url(/img/svg/fundo.svg);
     background-size: contain;
     background-repeat: no-repeat;
     background-color: #fff;
