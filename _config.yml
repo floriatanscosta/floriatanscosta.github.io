@@ -1,5 +1,7 @@
 permalink: pretty
 
+google_analytics: G-GJRNCTN9EJ
+
 defaults:
   - scope:
       path: ""
