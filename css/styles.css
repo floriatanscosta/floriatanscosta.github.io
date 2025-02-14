@@ -227,7 +227,7 @@ header .logo {
 img.perfil:hover {
     opacity: 0.85;
     transition: 1s;
-    transform: translateY(10px);
+    transform: scale(1.04);
 
 }
 
