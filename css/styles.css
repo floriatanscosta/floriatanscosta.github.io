@@ -404,14 +404,14 @@ footer a:hover {
     padding: 0;
 }
 
-/* lista */
+/* lista páginas */
 .col ul {
     list-style-type: none;
 }
 
 .col li {
     margin: 0 0 5px 0;
-    padding: 6px;
+    padding: 2px 0;
 }
 
 @media (max-width: 768px) {
@@ -434,6 +434,7 @@ footer a:hover {
 
     }
 }
+
 
 /*---------------- Páginas espécificas ----------------*/
 /* Projetos */
