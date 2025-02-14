@@ -91,7 +91,7 @@ h4 {
 
 /* Header */
 header {
-    background: linear-gradient(230deg, #ffbded2b, rgb(113 143 200 / 23%));
+    background: linear-gradient(230deg, #ffbded2b, #718fc83b);
     padding: 25px 0;
     margin-bottom: 40px;
     border: none;
