@@ -11,12 +11,12 @@ document.addEventListener("DOMContentLoaded", async function () {
         console.log("CSS carregado!");
 
         // Obtém o nome da página atual
-        const pagina = window.location.pathname.split("/").pop() || "index.html";
+        const pagina = window.location.pathname.split("/").pop() || "index";
         console.log(`Página detectada: ${pagina}`);
 
         // Lista de páginas
-        const paginasValidas = ["index.html", "atuacao.html", "vida-de-cientista.html", "destaques.html", "educacao.html", "metricas.html", "testes.html", "historico.html", "premiacoes.html", "sobre.html", "formacao.html", "publicacoes.html", "contato.html", "arquivos.html", "projetos.html", "experiencia.html"];
-        const arquivoConteudo = paginasValidas.includes(pagina) ? pagina : "index.html";
+        const paginasValidas = ["index", "atuacao", "vida-de-cientista", "destaques", "educacao", "metricas", "testes", "historico", "premiacoes", "sobre", "formacao", "publicacoes", "contato", "arquivos", "projetos", "experiencia"];
+        const arquivoConteudo = paginasValidas.includes(pagina) ? pagina : "index";
 
         // Carrega o template
         console.log("Carregando template...");
