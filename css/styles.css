@@ -91,6 +91,7 @@ h4 {
 
 /* Header */
 header {
+    background-color: #fff;
     background: linear-gradient(230deg, #ffbded2b, #718fc83b);
     padding: 25px 0;
     margin-bottom: 40px;
@@ -225,10 +226,13 @@ header .logo {
 }
 
 img.perfil:hover {
-    opacity: 0.85;
-    transition: 1s;
-    transform: scale(1.04);
+    transition: opacity 1s;
+}
 
+img.perfil:hover {
+    opacity: 0.85;
+    transform: scale(1.04);
+    transition: opacity 1s ease-in-out;
 }
 
 /* Footer */
