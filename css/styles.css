@@ -117,6 +117,11 @@ header .container {
     margin-right: 20px;
 }
 
+.header-text {
+    padding-right: 80px;
+    box-sizing: border-box;
+}
+
 .header-text h1 {
     font-size: 24px;
     color: #5e87a3;
@@ -136,17 +141,18 @@ header .container {
     display: flex;
     padding: 0;
     margin: 0;
+    width: 100%;
 }
 
 .header-right ul li {
-    margin-left: 5px;
+    margin-left: 0;
 }
 
 .header-right ul li a {
     color: #496476;
     text-decoration: none;
     font-weight: 400;
-    padding: 20px 8px;
+    padding: 8px 10px;
 }
 
 .header-right ul li a:hover {
@@ -156,22 +162,24 @@ header .container {
 
 /* Responsividade */
 @media (max-width: 768px) {
-    .container {
+    .header-text {
+        padding: 0 0 20px 0;
+        box-sizing: border-box;
+    }
+
+    header .container {
         flex-direction: column;
         text-align: center;
     }
 
-    .header-left {
+    .header-left, .header-right ul  {
         flex-direction: column;
     }
-
-    .header-right ul {
         flex-direction: column;
-        padding-top: 10px;
     }
 
     .header-right ul li {
-        margin: 5px 0;
+        margin: 0 0 2px 0;
     }
 }
 
