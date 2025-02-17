@@ -7,13 +7,12 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    line-height: 1;
 }
 
 ::selection {
     background-color: #1b497b;
-    /* Cor de fundo */
-    color: white;
-    /* Cor do texto */
+    color: #ffffff;
 }
 
 img {
@@ -74,6 +73,7 @@ span {
 
 h1 {
     font-size: 160%;
+    line-height: 1.1;
 }
 
 h2 {
@@ -81,6 +81,7 @@ h2 {
     padding: 0 0 1em 0;
     color: #5a729e;
     font-weight: 900;
+    line-height: 1.1;
 }
 
 h3 {
@@ -89,6 +90,7 @@ h3 {
     padding: 0.6em 0;
     margin: 1em 0;
     color: #6489a3;
+    line-height: 1.1;
 }
 
 h4 {
@@ -96,7 +98,8 @@ h4 {
     font-weight: 600;
     padding: 0;
     margin: 0;
-    color: rgb(122, 122, 122);
+    color: #7a7a7a;
+    line-height: 1.1;
 }
 
 /* Header */
@@ -293,15 +296,15 @@ footer a:hover {
     }
 
     h1 {
-        font-size: 22px !important;
+        font-size: 23px !important;
     }
 
     h2 {
-        font-size: 120%;
+        font-size: 24px;
     }
 
     h3 {
-        font-size: 105%;
+        font-size: 20px;
     }
 
     #col3,
