@@ -39,7 +39,8 @@ a:hover {
     background-position: left;
     background-repeat: no-repeat;
     background-size: contain;
-    padding: 0 0 0 26px;
+    padding-left: 28px;
+    text-decoration: none;
  }
 
 /*---------------- Estrutura base inicio ----------------*/
