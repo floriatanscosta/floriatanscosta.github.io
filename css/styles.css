@@ -33,6 +33,15 @@ a:hover {
     text-decoration: underline;
 }
 
+ a.doi {
+    background-color: #fff;
+    background-image: url(/icons/doi.svg);
+    background-position: left;
+    background-repeat: no-repeat;
+    background-size: contain;
+    padding: 0 0 0 26px;
+ }
+
 /*---------------- Estrutura base inicio ----------------*/
 body {
     font-family: Roboto, Arial, sans-serif;
