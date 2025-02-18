@@ -32,7 +32,7 @@ a:hover {
     text-decoration: underline;
 }
 
- a.doi {
+a.doi {
     background-color: #fff;
     background-image: url(/icons/doi.svg);
     background-position: left;
@@ -40,7 +40,7 @@ a:hover {
     background-size: contain;
     padding-left: 28px;
     text-decoration: none;
- }
+}
 
 /*---------------- Estrutura base inicio ----------------*/
 body {
@@ -638,4 +638,54 @@ footer a:hover {
 
 .col input[type="submit"]:hover {
     background: #244e7b;
+}
+
+
+/* versão impressa */
+
+@media print {
+
+    nav,
+    footer,
+    .menu,
+    .botao-compartilhar {
+        display: none !important;
+    }
+
+    body {
+        font-size: 12pt !important;
+        color: #000;
+        background: none !important;
+        margin: 0;
+        padding: 0.8cm;
+    }
+
+    a {
+        color: #000;
+        text-decoration: underline;
+    }
+
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4 {
+        color: #000;
+        page-break-after: avoid;
+    }
+
+    .pagina-nova {
+        page-break-before: always;
+    }
+
+    header {
+        background-color: #fff;
+        color:#142e4a;
+        border-bottom: 2px solid #ccc;
+
+    }
 }
