@@ -683,9 +683,8 @@ footer a:hover {
     }
 
     header {
-        background-color: #fff;
+        background: #fff !important;
         color:#142e4a;
         border-bottom: 2px solid #ccc;
-
     }
 }
