@@ -1,11 +1,11 @@
 /*------------------------------------------------
-/* Floriatan Santos Costa
-/*------------------------------------------------
+/* Floriatan Santos Costa, 2025
 
 /* ---------------- reset básico ----------------*/
 * {
     margin: 0;
     padding: 0;
+    scroll-behavior: smooth;
     box-sizing: border-box;
     line-height: 1.16;
     font-family: Fira Sans, Roboto, Arial, sans-serif;
