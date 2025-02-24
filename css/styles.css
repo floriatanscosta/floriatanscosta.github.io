@@ -445,6 +445,7 @@ footer a:hover {
     footer .container {
         justify-content: center;
         gap: 5px;
+        text-align: center;
 
     }
 }
