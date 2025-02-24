@@ -383,7 +383,7 @@ footer a:hover {
 }
 
 .conlun2 #col3 {
-    max-width: 15%;
+    max-width: 20%;
     padding: 0;
     border: none;
 }
@@ -436,9 +436,10 @@ footer a:hover {
     .conlun2 .col {
         width: 100%;
     }
-
-    .conlun2 #col4 {
+    
+    .conlun2 #col4, .conlun2 #col3 {
         max-width: 100%;
+        width: 100%;
     }
 
     footer .container {
@@ -683,7 +684,7 @@ footer a:hover {
 
     header {
         background: #fff !important;
-        color:#142e4a;
+        color: #142e4a;
         border-bottom: 2px solid #ccc;
     }
 }
