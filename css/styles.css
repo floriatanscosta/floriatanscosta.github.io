@@ -254,6 +254,12 @@ footer p {
     padding: 0;
 }
 
+footer a {
+    text-decoration: underline;
+    font-weight: normal;
+    color: #3a4a78;
+}
+
 footer {
     background-color: #fff;
     box-sizing: border-box;
@@ -436,8 +442,9 @@ footer a:hover {
     .conlun2 .col {
         width: 100%;
     }
-    
-    .conlun2 #col4, .conlun2 #col3 {
+
+    .conlun2 #col4,
+    .conlun2 #col3 {
         max-width: 100%;
         width: 100%;
     }
