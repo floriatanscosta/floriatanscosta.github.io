@@ -653,7 +653,7 @@ footer a:hover {
 @media print {
 
     nav,
-    footer,
+    footer .right,
     .menu,
     .botao-compartilhar {
         display: none !important;
