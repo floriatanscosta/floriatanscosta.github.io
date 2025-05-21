@@ -8,10 +8,15 @@
     <link rel="apple-touch-icon" href="/icons/favicon.svg" type="image/svg+xml" />
     <script src="/js/script.js"></script>
     <meta property="og:image" content="./img/cover.png" />
-    <meta name="description" content="Pesquisador Pós-Doutorado com foco no desenvolvimento de métodos analíticos sustentáveis." />
+    <meta name="description"
+        content="Pesquisador Pós-Doutorado com foco no desenvolvimento de métodos analíticos sustentáveis." />
 
     <!-- Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+
+    <!-- reCAPTCHA -->
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-GJRNCTN9EJ"></script>
@@ -25,9 +30,17 @@
 
     <!-- titulo da página -->
     <title>Contato - Currículo - Floriatan Santos Costa</title>
+    
     <style>
-        .conlun2 {gap: 50px;}
-        span {padding: 0;margin: 0;}
+        .conlun2 {
+            gap: 50px;
+        }
+
+        span {
+            padding: 0;
+            margin: 0;
+        }
+
         form {
             background-color: #ffffff;
             border: 1px solid #dbe2ea;
@@ -112,9 +125,7 @@
         }
     </style>
 
-    <!-- reCAPTCHA -->
-    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
-</head>
+   </head>
 
 <!-- conteudo da página abaixo -->
 <h2>Contato</h2>
@@ -134,12 +145,16 @@
         <span>Laboratório de Espectrometria, Sensores e Biossensores</span>
         <span>Departamento de Química</span>
         <span>Universidade Federal do Paraná</span>
-        <span style="margin-top: 10px;">Av. Cel. Francisco H. dos Santos, 100, Jardim das Américas, Curitiba, Paraná, Brasil</br>CEP: 81531-980</span>
-        <span><a href="http://www.laesb.ufpr.br/?utm_source=curriculo&utm_medium=floriatan&utm_content=pagecontato&utm_campaign=cv" target="_blank">www.laesb.ufpr.br</a></span>
+        <span style="margin-top: 10px;">Av. Cel. Francisco H. dos Santos, 100, Jardim das Américas, Curitiba, Paraná,
+            Brasil</br>CEP: 81531-980</span>
+        <span><a href="http://www.laesb.ufpr.br/?utm_source=curriculo&utm_medium=floriatan&utm_content=pagecontato&utm_campaign=cv"
+                target="_blank">www.laesb.ufpr.br</a></span>
         <div>
             <h4 style="margin: 40px 0 8px 0; color: #5a729e">E-mail:</h4>
-            <span style="margin: 0; padding: 0 0 6px 0;">Institucional: <a href="mailto:floriatancosta@ufpr.br?subject=Contato%20-%20CV%20Floriatan">floriatancosta@ufpr.br</a></span>
-            <span style="margin: 0; padding: 0;">Acadêmico: <a href="mailto:floriatansc@gmail.com?subject=Contato%20-%20CV%20Floriatan">floriatansc@gmail.com</a></span>
+            <span style="margin: 0; padding: 0 0 6px 0;">Institucional: <a
+                    href="mailto:floriatancosta@ufpr.br?subject=Contato%20-%20CV%20Floriatan">floriatancosta@ufpr.br</a></span>
+            <span style="margin: 0; padding: 0;">Acadêmico: <a
+                    href="mailto:floriatansc@gmail.com?subject=Contato%20-%20CV%20Floriatan">floriatansc@gmail.com</a></span>
         </div>
     </div>
 
@@ -148,16 +163,14 @@
 
         <!-- formulário -->
         <form id="formulario">
-            <h2>Formulário de Contato</h2>
-
             <label for="nome">Nome</label>
-            <input type="text" name="nome" id="nome" required>
+            <input type="text" id="nome" required>
 
             <label for="email">E-mail</label>
-            <input type="email" name="email" id="email" required>
+            <input type="email" id="email" required>
 
             <label for="mensagem">Mensagem</label>
-            <textarea name="mensagem" id="mensagem" rows="5" required></textarea>
+            <textarea id="mensagem" rows="5" required></textarea>
 
             <div class="g-recaptcha" data-sitekey="6LfupEMrAAAAAHjm_7Bms4eBJcZIPif3PvWb1tM1"></div>
 
@@ -179,18 +192,25 @@
     form.addEventListener("submit", function (e) {
         e.preventDefault();
 
-        const response = grecaptcha.getResponse();
-        if (!response) {
+        const recaptchaToken = grecaptcha.getResponse();
+        if (!recaptchaToken) {
             mostrarStatus("Por favor, confirme o reCAPTCHA.", false);
             return;
         }
 
-        const formData = new FormData(form);
-        formData.append("g-recaptcha-response", response);
+        const dados = {
+            nome: document.getElementById("nome").value.trim(),
+            email: document.getElementById("email").value.trim(),
+            mensagem: document.getElementById("mensagem").value.trim(),
+            recaptchaToken: recaptchaToken
+        };
 
         fetch("https://script.google.com/macros/s/AKfycbxJr-LLqfxEeMSGB_PKnAPLrDAW_vWfc7klQHKfhwnwwCshoBO1fm1CHvTSBe1idSgV/exec", {
             method: "POST",
-            body: formData,
+            body: JSON.stringify(dados),
+            headers: {
+                "Content-Type": "application/json"
+            }
         })
             .then(res => res.text())
             .then(msg => {
@@ -200,12 +220,12 @@
             })
             .catch(err => {
                 console.error(err);
-                mostrarStatus("Ocorreu um erro ao enviar. Tente novamente.", false);
+                mostrarStatus("Erro ao enviar. Tente novamente.", false);
             });
     });
 
-    function mostrarStatus(mensagem, sucesso) {
-        statusBox.textContent = mensagem;
+    function mostrarStatus(msg, sucesso) {
+        statusBox.textContent = msg;
         statusBox.className = sucesso ? "sucesso" : "erro";
         statusBox.style.display = "block";
         setTimeout(() => {
