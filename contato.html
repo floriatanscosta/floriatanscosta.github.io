@@ -30,7 +30,7 @@
 
     <!-- titulo da página -->
     <title>Contato - Currículo - Floriatan Santos Costa</title>
-    
+
     <style>
         .conlun2 {
             gap: 50px;
@@ -42,7 +42,7 @@
         }
 
         form {
-            background-color: #ffffff;
+            background-color: #fff;
             border: 1px solid #dbe2ea;
             padding: 25px 30px;
             border-radius: 8px;
@@ -55,7 +55,6 @@
             display: block;
             margin-top: 15px;
             font-weight: bold;
-            color: #444;
         }
 
         input,
@@ -65,17 +64,6 @@
             margin-top: 5px;
             border: 1px solid #ccd6dd;
             border-radius: 5px;
-            font-size: 1em;
-            box-sizing: border-box;
-        }
-
-        textarea {
-            resize: vertical;
-        }
-
-        .g-recaptcha {
-            margin-top: 20px;
-            margin-bottom: 10px;
         }
 
         button {
@@ -84,14 +72,9 @@
             padding: 10px 15px;
             border: none;
             border-radius: 5px;
-            font-size: 1em;
+            margin-top: 20px;
             cursor: pointer;
             width: 100%;
-            margin-top: 10px;
-        }
-
-        button:hover {
-            background-color: #365787;
         }
 
         #mensagem-status {
@@ -113,19 +96,9 @@
             color: #c72c1e;
             border: 1px solid #f5c6cb;
         }
-
-        @media (max-width: 600px) {
-            body {
-                padding: 15px;
-            }
-
-            form {
-                padding: 20px;
-            }
-        }
     </style>
 
-   </head>
+</head>
 
 <!-- conteudo da página abaixo -->
 <h2>Contato</h2>
@@ -172,8 +145,6 @@
             <label for="mensagem">Mensagem</label>
             <textarea id="mensagem" rows="5" required></textarea>
 
-            <div class="g-recaptcha" data-sitekey="6LfupEMrAAAAAHjm_7Bms4eBJcZIPif3PvWb1tM1"></div>
-
             <button type="submit">Enviar</button>
             <div id="mensagem-status"></div>
         </form>
@@ -192,17 +163,10 @@
     form.addEventListener("submit", function (e) {
         e.preventDefault();
 
-        const recaptchaToken = grecaptcha.getResponse();
-        if (!recaptchaToken) {
-            mostrarStatus("Por favor, confirme o reCAPTCHA.", false);
-            return;
-        }
-
         const dados = {
             nome: document.getElementById("nome").value.trim(),
             email: document.getElementById("email").value.trim(),
-            mensagem: document.getElementById("mensagem").value.trim(),
-            recaptchaToken: recaptchaToken
+            mensagem: document.getElementById("mensagem").value.trim()
         };
 
         fetch("https://script.google.com/macros/s/AKfycbxJr-LLqfxEeMSGB_PKnAPLrDAW_vWfc7klQHKfhwnwwCshoBO1fm1CHvTSBe1idSgV/exec", {
@@ -216,7 +180,6 @@
             .then(msg => {
                 mostrarStatus("Mensagem enviada com sucesso!", true);
                 form.reset();
-                grecaptcha.reset();
             })
             .catch(err => {
                 console.error(err);
