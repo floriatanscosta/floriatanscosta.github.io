@@ -9,7 +9,7 @@
     <script src="/js/script.js"></script>
     <meta property="og:image" content="./img/cover.png" />
     <meta name="description" content="Pesquisador Pós-Doutorado com foco no desenvolvimento de métodos analíticos sustentáveis." />
-    
+
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 
@@ -25,7 +25,7 @@
 
     <!-- titulo da página -->
     <title>Contato - Currículo - Floriatan Santos Costa</title>
-    
+
     <!-- edição do formulário de contato-->
     <script>
         function mostrarConfirmacao() {
@@ -42,9 +42,145 @@
     </script>
 
     <style type="text/css">
-        .conlun2 {gap: 50px;}
-        span {padding: 0; margin: 0;}
+        .conlun2 {
+            gap: 50px;
+        }
+
+        span {
+            padding: 0;
+            margin: 0;
+        }
     </style>
+
+    <style>
+        form {
+            background-color: #ffffff;
+            border: 1px solid #dbe2ea;
+            padding: 25px 30px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+            max-width: 500px;
+            width: 100%;
+        }
+
+        label {
+            display: block;
+            margin-top: 15px;
+            font-weight: bold;
+            color: #444;
+        }
+
+        input,
+        textarea {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            border: 1px solid #ccd6dd;
+            border-radius: 5px;
+            font-size: 1em;
+            box-sizing: border-box;
+        }
+
+        textarea {
+            resize: vertical;
+        }
+
+        .g-recaptcha {
+            margin-top: 20px;
+            margin-bottom: 10px;
+        }
+
+        button {
+            background-color: #456AA1;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+            font-size: 1em;
+            cursor: pointer;
+            width: 100%;
+            margin-top: 10px;
+        }
+
+        button:hover {
+            background-color: #365787;
+        }
+
+        #mensagem-status {
+            display: none;
+            margin-top: 20px;
+            padding: 12px;
+            border-radius: 5px;
+            font-size: 0.95em;
+        }
+
+        .sucesso {
+            background-color: #e6f4ea;
+            color: #1a7f37;
+            border: 1px solid #c6e7cd;
+        }
+
+        .erro {
+            background-color: #fdecea;
+            color: #c72c1e;
+            border: 1px solid #f5c6cb;
+        }
+
+        @media (max-width: 600px) {
+            body {
+                padding: 15px;
+            }
+
+            form {
+                padding: 20px;
+            }
+        }
+    </style>
+
+    <!-- reCAPTCHA -->
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+    <!-- google scritp api -->
+    <script>
+        const form = document.getElementById("formulario");
+        const statusBox = document.getElementById("mensagem-status");
+
+        form.addEventListener("submit", function (e) {
+            e.preventDefault();
+
+            const response = grecaptcha.getResponse();
+            if (!response) {
+                mostrarStatus("Por favor, confirme o reCAPTCHA.", false);
+                return;
+            }
+
+            const formData = new FormData(form);
+            formData.append("g-recaptcha-response", response);
+
+            fetch("https://script.google.com/macros/s/AKfycbxJr-LLqfxEeMSGB_PKnAPLrDAW_vWfc7klQHKfhwnwwCshoBO1fm1CHvTSBe1idSgV/exec", {
+                method: "POST",
+                body: formData,
+            })
+                .then(res => res.text())
+                .then(msg => {
+                    mostrarStatus("Mensagem enviada com sucesso!", true);
+                    form.reset();
+                    grecaptcha.reset();
+                })
+                .catch(err => {
+                    console.error(err);
+                    mostrarStatus("Ocorreu um erro ao enviar. Tente novamente.", false);
+                });
+        });
+
+        function mostrarStatus(mensagem, sucesso) {
+            statusBox.textContent = mensagem;
+            statusBox.className = sucesso ? "sucesso" : "erro";
+            statusBox.style.display = "block";
+            setTimeout(() => {
+                statusBox.style.display = "none";
+            }, 8000);
+        }
+    </script>
 </head>
 
 <!-- conteudo da página abaixo -->
@@ -57,7 +193,8 @@
 
 <!-- conteudo da página abaixo -->
 <div class="conlun2" style="margin-bottom: 60px;">
-    <div class="col" id="col5" style="background-color:#f1f6fd;padding: 25px; border-radius: 8px; box-sizing: border-box;">
+    <div class="col" id="col5"
+        style="background-color:#f1f6fd;padding: 25px; border-radius: 8px; box-sizing: border-box;">
         <!-- conteudo coluna 1 -->
         <h3 style="font-size: 24px; color: #5a729e">Floriatan Santos Costa</h3>
         <span style="font-size: 17px;margin: 4px 0 30px 0;">Pesquisador de Pós-Doutorado</span>
@@ -75,67 +212,26 @@
 
     <div class="col" id="col2">
         <!-- conteudo coluna 2 -->
+
         <!-- formulário -->
-        <form action="https://docs.google.com/forms/d/e/1FAIpQLSd3d7FKDmyAThxq-XY7exYxQTH6gtYghoyTwpyquyxBY2zmWw/formResponse" method="POST" target="_blank" onsubmit="mostrarConfirmacao()">
-            <ol role="list" style="padding-left:0;list-style-type:none">
-                <div role="listitem">
-                    <div>
-                        <div style="margin-bottom:10px;vertical-align:middle;margin-left:0;margin-top:0;max-width:100%">
-                            <label>
-                                <div style="display:block;font-weight:bold;margin: 0 0 10px 0">
-                                    Nome
-                                </div>
-                            </label>
-                            <input type="text" name="entry.49077365" required>
-                        </div>
-                    </div>
-                </div>
-                <div role="listitem">
-                    <div>
-                        <div style="margin-bottom:10px;vertical-align:middle;margin-left:0;margin-top:0;max-width:100%">
-                            <label>
-                                <div style="display:block;font-weight:bold;margin: 10px 0">
-                                    E-mail
-                                </div>
-                            </label>
-                            <input type="email" name="entry.313408561" required>
-                        </div>
-                    </div>
-                </div>
-                <div role="listitem">
-                    <div style="margin:0">
-                        <div style="margin-bottom:10px;vertical-align:middle;margin-left:0;margin-top:0;max-width:100%">
-                            <label>
-                                <div style="display:block;font-weight:bold;margin: 10px 0">
-                                    Mensagem
-                                </div>
-                            </label>
-                            <textarea name="entry.1043416349" style="width:100%" required></textarea>
-                        </div>
-                    </div>
-                </div>
-                <input type="hidden" name="partialResponse" value="[null,null,&quot;-7807741929320629897&quot;]">
-                <input type="hidden" name="pageHistory" value="0">
-                <input type="hidden" name="usp" value="mail_form_submit">
-                <input type="hidden" name="fbzx" value="-7807741929320629897">
-                <div style="width: 100%;">
-                    <table style="width: 100%;">
-                        <tbody style="width: 100%;">
-                            <tr style="width: 100%;">
-                                <td dir="ltr"
-                                    style="margin:10px 0;vertical-align:middle;width:100%;display:inline-block">
-                                    <input type="submit" value="Enviar">
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-            </ol>
+        <form id="formulario">
+            <h2>Formulário de Contato</h2>
+
+            <label for="nome">Nome</label>
+            <input type="text" name="nome" id="nome" required>
+
+            <label for="email">E-mail</label>
+            <input type="email" name="email" id="email" required>
+
+            <label for="mensagem">Mensagem</label>
+            <textarea name="mensagem" id="mensagem" rows="5" required></textarea>
+
+            <div class="g-recaptcha" data-sitekey="6LfupEMrAAAAAHjm_7Bms4eBJcZIPif3PvWb1tM1"></div>
+
+            <button type="submit">Enviar</button>
+            <div id="mensagem-status"></div>
         </form>
-        <div id="confirmacao"
-            style="display:none; margin-top:10px; padding:10px; background-color:#fff8c4; color:#665c00; border:1px solid #e6db55; border-radius:5px;transition: 0.3s;">
-            Sua mensagem foi enviada com sucesso!
-        </div>
+        <!-- formulari fim -->
 
         <!-- conteudo fim coluna 2-->
     </div>
