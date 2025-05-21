@@ -25,34 +25,9 @@
 
     <!-- titulo da página -->
     <title>Contato - Currículo - Floriatan Santos Costa</title>
-
-    <!-- edição do formulário de contato-->
-    <script>
-        function mostrarConfirmacao() {
-            document.getElementById("confirmacao").style.display = "block";
-
-            setTimeout(function () {
-                document.querySelector("form").reset();
-            }, 2000);
-
-            setTimeout(function () {
-                document.getElementById("confirmacao").style.display = "none";
-            }, 10000);
-        }
-    </script>
-
-    <style type="text/css">
-        .conlun2 {
-            gap: 50px;
-        }
-
-        span {
-            padding: 0;
-            margin: 0;
-        }
-    </style>
-
     <style>
+        .conlun2 {gap: 50px;}
+        span {padding: 0;margin: 0;}
         form {
             background-color: #ffffff;
             border: 1px solid #dbe2ea;
@@ -139,48 +114,6 @@
 
     <!-- reCAPTCHA -->
     <script src="https://www.google.com/recaptcha/api.js" async defer></script>
-    <!-- google scritp api -->
-    <script>
-        const form = document.getElementById("formulario");
-        const statusBox = document.getElementById("mensagem-status");
-
-        form.addEventListener("submit", function (e) {
-            e.preventDefault();
-
-            const response = grecaptcha.getResponse();
-            if (!response) {
-                mostrarStatus("Por favor, confirme o reCAPTCHA.", false);
-                return;
-            }
-
-            const formData = new FormData(form);
-            formData.append("g-recaptcha-response", response);
-
-            fetch("https://script.google.com/macros/s/AKfycbxJr-LLqfxEeMSGB_PKnAPLrDAW_vWfc7klQHKfhwnwwCshoBO1fm1CHvTSBe1idSgV/exec", {
-                method: "POST",
-                body: formData,
-            })
-                .then(res => res.text())
-                .then(msg => {
-                    mostrarStatus("Mensagem enviada com sucesso!", true);
-                    form.reset();
-                    grecaptcha.reset();
-                })
-                .catch(err => {
-                    console.error(err);
-                    mostrarStatus("Ocorreu um erro ao enviar. Tente novamente.", false);
-                });
-        });
-
-        function mostrarStatus(mensagem, sucesso) {
-            statusBox.textContent = mensagem;
-            statusBox.className = sucesso ? "sucesso" : "erro";
-            statusBox.style.display = "block";
-            setTimeout(() => {
-                statusBox.style.display = "none";
-            }, 8000);
-        }
-    </script>
 </head>
 
 <!-- conteudo da página abaixo -->
@@ -236,3 +169,47 @@
         <!-- conteudo fim coluna 2-->
     </div>
 </div>
+
+
+<!-- google scritp api -->
+<script>
+    const form = document.getElementById("formulario");
+    const statusBox = document.getElementById("mensagem-status");
+
+    form.addEventListener("submit", function (e) {
+        e.preventDefault();
+
+        const response = grecaptcha.getResponse();
+        if (!response) {
+            mostrarStatus("Por favor, confirme o reCAPTCHA.", false);
+            return;
+        }
+
+        const formData = new FormData(form);
+        formData.append("g-recaptcha-response", response);
+
+        fetch("https://script.google.com/macros/s/AKfycbxJr-LLqfxEeMSGB_PKnAPLrDAW_vWfc7klQHKfhwnwwCshoBO1fm1CHvTSBe1idSgV/exec", {
+            method: "POST",
+            body: formData,
+        })
+            .then(res => res.text())
+            .then(msg => {
+                mostrarStatus("Mensagem enviada com sucesso!", true);
+                form.reset();
+                grecaptcha.reset();
+            })
+            .catch(err => {
+                console.error(err);
+                mostrarStatus("Ocorreu um erro ao enviar. Tente novamente.", false);
+            });
+    });
+
+    function mostrarStatus(mensagem, sucesso) {
+        statusBox.textContent = mensagem;
+        statusBox.className = sucesso ? "sucesso" : "erro";
+        statusBox.style.display = "block";
+        setTimeout(() => {
+            statusBox.style.display = "none";
+        }, 8000);
+    }
+</script>
