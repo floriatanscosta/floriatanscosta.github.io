@@ -11,7 +11,7 @@ document.addEventListener("DOMContentLoaded", async function () {
         const pagina = window.location.pathname.split("/").pop() || "index";
         console.log(`Página detectada: ${pagina}`);
 
-        const paginasValidas = ["index", "atuacao", "design", "vida-de-cientista", "destaques", "educacao", "metricas", "testes", "historico", "premiacoes", "sobre", "formacao", "publicacoes", "contato", "arquivos", "projetos", "experiencia"];
+        const paginasValidas = ["index", "atuacao", "design", "vida-de-cientista", "destaques", "educacao", "metricas", "testes", "historico", "premiacoes", "sobre", "formacao", "publicacoes", "contato", "contato-2", "arquivos", "projetos", "experiencia"];
         const arquivoConteudo = paginasValidas.includes(pagina) ? pagina : "index";
 
         console.log("Carregando template...");
