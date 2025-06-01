@@ -25,126 +25,27 @@
     <title>Vida de cientista - Floriatan Santos Costa - Currículo online</title>
 
     <style>
-        body {
-            background-color: #455165;
-            color: #fff
-        }
+     body{background-color:#3C4664;color:#fff}
+    a{text-decoration:underline;font-weight:700;color:#e18cbe}
+    .header-text h1,.header-text .descricao,.header-right ul li,.header-right ul li a,footer a{color:#fff}
+    footer{background-color:#29313f;border:none}
+    #descricao{font-weight:900;font-size:25px;padding:0 0 40px;margin:0}
+    #timeline{display:flex;flex-wrap:wrap;max-width:100%;margin:20px auto;padding:50px 40px;border:none;overflow:hidden;border-radius:10px}
+    #timeline:hover{box-shadow:1px 1px 20px 20px #cad6dc;transform:scale(1.01);transition:transform .6s ease-in-out}
+    #timeline .left{flex:1;min-width:50%;display:flex;align-items:center;justify-content:center;padding:0;box-sizing:border-box;opacity:1;transition:opacity .5s ease-in-out}
+    .left img{opacity:1;transition:opacity .5s ease-in-out}
+    .left img:hover{opacity:.4}
+    #timeline .right{flex:1;min-width:50%;padding:20px}
+    #timeline .left img{max-width:100%;height:auto}
+    #timeline .right h3,h2{font-size:36px;line-height:1.2em;font-weight:900;color:#dee7f8;margin:auto}
+    #timeline .right h4{font-size:28px;line-height:1.1em;font-weight:500;color:#b9c7e0;margin:auto}
+    #timeline .right span{display:block;color:#fff;font-size:18px;line-height:1.3;font-weight:300}
     
-        a {
-            text-decoration: underline;
-            font-weight: 700;
-            color: #e18cbe
-        }
-    
-        .header-text h1,
-        .header-text .descricao,
-        .header-right ul li,
-        .header-right ul li a,
-        footer a {
-            color: #fff
-        }
-    
-        footer {
-            background-color: #29313f;
-            border: none
-        }
-    
-        #descricao {
-            font-weight: 900;
-            font-size: 25px;
-            padding: 0 0 40px;
-            margin: 0
-        }
-    
-        #timeline {
-            display: flex;
-            flex-wrap: wrap;
-            max-width: 100%;
-            margin: 20px auto;
-            padding: 50px 40px;
-            border: none;
-            overflow: hidden;
-            border-radius: 10px;
-        }
-
-        #timeline:hover {
-            box-shadow: 1px 1px 20px 20px #cad6dc;
-            transform: scale(1.01);
-            transition: transform 0.6s ease-in-out;
-        }
-    
-        #timeline .left {
-            flex: 1;
-            min-width: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            padding: 0;
-            box-sizing: border-box;
-            opacity: 1;
-            transition: opacity .5s ease-in-out
-        }
-    
-        .left img {
-            opacity: 1;
-            transition: opacity .5s ease-in-out
-        }
-    
-        .left img:hover {
-            opacity: .4
-        }
-    
-        #timeline .right {
-            flex: 1;
-            min-width: 50%;
-            padding: 20px
-        }
-    
-        #timeline .left img {
-            max-width: 100%;
-            height: auto
-        }
-    
-        #timeline .right h3,
-        h2 {
-            font-size: 36px;
-            line-height: 1.2em;
-            font-weight: 900;
-            color: #dee7f8;
-            margin: auto
-        }
-    
-        #timeline .right h4 {
-            font-size: 28px;
-            line-height: 1.1em;
-            font-weight: 500;
-            color: #b9c7e0;
-            margin: auto
-        }
-    
-        #timeline .right span {
-            display: block;
-            color: #fff;
-            font-size: 18px;
-            line-height: 1.3;
-            font-weight: 300
-        }
-    
-        @media (max-width: 1000px) {
-            #timeline {
-                margin: 30px auto;
-                padding: 10px
-            }
-    
-            #timeline .container {
-                flex-direction: column
-            }
-    
-            #timeline .left,
-            #timeline .right {
-                min-width: 100%
-            }
-        }
+    @media (max-width: 1000px) {
+    #timeline{margin:30px auto;padding:10px}
+    #timeline .container{flex-direction:column}
+    #timeline .left,#timeline .right{min-width:100%}
+    }
     </style>
     
 </head>
