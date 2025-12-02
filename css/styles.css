@@ -145,8 +145,8 @@ header .logo {
     margin: 0;
 }
 
-.header-text h1 a {
-    text-decoration: none;
+header a {
+    text-decoration: none !important;
 }
 
 .header-text .descricao {
