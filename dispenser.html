@@ -6,15 +6,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>D100 VolCalc | MARTE - I3A</title>
     <link rel="icon" type="image/png" href="https://floriatanscosta.github.io/img/marte/favicon.png">
-    <meta name="description" content="Optimization algorithm and volume calculator for the D100 dispenser. Developed by the MARTE - I3A Research Group.">
+    <meta name="description"
+        content="Optimization algorithm and volume calculator for the D100 dispenser. Developed by the MARTE - I3A Research Group.">
     <meta property="og:type" content="website">
     <meta property="og:title" content="D100 VolCalc">
-    <meta property="og:description" content="Optimization algorithm and volume calculator for the D100 dispenser. Developed by the MARTE - I3A Research Group.">
+    <meta property="og:description"
+        content="Optimization algorithm and volume calculator for the D100 dispenser. Developed by the MARTE - I3A Research Group.">
     <meta property="og:image" content="https://floriatanscosta.github.io/img/marte/cover.png">
     <meta property="og:url" content="https://marte.i3a.es/">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="D100 VolCalc">
-    <meta name="twitter:description" content="Optimization algorithm and volume calculator for the D100 dispenser. Developed by the MARTE - I3A Research Group.">
+    <meta name="twitter:description"
+        content="Optimization algorithm and volume calculator for the D100 dispenser. Developed by the MARTE - I3A Research Group.">
     <meta name="twitter:image" content="https://floriatanscosta.github.io/img/marte.png">
 
     <style>
@@ -444,7 +447,8 @@
 <body>
 
     <div class="disclaimer-banner">
-        Notice: This algorithm is currently under development and may contain operational errors or inconsistencies.
+        This algorithm is currently under development and may contain operational errors or inconsistencies | For
+        internal use only.
     </div>
 
     <header class="main-header">
@@ -475,7 +479,8 @@
                     <label>Increment per point (nL)</label>
                     <div class="tooltip">
                         <div class="tooltip-icon">?</div>
-                        <span class="tooltip-text">Increment applied to each subsequent point. Only positive values or zero are allowed.</span>
+                        <span class="tooltip-text">Increment applied to each subsequent point. Only positive values or
+                            zero are allowed.</span>
                     </div>
                 </div>
                 <input id="incremento" type="number" value="1" step="0.1" min="0">
@@ -486,7 +491,8 @@
                     <label>Number of points</label>
                     <div class="tooltip">
                         <div class="tooltip-icon">?</div>
-                        <span class="tooltip-text">Total number of dispensations (droplets). Must be an integer value between 1 and 1000.</span>
+                        <span class="tooltip-text">Total number of dispensations (droplets). Must be an integer value
+                            between 1 and 1000.</span>
                     </div>
                 </div>
                 <input id="quantidadePontos" type="number" value="20" min="1" max="1000" step="1">
@@ -497,7 +503,8 @@
                     <label>Cassette Capacity (nL)</label>
                     <div class="tooltip">
                         <div class="tooltip-icon">?</div>
-                        <span class="tooltip-text">Total fluid capacity of the dispenser Cassette. Maximum of 20000 nL (or 20 µL).</span>
+                        <span class="tooltip-text">Total fluid capacity of the dispenser Cassette. Maximum of 20000 nL
+                            (or 20 µL).</span>
                     </div>
                 </div>
                 <input id="capacidadeReservatorio" type="number" value="20000" step="100" min="1" max="20000">
@@ -508,7 +515,8 @@
                     <label>Safety margin (%)</label>
                     <div class="tooltip">
                         <div class="tooltip-icon">?</div>
-                        <span class="tooltip-text">Additional percentage added to the total volume to prevent fluid depletion. Allowed range from 0% to 50%.</span>
+                        <span class="tooltip-text">Additional percentage added to the total volume to prevent fluid
+                            depletion. Allowed range from 0% to 50%.</span>
                     </div>
                 </div>
                 <input id="seguranca" type="number" value="10" min="0" max="50">
@@ -526,7 +534,8 @@
 
         <div class="container">
             <h2>Volume Table</h2>
-            <div id="placeholder" class="placeholder">Enter the required data and execute the calculation to view the results.</div>
+            <div id="placeholder" class="placeholder">Enter the required data and execute the calculation to view the
+                results.</div>
             <div class="table-wrapper" id="tableWrapper">
                 <table id="tabela">
                     <thead>
@@ -545,6 +554,7 @@
         <div class="footer-left">MARTE - I3A Research Group</div>
         <div id="footer-date"></div>
         <div>Version 3.7.0</div>
+        ©2026 Floriatan
     </footer>
 
     <script>
@@ -640,12 +650,12 @@
             // Alteração 1: Laço validando o volume mínimo de 0.60 nL ponto a ponto dinamicamente
             for (let i = 0; i < n; i++) {
                 let v = v0 + i * inc;
-                
+
                 if (v < 0.6) {
                     mensagem(`The volume at point ${i + 1} (${v.toFixed(3)} nL) is below the minimum operational limit of the cassette (0.60 nL).`);
                     return;
                 }
-                
+
                 totalNL += v;
                 volumeUltimoPonto = v;
                 linhasHtml.push(`<tr><td>${i + 1}</td><td>${v.toFixed(3)}</td></tr>`);
