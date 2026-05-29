@@ -5,18 +5,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>D100 VolCalc | MARTE - I3A</title>
-    <meta name="description"
-        content="Algoritmo de otimização e calculadora de volume para o dispenser D100. Desenvolvido pelo MARTE - I3A Research Group.">
+    <link rel="icon" type="image/png" href="https://floriatanscosta.github.io/img/marte/favicon.png">
+    <meta name="description" content="Algoritmo de otimização e calculadora de volume para o dispenser D100. Desenvolvido pelo MARTE - I3A Research Group.">
     <meta property="og:type" content="website">
     <meta property="og:title" content="D100 VolCalc">
-    <meta property="og:description"
-        content="Algoritmo de otimização e calculadora de volume para o dispenser D100. Desenvolvido pelo MARTE - I3A Research Group.">
-    <meta property="og:image" content="https://floriatanscosta.github.io/img/marte.png">
+    <meta property="og:description" content="Algoritmo de otimização e calculadora de volume para o dispenser D100. Desenvolvido pelo MARTE - I3A Research Group.">
+    <meta property="og:image" content="https://floriatanscosta.github.io/img/marte/cover.png">
     <meta property="og:url" content="https://marte.i3a.es/">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="D100 VolCalc">
-    <meta name="twitter:description"
-        content="Algoritmo de otimização e calculadora de volume para o dispenser D100. Desenvolvido pelo MARTE - I3A Research Group.">
+    <meta name="twitter:description" content="Algoritmo de otimização e calculadora de volume para o dispenser D100. Desenvolvido pelo MARTE - I3A Research Group.">
     <meta name="twitter:image" content="https://floriatanscosta.github.io/img/marte.png">
 
     <style>
@@ -450,7 +448,7 @@
     </div>
 
     <header class="main-header">
-        <img src="https://marte.i3a.es/wp-content/uploads/2023/02/MARTE_logo.png" alt="MARTE Logo">
+        <img src="https://floriatanscosta.github.io/img/marte/logo.png" alt="MARTE Logo">
         <div class="header-titles">
             <h1>D100 VolCalc</h1>
             <p class="subtitle">D100 Volume Optimizer</p>
@@ -477,8 +475,7 @@
                     <label>Incremento por ponto (nL)</label>
                     <div class="tooltip">
                         <div class="tooltip-icon">?</div>
-                        <span class="tooltip-text">Incremento aplicado a cada ponto subsequente. Pode ser negativo,
-                            contanto que nenhum ponto fique abaixo de 0.60 nL.</span>
+                        <span class="tooltip-text">Incremento aplicado a cada ponto subsequente. Pode ser negativo, contanto que nenhum ponto fique abaixo de 0.60 nL.</span>
                     </div>
                 </div>
                 <input id="incremento" type="number" value="1" step="0.1">
@@ -489,8 +486,7 @@
                     <label>Quantidade de pontos</label>
                     <div class="tooltip">
                         <div class="tooltip-icon">?</div>
-                        <span class="tooltip-text">Número total de dispersões (gotas). Máximo de 1000 pontos de
-                            dispersão.</span>
+                        <span class="tooltip-text">Número total de dispersões (gotas). Máximo de 1000 pontos de dispersão.</span>
                     </div>
                 </div>
                 <input id="quantidadePontos" type="number" value="20" min="1" max="1000" step="1">
@@ -501,8 +497,7 @@
                     <label>Capacidade do Cassette (nL)</label>
                     <div class="tooltip">
                         <div class="tooltip-icon">?</div>
-                        <span class="tooltip-text">Volume total de líquido no Cassette do dispenser. Máximo de 20000 nL
-                            (ou 20 µL).</span>
+                        <span class="tooltip-text">Volume total de líquido no Cassette do dispenser. Máximo de 20000 nL (ou 20 µL).</span>
                     </div>
                 </div>
                 <input id="capacidadeReservatorio" type="number" value="20000" step="100" min="1" max="20000">
@@ -513,8 +508,7 @@
                     <label>Margem de segurança (%)</label>
                     <div class="tooltip">
                         <div class="tooltip-icon">?</div>
-                        <span class="tooltip-text">Porcentagem adicional adicionada ao volume total para evitar falta de
-                            líquido.</span>
+                        <span class="tooltip-text">Porcentagem adicional adicionada ao volume total para evitar falta de líquido.</span>
                     </div>
                 </div>
                 <input id="seguranca" type="number" value="10" min="0">
@@ -532,8 +526,7 @@
 
         <div class="container">
             <h2>Tabela de volumes</h2>
-            <div id="placeholder" class="placeholder">Insira os dados requeridos e execute o cálculo para visualizar os
-                resultados.</div>
+            <div id="placeholder" class="placeholder">Insira os dados requeridos e execute o cálculo para visualizar os resultados.</div>
             <div class="table-wrapper" id="tableWrapper">
                 <table id="tabela">
                     <thead>
