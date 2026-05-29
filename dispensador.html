@@ -4,16 +4,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>D100 Volume Calculator optimization | MARTE - I3A</title>
-    <meta name="description" content="Algoritmo de otimização e calculadora de volume para o dispenser D100. Desenvolvido pelo MARTE - I3A Research Group.">
+    <title>D100 Volume Optimizer | MARTE - I3A</title>
+    <meta name="description"
+        content="Algoritmo de otimização e calculadora de volume para o dispenser D100. Desenvolvido pelo MARTE - I3A Research Group.">
     <meta property="og:type" content="website">
     <meta property="og:title" content="D100 Volume Calculator optimization">
-    <meta property="og:description" content="Algoritmo de otimização e calculadora de volume para o dispenser D100. Desenvolvido pelo MARTE - I3A Research Group.">
+    <meta property="og:description"
+        content="Algoritmo de otimização e calculadora de volume para o dispenser D100. Desenvolvido pelo MARTE - I3A Research Group.">
     <meta property="og:image" content="https://floriatanscosta.github.io/img/marte.png">
     <meta property="og:url" content="https://marte.i3a.es/">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="D100 Volume Calculator optimization">
-    <meta name="twitter:description" content="Algoritmo de otimização e calculadora de volume para o dispenser D100. Desenvolvido pelo MARTE - I3A Research Group.">
+    <meta name="twitter:title" content="D100 Volume Optimization Calculator">
+    <meta name="twitter:description"
+        content="Algoritmo de otimização e calculadora de volume para o dispenser D100. Desenvolvido pelo MARTE - I3A Research Group.">
     <meta name="twitter:image" content="https://floriatanscosta.github.io/img/marte.png">
 
     <style>
@@ -32,13 +35,12 @@
 
         .disclaimer-banner {
             background: #fff3cd;
-            color: #856404;
+            color: #b3890d;
             border: 1px solid #ffeeba;
-            padding: 12px 20px;
+            padding: 8px 20px;
             text-align: center;
             font-size: 14px;
             font-weight: bold;
-            border-radius: 0 0 10px 10px;
             margin: 0 -20px 20px -20px;
         }
 
@@ -46,7 +48,6 @@
             display: flex;
             align-items: center;
             gap: 20px;
-            background: #fff;
             padding: 15px 20px;
             margin-bottom: 20px;
         }
@@ -70,8 +71,8 @@
         }
 
         .container {
-            background: #f1f1f1;
-            border: 1px solid #ccc;
+            background: #e7eef7;
+            border: 1px solid #d0dceb;
             padding: 20px;
             border-radius: 10px;
             height: fit-content;
@@ -204,12 +205,11 @@
         .resultado {
             display: none;
             background: #e7eef7;
-            padding: 15px;
+            padding: 20px;
             border-radius: 6px;
-            margin-top: 15px
+            margin-top: 20px
         }
 
-        /* Padronização das tabelas */
         table,
         .resumo-tabela {
             width: 100%;
@@ -240,10 +240,9 @@
         }
 
         .resumo-tabela td {
-            text-align: left;
+            text-align: right;
         }
 
-        /* CORREÇÃO: Valores numéricos alinhados à direita para melhor legibilidade */
         .resumo-tabela td:last-child {
             text-align: right;
         }
@@ -286,9 +285,10 @@
             flex-direction: row;
             justify-content: space-between;
             align-items: center;
-            font-size: 12px;
+            font-size: 10px;
             gap: 10px;
             flex-wrap: wrap;
+            font-weight: 600;
         }
 
         .footer-left {
@@ -367,7 +367,7 @@
 
             .main-header {
                 box-shadow: none !important;
-                border-bottom: 1pt solid #999 !important;
+                border-bottom: 2pt solid #999 !important;
                 border-radius: 0;
                 padding: 20px 0;
                 margin-top: 0;
@@ -425,24 +425,23 @@
             }
         }
     </style>
-    
+
 </head>
 
 <body>
 
     <div class="disclaimer-banner">
-        Aviso: Este algoritmo está em desenvolvimento e pode conter erros ou inconsistências
-        operacionais.
+        Aviso: Este algoritmo está em desenvolvimento e pode conter erros ou inconsistências operacionais.
     </div>
 
     <header class="main-header">
         <img src="https://marte.i3a.es/wp-content/uploads/2023/02/MARTE_logo.png" alt="MARTE Logo">
-        <h1>D100 Volume Calculator optimization</h1>
+        <h1>D100 Volume Optimization Calculator</h1>
     </header>
 
     <div class="layout">
         <div class="container">
-            <h2>Configurações do Ensaio</h2>
+            <h2>Configurações do ensaio</h2>
 
             <div class="campo">
                 <div class="label-row">
@@ -475,19 +474,19 @@
                             dispersão.</span>
                     </div>
                 </div>
-                <input id="quantidadePontos" type="number" value="20" max="1000">
+                <input id="quantidadePontos" type="number" value="20" min="1" max="1000" step="1">
             </div>
 
             <div class="campo">
                 <div class="label-row">
-                    <label>Capacidade do reservatório (nL)</label>
+                    <label>Capacidade máxima do cassette (nL)</label>
                     <div class="tooltip">
                         <div class="tooltip-icon">?</div>
-                        <span class="tooltip-text">Volume total de líquido no reservatório do dispenser (cassete).
+                        <span class="tooltip-text">Volume total de líquido no reservatório do dispenser (Cassette).
                             Máximo de 20000 nL (ou 20 µL).</span>
                     </div>
                 </div>
-                <input id="capacidadeReservatorio" type="number" value="20000" step="100" max="20000">
+                <input id="capacidadeReservatorio" type="number" value="20000" step="100" min="1" max="20000">
             </div>
 
             <div class="campo">
@@ -495,17 +494,17 @@
                     <label>Margem de segurança (%)</label>
                     <div class="tooltip">
                         <div class="tooltip-icon">?</div>
-                        <span class="tooltip-text">Porcentagem adicional adicionada ao volume total para evitar falta de
-                            líquido.</span>
+                        <span class="tooltip-text">Porcentagem adicional adicionada ao volume total de solução requerida
+                            para o experimento.</span>
                     </div>
                 </div>
-                <input id="seguranca" type="number" value="10">
+                <input id="seguranca" type="number" value="10" min="0">
             </div>
 
             <div class="botoes">
                 <button class="calc" onclick="calcular()">Calcular</button>
-                <button class="clear" onclick="limparCampos()">Limpar</button>
-                <button class="print" onclick="window.print()">Imprimir</button>
+                <button class="clear" onclick="limparCampos()">Reset</button>
+                <button class="print" onclick="window.print()">Baixar</button>
             </div>
 
             <div id="msg" class="msg"></div>
@@ -513,7 +512,7 @@
         </div>
 
         <div class="container">
-            <h2>Tabela de volumes</h2>
+            <h2>Tabela de volumes para dispensação:</h2>
             <div id="placeholder" class="placeholder">Insira os dados requeridos e execute o cálculo para visualizar os
                 resultados.</div>
             <div class="table-wrapper" id="tableWrapper">
@@ -533,9 +532,11 @@
     <footer class="main-footer">
         <div class="footer-left">MARTE - I3A Research Group</div>
         <div id="footer-date"></div>
-        <div>Versão 3.5</div>
+        <div>Versão 3.6.0 (Beta)</div>
     </footer>
 
+
+    <!-- script .js configuracao -->
     <script>
         function configurarRodapeData() {
             const footerDate = document.getElementById('footer-date');
@@ -574,66 +575,86 @@
             const capNL = parseFloat(inputCapacidadeReservatorio.value);
             const seg = parseFloat(inputSeguranca.value || 0);
 
-            if (isNaN(v0) || isNaN(inc) || isNaN(n) || isNaN(capNL)) {
-                mensagem('Erro: É necessário preencher todos os campos obrigatórios com valores válidos.');
+            // Reseta a visualização
+            resultado.style.display = 'none';
+            tableWrapper.style.display = 'none';
+            placeholder.style.display = 'flex';
+
+            // 1. Validação de preenchimento e tipos numéricos válidos
+            if (isNaN(v0) || isNaN(inc) || isNaN(n) || isNaN(capNL) || isNaN(seg)) {
+                mensagem('É necessário preencher todos os campos obrigatórios com valores numéricos válidos.');
                 return;
             }
 
+            // Validação dos limites físicos do equipamento
             if (v0 < 0.6) {
-                mensagem('Erro: O volume inicial não pode ser menor que 0.60 nL.');
+                mensagem('O volume inicial não pode ser menor que o limite do equipamento (0.60 nL).');
                 return;
             }
 
             if (n <= 0 || n > 1000) {
-                mensagem('Erro: A quantidade de pontos deve ser um valor entre 1 e 1000.');
+                mensagem('A quantidade de pontos deve ser um valor inteiro entre 1 e 1000.');
                 return;
             }
 
             if (capNL <= 0 || capNL > 20000) {
-                mensagem('Erro: A capacidade do reservatório deve ser um valor entre 1 e 20000 nL.');
+                mensagem('A capacidade do reservatório deve ser um valor entre 1 e 20000 nL.');
+                return;
+            }
+
+            if (seg < 0) {
+                mensagem('A margem de segurança não pode ser um valor negativo.');
+                return;
+            }
+
+            // Validação matemática crítica para incrementos negativos
+            // Se o incremento for negativo, precisamos garantir que o último ponto gerado não quebre o mínimo de 0.60 nL
+            const volumeUltimoPonto = v0 + (n - 1) * inc;
+            if (volumeUltimoPonto < 0.6) {
+                mensagem(`O incremento configurado fará com que o volume caia abaixo do limite físico de 0.60 nL (Último ponto calculado: ${volumeUltimoPonto.toFixed(2)} nL).`);
                 return;
             }
 
             ocultarMensagem();
 
+            // 4. Loop de processamento de volumes (Progressão Aritmética)
             let totalNL = 0;
+            let linhasHtml = [];
             for (let i = 0; i < n; i++) {
-                totalNL += (v0 + i * inc);
+                let v = v0 + i * inc;
+                totalNL += v;
+                linhasHtml.push(`<tr><td>${i + 1}</td><td>${v.toFixed(2)}</td></tr>`);
             }
 
             let necessarioNL = totalNL * (1 + seg / 100);
 
+            // 5. Validação de transbordo/capacidade estourada
             if (necessarioNL > capNL) {
-                mensagem(`Erro: O volume total necessário (${necessarioNL.toFixed(2)} nL) excede a capacidade máxima do reservatório (${capNL.toFixed(2)} nL).`);
-                resultado.style.display = 'none';
-                tableWrapper.style.display = 'none';
-                placeholder.style.display = 'flex';
+                mensagem(`O volume total necessário (${necessarioNL.toFixed(2)} nL) excede a capacidade máxima do cassette (${capNL.toFixed(2)} nL).`);
                 return;
             }
 
-            let linhasHtml = [];
-            for (let i = 0; i < n; i++) {
-                let v = v0 + i * inc;
-                linhasHtml.push(`<tr><td>${i + 1}</td><td>${v.toFixed(2)}</td></tr>`);
-            }
+            // Inserção da lista no DOM
             document.querySelector('#tabela tbody').innerHTML = linhasHtml.join('');
 
+            // Conversões de unidade (nL para µL)
             let capUL = capNL / 1000;
             let totalUL = totalNL / 1000;
             let necessarioUL = necessarioNL / 1000;
             let restanteNL = capNL - necessarioNL;
             let restanteUL = restanteNL / 1000;
 
+            // Renderização da tabela de sumário
             resultado.style.display = 'block';
             resultado.innerHTML = `
                 <h3>Resultado</h3>
                 <table class="resumo-tabela">
-                    <tr><td><b>Volume disponível (Reservatório):</b></td><td>${capNL.toFixed(2)} nL (${capUL.toFixed(3)} µL)</td></tr>
-                    <tr><td><b>Volume dispensado (Líquido puro):</b></td><td>${totalNL.toFixed(2)} nL (${totalUL.toFixed(3)} µL)</td></tr>
-                    <tr><td><b>Último ponto:</b></td><td>${(v0 + (n - 1) * inc).toFixed(2)} nL</td></tr>
-                    <tr><td><b>Margem configurada:</b></td><td>${seg}%</td></tr>
+                    <tr><td><b>Volume do Cassette:</b></td><td>${capNL.toFixed(2)} nL (${capUL.toFixed(3)} µL)</td></tr>
+                    <tr><td><b>Volume total dispensado:</b></td><td>${totalNL.toFixed(2)} nL (${totalUL.toFixed(3)} µL)</td></tr>
+                    <tr><td><b>Volume do último ponto:</b></td><td>${volumeUltimoPonto.toFixed(2)} nL</td></tr>
+                    <tr><td><b>Margem de erro configurada:</b></td><td>${seg}%</td></tr>
                     <tr><td><b>Volume total necessário:</b></td><td><strong>${necessarioNL.toFixed(2)} nL (${necessarioUL.toFixed(3)} µL)</strong></td></tr>
-                    <tr><td><b>Espaço restante no reservatório:</b></td><td>${restanteNL.toFixed(2)} nL (${restanteUL.toFixed(3)} µL)</td></tr>
+                    <tr><td><b>Volume disponível no Cassette:</b></td><td>${restanteNL.toFixed(2)} nL (${restanteUL.toFixed(3)} µL)</td></tr>
                 </table>
             `;
 
@@ -641,10 +662,11 @@
             tableWrapper.style.display = 'block';
         }
 
+        // Correção: Modificada para repor os valores padrão de fábrica e usabilidade ideais
         function limparCampos() {
-            document.getElementById('volumeInicial').value = '';
-            document.getElementById('incremento').value = '';
-            document.getElementById('quantidadePontos').value = '';
+            document.getElementById('volumeInicial').value = '10';
+            document.getElementById('incremento').value = '1';
+            document.getElementById('quantidadePontos').value = '20';
             document.getElementById('capacidadeReservatorio').value = '20000';
             document.getElementById('seguranca').value = '10';
 
