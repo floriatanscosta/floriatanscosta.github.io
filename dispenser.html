@@ -461,7 +461,7 @@
 
     <div class="layout">
         <div class="container">
-            <h2>Assay Settings</h2>
+            <h2>Protocol settings</h2>
 
             <div class="campo">
                 <div class="label-row">
@@ -479,8 +479,8 @@
                     <label>Increment per point (nL)</label>
                     <div class="tooltip">
                         <div class="tooltip-icon">?</div>
-                        <span class="tooltip-text">Increment applied to each subsequent point. Only positive values or
-                            zero are allowed.</span>
+                        <span class="tooltip-text">Increment applied to each subsequent point. Only positive values are
+                            allowed.</span>
                     </div>
                 </div>
                 <input id="incremento" type="number" value="1" step="0.1" min="0">
@@ -488,7 +488,7 @@
 
             <div class="campo">
                 <div class="label-row">
-                    <label>Number of points</label>
+                    <label>Number of dispensations/droplets</label>
                     <div class="tooltip">
                         <div class="tooltip-icon">?</div>
                         <span class="tooltip-text">Total number of dispensations (droplets). Must be an integer value
@@ -500,7 +500,7 @@
 
             <div class="campo">
                 <div class="label-row">
-                    <label>Cassette Capacity (nL)</label>
+                    <label>Cassette load volume limit (nL)</label>
                     <div class="tooltip">
                         <div class="tooltip-icon">?</div>
                         <span class="tooltip-text">Total fluid capacity of the dispenser Cassette. Maximum of 20000 nL
@@ -512,7 +512,7 @@
 
             <div class="campo">
                 <div class="label-row">
-                    <label>Safety margin (%)</label>
+                    <label>Dead volume factor (%)</label>
                     <div class="tooltip">
                         <div class="tooltip-icon">?</div>
                         <span class="tooltip-text">Additional percentage added to the total volume to prevent fluid
@@ -613,7 +613,7 @@
 
             // Alteração 3: A quantidade de pontos deve ser um valor estritamente inteiro
             if (!Number.isInteger(rawPontos) || rawPontos <= 0 || rawPontos > 1000) {
-                mensagem('The number of points must be an integer value between 1 and 1000.');
+                mensagem('The number of number of dispensations/droplets must be an integer value between 1 and 1000.');
                 return;
             }
             const n = parseInt(rawPontos);
@@ -680,9 +680,9 @@
             resultado.innerHTML = `
                 <h3>Result</h3>
                 <table class="resumo-tabela">
-                    <tr><td><b>Available volume in the Cassette:</b></td><td>${capNL.toFixed(2)} nL (${capUL.toFixed(3)} µL)</td></tr>
+                    <tr><td><b>Cassette load volume limit:</b></td><td>${capNL.toFixed(2)} nL (${capUL.toFixed(3)} µL)</td></tr>
                     <tr><td><b>Remaining available volume in the Cassette:</b></td><td>${restanteNL.toFixed(2)} nL (${restanteUL.toFixed(3)} µL)</td></tr>
-                    <tr><td><b>Dispensed volume:</b></td><td>${totalNL.toFixed(2)} nL (${totalUL.toFixed(3)} µL)</td></tr>
+                    <tr><td><b>Dispensed volume (program):</b></td><td>${totalNL.toFixed(2)} nL (${totalUL.toFixed(3)} µL)</td></tr>
                     <tr><td><b>Volume of the last point:</b></td><td>${volumeUltimoPonto.toFixed(3)} nL</td></tr>
                     <tr><td><b>Error margin (optional):</b></td><td>${seg}%</td></tr>
                     <tr><td><b>Total required solution volume:</b></td><td><strong>${necessarioNL.toFixed(2)} nL (${necessarioUL.toFixed(3)} µL)</strong></td></tr>
