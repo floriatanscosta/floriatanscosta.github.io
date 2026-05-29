@@ -6,15 +6,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>D100 VolCalc | MARTE - I3A</title>
     <link rel="icon" type="image/png" href="https://floriatanscosta.github.io/img/marte/favicon.png">
-    <meta name="description" content="Algoritmo de otimização e calculadora de volume para o dispenser D100. Desenvolvido pelo MARTE - I3A Research Group.">
+    <meta name="description"
+        content="Algoritmo de otimização e calculadora de volume para o dispenser D100. Desenvolvido pelo MARTE - I3A Research Group.">
     <meta property="og:type" content="website">
     <meta property="og:title" content="D100 VolCalc">
-    <meta property="og:description" content="Algoritmo de otimização e calculadora de volume para o dispenser D100. Desenvolvido pelo MARTE - I3A Research Group.">
+    <meta property="og:description"
+        content="Algoritmo de otimização e calculadora de volume para o dispenser D100. Desenvolvido pelo MARTE - I3A Research Group.">
     <meta property="og:image" content="https://floriatanscosta.github.io/img/marte/cover.png">
     <meta property="og:url" content="https://marte.i3a.es/">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="D100 VolCalc">
-    <meta name="twitter:description" content="Algoritmo de otimização e calculadora de volume para o dispenser D100. Desenvolvido pelo MARTE - I3A Research Group.">
+    <meta name="twitter:description"
+        content="Algoritmo de otimização e calculadora de volume para o dispenser D100. Desenvolvido pelo MARTE - I3A Research Group.">
     <meta name="twitter:image" content="https://floriatanscosta.github.io/img/marte.png">
 
     <style>
@@ -289,7 +292,8 @@
             bottom: 0;
             left: 0;
             width: 100%;
-            background: #c6c6c6;
+            background: #fff;
+            border-top: 2px solid #ccc;
             color: #888;
             padding: 15px 20px;
             display: flex;
@@ -474,10 +478,11 @@
                     <label>Incremento por ponto (nL)</label>
                     <div class="tooltip">
                         <div class="tooltip-icon">?</div>
-                        <span class="tooltip-text">Incremento aplicado a cada ponto subsequente. Pode ser negativo, contanto que nenhum ponto fique abaixo de 0.60 nL.</span>
+                        <span class="tooltip-text">Incremento aplicado a cada ponto subsequente. Apenas valores
+                            positivos ou zero são permitidos.</span>
                     </div>
                 </div>
-                <input id="incremento" type="number" value="1" step="0.1">
+                <input id="incremento" type="number" value="1" step="0.1" min="0">
             </div>
 
             <div class="campo">
@@ -485,7 +490,8 @@
                     <label>Quantidade de pontos</label>
                     <div class="tooltip">
                         <div class="tooltip-icon">?</div>
-                        <span class="tooltip-text">Número total de dispersões (gotas). Máximo de 1000 pontos de dispersão.</span>
+                        <span class="tooltip-text">Número total de dispersões (gotas). Deve ser um valor inteiro de 1 a
+                            1000.</span>
                     </div>
                 </div>
                 <input id="quantidadePontos" type="number" value="20" min="1" max="1000" step="1">
@@ -496,7 +502,8 @@
                     <label>Capacidade do Cassette (nL)</label>
                     <div class="tooltip">
                         <div class="tooltip-icon">?</div>
-                        <span class="tooltip-text">Volume total de líquido no Cassette do dispenser. Máximo de 20000 nL (ou 20 µL).</span>
+                        <span class="tooltip-text">Volume total de líquido no Cassette do dispenser. Máximo de 20000 nL
+                            (ou 20 µL).</span>
                     </div>
                 </div>
                 <input id="capacidadeReservatorio" type="number" value="20000" step="100" min="1" max="20000">
@@ -507,10 +514,11 @@
                     <label>Margem de segurança (%)</label>
                     <div class="tooltip">
                         <div class="tooltip-icon">?</div>
-                        <span class="tooltip-text">Porcentagem adicional adicionada ao volume total para evitar falta de líquido.</span>
+                        <span class="tooltip-text">Porcentagem adicional adicionada ao volume total para evitar falta de
+                            líquido. Permitido de 0% a 50%.</span>
                     </div>
                 </div>
-                <input id="seguranca" type="number" value="10" min="0">
+                <input id="seguranca" type="number" value="10" min="0" max="50">
             </div>
 
             <div class="botoes">
@@ -525,7 +533,8 @@
 
         <div class="container">
             <h2>Tabela de volumes</h2>
-            <div id="placeholder" class="placeholder">Insira os dados requeridos e execute o cálculo para visualizar os resultados.</div>
+            <div id="placeholder" class="placeholder">Insira os dados requeridos e execute o cálculo para visualizar os
+                resultados.</div>
             <div class="table-wrapper" id="tableWrapper">
                 <table id="tabela">
                     <thead>
@@ -543,7 +552,7 @@
     <footer class="main-footer">
         <div class="footer-left">MARTE - I3A Research Group</div>
         <div id="footer-date"></div>
-        <div>Versão 3.6</div>
+        <div>Versão 3.6.1</div>
     </footer>
 
     <script>
@@ -557,7 +566,7 @@
             let m = document.getElementById('msg');
             m.className = 'msg erro';
             m.style.display = 'block';
-            m.innerHTML = txt;
+            m.textContent = txt;
         }
 
         function ocultarMensagem() {
@@ -566,6 +575,12 @@
             m.style.display = 'none';
             m.innerHTML = '';
         }
+
+        // Remove a mensagem de erro de forma dinâmica assim que o operador altera os campos
+        const inputs = document.querySelectorAll('input');
+        inputs.forEach(input => {
+            input.addEventListener('input', ocultarMensagem);
+        });
 
         function calcular() {
             const inputVolumeInicial = document.getElementById('volumeInicial');
@@ -580,7 +595,7 @@
 
             const v0 = parseFloat(inputVolumeInicial.value);
             const inc = parseFloat(inputIncremento.value);
-            const n = parseInt(inputQuantidadePontos.value);
+            const rawPontos = parseFloat(inputQuantidadePontos.value);
             const capNL = parseFloat(inputCapacidadeReservatorio.value);
             const seg = parseFloat(inputSeguranca.value || 0);
 
@@ -588,18 +603,28 @@
             tableWrapper.style.display = 'none';
             placeholder.style.display = 'flex';
 
-            if (isNaN(v0) || isNaN(inc) || isNaN(n) || isNaN(capNL) || isNaN(seg)) {
+            // Validação de campos vazios ou inválidos
+            if (isNaN(v0) || isNaN(inc) || isNaN(rawPontos) || isNaN(capNL) || isNaN(seg)) {
                 mensagem('É necessário preencher todos os campos com valores numéricos válidos.');
                 return;
             }
 
+            // Alteração 3: A quantidade de pontos deve ser um valor estritamente inteiro
+            if (!Number.isInteger(rawPontos) || rawPontos <= 0 || rawPontos > 1000) {
+                mensagem('A quantidade de pontos deve ser um valor inteiro entre 1 e 1000.');
+                return;
+            }
+            const n = parseInt(rawPontos);
+
+            // Validação do volume inicial básico
             if (v0 < 0.6) {
                 mensagem('O volume inicial não pode ser menor que o limite do cassette (0.60 nL).');
                 return;
             }
 
-            if (n <= 0 || n > 1000) {
-                mensagem('A quantidade de pontos deve ser um valor inteiro entre 1 e 1000.');
+            // Alteração 2: Não é permitido o uso de incrementos negativos
+            if (inc < 0) {
+                mensagem('O incremento por ponto não pode ser negativo.');
                 return;
             }
 
@@ -608,14 +633,9 @@
                 return;
             }
 
-            if (seg < 0) {
-                mensagem('A margem de segurança não pode ser um valor negativo.');
-                return;
-            }
-
-            const volumeUltimoPonto = v0 + (n - 1) * inc;
-            if (volumeUltimoPonto < 0.6) {
-                mensagem(`O incremento configurado não é aceito (Último ponto calculado: ${volumeUltimoPonto.toFixed(3)} nL).`);
+            // Alteração 4: A margem de segurança deve ser de 0 a 50%
+            if (seg < 0 || seg > 50) {
+                mensagem('A margem de segurança permitida deve ser um valor entre 0% e 50%.');
                 return;
             }
 
@@ -623,16 +643,26 @@
 
             let totalNL = 0;
             let linhasHtml = [];
+            let volumeUltimoPonto = v0;
+
+            // Alteração 1: Laço validando o volume mínimo de 0.60 nL ponto a ponto dinamicamente
             for (let i = 0; i < n; i++) {
                 let v = v0 + i * inc;
+
+                if (v < 0.6) {
+                    mensagem(`O volume do ponto ${i + 1} (${v.toFixed(3)} nL) está abaixo do limite mínimo operacional do cassette (0.60 nL).`);
+                    return;
+                }
+
                 totalNL += v;
+                volumeUltimoPonto = v;
                 linhasHtml.push(`<tr><td>${i + 1}</td><td>${v.toFixed(3)}</td></tr>`);
             }
 
             let necessarioNL = totalNL * (1 + seg / 100);
 
             if (necessarioNL > capNL) {
-                mensagem(`O volume total (${necessarioNL.toFixed(2)} nL) excede a capacidade máxima do Cassette (${capNL.toFixed(2)} nL).`);
+                mensagem(`O volume total requerido (${necessarioNL.toFixed(2)} nL) excede a capacidade máxima do Cassette (${capNL.toFixed(2)} nL).`);
                 return;
             }
 
