@@ -471,10 +471,10 @@
 
             <div class="campo">
                 <div class="label-row">
-                    <label>Increment per point (nL)</label>
+                    <label>Increment per dispensations/droplets (nL)</label>
                     <div class="tooltip">
                         <div class="tooltip-icon">?</div>
-                        <span class="tooltip-text">Increment applied to each subsequent point. Only positive values are allowed.</span>
+                        <span class="tooltip-text">Increment applied to each subsequent dispensations/droplets. Only values >0.0 are allowed.</span>
                     </div>
                 </div>
                 <input id="incremento" type="number" value="1" step="0.1" min="0">
@@ -485,7 +485,7 @@
                     <label>Number of dispensations/droplets</label>
                     <div class="tooltip">
                         <div class="tooltip-icon">?</div>
-                        <span class="tooltip-text">Total number of dispensations (droplets). Must be an integer value between 1 and 1000.</span>
+                        <span class="tooltip-text">Total number of dispensations/droplets. Must be an integer value between 1 and 1000.</span>
                     </div>
                 </div>
                 <input id="quantidadePontos" type="number" value="20" min="1" max="1000" step="1">
@@ -496,7 +496,7 @@
                     <label>Cassette load volume limit (nL)</label>
                     <div class="tooltip">
                         <div class="tooltip-icon">?</div>
-                        <span class="tooltip-text">Total fluid capacity of the dispenser Cassette. Maximum of 20000 nL (i.e. 20 µL).</span>
+                        <span class="tooltip-text">Total fluid load limit (capacity) of the dispenser Cassette T2sf. Maximum of 20000 nL (i.e. 20 µL).</span>
                     </div>
                 </div>
                 <input id="capacidadeReservatorio" type="number" value="20000" step="100" min="1" max="20000">
@@ -524,7 +524,7 @@
         </div>
 
         <div class="container">
-            <h2>Volume Table</h2>
+            <h2>Volume table</h2>
             <div id="placeholder" class="placeholder">Enter the required data and execute the calculation to view the results.</div>
             <div class="table-wrapper" id="tableWrapper">
                 <table id="tabela">
