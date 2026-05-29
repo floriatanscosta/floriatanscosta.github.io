@@ -1,23 +1,20 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>D100 VolCalc | MARTE - I3A</title>
     <link rel="icon" type="image/png" href="https://floriatanscosta.github.io/img/marte/favicon.png">
-    <meta name="description"
-        content="Algoritmo de otimização e calculadora de volume para o dispenser D100. Desenvolvido pelo MARTE - I3A Research Group.">
+    <meta name="description" content="Optimization algorithm and volume calculator for the D100 dispenser. Developed by the MARTE - I3A Research Group.">
     <meta property="og:type" content="website">
     <meta property="og:title" content="D100 VolCalc">
-    <meta property="og:description"
-        content="Algoritmo de otimização e calculadora de volume para o dispenser D100. Desenvolvido pelo MARTE - I3A Research Group.">
+    <meta property="og:description" content="Optimization algorithm and volume calculator for the D100 dispenser. Developed by the MARTE - I3A Research Group.">
     <meta property="og:image" content="https://floriatanscosta.github.io/img/marte/cover.png">
     <meta property="og:url" content="https://marte.i3a.es/">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="D100 VolCalc">
-    <meta name="twitter:description"
-        content="Algoritmo de otimização e calculadora de volume para o dispenser D100. Desenvolvido pelo MARTE - I3A Research Group.">
+    <meta name="twitter:description" content="Optimization algorithm and volume calculator for the D100 dispenser. Developed by the MARTE - I3A Research Group.">
     <meta name="twitter:image" content="https://floriatanscosta.github.io/img/marte.png">
 
     <style>
@@ -277,7 +274,7 @@
 
         .table-wrapper {
             display: none;
-            max-height: 715px;
+            max-height: 731px;
             overflow: auto;
         }
 
@@ -447,7 +444,7 @@
 <body>
 
     <div class="disclaimer-banner">
-        Aviso: Este algoritmo está em desenvolvimento e pode conter erros ou inconsistências operacionais.
+        Notice: This algorithm is currently under development and may contain operational errors or inconsistencies.
     </div>
 
     <header class="main-header">
@@ -460,14 +457,14 @@
 
     <div class="layout">
         <div class="container">
-            <h2>Configurações do Ensaio</h2>
+            <h2>Assay Settings</h2>
 
             <div class="campo">
                 <div class="label-row">
-                    <label>Volume inicial (nL)</label>
+                    <label>Initial volume (nL)</label>
                     <div class="tooltip">
                         <div class="tooltip-icon">?</div>
-                        <span class="tooltip-text">Volume da primeira gota. Mínimo de 0.60 nL.</span>
+                        <span class="tooltip-text">Volume of the first droplet. Minimum of 0.60 nL.</span>
                     </div>
                 </div>
                 <input id="volumeInicial" type="number" value="10" step="0.1" min="0.60">
@@ -475,11 +472,10 @@
 
             <div class="campo">
                 <div class="label-row">
-                    <label>Incremento por ponto (nL)</label>
+                    <label>Increment per point (nL)</label>
                     <div class="tooltip">
                         <div class="tooltip-icon">?</div>
-                        <span class="tooltip-text">Incremento aplicado a cada ponto subsequente. Apenas valores
-                            positivos ou zero são permitidos.</span>
+                        <span class="tooltip-text">Increment applied to each subsequent point. Only positive values or zero are allowed.</span>
                     </div>
                 </div>
                 <input id="incremento" type="number" value="1" step="0.1" min="0">
@@ -487,11 +483,10 @@
 
             <div class="campo">
                 <div class="label-row">
-                    <label>Quantidade de pontos</label>
+                    <label>Number of points</label>
                     <div class="tooltip">
                         <div class="tooltip-icon">?</div>
-                        <span class="tooltip-text">Número total de dispersões (gotas). Deve ser um valor inteiro de 1 a
-                            1000.</span>
+                        <span class="tooltip-text">Total number of dispensations (droplets). Must be an integer value between 1 and 1000.</span>
                     </div>
                 </div>
                 <input id="quantidadePontos" type="number" value="20" min="1" max="1000" step="1">
@@ -499,11 +494,10 @@
 
             <div class="campo">
                 <div class="label-row">
-                    <label>Capacidade do Cassette (nL)</label>
+                    <label>Cassette Capacity (nL)</label>
                     <div class="tooltip">
                         <div class="tooltip-icon">?</div>
-                        <span class="tooltip-text">Volume total de líquido no Cassette do dispenser. Máximo de 20000 nL
-                            (ou 20 µL).</span>
+                        <span class="tooltip-text">Total fluid capacity of the dispenser Cassette. Maximum of 20000 nL (or 20 µL).</span>
                     </div>
                 </div>
                 <input id="capacidadeReservatorio" type="number" value="20000" step="100" min="1" max="20000">
@@ -511,20 +505,19 @@
 
             <div class="campo">
                 <div class="label-row">
-                    <label>Margem de segurança (%)</label>
+                    <label>Safety margin (%)</label>
                     <div class="tooltip">
                         <div class="tooltip-icon">?</div>
-                        <span class="tooltip-text">Porcentagem adicional adicionada ao volume total para evitar falta de
-                            líquido. Permitido de 0% a 50%.</span>
+                        <span class="tooltip-text">Additional percentage added to the total volume to prevent fluid depletion. Allowed range from 0% to 50%.</span>
                     </div>
                 </div>
                 <input id="seguranca" type="number" value="10" min="0" max="50">
             </div>
 
             <div class="botoes">
-                <button class="calc" onclick="calcular()">Calcular</button>
-                <button class="clear" onclick="limparCampos()">Limpar</button>
-                <button class="print" onclick="window.print()">Imprimir</button>
+                <button class="calc" onclick="calcular()">Calculate</button>
+                <button class="clear" onclick="limparCampos()">Clear</button>
+                <button class="print" onclick="window.print()">Print</button>
             </div>
 
             <div id="msg" class="msg"></div>
@@ -532,14 +525,13 @@
         </div>
 
         <div class="container">
-            <h2>Tabela de volumes</h2>
-            <div id="placeholder" class="placeholder">Insira os dados requeridos e execute o cálculo para visualizar os
-                resultados.</div>
+            <h2>Volume Table</h2>
+            <div id="placeholder" class="placeholder">Enter the required data and execute the calculation to view the results.</div>
             <div class="table-wrapper" id="tableWrapper">
                 <table id="tabela">
                     <thead>
                         <tr>
-                            <th>Ponto</th>
+                            <th>Point</th>
                             <th>Volume (nL)</th>
                         </tr>
                     </thead>
@@ -552,7 +544,7 @@
     <footer class="main-footer">
         <div class="footer-left">MARTE - I3A Research Group</div>
         <div id="footer-date"></div>
-        <div>Versão 3.6.1</div>
+        <div>Version 3.7.0</div>
     </footer>
 
     <script>
@@ -605,37 +597,37 @@
 
             // Validação de campos vazios ou inválidos
             if (isNaN(v0) || isNaN(inc) || isNaN(rawPontos) || isNaN(capNL) || isNaN(seg)) {
-                mensagem('É necessário preencher todos os campos com valores numéricos válidos.');
+                mensagem('All fields must be filled with valid numerical values.');
                 return;
             }
 
             // Alteração 3: A quantidade de pontos deve ser um valor estritamente inteiro
             if (!Number.isInteger(rawPontos) || rawPontos <= 0 || rawPontos > 1000) {
-                mensagem('A quantidade de pontos deve ser um valor inteiro entre 1 e 1000.');
+                mensagem('The number of points must be an integer value between 1 and 1000.');
                 return;
             }
             const n = parseInt(rawPontos);
 
             // Validação do volume inicial básico
             if (v0 < 0.6) {
-                mensagem('O volume inicial não pode ser menor que o limite do cassette (0.60 nL).');
+                mensagem('The initial volume cannot be less than the cassette limit (0.60 nL).');
                 return;
             }
 
             // Alteração 2: Não é permitido o uso de incrementos negativos
             if (inc < 0) {
-                mensagem('O incremento por ponto não pode ser negativo.');
+                mensagem('The increment per point cannot be negative.');
                 return;
             }
 
             if (capNL <= 0 || capNL > 20000) {
-                mensagem('A capacidade do reservatório deve ser o valor padrão dos cassetes dispenser (C1a, T1sf) - 20000 nL.');
+                mensagem('The reservoir capacity must match the standard value for dispenser cassettes (C1a, T1sf) - 20000 nL.');
                 return;
             }
 
             // Alteração 4: A margem de segurança deve ser de 0 a 50%
             if (seg < 0 || seg > 50) {
-                mensagem('A margem de segurança permitida deve ser um valor entre 0% e 50%.');
+                mensagem('The allowed safety margin must be a value between 0% and 50%.');
                 return;
             }
 
@@ -648,12 +640,12 @@
             // Alteração 1: Laço validando o volume mínimo de 0.60 nL ponto a ponto dinamicamente
             for (let i = 0; i < n; i++) {
                 let v = v0 + i * inc;
-
+                
                 if (v < 0.6) {
-                    mensagem(`O volume do ponto ${i + 1} (${v.toFixed(3)} nL) está abaixo do limite mínimo operacional do cassette (0.60 nL).`);
+                    mensagem(`The volume at point ${i + 1} (${v.toFixed(3)} nL) is below the minimum operational limit of the cassette (0.60 nL).`);
                     return;
                 }
-
+                
                 totalNL += v;
                 volumeUltimoPonto = v;
                 linhasHtml.push(`<tr><td>${i + 1}</td><td>${v.toFixed(3)}</td></tr>`);
@@ -662,7 +654,7 @@
             let necessarioNL = totalNL * (1 + seg / 100);
 
             if (necessarioNL > capNL) {
-                mensagem(`O volume total requerido (${necessarioNL.toFixed(2)} nL) excede a capacidade máxima do Cassette (${capNL.toFixed(2)} nL).`);
+                mensagem(`The total required volume (${necessarioNL.toFixed(2)} nL) exceeds the maximum capacity of the Cassette (${capNL.toFixed(2)} nL).`);
                 return;
             }
 
@@ -676,14 +668,14 @@
 
             resultado.style.display = 'block';
             resultado.innerHTML = `
-                <h3>Resultado</h3>
+                <h3>Result</h3>
                 <table class="resumo-tabela">
-                    <tr><td><b>Volume disponível no Cassette:</b></td><td>${capNL.toFixed(2)} nL (${capUL.toFixed(3)} µL)</td></tr>
-                    <tr><td><b>Volume restante disponível no Cassette:</b></td><td>${restanteNL.toFixed(2)} nL (${restanteUL.toFixed(3)} µL)</td></tr>
-                    <tr><td><b>Volume dispensado:</b></td><td>${totalNL.toFixed(2)} nL (${totalUL.toFixed(3)} µL)</td></tr>
-                    <tr><td><b>Volume do último ponto:</b></td><td>${volumeUltimoPonto.toFixed(3)} nL</td></tr>
-                    <tr><td><b>Margem de erro (opcional):</b></td><td>${seg}%</td></tr>
-                    <tr><td><b>Volume total de solução requerido:</b></td><td><strong>${necessarioNL.toFixed(2)} nL (${necessarioUL.toFixed(3)} µL)</strong></td></tr>
+                    <tr><td><b>Available volume in the Cassette:</b></td><td>${capNL.toFixed(2)} nL (${capUL.toFixed(3)} µL)</td></tr>
+                    <tr><td><b>Remaining available volume in the Cassette:</b></td><td>${restanteNL.toFixed(2)} nL (${restanteUL.toFixed(3)} µL)</td></tr>
+                    <tr><td><b>Dispensed volume:</b></td><td>${totalNL.toFixed(2)} nL (${totalUL.toFixed(3)} µL)</td></tr>
+                    <tr><td><b>Volume of the last point:</b></td><td>${volumeUltimoPonto.toFixed(3)} nL</td></tr>
+                    <tr><td><b>Error margin (optional):</b></td><td>${seg}%</td></tr>
+                    <tr><td><b>Total required solution volume:</b></td><td><strong>${necessarioNL.toFixed(2)} nL (${necessarioUL.toFixed(3)} µL)</strong></td></tr>
                 </table>
             `;
 
