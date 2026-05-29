@@ -1,0 +1,649 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>D100 Volume Calculator v3.5</title>
+
+    <style>
+        * {
+            box-sizing: border-box
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0 20px 80px 20px;
+            background: #fff;
+            min-height: 100vh;
+            position: relative;
+        }
+
+        .disclaimer-banner {
+            background: #fff3cd;
+            color: #856404;
+            border: 1px solid #ffeeba;
+            padding: 12px 20px;
+            text-align: center;
+            font-size: 14px;
+            font-weight: bold;
+            border-radius: 0 0 10px 10px;
+            margin: 0 -20px 20px -20px;
+        }
+
+        .main-header {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            background: #fff;
+            padding: 15px 20px;
+            margin-bottom: 20px;
+        }
+
+        .main-header img {
+            width: 100px;
+            height: auto;
+            display: block;
+        }
+
+        .main-header h1 {
+            color: rgb(70, 70, 70);
+            margin: 0;
+            font-size: 24px;
+        }
+
+        .layout {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 20px
+        }
+
+        .container {
+            background: #f1f1f1;
+            border: 1px solid #ccc;
+            padding: 20px;
+            border-radius: 10px;
+            height: fit-content;
+        }
+
+        h2,
+        h3 {
+            color: #25487c;
+            margin-top: 0
+        }
+
+        .campo {
+            margin-bottom: 12px
+        }
+
+        label {
+            font-weight: bold;
+            display: block;
+            margin-bottom: 5px
+        }
+
+        input {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 6px
+        }
+
+        .label-row {
+            display: flex;
+            gap: 8px;
+            align-items: center
+        }
+
+        /* TOOLTIP */
+        .tooltip {
+            position: relative;
+            display: inline-block;
+            cursor: pointer;
+        }
+
+        .tooltip-icon {
+            width: 18px;
+            height: 18px;
+            border-radius: 50%;
+            background: #25487c;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 12px;
+            font-weight: bold;
+        }
+
+        .tooltip-text {
+            visibility: hidden;
+            opacity: 0;
+            width: 280px;
+            background: #142d52;
+            color: white;
+            padding: 10px;
+            border-radius: 6px;
+            position: absolute;
+            top: -5px;
+            left: 28px;
+            z-index: 100;
+            transition: 0.2s;
+            font-size: 13px;
+            line-height: 1.4;
+            font-weight: normal;
+        }
+
+        .tooltip:hover .tooltip-text {
+            visibility: visible;
+            opacity: 1;
+        }
+
+        .botoes {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+            margin-top: 15px
+        }
+
+        button {
+            padding: 10px 16px;
+            border: none;
+            border-radius: 6px;
+            color: white;
+            cursor: pointer;
+            font-weight: bold;
+            transition: background 0.2s;
+            flex: 1;
+            min-width: 100px;
+        }
+
+        .calc {
+            background: #25487c
+        }
+
+        .clear,
+        .print {
+            background: #6c757d
+        }
+
+        .calc:hover {
+            background: #1b355a
+        }
+
+        .clear:hover,
+        .print:hover {
+            background: #5a6268
+        }
+
+        .msg {
+            display: none;
+            padding: 10px;
+            border-radius: 6px;
+            margin-top: 12px
+        }
+
+        .msg.erro {
+            display: block;
+            background: #fdeaea;
+            color: #8a1f1f;
+            border: 1px solid #f5c6cb;
+            font-weight: bold;
+        }
+
+        .resultado {
+            display: none;
+            background: #e7eef7;
+            padding: 15px;
+            border-radius: 6px;
+            margin-top: 15px
+        }
+
+        /* Padronização das tabelas */
+        table,
+        .resumo-tabela {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 10px;
+            background: #fff;
+            border: 1px solid #ccc;
+        }
+
+        th,
+        td,
+        .resumo-tabela td {
+            border: 1px solid #ccc;
+            padding: 10px 12px;
+            font-size: 14px;
+            color: #333;
+        }
+
+        th {
+            background: #25487c;
+            color: white;
+            font-weight: bold;
+            text-align: center;
+        }
+
+        #tabela td {
+            text-align: center;
+        }
+
+        .resumo-tabela td {
+            text-align: left;
+        }
+
+        /* CORREÇÃO: Valores numéricos alinhados à direita para melhor legibilidade */
+        .resumo-tabela td:last-child {
+            text-align: right;
+        }
+
+        tr:nth-child(even),
+        .resumo-tabela tr:nth-child(even) {
+            background-color: #f8faff;
+        }
+
+        .placeholder {
+            min-height: 180px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #666;
+            font-style: italic
+        }
+
+        .table-wrapper {
+            display: none;
+            max-height: 715px;
+            overflow: auto;
+        }
+
+        thead th {
+            position: sticky;
+            top: 0;
+            z-index: 10;
+        }
+
+        .main-footer {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background: #c6c6c6;
+            color: #888;
+            padding: 15px 20px;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 12px;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+
+        .footer-left {
+            font-weight: bold;
+        }
+
+        @media (max-width: 600px) {
+            body {
+                padding: 0 10px 120px 10px;
+            }
+
+            .main-header {
+                flex-direction: column;
+                text-align: center;
+                gap: 10px;
+            }
+
+            .main-header h1 {
+                font-size: 20px;
+            }
+
+            .main-footer {
+                flex-direction: column;
+                text-align: center;
+                padding: 12px;
+            }
+
+            .tooltip-text {
+                left: auto;
+                right: -50px;
+                top: 25px;
+            }
+        }
+
+        /* CSS OTIMIZADO PARA VERSÃO DE IMPRESSÃO */
+        @media print {
+            body {
+                background: #fff !important;
+                color: #000;
+                font-family: Arial, sans-serif;
+                font-size: 12pt;
+                padding: 0 !important;
+                margin: 0;
+            }
+
+            .layout {
+                display: block;
+            }
+
+            .container {
+                box-shadow: none !important;
+                border: none !important;
+                padding: 0 !important;
+                margin-bottom: 30px;
+                background: transparent !important;
+            }
+
+            h1,
+            h2,
+            h3 {
+                color: #000 !important;
+                padding-bottom: 5px;
+                margin-top: 20px;
+            }
+
+            /* Esconde botões, footer e o banner de disclaimer do topo na folha */
+            .botoes,
+            .msg,
+            .tooltip-icon,
+            .placeholder,
+            .campo,
+            .main-footer,
+            .disclaimer-banner {
+                display: none !important;
+            }
+
+            .main-header {
+                box-shadow: none !important;
+                border-bottom: 1pt solid #999 !important;
+                border-radius: 0;
+                padding: 20px 0;
+                margin-top: 0;
+            }
+
+            .main-header h1 {
+                color: #000 !important;
+            }
+
+            .table-wrapper {
+                display: block !important;
+                max-height: none !important;
+                overflow: visible !important;
+                border: none !important;
+            }
+
+            table,
+            .resumo-tabela {
+                width: 100% !important;
+                border: 1pt solid #999 !important;
+                background: #fff !important;
+                page-break-inside: auto;
+                font-family: "Courier New", Courier, monospace !important;
+            }
+
+            tr {
+                page-break-inside: avoid;
+                page-break-after: auto;
+            }
+
+            th,
+            td,
+            .resumo-tabela td {
+                border: 1pt solid #000 !important;
+                color: #000 !important;
+                background: transparent !important;
+                padding: 6px !important;
+                font-size: 11pt !important;
+            }
+
+            thead th {
+                position: static !important;
+                background: #f0f0f0 !important;
+                color: #000 !important;
+                font-weight: bold !important;
+                font-family: "Times New Roman", Times, serif !important;
+            }
+
+            .resultado {
+                display: block !important;
+                background: transparent !important;
+                padding: 0 !important;
+                margin-top: 15px !important;
+                border: none !important;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="disclaimer-banner">
+        Aviso: Este algoritmo está em desenvolvimento e pode conter erros ou inconsistências
+        operacionais.
+    </div>
+
+    <header class="main-header">
+        <img src="https://marte.i3a.es/wp-content/uploads/2023/02/MARTE_logo.png" alt="MARTE Logo">
+        <h1>D100 Volume Calculator optimization</h1>
+    </header>
+
+    <div class="layout">
+        <div class="container">
+            <h2>Configurações do Ensaio</h2>
+
+            <div class="campo">
+                <div class="label-row">
+                    <label>Volume inicial (nL)</label>
+                    <div class="tooltip">
+                        <div class="tooltip-icon">?</div>
+                        <span class="tooltip-text">Volume da primeira gota. Mínimo de 0.60 nL.</span>
+                    </div>
+                </div>
+                <input id="volumeInicial" type="number" value="10" step="0.1" min="0.60">
+            </div>
+
+            <div class="campo">
+                <div class="label-row">
+                    <label>Incremento por ponto (nL)</label>
+                    <div class="tooltip">
+                        <div class="tooltip-icon">?</div>
+                        <span class="tooltip-text">Incremento aplicado a cada ponto subsequente.</span>
+                    </div>
+                </div>
+                <input id="incremento" type="number" value="1" step="0.1">
+            </div>
+
+            <div class="campo">
+                <div class="label-row">
+                    <label>Quantidade de pontos</label>
+                    <div class="tooltip">
+                        <div class="tooltip-icon">?</div>
+                        <span class="tooltip-text">Número total de dispersões (gotas). Máximo de 1000 pontos de
+                            dispersão.</span>
+                    </div>
+                </div>
+                <input id="quantidadePontos" type="number" value="20" max="1000">
+            </div>
+
+            <div class="campo">
+                <div class="label-row">
+                    <label>Capacidade do reservatório (nL)</label>
+                    <div class="tooltip">
+                        <div class="tooltip-icon">?</div>
+                        <span class="tooltip-text">Volume total de líquido no reservatório do dispenser (cassete).
+                            Máximo de 20000 nL (ou 20 µL).</span>
+                    </div>
+                </div>
+                <input id="capacidadeReservatorio" type="number" value="20000" step="100" max="20000">
+            </div>
+
+            <div class="campo">
+                <div class="label-row">
+                    <label>Margem de segurança (%)</label>
+                    <div class="tooltip">
+                        <div class="tooltip-icon">?</div>
+                        <span class="tooltip-text">Porcentagem adicional adicionada ao volume total para evitar falta de
+                            líquido.</span>
+                    </div>
+                </div>
+                <input id="seguranca" type="number" value="10">
+            </div>
+
+            <div class="botoes">
+                <button class="calc" onclick="calcular()">Calcular</button>
+                <button class="clear" onclick="limparCampos()">Limpar</button>
+                <button class="print" onclick="window.print()">Imprimir</button>
+            </div>
+
+            <div id="msg" class="msg"></div>
+            <div id="resultado" class="resultado"></div>
+        </div>
+
+        <div class="container">
+            <h2>Tabela de volumes</h2>
+            <div id="placeholder" class="placeholder">Insira os dados requeridos e execute o cálculo para visualizar os
+                resultados.</div>
+            <div class="table-wrapper" id="tableWrapper">
+                <table id="tabela">
+                    <thead>
+                        <tr>
+                            <th>Ponto</th>
+                            <th>Volume (nL)</th>
+                        </tr>
+                    </thead>
+                    <tbody></tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <footer class="main-footer">
+        <div class="footer-left">MARTE - I3A Research Group</div>
+        <div id="footer-date"></div>
+        <div>Versão 3.5</div>
+    </footer>
+
+    <script>
+        function configurarRodapeData() {
+            const footerDate = document.getElementById('footer-date');
+            footerDate.innerText = new Date().toLocaleDateString();
+        }
+        configurarRodapeData();
+
+        function mensagem(txt) {
+            let m = document.getElementById('msg');
+            m.className = 'msg erro';
+            m.style.display = 'block';
+            m.innerHTML = txt;
+        }
+
+        function ocultarMensagem() {
+            let m = document.getElementById('msg');
+            m.className = 'msg';
+            m.style.display = 'none';
+            m.innerHTML = '';
+        }
+
+        function calcular() {
+            const inputVolumeInicial = document.getElementById('volumeInicial');
+            const inputIncremento = document.getElementById('incremento');
+            const inputQuantidadePontos = document.getElementById('quantidadePontos');
+            const inputCapacidadeReservatorio = document.getElementById('capacidadeReservatorio');
+            const inputSeguranca = document.getElementById('seguranca');
+
+            const resultado = document.getElementById('resultado');
+            const placeholder = document.getElementById('placeholder');
+            const tableWrapper = document.getElementById('tableWrapper');
+
+            const v0 = parseFloat(inputVolumeInicial.value);
+            const inc = parseFloat(inputIncremento.value);
+            const n = parseInt(inputQuantidadePontos.value);
+            const capNL = parseFloat(inputCapacidadeReservatorio.value);
+            const seg = parseFloat(inputSeguranca.value || 0);
+
+            if (isNaN(v0) || isNaN(inc) || isNaN(n) || isNaN(capNL)) {
+                mensagem('Erro: É necessário preencher todos os campos obrigatórios com valores válidos.');
+                return;
+            }
+
+            if (v0 < 0.6) {
+                mensagem('Erro: O volume inicial não pode ser menor que 0.60 nL.');
+                return;
+            }
+
+            if (n <= 0 || n > 1000) {
+                mensagem('Erro: A quantidade de pontos deve ser um valor entre 1 e 1000.');
+                return;
+            }
+
+            if (capNL <= 0 || capNL > 20000) {
+                mensagem('Erro: A capacidade do reservatório deve ser um valor entre 1 e 20000 nL.');
+                return;
+            }
+
+            ocultarMensagem();
+
+            let totalNL = 0;
+            for (let i = 0; i < n; i++) {
+                totalNL += (v0 + i * inc);
+            }
+
+            let necessarioNL = totalNL * (1 + seg / 100);
+
+            if (necessarioNL > capNL) {
+                mensagem(`Erro: O volume total necessário (${necessarioNL.toFixed(2)} nL) excede a capacidade máxima do reservatório (${capNL.toFixed(2)} nL).`);
+                resultado.style.display = 'none';
+                tableWrapper.style.display = 'none';
+                placeholder.style.display = 'flex';
+                return;
+            }
+
+            let linhasHtml = [];
+            for (let i = 0; i < n; i++) {
+                let v = v0 + i * inc;
+                linhasHtml.push(`<tr><td>${i + 1}</td><td>${v.toFixed(2)}</td></tr>`);
+            }
+            document.querySelector('#tabela tbody').innerHTML = linhasHtml.join('');
+
+            let capUL = capNL / 1000;
+            let totalUL = totalNL / 1000;
+            let necessarioUL = necessarioNL / 1000;
+            let restanteNL = capNL - necessarioNL;
+            let restanteUL = restanteNL / 1000;
+
+            resultado.style.display = 'block';
+            resultado.innerHTML = `
+                <h3>Resultado</h3>
+                <table class="resumo-tabela">
+                    <tr><td><b>Volume disponível (Reservatório):</b></td><td>${capNL.toFixed(2)} nL (${capUL.toFixed(3)} µL)</td></tr>
+                    <tr><td><b>Volume dispensado (Líquido puro):</b></td><td>${totalNL.toFixed(2)} nL (${totalUL.toFixed(3)} µL)</td></tr>
+                    <tr><td><b>Último ponto:</b></td><td>${(v0 + (n - 1) * inc).toFixed(2)} nL</td></tr>
+                    <tr><td><b>Margem configurada:</b></td><td>${seg}%</td></tr>
+                    <tr><td><b>Volume total necessário:</b></td><td><strong>${necessarioNL.toFixed(2)} nL (${necessarioUL.toFixed(3)} µL)</strong></td></tr>
+                    <tr><td><b>Espaço restante no reservatório:</b></td><td>${restanteNL.toFixed(2)} nL (${restanteUL.toFixed(3)} µL)</td></tr>
+                </table>
+            `;
+
+            placeholder.style.display = 'none';
+            tableWrapper.style.display = 'block';
+        }
+
+        function limparCampos() {
+            document.getElementById('volumeInicial').value = '';
+            document.getElementById('incremento').value = '';
+            document.getElementById('quantidadePontos').value = '';
+            document.getElementById('capacidadeReservatorio').value = '20000';
+            document.getElementById('seguranca').value = '10';
+
+            document.getElementById('resultado').style.display = 'none';
+            document.querySelector('#tabela tbody').innerHTML = '';
+            document.getElementById('tableWrapper').style.display = 'none';
+            document.getElementById('placeholder').style.display = 'flex';
+            ocultarMensagem();
+        }
+    </script>
+</body>
+
+</html>
