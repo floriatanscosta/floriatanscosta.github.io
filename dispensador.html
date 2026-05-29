@@ -4,17 +4,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>D100 Volume Optimizer | MARTE - I3A</title>
+    <title>D100 VolCalc | MARTE - I3A</title>
     <meta name="description"
         content="Algoritmo de otimização e calculadora de volume para o dispenser D100. Desenvolvido pelo MARTE - I3A Research Group.">
     <meta property="og:type" content="website">
-    <meta property="og:title" content="D100 Volume Calculator optimization">
+    <meta property="og:title" content="D100 VolCalc">
     <meta property="og:description"
         content="Algoritmo de otimização e calculadora de volume para o dispenser D100. Desenvolvido pelo MARTE - I3A Research Group.">
     <meta property="og:image" content="https://floriatanscosta.github.io/img/marte.png">
     <meta property="og:url" content="https://marte.i3a.es/">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="D100 Volume Optimization Calculator">
+    <meta name="twitter:title" content="D100 VolCalc">
     <meta name="twitter:description"
         content="Algoritmo de otimização e calculadora de volume para o dispenser D100. Desenvolvido pelo MARTE - I3A Research Group.">
     <meta name="twitter:image" content="https://floriatanscosta.github.io/img/marte.png">
@@ -35,12 +35,13 @@
 
         .disclaimer-banner {
             background: #fff3cd;
-            color: #b3890d;
+            color: #856404;
             border: 1px solid #ffeeba;
-            padding: 8px 20px;
+            padding: 12px 20px;
             text-align: center;
             font-size: 14px;
             font-weight: bold;
+            border-radius: 0 0 10px 10px;
             margin: 0 -20px 20px -20px;
         }
 
@@ -48,6 +49,7 @@
             display: flex;
             align-items: center;
             gap: 20px;
+            background: #fff;
             padding: 15px 20px;
             margin-bottom: 20px;
         }
@@ -58,10 +60,23 @@
             display: block;
         }
 
+        .header-titles {
+            display: flex;
+            flex-direction: column;
+            gap: 2px;
+        }
+
         .main-header h1 {
             color: rgb(70, 70, 70);
             margin: 0;
-            font-size: 24px;
+            font-size: 26px;
+        }
+
+        .main-header .subtitle {
+            color: #666;
+            margin: 0;
+            font-size: 16px;
+            font-weight: 500;
         }
 
         .layout {
@@ -107,7 +122,6 @@
             align-items: center
         }
 
-        /* TOOLTIP */
         .tooltip {
             position: relative;
             display: inline-block;
@@ -240,7 +254,7 @@
         }
 
         .resumo-tabela td {
-            text-align: right;
+            text-align: left;
         }
 
         .resumo-tabela td:last-child {
@@ -285,10 +299,9 @@
             flex-direction: row;
             justify-content: space-between;
             align-items: center;
-            font-size: 10px;
+            font-size: 12px;
             gap: 10px;
             flex-wrap: wrap;
-            font-weight: 600;
         }
 
         .footer-left {
@@ -307,7 +320,7 @@
             }
 
             .main-header h1 {
-                font-size: 20px;
+                font-size: 22px;
             }
 
             .main-footer {
@@ -323,7 +336,6 @@
             }
         }
 
-        /* CSS OTIMIZADO PARA VERSÃO DE IMPRESSÃO */
         @media print {
             body {
                 background: #fff !important;
@@ -354,7 +366,6 @@
                 margin-top: 20px;
             }
 
-            /* Esconde botões, footer e o banner de disclaimer do topo na folha */
             .botoes,
             .msg,
             .tooltip-icon,
@@ -367,13 +378,17 @@
 
             .main-header {
                 box-shadow: none !important;
-                border-bottom: 2pt solid #999 !important;
+                border-bottom: 1pt solid #999 !important;
                 border-radius: 0;
                 padding: 20px 0;
                 margin-top: 0;
             }
 
             .main-header h1 {
+                color: #000 !important;
+            }
+
+            .main-header .subtitle {
                 color: #000 !important;
             }
 
@@ -436,12 +451,15 @@
 
     <header class="main-header">
         <img src="https://marte.i3a.es/wp-content/uploads/2023/02/MARTE_logo.png" alt="MARTE Logo">
-        <h1>D100 Volume Optimization Calculator</h1>
+        <div class="header-titles">
+            <h1>D100 VolCalc</h1>
+            <p class="subtitle">D100 Volume Optimizer</p>
+        </div>
     </header>
 
     <div class="layout">
         <div class="container">
-            <h2>Configurações do ensaio</h2>
+            <h2>Configurações do Ensaio</h2>
 
             <div class="campo">
                 <div class="label-row">
@@ -459,7 +477,8 @@
                     <label>Incremento por ponto (nL)</label>
                     <div class="tooltip">
                         <div class="tooltip-icon">?</div>
-                        <span class="tooltip-text">Incremento aplicado a cada ponto subsequente.</span>
+                        <span class="tooltip-text">Incremento aplicado a cada ponto subsequente. Pode ser negativo,
+                            contanto que nenhum ponto fique abaixo de 0.60 nL.</span>
                     </div>
                 </div>
                 <input id="incremento" type="number" value="1" step="0.1">
@@ -479,11 +498,11 @@
 
             <div class="campo">
                 <div class="label-row">
-                    <label>Capacidade máxima do cassette (nL)</label>
+                    <label>Capacidade do Cassette (nL)</label>
                     <div class="tooltip">
                         <div class="tooltip-icon">?</div>
-                        <span class="tooltip-text">Volume total de líquido no reservatório do dispenser (Cassette).
-                            Máximo de 20000 nL (ou 20 µL).</span>
+                        <span class="tooltip-text">Volume total de líquido no Cassette do dispenser. Máximo de 20000 nL
+                            (ou 20 µL).</span>
                     </div>
                 </div>
                 <input id="capacidadeReservatorio" type="number" value="20000" step="100" min="1" max="20000">
@@ -494,8 +513,8 @@
                     <label>Margem de segurança (%)</label>
                     <div class="tooltip">
                         <div class="tooltip-icon">?</div>
-                        <span class="tooltip-text">Porcentagem adicional adicionada ao volume total de solução requerida
-                            para o experimento.</span>
+                        <span class="tooltip-text">Porcentagem adicional adicionada ao volume total para evitar falta de
+                            líquido.</span>
                     </div>
                 </div>
                 <input id="seguranca" type="number" value="10" min="0">
@@ -503,8 +522,8 @@
 
             <div class="botoes">
                 <button class="calc" onclick="calcular()">Calcular</button>
-                <button class="clear" onclick="limparCampos()">Reset</button>
-                <button class="print" onclick="window.print()">Baixar</button>
+                <button class="clear" onclick="limparCampos()">Limpar</button>
+                <button class="print" onclick="window.print()">Imprimir</button>
             </div>
 
             <div id="msg" class="msg"></div>
@@ -512,7 +531,7 @@
         </div>
 
         <div class="container">
-            <h2>Tabela de volumes para dispensação:</h2>
+            <h2>Tabela de volumes</h2>
             <div id="placeholder" class="placeholder">Insira os dados requeridos e execute o cálculo para visualizar os
                 resultados.</div>
             <div class="table-wrapper" id="tableWrapper">
@@ -532,11 +551,9 @@
     <footer class="main-footer">
         <div class="footer-left">MARTE - I3A Research Group</div>
         <div id="footer-date"></div>
-        <div>Versão 3.6.0 (Beta)</div>
+        <div>Versão 3.6</div>
     </footer>
 
-
-    <!-- script .js configuracao -->
     <script>
         function configurarRodapeData() {
             const footerDate = document.getElementById('footer-date');
@@ -575,20 +592,17 @@
             const capNL = parseFloat(inputCapacidadeReservatorio.value);
             const seg = parseFloat(inputSeguranca.value || 0);
 
-            // Reseta a visualização
             resultado.style.display = 'none';
             tableWrapper.style.display = 'none';
             placeholder.style.display = 'flex';
 
-            // 1. Validação de preenchimento e tipos numéricos válidos
             if (isNaN(v0) || isNaN(inc) || isNaN(n) || isNaN(capNL) || isNaN(seg)) {
-                mensagem('É necessário preencher todos os campos obrigatórios com valores numéricos válidos.');
+                mensagem('É necessário preencher todos os campos com valores numéricos válidos.');
                 return;
             }
 
-            // Validação dos limites físicos do equipamento
             if (v0 < 0.6) {
-                mensagem('O volume inicial não pode ser menor que o limite do equipamento (0.60 nL).');
+                mensagem('O volume inicial não pode ser menor que o limite do cassette (0.60 nL).');
                 return;
             }
 
@@ -598,7 +612,7 @@
             }
 
             if (capNL <= 0 || capNL > 20000) {
-                mensagem('A capacidade do reservatório deve ser um valor entre 1 e 20000 nL.');
+                mensagem('A capacidade do reservatório deve ser o valor padrão dos cassetes dispenser (C1a, T1sf) - 20000 nL.');
                 return;
             }
 
@@ -607,54 +621,47 @@
                 return;
             }
 
-            // Validação matemática crítica para incrementos negativos
-            // Se o incremento for negativo, precisamos garantir que o último ponto gerado não quebre o mínimo de 0.60 nL
             const volumeUltimoPonto = v0 + (n - 1) * inc;
             if (volumeUltimoPonto < 0.6) {
-                mensagem(`O incremento configurado fará com que o volume caia abaixo do limite físico de 0.60 nL (Último ponto calculado: ${volumeUltimoPonto.toFixed(2)} nL).`);
+                mensagem(`O incremento configurado não é aceito (Último ponto calculado: ${volumeUltimoPonto.toFixed(3)} nL).`);
                 return;
             }
 
             ocultarMensagem();
 
-            // 4. Loop de processamento de volumes (Progressão Aritmética)
             let totalNL = 0;
             let linhasHtml = [];
             for (let i = 0; i < n; i++) {
                 let v = v0 + i * inc;
                 totalNL += v;
-                linhasHtml.push(`<tr><td>${i + 1}</td><td>${v.toFixed(2)}</td></tr>`);
+                linhasHtml.push(`<tr><td>${i + 1}</td><td>${v.toFixed(3)}</td></tr>`);
             }
 
             let necessarioNL = totalNL * (1 + seg / 100);
 
-            // 5. Validação de transbordo/capacidade estourada
             if (necessarioNL > capNL) {
-                mensagem(`O volume total necessário (${necessarioNL.toFixed(2)} nL) excede a capacidade máxima do cassette (${capNL.toFixed(2)} nL).`);
+                mensagem(`O volume total (${necessarioNL.toFixed(2)} nL) excede a capacidade máxima do Cassette (${capNL.toFixed(2)} nL).`);
                 return;
             }
 
-            // Inserção da lista no DOM
             document.querySelector('#tabela tbody').innerHTML = linhasHtml.join('');
 
-            // Conversões de unidade (nL para µL)
             let capUL = capNL / 1000;
             let totalUL = totalNL / 1000;
             let necessarioUL = necessarioNL / 1000;
             let restanteNL = capNL - necessarioNL;
             let restanteUL = restanteNL / 1000;
 
-            // Renderização da tabela de sumário
             resultado.style.display = 'block';
             resultado.innerHTML = `
                 <h3>Resultado</h3>
                 <table class="resumo-tabela">
-                    <tr><td><b>Volume do Cassette:</b></td><td>${capNL.toFixed(2)} nL (${capUL.toFixed(3)} µL)</td></tr>
-                    <tr><td><b>Volume total dispensado:</b></td><td>${totalNL.toFixed(2)} nL (${totalUL.toFixed(3)} µL)</td></tr>
-                    <tr><td><b>Volume do último ponto:</b></td><td>${volumeUltimoPonto.toFixed(2)} nL</td></tr>
-                    <tr><td><b>Margem de erro configurada:</b></td><td>${seg}%</td></tr>
-                    <tr><td><b>Volume total necessário:</b></td><td><strong>${necessarioNL.toFixed(2)} nL (${necessarioUL.toFixed(3)} µL)</strong></td></tr>
-                    <tr><td><b>Volume disponível no Cassette:</b></td><td>${restanteNL.toFixed(2)} nL (${restanteUL.toFixed(3)} µL)</td></tr>
+                    <tr><td><b>Volume disponível no Cassette:</b></td><td>${capNL.toFixed(2)} nL (${capUL.toFixed(3)} µL)</td></tr>
+                    <tr><td><b>Volume restante disponível no Cassette:</b></td><td>${restanteNL.toFixed(2)} nL (${restanteUL.toFixed(3)} µL)</td></tr>
+                    <tr><td><b>Volume dispensado:</b></td><td>${totalNL.toFixed(2)} nL (${totalUL.toFixed(3)} µL)</td></tr>
+                    <tr><td><b>Volume do último ponto:</b></td><td>${volumeUltimoPonto.toFixed(3)} nL</td></tr>
+                    <tr><td><b>Margem de erro (opcional):</b></td><td>${seg}%</td></tr>
+                    <tr><td><b>Volume total de solução requerido:</b></td><td><strong>${necessarioNL.toFixed(2)} nL (${necessarioUL.toFixed(3)} µL)</strong></td></tr>
                 </table>
             `;
 
@@ -662,7 +669,6 @@
             tableWrapper.style.display = 'block';
         }
 
-        // Correção: Modificada para repor os valores padrão de fábrica e usabilidade ideais
         function limparCampos() {
             document.getElementById('volumeInicial').value = '10';
             document.getElementById('incremento').value = '1';
