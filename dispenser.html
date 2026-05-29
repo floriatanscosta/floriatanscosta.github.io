@@ -21,7 +21,6 @@
         * {
             box-sizing: border-box
         }
-
         body {
             font-family: Arial, sans-serif;
             margin: 0;
@@ -39,7 +38,8 @@
             text-align: center;
             font-size: 12px;
             font-weight: bold;
-            margin: 0 -20px 10px -20px;
+            margin: 25px 0;
+            border-radius: 10px;
         }
 
         .main-header {
@@ -90,8 +90,7 @@
             height: fit-content;
         }
 
-        h2,
-        h3 {
+        h2, h3 {
             color: #25487c;
             margin-top: 0
         }
@@ -195,8 +194,7 @@
             background: #1aa94a;
         }
 
-        .clear:hover,
-        .print:hover {
+        .clear:hover, .print:hover {
            background: #96b7cd;
             color: #2d3e4b;
         }
@@ -224,8 +222,7 @@
             margin-top: 20px
         }
 
-        table,
-        .resumo-tabela {
+        table, .resumo-tabela {
             width: 100%;
             border-collapse: collapse;
             margin-top: 10px;
@@ -233,9 +230,7 @@
             border: 1px solid #ccc;
         }
 
-        th,
-        td,
-        .resumo-tabela td {
+        th, td, .resumo-tabela td {
             border: 1px solid #ccc;
             padding: 10px 12px;
             font-size: 14px;
@@ -261,8 +256,7 @@
             text-align: right;
         }
 
-        tr:nth-child(even),
-        .resumo-tabela tr:nth-child(even) {
+        tr:nth-child(even), .resumo-tabela tr:nth-child(even) {
             background-color: #f8faff;
         }
 
@@ -295,6 +289,7 @@
             background: #fff;
             border-top: 2px solid #ccc;
             color: #888;
+            margin: 10px 0 0 0;
             padding: 15px 20px;
             display: flex;
             flex-direction: row;
@@ -359,9 +354,7 @@
                 background: transparent !important;
             }
 
-            h1,
-            h2,
-            h3 {
+            h1, h2, h3 {
                 color: #000 !important;
                 padding-bottom: 5px;
                 margin-top: 20px;
@@ -418,9 +411,7 @@
                 page-break-after: auto;
             }
 
-            th,
-            td,
-            .resumo-tabela td {
+            th, td, .resumo-tabela td {
                 border: 1pt solid #000 !important;
                 color: #000 !important;
                 background: transparent !important;
@@ -449,10 +440,6 @@
 </head>
 
 <body>
-    <div class="disclaimer-banner">
-        This algorithm is currently under development and may contain operational errors or inconsistencies | For internal use only.
-    </div>
-
     <header class="main-header">
         <img src="https://floriatanscosta.github.io/img/marte/logo.png" alt="MARTE Logo">
         <div class="header-titles">
@@ -546,6 +533,10 @@
             </div>
         </div>
     </div>
+    
+    <div class="disclaimer-banner">
+        This algorithm is currently under development and may contain operational errors or inconsistencies | For internal use only.
+    </div>
 
     <footer class="main-footer">
         <div class="footer-left">MARTE - I3A Research Group</div>
@@ -553,6 +544,7 @@
         <div>Version 3.7.0</div>
         ©2026 Floriatan
     </footer>
+
 
     <script>
         function configurarRodapeData() {
