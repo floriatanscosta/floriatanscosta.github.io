@@ -12,11 +12,11 @@
     <meta property="og:description" content="Optimization algorithm and volume calculator for the D100 dispenser. Developed by the Floriatan | MARTE - I3A Research Group.">
     <meta property="og:image" content="https://floriatanscosta.github.io/img/marte/cover.png">
     <meta property="og:url" content="https://marte.i3a.es/">
-    <!-- twitter -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="D100 VolCalc">
     <meta name="twitter:description" content="Optimization algorithm and volume calculator for the D100 dispenser. Developed by the Floriatan | MARTE - I3A Research Group.">
     <meta name="twitter:image" content="https://floriatanscosta.github.io/img/marte.png">
+
 
     <style>
         * {box-sizing: border-box}
@@ -41,7 +41,7 @@
             margin: 25px 0;
             border-radius: 10px;
         }
-        
+
         .main-header {
             display: flex;
             align-items: center;
@@ -105,11 +105,13 @@
             margin-bottom: 5px
         }
 
-        input {
+        input, select {
             width: 100%;
             padding: 10px;
             border: 1px solid #ccc;
-            border-radius: 6px
+            border-radius: 6px;
+            background: #fff;
+            font-size: 14px;
         }
 
         .label-row {
@@ -456,21 +458,21 @@
                     <label>Initial volume (nL)</label>
                     <div class="tooltip">
                         <div class="tooltip-icon">?</div>
-                        <span class="tooltip-text">Volume of the first droplet. Minimum of 0.60 nL.</span>
+                        <span class="tooltip-text">Volume of the first droplet. Minimum of 0.011 nL.</span>
                     </div>
                 </div>
-                <input id="volumeInicial" type="number" value="10" step="0.1" min="0.60">
+                <input id="volumeInicial" type="number" value="10" step="0.001" min="0.011">
             </div>
-
+            
             <div class="campo">
                 <div class="label-row">
                     <label>Increment per dispensations/droplets (nL)</label>
                     <div class="tooltip">
                         <div class="tooltip-icon">?</div>
-                        <span class="tooltip-text">Increment applied to each subsequent dispensations/droplets. Only values >0.0 are allowed.</span>
+                        <span class="tooltip-text">Increment applied to each subsequent dispensations/droplets. Only values > 0.011 are allowed.</span>
                     </div>
                 </div>
-                <input id="incremento" type="number" value="1" step="0.1" min="0">
+                <input id="incremento" type="number" value="1" step="0.001">
             </div>
 
             <div class="campo">
@@ -478,10 +480,25 @@
                     <label>Number of dispensations/droplets</label>
                     <div class="tooltip">
                         <div class="tooltip-icon">?</div>
-                        <span class="tooltip-text">Total number of dispensations/droplets. Must be an integer value between 1 and 3000.</span>
+                        <span class="tooltip-text">Total number of dispensations/droplets. Must be an integer value between 1 and 1000.</span>
                     </div>
                 </div>
-                <input id="quantidadePontos" type="number" value="20" min="1" max="3000" step="1">
+                <input id="quantidadePontos" type="number" value="20" min="1" max="1000" step="1">
+            </div>
+
+            <div class="campo">
+                <div class="label-row">
+                    <label>Replicates per point</label>
+                    <div class="tooltip">
+                        <div class="tooltip-icon">?</div>
+                        <span class="tooltip-text">Number of times each point/droplet volume will be replicated (1, 2 or 3).</span>
+                    </div>
+                </div>
+                <select id="replicas">
+                    <option value="1" selected>1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                </select>
             </div>
 
             <div class="campo">
@@ -493,6 +510,22 @@
                     </div>
                 </div>
                 <input id="capacidadeReservatorio" type="number" value="20000" step="100" min="1" max="20000">
+            </div>
+
+            <div class="campo">
+                <div class="label-row">
+                    <label>Cassette capacity usage (%)</label>
+                    <div class="tooltip">
+                        <div class="tooltip-icon">?</div>
+                        <span class="tooltip-text">Select the percentage of the total cassette capacity you intend to safely utilize.</span>
+                    </div>
+                </div>
+                <select id="porcentagemUso">
+                    <option value="25">25%</option>
+                    <option value="50">50%</option>
+                    <option value="75">75%</option>
+                    <option value="100" selected>100%</option>
+                </select>
             </div>
 
             <div class="campo">
@@ -524,7 +557,8 @@
                     <thead>
                         <tr>
                             <th>Point</th>
-                            <th>Volume (nL)</th>
+                            <th>Volume per Drop (nL)</th>
+                            <th>Total Replicated (nL)</th>
                         </tr>
                     </thead>
                     <tbody></tbody>
@@ -540,7 +574,7 @@
     <footer class="main-footer">
         <div class="footer-left">MARTE - I3A Research Group</div>
         <div id="footer-date"></div>
-        <div>Version 3.7.0</div>
+        <div>Version 3.8.0</div>
         ©2026 Floriatan
     </footer>
 
@@ -566,8 +600,7 @@
             m.innerHTML = '';
         }
 
-        // Remove a mensagem de erro de forma dinâmica assim que o operador altera os campos
-        const inputs = document.querySelectorAll('input');
+        const inputs = document.querySelectorAll('input, select');
         inputs.forEach(input => {
             input.addEventListener('input', ocultarMensagem);
         });
@@ -576,7 +609,9 @@
             const inputVolumeInicial = document.getElementById('volumeInicial');
             const inputIncremento = document.getElementById('incremento');
             const inputQuantidadePontos = document.getElementById('quantidadePontos');
+            const inputReplicas = document.getElementById('replicas');
             const inputCapacidadeReservatorio = document.getElementById('capacidadeReservatorio');
+            const inputPorcentagemUso = document.getElementById('porcentagemUso');
             const inputSeguranca = document.getElementById('seguranca');
 
             const resultado = document.getElementById('resultado');
@@ -586,44 +621,43 @@
             const v0 = parseFloat(inputVolumeInicial.value);
             const inc = parseFloat(inputIncremento.value);
             const rawPontos = parseFloat(inputQuantidadePontos.value);
-            const capNL = parseFloat(inputCapacidadeReservatorio.value);
+            const numReplicas = parseInt(inputReplicas.value);
+            const capMaxAbsoluta = parseFloat(inputCapacidadeReservatorio.value);
+            const pctUso = parseFloat(inputPorcentagemUso.value);
             const seg = parseFloat(inputSeguranca.value || 0);
 
             resultado.style.display = 'none';
             tableWrapper.style.display = 'none';
             placeholder.style.display = 'flex';
 
-            // Validação de campos vazios ou inválidos
-            if (isNaN(v0) || isNaN(inc) || isNaN(rawPontos) || isNaN(capNL) || isNaN(seg)) {
+            if (isNaN(v0) || isNaN(inc) || isNaN(rawPontos) || isNaN(capMaxAbsoluta) || isNaN(seg)) {
                 mensagem('All fields must be filled with valid numerical values.');
                 return;
             }
 
-            // Alteração 3: A quantidade de pontos deve ser um valor estritamente inteiro
-            if (!Number.isInteger(rawPontos) || rawPontos <= 0 || rawPontos > 3000) {
-                mensagem('The number of number of dispensations/droplets must be an integer value between 1 and 3000.');
+            if (!Number.isInteger(rawPontos) || rawPontos <= 0 || rawPontos > 1000) {
+                mensagem('The number of number of dispensations/droplets must be an integer value between 1 and 1000.');
                 return;
             }
             const n = parseInt(rawPontos);
 
-            // Validação do volume inicial básico
-            if (v0 < 0.60) {
-                mensagem('The initial volume cannot be less than the cassette limit (0.60 nL).');
+            // Alteração 1: Validação do volume inicial alterada para o limite mínimo de 0.011 nL
+            if (v0 < 0.011) {
+                mensagem('The initial volume cannot be less than the cassette limit (0.011 nL).');
                 return;
             }
 
-            // Alteração 2: Não é permitido o uso de incrementos negativos
-            if (inc < 0) {
-                mensagem('The increment per point cannot be negative.');
+            // Alteração 2: Validação modificada para exigir obrigatoriamente que o incremento seja maior que 0.011 nL
+            if (inc <= 0.011) {
+                mensagem('The increment per point must be strictly greater than 0.011 nL.');
                 return;
             }
 
-            if (capNL <= 0 || capNL > 20000) {
-                mensagem('The reservoir capacity must match the standard value for dispenser cassettes (C1a or T1sf) - 20000 nL.');
+            if (capMaxAbsoluta <= 0 || capMaxAbsoluta > 20000) {
+                mensagem('The reservoir capacity must match the standard value for dispenser cassettes (C1a, T1sf) - 20000 nL.');
                 return;
             }
 
-            // Alteração 4: A margem de segurança deve ser de 0 a 50%
             if (seg < 0 || seg > 50) {
                 mensagem('The allowed safety margin must be a value between 0% and 50%.');
                 return;
@@ -631,46 +665,51 @@
 
             ocultarMensagem();
 
+            let capEfetivaNL = capMaxAbsoluta * (pctUso / 100);
+
             let totalNL = 0;
             let linhasHtml = [];
-            let volumeUltimoPonto = v0;
+            let volumeUltimoPontoUnitario = v0;
 
             for (let i = 0; i < n; i++) {
-                let v = v0 + i * inc;
+                let vUnitario = v0 + i * inc;
 
-                if (v < 0.60) {
-                    mensagem(`The volume at point ${i + 1} (${v.toFixed(3)} nL) is below the minimum operational limit of the cassette (0.60 nL).`);
+                // Alteração 1 (Reflexo no laço): Ajuste do teto limite interno ponto a ponto também para 0.011 nL
+                if (vUnitario < 0.011) {
+                    mensagem(`The volume at point ${i + 1} (${vUnitario.toFixed(3)} nL) is below the minimum operational limit of the cassette (0.011 nL).`);
                     return;
                 }
 
-                totalNL += v;
-                volumeUltimoPonto = v;
-                linhasHtml.push(`<tr><td>${i + 1}</td><td>${v.toFixed(3)}</td></tr>`);
+                let vTotalPonto = vUnitario * numReplicas;
+                totalNL += vTotalPonto;
+                volumeUltimoPontoUnitario = vUnitario;
+
+                linhasHtml.push(`<tr><td>${i + 1}</td><td>${vUnitario.toFixed(3)}</td><td>${vTotalPonto.toFixed(3)}</td></tr>`);
             }
-            
+
             let necessarioNL = totalNL * (1 + seg / 100);
 
-            if (necessarioNL > capNL) {
-                mensagem(`The total required volume (${necessarioNL.toFixed(2)} nL) exceeds the maximum capacity of the Cassette (${capNL.toFixed(2)} nL).`);
+            if (necessarioNL > capEfetivaNL) {
+                mensagem(`The total required volume (${necessarioNL.toFixed(2)} nL) exceeds the calculated operational limit of the Cassette (${capEfetivaNL.toFixed(2)} nL) for ${pctUso}% usage.`);
                 return;
             }
 
             document.querySelector('#tabela tbody').innerHTML = linhasHtml.join('');
 
-            let capUL = capNL / 1000;
+            let capEfetivaUL = capEfetivaNL / 1000;
             let totalUL = totalNL / 1000;
             let necessarioUL = necessarioNL / 1000;
-            let restanteNL = capNL - necessarioNL;
+            let restanteNL = capEfetivaNL - necessarioNL;
             let restanteUL = restanteNL / 1000;
 
             resultado.style.display = 'block';
             resultado.innerHTML = `
                 <h3>Result</h3>
                 <table class="resumo-tabela">
-                    <tr><td><b>Cassette load volume limit:</b></td><td>${capNL.toFixed(2)} nL (${capUL.toFixed(3)} µL)</td></tr>
+                    <tr><td><b>Cassette limit (${pctUso}% allowed):</b></td><td>${capEfetivaNL.toFixed(2)} nL (${capEfetivaUL.toFixed(3)} µL)</td></tr>
                     <tr><td><b>Remaining available volume in the Cassette:</b></td><td>${restanteNL.toFixed(2)} nL (${restanteUL.toFixed(3)} µL)</td></tr>
-                    <tr><td><b>Dispensed volume (program):</b></td><td>${totalNL.toFixed(2)} nL (${totalUL.toFixed(3)} µL)</td></tr>
-                    <tr><td><b>Volume of the last point:</b></td><td>${volumeUltimoPonto.toFixed(3)} nL</td></tr>
+                    <tr><td><b>Dispensed volume (program + replicates):</b></td><td>${totalNL.toFixed(2)} nL (${totalUL.toFixed(3)} µL)</td></tr>
+                    <tr><td><b>Volume of the last point (single drop):</b></td><td>${volumeUltimoPontoUnitario.toFixed(3)} nL (x${numReplicas} rep)</td></tr>
                     <tr><td><b>Error margin (optional):</b></td><td>${seg}%</td></tr>
                     <tr><td><b>Total required solution volume:</b></td><td><strong>${necessarioNL.toFixed(2)} nL (${necessarioUL.toFixed(3)} µL)</strong></td></tr>
                 </table>
@@ -684,7 +723,9 @@
             document.getElementById('volumeInicial').value = '10';
             document.getElementById('incremento').value = '1';
             document.getElementById('quantidadePontos').value = '20';
+            document.getElementById('replicas').value = '1';
             document.getElementById('capacidadeReservatorio').value = '20000';
+            document.getElementById('porcentagemUso').value = '100';
             document.getElementById('seguranca').value = '10';
 
             document.getElementById('resultado').style.display = 'none';
