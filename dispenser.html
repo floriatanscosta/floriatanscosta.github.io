@@ -41,7 +41,7 @@
             margin: 25px 0;
             border-radius: 10px;
         }
-
+        
         .main-header {
             display: flex;
             align-items: center;
@@ -478,10 +478,10 @@
                     <label>Number of dispensations/droplets</label>
                     <div class="tooltip">
                         <div class="tooltip-icon">?</div>
-                        <span class="tooltip-text">Total number of dispensations/droplets. Must be an integer value between 1 and 1000.</span>
+                        <span class="tooltip-text">Total number of dispensations/droplets. Must be an integer value between 1 and 3000.</span>
                     </div>
                 </div>
-                <input id="quantidadePontos" type="number" value="20" min="1" max="1000" step="1">
+                <input id="quantidadePontos" type="number" value="20" min="1" max="3000" step="1">
             </div>
 
             <div class="campo">
@@ -600,14 +600,14 @@
             }
 
             // Alteração 3: A quantidade de pontos deve ser um valor estritamente inteiro
-            if (!Number.isInteger(rawPontos) || rawPontos <= 0 || rawPontos > 1000) {
-                mensagem('The number of number of dispensations/droplets must be an integer value between 1 and 1000.');
+            if (!Number.isInteger(rawPontos) || rawPontos <= 0 || rawPontos > 3000) {
+                mensagem('The number of number of dispensations/droplets must be an integer value between 1 and 3000.');
                 return;
             }
             const n = parseInt(rawPontos);
 
             // Validação do volume inicial básico
-            if (v0 < 0.6) {
+            if (v0 < 0.60) {
                 mensagem('The initial volume cannot be less than the cassette limit (0.60 nL).');
                 return;
             }
@@ -619,7 +619,7 @@
             }
 
             if (capNL <= 0 || capNL > 20000) {
-                mensagem('The reservoir capacity must match the standard value for dispenser cassettes (C1a, T1sf) - 20000 nL.');
+                mensagem('The reservoir capacity must match the standard value for dispenser cassettes (C1a or T1sf) - 20000 nL.');
                 return;
             }
 
@@ -635,11 +635,10 @@
             let linhasHtml = [];
             let volumeUltimoPonto = v0;
 
-            // Alteração 1: Laço validando o volume mínimo de 0.60 nL ponto a ponto dinamicamente
             for (let i = 0; i < n; i++) {
                 let v = v0 + i * inc;
 
-                if (v < 0.6) {
+                if (v < 0.60) {
                     mensagem(`The volume at point ${i + 1} (${v.toFixed(3)} nL) is below the minimum operational limit of the cassette (0.60 nL).`);
                     return;
                 }
