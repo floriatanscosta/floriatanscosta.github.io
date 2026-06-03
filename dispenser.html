@@ -17,16 +17,15 @@
     <meta name="twitter:description" content="Optimization algorithm and volume calculator for the D100 dispenser. Developed by the Floriatan | MARTE - I3A Research Group.">
     <meta name="twitter:image" content="https://floriatanscosta.github.io/img/marte.png">
 
-
     <style>
         * {box-sizing: border-box}
 
         body {
             font-family: Arial, sans-serif;
             margin: 0;
-            padding: 0 20px 80px 20px;
+            padding: 0 20px 60px 20px;
             background: #fff;
-            min-height: 100vh;
+            min-height: 120vh;
             position: relative;
         }
 
@@ -437,7 +436,7 @@
             }
         }
     </style>
-
+    
 </head>
 
 <body>
@@ -461,18 +460,18 @@
                         <span class="tooltip-text">Volume of the first droplet. Minimum of 0.011 nL.</span>
                     </div>
                 </div>
-                <input id="volumeInicial" type="number" value="10" step="0.001" min="0.011">
+                <input id="volumeInicial" type="number" value="0.011" step="0.001" min="0.011">
             </div>
-            
+
             <div class="campo">
                 <div class="label-row">
                     <label>Increment per dispensations/droplets (nL)</label>
                     <div class="tooltip">
                         <div class="tooltip-icon">?</div>
-                        <span class="tooltip-text">Increment applied to each subsequent dispensations/droplets. Only values > 0.011 are allowed.</span>
+                        <span class="tooltip-text">Increment applied to each subsequent dispensations/droplets. Only values >/= 0.011 are allowed.</span>
                     </div>
                 </div>
-                <input id="incremento" type="number" value="1" step="0.001">
+                <input id="incremento" type="number" value="0.012" step="0.001">
             </div>
 
             <div class="campo">
@@ -483,7 +482,7 @@
                         <span class="tooltip-text">Total number of dispensations/droplets. Must be an integer value between 1 and 1000.</span>
                     </div>
                 </div>
-                <input id="quantidadePontos" type="number" value="20" min="1" max="1000" step="1">
+                <input id="quantidadePontos" type="number" value="200" min="1" max="2000" step="1">
             </div>
 
             <div class="campo">
@@ -568,16 +567,14 @@
     </div>
     
     <div class="disclaimer-banner">
-        This algorithm is currently under development and may contain operational errors or inconsistencies | For internal use only.
+        This algorithm is currently under development and may contain operational errors or inconsistencies • For internal use only.
     </div>
 
     <footer class="main-footer">
         <div class="footer-left">MARTE - I3A Research Group</div>
-        <div id="footer-date"></div>
-        <div>Version 3.8.0</div>
-        ©2026 Floriatan
+        <div>Version 4.1.0</div>
+        ©2026 Floriatan/Marte
     </footer>
-
 
     <script>
         function configurarRodapeData() {
@@ -641,13 +638,11 @@
             }
             const n = parseInt(rawPontos);
 
-            // Alteração 1: Validação do volume inicial alterada para o limite mínimo de 0.011 nL
             if (v0 < 0.011) {
                 mensagem('The initial volume cannot be less than the cassette limit (0.011 nL).');
                 return;
             }
 
-            // Alteração 2: Validação modificada para exigir obrigatoriamente que o incremento seja maior que 0.011 nL
             if (inc <= 0.011) {
                 mensagem('The increment per point must be strictly greater than 0.011 nL.');
                 return;
@@ -674,7 +669,6 @@
             for (let i = 0; i < n; i++) {
                 let vUnitario = v0 + i * inc;
 
-                // Alteração 1 (Reflexo no laço): Ajuste do teto limite interno ponto a ponto também para 0.011 nL
                 if (vUnitario < 0.011) {
                     mensagem(`The volume at point ${i + 1} (${vUnitario.toFixed(3)} nL) is below the minimum operational limit of the cassette (0.011 nL).`);
                     return;
@@ -711,7 +705,7 @@
                     <tr><td><b>Dispensed volume (program + replicates):</b></td><td>${totalNL.toFixed(2)} nL (${totalUL.toFixed(3)} µL)</td></tr>
                     <tr><td><b>Volume of the last point (single drop):</b></td><td>${volumeUltimoPontoUnitario.toFixed(3)} nL (x${numReplicas} rep)</td></tr>
                     <tr><td><b>Error margin (optional):</b></td><td>${seg}%</td></tr>
-                    <tr><td><b>Total required solution volume:</b></td><td><strong>${necessarioNL.toFixed(2)} nL (${necessarioUL.toFixed(3)} µL)</strong></td></tr>
+                    <tr style="background: #fff3cd"><td><b>Total required solution volume:</b></td><td><strong>${necessarioNL.toFixed(2)} nL (${necessarioUL.toFixed(3)} µL)</strong></td></tr>
                 </table>
             `;
 
@@ -720,13 +714,13 @@
         }
 
         function limparCampos() {
-            document.getElementById('volumeInicial').value = '10';
-            document.getElementById('incremento').value = '1';
-            document.getElementById('quantidadePontos').value = '20';
+            document.getElementById('volumeInicial').value = '0.012';
+            document.getElementById('incremento').value = '0.12';
+            document.getElementById('quantidadePontos').value = '200';
             document.getElementById('replicas').value = '1';
             document.getElementById('capacidadeReservatorio').value = '20000';
             document.getElementById('porcentagemUso').value = '100';
-            document.getElementById('seguranca').value = '10';
+            document.getElementById('seguranca').value = '1';
 
             document.getElementById('resultado').style.display = 'none';
             document.querySelector('#tabela tbody').innerHTML = '';
