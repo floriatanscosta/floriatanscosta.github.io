@@ -208,10 +208,11 @@
 
         .msg.erro {
             display: block;
-            background: #fdeaea;
-            color: #8a1f1f;
+            background: #FCE8E6;
+            color: #C5221F;
             border: 1px solid #f5c6cb;
             font-weight: 500;
+            border-radius: 6px;
         }
 
         .resultado {
@@ -479,10 +480,10 @@
                     <label>Number of dispensations/droplets</label>
                     <div class="tooltip">
                         <div class="tooltip-icon">?</div>
-                        <span class="tooltip-text">Total number of dispensations/droplets. Must be an integer value between 1 and 1000.</span>
+                        <span class="tooltip-text">Total number of dispensations/droplets. Must be an integer value between 1 and 4000.</span>
                     </div>
                 </div>
-                <input id="quantidadePontos" type="number" value="200" min="1" max="2000" step="1">
+                <input id="quantidadePontos" type="number" value="100" min="1" max="4000" step="1">
             </div>
 
             <div class="campo">
@@ -572,7 +573,7 @@
 
     <footer class="main-footer">
         <div class="footer-left">MARTE - I3A Research Group</div>
-        <div>Version 4.1.0</div>
+        <div>Version 4.3.0</div>
         ©2026 Floriatan/Marte
     </footer>
 
@@ -632,8 +633,8 @@
                 return;
             }
 
-            if (!Number.isInteger(rawPontos) || rawPontos <= 0 || rawPontos > 1000) {
-                mensagem('The number of number of dispensations/droplets must be an integer value between 1 and 1000.');
+            if (!Number.isInteger(rawPontos) || rawPontos <= 0 || rawPontos > 4000) {
+                mensagem('The number of number of dispensations/droplets must be an integer value between 1 and 4000.');
                 return;
             }
             const n = parseInt(rawPontos);
