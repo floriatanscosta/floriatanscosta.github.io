@@ -1,0 +1,667 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DropSize Calc v2 | MARTE - I3A</title>
+    <link rel="icon" type="image/png" href="https://floriatanscosta.github.io/img/marte/favicon.png">
+    <meta name="description" content="Droplet spreading dimension calculator with surface matrix integration. Developed by MARTE - I3A Research Group.">
+    
+    <style>
+        * {box-sizing: border-box}
+
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0 20px 60px 20px;
+            background: #fff;
+            min-height: 120vh;
+            position: relative;
+        }
+
+        .disclaimer-banner {
+            background: #fff3cd;
+            color: #856404;
+            border: 1px solid #ffeeba;
+            padding: 15px 20px;
+            text-align: center;
+            font-size: 12px;
+            font-weight: bold;
+            margin: 25px 0;
+            border-radius: 10px;
+        }
+
+        .main-header {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            background: #fff;
+            padding: 30px 20px 15px 20px;
+            margin-bottom: 20px;
+        }
+
+        .main-header img {
+            width: 100px;
+            height: auto;
+            display: block;
+        }
+
+        .header-titles {
+            display: flex;
+            flex-direction: column;
+            gap: 2px;
+        }
+
+        .main-header h1 {
+            color: rgb(70, 70, 70);
+            margin: 0;
+            font-size: 26px;
+        }
+
+        .main-header .subtitle {
+            color: #666;
+            margin: 0;
+            font-size: 16px;
+            font-weight: 500;
+        }
+
+        .layout {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 20px
+        }
+
+        .container {
+            background: #e7eef7;
+            border: 1px solid #dbe5f2;
+            padding: 20px;
+            border-radius: 6px;
+            height: fit-content;
+        }
+
+        h2, h3 {
+            color: #25487c;
+            margin-top: 0
+        }
+
+        .campo {
+            margin-bottom: 12px
+        }
+
+        label {
+            font-weight: bold;
+            display: block;
+            margin-bottom: 5px
+        }
+
+        input, select {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            background: #fff;
+            font-size: 14px;
+        }
+
+        .label-row {
+            display: flex;
+            gap: 8px;
+            align-items: center
+        }
+
+        .tooltip {
+            position: relative;
+            display: inline-block;
+            cursor: pointer;
+        }
+
+        .tooltip-icon {
+            width: 18px;
+            height: 18px;
+            border-radius: 50%;
+            background: #25487c;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 12px;
+            font-weight: bold;
+        }
+
+        .tooltip-text {
+            visibility: hidden;
+            opacity: 0;
+            width: 280px;
+            background: #142d52;
+            color: white;
+            padding: 10px;
+            border-radius: 6px;
+            position: absolute;
+            top: -5px;
+            left: 28px;
+            z-index: 100;
+            transition: 0.2s;
+            font-size: 13px;
+            line-height: 1.4;
+            font-weight: normal;
+        }
+
+        .tooltip:hover .tooltip-text {
+            visibility: visible;
+            opacity: 1;
+        }
+
+        .botoes {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+            margin-top: 15px
+        }
+
+        button {
+            padding: 10px 16px;
+            border: none;
+            border-radius: 6px;
+            color: #fff;
+            cursor: pointer;
+            font-weight: bold;
+            transition: background 0.2s;
+            flex: 1;
+            min-width: 100px;
+            border: 1px solid #b9b9b9;
+        }
+
+        .calc {
+            background: #23cf5c;
+        }
+
+        .clear, .print {
+            background: #b0cfe5;
+            color: #7b96a9;
+        }
+
+        .calc:hover {
+            background: #1aa94a;
+        }
+
+        .clear:hover, .print:hover {
+           background: #96b7cd;
+            color: #2d3e4b;
+        }
+
+        .msg {
+            display: none;
+            padding: 20px;
+            border-radius: 6px;
+            margin-top: 20px
+        }
+
+        .msg.erro {
+            display: block;
+            background: #FCE8E6;
+            color: #C5221F;
+            border: 1px solid #f5c6cb;
+            font-weight: 500;
+            border-radius: 6px;
+        }
+
+        .resultado {
+            display: none;
+            background: #e7eef7;
+            padding: 20px;
+            border-radius: 6px;
+            margin-top: 20px
+        }
+
+        table, .resumo-tabela {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 10px;
+            background: #fff;
+            border: 1px solid #ccc;
+        }
+
+        th, td, .resumo-tabela td {
+            border: 1px solid #ccc;
+            padding: 10px 12px;
+            font-size: 14px;
+            color: #333;
+        }
+
+        th {
+            background: #25487c;
+            color: white;
+            font-weight: bold;
+            text-align: center;
+        }
+
+        .resumo-tabela td {
+            text-align: left;
+        }
+
+        .resumo-tabela td:last-child {
+            text-align: right;
+        }
+
+        tr:nth-child(even), .resumo-tabela tr:nth-child(even) {
+            background-color: #f8faff;
+        }
+
+        .placeholder {
+            min-height: 350px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #666;
+            font-style: italic
+        }
+
+        .visualizacao-wrapper {
+            display: none;
+            background: #fff;
+            border: 1px solid #ccc;
+            padding: 15px;
+            margin-top: 15px;
+            text-align: center;
+        }
+
+        .main-footer {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background: #f4f4f4;
+            border-top: 1px solid #ccc;
+            color: #888;
+            margin: 10px 0 0 0;
+            padding: 15px 20px;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 12px;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+
+        .footer-left {
+            font-weight: bold;
+        }
+        
+        @media (max-width: 600px) {
+            body {
+                padding: 0 10px 120px 10px;
+            }
+
+            .main-header {
+                flex-direction: column;
+                text-align: center;
+                gap: 10px;
+            }
+
+            .main-header h1 {
+                font-size: 22px;
+            }
+
+            .main-footer {
+                flex-direction: column;
+                text-align: center;
+                padding: 12px;
+            }
+
+            .tooltip-text {
+                left: auto;
+                right: -50px;
+                top: 25px;
+            }
+        }
+
+        @media print {
+            body {
+                background: #fff !important;
+                color: #000;
+                font-size: 12pt;
+                padding: 0 !important;
+                margin: 0;
+            }
+
+            .layout { display: block; }
+            .container {
+                border: none !important;
+                padding: 0 !important;
+                margin-bottom: 30px;
+                background: transparent !important;
+            }
+
+            h1, h2, h3 { color: #000 !important; }
+            .botoes, .msg, .tooltip-icon, .placeholder, .campo, .main-footer, .disclaimer-banner {
+                display: none !important;
+            }
+
+            .visualizacao-wrapper { display: block !important; }
+            .resultado { display: block !important; background: transparent !important; }
+            table, .resumo-tabela { border: 1pt solid #000 !important; }
+            td, th { border: 1pt solid #000 !important; }
+        }
+    </style>
+</head>
+
+<body>
+    <header class="main-header">
+        <img src="https://floriatanscosta.github.io/img/marte/logo.png" alt="MARTE Logo">
+        <div class="header-titles">
+            <h1>DropSize Calc</h1>
+            <p class="subtitle">Droplet Dimension & Spreading Estimator</p>
+        </div>
+    </header>
+
+    <div class="layout">
+        <div class="container">
+            <h2>Experimental Parameters</h2>
+
+            <div class="campo">
+                <div class="label-row">
+                    <label>Select Liquid Solution</label>
+                    <div class="tooltip">
+                        <div class="tooltip-icon">?</div>
+                        <span class="tooltip-text">Loads standard library properties for density and surface tension.</span>
+                    </div>
+                </div>
+                <select id="liquidoSelecionado" onchange="atualizarMatrizInteracao()">
+                    </select>
+            </div>
+
+            <div class="campo">
+                <div class="label-row">
+                    <label>Select Substrate Surface</label>
+                    <div class="tooltip">
+                        <div class="tooltip-icon">?</div>
+                        <span class="tooltip-text">Select the slide material or surface chemical modification to evaluate matrix wetting behavior.</span>
+                    </div>
+                </div>
+                <select id="superficieSelecionada" onchange="atualizarMatrizInteracao()">
+                    </select>
+            </div>
+
+            <div class="campo">
+                <div class="label-row">
+                    <label>Droplet Volume (nL)</label>
+                    <div class="tooltip">
+                        <div class="tooltip-icon">?</div>
+                        <span class="tooltip-text">Volume of the micro-droplet to be deposited. Must be greater than 0.001 nL.</span>
+                    </div>
+                </div>
+                <input id="volumeGota" type="number" value="10.000" step="0.1" min="0.001">
+            </div>
+
+            <div class="campo">
+                <div class="label-row">
+                    <label>Calculated Contact Angle (°)</label>
+                    <div class="tooltip">
+                        <div class="tooltip-icon">?</div>
+                        <span class="tooltip-text">Thermodynamic contact angle (θ) predicted for this pair. You can manually overwrite this value for fine adjustments.</span>
+                    </div>
+                </div>
+                <input id="anguloContato" type="number" value="30" step="0.5" min="1" max="179">
+            </div>
+
+            <div class="botoes">
+                <button class="calc" onclick="calcularEspalhamento()">Calculate</button>
+                <button class="clear" onclick="limparCampos()">Clear</button>
+                <button class="print" onclick="window.print()">Print</button>
+            </div>
+
+            <div id="msg" class="msg"></div>
+            <div id="resultado" class="resultado"></div>
+        </div>
+
+        <div class="container">
+            <h2>Spreading & Dimension Output</h2>
+            <div id="placeholder" class="placeholder">Select parameters and execute the calculation to view geometric predictions and profile rendering.</div>
+            
+            <div class="visualizacao-wrapper" id="visualizacaoWrapper">
+                <h3 style="font-size: 14px; margin-bottom: 10px; color:#555;">Estimated Droplet Cross-Section Profile</h3>
+                <svg id="dropSvg" width="100%" height="160" style="background: #fdfdfd; border: 1px dashed #ccc;"></svg>
+            </div>
+        </div>
+    </div>
+    
+    <div class="disclaimer-banner">
+        This simulation model assumes an ideal spherical cap shape (Bond number << 1). Surface interaction matrices provide standardized estimations based on clean experimental benchmarks.
+    </div>
+
+    <footer class="main-footer">
+        <div class="footer-left">MARTE - I3A Research Group</div>
+        <div>Version 4.5.0</div>
+        ©2026 Floriatan/Marte
+    </footer>
+
+    <script>
+        // Banco de Dados de Líquidos
+        const bancoLiquidos = {
+            "agua_pura": { nome: "Pure Water", tensao: 72.8, densidade: 0.998, viscosidade: 1.002, ref: "CRC Handbook" },
+            "agua_deion": { nome: "Ultrapure / Deionized Water", tensao: 72.4, densidade: 0.997, viscosidade: 0.890, ref: "NIST WebBook" },
+            "hno3_1": { nome: "Nitric Acid (HNO₃) 1% v/v", tensao: 72.1, densidade: 1.003, viscosidade: 1.020, ref: "Analytical Standards" },
+            "hno3_2": { nome: "Nitric Acid (HNO₃) 2% v/v", tensao: 71.8, densidade: 1.009, viscosidade: 1.040, ref: "Analytical Standards" },
+            "hno3_3": { nome: "Nitric Acid (HNO₃) 3% v/v", tensao: 71.5, densidade: 1.015, viscosidade: 1.060, ref: "Analytical Standards" },
+            "glic_1": { nome: "Water + 1% v/v Glycerin", tensao: 72.5, densidade: 1.001, viscosidade: 1.030, ref: "Glycerin Lit." },
+            "glic_2": { nome: "Water + 2% v/v Glycerin", tensao: 72.3, densidade: 1.004, viscosidade: 1.060, ref: "Glycerin Lit." },
+            "glic_3": { nome: "Water + 3% v/v Glycerin", tensao: 72.0, densidade: 1.006, viscosidade: 1.095, ref: "Glycerin Lit." },
+            "glic_4": { nome: "Water + 4% v/v Glycerin", tensao: 71.8, densidade: 1.009, viscosidade: 1.130, ref: "Glycerin Lit." },
+            "glic_5": { nome: "Water + 5% v/v Glycerin", tensao: 71.5, densidade: 1.012, viscosidade: 1.170, ref: "Glycerin Lit." }
+        };
+
+        // Banco de Dados de Superfícies e Modificações Químicas (com fator de ajuste do ângulo base)
+        const bancoSuperficies = {
+            "vidro_comum": { nome: "Common Glass (Soda-Lime)", anguloBase: 45.0, hidrofobicidade: "Moderate", desc: "Standard untreated surface" },
+            "vidro_boro": { nome: "Borosilicate Glass", anguloBase: 40.0, hidrofobicidade: "Moderate-High", desc: "Standard laboratory slide profile" },
+            "vidro_limpo": { nome: "Clean Glass (Standard mechanical cleaning)", anguloBase: 30.0, hidrofobicidade: "High", desc: "No grease or particulate leftovers" },
+            "vidro_hno3": { nome: "Glass cleaned with Nitric Acid (HNO₃)", anguloBase: 15.0, hidrofobicidade: "Very High (Hydrophilic)", desc: "Completely activated silanol groups" },
+            "vidro_naoh": { nome: "Glass cleaned with Sodium Hydroxide (NaOH)", anguloBase: 10.0, hidrofobicidade: "Ultra High (Superhydrophilic)", desc: "Maximized surface hydroxylation" },
+            "vidro_silanizado": { nome: "Silanized Glass", anguloBase: 90.0, hidrofobicidade: "Low (Hydrophobic)", desc: "Organosilane covalent monolayer" },
+            "vidro_eutetico": { nome: "Glass with Menthol/Thymol Hydrophobic Film", anguloBase: 105.0, hidrofobicidade: "Very Low (Hydrophobic)", desc: "Deep Eutectic Solvent thin film adaptation" }
+        };
+
+        // Inicialização Combinada dos Dropdowns
+        function inicializarApp() {
+            const selectLiq = document.getElementById('liquidoSelecionado');
+            const selectSurf = document.getElementById('superficieSelecionada');
+            if (!selectLiq || !selectSurf) return;
+            
+            selectLiq.innerHTML = '';
+            for (let k in bancoLiquidos) {
+                let opt = document.createElement('option');
+                opt.value = k;
+                opt.textContent = bancoLiquidos[k].nome;
+                selectLiq.appendChild(opt);
+            }
+
+            selectSurf.innerHTML = '';
+            for (let s in bancoSuperficies) {
+                let opt = document.createElement('option');
+                opt.value = s;
+                opt.textContent = bancoSuperficies[s].nome;
+                selectSurf.appendChild(opt);
+            }
+
+            atualizarMatrizInteracao();
+        }
+
+        // Ajusta dinamicamente o ângulo com base na combinação do par Líquido-Sólido
+        function atualizarMatrizInteracao() {
+            const liqKey = document.getElementById('liquidoSelecionado').value;
+            const surfKey = document.getElementById('superficieSelecionada').value;
+            
+            let anguloCalculado = bancoSuperficies[surfKey].anguloBase;
+
+            // Fatores físico-químicos secundários: soluções com glicerina aumentam o ângulo em matrizes hidrofóbicas,
+            // e soluções com HNO3 interagem reduzindo ainda mais o ângulo em superfícies ativas.
+            if (liqKey.includes("glic")) {
+                let teor = parseInt(liqKey.split("_")[1]);
+                anguloCalculado += (teor * 0.5); // Pequeno incremento estérico por viscosidade/glicerina
+            } else if (liqKey.includes("hno3") && !surfKey.includes("silanizado") && !surfKey.includes("eutetico")) {
+                anguloCalculado = Math.max(7, anguloCalculado - 4); // Redução por afinidade ácida em vidro hidrofílico
+            }
+
+            document.getElementById('anguloContato').value = anguloCalculado.toFixed(1);
+            ocultarMensagem();
+        }
+
+        function mensagem(txt) {
+            let m = document.getElementById('msg');
+            m.className = 'msg erro';
+            m.style.display = 'block';
+            m.textContent = txt;
+        }
+
+        function ocultarMensagem() {
+            let m = document.getElementById('msg');
+            m.className = 'msg';
+            m.style.display = 'none';
+        }
+
+        document.querySelectorAll('input, select').forEach(el => {
+            el.addEventListener('input', ocultarMensagem);
+        });
+
+        function calcularEspalhamento() {
+            const volInput = parseFloat(document.getElementById('volumeGota').value);
+            const angInput = parseFloat(document.getElementById('anguloContato').value);
+            
+            const liqKey = document.getElementById('liquidoSelecionado').value;
+            const surfKey = document.getElementById('superficieSelecionada').value;
+
+            const liqDados = bancoLiquidos[liqKey];
+            const surfDados = bancoSuperficies[surfKey];
+
+            const resultadoDiv = document.getElementById('resultado');
+            const placeholder = document.getElementById('placeholder');
+            const visWrapper = document.getElementById('visualizacaoWrapper');
+
+            if (isNaN(volInput) || volInput <= 0) {
+                mensagem("Please enter a valid droplet volume higher than 0 nL.");
+                return;
+            }
+            if (isNaN(angInput) || angInput <= 0 || angInput >= 180) {
+                mensagem("The contact angle must be a realistic thermodynamic value between 1° and 179°.");
+                return;
+            }
+
+            ocultarMensagem();
+
+            // Cálculos físicos (Calota Esférica)
+            const V_um3 = volInput * 1e9; 
+            const theta_rad = angInput * (Math.PI / 180);
+
+            const termoGeometrico = (2 + Math.cos(theta_rad)) * Math.pow(1 - Math.cos(theta_rad), 2) / Math.pow(Math.sin(theta_rad), 3);
+            const raioContato_um = Math.pow((3 * V_um3) / (Math.PI * termoGeometrico), 1/3);
+            
+            const diametro_um = raioContato_um * 2;
+            const area_um2 = Math.PI * Math.pow(raioContato_um, 2);
+            const h_um = raioContato_um * ((1 - Math.cos(theta_rad)) / Math.sin(theta_rad));
+
+            placeholder.style.display = 'none';
+            visWrapper.style.display = 'block';
+            resultadoDiv.style.display = 'block';
+
+            resultadoDiv.innerHTML = `
+                <h3>Calculated Geometric Outputs</h3>
+                <table class="resumo-tabela">
+                    <tr><td><b>Contact Radius (a):</b></td><td><strong>${raioContato_um.toFixed(2)} µm</strong></td></tr>
+                    <tr><td><b>Contact Diameter (d):</b></td><td><strong>${diametro_um.toFixed(2)} µm</strong></td></tr>
+                    <tr><td><b>Spreading Area (A):</b></td><td><strong>${area_um2.toFixed(0)} µm²</strong></td></tr>
+                    <tr><td><b>Droplet Apex Height (h):</b></td><td>${h_um.toFixed(2)} µm</td></tr>
+                    
+                    <tr style="background: #f0f4fa;"><td colspan="2"><b>Solid Surface Wetting Matrix</b></td></tr>
+                    <tr><td>Surface Hydrophilicity:</td><td>${surfDados.hidrofobicidade}</td></tr>
+                    <tr><td>Treatment Context:</td><td>${surfDados.desc}</td></tr>
+                    
+                    <tr style="background: #f0f4fa;"><td colspan="2"><b>Fluid Properties Loaded</b></td></tr>
+                    <tr><td>Density (ρ):</td><td>${liqDados.densidade.toFixed(3)} g/cm³</td></tr>
+                    <tr><td>Surface Tension (γ):</td><td>${liqDados.tensao.toFixed(1)} mN/m</td></tr>
+                    <tr style="font-size:11px; color:#666;"><td>Source Literature:</td><td>${liqDados.ref}</td></tr>
+                </table>
+            `;
+
+            desenharGotaSvg(raioContato_um, h_um, angInput);
+        }
+
+        function desenharGotaSvg(raio, altura, anguloGraus) {
+            const svg = document.getElementById('dropSvg');
+            if (!svg) return;
+            svg.innerHTML = ''; 
+
+            const svgW = svg.clientWidth || 340;
+            const baseLinhaY = 130; 
+            const centroX = svgW / 2;
+
+            const escalaX = (svgW * 0.7) / (raio * 2);
+            const escalaY = escalaX; 
+
+            const r_px = raio * escalaX;
+            let h_px = altura * escalaY;
+
+            if (h_px > 100) h_px = 100;
+
+            const x_inicio = centroX - r_px;
+            const x_fim = centroX + r_px;
+
+            // Se o ângulo for muito baixo, calcula um arco esteticamente plano estável
+            let pathGota = "";
+            if (anguloGraus < 3) {
+                pathGota = `M ${x_inicio} ${baseLinhaY} Q ${centroX} ${baseLinhaY - h_px} ${x_fim} ${baseLinhaY} Z`;
+            } else {
+                const raioArco_px = (Math.pow(r_px, 2) + Math.pow(h_px, 2)) / (2 * h_px);
+                const grandeArcoFlag = anguloGraus > 90 ? 1 : 0;
+                pathGota = `M ${x_inicio} ${baseLinhaY} A ${raioArco_px} ${raioArco_px} 0 ${grandeArcoFlag} 1 ${x_fim} ${baseLinhaY} Z`;
+            }
+
+            const linhaSuperficie = document.createElementNS("http://www.w3.org/2000/svg", "line");
+            linhaSuperficie.setAttribute("x1", 10);
+            linhaSuperficie.setAttribute("y1", baseLinhaY);
+            linhaSuperficie.setAttribute("x2", svgW - 10);
+            linhaSuperficie.setAttribute("y2", baseLinhaY);
+            linhaSuperficie.setAttribute("stroke", "#464646");
+            linhaSuperficie.setAttribute("stroke-width", "3");
+
+            const pathElement = document.createElementNS("http://www.w3.org/2000/svg", "path");
+            pathElement.setAttribute("d", pathGota);
+            pathElement.setAttribute("fill", "url(#gradienteFluido)");
+            pathElement.setAttribute("stroke", "#25487c");
+            pathElement.setAttribute("stroke-width", "2");
+
+            const defs = document.createElementNS("http://www.w3.org/2000/svg", "defs");
+            const gradiente = document.createElementNS("http://www.w3.org/2000/svg", "linearGradient");
+            gradiente.setAttribute("id", "gradienteFluido");
+            gradiente.setAttribute("x1", "0%"); gradiente.setAttribute("y1", "0%");
+            gradiente.setAttribute("x2", "0%"); gradiente.setAttribute("y2", "100%");
+
+            const stop1 = document.createElementNS("http://www.w3.org/2000/svg", "stop");
+            stop1.setAttribute("offset", "0%"); stop1.setAttribute("stop-color", "#9bc5f5"); stop1.setAttribute("stop-opacity", "0.8");
+            const stop2 = document.createElementNS("http://www.w3.org/2000/svg", "stop");
+            stop2.setAttribute("offset", "100%"); stop2.setAttribute("stop-color", "#3a7bd5"); stop2.setAttribute("stop-opacity", "0.5");
+
+            gradiente.appendChild(stop1);
+            gradiente.appendChild(stop2);
+            defs.appendChild(gradiente);
+
+            svg.appendChild(defs);
+            svg.appendChild(pathElement);
+            svg.appendChild(linhaSuperficie);
+        }
+
+        function limparCampos() {
+            document.getElementById('volumeGota').value = '10.000';
+            inicializarApp();
+            
+            document.getElementById('resultado').style.display = 'none';
+            document.getElementById('visualizacaoWrapper').style.display = 'none';
+            document.getElementById('placeholder').style.display = 'flex';
+            ocultarMensagem();
+        }
+
+        window.addEventListener('DOMContentLoaded', inicializarApp);
+    </script>
+</body>
+</html>
