@@ -6,7 +6,7 @@
   <title>Gerador de Assinatura de E-mail Dinâmico</title>
   <style>
     body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      font-family: Roboto, Tahoma, Geneva, Verdana, sans-serif;
       background-color: #f3f4f6;
       margin: 0;
       padding: 20px;
@@ -68,17 +68,17 @@
       padding: 20px;
       background: #f8fafc;
       border-radius: 6px;
-      min-height: 180px;
+      min-height: 200px;
       display: flex;
       align-items: center;
       justify-content: center;
     }
     .btn-copy {
       background-color: #223D71;
-      color: white;
+      color: #fff;
       border: none;
-      padding: 12px 20px;
-      font-size: 14px;
+      padding: 14px 20px;
+      font-size: 15px;
       font-weight: bold;
       border-radius: 4px;
       cursor: pointer;
@@ -90,10 +90,11 @@
     }
     .alert {
       margin-top: 10px;
-      font-size: 13px;
+      font-size: 14px;
       color: #16a34a;
       display: none;
       font-weight: 500;
+      text-align: center;
     }
     .tip {
       font-size: 12px;
@@ -179,11 +180,12 @@
       <!-- O HTML da assinatura será gerado aqui via JavaScript -->
     </div>
     
-    <button class="btn-copy" onclick="copiarAssinatura()">Copiar Assinatura para o E-mail</button>
-    <div class="alert" id="success-alert">✓ Assinatura copiada! Agora basta ir na configuração do seu e-mail e dar um "Ctrl + V".</div>
+    <button class="btn-copy" onclick="copiarAssinatura()">Copiar assinatura</button>
+    <div class="alert" id="success-alert">Copiado! Agora basta colar no campo de assinaturas na configuração do seu e-mail.</div>
   </div>
 
 </div>
+
 
 <script>
   function atualizarAssinatura() {
