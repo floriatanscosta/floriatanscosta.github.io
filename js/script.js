@@ -38,7 +38,7 @@ document.addEventListener("DOMContentLoaded", async function () {
         document.body.style.opacity = "1";
     } catch (error) {
         console.error("Erro ao carregar a página:", error);
-        document.body.innerHTML = `<h1>Erro ao carregar a página</h1><p>${error.message}</p>`;
+        document.body.innerHTML = `<h1>Erro ao carregar a página. Por favor, tente novamente mais tarde.</h1><p>${error.message}</p>`;
         document.body.style.opacity = "1"; // Garante visibilidade mesmo em erro
     }
 });
