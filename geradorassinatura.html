@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gerador de Assinatura de E-mail Dinâmico</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f3f4f6;
+      margin: 0;
+      padding: 20px;
+      display: flex;
+      justify-content: center;
+    }
+    .container {
+      display: flex;
+      flex-direction: row;
+      gap: 30px;
+      max-width: 1200px;
+      width: 100%;
+      background: #ffffff;
+      padding: 30px;
+      border-radius: 8px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+    .form-section {
+      flex: 1;
+      min-width: 320px;
+    }
+    .preview-section {
+      flex: 1.2;
+      border-left: 2px solid #e5e7eb;
+      padding-left: 30px;
+      display: flex;
+      flex-direction: column;
+    }
+    h2 {
+      color: #223D71;
+      margin-top: 0;
+      margin-bottom: 20px;
+    }
+    .form-group {
+      margin-bottom: 15px;
+    }
+    label {
+      display: block;
+      font-size: 13px;
+      font-weight: 600;
+      color: #4b5563;
+      margin-bottom: 5px;
+    }
+    input {
+      width: 100%;
+      padding: 8px 12px;
+      border: 1px solid #d1d5db;
+      border-radius: 4px;
+      font-size: 14px;
+      box-sizing: border-box;
+    }
+    input:focus {
+      outline: none;
+      border-color: #223D71;
+      box-shadow: 0 0 0 3px rgba(34, 61, 113, 0.1);
+    }
+    .preview-box {
+      border: 1px dashed #cbd5e1;
+      padding: 20px;
+      background: #f8fafc;
+      border-radius: 6px;
+      min-height: 180px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .btn-copy {
+      background-color: #223D71;
+      color: white;
+      border: none;
+      padding: 12px 20px;
+      font-size: 14px;
+      font-weight: bold;
+      border-radius: 4px;
+      cursor: pointer;
+      margin-top: 20px;
+      transition: background-color 0.2s;
+    }
+    .btn-copy:hover {
+      background-color: #162a50;
+    }
+    .alert {
+      margin-top: 10px;
+      font-size: 13px;
+      color: #16a34a;
+      display: none;
+      font-weight: 500;
+    }
+    .tip {
+      font-size: 12px;
+      color: #6b7280;
+      margin-top: 2px;
+    }
+    @media (max-width: 900px) {
+      .container {
+        flex-direction: column;
+      }
+      .preview-section {
+        border-left: none;
+        padding-left: 0;
+        border-top: 2px solid #e5e7eb;
+        padding-top: 30px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<div class="container">
+  
+  <!-- Formulário para Inserção dos Dados -->
+  <div class="form-section">
+    <h2>Dados da Assinatura</h2>
+    
+    <div class="form-group">
+      <label for="input-nome">Nome Completo</label>
+      <input type="text" id="input-nome" value="Floriatan Santos Costa">
+    </div>
+    
+    <div class="form-group">
+      <label for="input-cargo">Cargo / Título</label>
+      <input type="text" id="input-cargo" value="Investigador Posdoctoral">
+    </div>
+    
+    <div class="form-group">
+      <label for="input-lab1">Laboratório / Departamento 1</label>
+      <input type="text" id="input-lab1" value="Laboratorio de Espectrometría, Sensores y Biosensores">
+    </div>
+    
+    <div class="form-group">
+      <label for="input-inst1">Instituição / Universidade 1</label>
+      <input type="text" id="input-inst1" value="Universidade Federal do Paraná">
+    </div>
+    
+    <div class="form-group">
+      <label for="input-lab2">Laboratório / Departamento 2</label>
+      <input type="text" id="input-lab2" value="Métodos de Análisis Rápidos con Técnicas Espectroscópicas">
+      <div class="tip">Apague para ocultar este bloco</div>
+    </div>
+    
+    <div class="form-group">
+      <label for="input-inst2">Instituição / Universidade 2</label>
+      <input type="text" id="input-inst2" value="Universidad de Zaragoza">
+      <div class="tip">Apague para ocultar este bloco</div>
+    </div>
+
+    <div class="form-group">
+      <label for="input-url-web">Link do Website Pessoal</label>
+      <input type="text" id="input-url-web" value="https://floriatanscosta.github.io/">
+      <div class="tip">Apague para ocultar o ícone do CV/Website</div>
+    </div>
+
+    <div class="form-group">
+      <label for="input-url-lattes">Link do Currículo Lattes</label>
+      <input type="text" id="input-url-lattes" value="http://lattes.cnpq.br/0287106268880389">
+      <div class="tip">Apague para ocultar o ícone do Lattes</div>
+    </div>
+
+    <div class="form-group">
+      <label for="input-url-orcid">Link do ORCID</label>
+      <input type="text" id="input-url-orcid" value="https://orcid.org/0000-0001-7766-2860">
+      <div class="tip">Apague para ocultar o ícone do ORCID</div>
+    </div>
+  </div>
+  
+  <!-- Visualização e Ação de Copiar -->
+  <div class="preview-section">
+    <h2>Visualização</h2>
+    <div class="preview-box" id="preview-container">
+      <!-- O HTML da assinatura será gerado aqui via JavaScript -->
+    </div>
+    
+    <button class="btn-copy" onclick="copiarAssinatura()">Copiar Assinatura para o E-mail</button>
+    <div class="alert" id="success-alert">✓ Assinatura copiada! Agora basta ir na configuração do seu e-mail e dar um "Ctrl + V".</div>
+  </div>
+
+</div>
+
+<script>
+  function atualizarAssinatura() {
+    // Captura os valores removendo espaços extras nas pontas
+    const nome = document.getElementById('input-nome').value.trim();
+    const cargo = document.getElementById('input-cargo').value.trim();
+    const lab1 = document.getElementById('input-lab1').value.trim();
+    const inst1 = document.getElementById('input-inst1').value.trim();
+    const lab2 = document.getElementById('input-lab2').value.trim();
+    const inst2 = document.getElementById('input-inst2').value.trim();
+    const urlWeb = document.getElementById('input-url-web').value.trim();
+    const urlLattes = document.getElementById('input-url-lattes').value.trim();
+    const urlOrcid = document.getElementById('input-url-orcid').value.trim();
+
+    // 1. Tratamento condicional para os blocos de texto (Nome e Cargo sempre existem por padrão)
+    const blocoNome = nome ? `<div style="font-size: 18px; font-weight: 800; color: #223D71; margin-bottom: 2px; letter-spacing: 0.5px;">${nome}</div>` : '';
+    const blocoCargo = cargo ? `<div style="font-size: 12px; font-weight: 600; color: #4b5563; margin-bottom: 12px; letter-spacing: 0.5px;">${cargo}</div>` : '';
+    
+    const blocoLab1 = lab1 ? `<div style="font-size: 12px; color: #1f2937; font-weight: 600; margin-bottom: 1px;">${lab1}</div>` : '';
+    // Altera o margin-bottom da instituição dependendo se haverá uma segunda instituição ou ícones logo abaixo
+    const marginInst1 = (lab2 || inst2 || urlWeb || urlLattes || urlOrcid) ? '8px' : '0px';
+    const blocoInst1 = inst1 ? `<div style="font-size: 12px; color: #6b7280; font-weight: 500; margin-bottom: ${marginInst1};">${inst1}</div>` : '';
+
+    const blocoLab2 = lab2 ? `<div style="font-size: 12px; color: #1f2937; font-weight: 600; margin-bottom: 1px;">${lab2}</div>` : '';
+    const marginInst2 = (urlWeb || urlLattes || urlOrcid) ? '20px' : '0px';
+    const blocoInst2 = inst2 ? `<div style="font-size: 12px; color: #6b7280; font-weight: 500; margin-bottom: ${marginInst2};">${inst2}</div>` : '';
+
+    // 2. Tratamento condicional para os ícones e links das redes/plataformas
+    const celulaWeb = urlWeb ? `
+      <td style="padding-right: 14px; vertical-align: middle;">
+        <a href="${urlWeb}" target="_blank" style="text-decoration: none; display: block;">
+          <img src="https://floriatanscosta.github.io/img/mail/cvmail.png" alt="CV" style="height: 20px; width: auto; display: block;" height="20" title="Currículum Vitae">
+        </a>
+      </td>` : '';
+
+    const celulaLattes = urlLattes ? `
+      <td style="padding-right: 14px; vertical-align: middle;">
+        <a href="${urlLattes}" target="_blank" style="text-decoration: none; display: block;">
+          <img src="https://floriatanscosta.github.io/img/mail/lattesmail.png" alt="Lattes" style="height: 20px; width: auto; display: block;" height="20" title="Currículo Lattes">
+        </a>
+      </td>` : '';
+
+    const celulaOrcid = urlOrcid ? `
+      <td style="vertical-align: middle;">
+        <a href="${urlOrcid}" target="_blank" style="text-decoration: none; display: block;">
+          <img src="https://floriatanscosta.github.io/img/mail/orcidmail.png" alt="ORCID" style="height: 20px; width: auto; display: block;" height="20" title="ORCID iD">
+        </a>
+      </td>` : '';
+
+    // Se pelo menos um ícone existir, renderiza a tabela de ícones sociais
+    const blocoSocial = (urlWeb || urlLattes || urlOrcid) ? `
+      <table cellpadding="0" cellspacing="0" style="border-collapse: collapse;">
+        <tr>
+          ${celulaWeb}
+          ${celulaLattes}
+          ${celulaOrcid}
+        </tr>
+      </table>` : '';
+
+    // Montagem final do HTML limpo
+    const assinaturaHTML = `
+<table cellpadding="0" cellspacing="0" style="font-family: 'Roboto', Helvetica, Arial, sans-serif; font-size: 14px; color: #333333; line-height: 1.2; min-width: 480px; max-width: 650px; text-align: left;">
+  <tr>
+    <td style="vertical-align: middle; padding-right: 20px; width: 110px;">
+      <img src="https://floriatanscosta.github.io/img/mail/logomail.png" alt="Logo UFPR" style="width: 110px; height: auto; display: block;" width="110">
+    </td>
+    <td style="vertical-align: top; width: 2px; background-color: #dfe5f1; padding: 0;"></td>
+    <td style="vertical-align: middle; padding-left: 20px;">
+      ${blocoNome}
+      ${blocoCargo}
+      ${blocoLab1}
+      ${blocoInst1}
+      ${blocoLab2}
+      ${blocoInst2}
+      ${blocoSocial}
+    </td>
+  </tr>
+</table>`;
+
+    document.getElementById('preview-container').innerHTML = assinaturaHTML;
+  }
+
+  async function copiarAssinatura() {
+    const previewBox = document.getElementById('preview-container');
+    const alertBox = document.getElementById('success-alert');
+    
+    try {
+      const blob = new Blob([previewBox.innerHTML], { type: 'text/html' });
+      const data = [new ClipboardItem({ 'text/html': blob })];
+      
+      await navigator.clipboard.write(data);
+      
+      alertBox.style.display = 'block';
+      setTimeout(() => {
+        alertBox.style.display = 'none';
+      }, 5000);
+    } catch (err) {
+      alert('Falha ao copiar automaticamente. Por favor, selecione a assinatura visualmente com o mouse, use Ctrl+C e depois Ctrl+V no seu e-mail.');
+    }
+  }
+
+  // Adiciona o ouvinte para disparar a atualização em cada tecla digitada ou apagada
+  const inputs = document.querySelectorAll('input');
+  inputs.forEach(input => {
+    input.addEventListener('input', atualizarAssinatura);
+  });
+
+  // Inicializa a visualização com os dados padrão
+  atualizarAssinatura();
+</script>
+
+</body>
+</html>
