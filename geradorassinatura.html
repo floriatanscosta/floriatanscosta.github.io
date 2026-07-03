@@ -138,9 +138,7 @@
 </head>
 
 <body>
-
   <div class="container">
-
     <!-- Formulário para Inserção dos Dados -->
     <div class="form-section">
       <h2>Dados da Assinatura</h2>
@@ -155,74 +153,69 @@
       </div>
 
       <div class="form-group">
-        <label for="input-nome">Nome Completo</label>
+        <label for="input-nome">Nome</label>
         <input type="text" id="input-nome" value="Floriatan Santos Costa">
       </div>
 
       <div class="form-group">
-        <label for="input-cargo">Cargo / Título</label>
+        <label for="input-cargo">Cargo ou título</label>
         <input type="text" id="input-cargo" value="Investigador Posdoctoral">
       </div>
 
       <div class="form-group">
-        <label for="input-lab1">Laboratório / Departamento 1</label>
+        <label for="input-lab1">Laboratório</label>
         <input type="text" id="input-lab1" value="Laboratorio de Espectrometría, Sensores y Biosensores">
       </div>
 
       <div class="form-group">
-        <label for="input-inst1">Instituição / Universidade 1</label>
+        <label for="input-inst1">Instituição</label>
         <input type="text" id="input-inst1" value="Universidade Federal do Paraná">
       </div>
 
       <div class="form-group">
-        <label for="input-lab2">Laboratório / Departamento 2</label>
+        <label for="input-lab2">Laboratório (se houver)</label>
         <input type="text" id="input-lab2" value="Métodos de Análisis Rápidos con Técnicas Espectroscópicas">
         <div class="tip">Apague para ocultar este bloco</div>
       </div>
 
       <div class="form-group">
-        <label for="input-inst2">Instituição / Universidade 2</label>
+        <label for="input-inst2">Instituição (se houver)</label>
         <input type="text" id="input-inst2" value="Universidad de Zaragoza">
         <div class="tip">Apague para ocultar este bloco</div>
       </div>
 
       <div class="form-group">
-        <label for="input-url-web">Link do Website Pessoal</label>
+        <label for="input-url-web">Site pessoal</label>
         <input type="text" id="input-url-web" value="https://floriatanscosta.github.io/">
-        <div class="tip">Apague para ocultar o ícone do CV/Website</div>
+        <div class="tip">Apague para ocultar o ícone</div>
       </div>
 
       <div class="form-group">
-        <label for="input-url-lattes">Link do Currículo Lattes</label>
+        <label for="input-url-lattes">Currículo Lattes</label>
         <input type="text" id="input-url-lattes" value="http://lattes.cnpq.br/0287106268880389">
-        <div class="tip">Apague para ocultar o ícone do Lattes</div>
+        <div class="tip">Apague para ocultar</div>
       </div>
 
       <div class="form-group">
-        <label for="input-url-orcid">Link do ORCID</label>
+        <label for="input-url-orcid">Link do OrcID</label>
         <input type="text" id="input-url-orcid" value="https://orcid.org/0000-0001-7766-2860">
-        <div class="tip">Apague para ocultar o ícone do ORCID</div>
+        <div class="tip">Apague para ocultar</div>
       </div>
     </div>
 
     <!-- Visualização e Ação de Copiar -->
     <div class="preview-section">
-      <h2>Visualização</h2>
+      <h2>Visualização (real time)</h2>
       <div class="preview-box" id="preview-container">
-        <!-- O HTML da assinatura será gerado aqui via JavaScript -->
       </div>
-
       <button class="btn-copy" onclick="copiarAssinatura()">Copiar assinatura</button>
       <div class="alert" id="success-alert">Copiado! Agora basta colar no campo de assinaturas na configuração do seu
         e-mail.</div>
     </div>
-
   </div>
-
 
   <script>
     function atualizarAssinatura() {
-      // Captura os valores removendo espaços extras nas pontas
       const logoUrl = document.getElementById('select-logo').value;
       const nome = document.getElementById('input-nome').value.trim();
       const cargo = document.getElementById('input-cargo').value.trim();
@@ -234,12 +227,11 @@
       const urlLattes = document.getElementById('input-url-lattes').value.trim();
       const urlOrcid = document.getElementById('input-url-orcid').value.trim();
 
-      // 1. Tratamento condicional para os blocos de texto (Nome e Cargo sempre existem por padrão)
       const blocoNome = nome ? `<div style="font-size: 18px; font-weight: 800; color: #223D71; margin-bottom: 2px; letter-spacing: 0.5px;">${nome}</div>` : '';
       const blocoCargo = cargo ? `<div style="font-size: 12px; font-weight: 600; color: #4b5563; margin-bottom: 12px; letter-spacing: 0.5px;">${cargo}</div>` : '';
 
       const blocoLab1 = lab1 ? `<div style="font-size: 12px; color: #1f2937; font-weight: 600; margin-bottom: 1px;">${lab1}</div>` : '';
-      // Altera o margin-bottom da instituição dependendo se haverá uma segunda instituição ou ícones logo abaixo
+
       const marginInst1 = (lab2 || inst2 || urlWeb || urlLattes || urlOrcid) ? '8px' : '0px';
       const blocoInst1 = inst1 ? `<div style="font-size: 12px; color: #6b7280; font-weight: 500; margin-bottom: ${marginInst1};">${inst1}</div>` : '';
 
@@ -247,7 +239,6 @@
       const marginInst2 = (urlWeb || urlLattes || urlOrcid) ? '20px' : '0px';
       const blocoInst2 = inst2 ? `<div style="font-size: 12px; color: #6b7280; font-weight: 500; margin-bottom: ${marginInst2};">${inst2}</div>` : '';
 
-      // 2. Tratamento condicional para os ícones e links das redes/plataformas (URLs atualizadas)
       const celulaWeb = urlWeb ? `
       <td style="padding-right: 14px; vertical-align: middle;">
         <a href="${urlWeb}" target="_blank" style="text-decoration: none; display: block;">
@@ -269,7 +260,6 @@
         </a>
       </td>` : '';
 
-      // Se pelo menos um ícone existir, renderiza a tabela de ícones sociais
       const blocoSocial = (urlWeb || urlLattes || urlOrcid) ? `
       <table cellpadding="0" cellspacing="0" style="border-collapse: collapse;">
         <tr>
@@ -279,7 +269,6 @@
         </tr>
       </table>` : '';
 
-      // Montagem final do HTML com o logo selecionado de forma dinâmica
       const assinaturaHTML = `
 <table cellpadding="0" cellspacing="0" style="font-family: 'Roboto', Helvetica, Arial, sans-serif; font-size: 14px; color: #333333; line-height: 1.2; min-width: 480px; max-width: 650px; text-align: left;">
   <tr>
@@ -321,7 +310,6 @@
       }
     }
 
-    // Adiciona ouvintes para atualizar em tempo real ao mudar o select ou digitar nos inputs
     document.getElementById('select-logo').addEventListener('change', atualizarAssinatura);
 
     const inputs = document.querySelectorAll('input');
@@ -329,7 +317,6 @@
       input.addEventListener('input', atualizarAssinatura);
     });
 
-    // Inicializa a visualização com os dados padrão
     atualizarAssinatura();
   </script>
 
