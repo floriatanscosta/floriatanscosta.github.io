@@ -1,7 +1,5 @@
 /*------------------------------------------------*/
-
 /* Floriatan Santos Costa - 2025 */
-
 /* ---------------- reset básico ----------------*/
 * {
     margin: 0;
@@ -264,6 +262,7 @@ footer a {
     text-decoration: underline;
     font-weight: normal;
     color: #3a4a78;
+    padding: 16px;
 }
 
 footer {
@@ -273,7 +272,7 @@ footer {
     font-size: 85%;
     padding: 20px 0;
     margin: 40px 0 0 0;
-    border-top: 1px solid #ccc;
+    border: none;
 }
 
 footer .container {
@@ -283,10 +282,6 @@ footer .container {
     justify-content: space-between;
     gap: 30px;
     flex-wrap: wrap;
-}
-
-footer a {
-    text-decoration: none;
 }
 
 footer a:hover {
