@@ -1,15 +1,13 @@
 /*------------------------------------------------*/
 /* Floriatan Santos Costa - 2025 */
-/* ---------------- reset básico ----------------*/
 * {
     margin: 0;
     padding: 0;
     scroll-behavior: smooth;
     box-sizing: border-box;
-    line-height: 1.16;
+    line-height: 1.1;
     font-family: Roboto, Arial, sans-serif;
 }
-
 ::selection {
     background-color: #173c64;
     color: #ffffff;
@@ -45,7 +43,6 @@ a.doi {
 /*---------------- Estrutura base inicio ----------------*/
 body {
     font-family: Roboto, Arial, sans-serif;
-    line-height: 1;
     background-color: #fff;
     color: #383838;
 }
