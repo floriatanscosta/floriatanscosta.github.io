@@ -1,9 +1,3 @@
 # Currículo - Floriatan Santos Costa
 
 // -- //
-
-// -- //
-
-// -- //
-
-// -- //
