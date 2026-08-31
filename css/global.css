@@ -80,7 +80,7 @@ footer { width: 100%; margin-top: auto; padding: 20px 0; background-color: var(-
 /* === 8. RESPONSIVIDADE (MEDIA QUERIES) === */
 @media (max-width: 768px) {
     .header-content { grid-template-columns: auto 1fr auto; gap: 15px; }
-    .site-title { text-align: left; font-size: 1.3rem; line-height: 1; }
+    .site-title { text-align: left; font-size: 1.3rem; line-height: 1; display: none; }
     .menu-toggle { display: block; }
     .nav-content { display: none; flex-direction: column; text-align: center; }
     .nav-content.active { display: flex; }
