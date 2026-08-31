@@ -35,7 +35,7 @@
 }
 
 /* === 2. RESET BÁSICO E TIPOGRAFIA === */
-* { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Roboto', Arial, Tahoma, Verdana, sans-serif; }
+* { margin: 0; padding: 0; box-sizing: border-box; font-family: "Roboto", Arial, Tahoma, Verdana, sans-serif; }
 h1, h2, h3, h4, h5, h6 { color: var(--heading-color); margin-bottom: 30px; }
 
 /* === 3. ESTRUTURA PRINCIPAL (LAYOUT BASE) === */
