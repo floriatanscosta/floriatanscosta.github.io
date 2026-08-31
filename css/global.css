@@ -7,6 +7,7 @@
 :root {
     --bg-color: #ffffff;
     --heading-color: #5a729e;
+    --border-header: #bfcde0;
     --text-main: #444444;
     --header-gradient: linear-gradient(230deg, #ffbded2b, #718fc83b);
     --footer-bg: #f9f9f9;
@@ -21,6 +22,7 @@
 [data-theme="dark"] {
     --bg-color: #1c1c1c;
     --heading-color: #a2c2d3;
+    --border-header: #1c1c1c;
     --text-main: #e0e0e0;
     --header-gradient: linear-gradient(90deg, #323232, #000);
     --footer-bg: #1a1a1a;
@@ -43,7 +45,7 @@ main { flex: 1; width: 100%; padding: 40px 0; }
 
 /* === 4. CABEÇALHO (HEADER) === */
 header { width: 100%; padding: 14px 0 0 0; background: var(--header-gradient);}
-.header-content { display: grid; grid-template-columns: 1fr auto 1fr; align-items: center; padding-bottom: 14px; border-bottom: 1px solid var(--border-color);}
+.header-content { display: grid; grid-template-columns: 1fr auto 1fr; align-items: center; padding-bottom: 14px; border-bottom: 1px solid var(--border-header);}
 .logo-img { display: block; width: auto; height: 55px; }
 .site-title { margin-bottom: 0; text-align: center; font-size: 1.6rem; font-weight: 800; }
 
