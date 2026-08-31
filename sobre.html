@@ -1,45 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <meta name="robots" content="index, follow">
-    <link rel="icon" sizes="192x192" href="/icons/favicon.svg" type="image/svg+xml" />
-    <link rel="shortcut icon" href="/icons/favicon.svg" type="image/svg+xml" />
-    <link rel="apple-touch-icon" href="/icons/favicon.svg" type="image/svg+xml" />
-    <script src="/js/script.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/svg+xml" href="./assets/favicon.svg">
+    <!-- Meta Tags -->
+    <title>Floriatan Santos Costa - Portfólio</title>
+    <meta name="description" content="Portfólio acadêmico e profissional de Floriatan Santos Costa. Explore projetos, publicações e experiências.">
+    <meta property="og:title" content="Floriatan Santos Costa - Portfólio">
+    <meta property="og:description" content="Portfólio acadêmico e profissional. Explore projetos, publicações e experiências.">
+    <meta property="og:image" content="./assets/img/cover.png">
+    <meta name="theme-color" content="#5a729e">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://floriatan.com.br/">
 
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
-        rel="stylesheet">
-
-    <meta property="og:image" content="/img/cover.png" />
-    <meta name="description"
-        content="Postdoctoral Researcher focused on the development of sustainable analytical methods." />
-
-    <script async src="https://www.googlagmanager.com/gtag/js?id=G-GJRNCTN9EJ"></script>
+    <!-- Previne o piscar branco -->
     <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag() { dataLayer.push(arguments); }
-        gtag('js', new Date());
-
-        gtag('config', 'G-GJRNCTN9EJ');
+        if (localStorage.getItem('theme') === 'dark') {
+            document.documentElement.setAttribute('data-theme', 'dark');
+        }
     </script>
     
-    <title>About - Resume - Floriatan Santos Costa</title>
+    <link rel="stylesheet" href="./css/global.css">
+    <link rel="stylesheet" href="./css/main.css">
 </head>
 
-<h2>About</h2>
+<body>
+    <!-- Cabeçalho e Navegação -->
+    <header>
+        <div class="container header-content">
+            <a href="/">
+                <img src="./assets/logo.svg" alt="Logo Floriatan" class="logo-img">
+            </a>
+            <h1 class="site-title">Floriatan Santos Costa</h1>
+            <div style="display: flex; justify-content: flex-end; align-items: center; gap: 15px;">
+                <div class="lang-dropdown">
+                    <button class="lang-dropbtn">PT</button>
+                    <div class="lang-dropdown-content">
+                        <button onclick="switchLanguage('pt')">Português (PT)</button>
+                        <button onclick="switchLanguage('en')">English (EN)</button>
+                    </div>
+                </div>
+                <button id="theme-toggle" class="theme-toggle" onclick="toggleTheme()" title="Alternar Tema" style="padding: 0;"><img src="./assets/icons/escuro.svg" alt="Ativar Modo Escuro" style="width: 20px; height: 20px;"></button>
+                <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+            </div>
+        </div>
+    </header>
+    <nav>
+        <div class="container nav-content" id="navMenu">
+            <a href="/">Início</a>
+            <a href="/biografia">Biografia</a>
+            <a href="/experiencia">Experiência</a>
+            <a href="/publicacoes">Publicações</a>
+            <a href="/premiacoes">Premiações</a>
+            <a href="/contato">Contato</a>
+        </div>
+    </nav>
 
-<div class="conlun2" style="padding: 60px 0;">
-    <div class="col" id="col3" style="min-width: 20%;">
-        <img class="perfil" src="./icons/favicon.svg" style="width: 80%">
-    </div>
-    <div class="col" id="col2">
-        <span>Welcome to my online CV!</span>
-        <span>On this site, you will find details about my academic journey, research, publications, and projects.
-            Explore the sections to learn more about my work.</span>
-        <span>This site was developed entirely with open-source software. If you are interested in learning more, please
-            get in <a href="/contato">contact</a>. If you notice any display or content organization issues, please let
-            me know.</span>
-        <span>Thank you for visiting, and I hope you find useful information here!</span>
-    </div>
-</div>
+    <!-- Conteúdo principal -->
+    <main>
+        <div class="container">
+            <section class="col-1">
+
+
+                <!-- ADICIONAR O CONTEÚDO AQUI -->
+            
+            
+            </section>
+        </div>
+    </main>
+
+    <!-- Rodapé -->
+    <footer>
+        <div class="container footer-content">
+            <div class="footer-left">
+                <p>&copy; <span id="year"></span> Floriatan Santos Costa — Todos os direitos reservados.</p>
+            </div>
+            <div class="footer-right">
+                <a href="/sobre">Sobre</a>
+                <a href="/contato">Contato</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="./js/menu.js"></script>
+    <script>
+        document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
+</body>
+
+</html>

@@ -3,79 +3,92 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <meta name="robots" content="index, follow">
-    <link rel="icon" sizes="192x192" href="/icons/favicon.svg" type="image/svg+xml">
-    <link rel="shortcut icon" href="/icons/favicon.svg" type="image/svg+xml">
-    <link rel="apple-touch-icon" href="/icons/favicon.svg" type="image/svg+xml">
-    <link rel="stylesheet" href="/css/styles.css">
-    <meta property="og:image" content="/img/cover.png">
-    <meta name="msapplication-TileColor" content="#e9eaf5">
-    <meta name="theme-color" content="#e9eaf5">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/svg+xml" href="./assets/favicon.svg">
+    <!-- Meta Tags -->
+    <title>Floriatan Santos Costa - Portfólio</title>
+    <meta name="description" content="Portfólio acadêmico e profissional de Floriatan Santos Costa. Explore projetos, publicações e experiências.">
+    <meta property="og:title" content="Floriatan Santos Costa - Portfólio">
+    <meta property="og:description" content="Portfólio acadêmico e profissional. Explore projetos, publicações e experiências.">
+    <meta property="og:image" content="./assets/img/cover.png">
+    <meta name="theme-color" content="#5a729e">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://floriatan.com.br/">
+
+    <!-- Previne o piscar branco -->
+    <script>
+        if (localStorage.getItem('theme') === 'dark') {
+            document.documentElement.setAttribute('data-theme', 'dark');
+        }
+    </script>
     
-    <style>
-        .aviso-migracao {background-color: #fffbe6;color: #5d571b;border: 1px solid #ffde5c;padding: 15px 20px;margin: 40px auto 20px auto;box-sizing: border-box;border-radius: 8px;text-align: center;box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);width: 72%;}
-        @media screen and (max-width: 430px) {.aviso-migracao {width: 84%;}}
-    </style>
+    <link rel="stylesheet" href="./css/global.css">
+    <link rel="stylesheet" href="./css/main.css">
 </head>
 
 <body>
+    <!-- Cabeçalho e Navegação -->
     <header>
-        <div class="container">
-            <div class="header-left">
-                <a href="/"><img src="/icons/favicon.svg" alt="Logo" class="logo"></a>
-                <div class="header-text">
-                    <a href="/"><h1>Floriatan Santos Costa</h1></a>
-                    <div class="descricao">CV</div>
+        <div class="container header-content">
+            <a href="/">
+                <img src="./assets/logo.svg" alt="Logo Floriatan" class="logo-img">
+            </a>
+            <h1 class="site-title">Floriatan Santos Costa</h1>
+            <div style="display: flex; justify-content: flex-end; align-items: center; gap: 15px;">
+                <div class="lang-dropdown">
+                    <button class="lang-dropbtn">PT</button>
+                    <div class="lang-dropdown-content">
+                        <button onclick="switchLanguage('pt')">Português (PT)</button>
+                        <button onclick="switchLanguage('en')">English (EN)</button>
+                    </div>
                 </div>
-                <nav class="header-right">
-                    <ul>
-                        <li><a href="/">Home</a></li>
-                        <li><a href="/educacao">Education</a></li>
-                        <li><a href="/atuacao">Expertise</a></li>
-                        <li><a href="/experiencia">Experience</a></li>
-                        <li><a href="/projetos">Projects</a></li>
-                        <li><a href="/publicacoes">Publications</a></li>
-                        <li><a href="/premiacoes">Awards</a></li>
-                        <li><a href="/contato">Contact</a></li>
-                    </ul>
-                </nav>
+                <button id="theme-toggle" class="theme-toggle" onclick="toggleTheme()" title="Alternar Tema" style="padding: 0;"><img src="./assets/icons/escuro.svg" alt="Ativar Modo Escuro" style="width: 20px; height: 20px;"></button>
+                <button class="menu-toggle" onclick="toggleMenu()">☰</button>
             </div>
         </div>
     </header>
-    <!-- Conteúdo Dinâmico -->
-    <main id="conteudo" class="container">
-        <!-- O conteúdo será injetado aqui via JavaScript -->
+    <nav>
+        <div class="container nav-content" id="navMenu">
+            <a href="/">Início</a>
+            <a href="/biografia">Biografia</a>
+            <a href="/experiencia">Experiência</a>
+            <a href="/publicacoes">Publicações</a>
+            <a href="/premiacoes">Premiações</a>
+            <a href="/contato">Contato</a>
+        </div>
+    </nav>
+
+    <!-- Conteúdo principal -->
+    <main>
+        <div class="container">
+            <section class="col-1">
+
+
+                <!-- ADICIONAR O CONTEÚDO AQUI -->
+            
+            
+            </section>
+        </div>
     </main>
 
-    <!--
-    <div class="aviso-migracao">
-        <strong>Notice:</strong> The content on this page is being migrated to English. Parts of the site may be in English or Portuguese during this transition.
-    </div>
-    -->
-    <!-- Footer -->
-    
+    <!-- Rodapé -->
     <footer>
-        <div class="container">
-            <p class="left">Copyright ©2026 — Floriatan Santos Costa, all rights reserved</p>
-            <p class="right"><a href="/sobre">About</a> • <a href="/design">Design</a> • <a href="/contato">Contact</a>
-            </p>
+        <div class="container footer-content">
+            <div class="footer-left">
+                <p>&copy; <span id="year"></span> Floriatan Santos Costa — Todos os direitos reservados.</p>
+            </div>
+            <div class="footer-right">
+                <a href="/sobre">Sobre</a>
+                <a href="/contato">Contato</a>
+            </div>
         </div>
     </footer>
+
+    <!-- Scripts -->
+    <script src="./js/menu.js"></script>
+    <script>
+        document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
 </body>
-
-<!-- Fonts -->
-<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
-    rel="stylesheet">
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-GJRNCTN9EJ"></script>
-<script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag() { dataLayer.push(arguments); }
-    gtag('js', new Date());
-
-    gtag('config', 'G-GJRNCTN9EJ');
-</script>
 
 </html>

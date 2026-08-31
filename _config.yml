@@ -1,5 +1,30 @@
+# === 1. Configurações de Domínio e URL ===
+url: "https://floriatan.com.br"
+baseurl: ""
+
+# === 2. Metadados Globais do Site ===
+title: "Floriatan Santos Costa"
+description: "Pesquisador de Pós-Doutorado em Química Analítica"
+author: "Floriatan Santos Costa"
+github_username: "floriatanscosta"
+
+# === 3. Estrutura de Links (que você já possui) ===
 permalink: pretty
 
+# === 4. Plugins Oficiais do GitHub Pages ===
+plugins:
+  - jekyll-seo-tag
+  - jekyll-sitemap
+  
+# === 5. Limpeza de Build (Ignorar arquivos desnecessários) ===
+exclude:
+  - README.md
+  - .gitignore
+  - node_modules/
+  - package.json
+  - package-lock.json
+
+# === 6. Variáveis Padrão (que você já possui) ===
 defaults:
   - scope:
       path: ""

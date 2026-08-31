@@ -1,0 +1,39 @@
+<!-- components/header.html (PORTUGUÊS) -->
+<header>
+    <div class="container header-content">
+        <a href="/">
+            <img src="./assets/logo.svg" alt="Logo Floriatan" class="logo-img">
+        </a>
+        <h1 class="site-title">Floriatan Santos Costa</h1>
+        
+        <!-- Agrupando os botões na direita -->
+        <div style="display: flex; justify-content: flex-end; align-items: center; gap: 15px;">
+            <!-- Botões de Idioma -->
+            <div class="lang-dropdown">
+                <button class="lang-dropbtn">PT</button>
+                <div class="lang-dropdown-content">
+                    <button onclick="switchLanguage('pt')">Português (PT)</button>
+                    <button onclick="switchLanguage('en')">English (EN)</button>
+                </div>
+            </div>
+
+            <!-- Botão de Tema (Modo Escuro) com SVG -->
+            <button id="theme-toggle" class="theme-toggle" onclick="toggleTheme()" title="Alternar Tema" style="padding: 0;">
+                <img src="./assets/icons/escuro.svg" alt="Ativar Modo Escuro" style="width: 20px; height: 20px;">
+            </button>
+            
+            <!-- Botão Menu Mobile -->
+            <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+        </div>
+    </div>
+</header>
+<nav>
+    <div class="container nav-content" id="navMenu">
+        <a href="/">Início</a>
+        <a href="/biografia">Biografia</a>
+        <a href="/experiencia">Experiência</a>
+        <a href="/publicacoes">Publicações</a>
+        <a href="/premiacoes">Premiações</a>
+        <a href="/contato">Contato</a>
+    </div>
+</nav>

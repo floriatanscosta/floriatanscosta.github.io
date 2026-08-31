@@ -1,0 +1,6 @@
+///////////////////////************************
+- Desenvolvimento do site compelto
+- Inclusão do modo escuro e claro
+- inclusão da mudança de idioma de pt para en
+
+

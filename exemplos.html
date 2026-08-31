@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/svg+xml" href="./assets/favicon.svg">
+    <!-- Meta Tags -->
+    <title>Examplos - Floriatan Santos Costa - Portfólio</title>
+    <meta name="description" content="Portfólio acadêmico e profissional de Floriatan Santos Costa. Explore projetos, publicações e experiências.">
+    <meta property="og:title" content="Floriatan Santos Costa - Portfólio">
+    <meta property="og:description" content="Portfólio acadêmico e profissional. Explore projetos, publicações e experiências.">
+    <meta property="og:image" content="./assets/img/cover.png">
+    <meta name="theme-color" content="#5a729e">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://floriatan.com.br/">
+
+    <!-- Previne o piscar branco -->
+    <script>
+        if (localStorage.getItem('theme') === 'dark') {
+            document.documentElement.setAttribute('data-theme', 'dark');
+        }
+    </script>
+    
+    <link rel="stylesheet" href="./css/global.css">
+    <link rel="stylesheet" href="./css/main.css">
+</head>
+
+<body>
+    <!-- Cabeçalho e Navegação -->
+    <header>
+        <div class="container header-content">
+            <a href="/web/">
+                <img src="./assets/logo.svg" alt="Logo Floriatan" class="logo-img">
+            </a>
+            <h1 class="site-title">Floriatan Santos Costa</h1>
+            <div style="display: flex; justify-content: flex-end; align-items: center; gap: 15px;">
+                <div class="lang-dropdown">
+                    <button class="lang-dropbtn">PT</button>
+                    <div class="lang-dropdown-content">
+                        <button onclick="switchLanguage('pt')">Português (PT)</button>
+                        <button onclick="switchLanguage('en')">English (EN)</button>
+                    </div>
+                </div>
+                <button id="theme-toggle" class="theme-toggle" onclick="toggleTheme()" title="Alternar Tema" style="padding: 0;"><img src="./assets/icons/escuro.svg" alt="Ativar Modo Escuro" style="width: 20px; height: 20px;"></button>
+                <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+            </div>
+        </div>
+    </header>
+    <nav>
+        <div class="container nav-content" id="navMenu">
+            <a href="/">Início</a>
+            <a href="/biografia">Biografia</a>
+            <a href="/experiencia">Experiência</a>
+            <a href="/publicacoes">Publicações</a>
+            <a href="/premiacoes">Premiações</a>
+            <a href="/contato">Contato</a>
+        </div>
+    </nav>
+
+      <!-- Conteúdo principal -->
+    <main>
+        <div class="container">
+
+            <!-- Widget de Artigos Publicados -->
+            <section class="col-1">
+                <h2>Artigos Publicados</h2>
+
+                <div class="article-list">
+                    <article class="article-item">
+                        <h3 class="article-title">Alginate-encapsulated HDES as a green sorbent for elemental preconcentration prior to determination by FAAS</h3>
+                        <p class="article-journal">ACS Omega</p>
+                        <a href="https://doi.org/10.1021/acsomega.6c01846" class="doi-link" target="_blank">10.1021/acsomega.6c01846</a>
+                    </article>
+
+                    <article class="article-item">
+                        <h3 class="article-title">Alginate-encapsulated HDES as a green sorbent for elemental preconcentration prior to determination by FAAS</h3>
+                        <p class="article-journal">ACS Omega</p>
+                        <a href="https://doi.org/10.1021/acsomega.6c01846" class="doi-link" target="_blank">10.1021/acsomega.6c01846</a>
+                    </article>
+                </div>
+            </section>
+
+            <!-- Widget de Projetos -->
+            <section class="col-1">
+                <h2>Projetos de Pesquisa</h2>
+                <div class="project-grid">
+
+                    <div class="project-card">
+                        <h3>Micro-dispensation for Laser Ablation</h3>
+                        <p>Desenvolvimento focado na dispensação de padrão multielementar. O projeto envolve o cálculo
+                            preciso de massa do analito em gotas de 20 picolitros, com verificações dimensionais
+                            sistemáticas em microscópio.</p>
+                        <div class="tag-container">
+                            <span class="tag">Instrumentação</span>
+                            <span class="tag">Microescala</span>
+                        </div>
+                    </div>
+
+                    <div class="project-card">
+                        <h3>Modificações de Superfície</h3>
+                        <p>Avaliação detalhada e testes de modificações químicas e físicas na superfície das placas de
+                            microscopia para otimização do comportamento dos fluidos.</p>
+                        <div class="tag-container">
+                            <span class="tag">Materiais</span>
+                            <span class="tag">Química</span>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+
+            <!-- Estilos Padrão de Texto -->
+            <section class="col-1">
+                <h2>Elementos Tipográficos e de Conteúdo</h2>
+                <p>Este é um parágrafo normal demonstrando como o texto deve fluir. Aqui você tem um <a href="#" class="inline-link">link no meio do texto</a> que possui um efeito de hover elegante. Além disso, quando for mencionar linguagens de programação, você pode usar blocos de
+                    <code>código inline</code>.
+                </p>
+                <blockquote>
+                    "A formatação do blockquote (citação em bloco) foi projetada para dar destaque a frases importantes ou trechos de outros autores, combinando com a paleta de azul do site."
+                </blockquote>
+
+                <div class="col-2" style="box-shadow: none; border: none; padding: 0; gap: 40px;">
+                    <div>
+                        <h3>Lista não ordenada</h3>
+                        <ul class="custom-list">
+                            <li>Ideal para listar tópicos soltos ou características.</li>
+                            <li>O espaçamento foi ajustado para melhorar a leitura.</li>
+                            <li>A cor e a fonte acompanham o padrão global do body.</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3>Lista ordenada</h3>
+                        <ol class="custom-list">
+                            <li>Primeira etapa de um experimento.</li>
+                            <li>Segunda etapa: coleta e tratamento de dados.</li>
+                            <li>Terceira etapa: análise dos resultados obtidos.</li>
+                        </ol>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Widget: Card de Perfil -->
+            <section class="col-1">
+                <div class="profile-card">
+                    <!-- Substitua pelo link da sua foto real -->
+                    <img src="./assets/img/floriatan.png" alt="Foto de Floriatan" class="profile-img">                    <div class="profile-info">
+                        <h3>Floriatan Dos Santos Costa</h3>
+                        <h4>Pesquisador | Universidade de Zaragoza</h4>
+                        <p>Especialista no tratamento de dados para SP-ICP-MS e desenvolvimento de instrumentação em
+                            microescala. Atualmente focado em pesquisas de micro-dispensação para ablação a laser e
+                            modificações de superfície.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Widget: Formulário de Contato e Skills (Layout 2 colunas) -->
+            <section class="col-2">
+                <!-- Formulário -->
+                <div>
+                    <h2>Entre em Contato</h2>
+                    <p>Preencha o formulário abaixo para enviar uma mensagem direta.</p>
+                    <form class="contact-form" action="#" method="POST">
+                        <input type="text" name="nome" placeholder="Seu Nome" required>
+                        <input type="email" name="email" placeholder="Seu E-mail" required>
+                        <textarea name="mensagem" rows="5" placeholder="Sua Mensagem..." required></textarea>
+                        <button type="submit">Enviar Mensagem</button>
+                    </form>
+                </div>
+
+                <!-- Skills -->
+                <div>
+                    <h2>Competências Técnicas</h2>
+
+                    <div class="skill-box">
+                        <div class="skill-name"><span>Tratamento de Dados (SP-ICP-MS)</span> <span>95%</span></div>
+                        <div class="skill-bar">
+                            <div class="skill-fill" style="width: 95%;"></div>
+                        </div>
+                    </div>
+
+                    <div class="skill-box">
+                        <div class="skill-name"><span>Micro-dispensação (Ablação a Laser)</span> <span>90%</span></div>
+                        <div class="skill-bar">
+                            <div class="skill-fill" style="width: 90%;"></div>
+                        </div>
+                    </div>
+
+                    <div class="skill-box">
+                        <div class="skill-name"><span>Geração de Vapor Frio (Mercúrio)</span> <span>85%</span></div>
+                        <div class="skill-bar">
+                            <div class="skill-fill" style="width: 85%;"></div>
+                        </div>
+                    </div>
+
+                    <div class="skill-box">
+                        <div class="skill-name"><span>HTML & CSS (Web Design)</span> <span>75%</span></div>
+                        <div class="skill-bar">
+                            <div class="skill-fill" style="width: 75%;"></div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Widget: Timeline -->
+            <section class="col-1">
+                <h2>Linha do Tempo Profissional</h2>
+
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-content">
+                            <span class="timeline-date">Junho de 2026</span>
+                            <h3>Projeto de Micro-dispensação</h3>
+                            <p>Início dos testes de laboratório com gotas de 20 picolitros. Cálculos de massa do analito em padrão multielementar e verificação microscópica das dimensões e comportamentos das placas.</p>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-content">
+                            <span class="timeline-date">Abril de 2026</span>
+                            <h3>Realocação para Zaragoza, Espanha</h3>
+                            <p>Transferência internacional estendida para condução de pesquisa avançada em instrumentação analítica na Universidad de Zaragoza.</p>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+
+        </div>
+    </main>
+
+    
+    <!-- Rodapé -->
+    <footer>
+        <div class="container footer-content">
+            <div class="footer-left">
+                <p>&copy; <span id="year"></span> Floriatan Santos Costa — Todos os direitos reservados.</p>
+            </div>
+            <div class="footer-right">
+                <a href="/sobre">Sobre</a>
+                <a href="/contato">Contato</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="./js/menu.js"></script>
+    <script>
+        document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,96 @@
+/* =========================================
+   main.css
+   Estilização do conteúdo, widgets e grids
+   ========================================= */
+
+/* === 1. CONTAINERS E LAYOUT === */
+.col-1 { padding: 20px; margin-bottom: 30px; }
+.col-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-bottom: 30px; }
+.col-2>div { background-color: var(--box-bg); padding: 30px; border-radius: 6px; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.03); border: 1px solid var(--border-color); }
+
+/* === 2. TIPOGRAFIA E ELEMENTOS BÁSICOS === */
+p { line-height: 1.6; margin-bottom: 15px; }
+a.inline-link { color: var(--heading-color); font-weight: 600; text-decoration: none; border-bottom: 1px solid transparent; transition: border-color 0.3s; }
+a.inline-link:hover { border-bottom-color: var(--heading-color); }
+blockquote { border-left: 4px solid var(--heading-color); background-color: rgba(90, 114, 158, 0.05); padding: 15px 20px; margin: 20px 0; font-style: italic; color: #555; border-radius: 0 4px 4px 0; }
+code { background-color: #f1f5f9; color: #d90429; padding: 2px 6px; border-radius: 4px; font-family: 'Courier New', Courier, monospace; font-size: 0.9em; }
+ul.custom-list, ol.custom-list { margin: 15px 0 20px 30px; line-height: 1.5; }
+ul.custom-list li, ol.custom-list li { margin-bottom: 6px; }
+.btn { display: inline-block; background-color: var(--heading-color); color: #ffffff; padding: 12px 25px; text-decoration: none; border-radius: 6px; font-weight: bold; transition: background-color 0.3s, transform 0.2s; }
+.btn:hover { background-color: #435b83; transform: translateY(-2px); }
+
+/* === 3. PÁGINA INICIAL (INTRO E REDES SOCIAIS) === */
+.intro-title { font-size: 2rem; line-height: 1.1; font-weight: 900; color: var(--heading-color); margin-bottom: 30px; }
+.intro-text { font-size: 1.1rem; line-height: 1.3; margin-bottom: 16px; }
+.social-container { display: grid; grid-template-columns: repeat(auto-fit, minmax(130px, 1fr)); gap: 20px; margin-top: 40px; }
+.social-box { display: flex; flex-direction: column; align-items: center; justify-content: center; background-color: var(--box-bg); border: 1px solid var(--border-color); border-radius: 8px; padding: 20px; text-decoration: none; color: var(--text-main); transition: transform 0.3s, box-shadow 0.3s, border-color 0.3s; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.02); text-align: center; }
+.social-box:hover { transform: translateY(-5px); box-shadow: 0 8px 15px rgba(90, 114, 158, 0.15); }
+.social-box img { width: 35px; height: 35px; transition: transform 0.3s; }
+.social-box:hover img { transform: scale(1.1); }
+.social-box span { font-weight: 500; font-size: 0.95rem; }
+[data-theme="dark"] .social-box img { filter: brightness(0.8) contrast(1.2); }
+
+/* === 4. WIDGETS DE CONTEÚDO (ARTIGOS E PROJETOS) === */
+.article-item { padding: 0 0 30px 0; margin-bottom: 30px; border-bottom: 1px solid #f1f1f1; }
+.article-item:last-child { border-bottom: none; padding-bottom: 0; }
+.article-title { font-size: 1.2rem; margin-bottom: 2px; }
+.article-journal { font-size: 1rem; font-style: italic; color: #666; margin-bottom: 10px; }
+.doi-link { display: inline-flex; align-items: center; gap: 10px; font-size: 0.9rem; color: var(--heading-color); text-decoration: none; font-weight: 500; padding: 5px 8px; background-color: #f8fafc; border: 1px solid var(--border-color); border-radius: 6px; transition: background 0.2s; }
+.doi-link::before { content: ''; display: inline-block; width: 16px; height: 16px; background-image: url('../assets/icons/doi.svg'); background-size: contain; background-repeat: no-repeat; margin-right: 0; vertical-align: middle; }
+.doi-link:hover { background-color: #e2e8f0; }
+.project-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; margin-top: 15px; }
+.project-card { background: #ffffff; border: 1px solid var(--border-color); border-radius: 8px; padding: 25px; transition: transform 0.3s, box-shadow 0.3s; }
+.project-card:hover { transform: translateY(-5px); box-shadow: 0 8px 20px rgba(90, 114, 158, 0.1); }
+.project-card h3 { font-size: 1.15rem; margin-bottom: 10px; }
+.project-card p { font-size: 0.95rem; margin-bottom: 15px; }
+.tag-container { display: flex; gap: 8px; flex-wrap: wrap; }
+.tag { font-size: 0.8rem; background-color: rgba(90, 114, 158, 0.1); color: var(--heading-color); padding: 4px 10px; border-radius: 20px; font-weight: 600; }
+
+/* === 5. COMPONENTES DE PERFIL (CARD, TIMELINE, SKILLS) === */
+.profile-card { display: flex; align-items: center; gap: 30px; padding: 20px; }
+.profile-img { width: 150px; height: 150px; border-radius: 50%; object-fit: cover; border: 4px solid var(--border-color); box-shadow: 0 4px 10px rgba(90, 114, 158, 0.15); }
+.profile-info h3 { margin-bottom: 5px; }
+.profile-info h4 { font-weight: 500; color: #666; margin-bottom: 15px; font-size: 1rem; }
+.timeline { position: relative; max-width: 800px; margin: 0 auto; padding: 20px 0; }
+.timeline::after { content: ''; position: absolute; width: 10px; background-color: var(--border-color); top: 0; bottom: 0; left: 20px; border-radius: 2px; }
+.timeline-item { padding: 15px 30px 15px 60px; position: relative; background-color: inherit; width: 100%; }
+.timeline-item::after { content: ''; position: absolute; width: 16px; height: 16px; right: auto; left: 14px; background-color: var(--box-bg); border: 4px solid var(--heading-color); top: 20px; border-radius: 50%; z-index: 1; }
+.timeline-date { font-weight: bold; color: var(--heading-color); font-size: 0.9rem; margin-bottom: 8px; display: block; }
+.timeline-content { background-color: #f8fafc; padding: 20px; border-radius: 8px; border: 1px solid var(--border-color); }
+.timeline-content h3 { margin-bottom: 10px; font-size: 1.1rem; }
+.skill-box { margin-bottom: 15px; }
+.skill-name { display: flex; justify-content: space-between; font-weight: 500; margin-bottom: 5px; font-size: 0.95rem; }
+.skill-bar { width: 100%; height: 8px; background-color: var(--border-color); border-radius: 4px; overflow: hidden; }
+.skill-fill { height: 100%; background-color: var(--heading-color); border-radius: 4px; }
+
+/* === 6. MÉTRICAS === */
+.metrics-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; margin-bottom: 30px; margin-top: 15px; }
+.metric-card { background-color: var(--box-bg); padding: 30px 20px; text-align: center; border-radius: 8px; box-shadow: 0 4px 15px rgba(90, 114, 158, 0.05); border: 1px solid var(--border-color); transition: transform 0.3s, box-shadow 0.3s; }
+.metric-card:hover { transform: translateY(-5px); box-shadow: 0 8px 20px rgba(90, 114, 158, 0.15); }
+.metric-label { font-size: 1.1rem; font-weight: 500; margin-bottom: 10px; color: var(--text-main); }
+.metric-number { font-size: 4rem; font-weight: 700; line-height: 1; display: block; }
+.metric-color-1, .metric-color-2 { color: #4369bb; }
+.metric-color-3 { color: #4CB96E; }
+.metrics-sources { font-size: 0.9rem; margin-top: 40px; padding-top: 20px; border-top: 1px solid var(--border-color); line-height: 1.3; }
+
+/* === 7. FORMULÁRIO DE CONTATO === */
+.contact-form { display: flex; flex-direction: column; gap: 15px; }
+.contact-form input, .contact-form textarea { width: 100%; padding: 12px 15px; border: 1px solid var(--border-color); border-radius: 6px; font-family: inherit; background-color: #f8fafc; transition: border-color 0.3s; }
+.contact-form input:focus, .contact-form textarea:focus { outline: none; border-color: var(--heading-color); background-color: var(--box-bg); }
+.contact-form button { background-color: var(--heading-color); color: white; border: none; padding: 12px 20px; border-radius: 6px; font-size: 1rem; font-weight: bold; cursor: pointer; transition: background-color 0.3s; }
+.contact-form button:hover { background-color: #435b83; }
+
+/* === 8. PÁGINA DE ERRO 404 === */
+.error-404-section { text-align: center; padding: 80px 20px; background-color: var(--box-bg); max-width: 800px; margin: 0 auto; }
+.error-404-section h1 { font-size: 6rem; color: var(--heading-color); margin-bottom: 10px; line-height: 1; }
+.error-404-section h2 { font-size: 2rem; margin-bottom: 20px; }
+.error-404-section p { font-size: 1.1rem; margin-bottom: 30px; }
+
+/* === 9. RESPONSIVIDADE (MEDIA QUERIES) === */
+@media (max-width: 768px) {
+    .col-1 { padding: 0;}
+    .col-2 { grid-template-columns: 1fr; }
+}
+@media (max-width: 600px) {
+    .profile-card { flex-direction: column; text-align: center; }
+}

@@ -1,0 +1,103 @@
+/* =========================================
+   global.css
+   Configurações gerais, estrutura, variáveis, header e footer
+   ========================================= */
+
+/* === 1. VARIÁVEIS DE CORES (TEMA GERAL DO SITE) === */
+:root {
+    --bg-color: #ffffff;
+    --heading-color: #5a729e;
+    --text-main: #444444;
+    --header-gradient: linear-gradient(230deg, #ffbded2b, #718fc83b);
+    --footer-bg: #f9f9f9;
+    --footer-text: #777777;
+    --nav-bg: #24577f;
+    --nav-hover: rgba(18, 46, 99, 0.185);
+    --box-bg: #ffffff;
+    --border-color: #e2e8f0;
+}
+
+[data-theme="dark"] {
+    --bg-color: #1c1c1c;
+    --heading-color: #a2c2d3;
+    --text-main: #e0e0e0;
+    --header-gradient: linear-gradient(90deg, #323232, #000);
+    --footer-bg: #1a1a1a;
+    --footer-text: #aaaaaa;
+    --nav-bg: #252525;
+    --nav-hover: rgba(255, 255, 255, 0.1);
+    --box-bg: #a4434300;
+    --border-color: #282828;
+}
+
+/* === 2. RESET BÁSICO E TIPOGRAFIA === */
+* { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Roboto', Arial, Tahoma, Verdana, sans-serif; }
+h1, h2, h3, h4, h5, h6 { color: var(--heading-color); margin-bottom: 30px; }
+
+/* === 3. ESTRUTURA PRINCIPAL (LAYOUT BASE) === */
+body { display: flex; flex-direction: column; min-height: 100vh; background-color: var(--bg-color); color: var(--text-main); }
+main { flex: 1; width: 100%; padding: 40px 0; }
+.container { width: 100%; max-width: 1280px; margin: 0 auto; padding: 0 30px; }
+
+/* === 4. CABEÇALHO (HEADER) === */
+header { width: 100%; padding: 15px 0; background: var(--header-gradient); border-bottom: 1px solid rgba(90, 114, 158, 0.1); }
+.header-content { display: grid; grid-template-columns: 1fr auto 1fr; align-items: center; }
+.logo-img { display: block; width: auto; height: 55px; }
+.site-title { margin-bottom: 0; text-align: center; font-size: 1.6rem; font-weight: 800; }
+
+/* === 5. COMPONENTES DO CABEÇALHO (BOTÕES) === */
+.theme-toggle { margin-right: 15px; background: none; border: none; color: var(--heading-color); font-size: 1.5rem; cursor: pointer; transition: transform 0.3s; }
+.theme-toggle:hover { transform: scale(1.1); }
+.lang-dropdown { position: relative; display: inline-block; }
+.lang-dropbtn { display: flex; align-items: center; gap: 5px; padding: 5px 10px; background: none; border: none; color: var(--heading-color); font-size: 0.95rem; font-weight: bold; cursor: pointer; transition: opacity 0.3s; }
+.lang-dropbtn:hover { opacity: 0.8; }
+.lang-dropdown-content { display: none; position: absolute; right: 0; z-index: 1000; min-width: 140px; background-color: var(--box-bg); border: 1px solid var(--border-color); border-radius: 6px; box-shadow: 0px 8px 15px rgba(0,0,0,0.1); overflow: hidden; }
+[data-theme="dark"] .lang-dropdown-content { box-shadow: 0px 8px 15px rgba(0,0,0,0.5); }
+.lang-dropdown:hover .lang-dropdown-content { display: block; }
+.lang-dropdown-content button { display: block; width: 100%; padding: 12px 15px; background: none; border: none; border-bottom: 1px solid var(--border-color); color: var(--text-main); text-align: left; font-size: 0.9rem; cursor: pointer; transition: background-color 0.3s; }
+.lang-dropdown-content button:last-child { border-bottom: none; }
+.lang-dropdown-content button:hover { background-color: rgba(90, 114, 158, 0.1); }
+
+/* === 6. NAVEGAÇÃO PRINCIPAL (NAV) === */
+nav { width: 100%; background-color: var(--nav-bg); border-bottom: 1px solid var(--border-color); }
+.nav-content { display: flex; justify-content: center; flex-wrap: wrap; }
+.nav-content a { padding: 15px 20px; color: #fff; font-weight: 500; text-decoration: none; transition: background 0.3s, color 0.3s; }
+.nav-content a:hover { background-color: var(--nav-hover); }
+.menu-toggle { display: none; justify-self: end; background: none; border: none; color: var(--heading-color); font-size: 1.8rem; cursor: pointer; }
+
+/* === 7. RODAPÉ (FOOTER) === */
+footer { width: 100%; margin-top: auto; padding: 20px 0; background-color: var(--footer-bg); color: var(--footer-text); font-size: 0.85rem; }
+.footer-content { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 6px; }
+.footer-left p { margin-bottom: 0; line-height: 1; }
+.footer-right { display: flex; gap: 20px; }
+.footer-right a { color: var(--footer-text); font-weight: 600; text-decoration: none; transition: color 0.3s; }
+.footer-right a:hover { color: var(--heading-color); }
+
+/* === 8. RESPONSIVIDADE (MEDIA QUERIES) === */
+@media (max-width: 768px) {
+    .header-content { grid-template-columns: auto 1fr auto; gap: 15px; }
+    .site-title { text-align: left; font-size: 1.3rem; line-height: 1; }
+    .menu-toggle { display: block; }
+    .nav-content { display: none; flex-direction: column; text-align: center; }
+    .nav-content.active { display: flex; }
+    .footer-content { flex-direction: column; text-align: center; font-size: 11px; }
+}
+
+/* === VERSÃO IMPRESSA === */
+@media print {
+    @page { size: A4; margin: 2cm; }
+    body { background-color: #ffffff !important; color: #000000 !important; font-size: 12pt; }
+    header, nav, footer, .theme-toggle, .lang-dropdown, .menu-toggle, .btn, .contact-form { display: none !important; }
+    main, .container { width: 100% !important; max-width: none !important; padding: 0 !important; margin: 0 !important; }
+    .col-1, .col-2 > div, .project-card, .metric-card, .timeline-content, .profile-img { box-shadow: none !important;background-color: #ffffff !important; }
+    .col-2 > div, .project-card, .metric-card, .timeline-item, .article-item, .profile-card { page-break-inside: avoid; }
+    h1, h2, h3, h4, h5, h6 { page-break-after: avoid; color: #000000 !important; }
+    .timeline::after { background-color: #cccccc !important; }
+    .timeline-item::after { border-color: #555555 !important; background-color: #ffffff !important; }
+    .skill-bar { background-color: #eeeeee !important; border: 1px solid #cccccc; }
+    .skill-fill { background-color: #555555 !important; }
+    .tag, code, blockquote { background-color: transparent !important; border: 1px solid #cccccc !important; color: #000000 !important; }
+    blockquote { border-left: 4px solid #555555 !important; }
+    main a.inline-link { text-decoration: underline; color: #000000 !important; }
+    main a.inline-link::after { content: " (" attr(href) ")"; font-size: 0.85em; color: #555555; }
+}

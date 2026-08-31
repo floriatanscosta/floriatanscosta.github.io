@@ -4,13 +4,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/svg+xml" href="./assets/favicon.svg">
+    <link rel="icon" type="image/svg+xml" href="../assets/favicon.svg">
     <!-- Meta Tags -->
     <title>Floriatan Santos Costa - Portfólio</title>
     <meta name="description" content="Portfólio acadêmico e profissional de Floriatan Santos Costa. Explore projetos, publicações e experiências.">
     <meta property="og:title" content="Floriatan Santos Costa - Portfólio">
     <meta property="og:description" content="Portfólio acadêmico e profissional. Explore projetos, publicações e experiências.">
-    <meta property="og:image" content="./assets/img/cover.png">
+    <meta property="og:image" content="../assets/img/cover.png">
     <meta name="theme-color" content="#5a729e">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://floriatan.com.br/">
@@ -24,9 +24,9 @@
     <style>
         body {background: var(--header-gradient);}
     </style>
-
-    <link rel="stylesheet" href="./css/global.css">
-    <link rel="stylesheet" href="./css/main.css">
+    
+    <link rel="stylesheet" href="../css/global.css">
+    <link rel="stylesheet" href="../css/main.css">
 </head>
 
 <body>
@@ -34,7 +34,7 @@
     <header>
         <div class="container header-content">
             <a href="/">
-                <img src="./assets/logo.svg" alt="Logo Floriatan" class="logo-img">
+                <img src="../assets/logo.svg" alt="Logo Floriatan" class="logo-img">
             </a>
             <h1 class="site-title">Floriatan Santos Costa</h1>
             <div style="display: flex; justify-content: flex-end; align-items: center; gap: 15px;">
@@ -45,7 +45,7 @@
                         <button onclick="switchLanguage('en')">English (EN)</button>
                     </div>
                 </div>
-                <button id="theme-toggle" class="theme-toggle" onclick="toggleTheme()" title="Alternar Tema" style="padding: 0;"><img src="./assets/icons/escuro.svg" alt="Ativar Modo Escuro" style="width: 20px; height: 20px;"></button>
+                <button id="theme-toggle" class="theme-toggle" onclick="toggleTheme()" title="Alternar Tema" style="padding: 0;"><img src="../assets/icons/escuro.svg" alt="Ativar Modo Escuro" style="width: 20px; height: 20px;"></button>
                 <button class="menu-toggle" onclick="toggleMenu()">☰</button>
             </div>
         </div>
@@ -53,52 +53,48 @@
     <nav>
         <div class="container nav-content" id="navMenu">
             <a href="/">Início</a>
-            <a href="/biografia">Biografia</a>
-            <a href="/experiencia">Experiência</a>
-            <a href="/publicacoes">Publicações</a>
-            <a href="/premiacoes">Premiações</a>
-            <a href="/contato">Contato</a>
         </div>
     </nav>
 
     <!-- Conteúdo principal -->
     <main>
         <div class="container">
-            <section class="col-1">
-                <h1 class="intro-title">Entre tubos Falcon e algoritmos, um pesquisador em busca de respostas!</h1>
-                <p class="intro-text">A ciência é um universo de possibilidades. Entre tubos, curvas analíticas,
-                    espectrômetros e dados, sigo rastros invisíveis que contam histórias e revelam os mistérios da
-                    natureza.</p>
 
+              <section class="col-1">
+                <h1 class="intro-title">Between Falcon tubes and algorithms, a researcher in search of answers!</h1>
+                <p class="intro-text">Science is a universe of possibilities. Between tubes, analytical curves, spectrometers, and data, I follow invisible traces that <a href="/vida-de-cientista" class="inline-link">tell stories</a> and reveal the mysteries of nature.</p>
+                <p class="intro-text">Every chemical element has its own signature, and every sample is an enigma to be unraveled. It is in this space between the visible and the hidden that my research takes place, seeking to understand the story of each analyzed sample. Each result is a clue and each experiment, a new chapter in the search for answers.</p>
+                <p class="intro-text">On this site, I share some of these stories, work, and productions.</p>
+                
                 <!-- Container dos Botões -->
                 <div class="social-container">
                     <!-- Métricas -->
                     <a href="./metricas.html" class="social-box">
-                        <img src="./assets/icons/data.svg" alt="Metrics and indicators" title="Metrics and indicators">
+                        <img src="../assets/icons/data.svg" alt="Metrics and indicators" title="Metrics and indicators">
                     </a>
                     <!-- OrcID -->
                     <a href="https://orcid.org/0000-0001-7766-2860" class="social-box" target="_blank">
-                        <img src="./assets/icons/orcid.svg" alt="OrcID" title="OrcID Profile">
+                        <img src="../assets/icons/orcid.svg" alt="OrcID" title="OrcID Profile">
                     </a>
                     <!-- ResearchGate -->
                     <a href="https://www.researchgate.net/profile/Floriatan-Costa" class="social-box" target="_blank">
-                        <img src="./assets/icons/rg.svg" alt="ResearchGate" title="ResearchGate">
+                        <img src="../assets/icons/rg.svg" alt="ResearchGate" title="ResearchGate">
                     </a>
                     <!-- Lattes -->
                     <a href="http://lattes.cnpq.br/0287106268880389" class="social-box" target="_blank">
-                        <img src="./assets/icons/lattes.svg" alt="Lattes" title="Lattes Curriculum">
+                        <img src="../assets/icons/lattes.svg" alt="Lattes" title="Lattes Curriculum">
                     </a>
                     <!-- LinkedIn -->
                     <a href="https://www.linkedin.com/in/floriatanscosta/" class="social-box" target="_blank">
-                        <img src="./assets/icons/linkedin.svg" alt="LinkedIn" title="LinkedIn Profile">
+                        <img src="../assets/icons/linkedin.svg" alt="LinkedIn" title="LinkedIn Profile">
                     </a>
                     <!-- Google Scholar -->
-                    <a href="https://scholar.google.com.br/citations?hl=pt-BR&user=EbyxxAoAAAAJ&view_op=list_works"
-                        class="social-box" target="_blank">
-                        <img src="./assets/icons/academico.svg" alt="Google Scholar" title="Google Scholar Profile">
+                    <a href="https://scholar.google.com.br/citations?hl=pt-BR&user=EbyxxAoAAAAJ&view_op=list_works" class="social-box" target="_blank">
+                        <img src="../assets/icons/academico.svg" alt="Google Scholar" title="Google Scholar Profile">
                     </a>
                 </div>
             </section>
+        
         </div>
     </main>
 
@@ -109,17 +105,27 @@
                 <p>&copy; <span id="year"></span> Floriatan Santos Costa — Todos os direitos reservados.</p>
             </div>
             <div class="footer-right">
-                <a href="#">Sobre</a>
-                <a href="#">Contato</a>
+                <a href="/sobre">Sobre</a>
+                <a href="/contato">Contato</a>
             </div>
         </div>
     </footer>
 
     <!-- Scripts -->
-    <script src="./js/menu.js"></script>
+    <script src="../js/menu.js"></script>
     <script>
         document.getElementById("year").textContent = new Date().getFullYear();
     </script>
 </body>
 
 </html>
+
+
+
+
+
+
+
+
+
+ 

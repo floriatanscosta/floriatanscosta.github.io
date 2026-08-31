@@ -1,292 +1,239 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <meta name="robots" content="index, follow">
-    <link rel="icon" sizes="192x192" href="/icons/favicon.svg" type="image/svg+xml" />
-    <link rel="shortcut icon" href="/icons/favicon.svg" type="image/svg+xml" />
-    <link rel="apple-touch-icon" href="/icons/favicon.svg" type="image/svg+xml" />
-    <script src="/js/script.js"></script>
-    <meta property="og:image" content="/img/cover.png" />
-    <meta name="description"
-        content="Postdoctoral Researcher focused on the development of sustainable analytical methods." />
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
-        rel="stylesheet">
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-GJRNCTN9EJ"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/svg+xml" href="./assets/favicon.svg">
+    <!-- Meta Tags -->
+    <title>Floriatan Santos Costa - Portfólio</title>
+    <meta name="description" content="Portfólio acadêmico e profissional de Floriatan Santos Costa. Explore projetos, publicações e experiências.">
+    <meta property="og:title" content="Floriatan Santos Costa - Portfólio">
+    <meta property="og:description" content="Portfólio acadêmico e profissional. Explore projetos, publicações e experiências.">
+    <meta property="og:image" content="./assets/img/cover.png">
+    <meta name="theme-color" content="#5a729e">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://floriatan.com.br/">
+
+    <!-- Previne o piscar branco -->
     <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag() { dataLayer.push(arguments); }
-        gtag('js', new Date());
-
-        gtag('config', 'G-GJRNCTN9EJ');
+        if (localStorage.getItem('theme') === 'dark') {
+            document.documentElement.setAttribute('data-theme', 'dark');
+        }
     </script>
-
-    <title>Publications - Floriatan Santos Costa</title>
-
-    <style>
-        span {
-            margin: 5px 0 0 0;
-            padding: 0;
-        }
-        span.ref {
-            margin: 0 0 25px 0;
-            color: #282828;
-        }
-        span.title {
-            font-weight: 400;
-            color: #7d7d7d;
-        }
-    </style>
+    
+    <link rel="stylesheet" href="./css/global.css">
+    <link rel="stylesheet" href="./css/main.css">
 </head>
 
-<h2>Publications</h2>
-<div id="descricao">
-    On this page, I highlight some of my scientific productions, including articles, event abstracts, book chapters, and
-    other works. The complete list is available on my <a href="http://lattes.cnpq.br/0287106268880389"
-        target="_blank">Lattes Curriculum</a> and on my profile on <a
-        href="https://www.scopus.com/authid/detail.uri?authorId=57216746115" target="_blank">Scopus®</a></br></br>
-    See also the <a href="/metricas">metrics</a> for more details.
-</div>
+<body>
+    <!-- Cabeçalho e Navegação -->
+    <header>
+        <div class="container header-content">
+            <a href="/">
+                <img src="./assets/logo.svg" alt="Logo Floriatan" class="logo-img">
+            </a>
+            <h1 class="site-title">Floriatan Santos Costa</h1>
+            <div style="display: flex; justify-content: flex-end; align-items: center; gap: 15px;">
+                <div class="lang-dropdown">
+                    <button class="lang-dropbtn">PT</button>
+                    <div class="lang-dropdown-content">
+                        <button onclick="switchLanguage('pt')">Português (PT)</button>
+                        <button onclick="switchLanguage('en')">English (EN)</button>
+                    </div>
+                </div>
+                <button id="theme-toggle" class="theme-toggle" onclick="toggleTheme()" title="Alternar Tema" style="padding: 0;"><img src="./assets/icons/escuro.svg" alt="Ativar Modo Escuro" style="width: 20px; height: 20px;"></button>
+                <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+            </div>
+        </div>
+    </header>
+    <nav>
+        <div class="container nav-content" id="navMenu">
+            <a href="/">Início</a>
+            <a href="/biografia">Biografia</a>
+            <a href="/experiencia">Experiência</a>
+            <a href="/publicacoes">Publicações</a>
+            <a href="/premiacoes">Premiações</a>
+            <a href="/contato">Contato</a>
+        </div>
+    </nav>
 
-<div class="conlun2">
-    <div class="col" id="col3">
-        <h3>Scientific Articles</h3>
-    </div>
-    <div class="col" id="col2">
+    <!-- Conteúdo Principal -->
+    <main>
+        <div class="container">
 
-        <!-- content reference:
-    ///////////////////////////
+            <!-- Introdução -->
+            <section class="col-1">
+                <h2>Publicações</h2>
+                <p>Nesta página, destaco algumas das minhas produções científicas, incluindo artigos, resumos de eventos, capítulos de livros e outros trabalhos. A lista completa está disponível no meu <a href="http://lattes.cnpq.br/0287106268880389" target="_blank" class="inline-link">Currículo Lattes</a> e no <a href="https://www.scopus.com/authid/detail.uri?authorId=57216746115" target="_blank" class="inline-link">Scopus®</a>.</p>
+            </section>
 
-        <span class="ref">Title
-            <span class="title">REV</span>
-            <span><a href="https://doi.org/" class="doi" target="_blank" alt="View article">X</a></span>
-        </span>
+            <!-- Artigos Científicos -->
+            <section class="col-1">
+                <h2>Artigos científicos</h2>
+                <div class="article-list">
 
-    ///////////////////////////
-    content reference -->
+                    <article class="article-item">
+                        <h3 class="article-title">Alginate-encapsulated HDES as a green sorbent for elemental preconcentration prior to determination by FAAS</h3>
+                        <p class="article-journal">ACS Omega</p>
+                        <a href="https://doi.org/10.1021/acsomega.6c01846" class="doi-link" target="_blank">10.1021/acsomega.6c01846</a>
+                    </article>
 
+                    <article class="article-item">
+                        <h3 class="article-title">Multielement determination in green, black, and white tea leaves (<i>Camellia sinensis</i>) using ultrasound-assisted extraction with natural deep eutectic solvents</h3>
+                        <p class="article-journal">Food Analytical Methods</p>
+                        <a href="https://doi.org/10.1007/s12161-026-03178-6" class="doi-link" target="_blank">10.1007/s12161-026-03178-6
+                        </a>
+                    </article>
 
-        <span class="ref">Alginate-encapsulated HDES as a green sorbent for elemental preconcentration prior to
-            determination by FAAS
-            <span class="title">ACS Omega</span>
-            <span><a href="https://doi.org/10.1021/acsomega.6c01846" class="doi" target="_blank"
-                    alt="View article">10.1021/acsomega.6c01846</a></span>
-        </span>
+                    <article class="article-item">
+                        <h3 class="article-title">Choline chloride-carboxylic acid deep eutectic solvents for lead extraction from electronic waste: A green approach</h3>
+                        <p class="article-journal">Sustainable Chemistry and Pharmacy</p>
+                        <a href="https://doi.org/10.1016/j.scp.2025.102300" class="doi-link" target="_blank">10.1016/j.scp.2025.102300</a>
+                    </article>
 
-        <span class="ref">Multielement determination in green, black, and white tea leaves (<i>Camellia sinensis</i>)
-            using ultrasound-assisted extraction with natural deep eutectic solvents
-            <span class="title">Food Analytical Methods</span>
-            <span><a href="https://doi.org/10.1007/s12161-026-03178-6" class="doi" target="_blank"
-                    alt="View article">10.1007/s12161-026-03178-6</a></span>
-        </span>
+                    <article class="article-item">
+                        <h3 class="article-title">Recent advances in sample preparation for the determination of mineral oil saturated (MOSH) and aromatic hydrocarbons (MOAH) in food matrices</h3>
+                        <p class="article-journal">Microchemical Journal</p>
+                        <a href="https://doi.org/10.1016/j.microc.2026.118083" class="doi-link" target="_blank">10.1016/j.microc.2026.118083</a>
+                    </article>
 
-        <span class="ref">Choline chloride-carboxylic acid deep eutectic solvents for lead extraction from electronic
-            waste: A green approach
-            <span class="title">Sustainable Chemistry and Pharmacy</span>
-            <span><a href="https://doi.org/10.1016/j.scp.2025.102300" class="doi" target="_blank"
-                    alt="View article">10.1016/j.scp.2025.102300</a></span>
-        </span>
+                    <article class="article-item">
+                        <h3 class="article-title">Interpreting SPR-Derived Reaction Kinetics via Self-Organizing Maps for Diagnostic Applications</h3>
+                        <p class="article-journal">ACS Sensors</p>
+                        <a href="https://doi.org/10.1021/acssensors.5c03250" class="doi-link" target="_blank">
+                            10.1021/acssensors.5c03250
+                        </a>
+                    </article>
 
-        <span class="ref">Recent advances in sample preparation for the determination of mineral oil saturated (MOSH)
-            and aromatic hydrocarbons (MOAH) in food matrices
-            <span class="title">Microchemical Journal</span>
-            <span><a href="https://doi.org/10.1016/j.microc.2026.118083" class="doi" target="_blank"
-                    alt="View article">10.1016/j.microc.2026.118083</a></span>
-        </span>
+                    <article class="article-item">
+                        <h3 class="article-title">Ecological risk assessment and application of a preliminary mitigation strategy for the remediation of potentially toxic elements (PTEs) in a southeastern Brazilian watershed (São Carlos, SP, Brazil)</h3>
+                        <p class="article-journal">Environmental Monitoring and Assessment</p>
+                        <a href="https://doi.org/10.1007/s10661-025-14479-4" class="doi-link" target="_blank">10.1007/s10661-025-14479-4</a>
+                    </article>
 
-        <span class="ref">Interpreting SPR-Derived Reaction Kinetics via Self-Organizing Maps for Diagnostic
-            Applications
-            <span class="title">ACS Sensors</span>
-            <span><a href="https://doi.org/10.1021/acssensors.5c03250" class="doi" target="_blank"
-                    alt="View article">10.1021/acssensors.5c03250</a></span>
-        </span>
+                    <article class="article-item">
+                        <h3 class="article-title">Valorization of agri-food by-products for laccase oxidative multienzyme extract production and dye degradation: A sustainable biodegradation approach</h3>
+                        <p class="article-journal">Journal of the Indian Chemical Society</p>
+                        <a href="https://doi.org/10.1016/j.jics.2025.101717" class="doi-link" target="_blank">10.1016/j.jics.2025.101717</a>
+                    </article>
 
-        <span class="ref">Ecological risk assessment and application of a preliminary mitigation strategy for the
-            remediation of potentially toxic elements (PTEs) in a southeastern Brazilian watershed (São Carlos, SP,
-            Brazil)
-            <span class="title">Environmental Monitoring and Assessment</span>
-            <span><a href="https://doi.org/10.1007/s10661-025-14479-4" class="doi" target="_blank"
-                    alt="View article">10.1007/s10661-025-14479-4</a></span>
-        </span>
+                    <article class="article-item">
+                        <h3 class="article-title">An eco-friendly method using NADES as catalyst in the derivatization of ammonia for air quality determination</h3>
+                        <p class="article-journal">Microchemical Journal</p>
+                        <a href="https://doi.org/10.1016/j.microc.2025.113307" class="doi-link" target="_blank">10.1016/j.microc.2025.113307</a>
+                    </article>
 
-        <span class="ref">Valorization of agri-food by-products for laccase oxidative multienzyme extract production and
-            dye degradation: A sustainable biodegradation approach
-            <span class="title">Journal of the Indian Chemical Society</span>
-            <span><a href="https://doi.org/10.1016/j.jics.2025.101717" class="doi" target="_blank"
-                    alt="View article">10.1016/j.jics.2025.101717</a></span>
-        </span>
+                    <article class="article-item">
+                        <h3 class="article-title">A greenness evaluation of deep eutectic solvents-based conventional extraction methods for elemental determination by spectrometry techniques</h3>
+                        <p class="article-journal">TrAC Trends in Analytical Chemistry</p>
+                        <a href="https://doi.org/10.1016/j.trac.2024.117677" class="doi-link" target="_blank">10.1016/j.trac.2024.117677</a>
+                    </article>
 
-        <span class="ref">
-            An eco-friendly method using NADES as catalyst in the derivatization of ammonia for air quality
-            determination
-            <span class="title">Microchemical Journal</span>
-            <span><a href="https://doi.org/10.1016/j.microc.2025.113307" class="doi" target="_blank"
-                    alt="View article">10.1016/j.microc.2025.113307</a></span>
-        </span>
+                    <article class="article-item">
+                        <h3 class="article-title">Microwave-assisted extraction based on emulsion breaking with natural deep eutectic solvent for vegetable oil sample preparation prior to elemental determination by ICP OES</h3>
+                        <p class="article-journal">Talanta</p>
+                        <a href="https://doi.org/10.1016/j.talanta.2023.125108" class="doi-link" target="_blank">10.1016/j.talanta.2023.125108</a>
+                    </article>
 
-        <span class="ref">
-            A greenness evaluation of deep eutectic solvents-based conventional extraction methods for elemental
-            determination by spectrometry techniques
-            <span class="title">TrAC Trends in Analytical Chemistry</span>
-            <span><a href="https://doi.org/10.1016/j.trac.2024.117677" class="doi" target="_blank"
-                    alt="View article">10.1016/j.trac.2024.117677</a></span>
-        </span>
+                    <article class="article-item">
+                        <h3 class="article-title">Evaluation of Photobiomodulation Therapy (PBMT) on Salivary Flow and Composition in Head and Neck Cancer Patients Undergoing Radiation Therapy</h3>
+                        <p class="article-journal">Oral Surgery Oral Medicine Oral Pathology Oral Radiology</p>
+                        <div style="display: flex; gap: 15px; align-items: center; flex-wrap: wrap;">
+                            <a href="https://doi.org/10.1016/j.oooo.2023.11.007" class="doi-link" target="_blank">10.1016/j.oooo.2023.11.007</a>
+                        </div>
+                    </article>
 
-        <span class="ref">
-            Microwave-assisted extraction based on emulsion breaking with natural deep eutectic solvent for vegetable
-            oil sample preparation prior to elemental determination by ICP OES
-            <span class="title">Talanta</span>
-            <span><a href="https://doi.org/10.1016/j.talanta.2023.125108" class="doi" target="_blank"
-                    alt="View article">10.1016/j.talanta.2023.125108</a></span>
-        </span>
+                    <article class="article-item">
+                        <h3 class="article-title">Elevated salivary copper concentration in patients with Wilson's disease</h3>
+                        <p class="article-journal">Parkinsonism & Related Disorders</p>
+                        <a href="https://doi.org/10.1016/j.parkreldis.2023.105893" class="doi-link" target="_blank">10.1016/j.parkreldis.2023.105893</a>
+                    </article>
 
-        <span class="ref">
-            Evaluation of Photobiomodulation Therapy (PBMT) on Salivary Flow and Composition in Head and Neck Cancer
-            Patients Undergoing Radiation Therapy
-            <span class="title">Oral Surgery Oral Medicine Oral Pathology Oral Radiology</span>
-            <span><a href="https://doi.org/10.1016/j.oooo.2023.11.007" class="doi" target="_blank"
-                    alt="View article">10.1016/j.oooo.2023.11.007</a> | Award-winning article - <a
-                    href="/premiacoes">Journal’s Annual Best Paper Awards (2024)</a></span>
-        </span>
+                    <article class="article-item">
+                        <h3 class="article-title">Green approaches with amino acids-based deep eutectic solvents (AADES) for determining As in medicinal herbs by ICP-MS</h3>
+                        <p class="article-journal">Journal of Molecular Liquids</p>
+                        <a href="https://doi.org/10.1016/j.molliq.2023.121801" class="doi-link" target="_blank">10.1016/j.molliq.2023.121801</a>
+                    </article>
+            
+                </div>
+            </section>
 
-        <span class="ref">
-            Elevated salivary copper concentration in patients with Wilson's disease
-            <span class="title">Parkinsonism & Related Disorders</span>
-            <span><a href="https://doi.org/10.1016/j.parkreldis.2023.105893" class="doi" target="_blank"
-                    alt="View article">10.1016/j.parkreldis.2023.105893</a></span>
-        </span>
+            <!-- Capítulos de Livros -->
+            <section class="col-1">
+                <h2>Livros & Capítulos</h2>
+                <div class="article-list">
+                    <article class="article-item">
+                        <h3 class="article-title">The Chemistry of Electronics: a contextualized approach for Chemistry Education</h3>
+                        <p class="article-journal">Introduction to Teaching: The Licentiate in Chemistry and science education</p>
+                        <p class="article-authors">Editors: Hidonice S. Batista and Jane G. F. Santana</p>
+                    </article>
+                </div>
+            </section>
 
-        <span class="ref">
-            Green approaches with amino acids-based deep eutectic solvents (AADES) for determining As in medicinal herbs
-            by ICP-MS
-            <span class="title">Journal of Molecular Liquids</span>
-            <span><a href="https://doi.org/10.1016/j.molliq.2023.121801" class="doi" target="_blank"
-                    alt="View article">10.1016/j.molliq.2023.121801</a></span>
-        </span>
+            <!-- Resumos / Abstracts -->
+            <section class="col-1">
+                <h2>Resumos & Eventos</h2>
+                <div class="article-list">
+                    
+                    <article class="article-item">
+                        <h3 class="article-title">Encapsulation of Hydrophobic Deep Eutectic Solvent (HDES) in Alginate Beads: A Green Sorbent for Preconcentration of Inorganic Analytes</h3>
+                        <p class="article-journal">47th Annual Meeting of the Brazilian Chemical Society (2024)</p>
+                    </article>
 
-        <span class="ref">
-            Natural Deep Eutectic Solvent-based Microwave-assisted Extraction in the Medicinal Herb sample preparation
-            and elemental determination by ICP OES
-            <span class="title">Journal of Food Composition and Analysis</span>
-            <span><a href="https://doi.org/10.1016/j.jfca.2022.104510" class="doi" target="_blank"
-                    alt="View article">10.1016/j.jfca.2022.104510</a></span>
-        </span>
+                    <article class="article-item">
+                        <h3 class="article-title">Encapsulation of Hydrophobic Deep Eutectic Solvent in Alginate for pre-concentration of copper in saliva samples prior to FAAS analysis</h3>
+                        <p class="article-journal">21st Brazilian Meeting on Analytical Chemistry (2024)</p>
+                    </article>
 
-        <span class="ref">
-            Evaluation of Trace Elements in Marine Biological Tissues by Graphite Furnace Atomic Absorption Spectrometry
-            After Sample Treatment with Formic Acid
-            <span class="title">Food Analytical Methods</span>
-            <span><a href="https://doi.org/10.1007/s12161-022-02240-3" class="doi" target="_blank"
-                    alt="View article">10.1007/s12161-022-02240-3</a></span>
-        </span>
+                    <article class="article-item">
+                        <h3 class="article-title">Enhanced metal detection in fermented beverages by FAAS using Alginate encapsulated Hydrophobic Deep Eutectic Solvent</h3>
+                        <p class="article-journal">21st Brazilian Meeting on Analytical Chemistry (2024)</p>
+                    </article>
 
-        <span class="ref">
-            Thermostable trypsin-like protease by <i>Penicillium roqueforti</i> secreted in cocoa shell fermentation:
-            Production optimization, characterization, and application in milk clotting
-            <span class="title">Biotechnology and Applied Biochemistry</span>
-            <span><a href="https://doi.org/10.1002/bab.2268" class="doi" target="_blank"
-                    alt="View article">10.1002/bab.2268</a></span>
-        </span>
+                    <article class="article-item">
+                        <h3 class="article-title">Disposable inserts: analytical frequency optimization and applicability in microwave radiation-assisted acid digestion of different matrices</h3>
+                        <p class="article-journal">21st Brazilian Meeting on Analytical Chemistry (2024)</p>
+                    </article>
+                    
+                    <article class="article-item">
+                        <h3 class="article-title">Self-organizing map and pollution indices for space-time patterns identification in a coastal ecosystem monitoring program</h3>
+                        <p class="article-journal">16th Rio Symposium on Atomic Spectrometry (2023)</p>
+                    </article>
 
-        <span class="ref">
-            Self-organizing map applied to the choice of internal standards for the determination of Cd, Pb, Sn, and
-            platinum group elements by inductively coupled plasma mass spectrometry
-            <span class="title">Talanta</span>
-            <span><a href="https://doi.org/10.1016/j.talanta.2021.122534" class="doi" target="_blank"
-                    alt="View article">10.1016/j.talanta.2021.122534</a></span>
-        </span>
+                    <article class="article-item">
+                        <h3 class="article-title">A greener method for determination of arsenic and cadmium in soil by ICP-MS employing Deep Eutectic Solvents</h3>
+                        <p class="article-journal">16th Rio Symposium on Atomic Spectrometry (2023)</p>
+                    </article>
 
-        <span class="ref">
-            Oral health, organic and inorganic saliva composition of men with Schizophrenia: Case-control study
-            <span class="title">Journal of Trace Elements in Medicine and Biology</span>
-            <span><a href="https.doi.org/10.1016/j.jtemb.2021.126743" class="doi" target="_blank"
-                    alt="View article">10.1016/j.jtemb.2021.126743</a></span>
-        </span>
+                    <article class="article-item">
+                        <h3 class="article-title">Microwave-assisted extraction induced by emulsion breaking based on NADES for elemental determination in Edible Oils by ICP OES</h3>
+                        <p class="article-journal">20th Brazilian Meeting on Analytical Chemistry (2022)</p>
+                    </article>
+                </div>
+                
+            </section>
+        </div>
+    </main>
 
-        <span class="ref">
-            Application of Mixture Design and Kohonen Neural Network for Determination of Macro- and Microelement in
-            Mullet (<em>Mugil cephalus</em>) by MIP OES
-            <span class="title">Food Analytical Methods</span>
-            <span><a href="https://doi.org/10.1007/s12161-021-01969-7" class="doi" target="_blank"
-                    alt="View article">10.1007/s12161-021-01969-7</a></span>
-        </span>
+    <!-- Rodapé -->
+    <footer>
+        <div class="container footer-content">
+            <div class="footer-left">
+                <p>&copy; <span id="year"></span> Floriatan Santos Costa — Todos os direitos reservados.</p>
+            </div>
+            <div class="footer-right">
+                <a href="/sobre">Sobre</a>
+                <a href="/contato">Contato</a>
+            </div>
+        </div>
+    </footer>
 
-        <span class="ref">
-            Chemical characterization of the soils from black pepper (<i>Piper nigrum</i> L.) cultivation using
-            principal component analysis (PCA) and Kohonen self-organizing map (KSOM)
-            <span class="title">Journal of Soils and Sediments</span>
-            <span><a href="https://doi.org/10.1007/s11368-021-02966-3" class="doi" target="_blank"
-                    alt="View article">10.1007/s11368-021-02966-3</a></span>
-        </span>
+    <!-- Scripts -->
+    <script src="./js/menu.js"></script>
+    <script>
+        document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
+</body>
 
-        <span class="ref">
-            Multivariate optimization of ultrasound-assisted extraction procedure for the determination of Cu, Fe, Mn,
-            and Zn in plant samples by Flame Atomic Absorption Spectrometry
-            <span class="title">Analytical Methods</span>
-            <span><a href="https://doi.org/10.1039/d0ay00554a" class="doi" target="_blank"
-                    alt="View article">10.1039/d0ay00554a</a></span>
-        </span>
-    </div>
-</div>
-
-<div class="conlun2">
-    <div class="col" id="col3">
-        <h3>Book Chapters</h3>
-    </div>
-    <div class="col" id="col2">
-        <span class="ref">
-            The Chemistry of Electronics: a contextualized approach for Chemistry Education
-            <span class="title">Introduction to Teaching: The Licentiate in Chemistry and science education</span>
-            <span>Editors: Hidonice S. Batista and Jane G. F. Santana</span>
-        </span>
-    </div>
-</div>
-
-
-<div class="conlun2">
-    <div class="col" id="col3">
-        <h3>Abstracts</h3>
-    </div>
-    <div class="col" id="col2">
-        <span class="ref">
-            Encapsulation of Hydrophobic Deep Eutectic Solvent (HDES) in Alginate Beads: A Green Sorbent for
-            Preconcentration of Inorganic Analytes
-            <span class="title">47th Annual Meeting of the Brazilian Chemical Society (2024)</span>
-        </span>
-
-        <span class="ref">
-            Encapsulation of Hydrophobic Deep Eutectic Solvent in Alginate for pre-concentration of copper in saliva
-            samples prior to FAAS analysis
-            <span class="title">21st Brazilian Meeting on Analytical Chemistry (2024)</span>
-        </span>
-
-        <span class="ref">
-            Enhanced metal detection in fermented beverages by FAAS using Alginate encapsulated Hydrophobic Deep
-            Eutectic Solvent
-            <span class="title">21st Brazilian Meeting on Analytical Chemistry (2024)</span>
-        </span>
-
-        <span class="ref">
-            Disposable inserts: analytical frequency optimization and applicability in microwave radiation-assisted acid
-            digestion of different matrices
-            <span class="title">21st Brazilian Meeting on Analytical Chemistry (2024)</span>
-        </span>
-
-        <span class="ref">
-            Self-organizing map and pollution indices for space-time patterns identification in a coastal ecosystem
-            monitoring program
-            <span class="title">16th Rio Symposium on Atomic Spectrometry (2023)</span>
-        </span>
-
-        <span class="ref">
-            A greener method for determination of arsenic and cadmium in soil by ICP-MS employing Deep Eutectic Solvents
-            <span class="title">16th Rio Symposium on Atomic Spectrometry (2023)</span>
-        </span>
-
-        <span class="ref">
-            Microwave-assisted extraction induced by emulsion breaking based on NADES for elemental determination in
-            Edible Oils by ICP OES
-            <span class="title">20th Brazilian Meeting on Analytical Chemistry (2022)</span>
-        </span>
-    </div>
-</div>
+</html>

@@ -1,129 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <meta name="robots" content="index, follow">
-    <link rel="icon" sizes="192x192" href="/icons/favicon.svg" type="image/svg+xml" />
-    <link rel="shortcut icon" href="/icons/favicon.svg" type="image/svg+xml" />
-    <link rel="apple-touch-icon" href="/icons/favicon.svg" type="image/svg+xml" />
-    <script src="/js/script.js"></script>
-    <meta property="og:image" content="./img/cover.png" />
-    <meta name="description" content="Postdoctoral Researcher focused on the development of sustainable analytical methods." />
-    <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-GJRNCTN9EJ"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/svg+xml" href="./assets/favicon.svg">
+    <!-- Meta Tags -->
+    <title>Floriatan Santos Costa - Portfólio</title>
+    <meta name="description" content="Portfólio acadêmico e profissional de Floriatan Santos Costa. Explore projetos, publicações e experiências.">
+    <meta property="og:title" content="Floriatan Santos Costa - Portfólio">
+    <meta property="og:description" content="Portfólio acadêmico e profissional. Explore projetos, publicações e experiências.">
+    <meta property="og:image" content="./assets/img/cover.png">
+    <meta name="theme-color" content="#5a729e">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://floriatan.com.br/">
+
+    <!-- Previne o piscar branco -->
     <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag() { dataLayer.push(arguments); }
-        gtag('js', new Date());
-
-        gtag('config', 'G-GJRNCTN9EJ');
-    </script>
-
-    <title>Contact - Floriatan Santos Costa</title>
-    <script>
-        function showConfirmation() {
-            document.getElementById("confirmacao").style.display = "block";
-
-            setTimeout(function () {
-                document.querySelector("form").reset();
-            }, 2000);
-
-            setTimeout(function () {
-                document.getElementById("confirmacao").style.display = "none";
-            }, 10000);
+        if (localStorage.getItem('theme') === 'dark') {
+            document.documentElement.setAttribute('data-theme', 'dark');
         }
     </script>
-
-    <style type="text/css">
-        .conlun2 {gap: 50px;}
-        span {padding: 0; margin: 0;}
-    </style>
+    
+    <link rel="stylesheet" href="./css/global.css">
+    <link rel="stylesheet" href="./css/main.css">
 </head>
 
-<h2>Contact</h2>
-
-<div id="descricao">
-    Feel free to send me an e-mail or leave your message here using the contact form.
-</div>
-
-<div class="conlun2" style="margin-bottom: 60px;">
-    <div class="col" id="col5" style="background-color:#f1f6fd;padding: 25px; border-radius: 8px; box-sizing: border-box;">
-        <h3 style="font-size: 24px; color: #5a729e">Floriatan Santos Costa</h3>
-        <span style="font-size: 17px;margin: 4px 0 30px 0;">Postdoctoral Researcher</span>
-        <span>Spectrometry, Sensors and Biosensors Laboratory</span>
-        <span>Department of Chemistry</span>
-        <span>Federal University of Paraná - UFPR</span>
-        <span style="margin-top: 10px;">Av. Cel. Francisco H. dos Santos, 100, Jardim das Américas, Curitiba, Paraná, Brazil</br>ZIP Code: 81531-980</span>
-        <span><a href="http://www.laesb.ufpr.br/?utm_source=curriculo&utm_medium=floriatan&utm_content=pagecontato&utm_campaign=cv" target="_blank">www.laesb.ufpr.br</a></span>
-        <div>
-            <h4 style="margin: 40px 0 8px 0; color: #5a729e">E-mail:</h4>
-            <span style="margin: 0; padding: 0 0 6px 0;">Institutional: <a href="mailto:floriatancosta@ufpr.br?subject=Contact%20-%20CV%20Floriatan">floriatancosta@ufpr.br</a></span>
-            <span style="margin: 0; padding: 0;">Academic: <a href="mailto:floriatansc@gmail.com?subject=Contact%20-%20CV%20Floriatan">floriatansc@gmail.com</a></span>
-        </div>
-    </div>
-
-    <div class="col" id="col2">
-        <form action="https://docs.google.com/forms/d/e/1FAIpQLSd3d7FKDmyAThxq-XY7exYxQTH6gtYghoyTwpyquyxBY2zmWw/formResponse" method="POST" target="_blank" onsubmit="showConfirmation()">
-            <ol role="list" style="padding-left:0;list-style-type:none">
-                <div role="listitem">
-                    <div>
-                        <div style="margin-bottom:10px;vertical-align:middle;margin-left:0;margin-top:0;max-width:100%">
-                            <label>
-                                <div style="display:block;font-weight:bold;margin: 0 0 10px 0">
-                                    Name
-                                </div>
-                            </label>
-                            <input type="text" name="entry.49077365" required>
-                        </div>
+<body>
+    <!-- Cabeçalho e Navegação -->
+    <header>
+        <div class="container header-content">
+            <a href="/">
+                <img src="./assets/logo.svg" alt="Logo Floriatan" class="logo-img">
+            </a>
+            <h1 class="site-title">Floriatan Santos Costa</h1>
+            <div style="display: flex; justify-content: flex-end; align-items: center; gap: 15px;">
+                <div class="lang-dropdown">
+                    <button class="lang-dropbtn">PT</button>
+                    <div class="lang-dropdown-content">
+                        <button onclick="switchLanguage('pt')">Português (PT)</button>
+                        <button onclick="switchLanguage('en')">English (EN)</button>
                     </div>
                 </div>
-                <div role="listitem">
-                    <div>
-                        <div style="margin-bottom:10px;vertical-align:middle;margin-left:0;margin-top:0;max-width:100%">
-                            <label>
-                                <div style="display:block;font-weight:bold;margin: 10px 0">
-                                    E-mail
-                                </div>
-                            </label>
-                            <input type="email" name="entry.313408561" required>
-                        </div>
-                    </div>
-                </div>
-                <div role="listitem">
-                    <div style="margin:0">
-                        <div style="margin-bottom:10px;vertical-align:middle;margin-left:0;margin-top:0;max-width:100%">
-                            <label>
-                                <div style="display:block;font-weight:bold;margin: 10px 0">
-                                    Message
-                                </div>
-                            </label>
-                            <textarea name="entry.1043416349" style="width:100%" required></textarea>
-                        </div>
-                    </div>
-                </div>
-                <input type="hidden" name="partialResponse" value="[null,null,&quot;-7807741929320629897&quot;]">
-                <input type="hidden" name="pageHistory" value="0">
-                <input type="hidden" name="usp" value="mail_form_submit">
-                <input type="hidden" name="fbzx" value="-7807741929320629897">
-                <div style="width: 100%;">
-                    <table style="width: 100%;">
-                        <tbody style="width: 100%;">
-                            <tr style="width: 100%;">
-                                <td dir="ltr"
-                                    style="margin:10px 0;vertical-align:middle;width:100%;display:inline-block">
-                                    <input type="submit" value="Send">
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-            </ol>
-        </form>
-        <div id="confirmacao"
-            style="display:none; margin-top:10px; padding:10px; background-color:#fff8c4; color:#665c00; border:1px solid #e6db55; border-radius:5px;transition: 0.3s;">
-            Your message has been sent successfully!
+                <button id="theme-toggle" class="theme-toggle" onclick="toggleTheme()" title="Alternar Tema" style="padding: 0;"><img src="./assets/icons/escuro.svg" alt="Ativar Modo Escuro" style="width: 20px; height: 20px;"></button>
+                <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+            </div>
         </div>
+    </header>
+    <nav>
+        <div class="container nav-content" id="navMenu">
+            <a href="/">Início</a>
+            <a href="/biografia">Biografia</a>
+            <a href="/experiencia">Experiência</a>
+            <a href="/publicacoes">Publicações</a>
+            <a href="/premiacoes">Premiações</a>
+            <a href="/contato">Contato</a>
+        </div>
+    </nav>
 
+    <!-- Conteúdo principal -->
+    <main>
+        <div class="container">
+            <section class="col-1">
+
+
+                <!-- ADICIONAR O CONTEÚDO AQUI -->
+            
+            
+            </section>
         </div>
-</div>
+    </main>
+
+    <!-- Rodapé -->
+    <footer>
+        <div class="container footer-content">
+            <div class="footer-left">
+                <p>&copy; <span id="year"></span> Floriatan Santos Costa — Todos os direitos reservados.</p>
+            </div>
+            <div class="footer-right">
+                <a href="/sobre">Sobre</a>
+                <a href="/contato">Contato</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="./js/menu.js"></script>
+    <script>
+        document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
+</body>
+
+</html>
