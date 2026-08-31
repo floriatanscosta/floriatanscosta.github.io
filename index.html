@@ -17,6 +17,16 @@
     <meta property="og:url" content="https://floriatan.com.br/">
     <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; font-src 'self';">
     
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-0NDPRCLMYV"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-0NDPRCLMYV');
+    </script>
+
     <!-- Previne o piscar branco -->
     <script>
         if (localStorage.getItem('theme') === 'dark') {
@@ -26,7 +36,6 @@
     <style>
         body {background: var(--header-gradient);}
     </style>
-
     <link rel="stylesheet" href="./css/global.css">
     <link rel="stylesheet" href="./css/main.css">
 </head>
@@ -112,6 +121,7 @@
             </div>
             <div class="footer-right">
                 <a href="/sobre">Sobre</a>
+                <a href="/design">Design</a>
                 <a href="/contato">Contato</a>
             </div>
         </div>
