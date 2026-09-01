@@ -19,6 +19,7 @@
     --nav-hover: rgba(18, 46, 99, 0.185);
     --box-bg: #ffffff;
     --border-color: #e2e8f0;
+    --border-color-2: #f9f9f9;
     --spacing-xs: 4px;
     --spacing-sm: 8px;
     --spacing-md: 16px;
@@ -58,6 +59,7 @@
     --nav-hover: #00000033;
     --box-bg: #23282F;
     --border-color: #2F333C;
+    --border-color-2: #1A1F26;
     --color-bg-page: #1A1F26;
     --color-bg-surface-1: #1F242A;
     --color-bg-surface-2: #23282F;

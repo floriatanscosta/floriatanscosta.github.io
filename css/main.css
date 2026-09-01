@@ -77,13 +77,13 @@ ul.custom-list li, ol.custom-list li { margin-bottom: 6px; }
 /* 6. Métricas */
 /************************************************************/
 .metrics-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; margin-bottom: 30px; margin-top: 15px; }
-.metric-card { background-color: var(--box-bg); padding: 30px 20px; text-align: center; border-radius: 8px; box-shadow: 0 4px 15px rgba(90, 114, 158, 0.05); border: 1px solid var(--border-color); transition: transform 0.3s, box-shadow 0.3s; }
-.metric-card:hover { transform: translateY(-5px); box-shadow: 0 8px 20px rgba(90, 114, 158, 0.15); }
+.metric-card { background-color: var(--box-bg); padding: 30px 20px; text-align: center; border-radius: 8px; box-shadow: 0 4px 15px rgba(90, 114, 158, 0.05); border: 1px solid var(--border-color-2); transition: transform 0.3s, box-shadow 0.3s; }
+.metric-card:hover { transform: translateY(-5px); }
 .metric-label { font-size: 1.1rem; font-weight: 500; margin-bottom: 10px; color: var(--text-main); }
 .metric-number { font-size: 4rem; font-weight: 700; line-height: 1; display: block; }
 .metric-color-1, .metric-color-2 { color: #4369bb; }
 .metric-color-3 { color: #4CB96E; }
-.metrics-sources { font-size: 0.9rem; margin-top: 40px; padding-top: 20px; border-top: 1px solid var(--border-color); line-height: 1.3; }
+.metrics-sources { font-size: 1em; margin-top: 50px; padding-top: 40px; border-top: 1px solid var(--border-color); line-height: 1.6; }
 
 /************************************************************/
 /* 7. Formulário de contato */
