@@ -20,11 +20,11 @@
 }
 
 [data-theme="dark"] {
-    --bg-color: #1c1c1c;
+    --bg-color: #1A1F26;
     --heading-color: #a2c2d3;
-    --border-header: #1c1c1c;
+    --border-header: #1A1F26;
     --text-main: #e0e0e0;
-    --header-gradient: linear-gradient(90deg, #323232, #000);
+    --header-gradient: linear-gradient(90deg, #323232, #1A1F26);
     --footer-bg: #1a1a1a;
     --footer-text: #aaaaaa;
     --nav-bg: #252525;
