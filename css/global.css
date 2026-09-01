@@ -41,7 +41,7 @@ h1, h2, h3, h4, h5, h6 { color: var(--heading-color); margin-bottom: 30px; }
 /* === 3. ESTRUTURA PRINCIPAL (LAYOUT BASE) === */
 body { display: flex; flex-direction: column; min-height: 100vh; background-color: var(--bg-color); color: var(--text-main); }
 main { flex: 1; width: 100%; padding: 40px 0; }
-.container { width: 100%; max-width: 1280px; margin: 0 auto; padding: 0 30px; }
+.container { width: 100%; max-width: 1280px; margin: 0 auto; padding-left: 10px; padding-right: 10px; }
 
 /* === 4. CABEÇALHO (HEADER) === */
 header { width: 100%; padding: 14px 0 0 0; background: var(--header-gradient);}
@@ -85,6 +85,7 @@ footer { width: 100%; margin-top: auto; padding: 20px 0; background-color: var(-
     .nav-content { display: none; flex-direction: column; text-align: center; }
     .nav-content.active { display: flex; }
     .footer-content { flex-direction: column; text-align: center; font-size: 11px; }
+    .container { padding-left: 30px; padding-right: 30px; }
 }
 
 /* === VERSÃO IMPRESSA === */
