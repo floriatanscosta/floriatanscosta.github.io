@@ -17,7 +17,8 @@
 .margin-top-3 { margin-top: 3rem; }
 .margin-top-2 { margin-top: 2rem; }
 .card { padding: 0px;}
-.col-1 { padding: 0px; margin-bottom: 20px; }
+.col-1 { padding: 0px; margin-bottom: 30px; }
+.col-1a {padding-bottom: 30px; margin-bottom: 50px; border-bottom: 1px solid var(--border-color); font-size: 1.2rem; }
 .col-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 30px; margin-bottom: 20px; width: 100%; }
 .col-2 > div { background-color: var(--box-bg); padding: 0px; border-radius: var(--radius-md); box-shadow: var(--shadow-sm); border: 1px solid var(--border-color); }
 
@@ -51,7 +52,7 @@ ul.custom-list li, ol.custom-list li { margin-bottom: 6px; }
 /*****************************************************************/
 /* 4. Widgets de conteúdo (artigos e projetos) */
 /*****************************************************************/
-.article-item { padding: 0 0 30px 0; margin-bottom: 30px; border-bottom: 1px solid var(--border-color); }
+.article-item { padding: 0 0 20px 0; margin-bottom: 20px; border-bottom: 1px solid var(--border-color); }
 .article-item:last-child { border-bottom: none; padding-bottom: 0; }
 .article-title { font-size: 1.2rem; margin-bottom: 2px; }
 .article-journal { font-size: 1rem; font-style: italic; color: var(--text-main); opacity: 0.8; margin-bottom: 10px; }
