@@ -194,7 +194,7 @@ footer { width: 100%; margin-top: auto; padding: 20px 0; background-color: var(-
     body { background-color: #ffffff !important; color: #000000 !important; font-size: 12pt; }
     header, nav, footer, .theme-toggle, .lang-dropdown, .menu-toggle, .btn, .contact-form { display: none !important; }
     main, .container { width: 100% !important; max-width: none !important; padding: 0 !important; margin: 0 !important; }
-    .card, .col-1, .col-2 > div, .project-card, .metric-card, .timeline-content, .profile-img { box-shadow: none !important; background-color: #ffffff !important; border: 1px solid #cccccc !important; }
+    .card, .col-1, .col-2 > div, .project-card, .metric-card, .timeline-content, .profile-img { box-shadow: none !important; background-color: #ffffff !important;}
     .col-2 > div, .card, .project-card, .metric-card, .timeline-item, .article-item, .profile-card { page-break-inside: avoid; }
     h1, h2, h3, h4, h5, h6 { page-break-after: avoid; color: #000000 !important; }
     .timeline::after { background-color: #cccccc !important; }
