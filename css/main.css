@@ -90,7 +90,7 @@ ul.custom-list li, ol.custom-list li { margin-bottom: 6px; }
 /* 6. Métricas */
 /*****************************************************************/
 .metrics-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; margin-bottom: 30px; margin-top: 15px; }
-.metric-card { background-color: var(--box-bg); padding: 30px 20px; text-align: center; border-radius: var(--radius-md); box-shadow: var(--shadow-sm); border: 1px solid var(--border-color-2); transition: transform var(--transition-normal), box-shadow var(--transition-normal); }
+.metric-card { background-color: var(--box-bg); padding: 16px 20px; text-align: center; border-radius: var(--radius-md); box-shadow: var(--shadow-sm); border: 1px solid var(--border-color-2); transition: transform var(--transition-normal), box-shadow var(--transition-normal); }
 .metric-card:hover { transform: translateY(-5px); box-shadow: var(--shadow-md); }
 .metric-label { font-size: 1.1rem; font-weight: 500; margin-bottom: 10px; color: var(--text-main); }
 .metric-number { font-size: 4rem; font-weight: 700; line-height: 1; display: block; }
