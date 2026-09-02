@@ -1,41 +1,41 @@
 /* ==================================================================
-   // global.css
-   // Configurações gerais, estrutura, variáveis, header e footer, variáveis de cores e espaçamentos
-   ================================================================== */
+// global.css
+// Configurações gerais, estrutura, variáveis, header e footer
+================================================================== */
 
-/************************************************************/
+/*****************************************************************/
 /* 1. Variáveis de cores e espaçamentos */
-/************************************************************/
+/*****************************************************************/
 :root { --bg-color: #ffffff; --heading-color: #5a729e; --border-header: #bfcde0; --text-main: #444444; --header-gradient: linear-gradient(230deg, #ffbded2b, #718fc83b); --footer-bg: #f9f9f9; --footer-text: #777777; --nav-bg: #24577f; --nav-links: #24577f; --nav-hover: rgba(18, 46, 99, 0.185); --box-bg: #ffffff; --border-color: #e2e8f0; --border-color-2: #f6f6f6; --spacing-xs: 4px; --spacing-sm: 8px; --spacing-md: 16px; --spacing-lg: 24px; --spacing-xl: 32px; --font-primary: "Roboto", Arial, Tahoma, Verdana, sans-serif; --font-mono: "Courier New", monospace; --font-size-base: 16px; --font-size-sm: 0.875rem; --font-size-lg: 1.25rem; --font-weight-regular: 400; --font-weight-bold: 700; --radius-sm: 4px; --radius-md: 8px; --radius-lg: 16px; --radius-full: 50%; --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.05); --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.1); --shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.1); --transition-fast: 0.15s ease; --transition-normal: 0.3s ease; --z-index-dropdown: 1000; --z-index-sticky: 1020; --z-index-modal: 1050; }
 [data-theme="dark"] { --bg-color: #1A1F26; --heading-color: #FFFFFF; --border-header: #23282F; --text-main: #E5E5E5; --header-gradient: linear-gradient(90deg, #1F242A, #1A1F26); --footer-bg: #1F242A; --footer-text: #999999; --nav-bg: #1F242A; --nav-links: #EDEDED; --nav-hover: #00000033; --box-bg: #23282F; --border-color: #2F333C; --border-color-2: #1A1F26; --color-bg-page: #1A1F26; --color-bg-surface-1: #1F242A; --color-bg-surface-2: #23282F; --color-bg-surface-3: #2F333C; --color-bg-transparent: #00000033; --color-bg-tinted-peach: #3E2527; --color-bg-tinted-pink: #402D30; --color-bg-tinted-pale-pink: #423539; --color-heading: #FFFFFF; --color-copy-primary: #E5E5E5; --color-copy-secondary: #999999; --color-link-enabled: #EDEDED; --color-link-hovered: #B5B7BC; --color-link-pressed: #9C94A4; --color-link-disabled: #686B70; --color-link-visited: #A3A3A3; --spacing-xs: 4px; --spacing-sm: 8px; --spacing-md: 16px; --spacing-lg: 24px; --spacing-xl: 32px; --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.5); --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.6); --shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.8); }
 
-/************************************************************/
+/*****************************************************************/
 /* 2. Reset básico e tipografia */
-/************************************************************/
+/*****************************************************************/
 * { margin: 0; padding: 0; box-sizing: border-box; font-family: var(--font-primary); }
 h1, h2, h3, h4, h5, h6 { color: var(--heading-color); margin-bottom: 30px; }
 h2 { font-size: 1.6rem; }
 h3 { font-size: 1.4rem; }
 h4 { font-size: 1.0rem; }
 
-/************************************************************/
+/*****************************************************************/
 /* 3. Estrutura principal (layout base) */
-/************************************************************/
+/*****************************************************************/
 body { display: flex; flex-direction: column; min-height: 100vh; background-color: var(--bg-color); color: var(--text-main); }
 main { flex: 1; width: 100%; padding: var(--spacing-xl) 0; }
 .container { width: 100%; max-width: 1280px; margin: 0 auto; padding-left: 10px; padding-right: 10px; }
 
-/************************************************************/
+/*****************************************************************/
 /* 4. Cabeçalho (header) */
-/************************************************************/
+/*****************************************************************/
 header { width: 100%; padding: 14px 0 0 0; background: var(--header-gradient); }
 .header-content { display: grid; grid-template-columns: 1fr auto 1fr; align-items: center; padding-bottom: 14px; }
 .logo-img { display: block; width: auto; height: 55px; }
 .site-title { margin-bottom: 0; text-align: center; font-size: 1.6rem; font-weight: 800; }
 
-/************************************************************/
+/*****************************************************************/
 /* 5. Componentes do cabeçalho (botões) */
-/************************************************************/
+/*****************************************************************/
 .theme-toggle { margin-right: 15px; background: none; border: none; color: var(--heading-color); font-size: 1.5rem; cursor: pointer; transition: transform var(--transition-normal); }
 .theme-toggle:hover { transform: scale(1.1); }
 .lang-dropdown { position: relative; display: inline-block; }
@@ -48,18 +48,18 @@ header { width: 100%; padding: 14px 0 0 0; background: var(--header-gradient); }
 .lang-dropdown-content button:last-child { border-bottom: none; }
 .lang-dropdown-content button:hover { background-color: rgba(90, 114, 158, 0.1); }
 
-/************************************************************/
+/*****************************************************************/
 /* 6. Navegação principal (nav) */
-/************************************************************/
+/*****************************************************************/
 nav { width: 100%; background: var(--header-gradient); border-bottom: 1px solid var(--border-color); }
 .nav-content { display: flex; justify-content: center; flex-wrap: wrap; border-top: 1px solid var(--border-header); }
 .nav-content a { padding: 15px 20px; color: var(--nav-links); font-weight: 500; text-decoration: none; transition: background var(--transition-normal), color var(--transition-normal); }
 .nav-content a:hover { background-color: var(--nav-hover); }
 .menu-toggle { display: none; justify-self: end; background: none; border: none; color: var(--heading-color); font-size: 1.8rem; cursor: pointer; }
 
-/************************************************************/
+/*****************************************************************/
 /* 7. Rodapé (footer) */
-/************************************************************/
+/*****************************************************************/
 footer { width: 100%; margin-top: auto; padding: 20px 0; background-color: var(--footer-bg); color: var(--footer-text); font-size: 0.85rem; }
 .footer-content { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 6px; }
 .footer-left p { margin-bottom: 0; line-height: 1; }
@@ -67,9 +67,9 @@ footer { width: 100%; margin-top: auto; padding: 20px 0; background-color: var(-
 .footer-right a { color: var(--footer-text); font-weight: 600; text-decoration: none; transition: color var(--transition-normal); }
 .footer-right a:hover { color: var(--heading-color); }
 
-/************************************************************/
+/*****************************************************************/
 /* 8. Responsividade (media queries) */
-/************************************************************/
+/*****************************************************************/
 @media (max-width: 768px) {
     .header-content { grid-template-columns: auto 1fr auto; gap: 15px; }
     .site-title { text-align: left; font-size: 1.3rem; line-height: 1; display: none; }
@@ -80,16 +80,16 @@ footer { width: 100%; margin-top: auto; padding: 20px 0; background-color: var(-
     .container { padding-left: 30px; padding-right: 30px; }
 }
 
-/************************************************************/
+/*****************************************************************/
 /* 9. Versão impressa */
-/************************************************************/
+/*****************************************************************/
 @media print {
     @page { size: A4; margin: 2cm; }
     body { background-color: #ffffff !important; color: #000000 !important; font-size: 12pt; }
     header, nav, footer, .theme-toggle, .lang-dropdown, .menu-toggle, .btn, .contact-form { display: none !important; }
     main, .container { width: 100% !important; max-width: none !important; padding: 0 !important; margin: 0 !important; }
-    .col-1, .col-2 > div, .project-card, .metric-card, .timeline-content, .profile-img { box-shadow: none !important; background-color: #ffffff !important; }
-    .col-2 > div, .project-card, .metric-card, .timeline-item, .article-item, .profile-card { page-break-inside: avoid; }
+    .card, .col-1, .col-2 > div, .project-card, .metric-card, .timeline-content, .profile-img { box-shadow: none !important; background-color: #ffffff !important; border: 1px solid #cccccc !important; }
+    .col-2 > div, .card, .project-card, .metric-card, .timeline-item, .article-item, .profile-card { page-break-inside: avoid; }
     h1, h2, h3, h4, h5, h6 { page-break-after: avoid; color: #000000 !important; }
     .timeline::after { background-color: #cccccc !important; }
     .timeline-item::after { border-color: #555555 !important; background-color: #ffffff !important; }
