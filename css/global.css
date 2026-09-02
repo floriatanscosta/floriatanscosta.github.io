@@ -104,7 +104,6 @@ h4 { font-size: 1.0rem; }
 
 /* ==== Cor de seleção de texto ==== */
 ::selection {background-color: rgba(90, 114, 158, 0.3);color: inherit;}
-::-moz-selection {background-color: rgba(90, 114, 158, 0.3);: inherit;}
 
 /*****************************************************************/
 /* 3. Estrutura principal (layout base) */
