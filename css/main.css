@@ -115,8 +115,26 @@ ul.custom-list li, ol.custom-list li { margin-bottom: 6px; }
 .error-404-section h2 { font-size: 2rem; margin-bottom: 20px; }
 .error-404-section p { font-size: 1.1rem; margin-bottom: 30px; }
 
+
 /*****************************************************************/
-/* 9. Responsividade (media queries) */
+/* 9. Páginas especiais */
+/*****************************************************************/
+/* ==== Animações da Linha do Tempo e Imagens ==== */
+.card-img-container { padding: 0; overflow: hidden; display: flex; align-items: center; justify-content: center; }
+.img-animated { width: 100%; height: 100%; object-fit: cover; border-radius: var(--radius-md); transition: transform 0.8s ease-out, filter 0.5s ease; filter: brightness(0.95); }
+.grid-row:hover .img-animated { transform: scale(1.05); filter: brightness(1); }
+.card-text-animated { display: flex; flex-direction: column; justify-content: center; transition: transform 0.4s ease; }
+/* ==== Textos de Introdução (Hero) ==== */
+.intro-title { font-size: clamp(2.2rem, 5vw, 3.5rem); line-height: 1.15; font-weight: 900; letter-spacing: -0.02em; margin-bottom: var(--spacing-md); background: linear-gradient(135deg, var(--heading-color) 0%, #8a9fc2 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; animation: fadeUp 0.8s ease-out forwards; }
+[data-theme="dark"] .intro-title { background: linear-gradient(135deg, #ffffff 0%, var(--heading-color) 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+.intro-text { font-size: clamp(1.1rem, 2vw, 1.25rem); line-height: 1.7; font-weight: 400; color: var(--text-main); opacity: 0.85; margin-bottom: var(--spacing-lg); max-width: 800px; animation: fadeUp 1s ease-out forwards; }
+@keyframes fadeUp { from { opacity: 0; transform: translateY(15px); } to { opacity: 1; transform: translateY(0); } }
+
+
+
+
+/*****************************************************************/
+/* 10. Responsividade (media queries) */
 /*****************************************************************/
 @media (max-width: 768px) {
     .col-1 { padding: 0; }
