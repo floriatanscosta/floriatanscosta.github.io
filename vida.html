@@ -34,9 +34,8 @@
     
     <link rel="stylesheet" href="./css/global.css">
     <link rel="stylesheet" href="./css/main.css">
-     <style>
-        body {background: var(--header-gradient);}
-        
+    <style>
+        body {background: var(--background-gradient);}
     </style>
 </head>
 
@@ -72,91 +71,83 @@
         </div>
     </nav>
 
-    <!-- Conteúdo principal -->
-    <main>
-        <div class="container">
-            <!-- Cabeçalho da Página -->
-            <section class="grid-row grid-100">
-                <div class="card"
-                    style="text-align: center; border: none; box-shadow: none; background: transparent; padding-bottom: 0;">
-                    <h1 class="intro-title" style="margin-bottom: 10px;">A Vida de um Cientista</h1>
-                    <p class="intro-text">Coisas fascinantes sobre os bastidores da vida na pesquisa.</p>
-                </div>
-            </section>
-            <section class="grid-row grid-50-50">
-                <div class="card card-img-container">
-                    <img src="./assets/img/time5.png" alt="Espectrometria e Plasmas" class="img-animated">
-                </div>
-                <div class="card card-text-animated">
-                    <h2>Espectros e Luzes ✨</h2>
-                    <p>Quem trabalha com espectrometria sabe: é um verdadeiro espetáculo visual. Plasmas brilhantes e chamas
-                        intensas com cores que fazem qualquer um parar para admirar.</p>
-                    <p>Já explorei este universo operando diversos equipamentos, como ICP-MS, ICP-OES, FAAS, GFAAS e MIP
-                        OES. E a lista continua crescendo.</p>
-                </div>
-            </section>
-    
-            <section class="grid-row grid-50-50">
-                <div class="card card-text-animated">
-                    <h2>Compartilhando Conhecimento 📣</h2>
-                    <h4 style="color: var(--heading-color); opacity: 0.8; font-weight: 500; font-size: 1.1rem;">A ciência só
-                        avança quando é compartilhada.</h4>
-                    <p>Um dado isolado é apenas um número, mas quando discutido, torna-se uma descoberta.</p>
-                    <p>Ao longo da minha trajetória, ministrei cursos e aulas, <a href="/publicacoes" target="_blank"
-                            class="inline-link">escrevi artigos</a> e atuei como <a href="/experiencia#revisor"
-                            target="_blank" class="inline-link">revisor de periódicos</a>. Cada conversa, curso ou aula é
-                        uma experiência de aprendizado contínuo, tanto para quem ensina quanto para quem aprende.</p>
-                </div>
-                <div class="card card-img-container">
-                    <img src="./assets/img/time6.png" alt="Compartilhando Ciência" class="img-animated">
-                </div>
-            </section>
-    
-            <section class="grid-row grid-50-50">
-                <div class="card card-img-container">
-                    <img src="./assets/img/time2.png" alt="Análise de Amostras" class="img-animated">
-                </div>
-                <div class="card card-text-animated">
-                    <h2>Amostras e mais amostras...</h2>
-                    <h4 style="color: var(--heading-color); opacity: 0.8; font-weight: 500; font-size: 1.1rem;">Se eu fosse
-                        colecionar algo, seriam amostras.</h4>
-                    <p>Na química analítica, absolutamente tudo pode ser analisado. Desde a água gelada da Antártica até
-                        amostras de sangue de ovelhas.</p>
-                    <p>Cada matriz traz um novo desafio e exige extrema precisão para garantir resultados confiáveis e a
-                        máxima qualidade analítica possível.</p>
-                </div>
-            </section>
-    
-            <section class="grid-row grid-50-50">
-                <div class="card card-text-animated">
-                    <h2>Química Verde 🌿</h2>
-                    <h4 style="color: var(--heading-color); opacity: 0.8; font-weight: 500; font-size: 1.1rem;">
-                        ...sustentáveis, amarelos e eficientes.</h4>
-                    <p>Durante o meu Doutorado, mergulhei no estudo dos solventes eutéticos profundos, uma alternativa
-                        ecológica e inteligente aos solventes tradicionais.</p>
-                    <p>Eles são biodegradáveis, atóxicos e altamente customizáveis, permitindo o desenvolvimento de novas e
-                        limpas abordagens dentro da química analítica.</p>
-                </div>
-                <div class="card card-img-container">
-                    <img src="./assets/img/time3.png" alt="Solventes Sustentáveis" class="img-animated">
-                </div>
-            </section>
-    
-            <section class="grid-row grid-50-50">
-                <div class="card card-img-container">
-                    <img src="./assets/img/time1.png" alt="Coleta de Campo" class="img-animated">
-                </div>
-                <div class="card card-text-animated">
-                    <h2>Coleta em Campo 🌱</h2>
-                    <p>Uma grande parte do trabalho de pesquisa acontece fora do laboratório, em busca de amostras
-                        diretamente no ambiente real.</p>
-                    <p>Durante o meu Mestrado, tive a oportunidade de atuar ativamente na análise de amostras de biota
-                        marinha coletadas em ecossistemas de manguezais.</p>
-                </div>
-            </section>
-        </div>
-    </main>
 
+    <!-- Conteúdo principal -->
+<main>
+    <div class="container">
+        
+        <!-- Cabeçalho da Página -->
+        <section class="grid-row grid-100">
+            <div class="card" style="text-align: center; border: none; box-shadow: none; background: transparent; padding-bottom: 0;">
+                <h1 class="intro-title" style="margin-bottom: 10px;">A Vida de um Cientista</h1>
+                <p class="intro-text">Coisas fascinantes sobre os bastidores da vida na pesquisa.</p>
+            </div>
+        </section>
+        
+        <!-- Seção 1 -->
+        <section class="grid-row grid-50-50">
+            <div class="card card-img-container">
+                <img src="/assets/img/time5.png" alt="Espectrometria e Plasmas" class="img-animated">
+            </div>
+            <div class="card card-text-animated">
+                <h3 class="card-title-bold">Espectros e Luzes ✨</h3>
+                <p>Quem trabalha com espectrometria sabe: é um verdadeiro espetáculo visual. Plasmas brilhantes e chamas intensas com cores que fazem qualquer um parar para admirar.</p>
+                <p>Já explorei este universo operando diversos equipamentos, como ICP-MS, ICP-OES, FAAS, GFAAS e MIP OES. E a lista continua crescendo.</p>
+            </div>
+        </section>
+
+        <!-- Seção 2 -->
+        <section class="grid-row grid-50-50">
+            <div class="card card-text-animated">
+                <h3 class="card-title-bold">Compartilhando Conhecimento 📣</h3>
+                <h4 class="card-subtitle">A ciência só avança quando é compartilhada.</h4>
+                <p>Um dado isolado é apenas um número, mas quando discutido, torna-se uma descoberta.</p>
+                <p>Ao longo da minha trajetória, ministrei cursos e aulas, <a href="/publicacoes" target="_blank" class="inline-link">escrevi artigos</a> e atuei como <a href="/experiencia#revisor" target="_blank" class="inline-link">revisor de periódicos</a>. Cada conversa, curso ou aula é uma experiência de aprendizado contínuo, tanto para quem ensina quanto para quem aprende.</p>
+            </div>
+            <div class="card card-img-container">
+                <img src="/assets/img/time6.png" alt="Compartilhando Ciência" class="img-animated">
+            </div>
+        </section>
+
+        <!-- Seção 3 -->
+        <section class="grid-row grid-50-50">
+            <div class="card card-img-container">
+                <img src="/assets/img/time2.png" alt="Análise de Amostras" class="img-animated">
+            </div>
+            <div class="card card-text-animated">
+                <h3 class="card-title-bold">Amostras e mais amostras...</h3>
+                <h4 class="card-subtitle">Se eu fosse colecionar algo, seriam amostras.</h4>
+                <p>Na química analítica, absolutamente tudo pode ser analisado. Desde a água gelada da Antártica até amostras de sangue de ovelhas.</p>
+                <p>Cada matriz traz um novo desafio e exige extrema precisão para garantir resultados confiáveis e a máxima qualidade analítica possível.</p>
+            </div>
+        </section>
+
+        <!-- Seção 4 -->
+        <section class="grid-row grid-50-50">
+            <div class="card card-text-animated">
+                <h3 class="card-title-bold">Química Verde 🌿</h3>
+                <h4 class="card-subtitle">...sustentáveis, amarelos e eficientes.</h4>
+                <p>Durante o meu Doutorado, mergulhei no estudo dos solventes eutéticos profundos, uma alternativa ecológica e inteligente aos solventes tradicionais.</p>
+                <p>Eles são biodegradáveis, atóxicos e altamente customizáveis, permitindo o desenvolvimento de novas e limpas abordagens dentro da química analítica.</p>
+            </div>
+            <div class="card card-img-container">
+                <img src="/assets/img/time3.png" alt="Solventes Sustentáveis" class="img-animated">
+            </div>
+        </section>
+
+        <!-- Seção 5 -->
+        <section class="grid-row grid-50-50">
+            <div class="card card-img-container">
+                <img src="/assets/img/time1.png" alt="Coleta de Campo" class="img-animated">
+            </div>
+            <div class="card card-text-animated">
+                <h3 class="card-title-bold">Coleta em Campo 🌱</h3>
+                <p>Uma grande parte do trabalho de pesquisa acontece fora do laboratório, em busca de amostras diretamente no ambiente real.</p>
+                <p>Durante o meu Mestrado, tive a oportunidade de atuar ativamente na análise de amostras de biota marinha coletadas em ecossistemas de manguezais.</p>
+            </div>
+        </section>
+    </div>
+</main>
 
 
 

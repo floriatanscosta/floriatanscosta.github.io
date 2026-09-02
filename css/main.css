@@ -115,23 +115,19 @@ ul.custom-list li, ol.custom-list li { margin-bottom: 6px; }
 .error-404-section h2 { font-size: 2rem; margin-bottom: 20px; }
 .error-404-section p { font-size: 1.1rem; margin-bottom: 30px; }
 
-
 /*****************************************************************/
 /* 9. Páginas especiais */
 /*****************************************************************/
-/* ==== Animações da Linha do Tempo e Imagens ==== */
-.card-img-container { padding: 0; overflow: hidden; display: flex; align-items: center; justify-content: center; }
-.img-animated { width: 100%; height: 100%; object-fit: cover; border-radius: var(--radius-md); transition: transform 0.8s ease-out, filter 0.5s ease; filter: brightness(0.95); }
-.grid-row:hover .img-animated { transform: scale(1.05); filter: brightness(1); }
-.card-text-animated { display: flex; flex-direction: column; justify-content: center; transition: transform 0.4s ease; }
-/* ==== Textos de Introdução (Hero) ==== */
-.intro-title { font-size: clamp(2.2rem, 5vw, 3.5rem); line-height: 1.15; font-weight: 900; letter-spacing: -0.02em; margin-bottom: var(--spacing-md); background: linear-gradient(135deg, var(--heading-color) 0%, #8a9fc2 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; animation: fadeUp 0.8s ease-out forwards; }
-[data-theme="dark"] .intro-title { background: linear-gradient(135deg, #ffffff 0%, var(--heading-color) 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
-.intro-text { font-size: clamp(1.1rem, 2vw, 1.25rem); line-height: 1.7; font-weight: 400; color: var(--text-main); opacity: 0.85; margin-bottom: var(--spacing-lg); max-width: 800px; animation: fadeUp 1s ease-out forwards; }
-@keyframes fadeUp { from { opacity: 0; transform: translateY(15px); } to { opacity: 1; transform: translateY(0); } }
-
-
-
+.card-img-container { padding: 0; overflow: hidden; display: flex; align-items: center; justify-content: center; border: none; box-sizing: border-box; }
+.img-animated { width: 100%; height: 100%; min-height: 300px; object-fit: cover; border-radius: var(--radius-md); transition: transform 0.8s cubic-bezier(0.2, 0.8, 0.2, 1), filter 0.5s ease; filter: brightness(0.9); }
+.grid-row:hover .img-animated { transform: scale(1.06); filter: brightness(1.05); }
+.card-text-animated { display: flex; flex-direction: column; justify-content: center; padding: 30px; }
+.card-title-bold { font-size: 3rem; font-weight: 900; letter-spacing: -0.5px; background: linear-gradient(135deg, var(--heading-color) 0%, #a2c2d3 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; margin-bottom: 12px; display: inline-block; }
+.card-subtitle { font-size: 1.5rem; font-weight: 600; color: var(--text-main); opacity: 0.85; margin-bottom: 20px; line-height: 1.4; border-left: 3px solid var(--heading-color); padding-left: 10px; }
+@media (max-width: 768px) {
+    .card-text-animated { padding: 25px; }
+    .img-animated { min-height: 220px; }
+    }
 
 /*****************************************************************/
 /* 10. Responsividade (media queries) */

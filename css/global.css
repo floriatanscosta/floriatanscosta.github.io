@@ -14,7 +14,8 @@
     --btn-text: #ffffff;
     --border-header: #bfcde0;
     --text-main: #444444;
-    --header-gradient: linear-gradient(230deg, #ffbded2b, #718fc83b);
+    --header-gradient: linear-gradient(230deg, #ffbded94, #718fc873);
+    --background-gradient: linear-gradient(-68deg, #666fe486, #d13c8680);
     --footer-bg: #f9f9f9;
     --footer-text: #777777;
     --nav-bg: #24577f;
@@ -58,6 +59,7 @@
     --border-header: #23282F;
     --text-main: #E5E5E5;
     --header-gradient: linear-gradient(90deg, #1F242A, #1A1F26);
+    --background-gradient: linear-gradient(-68deg, #1F242A, #1A1F26);
     --footer-bg: #1F242A;
     --footer-text: #999999;
     --nav-bg: #1F242A;
@@ -99,6 +101,10 @@ h1, h2, h3, h4, h5, h6 { color: var(--heading-color); margin-bottom: 30px; }
 h2 { font-size: 1.6rem; }
 h3 { font-size: 1.4rem; }
 h4 { font-size: 1.0rem; }
+
+/* ==== Cor de seleção de texto ==== */
+::selection {background-color: rgba(90, 114, 158, 0.3);color: inherit;}
+::-moz-selection {background-color: rgba(90, 114, 158, 0.3);: inherit;}
 
 /*****************************************************************/
 /* 3. Estrutura principal (layout base) */
