@@ -105,7 +105,7 @@ h4 { font-size: 1.0rem; }
 /*****************************************************************/
 body { display: flex; flex-direction: column; min-height: 100vh; background-color: var(--bg-color); color: var(--text-main); }
 main { flex: 1; width: 100%; padding: var(--spacing-xl) 0; }
-.container { width: 100%; max-width: 1280px; margin: 0 auto; padding-left: 10px; padding-right: 10px; }
+.container { width: 100%; max-width: 1280px; margin: 0 auto; padding-left: 10px; padding-right: 10px; font-size: var(--font-size-base); }
 
 /*****************************************************************/
 /* 4. Cabeçalho (header) */
@@ -163,7 +163,26 @@ footer { width: 100%; margin-top: auto; padding: 20px 0; background-color: var(-
 }
 
 /*****************************************************************/
-/* 9. Versão impressa */
+/* 9. Alertas e Tags (Sucesso, Aviso, Erro, Info) */
+/*****************************************************************/
+.alert-box { padding: 15px 20px; border-radius: var(--radius-md); border-left: 0px solid transparent; margin-bottom: 20px; font-size: 0.95rem; line-height: 1.5; display: flex; align-items: flex-start; gap: 10px; color: var(--text-main); }
+.alert-box strong { font-weight: 700; color: inherit; }
+.alert-info { border-left-color: var(--heading-color); background-color: rgba(90, 114, 158, 0.08); }
+.alert-success { border-left-color: #4CB96E; background-color: rgba(76, 185, 110, 0.08); }
+.alert-warning { border-left-color: #d97706; background-color: rgba(217, 119, 6, 0.08); }
+.alert-error { border-left-color: #dc2626; background-color: rgba(220, 38, 38, 0.08); }
+.tag-badge { display: inline-flex; align-items: center; padding: 4px 10px; border-radius: 20px; font-size: 0.75rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; border: 1px solid transparent; }
+.tag-info { background-color: rgba(90, 114, 158, 0.1); color: var(--heading-color); border-color: rgba(90, 114, 158, 0.2); }
+.tag-success { background-color: rgba(76, 185, 110, 0.1); color: #2ea053; border-color: rgba(76, 185, 110, 0.2); }
+.tag-warning { background-color: rgba(217, 119, 6, 0.1); color: #d97706; border-color: rgba(217, 119, 6, 0.2); }
+.tag-error { background-color: rgba(220, 38, 38, 0.1); color: #dc2626; border-color: rgba(220, 38, 38, 0.2); }
+[data-theme="dark"] .tag-success { color: #6ee7b7; }
+[data-theme="dark"] .tag-warning { color: #fcd34d; }
+[data-theme="dark"] .tag-error { color: #fca5a5; }
+
+
+/*****************************************************************/
+/* 10. Versão impressa */
 /*****************************************************************/
 @media print {
     @page { size: A4; margin: 2cm; }

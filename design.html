@@ -10,11 +10,12 @@
     <meta name="description" content="Portfólio acadêmico e profissional de Floriatan Santos Costa. Explore projetos, publicações e experiências.">
     <meta property="og:title" content="Floriatan Santos Costa - Portfólio">
     <meta property="og:description" content="Portfólio acadêmico e profissional. Explore projetos, publicações e experiências.">
-    <meta property="og:image" content="./assets/img/cover.png">
+    <meta property="og:image" content="https://floriatan.com.br/assets/img/cover.png">
+    <meta property="og:url" content="https://floriatan.com.br/">
     <meta name="theme-color" content="#5a729e">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://floriatan.com.br/">
-
+    
     <!-- Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-0NDPRCLMYV"></script>
     <script>
@@ -31,7 +32,9 @@
             document.documentElement.setAttribute('data-theme', 'dark');
         }
     </script>
-    
+    <style>
+        body {background: var(--header-gradient);}
+    </style>
     <link rel="stylesheet" href="./css/global.css">
     <link rel="stylesheet" href="./css/main.css">
 </head>
@@ -70,13 +73,21 @@
 
     <!-- Conteúdo principal -->
     <main>
-        <div class="container">
-            <section class="col-1">
-
-
-                <!-- ADICIONAR O CONTEÚDO AQUI -->
-            
-            
+        <div class="container" style="margin-top: 40px;">
+            <section class="grid-row grid-30-70 margin-top-5">
+                <div class="card">
+                    <img src="./assets/svg/fundo.svg" alt="Imagem de Capa" class="cover-image">
+                </div>
+                <div class="card">
+                <h2>Logo e Design do CV</h2>
+                    <p class="">O design e a identidade visual do logotipo foram inspirados na clássica representação dos elementos
+                        químicos na tabela periódica. Como um toque pessoal ao projeto, as iniciais do meu nome compõem a
+                        arte, enquanto o tradicional número atômico foi intencionalmente substituído pela minha data de
+                        nascimento.</p>
+                    <p>Para o layout, a paleta apresenta tons de azul e roxo. Estas são as minhas cores favoritas e
+                        foram escolhidas para criar uma identidade visual consistente que reflita perfeitamente a minha
+                        personalidade e o meu trabalho na bancada e na programação.</p>
+                </div>
             </section>
         </div>
     </main>
@@ -89,6 +100,7 @@
             </div>
             <div class="footer-right">
                 <a href="/sobre">Sobre</a>
+                <a href="/design">Design</a>
                 <a href="/contato">Contato</a>
             </div>
         </div>
