@@ -11,6 +11,7 @@
     --heading-color: #5a729e;
     --btn-bg: #5a729e;
     --btn-bg-hover: #4a5f7c;
+    --bg-nav-cel: #758aa9;
     --btn-text: #ffffff;
     --border-header: #bfcde0;
     --text-main: #444444;
@@ -161,7 +162,7 @@ footer { width: 100%; margin-top: auto; padding: 20px 0; background-color: var(-
     .header-content { grid-template-columns: auto 1fr auto; gap: 15px; }
     .site-title { text-align: left; font-size: 1.3rem; line-height: 1; display: none; }
     .menu-toggle { display: block; }
-    .nav-content { display: none; flex-direction: column; text-align: center; }
+    .nav-content { display: none; flex-direction: column; text-align: center; background-color: var(--bg-nav-cel); border-top: 1px solid var(--border-header); }
     .nav-content.active { display: flex; }
     .footer-content { flex-direction: column; text-align: center; font-size: 11px; }
     .container { padding-left: 30px; padding-right: 30px; }
