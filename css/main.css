@@ -124,18 +124,20 @@ ul.custom-list li, ol.custom-list li { margin-bottom: 6px; }
 .card-text-animated { display: flex; flex-direction: column; justify-content: center; padding: 30px; }
 .card-title-bold { font-size: 3rem; font-weight: 900; letter-spacing: -0.5px; background: linear-gradient(135deg, var(--heading-color) 0%, #a2c2d3 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; margin-bottom: 12px; display: inline-block; }
 .card-subtitle { font-size: 1.5rem; font-weight: 600; color: var(--text-main); opacity: 0.85; margin-bottom: 20px; line-height: 1.4; border-left: 3px solid var(--heading-color); padding-left: 10px; }
-@media (max-width: 768px) {
-    .card-text-animated { padding: 25px; }
-    .img-animated { min-height: 220px; }
-    }
 
 /*****************************************************************/
 /* 10. Responsividade (media queries) */
 /*****************************************************************/
+
 @media (max-width: 768px) {
     .col-1 { padding: 0; }
     .col-2, .grid-row { grid-template-columns: 1fr; }
+    .card-text-animated { padding: 25px; }
+    .img-animated { min-height: 220px; }
+    .intro-title { font-size: 2.2rem; }
+    .cover-image { width: 100%; }
 }
+
 @media (max-width: 600px) {
     .profile-card { flex-direction: column; text-align: center; }
 }
