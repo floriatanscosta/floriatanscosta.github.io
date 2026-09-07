@@ -110,7 +110,7 @@ ul.custom-list li, ol.custom-list li { margin-bottom: 6px; }
 /*****************************************************************/
 /* 8. Página de erro 404 */
 /*****************************************************************/
-.error-404-section { text-align: center; padding: 80px 20px; background-color: var(--box-bg); max-width: 800px; margin: 0 auto; border-radius: var(--radius-lg); }
+.error-404-section { text-align: center; padding: 80px 20px; background-color: var(--box-bg); max-width: 600px; margin: 3em auto; border-radius: var(--radius-lg); }
 .error-404-section h1 { font-size: 6rem; color: var(--heading-color); margin-bottom: 10px; line-height: 1; }
 .error-404-section h2 { font-size: 2rem; margin-bottom: 20px; }
 .error-404-section p { font-size: 1.1rem; margin-bottom: 30px; }
