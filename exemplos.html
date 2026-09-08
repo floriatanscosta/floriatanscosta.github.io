@@ -27,14 +27,27 @@
 </head>
 
 <body>
-    <!-- Cabeçalho e Navegação -->
+    <!-- Header e nav -->
     <header>
         <div class="container header-content">
-            <a href="/web/">
-                <img src="./assets/logo.svg" alt="Logo Floriatan" class="logo-img">
-            </a>
-            <h1 class="site-title">Floriatan Santos Costa</h1>
-            <div style="display: flex; justify-content: flex-end; align-items: center; gap: 15px;">
+            <!-- Logo e nome -->
+            <div class="header-left">
+                <a href="/">
+                    <img src="/assets/logo.svg" alt="Logo Floriatan" class="logo-img">
+                </a>
+                <h1 class="site-title">Floriatan Costa</h1>
+            </div>
+            <!--  Menu -->
+            <nav id="navMenu" class="nav-content">
+                <a href="/">Início</a>
+                <a href="/biografia">Biografia</a>
+                <a href="/experiencia">Experiência</a>
+                <a href="/publicacoes">Publicações</a>
+                <a href="/premiacoes">Premiações</a>
+                <a href="/contato">Contato</a>
+            </nav>
+            <!-- Idioma e tema -->
+            <div class="header-right">
                 <div class="lang-dropdown">
                     <button class="lang-dropbtn">PT</button>
                     <div class="lang-dropdown-content">
@@ -42,23 +55,15 @@
                         <button onclick="switchLanguage('en')">English (EN)</button>
                     </div>
                 </div>
-                <button id="theme-toggle" class="theme-toggle" onclick="toggleTheme()" title="Alternar Tema" style="padding: 0;"><img src="./assets/icons/escuro.svg" alt="Ativar Modo Escuro" style="width: 20px; height: 20px;"></button>
+                <button id="theme-toggle" class="theme-toggle" onclick="toggleTheme()" title="Alternar Tema"
+                    style="padding: 0;"><img src="/assets/icons/escuro.svg" alt="Ativar Modo Escuro"
+                        style="width: 20px; height: 20px;"></button>
                 <button class="menu-toggle" onclick="toggleMenu()">☰</button>
             </div>
         </div>
     </header>
-    <nav>
-        <div class="container nav-content" id="navMenu">
-            <a href="/">Início</a>
-            <a href="/biografia">Biografia</a>
-            <a href="/experiencia">Experiência</a>
-            <a href="/publicacoes">Publicações</a>
-            <a href="/premiacoes">Premiações</a>
-            <a href="/contato">Contato</a>
-        </div>
-    </nav>
 
-      <!-- Conteúdo principal -->
+    <!-- Conteúdo principal -->
     <main>
         <div class="container">
 
@@ -68,15 +73,19 @@
 
                 <div class="article-list">
                     <article class="article-item">
-                        <h3 class="article-title">Alginate-encapsulated HDES as a green sorbent for elemental preconcentration prior to determination by FAAS</h3>
+                        <h3 class="article-title">Alginate-encapsulated HDES as a green sorbent for elemental
+                            preconcentration prior to determination by FAAS</h3>
                         <p class="article-journal">ACS Omega</p>
-                        <a href="https://doi.org/10.1021/acsomega.6c01846" class="doi-link" target="_blank">10.1021/acsomega.6c01846</a>
+                        <a href="https://doi.org/10.1021/acsomega.6c01846" class="doi-link"
+                            target="_blank">10.1021/acsomega.6c01846</a>
                     </article>
 
                     <article class="article-item">
-                        <h3 class="article-title">Alginate-encapsulated HDES as a green sorbent for elemental preconcentration prior to determination by FAAS</h3>
+                        <h3 class="article-title">Alginate-encapsulated HDES as a green sorbent for elemental
+                            preconcentration prior to determination by FAAS</h3>
                         <p class="article-journal">ACS Omega</p>
-                        <a href="https://doi.org/10.1021/acsomega.6c01846" class="doi-link" target="_blank">10.1021/acsomega.6c01846</a>
+                        <a href="https://doi.org/10.1021/acsomega.6c01846" class="doi-link"
+                            target="_blank">10.1021/acsomega.6c01846</a>
                     </article>
                 </div>
             </section>
@@ -113,11 +122,14 @@
             <!-- Estilos Padrão de Texto -->
             <section class="col-1">
                 <h2>Elementos Tipográficos e de Conteúdo</h2>
-                <p>Este é um parágrafo normal demonstrando como o texto deve fluir. Aqui você tem um <a href="#" class="inline-link">link no meio do texto</a> que possui um efeito de hover elegante. Além disso, quando for mencionar linguagens de programação, você pode usar blocos de
+                <p>Este é um parágrafo normal demonstrando como o texto deve fluir. Aqui você tem um <a href="#"
+                        class="inline-link">link no meio do texto</a> que possui um efeito de hover elegante. Além
+                    disso, quando for mencionar linguagens de programação, você pode usar blocos de
                     <code>código inline</code>.
                 </p>
                 <blockquote>
-                    "A formatação do blockquote (citação em bloco) foi projetada para dar destaque a frases importantes ou trechos de outros autores, combinando com a paleta de azul do site."
+                    "A formatação do blockquote (citação em bloco) foi projetada para dar destaque a frases importantes
+                    ou trechos de outros autores, combinando com a paleta de azul do site."
                 </blockquote>
 
                 <div class="col-2" style="box-shadow: none; border: none; padding: 0; gap: 40px;">
@@ -144,7 +156,8 @@
             <section class="col-1">
                 <div class="profile-card">
                     <!-- Substitua pelo link da sua foto real -->
-                    <img src="./assets/img/floriatan.png" alt="Foto de Floriatan" class="profile-img">                    <div class="profile-info">
+                    <img src="./assets/img/floriatan.png" alt="Foto de Floriatan" class="profile-img">
+                    <div class="profile-info">
                         <h3>Floriatan Dos Santos Costa</h3>
                         <h4>Pesquisador | Universidade de Zaragoza</h4>
                         <p>Especialista no tratamento de dados para SP-ICP-MS e desenvolvimento de instrumentação em
@@ -211,7 +224,9 @@
                         <div class="timeline-content">
                             <span class="timeline-date">Junho de 2026</span>
                             <h3>Projeto de Micro-dispensação</h3>
-                            <p>Início dos testes de laboratório com gotas de 20 picolitros. Cálculos de massa do analito em padrão multielementar e verificação microscópica das dimensões e comportamentos das placas.</p>
+                            <p>Início dos testes de laboratório com gotas de 20 picolitros. Cálculos de massa do analito
+                                em padrão multielementar e verificação microscópica das dimensões e comportamentos das
+                                placas.</p>
                         </div>
                     </div>
 
@@ -219,7 +234,8 @@
                         <div class="timeline-content">
                             <span class="timeline-date">Abril de 2026</span>
                             <h3>Realocação para Zaragoza, Espanha</h3>
-                            <p>Transferência internacional estendida para condução de pesquisa avançada em instrumentação analítica na Universidad de Zaragoza.</p>
+                            <p>Transferência internacional estendida para condução de pesquisa avançada em
+                                instrumentação analítica na Universidad de Zaragoza.</p>
                         </div>
                     </div>
 
@@ -229,37 +245,41 @@
             <section class="grid-row grid-100">
                 <div class="card">
                     <h2>Status do Sistema e Projetos</h2>
-                    
+
                     <!-- EXEMPLOS DE CAIXAS DE ALERTA -->
                     <div class="alert-box alert-info">
-                        <div><strong>Nota:</strong> A calibração dos equipamentos foi concluída e os relatórios estão disponíveis.</div>
+                        <div><strong>Nota:</strong> A calibração dos equipamentos foi concluída e os relatórios estão
+                            disponíveis.</div>
                     </div>
                     <div class="alert-box alert-success">
-                        <div><strong>Sucesso!</strong> O formulário foi enviado e sua assinatura foi gerada corretamente.</div>
+                        <div><strong>Sucesso!</strong> O formulário foi enviado e sua assinatura foi gerada
+                            corretamente.</div>
                     </div>
                     <div class="alert-box alert-warning">
-                        <div><strong>Atenção:</strong> O prazo para submissão dos artigos no sistema termina em 3 dias úteis.</div>
+                        <div><strong>Atenção:</strong> O prazo para submissão dos artigos no sistema termina em 3 dias
+                            úteis.</div>
                     </div>
                     <div class="alert-box alert-error">
-                        <div><strong>Erro na leitura:</strong> Não foi possível processar o arquivo de dados. Verifique o formato e tente novamente.</div>
+                        <div><strong>Erro na leitura:</strong> Não foi possível processar o arquivo de dados. Verifique
+                            o formato e tente novamente.</div>
                     </div>
-    
+
                     <!-- EXEMPLOS DE TAGS/BADGES -->
                     <h3>Projetos Recentes</h3>
                     <p>
-                        Artigo sobre espectrometria 
+                        Artigo sobre espectrometria
                         <span class="tag-badge tag-success">Publicado</span>
                     </p>
                     <p>
-                        Revisão de literatura em andamento 
+                        Revisão de literatura em andamento
                         <span class="tag-badge tag-warning">Em revisão</span>
                     </p>
                     <p>
-                        Extração de dados de pluviometria 
+                        Extração de dados de pluviometria
                         <span class="tag-badge tag-error">Falha na API</span>
                     </p>
                     <p>
-                        Atualização do Portfólio 
+                        Atualização do Portfólio
                         <span class="tag-badge tag-info">Versão 2.0</span>
                     </p>
                 </div>
@@ -268,7 +288,7 @@
         </div>
     </main>
 
-    
+
     <!-- Rodapé -->
     <footer>
         <div class="container footer-content">
