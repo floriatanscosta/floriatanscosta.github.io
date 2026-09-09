@@ -125,19 +125,45 @@ ul.custom-list li, ol.custom-list li { margin-bottom: 6px; }
 .card-title-bold { font-size: 3rem; font-weight: 900; letter-spacing: -0.5px; background: linear-gradient(135deg, var(--heading-color) 0%, #a2c2d3 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; margin-bottom: 12px; display: inline-block; }
 .card-subtitle { font-size: 1.5rem; font-weight: 600; color: var(--text-main); opacity: 0.85; margin-bottom: 20px; line-height: 1.4; border-left: 3px solid var(--heading-color); padding-left: 10px; }
 
+
 /*****************************************************************/
 /* 10. Responsividade (media queries) */
 /*****************************************************************/
-
-@media (max-width: 768px) {
-    .col-1 { padding: 0; }
-    .col-2, .grid-row { grid-template-columns: 1fr; }
-    .card-text-animated { padding: 25px; }
-    .img-animated { min-height: 220px; }
-    .intro-title { font-size: 2.2rem; }
-    .cover-image { width: 100%; }
+/* ==== Tablet (até 1024px) ==== */
+@media (max-width: 1024px) {
+    .intro-title { font-size: 2.5rem; }
+    .grid-row { gap: 15px; }
+    .card-title-bold { font-size: 2.5rem; }
 }
 
+/* ==== Mobile (até 768px) ==== */
+@media (max-width: 768px) {
+    .col-1 { padding: 0; }
+    .col-2, .grid-row, .grid-50-50, .grid-20-80, .grid-80-20, .grid-30-70, .grid-70-30 { grid-template-columns: 1fr; gap: 20px; }
+    .card-text-animated { padding: 25px; }
+    .img-animated { min-height: 220px; }
+    .intro-title { font-size: 2.2rem; margin: 20px 0 15px 0; }
+    .intro-text { font-size: 1.15rem; }
+    .cover-image { width: 100%; }
+    .margin-top-5 { margin-top: 3rem; }
+    .margin-top-3 { margin-top: 2rem; }
+    .timeline::after { left: 15px; }
+    .timeline-item { padding: 10px 20px 10px 45px; }
+    .timeline-item::after { left: 7px; width: 12px; height: 12px; }
+}
+
+/* ==== Small Mobile (até 600px e 480px) ==== */
 @media (max-width: 600px) {
-    .profile-card { flex-direction: column; text-align: center; }
+    .profile-card { flex-direction: column; text-align: center; gap: 15px; }
+    .contact-form { padding: 10px 0; }
+}
+
+@media (max-width: 480px) {
+    .intro-title { font-size: 1.8rem; }
+    .social-container { grid-template-columns: repeat(3, 1fr); gap: 10px; }
+    .social-box { padding: 15px 10px; }
+    .social-box img { width: 28px; height: 28px; }
+    .metric-number { font-size: 3rem; }
+    .card-title-bold { font-size: 2rem; }
+    .project-card { padding: 15px; }
 }
