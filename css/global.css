@@ -157,20 +157,33 @@ footer { width: 100%; margin-top: auto; padding: 20px 0; background-color: var(-
 .footer-right a { color: var(--footer-text); font-weight: 500; text-decoration: none; transition: color var(--transition-normal); }
 .footer-right a:hover { color: var(--heading-color); }
 
+
 /*****************************************************************/
 /* 8. Responsividade (media queries) */
 /*****************************************************************/
+/* ==== Tablet (até 1024px) ==== */
 @media (max-width: 1024px) {
     .site-title { display: none; }
+    .nav-content a { padding: 10px 10px; font-size: 0.9rem; }
+    .container { padding-left: 20px; padding-right: 20px; }
 }
+
+/* ==== Mobile (até 768px) ==== */
 @media (max-width: 768px) {
     .menu-toggle { display: block; }
     .nav-content { display: none; position: absolute; top: 100%; left: 0; width: 100%; flex-direction: column; text-align: center; background-color: var(--bg-nav-cel); border-top: 1px solid var(--border-header); border-bottom: 1px solid var(--border-header); z-index: var(--z-index-dropdown); }
     .nav-content.active { display: flex; }
-    .nav-content a { border-radius: 0; padding: 15px 20px; }
-    .footer-content { flex-direction: column; text-align: center; font-size: 11px; }
-    .container { padding-left: 20px; padding-right: 20px; }
+    .nav-content a { border-radius: 0; padding: 15px 20px; font-size: 1rem; }
+    .footer-content { flex-direction: column; text-align: center; gap: 15px; font-size: 0.85rem; }
+    .header-content { padding-bottom: 10px; }
 }
+
+/* ==== Small Mobile (até 480px) ==== */
+@media (max-width: 480px) {
+    .footer-right { flex-direction: column; gap: 10px; }
+    .logo-img { height: 35px; }
+}
+
 
 /*****************************************************************/
 /* 9. Alertas e Tags (Sucesso, Aviso, Erro, Info) */
