@@ -180,7 +180,7 @@ footer { width: 100%; margin-top: auto; padding: 20px 0; background-color: var(-
 
 /* ==== Small Mobile (até 480px) ==== */
 @media (max-width: 480px) {
-    .footer-right { flex-direction: column; gap: 10px; }
+    .footer-right { gap: 10px; }
     .logo-img { height: 35px; }
 }
 
