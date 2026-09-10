@@ -54,7 +54,7 @@ ul.custom-list li, ol.custom-list li { margin-bottom: 6px; }
 /*****************************************************************/
 .article-item { padding: 0 0 20px 0; margin-bottom: 20px; border-bottom: 1px solid var(--border-color); }
 .article-item:last-child { border-bottom: none; padding-bottom: 0; }
-.article-title { font-size: 1.2rem; margin-bottom: 2px; }
+.article-title { font-size: 1.2rem; margin-bottom: 2px; color: #5d5d5d}
 .article-journal { font-size: 1rem; font-style: italic; color: var(--text-main); opacity: 0.8; margin-bottom: 10px; }
 .doi-link { display: inline-flex; align-items: center; gap: 8px; font-size: 0.8rem; color: var(--heading-color); text-decoration: none; font-weight: 500; padding: 0; transition: border-color 0.2s; border-bottom: 1px solid transparent; }
 .doi-link::before { content: ''; display: inline-block; width: 16px; height: 16px; background-image: url('../assets/icons/doi.svg'); background-size: contain; background-repeat: no-repeat; margin-right: 0; vertical-align: middle; }
