@@ -143,8 +143,8 @@ header { width: 100%; padding: 14px 0; background: var(--header-gradient); borde
 /* 6. Navegação principal (nav) */
 /*****************************************************************/
 .nav-content { display: flex; align-items: center; gap: 5px; }
-.nav-content a { padding: 10px 15px; color: var(--nav-links); font-weight: 500; text-decoration: none; border-radius: var(--radius-md); transition: background var(--transition-normal), color var(--transition-normal); }
-.nav-content a:hover { background-color: var(--nav-hover); }
+.nav-content a { padding: 10px 15px; color: var(--nav-links); font-weight: 500; text-decoration: none;transition: background var(--transition-normal), color var(--transition-normal);border-bottom: 3px solid transparent }
+.nav-content a:hover { border-bottom: 3px solid var(--heading-color); }
 .menu-toggle { display: none; background: none; border: none; color: var(--heading-color); font-size: 1.8rem; cursor: pointer; }
 
 /*****************************************************************/
@@ -182,7 +182,6 @@ footer { width: 100%; margin-top: auto; padding: 20px 0; background-color: var(-
     .footer-right { gap: 10px; }
     .logo-img { height: 35px; }
 }
-
 
 /*****************************************************************/
 /* 9. Alertas e Tags (Sucesso, Aviso, Erro, Info) */
