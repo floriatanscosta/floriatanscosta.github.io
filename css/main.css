@@ -119,8 +119,8 @@ ul.custom-list li, ol.custom-list li { margin-bottom: 6px; }
 /* 9. Páginas especiais */
 /*****************************************************************/
 .card-img-container { padding: 0; overflow: hidden; display: flex; align-items: center; justify-content: center; border: none; box-sizing: border-box; }
-.img-animated { width: 100%; height: 100%; min-height: 300px; object-fit: cover; border-radius: var(--radius-md); transition: transform 0.8s cubic-bezier(0.2, 0.8, 0.2, 1), filter 0.5s ease; filter: brightness(0.9); }
-.grid-row:hover .img-animated { transform: scale(1.06); filter: brightness(1.05); }
+.img-animated { width: 100%; object-fit: cover; border-radius: var(--radius-md); transition: transform 0.8s cubic-bezier(0.2, 0.8, 0.2, 1), filter 0.5s ease; filter: brightness(0.9); }
+.grid-row:hover .img-animated { transform: scale(1.03); filter: brightness(1.15); }
 .card-text-animated { display: flex; flex-direction: column; justify-content: center; padding: 30px; }
 .card-title-bold { font-size: 3rem; font-weight: 900; letter-spacing: -0.5px; background: linear-gradient(135deg, var(--heading-color) 0%, #a2c2d3 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; margin-bottom: 12px; display: inline-block; }
 .card-subtitle { font-size: 1.5rem; font-weight: 600; color: var(--text-main); opacity: 0.85; margin-bottom: 20px; line-height: 1.4; border-left: 3px solid var(--heading-color); padding-left: 10px; }
@@ -133,7 +133,6 @@ ul.custom-list li, ol.custom-list li { margin-bottom: 6px; }
 .img-reveal-box.active::after { transform: scaleX(0); transform-origin: right; }
 .img-reveal-img { width: 100%; height: 100%; object-fit: cover; opacity: 0; transform: scale(1.1); transition: opacity 0.1s ease 0.3s, transform 1.2s cubic-bezier(0.77, 0, 0.175, 1) 0.3s; }
 .img-reveal-box.active .img-reveal-img { opacity: 1; transform: scale(1); }
-
 
 /*****************************************************************/
 /* Responsividade (media queries) */
