@@ -54,7 +54,7 @@ ul.custom-list li, ol.custom-list li { margin-bottom: 6px; }
 /*****************************************************************/
 .article-item { padding: 0 0 20px 0; margin-bottom: 20px; border-bottom: 1px solid var(--border-color); }
 .article-item:last-child { border-bottom: none; padding-bottom: 0; }
-.article-title { font-size: 1.2rem; margin-bottom: 2px; color: #5d5d5d}
+.article-title { font-size: 1.2rem; margin-bottom: 2px; color: var(--text-main)}
 .article-journal { font-size: 1rem; font-style: italic; color: var(--text-main); opacity: 0.8; margin-bottom: 10px; }
 .doi-link { display: inline-flex; align-items: center; gap: 8px; font-size: 0.8rem; color: var(--heading-color); text-decoration: none; font-weight: 500; padding: 0; transition: border-color 0.2s; border-bottom: 1px solid transparent; }
 .doi-link::before { content: ''; display: inline-block; width: 16px; height: 16px; background-image: url('../assets/icons/doi.svg'); background-size: contain; background-repeat: no-repeat; margin-right: 0; vertical-align: middle; }
@@ -125,9 +125,18 @@ ul.custom-list li, ol.custom-list li { margin-bottom: 6px; }
 .card-title-bold { font-size: 3rem; font-weight: 900; letter-spacing: -0.5px; background: linear-gradient(135deg, var(--heading-color) 0%, #a2c2d3 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; margin-bottom: 12px; display: inline-block; }
 .card-subtitle { font-size: 1.5rem; font-weight: 600; color: var(--text-main); opacity: 0.85; margin-bottom: 20px; line-height: 1.4; border-left: 3px solid var(--heading-color); padding-left: 10px; }
 
+/*****************************************************************/
+/* 10. Efeito Image Reveal */
+/*****************************************************************/
+.img-reveal-box { position: relative; overflow: hidden; border-radius: var(--radius-md); display: flex; width: 100%; min-height: 350px; background-color: var(--box-bg); }
+.img-reveal-box::after { content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-color: var(--heading-color); transform-origin: left; transition: transform 0.8s cubic-bezier(0.77, 0, 0.175, 1); z-index: 2; }
+.img-reveal-box.active::after { transform: scaleX(0); transform-origin: right; }
+.img-reveal-img { width: 100%; height: 100%; object-fit: cover; opacity: 0; transform: scale(1.1); transition: opacity 0.1s ease 0.3s, transform 1.2s cubic-bezier(0.77, 0, 0.175, 1) 0.3s; }
+.img-reveal-box.active .img-reveal-img { opacity: 1; transform: scale(1); }
+
 
 /*****************************************************************/
-/* 10. Responsividade (media queries) */
+/* Responsividade (media queries) */
 /*****************************************************************/
 /* ==== Tablet (até 1024px) ==== */
 @media (max-width: 1024px) {
