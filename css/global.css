@@ -160,30 +160,7 @@ footer { width: 100%; margin-top: auto; padding: 20px 0; background-color: var(-
 .footer-right a:not(:last-child)::after { content: "|"; margin-left: 10px; color: var(--footer-text); opacity: 0.5; pointer-events: none; font-weight: 400; }
 
 /*****************************************************************/
-/* 8. Responsividade (media queries) */
-/*****************************************************************/
-/* ==== Tablet (até 1024px) ==== */
-@media (max-width: 1024px) {
-    .site-title { display: none; }
-    .nav-content a { padding: 10px 10px; font-size: 0.9rem; }
-    .container { padding-left: 20px; padding-right: 20px; }
-}
-/* ==== Mobile (até 768px) ==== */
-@media (max-width: 768px) {
-    .menu-toggle { display: block; }
-    .nav-content { display: none; position: absolute; top: 100%; left: 0; width: 100%; flex-direction: column; text-align: center; background-color: var(--bg-nav-cel); border-top: 1px solid var(--border-header); border-bottom: 1px solid var(--border-header); z-index: var(--z-index-dropdown); }
-    .nav-content.active { display: flex; }
-    .nav-content a { border-radius: 0; padding: 15px 20px; font-size: 1rem; }
-    .footer-content { flex-direction: column; text-align: center; gap: 15px; font-size: 0.85rem; }
-}
-/* ==== Small Mobile (até 480px) ==== */
-@media (max-width: 480px) {
-    .footer-right { gap: 10px; }
-    .logo-img { height: 35px; }
-}
-
-/*****************************************************************/
-/* 9. Alertas e Tags (Sucesso, Aviso, Erro, Info) */
+/* 8. Alertas e Tags (Sucesso, Aviso, Erro, Info) */
 /*****************************************************************/
 .alert-box { padding: 15px 20px; border-radius: var(--radius-md); border-left: 0px solid transparent; margin-bottom: 20px; font-size: 0.95rem; line-height: 1.5; display: flex; align-items: flex-start; gap: 10px; color: var(--text-main); }
 .alert-box strong { font-weight: 700; color: inherit; }
@@ -200,9 +177,8 @@ footer { width: 100%; margin-top: auto; padding: 20px 0; background-color: var(-
 [data-theme="dark"] .tag-warning { color: #fcd34d; }
 [data-theme="dark"] .tag-error { color: #fca5a5; }
 
-
 /*****************************************************************/
-/* 10. Versão impressa */
+/* 9. Versão impressa */
 /*****************************************************************/
 @media print {
     @page { size: A4; margin: 2cm; }
@@ -220,4 +196,29 @@ footer { width: 100%; margin-top: auto; padding: 20px 0; background-color: var(-
     blockquote { border-left: 4px solid #555555 !important; }
     main a.inline-link { text-decoration: underline; color: #000000 !important; }
     main a.inline-link::after { content: " (" attr(href) ")"; font-size: 0.85em; color: #555555; }
+}
+
+/*****************************************************************/
+/* 10. Responsividade (media queries) */
+/*****************************************************************/
+/* ==== Tablet (até 1024px) ==== */
+@media (max-width: 1024px) {
+    .site-title { display: none; }
+    .nav-content a { padding: 10px 10px; font-size: 0.9rem; }
+    .container { padding-left: 20px; padding-right: 20px; }
+}
+
+/* ==== Mobile (até 768px) ==== */
+@media (max-width: 768px) {
+    .menu-toggle { display: block; }
+    .nav-content { display: none; position: absolute; top: 100%; left: 0; width: 100%; flex-direction: column; text-align: center; background-color: var(--bg-nav-cel); border-top: 1px solid var(--border-header); border-bottom: 1px solid var(--border-header); z-index: var(--z-index-dropdown); }
+    .nav-content.active { display: flex; }
+    .nav-content a { border-radius: 0; padding: 10px 20px; font-size: 1rem; width: 80%; }
+    .footer-content { flex-direction: column; text-align: center; gap: 16px; font-size: 0.85rem; }
+}
+
+/* ==== Small Mobile (até 480px) ==== */
+@media (max-width: 480px) {
+    .footer-right { gap: 10px; }
+    .logo-img { height: 35px; }
 }
