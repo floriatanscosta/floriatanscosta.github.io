@@ -12,6 +12,8 @@
     --btn-bg: #5a729e;
     --btn-bg-hover: #4a5f7c;
     --bg-nav-cel: #758aa9;
+    --bg-error: #ecb5b5;
+    --text-color-error: #cc5959;
     --btn-text: #ffffff;
     --border-header: #bfcde0;
     --text-main: #444444;
@@ -95,6 +97,7 @@
     --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.6);
     --shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.8);
 }
+
 /*****************************************************************/
 /* 2. Reset básico e tipografia */
 /*****************************************************************/
