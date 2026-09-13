@@ -1,6 +1,4 @@
 ///////////////////////************************
-- Desenvolvimento do site compelto
+- Desenvolvimento do site completo
 - Inclusão do modo escuro e claro
 - inclusão da mudança de idioma de pt para en
-
-
