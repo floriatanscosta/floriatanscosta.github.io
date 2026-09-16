@@ -25,9 +25,7 @@ exclude:
   - package-lock.json
   - ".DS_Store"
   - "Thumbs.db"
-  - "components/"
   - "_includes/"
-  - "assets/docs/"
 
 # === 6. Variáveis Padrão (que você já possui) ===
 defaults:
