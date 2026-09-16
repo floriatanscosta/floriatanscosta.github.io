@@ -15,7 +15,7 @@ permalink: pretty
 plugins:
   - jekyll-seo-tag
   - jekyll-sitemap
-  
+
 # === 5. Limpeza de Build (Ignorar arquivos desnecessários) ===
 exclude:
   - README.md
@@ -23,6 +23,11 @@ exclude:
   - node_modules/
   - package.json
   - package-lock.json
+  - ".DS_Store"
+  - "Thumbs.db"
+  - "components/"
+  - "_includes/"
+  - "assets/docs/"
 
 # === 6. Variáveis Padrão (que você já possui) ===
 defaults:
@@ -30,3 +35,27 @@ defaults:
       path: ""
     values:
       permissions-policy: "interest-cohort=()"
+
+# === 7. Localização e Data ===
+lang: "pt-BR"
+timezone: "America/Sao_Paulo"
+
+# === 8. Configurações para o Jekyll SEO Tag ===
+logo: "/assets/logo.svg"
+image: "/assets/cover.png"
+social:
+  name: "Floriatan Santos Costa"
+  links:
+    - "https://www.linkedin.com/in/floriatanscosta/"
+    - "https://orcid.org/0000-0001-7766-2860"
+    - "https://www.linkedin.com/in/floriatanscosta/"
+
+# === 5. Limpeza de Build (Atualizado) ===
+exclude:
+  - README.md
+  - .gitignore
+  - node_modules/
+  - package.json
+  - package-lock.json
+  - ".DS_Store"
+  - "Thumbs.db"
