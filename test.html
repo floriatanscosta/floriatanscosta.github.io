@@ -5,19 +5,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
-    
+
     <title>Galeria e Projetos - Floriatan Costa</title>
     <meta name="description" content="Uma visão detalhada e elegante dos projetos em desenvolvimento.">
-    
+
     <script>
         if (localStorage.getItem('theme') === 'dark') {
             document.documentElement.setAttribute('data-theme', 'dark');
         }
     </script>
     <style>
-        body { background: var(--bg-color); }
+        body {
+            background: var(--bg-color);
+        }
     </style>
-    
+
     <link rel="stylesheet" href="/css/global.css">
     <link rel="stylesheet" href="/css/main.css">
 </head>
@@ -27,7 +29,6 @@
     <div class="page-loader" id="page-loader">
         <div class="spinner"></div>
     </div>
-    
     <!-- Barra de progresso de leitura -->
     <div class="progress-container">
         <div class="progress-bar" id="myBar"></div>
@@ -40,18 +41,18 @@
                 <a href="/">
                     <img src="/assets/logo.svg" alt="Logo Floriatan" class="logo-img">
                 </a>
-                <h1 class="site-title" style="color: white; text-shadow: 0 2px 4px rgba(0,0,0,0.5);">Floriatan Costa</h1>
+                <h1 class="site-title" style="color: white; text-shadow: 0 2px 4px rgba(0,0,0,0.5);">Floriatan Costa
+                </h1>
             </div>
-
             <nav id="navMenu" class="nav-content">
                 <a href="/" style="color: white; text-shadow: 0 2px 4px rgba(0,0,0,0.5);">Início</a>
                 <a href="/publicacoes" style="color: white; text-shadow: 0 2px 4px rgba(0,0,0,0.5);">Publicações</a>
                 <a href="/contato" style="color: white; text-shadow: 0 2px 4px rgba(0,0,0,0.5);">Contato</a>
             </nav>
-
             <div class="header-right">
                 <button id="theme-toggle" class="theme-toggle" onclick="toggleTheme()" title="Alternar Tema">
-                    <img src="/assets/icons/escuro.svg" alt="Modo Escuro" style="width: 20px; height: 20px; filter: invert(1);">
+                    <img src="/assets/icons/escuro.svg" alt="Modo Escuro"
+                        style="width: 20px; height: 20px; filter: invert(1);">
                 </button>
             </div>
         </div>
@@ -60,39 +61,36 @@
     <!-- PRIMEIRA SEÇÃO: Hero com Efeito Vidro -->
     <section class="hero-fullscreen">
         <div class="hero-content-glass glass-panel glass-hover">
-            <h1 style="font-size: 3rem; margin-bottom: 15px; color: var(--heading-color);">O Design Encontra a Ciência</h1>
-            <p style="font-size: 1.2rem; line-height: 1.6; color: var(--text-color);">
-                Explorando a intersecção entre a química analítica de precisão e a elegância visual na apresentação de dados e processos.
-            </p>
+            <h1 style="font-size: 3rem; margin-bottom: 20px; line-height: 1.0; color: var(--heading-color);">O Design Encontra a Ciência</h1>
+            <p style="font-size: 1.5rem; line-height: 1.1; color: var(--text-color);">Explorando a intersecção entre a química analítica de precisão e a elegância visual na apresentação de dados e processos.</p>
         </div>
     </section>
 
     <!-- CONTEÚDO: Grade com Imagens e Vidro -->
     <main class="container">
-        
         <!-- Bloco 1: Imagem Revelada + Cartão de Vidro -->
         <section class="grid-row grid-50-50 margin-top-5">
             <div class="img-reveal-box reveal">
                 <!-- Substitua pelo caminho da sua imagem -->
                 <img src="/assets/cover.png" alt="Laboratório" class="img-reveal-img">
             </div>
-            
-            <div class="glass-panel glass-hover reveal" style="display: flex; flex-direction: column; justify-content: center;">
+            <div class="glass-panel glass-hover reveal"
+                style="display: flex; flex-direction: column; justify-content: center;">
                 <h2 class="card-title-bold">Microdispensação</h2>
                 <h3 class="card-subtitle">Precisão em escala nanométrica</h3>
-                <p>
-                    O controle de volumes em microgotas exige precisão absoluta. Ao alinhar calibrações de dispensadores Tecan, reduzimos a variabilidade e garantimos reprodutibilidade nos ensaios.
-                </p>
+                <p>O controle de volumes em microgotas exige precisão absoluta. Ao alinhar calibrações de dispensadores Tecan, reduzimos a variabilidade e garantimos reprodutibilidade nos ensaios.</p>
             </div>
         </section>
 
         <!-- Bloco 2: Inversão para ritmo visual -->
         <section class="grid-row grid-50-50 margin-top-5" style="margin-bottom: 5rem;">
-            <div class="glass-panel glass-hover reveal" style="order: 1; display: flex; flex-direction: column; justify-content: center;">
+            <div class="glass-panel glass-hover reveal"
+                style="order: 1; display: flex; flex-direction: column; justify-content: center;">
                 <h2 class="card-title-bold">Análise de Dados</h2>
                 <h3 class="card-subtitle">Algoritmos a favor da química</h3>
                 <p>
-                    Através do processamento de sinais de LA-ICP-MS, transformamos pulsos transientes em informações estruturadas. Uma abordagem onde o rigor científico encontra a automação.
+                    Através do processamento de sinais de LA-ICP-MS, transformamos pulsos transientes em informações
+                    estruturadas. Uma abordagem onde o rigor científico encontra a automação.
                 </p>
             </div>
             <div class="img-reveal-box reveal" style="order: 2;">
@@ -100,30 +98,34 @@
                 <img src="/assets/cover.png" alt="Dados Analíticos" class="img-reveal-img">
             </div>
         </section>
-        
+
         <!-- Bloco 1: Imagem Revelada + Cartão de Vidro -->
         <section class="grid-row grid-50-50 margin-top-5">
             <div class="img-reveal-box reveal">
                 <!-- Substitua pelo caminho da sua imagem -->
                 <img src="/assets/cover.png" alt="Laboratório" class="img-reveal-img">
             </div>
-            
-            <div class="glass-panel glass-hover reveal" style="display: flex; flex-direction: column; justify-content: center;">
+
+            <div class="glass-panel glass-hover reveal"
+                style="display: flex; flex-direction: column; justify-content: center;">
                 <h2 class="card-title-bold">Microdispensação</h2>
                 <h3 class="card-subtitle">Precisão em escala nanométrica</h3>
                 <p>
-                    O controle de volumes em microgotas exige precisão absoluta. Ao alinhar calibrações de dispensadores Tecan, reduzimos a variabilidade e garantimos reprodutibilidade nos ensaios.
+                    O controle de volumes em microgotas exige precisão absoluta. Ao alinhar calibrações de dispensadores
+                    Tecan, reduzimos a variabilidade e garantimos reprodutibilidade nos ensaios.
                 </p>
             </div>
         </section>
 
         <!-- Bloco 2: Inversão para ritmo visual -->
         <section class="grid-row grid-50-50 margin-top-5" style="margin-bottom: 5rem;">
-            <div class="glass-panel glass-hover reveal" style="order: 1; display: flex; flex-direction: column; justify-content: center;">
+            <div class="glass-panel glass-hover reveal"
+                style="order: 1; display: flex; flex-direction: column; justify-content: center;">
                 <h2 class="card-title-bold">Análise de Dados</h2>
                 <h3 class="card-subtitle">Algoritmos a favor da química</h3>
                 <p>
-                    Através do processamento de sinais de LA-ICP-MS, transformamos pulsos transientes em informações estruturadas. Uma abordagem onde o rigor científico encontra a automação.
+                    Através do processamento de sinais de LA-ICP-MS, transformamos pulsos transientes em informações
+                    estruturadas. Uma abordagem onde o rigor científico encontra a automação.
                 </p>
             </div>
             <div class="img-reveal-box reveal" style="order: 2;">
@@ -133,7 +135,7 @@
         </section>
 
     </main>
-    
+
     <!-- Rodapé -->
     <footer>
         <div class="container footer-content">

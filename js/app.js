@@ -67,11 +67,11 @@ document.addEventListener("DOMContentLoaded", () => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
                 entry.target.classList.add('active');
-                // observer.unobserve(entry.target);
+                observer.unobserve(entry.target);
             }
         });
     }, { 
-        threshold: 0.55
+        threshold: 0.8
     });
     const hiddenElements = document.querySelectorAll('.reveal, .img-reveal-box');
     hiddenElements.forEach((el) => observer.observe(el));
