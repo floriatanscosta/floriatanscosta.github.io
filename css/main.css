@@ -125,13 +125,18 @@ ul.custom-list li, ol.custom-list li { margin-bottom: 6px; }
 .card-subtitle { font-size: 1.5rem; font-weight: 600; color: var(--text-main); opacity: 0.85; margin-bottom: 20px; line-height: 1.4; border-left: 3px solid var(--heading-color); padding-left: 10px; }
 
 /*****************************************************************/
-/* 10. Efeito Image Reveal */
+/* 10. Efeitos */
 /*****************************************************************/
+/* Image reveal */
 .img-reveal-box { position: relative; overflow: hidden; border-radius: var(--radius-md); display: flex; width: 100%; min-height: 350px; background-color: var(--box-bg); }
 .img-reveal-box::after { content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-color: var(--heading-color); transform-origin: left; transition: transform 0.8s cubic-bezier(0.77, 0, 0.175, 1); z-index: 2; }
 .img-reveal-box.active::after { transform: scaleX(0); transform-origin: right; }
 .img-reveal-img { width: 100%; height: 100%; object-fit: cover; opacity: 0; transform: scale(1.1); transition: opacity 0.1s ease 0.3s, transform 1.2s cubic-bezier(0.77, 0, 0.175, 1) 0.3s; }
 .img-reveal-box.active .img-reveal-img { opacity: 1; transform: scale(1); }
+
+/* Vidro */
+.glass-panel { background: rgba(255, 255, 255, 0.15); backdrop-filter: blur(20px) saturate(180%); -webkit-backdrop-filter: blur(20px) saturate(180%); border: 1px solid rgba(255, 255, 255, 0.3); border-radius: var(--radius-md, 16px); box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.1); padding: 25px; }
+[data-theme="dark"] .glass-panel { background: rgba(15, 15, 15, 0.45); border: 1px solid rgba(255, 255, 255, 0.08); box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.4); }
 
 /*****************************************************************/
 /* Responsividade (media queries) */
