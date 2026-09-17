@@ -30,7 +30,7 @@ function toggleTheme() {
     }
 }
 
-// Função para troca manual de idioma
+// Função para troca de idioma
 function switchLanguage(lang) {
     localStorage.setItem('preferred_lang', lang);
     const currentPath = window.location.pathname;
@@ -54,9 +54,26 @@ document.addEventListener('DOMContentLoaded', () => {
         themeBtn.innerHTML = `<img src="https://floriatan.com.br/assets/icons/claro.svg" alt="Ativar o modo claro" style="width: 20px; height: 20px;">`;
     }
 
-    // 2. Insere o ano atual no rodapé
+    // Ano rodapé
     const yearElement = document.getElementById("year");
     if (yearElement) {
         yearElement.textContent = new Date().getFullYear();
     }
 });
+
+// ==== Efects mover ====
+document.addEventListener("DOMContentLoaded", () => {
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('active');
+                // observer.unobserve(entry.target);
+            }
+        });
+    }, { 
+        threshold: 0.55
+    });
+    const hiddenElements = document.querySelectorAll('.reveal, .img-reveal-box');
+    hiddenElements.forEach((el) => observer.observe(el));
+});
+

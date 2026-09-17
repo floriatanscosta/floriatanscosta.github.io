@@ -155,7 +155,7 @@ header { width: 100%; padding: 14px 0; background: var(--header-gradient); borde
 /*****************************************************************/
 /* 7. Rodapé (footer) */
 /*****************************************************************/
-footer { width: 100%; margin-top: auto; padding: 20px 0; background-color: var(--footer-bg); color: var(--footer-text);}
+ footer { width: 100%; margin-top: auto; padding: 20px 0; background-color: var(--footer-bg); color: var(--footer-text);}
 .footer-content { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 6px; }
 .footer-left p { margin-bottom: 0; line-height: 1; font-size: 0.8rem;}
 .footer-right { display: flex; gap: 20px; font-size: 0.8rem; }
