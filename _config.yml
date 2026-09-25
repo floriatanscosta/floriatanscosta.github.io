@@ -25,7 +25,6 @@ exclude:
   - package-lock.json
   - ".DS_Store"
   - "Thumbs.db"
-  - "_includes/"
 
 # === 6. Variáveis Padrão (que você já possui) ===
 defaults:
@@ -47,13 +46,3 @@ social:
     - "https://www.linkedin.com/in/floriatanscosta/"
     - "https://orcid.org/0000-0001-7766-2860"
     - "https://www.linkedin.com/in/floriatanscosta/"
-
-# === 5. Limpeza de Build (Atualizado) ===
-exclude:
-  - README.md
-  - .gitignore
-  - node_modules/
-  - package.json
-  - package-lock.json
-  - ".DS_Store"
-  - "Thumbs.db"
