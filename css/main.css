@@ -188,6 +188,32 @@ ul.custom-list li, ol.custom-list li { margin-bottom: 6px; }
 @keyframes tagPulse { 0% { box-shadow: 0 0 0 0 rgba(220, 38, 38, 0.7); } 70% { box-shadow: 0 0 0 8px rgba(220, 38, 38, 0); } 100% { box-shadow: 0 0 0 0 rgba(220, 38, 38, 0); } }
 
 /*****************************************************************/
+/* Estrutura Base das Tags ODS */
+/*****************************************************************/
+.ui-tag-ods { display: inline-flex; align-items: center; gap: 6px; padding: 4px 12px; border-radius: 20px; font-size: 0.75rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; color: #ffffff; white-space: nowrap; transition: transform 0.2s ease, filter 0.2s ease; border: none; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
+.ui-tag-ods:hover { transform: translateY(-2px); filter: brightness(1.1); }
+.ui-tag-ods img, .ui-tag-ods svg { width: 14px; height: 14px; fill: currentColor; }
+.ui-tag-ods .ods-icon { font-size: 1.1em; line-height: 1; }
+/* Cores ODS */
+.ods-1 { background-color: #E5243B; }
+.ods-2 { background-color: #DDA63A; }
+.ods-3 { background-color: #4C9F38; }
+.ods-4 { background-color: #C5192D; }
+.ods-5 { background-color: #FF3A21; }
+.ods-6 { background-color: #26BDE2; }
+.ods-7 { background-color: #FCC30B; color: #333333; }
+.ods-8 { background-color: #A21942; }
+.ods-9 { background-color: #FD6925; }
+.ods-10 { background-color: #DD1367; }
+.ods-11 { background-color: #FD9D24; }
+.ods-12 { background-color: #BF8B2E; }
+.ods-13 { background-color: #3F7E44; }
+.ods-14 { background-color: #0A97D9; }
+.ods-15 { background-color: #56C02B; }
+.ods-16 { background-color: #00689D; }
+.ods-17 { background-color: #19486A; }
+
+/*****************************************************************/
 /* Responsividade (media queries) */
 /*****************************************************************/
 /* ==== Tablet (até 1024px) ==== */
