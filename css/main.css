@@ -214,7 +214,7 @@ textarea { resize: vertical; min-height: 120px; }
 .ui-tag-ods:hover { transform: translateY(-2px); filter: brightness(1.1); }
 .ui-tag-ods img, .ui-tag-ods svg { width: 14px; height: 14px; fill: currentColor; }
 .ui-tag-ods .ods-icon { font-size: 1.1em; line-height: 1; }
-/* ==== Cores ODS ==== */
+/* ==== Cores ==== */
 .ods-1 { background-color: #E5243B; }
 .ods-2 { background-color: #DDA63A; }
 .ods-3 { background-color: #4C9F38; }
@@ -233,7 +233,8 @@ textarea { resize: vertical; min-height: 120px; }
 .ods-16 { background-color: #00689D; }
 .ods-17 { background-color: #19486A; }
 
-/* 14. Responsividade (media queries) */
+/*****************************************************************/
+/* #1 Responsividade (media queries) */
 /*****************************************************************/
 /* ==== Tablet (até 1024px) ==== */
 @media (max-width: 1024px) {
@@ -258,7 +259,7 @@ textarea { resize: vertical; min-height: 120px; }
     .timeline-item::after { left: 7px; width: 12px; height: 12px; }
 }
 
-/* ==== Small Mobile (até 600px e 480px) ==== */
+/* ==== Small mobile (até 600px e 480px) ==== */
 @media (max-width: 600px) {
     .profile-card { flex-direction: column; text-align: center; gap: 15px; }
     .contact-form { padding: 10px 0; }
