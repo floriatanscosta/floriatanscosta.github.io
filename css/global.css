@@ -102,10 +102,10 @@
 /* 2. Reset básico e tipografia */
 /*****************************************************************/
 * { margin: 0; padding: 0; box-sizing: border-box; font-family: var(--font-primary); }
-h1, h2, h3, h4, h5, h6 { color: var(--heading-color); margin-bottom: 30px; }
-h2 { font-size: 1.6rem; margin-top: 30px; }
-h3 { font-size: 1.4rem; }
-h4 { font-size: 1.0rem; }
+h1, h2, h3, h4, h5, h6 { color: var(--heading-color); margin-bottom: 40px; }
+h2 { font-size: 1.7rem; }
+h3 { font-size: 1.5rem; }
+h4 { font-size: 1.2rem; }
 
 /* ==== Cor de seleção de texto ==== */
 ::selection { background-color: rgba(90, 114, 158, 0.3); color: inherit; }
