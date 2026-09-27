@@ -13,5 +13,4 @@ O portfólio organiza o acervo profissional, partindo do trabalho experimental e
 
 O objetivo principal deste espaço é fornecer uma visão clara e acessível do impacto do trabalho realizado, facilitando o contato para novas parcerias acadêmicas, colaborações em pesquisa e desenvolvimento de metodologias analíticas.
 
-
 **Acesse o portfólio:** [floriatan.com.br](https://floriatan.com.br/)

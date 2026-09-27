@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
+    <title>Guia de Estilos - Floriatan Costa</title>
+    
+    <script>
+        if (localStorage.getItem('theme') === 'dark') {
+            document.documentElement.setAttribute('data-theme', 'dark');
+        }
+    </script>
+
+    <link rel="stylesheet" href="./css/global.css">
+    <link rel="stylesheet" href="./css/main.css">
+
+    <style>
+        /* Estilos específicos apenas para esta página de documentação */
+        .doc-row { display: flex; justify-content: space-between; align-items: center; padding: 12px 0; border-bottom: 1px dashed var(--border-color); flex-wrap: wrap; gap: 15px;}
+        .doc-row:last-child { border-bottom: none; }
+        .doc-preview { flex: 1; min-width: 200px; }
+        .doc-code { display: flex; gap: 8px; flex-wrap: wrap; justify-content: flex-end;}
+        .copy-btn { cursor: pointer; border: none; background: transparent; }
+        .grid-demo-box { background-color: rgba(90, 114, 158, 0.1); border: 1px dashed var(--heading-color); border-radius: var(--radius-sm); padding: 15px; text-align: center; color: var(--heading-color); font-weight: bold; font-size: 0.85rem;}
+    </style>
+</head>
+
+<body>
+    <!-- Cabeçalho Simples -->
+    <header>
+        <div class="container header-content">
+            <div class="header-left">
+                <h1 class="site-title">Guia de Estilos & Classes CSS</h1>
+            </div>
+            <div class="header-right">
+                <button id="theme-toggle" class="theme-toggle" onclick="toggleTheme()" title="Alternar Tema">
+                    <img src="./assets/icons/escuro.svg" alt="Modo Escuro" style="width: 20px; height: 20px;">
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main class="container">
+    
+        <section class="col-1 margin-top-3">
+            <h2 class="col-1a">1. Tipografia (Utilitários de Texto)</h2>
+            <div class="alert-box alert-info">
+                <div>Clique nas tags à direita para copiar a classe correspondente.</div>
+            </div>
+    
+            <!-- Tamanhos -->
+            <div class="doc-row">
+                <div class="doc-preview text-xs">Texto Extra Pequeno (text-xs)</div>
+                <div class="doc-code"><button class="ui-tag ui-tag-soft-primary copy-btn" onclick="copyClass('text-xs', this)">text-xs</button></div>
+            </div>
+            <div class="doc-row">
+                <div class="doc-preview text-sm">Texto Pequeno (text-sm)</div>
+                <div class="doc-code"><button class="ui-tag ui-tag-soft-primary copy-btn" onclick="copyClass('text-sm', this)">text-sm</button></div>
+            </div>
+            <div class="doc-row">
+                <div class="doc-preview text-base">Texto Padrão Base (text-base)</div>
+                <div class="doc-code"><button class="ui-tag ui-tag-soft-primary copy-btn" onclick="copyClass('text-base', this)">text-base</button></div>
+            </div>
+            <div class="doc-row">
+                <div class="doc-preview text-lg">Texto Grande (text-lg)</div>
+                <div class="doc-code"><button class="ui-tag ui-tag-soft-primary copy-btn" onclick="copyClass('text-lg', this)">text-lg</button></div>
+            </div>
+            <div class="doc-row">
+                <div class="doc-preview text-xl">Texto Extra Grande (text-xl)</div>
+                <div class="doc-code"><button class="ui-tag ui-tag-soft-primary copy-btn" onclick="copyClass('text-xl', this)">text-xl</button></div>
+            </div>
+    
+            <!-- Pesos -->
+            <div class="doc-row margin-top-2">
+                <div class="doc-preview font-light">Fonte Leve (font-light)</div>
+                <div class="doc-code"><button class="ui-tag ui-tag-soft-purple copy-btn" onclick="copyClass('font-light', this)">font-light</button></div>
+            </div>
+            <div class="doc-row">
+                <div class="doc-preview font-bold">Fonte Negrito (font-bold)</div>
+                <div class="doc-code"><button class="ui-tag ui-tag-soft-purple copy-btn" onclick="copyClass('font-bold', this)">font-bold</button></div>
+            </div>
+    
+            <!-- Cores -->
+            <div class="doc-row margin-top-2">
+                <div class="doc-preview text-primary font-bold">Cor Primária (text-primary)</div>
+                <div class="doc-code"><button class="ui-tag ui-tag-soft-success copy-btn" onclick="copyClass('text-primary', this)">text-primary</button></div>
+            </div>
+            <div class="doc-row">
+                <div class="doc-preview text-muted">Texto Suave/Muted (text-muted)</div>
+                <div class="doc-code"><button class="ui-tag ui-tag-soft-success copy-btn" onclick="copyClass('text-muted', this)">text-muted</button></div>
+            </div>
+        </section>
+    
+    
+        <section class="col-1 margin-top-5">
+            <h2 class="col-1a">2. Sistema de Grids (Múltiplas Colunas)</h2>
+            <p class="text-sm text-muted">Use sempre a classe base <code>grid-row</code> junto com a variação desejada.</p>
+    
+            <div class="margin-top-2">
+                <div class="doc-row" style="border: none;">
+                    <div class="doc-preview font-bold">Grade 50% / 50%</div>
+                    <div class="doc-code">
+                        <button class="ui-tag ui-tag-soft-primary copy-btn" onclick="copyClass('grid-row', this)">grid-row</button>
+                        <button class="ui-tag ui-tag-soft-primary copy-btn" onclick="copyClass('grid-50-50', this)">grid-50-50</button>
+                    </div>
+                </div>
+                <div class="grid-row grid-50-50">
+                    <div class="grid-demo-box">Coluna 1 (50%)</div>
+                    <div class="grid-demo-box">Coluna 2 (50%)</div>
+                </div>
+            </div>
+    
+            <div class="margin-top-2">
+                <div class="doc-row" style="border: none;">
+                    <div class="doc-preview font-bold">Grade 30% / 70%</div>
+                    <div class="doc-code">
+                        <button class="ui-tag ui-tag-soft-primary copy-btn" onclick="copyClass('grid-row', this)">grid-row</button>
+                        <button class="ui-tag ui-tag-soft-primary copy-btn" onclick="copyClass('grid-30-70', this)">grid-30-70</button>
+                    </div>
+                </div>
+                <div class="grid-row grid-30-70">
+                    <div class="grid-demo-box">30%</div>
+                    <div class="grid-demo-box">70%</div>
+                </div>
+            </div>
+    
+            <div class="margin-top-2">
+                <div class="doc-row" style="border: none;">
+                    <div class="doc-preview font-bold">Grade 80% / 20%</div>
+                    <div class="doc-code">
+                        <button class="ui-tag ui-tag-soft-primary copy-btn" onclick="copyClass('grid-row', this)">grid-row</button>
+                        <button class="ui-tag ui-tag-soft-primary copy-btn" onclick="copyClass('grid-80-20', this)">grid-80-20</button>
+                    </div>
+                </div>
+                <div class="grid-row grid-80-20">
+                    <div class="grid-demo-box">80%</div>
+                    <div class="grid-demo-box">20%</div>
+                </div>
+            </div>
+        </section>
+    
+    
+        <section class="col-1 margin-top-5">
+            <h2 class="col-1a">3. Containers de Layout & Margens</h2>
+    
+            <div class="doc-row">
+                <div class="doc-preview">
+                    <strong>Container de Coluna Única (col-1)</strong><br>
+                    <span class="text-sm text-muted">Aplica margens e estrutura padrão para seções verticais.</span>
+                </div>
+                <div class="doc-code"><button class="ui-tag ui-tag-outline-dark copy-btn" onclick="copyClass('col-1', this)">col-1</button></div>
+            </div>
+    
+            <div class="doc-row">
+                <div class="doc-preview">
+                    <strong>Container de 2 Colunas com Cartões (col-2)</strong><br>
+                    <span class="text-sm text-muted">Divide em duas telas e aplica fundo branco/sombra nos filhos diretos.</span>
+                </div>
+                <div class="doc-code"><button class="ui-tag ui-tag-outline-dark copy-btn" onclick="copyClass('col-2', this)">col-2</button></div>
+            </div>
+    
+            <div class="doc-row">
+                <div class="doc-preview">Margem Topo Pequena (2rem)</div>
+                <div class="doc-code"><button class="ui-tag ui-tag-outline-primary copy-btn" onclick="copyClass('margin-top-2', this)">margin-top-2</button></div>
+            </div>
+            <div class="doc-row">
+                <div class="doc-preview">Margem Topo Média (3rem)</div>
+                <div class="doc-code"><button class="ui-tag ui-tag-outline-primary copy-btn" onclick="copyClass('margin-top-3', this)">margin-top-3</button></div>
+            </div>
+            <div class="doc-row">
+                <div class="doc-preview">Margem Topo Grande (5rem)</div>
+                <div class="doc-code"><button class="ui-tag ui-tag-outline-primary copy-btn" onclick="copyClass('margin-top-5', this)">margin-top-5</button></div>
+            </div>
+        </section>
+    
+    
+        <section class="col-1 margin-top-5">
+            <h2 class="col-1a">4. Alertas e Estilos Visuais</h2>
+    
+            <div class="doc-row">
+                <div class="doc-preview alert-box alert-success" style="margin-bottom:0;">Caixa de Sucesso
+                </div>
+                <div class="doc-code">
+                    <button class="ui-tag ui-tag-soft-success copy-btn" onclick="copyClass('alert-box alert-success', this)">alert-box alert-success</button>
+                </div>
+            </div>
+    
+            <div class="doc-row">
+                <div class="doc-preview alert-box alert-warning" style="margin-bottom:0;">
+                    Caixa de Aviso
+                </div>
+                <div class="doc-code">
+                    <button class="ui-tag ui-tag-soft-warning copy-btn" onclick="copyClass('alert-box alert-warning', this)">alert-box alert-warning</button>
+                </div>
+            </div>
+    
+            <div class="doc-row" style="background: url('./assets/cover.png') center/cover; padding: 20px;">
+                <div class="doc-preview glass-panel text-center">
+                    <span class="text-lg font-bold text-primary">Painel Glassmorphism</span>
+                </div>
+                <div class="doc-code">
+                    <button class="ui-tag ui-tag-glass copy-btn" onclick="copyClass('glass-panel', this)">glass-panel</button>
+                </div>
+            </div>
+        </section>
+    
+    </main>
+
+    <!-- Script de Funcionalidade da Página -->
+    <script>
+        // Lógica de cópia para a área de transferência
+        function copyClass(className, buttonElement) {
+            navigator.clipboard.writeText(className).then(() => {
+                const originalText = buttonElement.innerText;
+                const originalBg = buttonElement.style.backgroundColor;
+                const originalColor = buttonElement.style.color;
+                // Feedback Visual de Sucesso
+                buttonElement.innerText = "COPIADO!";
+                buttonElement.style.backgroundColor = "#4CB96E";
+                buttonElement.style.color = "#ffffff";
+                buttonElement.style.borderColor = "#4CB96E";
+                buttonElement.style.transform = "scale(1.05)";
+                // Retorna ao estado normal após 1.5s
+                setTimeout(() => {
+                    buttonElement.innerText = originalText;
+                    buttonElement.style.backgroundColor = originalBg;
+                    buttonElement.style.color = originalColor;
+                    buttonElement.style.borderColor = "";
+                    buttonElement.style.transform = "scale(1)";
+                }, 1500);
+            }).catch(err => {
+                console.error('Erro ao copiar classe: ', err);
+            });
+        }
+        // Simulação do tema escuro (se você não trouxer o app.js original para essa página)
+        function toggleTheme() {
+            if (document.documentElement.getAttribute('data-theme') === 'dark') {
+                document.documentElement.removeAttribute('data-theme');
+                localStorage.setItem('theme', 'light');
+            } else {
+                document.documentElement.setAttribute('data-theme', 'dark');
+                localStorage.setItem('theme', 'dark');
+            }
+        }
+    </script>
+</body>
+
+</html>
