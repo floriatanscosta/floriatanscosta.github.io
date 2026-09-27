@@ -117,13 +117,22 @@ ul.custom-list li, ol.custom-list li { margin-bottom: 6px; }
 .metric-color-3 { color: #4CB96E; }
 .metrics-sources { font-size: 1em; margin-top: 50px; padding-top: 40px; border-top: 1px solid var(--border-color); line-height: 1.6; }
 
-/* 7. Formulário de contato */
+/* 7. Elementos de formulário */
 /*****************************************************************/
-.contact-form { display: flex; flex-direction: column; gap: 15px; }
-.contact-form input, .contact-form textarea { width: 100%; padding: 12px 15px; border: 1px solid var(--border-color); border-radius: var(--radius-md); font-family: inherit; background-color: var(--color-bg-surface-1); transition: border-color var(--transition-normal); color: var(--text-main); }
-.contact-form input:focus, .contact-form textarea:focus { outline: none; border-color: var(--heading-color); background-color: var(--box-bg); }
-.contact-form button { background-color: var(--heading-color); color: white; border: none; padding: 12px 20px; border-radius: var(--radius-md); font-size: 1rem; font-weight: bold; cursor: pointer; transition: background-color var(--transition-normal); }
-.contact-form button:hover { background-color: #435b83; }
+.form-group { display: flex; flex-direction: column; margin-bottom: 15px; }
+.form-group label, .form-label { font-size: 0.9rem; font-weight: 600; color: var(--text-main); margin-bottom: 6px; display: inline-block; }
+.form-control, input[type="text"], input[type="email"], input[type="number"], input[type="password"], select, textarea { width: 100%; padding: 12px 15px; border: 1px solid var(--border-color); border-radius: var(--radius-sm); font-size: 0.95rem; font-family: inherit; background-color: var(--color-bg-surface-1); color: var(--text-main); transition: border-color var(--transition-normal), box-shadow var(--transition-normal), background-color var(--transition-normal); }
+.form-control:focus, input:focus, select:focus, textarea:focus { outline: none; border-color: var(--heading-color); background-color: var(--box-bg); box-shadow: 0 0 0 3px rgba(90, 114, 158, 0.15); }
+.form-control:disabled, input:disabled, select:disabled, textarea:disabled { background-color: rgba(0, 0, 0, 0.05); cursor: not-allowed; opacity: 0.7; }
+[data-theme="dark"] .form-control:disabled, [data-theme="dark"] input:disabled { background-color: rgba(255, 255, 255, 0.05); }
+textarea { resize: vertical; min-height: 120px; }
+.form-tip, .tip { font-size: 0.75rem; color: var(--text-main); opacity: 0.7; margin-top: 5px; }
+/* ==== Checkboxes e radios ==== */
+.form-check { display: flex; align-items: center; gap: 8px; margin-bottom: 8px; cursor: pointer; font-size: 0.9rem; color: var(--text-main); }
+.form-check input[type="checkbox"], .form-check input[type="radio"] { width: 18px; height: 18px; cursor: pointer; accent-color: var(--heading-color); }
+/* ==== Estruturas em grid ==== */
+.form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; }
+.form-group.full-width { grid-column: 1 / -1; }
 
 /* 8. Página de erro 404 */
 /*****************************************************************/
