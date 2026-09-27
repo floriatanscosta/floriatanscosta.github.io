@@ -1,4 +1,4 @@
-# === 1. Configurações de Domínio e URL ===
+# === 1. Configurações ===
 url: "https://floriatan.com.br"
 baseurl: ""
 
@@ -8,15 +8,15 @@ description: "Pesquisador de Pós-Doutorado em Química Analítica"
 author: "Floriatan Santos Costa"
 github_username: "floriatanscosta"
 
-# === 3. Estrutura de Links (que você já possui) ===
+# === 3. Estrutura de Links ===
 permalink: pretty
 
-# === 4. Plugins Oficiais do GitHub Pages ===
+# === 4. Plugins ===
 plugins:
   - jekyll-seo-tag
   - jekyll-sitemap
 
-# === 5. Limpeza de Build (Ignorar arquivos desnecessários) ===
+# === 5. Limpeza de Build ===
 exclude:
   - README.md
   - .gitignore
@@ -26,7 +26,7 @@ exclude:
   - ".DS_Store"
   - "Thumbs.db"
 
-# === 6. Variáveis Padrão (que você já possui) ===
+# === 6. Variáveis ===
 defaults:
   - scope:
       path: ""
@@ -37,7 +37,7 @@ defaults:
 lang: "pt-BR"
 timezone: "America/Sao_Paulo"
 
-# === 8. Configurações para o Jekyll SEO Tag ===
+# === 8. Configurações para o jekyll ===
 logo: "/assets/logo.svg"
 image: "/assets/cover.png"
 social:
