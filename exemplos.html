@@ -13,6 +13,7 @@
     <meta name="theme-color" content="#5a729e">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://floriatan.com.br/">
+    <meta name="robots" content="noindex, nofollow">
 
     <!-- Previne o piscar branco -->
     <script>
@@ -20,7 +21,6 @@
             document.documentElement.setAttribute('data-theme', 'dark');
         }
     </script>
-
     <link rel="stylesheet" href="./css/global.css">
     <link rel="stylesheet" href="./css/main.css">
 </head>
@@ -63,6 +63,7 @@
             </div>
         </div>
     </header>
+
 
     <!-- Conteúdo principal -->
     <main>
@@ -119,12 +120,37 @@
             <!-- Estilos Padrão de Texto -->
             <section class="col-1">
                 <h2>Elementos Tipográficos e de Conteúdo</h2>
-                <p>Este é um parágrafo normal demonstrando como o texto deve fluir. Aqui você tem um <a href="#" class="inline-link">link no meio do texto</a> que possui um efeito de hover elegante. Além disso, quando for mencionar linguagens de programação, você pode usar blocos de
-                    <code>código inline</code>.</p>
+                <p>Este é um parágrafo normal demonstrando como o texto deve fluir. Aqui você tem um <a href="#"
+                        class="inline-link">link no meio do texto</a> que possui um efeito de hover elegante. Além
+                    disso, quando for mencionar linguagens de programação, você pode usar blocos de
+                    <code>código inline</code>.
+                </p>
                 <blockquote>
                     "A formatação do blockquote (citação em bloco) foi projetada para dar destaque a frases importantes
                     ou trechos de outros autores, combinando com a paleta de azul do site."
                 </blockquote>
+            </section>
+            
+            <section class="col-1 margin-top-3">
+                <!-- Exemplo 1: Texto pequeno, silenciado e centralizado -->
+                <p class="text-sm text-muted text-center">
+                    Este é um texto de nota de rodapé ou legenda (text-sm, text-muted, text-center).
+                </p>
+
+                <!-- Exemplo 2: Texto grande, negrito e com cor primária -->
+                <p class="text-lg font-bold text-primary mb-0">
+                    Este é um parágrafo de destaque sem margem inferior.
+                </p>
+                <!-- Exemplo 3: Texto extra grande e leve -->
+                <p class="text-xl font-light text-right italic">
+                    "Citação elegante alinhada à direita."
+                </p>
+                <!-- Exemplo 4: Texto justificado com espaçamento de linha amplo (bom para resumos/abstracts) -->
+                <p class="text-base text-justify leading-loose">
+                    Este parágrafo possui o tamanho base, mas o alinhamento é justificado e a altura da linha foi
+                    ampliada (<code class="text-sm">leading-loose</code>) para facilitar a leitura de blocos de
+                    texto muito densos, como os abstracts dos seus artigos sobre spICP-MS.
+                </p>
             </section>
 
             <!-- Ajustado para col-2 para gerar duas caixas de fundo branco emparelhadas -->
@@ -154,9 +180,7 @@
                     <div class="profile-info">
                         <h3>Floriatan Santos Costa</h3>
                         <h4>Pesquisador | Universidade de Zaragoza</h4>
-                        <p>Especialista no tratamento de dados para SP-ICP-MS e desenvolvimento de instrumentação em
-                            microescala. Atualmente focado em pesquisas de micro-dispensação para ablação a laser e
-                            modificações de superfície.</p>
+                        <p>Atualmente focado em pesquisas de micro-dispensação para ablação a laser e modificações de superfície.</p>
                     </div>
                 </div>
             </section>

@@ -34,7 +34,7 @@
     --spacing-xl: 32px;
     --font-primary: "Roboto", Arial, Tahoma, Verdana, sans-serif;
     --font-mono: "Courier New", monospace;
-    --font-size-base: 16px;
+    --font-size-base: 18px;
     --font-size-sm: 0.875rem;
     --font-size-lg: 1.25rem;
     --font-weight-regular: 400;
@@ -103,7 +103,7 @@
 /*****************************************************************/
 * { margin: 0; padding: 0; box-sizing: border-box; font-family: var(--font-primary); }
 h1, h2, h3, h4, h5, h6 { color: var(--heading-color); margin-bottom: 30px; }
-h2 { font-size: 1.6rem; }
+h2 { font-size: 1.6rem; margin-top: 30px; }
 h3 { font-size: 1.4rem; }
 h4 { font-size: 1.0rem; }
 
@@ -221,7 +221,7 @@ footer { width: 100%; margin-top: auto; padding: 20px 0; background-color: var(-
 @media (max-width: 1024px) {
     .site-title { display: none; }
     .nav-content a { padding: 10px 10px; font-size: 0.9rem; }
-    .container { padding-left: 20px; padding-right: 20px; }
+    .container { padding-left: 30px; padding-right: 30px; }
 }
 
 /* ==== Mobile (até 768px) ==== */
