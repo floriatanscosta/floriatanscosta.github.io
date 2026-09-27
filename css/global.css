@@ -195,9 +195,9 @@ footer { width: 100%; margin-top: auto; padding: 20px 0; background-color: var(-
 
 /* 10. Tooltips Customizados */
 /*****************************************************************/
-.custom-tooltip { position: relative; cursor: help; color: #5a729e; margin-left: 5px; font-size: 0.9em; font-weight: bold; }
-.custom-tooltip::after { content: attr(data-tooltip); position: absolute; bottom: 130%; left: 50%; transform: translateX(-50%); background-color: #4a90e2; color: #ffffff; padding: 6px 10px; border-radius: 4px; font-size: 12px; white-space: nowrap; opacity: 0; visibility: hidden; transition: opacity 0.2s ease; z-index: 10; font-weight: normal; box-shadow: 0 2px 4px rgba(0,0,0,0.2); pointer-events: none; }
-.custom-tooltip::before { content: ""; position: absolute; bottom: 100%; left: 50%; transform: translateX(-50%); border-width: 5px; border-style: solid; border-color: #4a90e2 transparent transparent transparent; opacity: 0; visibility: hidden; transition: opacity 0.2s ease; z-index: 10; pointer-events: none; }
+.custom-tooltip { position: relative; display: inline-block; cursor: pointer; margin-left: 5px; width: 15px; height: 20px; background-image: url('https://floriatan.com.br/assets/icons/help.svg'); background-size: contain; background-repeat: no-repeat; background-position: center; vertical-align: middle; font-size: 0; color: transparent; }
+.custom-tooltip::after { content: attr(data-tooltip); position: absolute; bottom: 130%; left: 50%; transform: translateX(-50%); background-color: #0855a0; color: #ffffff; padding: 10px 16px; border-radius: 6px; width: max-content; max-width: 300px; white-space: normal; font-size: 13px; font-weight: normal; line-height: 1.4; text-align: left; z-index: 1000; opacity: 0; visibility: hidden; transition: opacity 0.2s ease; box-shadow: 0 4px 8px rgba(0,0,0,0.15); pointer-events: none; }
+.custom-tooltip::before { content: ""; position: absolute; bottom: 100%; left: 50%; transform: translateX(-50%); border-width: 6px; border-style: solid; border-color: #0855a0 transparent transparent transparent; opacity: 0; visibility: hidden; transition: opacity 0.2s ease; z-index: 1000; pointer-events: none; }
 .custom-tooltip:hover::after, .custom-tooltip:hover::before { opacity: 1; visibility: visible; }
 
 /* 11. Modal / Pop-up Customizado */
