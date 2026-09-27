@@ -3,7 +3,6 @@
 // Configurações gerais, estrutura, variáveis, header e footer
 ================================================================== */
 
-/*****************************************************************/
 /* 1. Variáveis de cores e espaçamentos */
 /*****************************************************************/
 :root {
@@ -100,7 +99,6 @@
     --shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.8);
 }
 
-/*****************************************************************/
 /* 2. Reset básico e tipografia */
 /*****************************************************************/
 * { margin: 0; padding: 0; box-sizing: border-box; font-family: var(--font-primary); }
@@ -112,14 +110,12 @@ h4 { font-size: 1.0rem; }
 /* ==== Cor de seleção de texto ==== */
 ::selection { background-color: rgba(90, 114, 158, 0.3); color: inherit; }
 
-/*****************************************************************/
 /* 3. Estrutura principal (layout base) */
 /*****************************************************************/
 body { display: flex; flex-direction: column; min-height: 100vh; background-color: var(--bg-color); color: var(--text-main); }
 main { flex: 1; width: 100%; padding: var(--spacing-xl) 0; }
 .container { width: 100%; max-width: 1280px; margin: 0 auto; padding-left: 10px; padding-right: 10px; font-size: var(--font-size-base); }
 
-/*****************************************************************/
 /* 4. Cabeçalho (header) */
 /*****************************************************************/
 header { width: 100%; padding: 14px 0; background: var(--header-gradient); border-bottom: 1px solid var(--border-color); position: relative; transition: background-color var(--transition-normal), background var(--transition-normal); }
@@ -129,7 +125,6 @@ header { width: 100%; padding: 14px 0; background: var(--header-gradient); borde
 .site-title { margin-bottom: 0; font-size: 1.4rem; font-weight: 800; white-space: nowrap; }
 .header-right { display: flex; align-items: center; gap: 15px; }
 
-/*****************************************************************/
 /* 5. Componentes do cabeçalho (botões) */
 /*****************************************************************/
 .theme-toggle { margin-right: 15px; background: none; border: none; color: var(--heading-color); font-size: 1.5rem; cursor: pointer; transition: transform var(--transition-normal); }
@@ -144,7 +139,6 @@ header { width: 100%; padding: 14px 0; background: var(--header-gradient); borde
 .lang-dropdown-content button:last-child { border-bottom: none; }
 .lang-dropdown-content button:hover { background-color: rgba(90, 114, 158, 0.1); }
 
-/*****************************************************************/
 /* 6. Navegação principal (nav) */
 /*****************************************************************/
 .nav-content { display: flex; align-items: center; gap: 5px; }
@@ -152,7 +146,6 @@ header { width: 100%; padding: 14px 0; background: var(--header-gradient); borde
 .nav-content a:hover { border-bottom: 3px solid var(--heading-color); }
 .menu-toggle { display: none; background: none; border: none; color: var(--heading-color); font-size: 1.8rem; cursor: pointer; }
 
-/*****************************************************************/
 /* 7. Rodapé (footer) */
 /*****************************************************************/
 footer { width: 100%; margin-top: auto; padding: 20px 0; background-color: var(--footer-bg); color: var(--footer-text); }
@@ -163,7 +156,6 @@ footer { width: 100%; margin-top: auto; padding: 20px 0; background-color: var(-
 .footer-right a:hover { color: var(--heading-color); }
 .footer-right a:not(:last-child)::after { content: "|"; margin-left: 10px; color: var(--footer-text); opacity: 0.5; pointer-events: none; font-weight: 400; }
 
-/*****************************************************************/
 /* 8. Alertas e Tags (Sucesso, Aviso, Erro, Info) */
 /*****************************************************************/
 .alert-box { padding: 15px 20px; border-radius: var(--radius-md); border-left: 0px solid transparent; margin-bottom: 20px; font-size: 0.95rem; line-height: 1.5; display: flex; align-items: flex-start; gap: 10px; color: var(--text-main); }
@@ -181,7 +173,6 @@ footer { width: 100%; margin-top: auto; padding: 20px 0; background-color: var(-
 [data-theme="dark"] .tag-warning { color: #fcd34d; }
 [data-theme="dark"] .tag-error { color: #fca5a5; }
 
-/*****************************************************************/
 /* 9. Versão impressa */
 /*****************************************************************/
 @media print {
@@ -202,7 +193,6 @@ footer { width: 100%; margin-top: auto; padding: 20px 0; background-color: var(-
     main a.inline-link::after { content: " (" attr(href) ")"; font-size: 0.85em; color: #555555; }
 }
 
-/*****************************************************************/
 /* 10. Tooltips Customizados */
 /*****************************************************************/
 .custom-tooltip { position: relative; cursor: help; color: #5a729e; margin-left: 5px; font-size: 0.9em; font-weight: bold; }
@@ -210,7 +200,6 @@ footer { width: 100%; margin-top: auto; padding: 20px 0; background-color: var(-
 .custom-tooltip::before { content: ""; position: absolute; bottom: 100%; left: 50%; transform: translateX(-50%); border-width: 5px; border-style: solid; border-color: #4a90e2 transparent transparent transparent; opacity: 0; visibility: hidden; transition: opacity 0.2s ease; z-index: 10; pointer-events: none; }
 .custom-tooltip:hover::after, .custom-tooltip:hover::before { opacity: 1; visibility: visible; }
 
-/*****************************************************************/
 /* 11. Modal / Pop-up Customizado */
 /*****************************************************************/
 .modal-overlay { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.6); z-index: 1000; justify-content: center; align-items: center; opacity: 0; transition: opacity 0.3s ease; }
@@ -226,7 +215,6 @@ footer { width: 100%; margin-top: auto; padding: 20px 0; background-color: var(-
 .btn:hover { background-color: #42587b; }
 .btn:active { transform: translateY(1px); }
 
-/*****************************************************************/
 /* 12. Responsividade (media queries) */
 /*****************************************************************/
 /* ==== Tablet (até 1024px) ==== */

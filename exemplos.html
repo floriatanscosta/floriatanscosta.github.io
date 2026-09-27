@@ -5,13 +5,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/svg+xml" href="./assets/favicon.svg">
-    <!-- Meta Tags -->
-    <title>Examplos - Floriatan Santos Costa - Portfólio</title>
-    <meta name="description"
-        content="Portfólio acadêmico e profissional de Floriatan Santos Costa. Explore projetos, publicações e experiências.">
+    <title>Exemplos - Floriatan Santos Costa - Portfólio</title>
+    <meta name="description" content="Portfólio acadêmico e profissional de Floriatan Santos Costa. Explore projetos, publicações e experiências.">
     <meta property="og:title" content="Floriatan Santos Costa - Portfólio">
-    <meta property="og:description"
-        content="Portfólio acadêmico e profissional. Explore projetos, publicações e experiências.">
+    <meta property="og:description" content="Portfólio acadêmico e profissional. Explore projetos, publicações e experiências.">
     <meta property="og:image" content="./assets/img/cover.png">
     <meta name="theme-color" content="#5a729e">
     <meta property="og:type" content="website">
@@ -39,7 +36,8 @@
                 </a>
                 <h1 class="site-title">Floriatan Costa</h1>
             </div>
-            <!--  Menu -->
+
+            <!-- Menu -->
             <nav id="navMenu" class="nav-content">
                 <a href="/">Início</a>
                 <a href="/biografia">Biografia</a>
@@ -48,6 +46,7 @@
                 <a href="/premiacoes">Premiações</a>
                 <a href="/contato">Contato</a>
             </nav>
+
             <!-- Idioma e tema -->
             <div class="header-right">
                 <div class="lang-dropdown">
@@ -57,9 +56,9 @@
                         <button onclick="switchLanguage('en')">English (EN)</button>
                     </div>
                 </div>
-                <button id="theme-toggle" class="theme-toggle" onclick="toggleTheme()" title="Alternar Tema"
-                    style="padding: 0;"><img src="/assets/icons/escuro.svg" alt="Ativar Modo Escuro"
-                        style="width: 20px; height: 20px;"></button>
+                <button id="theme-toggle" class="theme-toggle" onclick="toggleTheme()" title="Alternar Tema">
+                    <img src="/assets/icons/escuro.svg" alt="Ativar Modo Escuro" style="width: 20px; height: 20px;">
+                </button>
                 <button class="menu-toggle" onclick="toggleMenu()">☰</button>
             </div>
         </div>
@@ -72,7 +71,6 @@
             <!-- Widget de Artigos Publicados -->
             <section class="col-1">
                 <h2>Artigos Publicados</h2>
-                
                 <div class="article-list">
                     <article class="article-item">
                         <h3 class="article-title">Alginate-encapsulated HDES as a green sorbent for elemental
@@ -96,7 +94,6 @@
             <section class="col-1">
                 <h2>Projetos de Pesquisa</h2>
                 <div class="project-grid">
-
                     <div class="project-card">
                         <h3>Micro-dispensation for Laser Ablation</h3>
                         <p>Desenvolvimento focado na dispensação de padrão multielementar. O projeto envolve o cálculo
@@ -107,7 +104,6 @@
                             <span class="tag">Microescala</span>
                         </div>
                     </div>
-
                     <div class="project-card">
                         <h3>Modificações de Superfície</h3>
                         <p>Avaliação detalhada e testes de modificações químicas e físicas na superfície das placas de
@@ -117,26 +113,23 @@
                             <span class="tag">Química</span>
                         </div>
                     </div>
-
                 </div>
             </section>
 
             <!-- Estilos Padrão de Texto -->
-            <section class="col-1 ">
+            <section class="col-1">
                 <h2>Elementos Tipográficos e de Conteúdo</h2>
-                <p>Este é um parágrafo normal demonstrando como o texto deve fluir. Aqui você tem um <a href="#"
-                        class="inline-link">link no meio do texto</a> que possui um efeito de hover elegante. Além
-                    disso, quando for mencionar linguagens de programação, você pode usar blocos de
-                    <code>código inline</code>.
-                </p>
+                <p>Este é um parágrafo normal demonstrando como o texto deve fluir. Aqui você tem um <a href="#" class="inline-link">link no meio do texto</a> que possui um efeito de hover elegante. Além disso, quando for mencionar linguagens de programação, você pode usar blocos de
+                    <code>código inline</code>.</p>
                 <blockquote>
                     "A formatação do blockquote (citação em bloco) foi projetada para dar destaque a frases importantes
                     ou trechos de outros autores, combinando com a paleta de azul do site."
                 </blockquote>
             </section>
 
-            <section class="col-1">
-                <div>
+            <!-- Ajustado para col-2 para gerar duas caixas de fundo branco emparelhadas -->
+            <section class="col-2">
+                <div style="padding: 20px;">
                     <h3>Lista não ordenada</h3>
                     <ul class="custom-list">
                         <li>Ideal para listar tópicos soltos ou características.</li>
@@ -144,7 +137,7 @@
                         <li>A cor e a fonte acompanham o padrão global do body.</li>
                     </ul>
                 </div>
-                <div>
+                <div style="padding: 20px;">
                     <h3>Lista ordenada</h3>
                     <ol class="custom-list">
                         <li>Primeira etapa de um experimento.</li>
@@ -154,14 +147,12 @@
                 </div>
             </section>
 
-
             <!-- Widget: Card de Perfil -->
             <section class="col-1">
                 <div class="profile-card">
-                    <!-- Substitua pelo link da sua foto real -->
-                    <img src="./assets/img/floriatan.png" alt="Foto de Floriatan" class="profile-img">
+                    <img src="./assets/logo.svg" alt="Foto de Floriatan" class="profile-img">
                     <div class="profile-info">
-                        <h3>Floriatan Dos Santos Costa</h3>
+                        <h3>Floriatan Santos Costa</h3>
                         <h4>Pesquisador | Universidade de Zaragoza</h4>
                         <p>Especialista no tratamento de dados para SP-ICP-MS e desenvolvimento de instrumentação em
                             microescala. Atualmente focado em pesquisas de micro-dispensação para ablação a laser e
@@ -170,11 +161,10 @@
                 </div>
             </section>
 
-            <!-- Widget: Formulário de Contato e Skills (Layout 2 colunas) -->
-            <section class="col-1">
+            <section class="col-2">
                 <!-- Formulário -->
-                <div>
-                    <h2>Entre em Contato</h2>
+                <div style="padding: 25px;">
+                    <h2 style="margin-bottom: 15px;">Entre em Contato</h2>
                     <p>Preencha o formulário abaixo para enviar uma mensagem direta.</p>
                     <form class="contact-form" action="#" method="POST">
                         <input type="text" name="nome" placeholder="Seu Nome" required>
@@ -184,33 +174,27 @@
                     </form>
                 </div>
 
-
-
                 <!-- Skills -->
-                <div>
-                    <h2>Competências Técnicas</h2>
-
+                <div style="padding: 25px;">
+                    <h2 style="margin-bottom: 25px;">Competências Técnicas</h2>
                     <div class="skill-box">
                         <div class="skill-name"><span>Tratamento de Dados (SP-ICP-MS)</span> <span>95%</span></div>
                         <div class="skill-bar">
                             <div class="skill-fill" style="width: 95%;"></div>
                         </div>
                     </div>
-
                     <div class="skill-box">
                         <div class="skill-name"><span>Micro-dispensação (Ablação a Laser)</span> <span>90%</span></div>
                         <div class="skill-bar">
                             <div class="skill-fill" style="width: 90%;"></div>
                         </div>
                     </div>
-
                     <div class="skill-box">
                         <div class="skill-name"><span>Geração de Vapor Frio (Mercúrio)</span> <span>85%</span></div>
                         <div class="skill-bar">
                             <div class="skill-fill" style="width: 85%;"></div>
                         </div>
                     </div>
-
                     <div class="skill-box">
                         <div class="skill-name"><span>HTML & CSS (Web Design)</span> <span>75%</span></div>
                         <div class="skill-bar">
@@ -220,11 +204,9 @@
                 </div>
             </section>
 
-
             <!-- Widget: Timeline -->
-            <section class="col-1">
+            <section class="col-1 margin-top-3">
                 <h2>Linha do Tempo Profissional</h2>
-
                 <div class="timeline">
                     <div class="timeline-item">
                         <div class="timeline-content">
@@ -235,7 +217,6 @@
                                 placas.</p>
                         </div>
                     </div>
-
                     <div class="timeline-item">
                         <div class="timeline-content">
                             <span class="timeline-date">Abril de 2026</span>
@@ -244,145 +225,125 @@
                                 instrumentação analítica na Universidad de Zaragoza.</p>
                         </div>
                     </div>
-
                 </div>
             </section>
 
-            <section class="grid-row grid-100">
-                <div class="card">
-                    <h2>Status do Sistema e Projetos</h2>
-
-                    <!-- EXEMPLOS DE CAIXAS DE ALERTA -->
-                    <div class="alert-box alert-info">
-                        <div><strong>Nota:</strong> A calibração dos equipamentos foi concluída e os relatórios estão
-                            disponíveis.</div>
-                    </div>
-                    <div class="alert-box alert-success">
-                        <div><strong>Sucesso!</strong> O formulário foi enviado e sua assinatura foi gerada
-                            corretamente.</div>
-                    </div>
-
-                    <div class="alert-box alert-warning">
-                        <div>The english version of this website is currently under construction. Please visit the
-                            Portuguese version for complete information.</div>
-                    </div>
-
-                    <div class="alert-box alert-error">
-                        <div><strong>Erro na leitura:</strong> Não foi possível processar o arquivo de dados. Verifique
-                            o formato e tente novamente.</div>
-                    </div>
-
-                    <!-- EXEMPLOS DE TAGS/BADGES -->
-                    <h3>Projetos Recentes</h3>
-                    <p>
-                        Artigo sobre espectrometria
-                        <span class="tag-badge tag-success">Publicado</span>
-                    </p>
-                    <p>
-                        Revisão de literatura em andamento
-                        <span class="tag-badge tag-warning">Em revisão</span>
-                    </p>
-                    <p>
-                        Extração de dados de pluviometria
-                        <span class="tag-badge tag-error">Falha na API</span>
-                    </p>
-                    <p>
-                        Atualização do Portfólio
-                        <span class="tag-badge tag-info">Versão 2.0</span>
-                    </p>
+            <!-- Status do Sistema (Removido o .card inexistente e aplicado estruturação padrão) -->
+            <section class="col-1 margin-top-3">
+                <h2 class="col-1a">Status do Sistema e Projetos</h2>
+                <!-- Alertas -->
+                <div class="alert-box alert-info">
+                    <div><strong>Nota:</strong> A calibração dos equipamentos foi concluída e os relatórios estão
+                        disponíveis.</div>
                 </div>
+                <div class="alert-box alert-success">
+                    <div><strong>Sucesso!</strong> O formulário foi enviado e sua assinatura foi gerada corretamente.
+                    </div>
+                </div>
+                <div class="alert-box alert-warning">
+                    <div>The english version of this website is currently under construction. Please visit the
+                        Portuguese version for complete information.</div>
+                </div>
+                <div class="alert-box alert-error">
+                    <div><strong>Erro na leitura:</strong> Não foi possível processar o arquivo de dados. Verifique o
+                        formato e tente novamente.</div>
+                </div>
+
+                <!-- Tags / Badges -->
+                <h3 style="margin-top: 30px;">Projetos Recentes</h3>
+                <p>Artigo sobre espectrometria <span class="tag-badge tag-success">Publicado</span></p>
+                <p>Revisão de literatura em andamento <span class="tag-badge tag-warning">Em revisão</span></p>
+                <p>Extração de dados de pluviometria <span class="tag-badge tag-error">Falha na API</span></p>
+                <p>Atualização do Portfólio <span class="tag-badge tag-info">Versão 2.0</span></p>
+
             </section>
 
-
-            <section class="col-1">
+            <!-- Seções Elegantes (Glassmorphism) -->
+            <section class="col-1 margin-top-3">
                 <div class="glass-panel">
-                    <h3>Título no Vidro</h3>
-                    <p>Este texto está flutuando sobre um fundo desfocado, exatamente como os widgets do iOS.</p>
+                    <h3>Painel Translúcido 1</h3>
+                    <p>Este texto flutua sobre um fundo desfocado. Coloque imagens com cores fortes por trás para
+                        realçar o glassmorphism.</p>
                 </div>
             </section>
-
-
-            <section class="col-1">
-                <div class="glass-panel">
-                    <h3>Título no Vidro</h3>
-                    <p>Este texto está flutuando sobre um fundo desfocado, exatamente como os widgets do iOS.</p>
-                </div>
-            </section>
-
-            <!-- Bloco 2: Inversão para ritmo visual -->
-            <section class="grid-row grid-50-50 margin-top-5" style="margin-bottom: 5rem;">
+            <section class="grid-row grid-50-50 margin-top-3" style="margin-bottom: 5rem;">
                 <div class="glass-panel glass-hover reveal"
                     style="order: 1; display: flex; flex-direction: column; justify-content: center;">
                     <h2 class="card-title-bold">Análise de Dados</h2>
                     <h3 class="card-subtitle">Algoritmos a favor da química</h3>
-                    <p>
-                        Através do processamento de sinais de LA-ICP-MS, transformamos pulsos transientes em informações
-                        estruturadas. Uma abordagem onde o rigor científico encontra a automação.
-                    </p>
+                    <p>Através do processamento de sinais de LA-ICP-MS, transformamos pulsos transientes em informações
+                        estruturadas. Uma abordagem onde o rigor científico encontra a automação.</p>
                 </div>
                 <div class="img-reveal-box reveal" style="order: 2;">
-                    <!-- Substitua pelo caminho da sua imagem -->
                     <img src="/assets/cover.png" alt="Dados Analíticos" class="img-reveal-img">
                 </div>
             </section>
 
+            <!-- Demonstração das Tags Universais -->
             <section class="col-1">
-                <span class="ui-tag ui-tag-solid-primary">Análise</span>
-                <span class="ui-tag ui-tag-solid-success">Concluído</span>
-                <span class="ui-tag ui-tag-solid-danger">Erro</span>
-                <span class="ui-tag ui-tag-solid-warning">Pendente</span>
-                <span class="ui-tag ui-tag-solid-dark">Laboratório</span>
+                <h3 class="col-1a">Biblioteca de Componentes: Tags</h3>
+
+                <div style="margin-bottom: 15px; display: flex; gap: 8px; flex-wrap: wrap;">
+                    <span class="ui-tag ui-tag-solid-primary">Análise</span>
+                    <span class="ui-tag ui-tag-solid-success">Concluído</span>
+                    <span class="ui-tag ui-tag-solid-danger">Erro</span>
+                    <span class="ui-tag ui-tag-solid-warning">Pendente</span>
+                    <span class="ui-tag ui-tag-solid-dark">Laboratório</span>
+                </div>
+
+                <div style="margin-bottom: 15px; display: flex; gap: 8px; flex-wrap: wrap;">
+                    <span class="ui-tag ui-tag-soft-primary">spICP-MS</span>
+                    <span class="ui-tag ui-tag-soft-success">Publicado</span>
+                    <span class="ui-tag ui-tag-soft-danger">Revisão</span>
+                    <span class="ui-tag ui-tag-soft-warning">Rascunho</span>
+                    <span class="ui-tag ui-tag-soft-purple">Python</span>
+                </div>
+
+                <div style="margin-bottom: 15px; display: flex; gap: 8px; flex-wrap: wrap;">
+                    <span class="ui-tag ui-tag-outline-primary">Espectrometria</span>
+                    <span class="ui-tag ui-tag-outline-success">Aprovado</span>
+                    <span class="ui-tag ui-tag-outline-danger">Cancelado</span>
+                    <span class="ui-tag ui-tag-outline-warning">Atenção</span>
+                    <span class="ui-tag ui-tag-outline-dark">Backend</span>
+                </div>
+
+                <div style="margin-bottom: 15px; display: flex; gap: 8px; flex-wrap: wrap;">
+                    <span class="ui-tag ui-tag-gradient-blue">Inovação</span>
+                    <span class="ui-tag ui-tag-gradient-pink">Destaque</span>
+                    <span class="ui-tag ui-tag-gradient-purple">Premium</span>
+                    <span class="ui-tag ui-tag-gradient-dark">Exclusivo</span>
+                </div>
+
+                <div style="margin-bottom: 15px; display: flex; gap: 8px; flex-wrap: wrap;">
+                    <span class="ui-tag ui-tag-glow-primary">Novo Recurso</span>
+                    <span class="ui-tag ui-tag-glow-success">Online</span>
+                    <span class="ui-tag ui-tag-pulse">Urgente</span>
+                    <span class="ui-tag ui-tag-glass">Foto do Lab</span>
+                </div>
             </section>
 
-
+            <!-- Demonstração das Tags ODS -->
             <section class="col-1">
-                <span class="ui-tag ui-tag-soft-primary">spICP-MS</span>
-                <span class="ui-tag ui-tag-soft-success">Publicado</span>
-                <span class="ui-tag ui-tag-soft-danger">Revisão</span>
-                <span class="ui-tag ui-tag-soft-warning">Rascunho</span>
-                <span class="ui-tag ui-tag-soft-purple">Python</span>
-            </section>
-
-            <section class="col-1">
-                <span class="ui-tag ui-tag-outline-primary">Espectrometria</span>
-                <span class="ui-tag ui-tag-outline-success">Aprovado</span>
-                <span class="ui-tag ui-tag-outline-danger">Cancelado</span>
-                <span class="ui-tag ui-tag-outline-warning">Atenção</span>
-                <span class="ui-tag ui-tag-outline-dark">Backend</span>
-            </section>
-
-            <section class="col-1">
-                <span class="ui-tag ui-tag-gradient-blue">Inovação</span>
-                <span class="ui-tag ui-tag-gradient-pink">Destaque</span>
-                <span class="ui-tag ui-tag-gradient-purple">Premium</span>
-                <span class="ui-tag ui-tag-gradient-dark">Exclusivo</span>
-            </section>
-
-            <section class="col-1">
-                <span class="ui-tag ui-tag-glow-primary">Novo Recurso</span>
-                <span class="ui-tag ui-tag-glow-success">Online</span>
-                <span class="ui-tag ui-tag-pulse">Urgente</span>
-                <span class="ui-tag ui-tag-glass">Foto do Laboratório</span>
-            </section>
-
-            <section class="col-1">
-                <span class="ui-tag-ods ods-1">ODS 1</span>
-                <span class="ui-tag-ods ods-2">ODS 2</span>
-                <span class="ui-tag-ods ods-3">ODS 3</span>
-                <span class="ui-tag-ods ods-4">ODS 4</span>
-                <span class="ui-tag-ods ods-5">ODS 5</span>
-                <span class="ui-tag-ods ods-6">ODS 6</span>
-                <span class="ui-tag-ods ods-7">ODS 7</span>
-                <span class="ui-tag-ods ods-8">ODS 8</span>
-                <span class="ui-tag-ods ods-9">ODS 9</span>
-                <span class="ui-tag-ods ods-10">ODS 10</span>
-                <span class="ui-tag-ods ods-11">ODS 11</span>
-                <span class="ui-tag-ods ods-12">ODS 12</span>
-                <span class="ui-tag-ods ods-13">ODS 13</span>
-                <span class="ui-tag-ods ods-14">ODS 14</span>
-                <span class="ui-tag-ods ods-15">ODS 15</span>
-                <span class="ui-tag-ods ods-16">ODS 16</span>
-                <span class="ui-tag-ods ods-17">ODS 17</span>
+                <h3 class="col-1a">Biblioteca de Componentes: ODS</h3>
+                <div style="display: flex; gap: 8px; flex-wrap: wrap;">
+                    <span class="ui-tag-ods ods-1">ODS 1</span>
+                    <span class="ui-tag-ods ods-2">ODS 2</span>
+                    <span class="ui-tag-ods ods-3">ODS 3</span>
+                    <span class="ui-tag-ods ods-4">ODS 4</span>
+                    <span class="ui-tag-ods ods-5">ODS 5</span>
+                    <span class="ui-tag-ods ods-6">ODS 6</span>
+                    <span class="ui-tag-ods ods-7">ODS 7</span>
+                    <span class="ui-tag-ods ods-8">ODS 8</span>
+                    <span class="ui-tag-ods ods-9">ODS 9</span>
+                    <span class="ui-tag-ods ods-10">ODS 10</span>
+                    <span class="ui-tag-ods ods-11">ODS 11</span>
+                    <span class="ui-tag-ods ods-12">ODS 12</span>
+                    <span class="ui-tag-ods ods-13">ODS 13</span>
+                    <span class="ui-tag-ods ods-14">ODS 14</span>
+                    <span class="ui-tag-ods ods-15">ODS 15</span>
+                    <span class="ui-tag-ods ods-16">ODS 16</span>
+                    <span class="ui-tag-ods ods-17">ODS 17</span>
+                </div>
             </section>
 
         </div>
@@ -404,7 +365,6 @@
 
     <!-- Scripts -->
     <script src="./js/app.js"></script>
-
 </body>
 
 </html>
