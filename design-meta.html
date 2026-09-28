@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Floriatan - Design System UI Kit</title>
+    <!-- Inclua os caminhos corretos para os seus CSS -->
+    <link rel="stylesheet" href="./web/components/style.css">
+    <link rel="stylesheet" href="./web/css/style.css">
+    <link rel="stylesheet" href="./css/global.css">
+    <link rel="stylesheet" href="./css/main.css">
+
+    <style>
+        /* Estilos específicos apenas para organizar a página de apresentação */
+        body {
+       
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        .ds-section {
+            margin-bottom: 60px;
+            padding-bottom: 40px;
+            border-bottom: 1px dashed var(--border-color);
+        }
+
+        .ds-title {
+            font-size: 2rem;
+            border-left: 5px solid var(--heading-color);
+            padding-left: 15px;
+            margin-bottom: 30px;
+        }
+
+        .color-swatch {
+            width: 100%;
+            height: 80px;
+            border-radius: var(--radius-md);
+            margin-bottom: 10px;
+            border: 1px solid rgba(0, 0, 0, 0.1);
+        }
+
+        .swatch-label {
+            font-family: var(--font-mono);
+            font-size: 0.8rem;
+            font-weight: bold;
+        }
+
+        .ds-theme-btn {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            z-index: 1000;
+        }
+    </style>
+</head>
+
+<body>
+
+<!-- components/header.html (PORTUGUÊS) -->
+<header>
+    <div class="container header-content">
+        <a href="/">
+            <img src="https://floriatan.com.br/assets/logo.svg" alt="Logo Floriatan" class="logo-img">
+        </a>
+        <h1 class="site-title">Floriatan Santos Costa</h1>
+        
+        <!-- Agrupando os botões na direita -->
+        <div style="display: flex; justify-content: flex-end; align-items: center; gap: 15px;">
+            <!-- Botões de Idioma -->
+            <div class="lang-dropdown">
+                <button class="lang-dropbtn">PT</button>
+                <div class="lang-dropdown-content">
+                    <button onclick="switchLanguage('pt')">Português (PT)</button>
+                    <button onclick="switchLanguage('en')">English (EN)</button>
+                    <button onclick="switchLanguage('en')">Español (ES)</button>
+                </div>
+            </div>
+            <!-- Botão de Tema (Modo Escuro) com SVG -->
+            <button id="theme-toggle" class="theme-toggle" onclick="toggleTheme()" title="Alternar Tema" style="padding: 0;">
+                <img src="https://floriatan.com.br/assets/icons/escuro.svg" alt="Ativar Modo Escuro" style="width: 20px; height: 20px;">
+            </button>
+            <!-- Botão Menu Mobile -->
+            <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+        </div>
+    </div>
+</header>
+<nav>
+    <div class="container nav-content" id="navMenu">
+        <a href="/">Início</a>
+    </div>
+</nav>
+
+    <div class="container">
+        <h1 style="font-size: 3rem; margin-bottom: 10px;">UI Kit & Design System</h1>
+        <p class="text-muted text-lg margin-bottom-3">Componentes base, utilitários e sistema de grelha.</p>
+
+        <!-- Cores -->
+        <div class="ds-section">
+            <h2 class="ds-title">Paleta de Cores (Variáveis)</h2>
+            <div class="grid-row grid-50-50">
+                <div>
+                    <div class="color-swatch" style="background-color: var(--heading-color);"></div>
+                    <span class="swatch-label">--heading-color</span>
+                </div>
+                <div>
+                    <div class="color-swatch" style="background-color: var(--box-bg);"></div>
+                    <span class="swatch-label">--box-bg</span>
+                </div>
+                <div>
+                    <div class="color-swatch" style="background-color: var(--border-color);"></div>
+                    <span class="swatch-label">--border-color</span>
+                </div>
+                <div>
+                    <div class="color-swatch" style="background-color: #4CB96E;"></div>
+                    <span class="swatch-label">--semantic-success</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Tipografia -->
+        <div class="ds-section">
+            <h2 class="ds-title">Tipografia & Utilitários de Texto</h2>
+            <div class="card">
+                <h1>Cabeçalho H1 (Heading Color)</h1>
+                <h2>Cabeçalho H2</h2>
+                <h3>Cabeçalho H3</h3>
+                <p class="text-base leading-normal">
+                    <strong>Texto base de corpo:</strong> Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    A utilidade da formatação <a href="#" class="inline-link">inline-link</a> destaca-se ao ler.
+                    <span class="text-muted">Texto muted para notas auxiliares.</span>
+                </p>
+                <blockquote>Bloco de citação (Blockquote) utilizado para notas importantes ou citações de artigos
+                    científicos.</blockquote>
+            </div>
+        </div>
+
+        <!-- Botões e Tags -->
+        <div class="ds-section">
+            <h2 class="ds-title">Ações & Etiquetas (Tags)</h2>
+            <div class="card">
+                <h3 class="text-lg">Botões Padrão</h3>
+                <div class="btn-group" style="margin-bottom: 25px;">
+                    <button class="btn">Botão Primário</button>
+                    <button class="btn btn-outline">Botão Outline</button>
+                    <button class="btn" disabled>Botão Desativado</button>
+                    <button class="btn"><span class="spinner"></span> Carregando</button>
+                </div>
+
+                <h3 class="text-lg">UI Tags (Sistema de Categorização)</h3>
+                <div style="display: flex; gap: 10px; flex-wrap: wrap;">
+                    <span class="ui-tag ui-tag-solid-primary">Primary</span>
+                    <span class="ui-tag ui-tag-soft-success">Success Soft</span>
+                    <span class="ui-tag ui-tag-outline-warning">Warning Outline</span>
+                    <span class="ui-tag ui-tag-gradient-purple">Gradient</span>
+                    <span class="ui-tag ui-tag-glow-primary">Glow Effect</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Formulários Globais -->
+        <div class="ds-section">
+            <h2 class="ds-title">Componentes de Formulário</h2>
+            <div class="form-panel">
+                <form class="form-grid">
+                    <div class="form-group full-width">
+                        <label>Campo de Texto Padrão</label>
+                        <input type="text" class="form-control" placeholder="Introduza texto aqui...">
+                    </div>
+                    <div class="form-group">
+                        <label>Menu Suspenso (Select)</label>
+                        <select class="form-control">
+                            <option>Opção 1</option>
+                            <option>Opção 2</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>Campo Bloqueado</label>
+                        <input type="text" class="form-control" value="Apenas Leitura" disabled>
+                    </div>
+                    <div class="form-group full-width">
+                        <label class="form-check">
+                            <input type="checkbox"> Eu concordo com os termos utilitários.
+                        </label>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <!-- Estruturas Modulares Avançadas -->
+        <div class="ds-section">
+            <h2 class="ds-title">Grelha Modular & Componentes Complexos</h2>
+
+            <h3 class="text-lg">Secção Expansível (Accordion)</h3>
+            <details class="accordion margin-bottom-3">
+                <summary>Parâmetros Técnicos Ocultos</summary>
+                <div class="accordion-content">
+                    Detalhes que requerem expansão manual para não poluir o ecrã com informação excessiva de primeiro
+                    nível.
+                </div>
+            </details>
+
+            <h3 class="text-lg">Project Cards (Diretório)</h3>
+            <div class="project-grid">
+                <!-- Cartão 1 -->
+                <div class="project-card">
+                    <div>
+                        <div class="project-cover-box">
+                            <!-- Skeleton loader para simular imagem a carregar -->
+                            <div class="skeleton" style="width: 100%; height: 100%;"></div>
+                        </div>
+                        <h3>Ferramenta Beta</h3>
+                        <p>Descrição do utilitário com alinhamento vertical flexível.</p>
+                    </div>
+                    <div class="project-footer">
+                        <button class="btn btn-block btn-outline">Explorar</button>
+                    </div>
+                </div>
+                <!-- Cartão 2 -->
+                <div class="project-card">
+                    <div>
+                        <div class="project-cover-box" style="background: var(--header-gradient);"></div>
+                        <h3>Design Base</h3>
+                        <p>Grelha automatizada suportada por CSS Grid puro.</p>
+                    </div>
+                    <div class="project-footer">
+                        <button class="btn btn-block">Acessar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Scripts -->
+    <script src="./js/app.js"></script>
+
+    
+</body>
+
+</html>
