@@ -52,6 +52,7 @@ ul.custom-list li, ol.custom-list li { margin-bottom: 6px; }
 .leading-loose { line-height: 1.9; }
 /* ==== Cores e Modificadores ==== */
 .text-primary { color: var(--heading-color); }
+.text-claro { color: var(--text-main-3)} 
 .text-muted { color: var(--text-main); opacity: 0.7; }
 .italic { font-style: italic; }
 .mb-0 { margin-bottom: 0; }
