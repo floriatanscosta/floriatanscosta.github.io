@@ -121,8 +121,9 @@
      "summary": {"pt": "Participação ativa e crítica de licenciandos na prática docente.", "en": "Active, critical participation of pre-service teachers in teaching practice.", "es": "Participación activa y crítica de futuros docentes en la práctica docente."}}
   ],
   "reviewer": [
-    {"since": 2026, "journal": "Analytical Letters"},
-    {"since": 2026, "journal": "Scientific Reports"},
+    {"since": 2026, "journal": "Analytical Letters", "url": "https://www.tandfonline.com/journals/lanl20"},
+    {"since": 2026, "journal": "Talanta", "url": "https://www.sciencedirect.com/journal/talanta"},
+    {"since": 2026, "journal": "Scientific Reports", "url": "https://www.nature.com/srep/"},
     {"since": 2025, "journal": "TrAC Trends in Analytical Chemistry", "url": "https://www.sciencedirect.com/journal/trac-trends-in-analytical-chemistry"},
     {"since": 2025, "journal": "Chemometrics and Intelligent Laboratory Systems", "url": "https://www.sciencedirect.com/journal/chemometrics-and-intelligent-laboratory-systems"},
     {"since": 2025, "journal": "Química Nova", "url": "https://quimicanova.sbq.org.br/"},
@@ -131,8 +132,7 @@
     {"since": 2025, "journal": "Sustainable Chemistry and Pharmacy", "url": "https://www.sciencedirect.com/journal/sustainable-chemistry-and-pharmacy"},
     {"since": 2025, "journal": "Journal of the Iranian Chemical Society", "url": "https://link.springer.com/journal/13738"},
     {"since": 2025, "journal": "Journal of Food Composition and Analysis", "url": "https://www.sciencedirect.com/journal/journal-of-food-composition-and-analysis"},
-    {"since": 2025, "journal": "Advances in Sample Preparation", "url": "https://www.sciencedirect.com/journal/advances-in-sample-preparation"},
-    {"since": 2024, "journal": "Green Analytical Chemistry", "url": "https://www.sciencedirect.com/journal/green-analytical-chemistry"},
+    {"since": 2025, "journal": "Green Analytical Chemistry", "url": "https://www.sciencedirect.com/journal/green-analytical-chemistry"},
     {"since": 2024, "journal": "Food Chemistry", "url": "https://www.sciencedirect.com/journal/food-chemistry"},
     {"since": 2024, "journal": "Microchimica Acta", "url": "https://link.springer.com/journal/604"},
     {"since": 2024, "journal": "Eclética Química Journal", "url": "https://revista.iq.unesp.br/index.php/ecletica"},
@@ -141,7 +141,7 @@
     {"since": 2022, "journal": "Food Analytical Methods", "url": "https://link.springer.com/journal/12161"},
     {"since": 2021, "journal": "Chinese Journal of Analytical Chemistry", "url": "https://www.sciencedirect.com/journal/chinese-journal-of-analytical-chemistry"},
     {"since": 2021, "journal": "Journal of Environmental Management", "url": "https://www.sciencedirect.com/journal/journal-of-environmental-management"},
-    {"since": 2021, "journal": "Environmental Geochemistry and Health", "url": "https://link.springer.com/journal/10653"}
+    {"since": 2021, "journal": "Environmental Geochemistry and Health", "url":"https://link.springer.com/journal/10653"}
   ],
   "chapters": [
     {"year": 2023, "authors": "Junqueira, L. L.; <b>Costa, F. S.</b>; Franco, M.; de Assis, S. A.",
@@ -210,11 +210,11 @@
     {"year": 2023, "candidate": "Helena Bezerra Ferrari", "title": "Estudo da eficiência de solventes eutéticos profundos naturais no preparo de amostra para determinação elementar em Ora-pro-nóbis", "institution": "Universidade Federal do Espírito Santo"}
   ],
   "metrics": {
-    "date": "2026-10-06",
+    "date": "2026-10-17",
     "sources": [
-      {"id": "scopus", "label": "Scopus®", "owner": "Elsevier", "url": "https://www.scopus.com/authid/detail.uri?authorId=57216746115", "docs": 44, "citations": 419, "h": 14, "h_date": "2026-09-16"},
+      {"id": "scopus", "label": "Scopus®", "owner": "Elsevier", "url": "https://www.scopus.com/authid/detail.uri?authorId=57216746115", "docs": 44, "citations": 421, "h": 14, "h_date": "2026-10-17"},
       {"id": "wos", "label": "Web of Science™", "owner": "Clarivate", "url": "https://www.webofscience.com/wos/author/record/S-1383-2018", "docs": 47, "citations": 361, "h": 14},
-      {"id": "scholar", "label": "Google Scholar", "owner": "Google", "url": "https://scholar.google.com/citations?user=EbyxxAoAAAAJ", "docs": 54, "citations": 480, "h": 14, "h_date": "2026-09-16"}
+      {"id": "scholar", "label": "Google Scholar", "owner": "Google", "url": "https://scholar.google.com/citations?user=EbyxxAoAAAAJ", "docs": 54, "citations": 482, "h": 14, "h_date": "2026-10-17"}
     ]
   },
   "totals": [
