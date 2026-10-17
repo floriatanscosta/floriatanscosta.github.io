@@ -109,11 +109,11 @@ cite { font-style: italic; }
 .cover-image { width: 100%; max-width: 520px; height: auto; display: block; }
 .intro-title { font-size: clamp(2.1rem, 4.6vw, 3.3rem); line-height: 1.04; font-weight: 900; letter-spacing: -0.025em; color: var(--heading-color); margin: 0 0 22px; }
 .intro-text { font-size: clamp(1.1rem, 1.7vw, 1.3rem); line-height: 1.5; margin-bottom: 22px; }
-.current-pos { display: flex; align-items: center; gap: 14px; padding: 12px 16px; border-radius: var(--radius-md); background: var(--box-bg); border: 1px solid var(--border-color); max-width: 520px; margin-bottom: 22px; }
+.current-pos { display: flex; align-items: center; gap: 14px; padding: 12px 16px; border-radius: var(--radius-md); background: var(--box-bg); border: 1px solid var(--border-color); max-width: 602px; margin-bottom: 22px; }
 .current-pos > span { display: flex; flex-direction: column; line-height: 1.35; font-size: 0.95rem; }
 .current-pos strong { color: var(--heading-strong); }
 .current-pos .tl-logo { width: 88px; height: 55px; }
-.profile-links { display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); gap: 12px; }
+.profile-links { display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); gap: 12px; max-width: 602px; }
 .profile-link { display: flex; flex-direction: column; align-items: center; gap: 8px; padding: 14px 6px 12px; border-radius: var(--radius-md); background: var(--box-bg); border: 1px solid var(--border-color); box-shadow: var(--shadow-sm); color: var(--text-main); font-size: 0.78rem; font-weight: 600; text-align: center; transition: transform var(--transition-fast), box-shadow var(--transition-fast); }
 .profile-link:hover { transform: translateY(-3px); box-shadow: var(--shadow-md); border-color: var(--border-color); }
 .profile-link img { width: 32px; height: 32px; }
