@@ -1,5 +1,10 @@
 User-agent: *
 Allow: /
-Sitemap: https://floriatan.com.br/sitemap.xml
-Disallow: /components/
 Disallow: /_includes/
+Disallow: /test.html
+Disallow: /exemplos.html
+Disallow: /template.html
+Disallow: /guia.html
+Disallow: /design-meta.html
+
+Sitemap: https://floriatan.com.br/sitemap.xml

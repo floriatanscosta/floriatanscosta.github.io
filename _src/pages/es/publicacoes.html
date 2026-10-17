@@ -1,0 +1,22 @@
+title: Publicaciones
+description: Lista completa de artículos científicos de Floriatan Santos Costa en revistas con revisión por pares, con autores, revista y DOI.
+scripts: /js/publications.js
+---
+<section class="page-hero container">
+  <p class="eyebrow">Publicaciones</p>
+  <h1>Artículos científicos</h1>
+  <p class="lead">{{counts}} artículos en revistas con revisión por pares, del más reciente al más antiguo. Los títulos se mantienen en su idioma original.</p>
+  <p class="page-hero__links">La lista también está disponible en <a class="inline-link" href="http://lattes.cnpq.br/0287106268880389" target="_blank" rel="noopener noreferrer">Lattes</a>, <a class="inline-link" href="https://orcid.org/0000-0001-7766-2860" target="_blank" rel="noopener noreferrer">ORCID</a> y <a class="inline-link" href="https://www.scopus.com/authid/detail.uri?authorId=57216746115" target="_blank" rel="noopener noreferrer">Scopus®</a>. Vea también las <a class="inline-link" href="{{url:metricas}}">métricas</a> y la <a class="inline-link" href="{{url:producao}}">producción en congresos y libros</a>.</p>
+</section>
+
+<div class="container">
+  <section class="section" aria-labelledby="h-artigos">
+    <h2 id="h-artigos" class="visually-hidden">Artículos en revistas</h2>
+    {{articles}}
+  </section>
+
+  <section class="section" aria-labelledby="h-magazine">
+    <h2 id="h-magazine" class="section-title">Artículo en revista de divulgación</h2>
+    {{magazine}}
+  </section>
+</div>

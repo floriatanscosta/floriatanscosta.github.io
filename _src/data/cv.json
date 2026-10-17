@@ -1,0 +1,964 @@
+{
+  "_comment": "Dados extraídos do Currículo Lattes (versão de 06/10/2026). Campos com {pt,en,es} são traduzidos; títulos de trabalhos, nomes de instituições, eventos e periódicos ficam no idioma original.",
+  "person": {
+    "name": "Floriatan Santos Costa",
+    "short_name": "Floriatan Costa",
+    "email": "floriatanscosta@gmail.com",
+    "email_alt": "floriatancosta@ufpr.br",
+    "hometown": "Guanambi (BA), Brasil",
+    "address": [
+      "Universidad de Zaragoza — Facultad de Ciencias",
+      "Calle Pedro Cerbuna, 12",
+      "50009 Zaragoza, España"
+    ],
+    "job": {
+      "pt": "Pesquisador de Pós-Doutorado",
+      "en": "Postdoctoral Researcher",
+      "es": "Investigador Posdoctoral"
+    },
+    "affiliation": "Universidad de Zaragoza",
+    "citation_names": "COSTA, F. S.; COSTA, FLORIATAN SANTOS; COSTA, FLORIATAN S.; SANTOS COSTA, FLORIATAN; COSTA, F. SANTOS"
+  },
+  "profiles": [
+    {
+      "id": "orcid",
+      "label": "ORCID",
+      "url": "https://orcid.org/0000-0001-7766-2860",
+      "icon": "orcid.svg",
+      "handle": "0000-0001-7766-2860"
+    },
+    {
+      "id": "scholar",
+      "label": "Google Scholar",
+      "url": "https://scholar.google.com/citations?user=EbyxxAoAAAAJ",
+      "icon": "academico.svg",
+      "handle": "EbyxxAoAAAAJ"
+    },
+    {
+      "id": "researchgate",
+      "label": "ResearchGate",
+      "url": "https://www.researchgate.net/profile/Floriatan-Costa",
+      "icon": "rg.svg",
+      "handle": "Floriatan-Costa"
+    },
+    {
+      "id": "lattes",
+      "label": "Lattes",
+      "url": "http://lattes.cnpq.br/0287106268880389",
+      "icon": "lattes.svg",
+      "handle": "0287106268880389"
+    },
+    {
+      "id": "linkedin",
+      "label": "LinkedIn",
+      "url": "https://www.linkedin.com/in/floriatanscosta/",
+      "icon": "linkedin.svg",
+      "handle": "floriatanscosta"
+    }
+  ],
+  "awards": [
+    {
+      "year": 2025,
+      "type": "best",
+      "where": "XXV Simpósio Brasileiro de Eletroquímica e Eletroanalítica"
+    },
+    {
+      "year": 2024,
+      "type": "thesis",
+      "where": "Universidade Federal do Paraná",
+      "name": "Melhor Tese PPGQ UFPR — Prêmio Excelência Acadêmica da Pós-graduação 2024"
+    },
+    {
+      "year": 2024,
+      "type": "best",
+      "where": "47ª Reunião Anual da Sociedade Brasileira de Química — Divisão de Química Analítica da SBQ"
+    },
+    {
+      "year": 2024,
+      "type": "best",
+      "where": "21º Encontro Nacional de Química Analítica"
+    },
+    {
+      "year": 2024,
+      "type": "paper",
+      "where": "Oral Surgery, Oral Medicine, Oral Pathology and Oral Radiology (Elsevier)",
+      "name": "2024 Best Paper Awards"
+    },
+    {
+      "year": 2023,
+      "type": "honorable",
+      "where": "Semana Acadêmica de Engenharia de Alimentos da Universidade Federal do Amazonas"
+    },
+    {
+      "year": 2022,
+      "type": "best",
+      "where": "20º Encontro Nacional de Química Analítica"
+    },
+    {
+      "year": 2018,
+      "type": "best",
+      "where": "24º Seminário de Iniciação Científica da Universidade Estadual de Santa Cruz (UESC)"
+    }
+  ],
+  "education": [
+    {
+      "years": "2019–2023",
+      "degree": {
+        "pt": "Doutorado em Química",
+        "en": "PhD in Chemistry",
+        "es": "Doctorado en Química"
+      },
+      "institution": "Universidade Federal do Paraná (UFPR)",
+      "place": "Curitiba, Brasil",
+      "logo": "ufpr.svg",
+      "thesis": "Solventes eutéticos profundos aplicados no desenvolvimento de métodos para determinação elementar em amostras de composição orgânica e inorgânica",
+      "advisor": "Clarice Dias Britto do Amaral",
+      "coadvisor": "Mario Henrique Gonzalez",
+      "funding": "CAPES"
+    },
+    {
+      "years": "2017–2019",
+      "degree": {
+        "pt": "Mestrado em Química",
+        "en": "MSc in Chemistry",
+        "es": "Máster en Química"
+      },
+      "institution": "Universidade Estadual de Santa Cruz (UESC)",
+      "place": "Ilhéus, Brasil",
+      "thesis": "Desenvolvimento de metodologia de extração assistida por ultrassom para determinação de metais em tecidos vegetais (<i>Rhizophora mangle</i> L. e <i>Laguncularia racemosa</i> (L.) C.F.Gaertn) por Espectrometria de Absorção Atômica em Chama",
+      "advisor": "Erik Galvão Paranhos da Silva",
+      "coadvisor": "Luana Novaes Santos",
+      "funding": "FAPESB"
+    },
+    {
+      "years": "2012–2016",
+      "degree": {
+        "pt": "Graduação em Química (Licenciatura)",
+        "en": "Undergraduate degree in Chemistry (Teaching)",
+        "es": "Grado en Química (Licenciatura)"
+      },
+      "institution": "Instituto Federal de Educação, Ciência e Tecnologia Baiano (IF Baiano)",
+      "place": "Campus Guanambi, Brasil"
+    }
+  ],
+  "complementary": [
+    {
+      "year": 2021,
+      "title": "Curso de Comunicação e Escrita Científica",
+      "org": "ACS Publications",
+      "hours": 4
+    },
+    {
+      "year": 2020,
+      "title": "Análise de Componentes Principais: Fundamentos e Aplicações",
+      "org": "Universidade Tecnológica Federal do Paraná (UTFPR)",
+      "hours": 2
+    },
+    {
+      "year": 2020,
+      "title": "Ciência, comunicação científica e inovação: desafios transversais",
+      "org": "ACS Publications",
+      "hours": 2
+    },
+    {
+      "year": 2013,
+      "title": "Estratégias de Ensino em Educação Química",
+      "org": "IF Baiano",
+      "hours": 4
+    }
+  ],
+  "positions": [
+    {
+      "years": {
+        "pt": "2026 – atual",
+        "en": "2026 – present",
+        "es": "2026 – actualidad"
+      },
+      "current": true,
+      "logo": "unizar.svg",
+      "institution": "Universidad de Zaragoza (UNIZAR)",
+      "place": "Zaragoza, España",
+      "role": {
+        "pt": "Pesquisador de Pós-Doutorado",
+        "en": "Postdoctoral Researcher",
+        "es": "Investigador Posdoctoral"
+      }
+    },
+    {
+      "years": {
+        "pt": "11/2024 – atual",
+        "en": "11/2024 – present",
+        "es": "11/2024 – actualidad"
+      },
+      "current": true,
+      "logo": "ufpr.svg",
+      "institution": "Universidade Federal do Paraná (UFPR) — Departamento de Química",
+      "place": "Curitiba, Brasil",
+      "role": {
+        "pt": "Pesquisador de Pós-Doutorado (bolsista CAPES)",
+        "en": "Postdoctoral Researcher (CAPES fellowship)",
+        "es": "Investigador Posdoctoral (beca CAPES)"
+      },
+      "detail": {
+        "pt": "Linha de pesquisa: desenvolvimento de métodos de microextração e especiação.",
+        "en": "Research line: development of microextraction and speciation methods.",
+        "es": "Línea de investigación: desarrollo de métodos de microextracción y especiación."
+      }
+    },
+    {
+      "years": {
+        "pt": "2024",
+        "en": "2024",
+        "es": "2024"
+      },
+      "logo": "embrapa.svg",
+      "institution": "Empresa Brasileira de Pesquisa Agropecuária (Embrapa)",
+      "place": "Brasil",
+      "role": {
+        "pt": "Pesquisador de Pós-Doutorado (bolsista CNPq)",
+        "en": "Postdoctoral Researcher (CNPq fellowship)",
+        "es": "Investigador Posdoctoral (beca CNPq)"
+      }
+    },
+    {
+      "years": {
+        "pt": "06/2019 – 11/2023",
+        "en": "06/2019 – 11/2023",
+        "es": "06/2019 – 11/2023"
+      },
+      "logo": "ufpr.svg",
+      "institution": "Universidade Federal do Paraná (UFPR) — Departamento de Química",
+      "place": "Curitiba, Brasil",
+      "role": {
+        "pt": "Doutorando (bolsista CAPES) — Pesquisa e Desenvolvimento",
+        "en": "PhD candidate (CAPES fellowship) — Research and Development",
+        "es": "Doctorando (beca CAPES) — Investigación y Desarrollo"
+      },
+      "detail": {
+        "pt": "Linhas de pesquisa: desenvolvimento de métodos e quimiometria; preparo de amostra e solventes alternativos.",
+        "en": "Research lines: method development and chemometrics; sample preparation and alternative solvents.",
+        "es": "Líneas de investigación: desarrollo de métodos y quimiometría; preparación de muestras y disolventes alternativos."
+      }
+    },
+    {
+      "years": {
+        "pt": "2017 – 2019",
+        "en": "2017 – 2019",
+        "es": "2017 – 2019"
+      },
+      "institution": "Universidade Estadual de Santa Cruz (UESC)",
+      "place": "Ilhéus, Brasil",
+      "role": {
+        "pt": "Mestrando (bolsista FAPESB)",
+        "en": "MSc student (FAPESB fellowship)",
+        "es": "Estudiante de máster (beca FAPESB)"
+      }
+    },
+    {
+      "years": {
+        "pt": "2012 – 2016",
+        "en": "2012 – 2016",
+        "es": "2012 – 2016"
+      },
+      "institution": "IF Baiano — Campus Guanambi",
+      "place": "Guanambi, Brasil",
+      "role": {
+        "pt": "Estudante de graduação",
+        "en": "Undergraduate student",
+        "es": "Estudiante de grado"
+      },
+      "detail": {
+        "pt": "Bolsista de iniciação em extensão (2013–2014), monitor em laboratórios de Química (2013–2014), bolsista PIBID (2014–2016) e representante discente em colegiado e comissões institucionais (2014–2016).",
+        "en": "Extension initiation fellow (2013–2014), Chemistry laboratory teaching assistant (2013–2014), PIBID teaching-initiation fellow (2014–2016) and student representative on the course board and institutional committees (2014–2016).",
+        "es": "Becario de iniciación en extensión (2013–2014), monitor de laboratorios de Química (2013–2014), becario PIBID (2014–2016) y representante estudiantil en el consejo de la carrera y en comisiones institucionales (2014–2016)."
+      }
+    }
+  ],
+  "memberships": [
+    {
+      "since": 2023,
+      "name": "EuChemS Sample Preparation Study Group and Network",
+      "role": {
+        "pt": "Membro afiliado",
+        "en": "Affiliated member",
+        "es": "Miembro afiliado"
+      }
+    },
+    {
+      "since": 2018,
+      "name": "Sociedade Brasileira de Química (SBQ)",
+      "logo": "sbq.svg",
+      "role": {
+        "pt": "Membro afiliado",
+        "en": "Affiliated member",
+        "es": "Miembro afiliado"
+      }
+    }
+  ],
+  "research_lines": [
+    {
+      "pt": "Desenvolvimento de métodos de microextração e especiação",
+      "en": "Development of microextraction and speciation methods",
+      "es": "Desarrollo de métodos de microextracción y especiación"
+    },
+    {
+      "pt": "Desenvolvimento de métodos e quimiometria",
+      "en": "Method development and chemometrics",
+      "es": "Desarrollo de métodos y quimiometría"
+    },
+    {
+      "pt": "Preparo de amostra e solventes alternativos",
+      "en": "Sample preparation and alternative solvents",
+      "es": "Preparación de muestras y disolventes alternativos"
+    }
+  ],
+  "areas": [
+    {
+      "pt": "Química Analítica — Análise de Traços e Química Ambiental",
+      "en": "Analytical Chemistry — Trace Analysis and Environmental Chemistry",
+      "es": "Química Analítica — Análisis de Trazas y Química Ambiental"
+    },
+    {
+      "pt": "Preparo de Amostra",
+      "en": "Sample Preparation",
+      "es": "Preparación de Muestras"
+    },
+    {
+      "pt": "Química Analítica — Métodos Óticos de Análise",
+      "en": "Analytical Chemistry — Optical Methods of Analysis",
+      "es": "Química Analítica — Métodos Ópticos de Análisis"
+    }
+  ],
+  "keywords": [
+    "Deep eutectic solvents (DES/NADES/HDES)",
+    "Ultrasound-assisted extraction",
+    "Microwave-assisted extraction",
+    "Box-Behnken design",
+    "Doehlert design",
+    "Mixture design",
+    "Kohonen self-organizing maps",
+    "PCA",
+    "Greenness metrics"
+  ],
+  "techniques": [
+    "ICP-MS",
+    "ICP OES",
+    "FAAS",
+    "GFAAS",
+    "MIP OES"
+  ],
+  "projects": [
+    {
+      "years": {
+        "pt": "2024 – atual",
+        "en": "2024 – present",
+        "es": "2024 – actualidad"
+      },
+      "kind": "research",
+      "status": "ongoing",
+      "role": "lead",
+      "title": "Desenvolvimento de método de extração com solventes eutéticos profundos hidrofóbicos e nanopartículas magnéticas para especiação química em saliva de pacientes oncológicos",
+      "funding": "CAPES",
+      "summary": {
+        "pt": "Caracterização química da saliva de pacientes oncológicos para identificar marcadores da doença: determinação elementar por espectrometria atômica e de massas e desenvolvimento de métodos miniaturizados e sustentáveis de especiação com solventes eutéticos profundos hidrofóbicos (HDES) e nanopartículas magnéticas, com interpretação dos dados por ferramentas de inteligência artificial.",
+        "en": "Chemical characterisation of saliva from cancer patients to identify disease markers: elemental determination by atomic and mass spectrometry and development of miniaturised, sustainable speciation methods using hydrophobic deep eutectic solvents (HDES) and magnetic nanoparticles, with data interpreted through artificial-intelligence tools.",
+        "es": "Caracterización química de la saliva de pacientes oncológicos para identificar marcadores de la enfermedad: determinación elemental por espectrometría atómica y de masas y desarrollo de métodos de especiación miniaturizados y sostenibles con disolventes eutécticos profundos hidrofóbicos (HDES) y nanopartículas magnéticas, con interpretación de los datos mediante herramientas de inteligencia artificial."
+      }
+    },
+    {
+      "years": {
+        "pt": "2019 – 2023",
+        "en": "2019 – 2023",
+        "es": "2019 – 2023"
+      },
+      "kind": "research",
+      "status": "done",
+      "role": "member",
+      "title": "Solventes Eutéticos Profundos Naturais aplicados no preparo de amostras orgânicas e inorgânicas e determinação elementar por técnicas espectrométricas",
+      "funding": "CAPES",
+      "summary": {
+        "pt": "Preparo e caracterização de solventes eutéticos profundos naturais (NADES) e seu uso como substitutos de reagentes convencionais no preparo de amostras para extração de espécies inorgânicas.",
+        "en": "Preparation and characterisation of natural deep eutectic solvents (NADES) and their use as substitutes for conventional reagents in sample preparation for the extraction of inorganic species.",
+        "es": "Preparación y caracterización de disolventes eutécticos profundos naturales (NADES) y su uso como sustitutos de reactivos convencionales en la preparación de muestras para la extracción de especies inorgánicas."
+      }
+    },
+    {
+      "years": {
+        "pt": "2018 – atual",
+        "en": "2018 – present",
+        "es": "2018 – actualidad"
+      },
+      "kind": "research",
+      "status": "ongoing",
+      "role": "member",
+      "title": "Avaliação de impactos causados por substâncias potencialmente tóxicas em amostras de interesse ambiental obtidas na Baía do Pontal",
+      "summary": {
+        "pt": "Determinação de espécies orgânicas e inorgânicas de metais e metaloides em águas, mariscos, peixes e plantas de mangue, com avaliação da segurança alimentar.",
+        "en": "Determination of organic and inorganic species of metals and metalloids in water, shellfish, fish and mangrove plants, with food-safety assessment.",
+        "es": "Determinación de especies orgánicas e inorgánicas de metales y metaloides en aguas, mariscos, peces y plantas de manglar, con evaluación de la seguridad alimentaria."
+      }
+    },
+    {
+      "years": {
+        "pt": "2013 – 2014",
+        "en": "2013 – 2014",
+        "es": "2013 – 2014"
+      },
+      "kind": "tech",
+      "status": "done",
+      "role": "member",
+      "title": "Desenvolvimento de Softwares Educacionais para o Ensino de Química",
+      "summary": {
+        "pt": "Desenvolvimento de um jogo eletrônico para dispositivos móveis sobre distribuição eletrônica segundo o Diagrama de Pauling.",
+        "en": "Development of a mobile game about electron configuration according to the Pauling diagram.",
+        "es": "Desarrollo de un juego electrónico para dispositivos móviles sobre la configuración electrónica según el diagrama de Pauling."
+      }
+    },
+    {
+      "years": {
+        "pt": "2013 – 2014",
+        "en": "2013 – 2014",
+        "es": "2013 – 2014"
+      },
+      "kind": "extension",
+      "status": "done",
+      "role": "member",
+      "title": "Mulheres Camponesas de Caetité: uma proposta dialógica entre Educação do Campo e a Química",
+      "summary": {
+        "pt": "Projeto de extensão com o Movimento das Mulheres Camponesas de Caetité (BA), unindo saberes populares e conhecimento químico por meio de oficinas, palestras e aulas de campo.",
+        "en": "Extension project with the Peasant Women's Movement of Caetité (Bahia, Brazil), bringing together popular and chemical knowledge through workshops, talks and field classes.",
+        "es": "Proyecto de extensión con el Movimiento de Mujeres Campesinas de Caetité (Bahía, Brasil), que une saberes populares y conocimiento químico mediante talleres, charlas y clases de campo."
+      }
+    },
+    {
+      "years": {
+        "pt": "2014 – 2016",
+        "en": "2014 – 2016",
+        "es": "2014 – 2016"
+      },
+      "kind": "teaching",
+      "status": "done",
+      "role": "member",
+      "title": "Programa Institucional de Bolsa de Iniciação à Docência — PIBID: Repensando práticas e saberes no ensino de Química",
+      "summary": {
+        "pt": "Integração de licenciandos em escolas públicas para atividades didático-pedagógicas.",
+        "en": "Placement of pre-service teachers in public schools for teaching activities.",
+        "es": "Integración de futuros docentes en escuelas públicas para actividades didáctico-pedagógicas."
+      }
+    },
+    {
+      "years": {
+        "pt": "2013 – 2014",
+        "en": "2013 – 2014",
+        "es": "2013 – 2014"
+      },
+      "kind": "teaching",
+      "status": "done",
+      "role": "lead",
+      "title": "Programa Institucional de Bolsa de Iniciação à Docência — PIBID",
+      "summary": {
+        "pt": "Participação ativa e crítica de licenciandos na prática docente.",
+        "en": "Active, critical participation of pre-service teachers in teaching practice.",
+        "es": "Participación activa y crítica de futuros docentes en la práctica docente."
+      }
+    }
+  ],
+  "reviewer": [
+    {
+      "since": 2026,
+      "journal": "Analytical Letters"
+    },
+    {
+      "since": 2026,
+      "journal": "Scientific Reports"
+    },
+    {
+      "since": 2025,
+      "journal": "TrAC Trends in Analytical Chemistry",
+      "url": "https://www.sciencedirect.com/journal/trac-trends-in-analytical-chemistry"
+    },
+    {
+      "since": 2025,
+      "journal": "Chemometrics and Intelligent Laboratory Systems",
+      "url": "https://www.sciencedirect.com/journal/chemometrics-and-intelligent-laboratory-systems"
+    },
+    {
+      "since": 2025,
+      "journal": "Química Nova",
+      "url": "https://quimicanova.sbq.org.br/"
+    },
+    {
+      "since": 2025,
+      "journal": "Analytical Methods",
+      "url": "https://pubs.rsc.org/en/journals/journalissues/ay"
+    },
+    {
+      "since": 2025,
+      "journal": "Preparative Biochemistry & Biotechnology",
+      "url": "https://www.tandfonline.com/journals/lpbb20"
+    },
+    {
+      "since": 2025,
+      "journal": "Sustainable Chemistry and Pharmacy",
+      "url": "https://www.sciencedirect.com/journal/sustainable-chemistry-and-pharmacy"
+    },
+    {
+      "since": 2025,
+      "journal": "Journal of the Iranian Chemical Society",
+      "url": "https://link.springer.com/journal/13738"
+    },
+    {
+      "since": 2025,
+      "journal": "Journal of Food Composition and Analysis",
+      "url": "https://www.sciencedirect.com/journal/journal-of-food-composition-and-analysis"
+    },
+    {
+      "since": 2025,
+      "journal": "Advances in Sample Preparation",
+      "url": "https://www.sciencedirect.com/journal/advances-in-sample-preparation"
+    },
+    {
+      "since": 2024,
+      "journal": "Green Analytical Chemistry",
+      "url": "https://www.sciencedirect.com/journal/green-analytical-chemistry"
+    },
+    {
+      "since": 2024,
+      "journal": "Food Chemistry",
+      "url": "https://www.sciencedirect.com/journal/food-chemistry"
+    },
+    {
+      "since": 2024,
+      "journal": "Microchimica Acta",
+      "url": "https://link.springer.com/journal/604"
+    },
+    {
+      "since": 2024,
+      "journal": "Eclética Química Journal",
+      "url": "https://revista.iq.unesp.br/index.php/ecletica"
+    },
+    {
+      "since": 2023,
+      "journal": "Food Science and Technology International",
+      "url": "https://journals.sagepub.com/home/fst"
+    },
+    {
+      "since": 2023,
+      "journal": "Environmental Chemistry Letters",
+      "url": "https://link.springer.com/journal/10311"
+    },
+    {
+      "since": 2022,
+      "journal": "Food Analytical Methods",
+      "url": "https://link.springer.com/journal/12161"
+    },
+    {
+      "since": 2021,
+      "journal": "Chinese Journal of Analytical Chemistry",
+      "url": "https://www.sciencedirect.com/journal/chinese-journal-of-analytical-chemistry"
+    },
+    {
+      "since": 2021,
+      "journal": "Journal of Environmental Management",
+      "url": "https://www.sciencedirect.com/journal/journal-of-environmental-management"
+    },
+    {
+      "since": 2021,
+      "journal": "Environmental Geochemistry and Health",
+      "url": "https://link.springer.com/journal/10653"
+    }
+  ],
+  "chapters": [
+    {
+      "year": 2023,
+      "authors": "Junqueira, L. L.; <b>Costa, F. S.</b>; Franco, M.; de Assis, S. A.",
+      "title": "Stabilization by chemical preservatives of carboxymethyl cellulase from fungus Aspergillus niger produced by State Solid fermentation in fruit residues using chemical preservatives",
+      "book": "Uniting Knowledge Integrated Scientific Research For Global Development",
+      "publisher": "Seven Editora",
+      "place": "São José dos Pinhais",
+      "pages": "1–14",
+      "url": "https://sevenpublicacoes.com.br/index.php/editora/article/view/2569"
+    },
+    {
+      "year": 2018,
+      "authors": "Jesus, M. S.; Moreira, L. S.; <b>Costa, F. S.</b>; Pacheco, C. S. V.; Amorim, F. A. C.",
+      "title": "Avaliação dos índices de acidez e peróxidos do óleo de soja utilizado em frituras de alimentos comercializados no centro da cidade de Ilhéus-BA",
+      "book": "Políticas públicas e o desenvolvimento da ciência",
+      "publisher": "Atena",
+      "place": "Ponta Grossa",
+      "pages": "146–158",
+      "doi": "10.22533/at.ed.95618051216"
+    },
+    {
+      "year": 2017,
+      "authors": "<b>Costa, F. S.</b>; Matos, E. B.; Gomes Junior, D. M.",
+      "title": "A Química dos Eletrônicos: uma abordagem contextualizada para o Ensino de Química",
+      "book": "Iniciação à docência: A licenciatura em Química e o ensino de ciências",
+      "publisher": "EDUFBA",
+      "place": "Salvador",
+      "pages": "141–155",
+      "isbn": "9788523216221"
+    }
+  ],
+  "talks": [
+    {
+      "year": 2020,
+      "title": "Análise Química de amostras ambientais: métodos, desafios e novas tecnologias",
+      "event": "II Encontro de Química do IF Baiano campus Guanambi",
+      "place": "Guanambi"
+    },
+    {
+      "year": 2016,
+      "title": "A Química do chocolate",
+      "event": "I Oficina de Ciências — Escola Municipal Professora Josefina Teixeira do Azevedo",
+      "place": "Guanambi"
+    },
+    {
+      "year": 2014,
+      "title": "Química e sociedade: a importância do plástico em nossas vidas",
+      "event": "Projeto Mulheres Camponesas de Caetité"
+    }
+  ],
+  "courses_taught": [
+    {
+      "year": 2024,
+      "title": "Métricas e Ferramentas para Avaliação da Sustentabilidade de Métodos Analíticos",
+      "hours": "4 h",
+      "with": "Ferreira, S. S."
+    },
+    {
+      "year": 2024,
+      "title": "Planejamento de experimentos: Aspectos gerais, estratégias e ferramentas",
+      "hours": "4 h"
+    },
+    {
+      "year": 2017,
+      "title": "Espectrometria de Absorção Atômica em Chama e com geração química de vapor",
+      "hours": "8 h"
+    },
+    {
+      "year": 2016,
+      "title": "Capacitação dos moradores da comunidade de Sanharó para o beneficiamento de frutas",
+      "hours": {
+        "pt": "1 dia",
+        "en": "1 day",
+        "es": "1 día"
+      }
+    },
+    {
+      "year": 2016,
+      "title": "Química na cozinha: da arte ao chocolate",
+      "hours": "4 h"
+    }
+  ],
+  "technical": [
+    {
+      "year": 2022,
+      "kind": "website",
+      "title": "Laboratório de Espectrometria, Sensores e Biossensores (LAESB)",
+      "authors": "<b>Costa, F. S.</b>; Amaral, C. D. B.; Souto, D. E. P.",
+      "url": "https://laesb.ufpr.br/"
+    },
+    {
+      "year": 2014,
+      "kind": "booklet",
+      "title": "Cartilha: Mulheres Camponesas de Caetité: uma proposta dialógica entre Educação do Campo e a Química",
+      "authors": "Matos, E. B.; <b>Costa, F. S.</b>; Santos, J. G.; Souza, R. O.; Jesus, F. P."
+    }
+  ],
+  "events_organized": [
+    {
+      "year": 2017,
+      "title": "I Workshop de Espectrometria Atômica"
+    },
+    {
+      "year": 2016,
+      "title": "I Oficina de Ciências"
+    },
+    {
+      "year": 2014,
+      "title": "III Encontro de Licenciatura em Química (III ELIQUIM)"
+    },
+    {
+      "year": 2013,
+      "title": "I Mostra de Produção Científica e Cultural"
+    },
+    {
+      "year": 2013,
+      "title": "II Simpósio de Ensino de Química (II SiEnQ)"
+    }
+  ],
+  "events_attended": [
+    {
+      "year": 2025,
+      "title": "48ª Reunião Anual da Sociedade Brasileira de Química",
+      "poster": "Sustainable Strategy Using Deep Eutectic Solvents for Multi-Matrix Sample Analysis by MIP-OES"
+    },
+    {
+      "year": 2023,
+      "title": "14ª Semana Integrada de Ensino, Pesquisa e Extensão da UFPR"
+    },
+    {
+      "year": 2023,
+      "title": "75ª Reunião Anual da Sociedade Brasileira para o Progresso da Ciência"
+    },
+    {
+      "year": 2022,
+      "title": "13ª Semana Integrada de Ensino, Pesquisa e Extensão da UFPR"
+    },
+    {
+      "year": 2021,
+      "title": "ACS no Paraná: Tudo o que você precisa saber para ter sucesso no desenvolvimento e publicação de sua pesquisa"
+    },
+    {
+      "year": 2021,
+      "title": "XII Workshop de Quimiometria"
+    },
+    {
+      "year": 2019,
+      "title": "11ª Semana Integrada de Ensino, Pesquisa e Extensão"
+    },
+    {
+      "year": 2019,
+      "title": "Workshop CAS e UFPR: O impacto da informação científica e tecnológica no desenvolvimento da sua pesquisa"
+    },
+    {
+      "year": 2018,
+      "title": "19º Encontro Nacional de Química Analítica e 7º Congresso Iberoamericano de Química Analítica",
+      "poster": "Comparação de algoritmo híbrido e planejamento de mistura como estratégia de otimização no preparo de amostra"
+    },
+    {
+      "year": 2015,
+      "title": "II Mostra de Iniciação Científica e Cultural do Colégio Estadual Antônio Batista"
+    },
+    {
+      "year": 2014,
+      "title": "II Semana Acadêmica"
+    },
+    {
+      "year": 2014,
+      "title": "II Seminário de Iniciação Científica e Inovação Tecnológica"
+    },
+    {
+      "year": 2013,
+      "title": "I Encontro de Meio Ambiente do Projeto Planeta Sustentável"
+    },
+    {
+      "year": 2013,
+      "title": "I Mostra de Produção Científica e Cultural"
+    },
+    {
+      "year": 2013,
+      "title": "I Reunião de Fóruns e Seminários dos Cursos Superiores do IF Baiano"
+    },
+    {
+      "year": 2013,
+      "title": "I Semana Acadêmica do IF Baiano Campus Guanambi"
+    },
+    {
+      "year": 2013,
+      "title": "I Seminário Internacional de Educação do Campo"
+    },
+    {
+      "year": 2013,
+      "title": "I Seminário de Educação e II Encontro da Rede de Gestão Interdepartamental A & B",
+      "poster": "Educação Popular: um estudo do movimento de mulheres camponesas no município de Caetité-BA"
+    },
+    {
+      "year": 2013,
+      "title": "II Simpósio de Ensino de Química"
+    },
+    {
+      "year": 2013,
+      "title": "III Simpósio Baiano de Licenciaturas",
+      "poster": "Contextualizando a História do Grupo Escolar Getúlio Vargas em Guanambi-BA"
+    },
+    {
+      "year": 2012,
+      "title": "I Encontro de Licenciatura em Química"
+    }
+  ],
+  "supervisions": [
+    {
+      "year": 2018,
+      "student": "Raquel Viana Pinto Leal",
+      "title": "Desenvolvimento de metodologia de extração assistida por ultrassom para determinação de Cu, Mn, Fe e Zn em material vegetal por F AAS",
+      "course": "Química — UESC",
+      "funding": "FAPESB"
+    },
+    {
+      "year": 2018,
+      "student": "Lucas Lima Carneiro",
+      "title": "Modelagem e otimização de experimentos utilizando clusterização Fuzzy e algoritmos genéticos",
+      "course": "Engenharia Elétrica — UESC",
+      "funding": "FAPESB"
+    }
+  ],
+  "committees": [
+    {
+      "year": 2026,
+      "candidate": "Beatriz dos Reis Lago Brandao",
+      "title": "Desenvolvimento de um método de microextração dispersiva baseado em solventes eutéticos para a determinação de compostos nitrogenados em aguapé (<i>Eichhornia crassipes</i>)",
+      "institution": "Universidade Federal da Bahia"
+    },
+    {
+      "year": 2023,
+      "candidate": "Helena Bezerra Ferrari",
+      "title": "Estudo da eficiência de solventes eutéticos profundos naturais no preparo de amostra para determinação elementar em Ora-pro-nóbis",
+      "institution": "Universidade Federal do Espírito Santo"
+    }
+  ],
+  "metrics": {
+    "date": "2026-10-06",
+    "sources": [
+      {
+        "id": "scopus",
+        "label": "Scopus®",
+        "owner": "Elsevier",
+        "url": "https://www.scopus.com/authid/detail.uri?authorId=57216746115",
+        "docs": 44,
+        "citations": 419,
+        "h": 14,
+        "h_date": "2026-09-16"
+      },
+      {
+        "id": "wos",
+        "label": "Web of Science™",
+        "owner": "Clarivate",
+        "url": "https://www.webofscience.com/wos/author/record/S-1383-2018",
+        "docs": 47,
+        "citations": 361,
+        "h": 14
+      },
+      {
+        "id": "scholar",
+        "label": "Google Scholar",
+        "owner": "Google",
+        "url": "https://scholar.google.com/citations?user=EbyxxAoAAAAJ",
+        "docs": 54,
+        "citations": 480,
+        "h": 14,
+        "h_date": "2026-09-16"
+      }
+    ]
+  },
+  "totals": [
+    {
+      "group": "bib",
+      "n": 43,
+      "label": {
+        "pt": "Artigos completos em periódicos",
+        "en": "Full articles in journals",
+        "es": "Artículos completos en revistas"
+      }
+    },
+    {
+      "group": "bib",
+      "n": 1,
+      "label": {
+        "pt": "Artigos aceitos para publicação",
+        "en": "Articles accepted for publication",
+        "es": "Artículos aceptados para publicación"
+      }
+    },
+    {
+      "group": "bib",
+      "n": 3,
+      "label": {
+        "pt": "Capítulos de livros",
+        "en": "Book chapters",
+        "es": "Capítulos de libros"
+      }
+    },
+    {
+      "group": "bib",
+      "n": 1,
+      "label": {
+        "pt": "Artigos em revistas (magazine)",
+        "en": "Magazine articles",
+        "es": "Artículos en revistas de divulgación"
+      }
+    },
+    {
+      "group": "bib",
+      "n": 33,
+      "label": {
+        "pt": "Trabalhos em anais de eventos",
+        "en": "Papers in conference proceedings",
+        "es": "Trabajos en actas de congresos"
+      }
+    },
+    {
+      "group": "bib",
+      "n": 3,
+      "label": {
+        "pt": "Palestras e apresentações",
+        "en": "Talks and presentations",
+        "es": "Charlas y presentaciones"
+      }
+    },
+    {
+      "group": "tec",
+      "n": 5,
+      "label": {
+        "pt": "Cursos de curta duração ministrados",
+        "en": "Short courses taught",
+        "es": "Cursos cortos impartidos"
+      }
+    },
+    {
+      "group": "tec",
+      "n": 2,
+      "label": {
+        "pt": "Site e extensão tecnológica",
+        "en": "Website and technological extension",
+        "es": "Sitio web y extensión tecnológica"
+      }
+    },
+    {
+      "group": "other",
+      "n": 2,
+      "label": {
+        "pt": "Orientações de iniciação científica",
+        "en": "Undergraduate research supervisions",
+        "es": "Direcciones de iniciación científica"
+      }
+    },
+    {
+      "group": "other",
+      "n": 2,
+      "label": {
+        "pt": "Bancas de trabalho de conclusão",
+        "en": "Thesis examination committees",
+        "es": "Tribunales de trabajos de fin de grado"
+      }
+    },
+    {
+      "group": "other",
+      "n": 5,
+      "label": {
+        "pt": "Eventos organizados",
+        "en": "Events organised",
+        "es": "Eventos organizados"
+      }
+    },
+    {
+      "group": "other",
+      "n": 21,
+      "label": {
+        "pt": "Participações em eventos",
+        "en": "Event participations",
+        "es": "Participaciones en eventos"
+      }
+    },
+    {
+      "group": "other",
+      "n": 21,
+      "label": {
+        "pt": "Periódicos como revisor",
+        "en": "Journals as reviewer",
+        "es": "Revistas como revisor"
+      }
+    }
+  ]
+}

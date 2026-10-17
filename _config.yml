@@ -1,48 +1,23 @@
-# === 1. Configurações ===
+# Configuração do Jekyll usada pelo GitHub Pages.
+# As páginas são HTML estático gerado por _src/build.py; o Jekyll apenas as copia.
+
 url: "https://floriatan.com.br"
 baseurl: ""
-
-# === 2. Metadados Globais do Site ===
 title: "Floriatan Santos Costa"
 description: "Pesquisador de Pós-Doutorado em Química Analítica"
 author: "Floriatan Santos Costa"
-github_username: "floriatanscosta"
+lang: "pt-BR"
+timezone: "Europe/Madrid"
 
-# === 3. Estrutura de Links ===
-permalink: pretty
-
-# === 4. Plugins ===
-plugins:
-  - jekyll-seo-tag
-  - jekyll-sitemap
-
-# === 5. Limpeza de Build ===
+# Pastas e arquivos iniciados por "_" ou "." (como _src/) já são ignorados pelo Jekyll.
 exclude:
   - README.md
+  - CHANGELOG.md
+  - PENDENCIAS.md
+  - design.md
   - .gitignore
   - node_modules/
   - package.json
   - package-lock.json
   - ".DS_Store"
   - "Thumbs.db"
-
-# === 6. Variáveis ===
-defaults:
-  - scope:
-      path: ""
-    values:
-      permissions-policy: "interest-cohort=()"
-
-# === 7. Localização e Data ===
-lang: "pt-BR"
-timezone: "America/Sao_Paulo"
-
-# === 8. Configurações para o jekyll ===
-logo: "/assets/logo.svg"
-image: "/assets/cover.png"
-social:
-  name: "Floriatan Santos Costa"
-  links:
-    - "https://www.linkedin.com/in/floriatanscosta/"
-    - "https://orcid.org/0000-0001-7766-2860"
-    - "https://www.linkedin.com/in/floriatanscosta/"

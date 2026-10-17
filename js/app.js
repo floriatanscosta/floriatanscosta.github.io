@@ -1,79 +1,112 @@
-// app.js
+/* app.js — interações comuns a todas as páginas (menu, tema, idioma, rodapé). */
+(function () {
+  'use strict';
+  var root = document.documentElement;
 
-// Função para abrir e fechar o menu
-function toggleMenu() {
-    const menu = document.getElementById("navMenu");
-    if (menu) {
-        menu.classList.toggle("active");
-    } else {
-        console.error("O elemento 'navMenu' não foi encontrado na página.");
-    }
-}
+  function store(key, value) { try { localStorage.setItem(key, value); } catch (e) { /* ignora */ } }
+  function isDark() { return root.getAttribute('data-theme') === 'dark'; }
 
-// Função para alternar o tema (modo claro e escuro)
-function toggleTheme() {
-    const currentTheme = document.documentElement.getAttribute('data-theme');
-    const themeBtn = document.getElementById('theme-toggle');
-
-    if (currentTheme === 'dark') {
-        document.documentElement.removeAttribute('data-theme');
-        localStorage.setItem('theme', 'light');
-        if (themeBtn) {
-            themeBtn.innerHTML = `<img src="https://floriatan.com.br/assets/icons/escuro.svg" alt="Ativar o modo escuro" style="width: 20px; height: 20px;">`;
-        }
-    } else {
-        document.documentElement.setAttribute('data-theme', 'dark');
-        localStorage.setItem('theme', 'dark');
-        if (themeBtn) {
-            themeBtn.innerHTML = `<img src="https://floriatan.com.br/assets/icons/claro.svg" alt="Ativar o modo claro" style="width: 20px; height: 20px;">`;
-        }
-    }
-}
-
-// Função para troca de idioma
-function switchLanguage(lang) {
-    localStorage.setItem('preferred_lang', lang);
-    const currentPath = window.location.pathname;
-
-    if (lang === 'en' && !currentPath.startsWith('/en/')) {
-        const newPath = currentPath === '/' ? '/en/' : '/en' + currentPath;
-        window.location.href = newPath;
-    }
-    else if (lang === 'pt' && currentPath.startsWith('/en/')) {
-        const newPath = currentPath.replace(/^\/en/, '') || '/';
-        window.location.href = newPath;
-    }
-}
-
-// ==== Inicialização ao carregar a página ====
-document.addEventListener('DOMContentLoaded', () => {
-    const currentTheme = localStorage.getItem('theme');
-    const themeBtn = document.getElementById('theme-toggle');
-
-    if (currentTheme === 'dark' && themeBtn) {
-        themeBtn.innerHTML = `<img src="https://floriatan.com.br/assets/icons/claro.svg" alt="Ativar o modo claro" style="width: 20px; height: 20px;">`;
-    }
-
-    // Ano rodapé
-    const yearElement = document.getElementById("year");
-    if (yearElement) {
-        yearElement.textContent = new Date().getFullYear();
-    }
-});
-
-// ==== Efects mover ====
-document.addEventListener("DOMContentLoaded", () => {
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add('active');
-                observer.unobserve(entry.target);
-            }
-        });
-    }, { 
-        threshold: 0.8
+  /* ---------- Tema claro/escuro ---------- */
+  function syncThemeButtons() {
+    document.querySelectorAll('[data-theme-toggle]').forEach(function (b) {
+      b.setAttribute('aria-pressed', isDark() ? 'true' : 'false');
     });
-    const hiddenElements = document.querySelectorAll('.reveal, .img-reveal-box');
-    hiddenElements.forEach((el) => observer.observe(el));
-});
+    // Botão das páginas antigas (sem data-theme-toggle)
+    var legacy = document.querySelector('#theme-toggle:not([data-theme-toggle])');
+    if (legacy) {
+      legacy.innerHTML = '<img src="/assets/icons/' + (isDark() ? 'claro' : 'escuro') + '.svg" alt="" width="20" height="20">';
+      legacy.setAttribute('aria-label', isDark() ? 'Ativar modo claro' : 'Ativar modo escuro');
+    }
+  }
+  function toggleTheme() {
+    if (isDark()) { root.removeAttribute('data-theme'); store('theme', 'light'); }
+    else { root.setAttribute('data-theme', 'dark'); store('theme', 'dark'); }
+    syncThemeButtons();
+  }
 
+  /* ---------- Menu móvel ---------- */
+  function setMenu(open) {
+    var btn = document.querySelector('[data-menu-toggle]');
+    var nav = document.getElementById('site-nav') || document.getElementById('navMenu');
+    if (!nav) return;
+    nav.classList.toggle('active', open);
+    document.body.classList.toggle('menu-open', open);
+    if (btn) btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+  }
+  function toggleMenu() {
+    var nav = document.getElementById('site-nav') || document.getElementById('navMenu');
+    if (nav) setMenu(!nav.classList.contains('active'));
+  }
+
+  /* ---------- Idioma (páginas antigas usam switchLanguage) ---------- */
+  function switchLanguage(lang) {
+    store('preferred_lang', lang);
+    var path = window.location.pathname.replace(/^\/(en|es)(\/|$)/, '/');
+    var target = lang === 'pt' ? path : '/' + lang + (path === '/' ? '/' : path);
+    window.location.href = target;
+  }
+
+  // Exporta para compatibilidade com atributos onclick das páginas de desenvolvimento
+  window.toggleTheme = toggleTheme;
+  window.toggleMenu = toggleMenu;
+  window.switchLanguage = switchLanguage;
+
+  document.addEventListener('DOMContentLoaded', function () {
+    syncThemeButtons();
+
+    document.querySelectorAll('[data-theme-toggle]').forEach(function (b) {
+      b.addEventListener('click', toggleTheme);
+    });
+
+    var menuBtn = document.querySelector('[data-menu-toggle]');
+    if (menuBtn) {
+      menuBtn.addEventListener('click', toggleMenu);
+      document.querySelectorAll('#site-nav a').forEach(function (a) {
+        a.addEventListener('click', function () { setMenu(false); });
+      });
+    }
+
+    var langMenu = document.querySelector('.lang-menu');
+    if (langMenu) {
+      langMenu.querySelectorAll('a[data-lang]').forEach(function (a) {
+        a.addEventListener('click', function () { store('preferred_lang', a.getAttribute('data-lang')); });
+      });
+      document.addEventListener('click', function (e) {
+        if (langMenu.open && !langMenu.contains(e.target)) langMenu.open = false;
+      });
+    }
+
+    document.addEventListener('keydown', function (e) {
+      if (e.key !== 'Escape') return;
+      if (langMenu && langMenu.open) { langMenu.open = false; langMenu.querySelector('summary').focus(); }
+      var nav = document.getElementById('site-nav');
+      if (nav && nav.classList.contains('active')) { setMenu(false); if (menuBtn) menuBtn.focus(); }
+    });
+
+    // Fecha o menu móvel ao voltar para a largura de desktop
+    if (window.matchMedia) {
+      var mq = window.matchMedia('(min-width: 961px)');
+      var onChange = function (ev) { if (ev.matches) setMenu(false); };
+      if (mq.addEventListener) mq.addEventListener('change', onChange); else if (mq.addListener) mq.addListener(onChange);
+    }
+
+    document.querySelectorAll('[data-year], #year').forEach(function (el) {
+      el.textContent = new Date().getFullYear();
+    });
+
+    // Efeito de revelação usado nas páginas de exemplo (.reveal / .img-reveal-box)
+    var hidden = document.querySelectorAll('.reveal, .img-reveal-box');
+    if (hidden.length) {
+      if (!('IntersectionObserver' in window)) {
+        hidden.forEach(function (el) { el.classList.add('active'); });
+      } else {
+        var obs = new IntersectionObserver(function (entries) {
+          entries.forEach(function (en) {
+            if (en.isIntersecting) { en.target.classList.add('active'); obs.unobserve(en.target); }
+          });
+        }, { threshold: 0.2 });
+        hidden.forEach(function (el) { obs.observe(el); });
+      }
+    }
+  });
+})();

@@ -1,111 +1,235 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/svg+xml" href="./assets/favicon.svg">
-    <!-- Meta Tags -->
-    <title>Experiência Profissional - Floriatan Santos Costa</title>
-    <meta name="description" content="Histórico de atuação em pesquisa acadêmica, desenvolvimento de softwares para processamento de dados e implementação de painéis e sistemas web.">
-    <meta property="og:title" content="Experiência Profissional - Floriatan Santos Costa">
-    <meta property="og:description" content="Histórico de projetos em pesquisa, desenvolvimento de softwares (Python/PHP) e gestão de dados.">
-    <meta property="og:image" content="https://floriatan.com.br/assets/cover.png">
-    <meta property="og:url" content="https://floriatan.com.br/experiencia">
-    <meta property="og:type" content="website">
-    <meta name="theme-color" content="#5a729e">
-
-    <!-- Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-0NDPRCLMYV"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag() { dataLayer.push(arguments); }
-        gtag('js', new Date());
-
-        gtag('config', 'G-0NDPRCLMYV');
-    </script>
-    
-    <!-- Previne o piscar branco -->
-    <script>
-        if (localStorage.getItem('theme') === 'dark') {
-            document.documentElement.setAttribute('data-theme', 'dark');
-        }
-    </script>
-    
-    <link rel="stylesheet" href="./css/global.css">
-    <link rel="stylesheet" href="./css/main.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://www.googletagmanager.com; connect-src 'self' https://*.google-analytics.com https://*.analytics.google.com https://*.googletagmanager.com; img-src 'self' data: https://*.google-analytics.com https://*.googletagmanager.com; style-src 'self'; font-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self' mailto:">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <title>Experiência · Floriatan Santos Costa</title>
+  <meta name="description" content="Experiência profissional de Floriatan Santos Costa: pós-doutorados na Universidad de Zaragoza, UFPR e Embrapa, projetos de pesquisa, revisão de periódicos, orientações e bancas.">
+  <meta name="author" content="Floriatan Santos Costa">
+  <link rel="canonical" href="https://floriatan.com.br/experiencia">
+  <link rel="alternate" hreflang="pt-BR" href="https://floriatan.com.br/experiencia">
+  <link rel="alternate" hreflang="en" href="https://floriatan.com.br/en/experiencia">
+  <link rel="alternate" hreflang="es" href="https://floriatan.com.br/es/experiencia">
+  <link rel="alternate" hreflang="x-default" href="https://floriatan.com.br/experiencia">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Floriatan Santos Costa">
+  <meta property="og:title" content="Experiência · Floriatan Santos Costa">
+  <meta property="og:description" content="Experiência profissional de Floriatan Santos Costa: pós-doutorados na Universidad de Zaragoza, UFPR e Embrapa, projetos de pesquisa, revisão de periódicos, orientações e bancas.">
+  <meta property="og:url" content="https://floriatan.com.br/experiencia">
+  <meta property="og:image" content="https://floriatan.com.br/assets/cover.png">
+  <meta property="og:image:width" content="940">
+  <meta property="og:image:height" content="540">
+  <meta property="og:image:alt" content="Logotipo Fc de Floriatan Santos Costa">
+  <meta property="og:locale" content="pt_BR">
+  <meta property="og:locale:alternate" content="en_US">
+  <meta property="og:locale:alternate" content="es_ES">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="theme-color" content="#5a729e" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#1a1f26" media="(prefers-color-scheme: dark)">
+  <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
+  <link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png">
+  <link rel="preload" href="/assets/fonts/roboto-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <script src="/js/theme-init.js"></script>
+  <link rel="stylesheet" href="/css/global.css?v=20261017">
+  <link rel="stylesheet" href="/css/main.css?v=20261017">
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-0NDPRCLMYV"></script>
+  <script src="/js/analytics.js" defer></script>
 </head>
-
 <body>
-    <!-- Header e nav -->
-    <header>
-        <div class="container header-content">
-            <!-- Logo e nome -->
-            <div class="header-left">
-                <a href="/">
-                    <img src="/assets/logo.svg" alt="Logo Floriatan" class="logo-img">
-                </a>
-                <h1 class="site-title">Floriatan Costa</h1>
-            </div>
-            <!--  Menu -->
-            <nav id="navMenu" class="nav-content">
-                <a href="/">Início</a>
-                <a href="/biografia">Biografia</a>
-                <a href="/experiencia">Experiência</a>
-                <a href="/publicacoes">Publicações</a>
-                <a href="/premiacoes">Premiações</a>
-                <a href="/contato">Contato</a>
-            </nav>
-            <!-- Idioma e tema -->
-            <div class="header-right">
-                <div class="lang-dropdown">
-                    <button class="lang-dropbtn">PT</button>
-                    <div class="lang-dropdown-content">
-                        <button onclick="switchLanguage('pt')">Português (PT)</button>
-                        <button onclick="switchLanguage('en')">English (EN)</button>
-                    </div>
-                </div>
-                <button id="theme-toggle" class="theme-toggle" onclick="toggleTheme()" title="Alternar Tema" style="padding: 0;"><img src="/assets/icons/escuro.svg" alt="Ativar Modo Escuro" style="width: 20px; height: 20px;"></button>
-                <button class="menu-toggle" onclick="toggleMenu()">☰</button>
-            </div>
-        </div>
-    </header>
+<a class="skip-link" href="#main">Pular para o conteúdo</a>
+<header class="site-header">
+  <div class="container header-content">
+    <a class="brand" href="/" aria-label="Floriatan Santos Costa — Início">
+      <img src="/assets/logo.svg" alt="" class="logo-img" width="44" height="44">
+      <span class="site-title">Floriatan Costa</span>
+    </a>
+    <nav class="site-nav" id="site-nav" aria-label="Navegação principal">
+      <ul class="nav-content"><li><a href="/">Início</a></li><li><a href="/biografia">Biografia</a></li><li><a href="/experiencia" aria-current="page">Experiência</a></li><li><a href="/publicacoes">Publicações</a></li><li><a href="/producao">Produção</a></li><li><a href="/premiacoes">Premiações</a></li><li><a href="/contato">Contato</a></li></ul>
+    </nav>
+    <div class="header-right">
+      <details class="lang-menu">
+        <summary aria-label="Idioma: Português"><svg class="icon" aria-hidden="true" focusable="false"><use href="/assets/icons/sprite.svg#globe"></use></svg><span>PT</span></summary>
+        <ul class="lang-menu__list"><li><a href="/experiencia" hreflang="pt-BR" lang="pt-BR" aria-current="true" data-lang="pt"><span class="lang-code">PT</span>Português</a></li><li><a href="/en/experiencia" hreflang="en" lang="en" data-lang="en"><span class="lang-code">EN</span>English</a></li><li><a href="/es/experiencia" hreflang="es" lang="es" data-lang="es"><span class="lang-code">ES</span>Español</a></li></ul>
+      </details>
+      <button type="button" class="icon-btn theme-toggle" data-theme-toggle aria-label="Alternar tema claro/escuro" aria-pressed="false" title="Alternar tema claro/escuro"><svg class="icon icon-moon" aria-hidden="true" focusable="false"><use href="/assets/icons/sprite.svg#moon"></use></svg><svg class="icon icon-sun" aria-hidden="true" focusable="false"><use href="/assets/icons/sprite.svg#sun"></use></svg></button>
+      <button type="button" class="icon-btn menu-toggle" data-menu-toggle aria-controls="site-nav" aria-expanded="false" aria-label="Abrir menu"><svg class="icon icon-menu" aria-hidden="true" focusable="false"><use href="/assets/icons/sprite.svg#menu"></use></svg><svg class="icon icon-close" aria-hidden="true" focusable="false"><use href="/assets/icons/sprite.svg#close"></use></svg></button>
+    </div>
+  </div>
+</header>
+<main id="main" tabindex="-1">
+<section class="page-hero container">
+  <p class="eyebrow">Experiência</p>
+  <h1>Trajetória profissional</h1>
+  <p class="lead">Pesquisa, projetos, revisão de periódicos e formação de pessoas.</p>
+  <nav class="page-toc" aria-label="Nesta página">
+    <a href="#atuacao">Atuação</a><a href="#projetos">Projetos</a><a href="#revisor">Revisor</a><a href="#afiliacoes">Afiliações</a><a href="#orientacoes">Orientações e bancas</a>
+  </nav>
+</section>
 
-    <!-- CONTEÚDO EM ATUALIZAÇÃO -->
-    <main>
-        <div class="container">
-            <section class="col-1" style="text-align: center; padding: 80px 20px;">
-                <!-- Ícone de Manutenção/Atualização -->
-                <img src="./assets/icons/erro.svg" alt="Em atualização"
-                    style="width: 80px; height: 80px; margin-bottom: 20px; opacity: 0.7;">
-                <h1 class="intro-title" style="margin-bottom: 15px;">Página em Atualização</h1>
-                <p class="intro-text" style="max-width: 600px; margin: 0 auto 40px;">
-                    O conteúdo desta seção está sendo revisado e estará disponível em breve.
-                </p>
-                <div style="display: flex; gap: 15px; justify-content: center; flex-wrap: wrap;">
-                    <a href="/" class="btn">Voltar ao Início</a>
-                </div>
-            </section>
-        </div>
-    </main>
+<div class="container">
+  <section class="section" id="atuacao" aria-labelledby="h-atuacao">
+    <h2 id="h-atuacao" class="section-title">Atuação profissional</h2>
+    <ol class="tl">
+<li class="tl-item tl-item--current">
+  <div class="tl-head"><img class="tl-logo" src="/assets/svg/unizar.svg" alt="" width="96" height="60" loading="lazy"><div>
+    <p class="tl-date">2026 – atual <span class="badge badge--accent">Atual</span></p>
+    <h3 class="tl-title">Pesquisador de Pós-Doutorado</h3>
+    <p class="tl-org">Universidad de Zaragoza (UNIZAR) · Zaragoza, España</p>
+  </div></div>
+  
+</li>
+<li class="tl-item tl-item--current">
+  <div class="tl-head"><img class="tl-logo" src="/assets/svg/ufpr.svg" alt="" width="96" height="60" loading="lazy"><div>
+    <p class="tl-date">11/2024 – atual <span class="badge badge--accent">Atual</span></p>
+    <h3 class="tl-title">Pesquisador de Pós-Doutorado (bolsista CAPES)</h3>
+    <p class="tl-org">Universidade Federal do Paraná (UFPR) — Departamento de Química · Curitiba, Brasil</p>
+  </div></div>
+  <p class="tl-detail">Linha de pesquisa: desenvolvimento de métodos de microextração e especiação.</p>
+</li>
+<li class="tl-item">
+  <div class="tl-head"><img class="tl-logo" src="/assets/svg/embrapa.svg" alt="" width="96" height="60" loading="lazy"><div>
+    <p class="tl-date">2024</p>
+    <h3 class="tl-title">Pesquisador de Pós-Doutorado (bolsista CNPq)</h3>
+    <p class="tl-org">Empresa Brasileira de Pesquisa Agropecuária (Embrapa) · Brasil</p>
+  </div></div>
+  
+</li>
+<li class="tl-item">
+  <div class="tl-head"><img class="tl-logo" src="/assets/svg/ufpr.svg" alt="" width="96" height="60" loading="lazy"><div>
+    <p class="tl-date">06/2019 – 11/2023</p>
+    <h3 class="tl-title">Doutorando (bolsista CAPES) — Pesquisa e Desenvolvimento</h3>
+    <p class="tl-org">Universidade Federal do Paraná (UFPR) — Departamento de Química · Curitiba, Brasil</p>
+  </div></div>
+  <p class="tl-detail">Linhas de pesquisa: desenvolvimento de métodos e quimiometria; preparo de amostra e solventes alternativos.</p>
+</li>
+<li class="tl-item">
+  <div class="tl-head"><span class="tl-logo tl-logo--empty" aria-hidden="true"><svg class="icon" aria-hidden="true" focusable="false"><use href="/assets/icons/sprite.svg#building"></use></svg></span><div>
+    <p class="tl-date">2017 – 2019</p>
+    <h3 class="tl-title">Mestrando (bolsista FAPESB)</h3>
+    <p class="tl-org">Universidade Estadual de Santa Cruz (UESC) · Ilhéus, Brasil</p>
+  </div></div>
+  
+</li>
+<li class="tl-item">
+  <div class="tl-head"><span class="tl-logo tl-logo--empty" aria-hidden="true"><svg class="icon" aria-hidden="true" focusable="false"><use href="/assets/icons/sprite.svg#building"></use></svg></span><div>
+    <p class="tl-date">2012 – 2016</p>
+    <h3 class="tl-title">Estudante de graduação</h3>
+    <p class="tl-org">IF Baiano — Campus Guanambi · Guanambi, Brasil</p>
+  </div></div>
+  <p class="tl-detail">Bolsista de iniciação em extensão (2013–2014), monitor em laboratórios de Química (2013–2014), bolsista PIBID (2014–2016) e representante discente em colegiado e comissões institucionais (2014–2016).</p>
+</li>
+</ol>
+  </section>
 
-    <!-- Rodapé -->
-    <footer>
-        <div class="container footer-content">
-            <div class="footer-left">
-                <p>&copy; <span id="year"></span> — Todos os direitos reservados.</p>
-            </div>
-            <div class="footer-right">
-                <a href="/sobre">Sobre</a>
-                <a href="/design">Design</a>
-                <a href="/contato">Contato</a>
-            </div>
-        </div>
-    </footer>
+  <section class="section" id="projetos" aria-labelledby="h-projetos">
+    <h2 id="h-projetos" class="section-title">Projetos</h2>
+    <div class="card-grid card-grid--2">
+<article class="card project">
+  <p class="project-meta"><span class="badge">Pesquisa</span><span class="badge badge--ok">Em andamento</span><span class="badge badge--accent">Responsável</span></p>
+  <h3 class="project-title" lang="pt">Desenvolvimento de método de extração com solventes eutéticos profundos hidrofóbicos e nanopartículas magnéticas para especiação química em saliva de pacientes oncológicos</h3>
+  <p class="project-summary">Caracterização química da saliva de pacientes oncológicos para identificar marcadores da doença: determinação elementar por espectrometria atômica e de massas e desenvolvimento de métodos miniaturizados e sustentáveis de especiação com solventes eutéticos profundos hidrofóbicos (HDES) e nanopartículas magnéticas, com interpretação dos dados por ferramentas de inteligência artificial.</p>
+  <p class="project-foot">2024 – atual · Financiamento: CAPES</p>
+</article>
+<article class="card project">
+  <p class="project-meta"><span class="badge">Pesquisa</span><span class="badge badge--muted">Concluído</span></p>
+  <h3 class="project-title" lang="pt">Solventes Eutéticos Profundos Naturais aplicados no preparo de amostras orgânicas e inorgânicas e determinação elementar por técnicas espectrométricas</h3>
+  <p class="project-summary">Preparo e caracterização de solventes eutéticos profundos naturais (NADES) e seu uso como substitutos de reagentes convencionais no preparo de amostras para extração de espécies inorgânicas.</p>
+  <p class="project-foot">2019 – 2023 · Financiamento: CAPES</p>
+</article>
+<article class="card project">
+  <p class="project-meta"><span class="badge">Pesquisa</span><span class="badge badge--ok">Em andamento</span></p>
+  <h3 class="project-title" lang="pt">Avaliação de impactos causados por substâncias potencialmente tóxicas em amostras de interesse ambiental obtidas na Baía do Pontal</h3>
+  <p class="project-summary">Determinação de espécies orgânicas e inorgânicas de metais e metaloides em águas, mariscos, peixes e plantas de mangue, com avaliação da segurança alimentar.</p>
+  <p class="project-foot">2018 – atual</p>
+</article>
+<article class="card project">
+  <p class="project-meta"><span class="badge">Desenvolvimento tecnológico</span><span class="badge badge--muted">Concluído</span></p>
+  <h3 class="project-title" lang="pt">Desenvolvimento de Softwares Educacionais para o Ensino de Química</h3>
+  <p class="project-summary">Desenvolvimento de um jogo eletrônico para dispositivos móveis sobre distribuição eletrônica segundo o Diagrama de Pauling.</p>
+  <p class="project-foot">2013 – 2014</p>
+</article>
+<article class="card project">
+  <p class="project-meta"><span class="badge">Extensão</span><span class="badge badge--muted">Concluído</span></p>
+  <h3 class="project-title" lang="pt">Mulheres Camponesas de Caetité: uma proposta dialógica entre Educação do Campo e a Química</h3>
+  <p class="project-summary">Projeto de extensão com o Movimento das Mulheres Camponesas de Caetité (BA), unindo saberes populares e conhecimento químico por meio de oficinas, palestras e aulas de campo.</p>
+  <p class="project-foot">2013 – 2014</p>
+</article>
+<article class="card project">
+  <p class="project-meta"><span class="badge">Ensino</span><span class="badge badge--muted">Concluído</span></p>
+  <h3 class="project-title" lang="pt">Programa Institucional de Bolsa de Iniciação à Docência — PIBID: Repensando práticas e saberes no ensino de Química</h3>
+  <p class="project-summary">Integração de licenciandos em escolas públicas para atividades didático-pedagógicas.</p>
+  <p class="project-foot">2014 – 2016</p>
+</article>
+<article class="card project">
+  <p class="project-meta"><span class="badge">Ensino</span><span class="badge badge--muted">Concluído</span><span class="badge badge--accent">Responsável</span></p>
+  <h3 class="project-title" lang="pt">Programa Institucional de Bolsa de Iniciação à Docência — PIBID</h3>
+  <p class="project-summary">Participação ativa e crítica de licenciandos na prática docente.</p>
+  <p class="project-foot">2013 – 2014</p>
+</article>
+</div>
+  </section>
 
-    <!-- Scripts -->
-    <script src="./js/app.js"></script>
+  <section class="section" id="revisor" aria-labelledby="h-revisor">
+    <h2 id="h-revisor" class="section-title">Revisor de periódicos</h2>
+    <p class="section-intro">Atua como revisor (<i>peer reviewer</i>) dos seguintes periódicos:</p>
+    <ul class="journal-grid">
+<li><span class="journal-name">Analytical Letters</span><span class="journal-since">desde 2026</span></li>
+<li><span class="journal-name">Scientific Reports</span><span class="journal-since">desde 2026</span></li>
+<li><span class="journal-name"><a href="https://www.sciencedirect.com/journal/trac-trends-in-analytical-chemistry" target="_blank" rel="noopener noreferrer">TrAC Trends in Analytical Chemistry<span class="visually-hidden"> (abre em nova aba)</span></a></span><span class="journal-since">desde 2025</span></li>
+<li><span class="journal-name"><a href="https://www.sciencedirect.com/journal/chemometrics-and-intelligent-laboratory-systems" target="_blank" rel="noopener noreferrer">Chemometrics and Intelligent Laboratory Systems<span class="visually-hidden"> (abre em nova aba)</span></a></span><span class="journal-since">desde 2025</span></li>
+<li><span class="journal-name"><a href="https://quimicanova.sbq.org.br/" target="_blank" rel="noopener noreferrer">Química Nova<span class="visually-hidden"> (abre em nova aba)</span></a></span><span class="journal-since">desde 2025</span></li>
+<li><span class="journal-name"><a href="https://pubs.rsc.org/en/journals/journalissues/ay" target="_blank" rel="noopener noreferrer">Analytical Methods<span class="visually-hidden"> (abre em nova aba)</span></a></span><span class="journal-since">desde 2025</span></li>
+<li><span class="journal-name"><a href="https://www.tandfonline.com/journals/lpbb20" target="_blank" rel="noopener noreferrer">Preparative Biochemistry &amp; Biotechnology<span class="visually-hidden"> (abre em nova aba)</span></a></span><span class="journal-since">desde 2025</span></li>
+<li><span class="journal-name"><a href="https://www.sciencedirect.com/journal/sustainable-chemistry-and-pharmacy" target="_blank" rel="noopener noreferrer">Sustainable Chemistry and Pharmacy<span class="visually-hidden"> (abre em nova aba)</span></a></span><span class="journal-since">desde 2025</span></li>
+<li><span class="journal-name"><a href="https://link.springer.com/journal/13738" target="_blank" rel="noopener noreferrer">Journal of the Iranian Chemical Society<span class="visually-hidden"> (abre em nova aba)</span></a></span><span class="journal-since">desde 2025</span></li>
+<li><span class="journal-name"><a href="https://www.sciencedirect.com/journal/journal-of-food-composition-and-analysis" target="_blank" rel="noopener noreferrer">Journal of Food Composition and Analysis<span class="visually-hidden"> (abre em nova aba)</span></a></span><span class="journal-since">desde 2025</span></li>
+<li><span class="journal-name"><a href="https://www.sciencedirect.com/journal/advances-in-sample-preparation" target="_blank" rel="noopener noreferrer">Advances in Sample Preparation<span class="visually-hidden"> (abre em nova aba)</span></a></span><span class="journal-since">desde 2025</span></li>
+<li><span class="journal-name"><a href="https://www.sciencedirect.com/journal/green-analytical-chemistry" target="_blank" rel="noopener noreferrer">Green Analytical Chemistry<span class="visually-hidden"> (abre em nova aba)</span></a></span><span class="journal-since">desde 2024</span></li>
+<li><span class="journal-name"><a href="https://www.sciencedirect.com/journal/food-chemistry" target="_blank" rel="noopener noreferrer">Food Chemistry<span class="visually-hidden"> (abre em nova aba)</span></a></span><span class="journal-since">desde 2024</span></li>
+<li><span class="journal-name"><a href="https://link.springer.com/journal/604" target="_blank" rel="noopener noreferrer">Microchimica Acta<span class="visually-hidden"> (abre em nova aba)</span></a></span><span class="journal-since">desde 2024</span></li>
+<li><span class="journal-name"><a href="https://revista.iq.unesp.br/index.php/ecletica" target="_blank" rel="noopener noreferrer">Eclética Química Journal<span class="visually-hidden"> (abre em nova aba)</span></a></span><span class="journal-since">desde 2024</span></li>
+<li><span class="journal-name"><a href="https://journals.sagepub.com/home/fst" target="_blank" rel="noopener noreferrer">Food Science and Technology International<span class="visually-hidden"> (abre em nova aba)</span></a></span><span class="journal-since">desde 2023</span></li>
+<li><span class="journal-name"><a href="https://link.springer.com/journal/10311" target="_blank" rel="noopener noreferrer">Environmental Chemistry Letters<span class="visually-hidden"> (abre em nova aba)</span></a></span><span class="journal-since">desde 2023</span></li>
+<li><span class="journal-name"><a href="https://link.springer.com/journal/12161" target="_blank" rel="noopener noreferrer">Food Analytical Methods<span class="visually-hidden"> (abre em nova aba)</span></a></span><span class="journal-since">desde 2022</span></li>
+<li><span class="journal-name"><a href="https://www.sciencedirect.com/journal/chinese-journal-of-analytical-chemistry" target="_blank" rel="noopener noreferrer">Chinese Journal of Analytical Chemistry<span class="visually-hidden"> (abre em nova aba)</span></a></span><span class="journal-since">desde 2021</span></li>
+<li><span class="journal-name"><a href="https://www.sciencedirect.com/journal/journal-of-environmental-management" target="_blank" rel="noopener noreferrer">Journal of Environmental Management<span class="visually-hidden"> (abre em nova aba)</span></a></span><span class="journal-since">desde 2021</span></li>
+<li><span class="journal-name"><a href="https://link.springer.com/journal/10653" target="_blank" rel="noopener noreferrer">Environmental Geochemistry and Health<span class="visually-hidden"> (abre em nova aba)</span></a></span><span class="journal-since">desde 2021</span></li>
+</ul>
+  </section>
 
+  <section class="section" id="afiliacoes" aria-labelledby="h-afiliacoes">
+    <h2 id="h-afiliacoes" class="section-title">Afiliações</h2>
+    <ul class="item-list"><li><span class="item-year">2023</span><span><strong>EuChemS Sample Preparation Study Group and Network</strong><span class="item-sub">Membro afiliado · desde 2023</span></span></li><li><span class="item-year">2018</span><span><strong>Sociedade Brasileira de Química (SBQ)</strong><span class="item-sub">Membro afiliado · desde 2018</span></span></li></ul>
+  </section>
+
+  <section class="section" id="orientacoes" aria-labelledby="h-orientacoes">
+    <h2 id="h-orientacoes" class="section-title">Orientações e bancas</h2>
+    <div class="grid-2">
+      <div>
+        <h3 class="card-subtitle-sm">Orientações concluídas — iniciação científica</h3>
+        <ul class="item-list"><li><span class="item-year">2018</span><span><span class="item-main"><strong>Raquel Viana Pinto Leal</strong> — <span lang="pt">Desenvolvimento de metodologia de extração assistida por ultrassom para determinação de Cu, Mn, Fe e Zn em material vegetal por F AAS</span></span><span class="item-sub">Iniciação científica · Química — UESC · FAPESB</span></span></li><li><span class="item-year">2018</span><span><span class="item-main"><strong>Lucas Lima Carneiro</strong> — <span lang="pt">Modelagem e otimização de experimentos utilizando clusterização Fuzzy e algoritmos genéticos</span></span><span class="item-sub">Iniciação científica · Engenharia Elétrica — UESC · FAPESB</span></span></li></ul>
+      </div>
+      <div>
+        <h3 class="card-subtitle-sm">Participação em bancas de trabalho de conclusão</h3>
+        <ul class="item-list"><li><span class="item-year">2026</span><span><span class="item-main"><strong>Beatriz dos Reis Lago Brandao</strong> — <span lang="pt">Desenvolvimento de um método de microextração dispersiva baseado em solventes eutéticos para a determinação de compostos nitrogenados em aguapé (<i>Eichhornia crassipes</i>)</span></span><span class="item-sub">TCC (graduação) · Universidade Federal da Bahia</span></span></li><li><span class="item-year">2023</span><span><span class="item-main"><strong>Helena Bezerra Ferrari</strong> — <span lang="pt">Estudo da eficiência de solventes eutéticos profundos naturais no preparo de amostra para determinação elementar em Ora-pro-nóbis</span></span><span class="item-sub">TCC (graduação) · Universidade Federal do Espírito Santo</span></span></li></ul>
+      </div>
+    </div>
+  </section>
+</div>
+
+</main>
+<footer class="site-footer">
+  <div class="container footer-content">
+    <div class="footer-left">
+      <p>© <span data-year>2026</span> Floriatan Santos Costa. Todos os direitos reservados.</p>
+      <p class="footer-updated">Última atualização: <time datetime="2026-10-17">17/10/2026</time></p>
+    </div>
+    <ul class="footer-profiles"><li><a href="https://orcid.org/0000-0001-7766-2860" class="footer-profile" target="_blank" rel="noopener noreferrer"><img src="/assets/icons/orcid.svg" alt="ORCID" width="22" height="22"><span class="visually-hidden"> (abre em nova aba)</span></a></li><li><a href="https://scholar.google.com/citations?user=EbyxxAoAAAAJ" class="footer-profile" target="_blank" rel="noopener noreferrer"><img src="/assets/icons/academico.svg" alt="Google Scholar" width="22" height="22"><span class="visually-hidden"> (abre em nova aba)</span></a></li><li><a href="https://www.researchgate.net/profile/Floriatan-Costa" class="footer-profile" target="_blank" rel="noopener noreferrer"><img src="/assets/icons/rg.svg" alt="ResearchGate" width="22" height="22"><span class="visually-hidden"> (abre em nova aba)</span></a></li><li><a href="http://lattes.cnpq.br/0287106268880389" class="footer-profile" target="_blank" rel="noopener noreferrer"><img src="/assets/icons/lattes.svg" alt="Lattes" width="22" height="22"><span class="visually-hidden"> (abre em nova aba)</span></a></li><li><a href="https://www.linkedin.com/in/floriatanscosta/" class="footer-profile" target="_blank" rel="noopener noreferrer"><img src="/assets/icons/linkedin.svg" alt="LinkedIn" width="22" height="22"><span class="visually-hidden"> (abre em nova aba)</span></a></li></ul>
+    <nav aria-label="Links do rodapé"><ul class="footer-right"><li><a href="/metricas">Métricas</a></li><li><a href="/sobre">Sobre</a></li><li><a href="/design">Design</a></li><li><a href="/contato">Contato</a></li><li><a href="/web/">Ferramentas</a></li></ul></nav>
+  </div>
+</footer>
+<script src="/js/app.js" defer></script>
 </body>
-
 </html>

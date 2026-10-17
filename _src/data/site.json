@@ -1,0 +1,412 @@
+{
+  "lang_names": {
+    "pt": "Português",
+    "en": "English",
+    "es": "Español"
+  },
+  "nav_keys": {
+    "index": "home",
+    "biografia": "bio",
+    "experiencia": "experience",
+    "publicacoes": "publications",
+    "producao": "production",
+    "premiacoes": "awards",
+    "contato": "contact",
+    "metricas": "metrics",
+    "sobre": "about",
+    "design": "design",
+    "vida": "life",
+    "404": "home"
+  },
+  "ui": {
+    "nav": {
+      "home": {
+        "pt": "Início",
+        "en": "Home",
+        "es": "Inicio"
+      },
+      "bio": {
+        "pt": "Biografia",
+        "en": "Biography",
+        "es": "Biografía"
+      },
+      "experience": {
+        "pt": "Experiência",
+        "en": "Experience",
+        "es": "Experiencia"
+      },
+      "publications": {
+        "pt": "Publicações",
+        "en": "Publications",
+        "es": "Publicaciones"
+      },
+      "production": {
+        "pt": "Produção",
+        "en": "Output",
+        "es": "Producción"
+      },
+      "awards": {
+        "pt": "Premiações",
+        "en": "Awards",
+        "es": "Premios"
+      },
+      "contact": {
+        "pt": "Contato",
+        "en": "Contact",
+        "es": "Contacto"
+      },
+      "metrics": {
+        "pt": "Métricas",
+        "en": "Metrics",
+        "es": "Métricas"
+      },
+      "about": {
+        "pt": "Sobre",
+        "en": "About",
+        "es": "Acerca de"
+      },
+      "design": {
+        "pt": "Design",
+        "en": "Design",
+        "es": "Diseño"
+      },
+      "life": {
+        "pt": "Vida de cientista",
+        "en": "Life in science",
+        "es": "Vida de científico"
+      },
+      "tools": {
+        "pt": "Ferramentas",
+        "en": "Tools",
+        "es": "Herramientas"
+      }
+    },
+    "a11y": {
+      "skip": {
+        "pt": "Pular para o conteúdo",
+        "en": "Skip to content",
+        "es": "Saltar al contenido"
+      },
+      "main_nav": {
+        "pt": "Navegação principal",
+        "en": "Main navigation",
+        "es": "Navegación principal"
+      },
+      "footer_nav": {
+        "pt": "Links do rodapé",
+        "en": "Footer links",
+        "es": "Enlaces del pie de página"
+      },
+      "language": {
+        "pt": "Idioma",
+        "en": "Language",
+        "es": "Idioma"
+      },
+      "theme": {
+        "pt": "Alternar tema claro/escuro",
+        "en": "Toggle light/dark theme",
+        "es": "Cambiar tema claro/oscuro"
+      },
+      "menu": {
+        "pt": "Abrir menu",
+        "en": "Open menu",
+        "es": "Abrir menú"
+      },
+      "new_tab": {
+        "pt": "(abre em nova aba)",
+        "en": "(opens in a new tab)",
+        "es": "(se abre en una pestaña nueva)"
+      }
+    },
+    "meta": {
+      "og_image_alt": {
+        "pt": "Logotipo Fc de Floriatan Santos Costa",
+        "en": "Fc logo of Floriatan Santos Costa",
+        "es": "Logotipo Fc de Floriatan Santos Costa"
+      }
+    },
+    "footer": {
+      "rights": {
+        "pt": "Todos os direitos reservados.",
+        "en": "All rights reserved.",
+        "es": "Todos los derechos reservados."
+      },
+      "updated": {
+        "pt": "Última atualização",
+        "en": "Last updated",
+        "es": "Última actualización"
+      },
+      "profiles": {
+        "pt": "Perfis acadêmicos",
+        "en": "Academic profiles",
+        "es": "Perfiles académicos"
+      }
+    },
+    "home": {
+      "stat_articles": {
+        "pt": "Artigos em periódicos",
+        "en": "Journal articles",
+        "es": "Artículos en revistas"
+      },
+      "stat_citations": {
+        "pt": "Citações",
+        "en": "Citations",
+        "es": "Citas"
+      },
+      "stat_awards": {
+        "pt": "Prêmios",
+        "en": "Awards",
+        "es": "Premios"
+      }
+    },
+    "pub": {
+      "access": {
+        "pt": "Acessar publicação",
+        "en": "View publication",
+        "es": "Ver publicación"
+      },
+      "accepted": {
+        "pt": "Aceito",
+        "en": "Accepted",
+        "es": "Aceptado"
+      },
+      "filter_label": {
+        "pt": "Filtrar publicações",
+        "en": "Filter publications",
+        "es": "Filtrar publicaciones"
+      },
+      "filter_placeholder": {
+        "pt": "Filtrar por título, autor, periódico ou ano…",
+        "en": "Filter by title, author, journal or year…",
+        "es": "Filtrar por título, autor, revista o año…"
+      },
+      "count_tpl": {
+        "pt": "Mostrando {n} de {t} artigos",
+        "en": "Showing {n} of {t} articles",
+        "es": "Mostrando {n} de {t} artículos"
+      },
+      "empty": {
+        "pt": "Nenhuma publicação corresponde ao filtro.",
+        "en": "No publication matches the filter.",
+        "es": "Ninguna publicación coincide con el filtro."
+      }
+    },
+    "prod": {
+      "events_full": {
+        "pt": "Trabalhos completos em anais de eventos",
+        "en": "Full papers in conference proceedings",
+        "es": "Trabajos completos en actas de congresos"
+      },
+      "events_expanded": {
+        "pt": "Resumos expandidos",
+        "en": "Extended abstracts",
+        "es": "Resúmenes extendidos"
+      },
+      "events_abstract": {
+        "pt": "Resumos em anais de eventos",
+        "en": "Abstracts in conference proceedings",
+        "es": "Resúmenes en actas de congresos"
+      },
+      "events_attended": {
+        "pt": "Participação em eventos",
+        "en": "Event participation",
+        "es": "Participación en eventos"
+      },
+      "in": {
+        "pt": "In",
+        "en": "In",
+        "es": "En"
+      },
+      "with": {
+        "pt": "com",
+        "en": "with",
+        "es": "con"
+      },
+      "poster": {
+        "pt": "Pôster",
+        "en": "Poster",
+        "es": "Póster"
+      },
+      "kind_website": {
+        "pt": "Site",
+        "en": "Website",
+        "es": "Sitio web"
+      },
+      "kind_booklet": {
+        "pt": "Cartilha (extensão tecnológica)",
+        "en": "Booklet (technological extension)",
+        "es": "Cartilla (extensión tecnológica)"
+      }
+    },
+    "awards": {
+      "best": {
+        "pt": "Melhor trabalho",
+        "en": "Best work award",
+        "es": "Premio al mejor trabajo"
+      },
+      "honorable": {
+        "pt": "Menção honrosa",
+        "en": "Honourable mention",
+        "es": "Mención honorífica"
+      },
+      "thesis": {
+        "pt": "Melhor tese",
+        "en": "Best thesis award",
+        "es": "Premio a la mejor tesis"
+      },
+      "paper": {
+        "pt": "Melhor artigo",
+        "en": "Best paper award",
+        "es": "Premio al mejor artículo"
+      }
+    },
+    "bio": {
+      "thesis": {
+        "pt": "Título",
+        "en": "Title",
+        "es": "Título"
+      },
+      "advisor": {
+        "pt": "Orientação",
+        "en": "Supervisor",
+        "es": "Dirección"
+      },
+      "coadvisor": {
+        "pt": "coorientação",
+        "en": "co-supervisor",
+        "es": "codirección"
+      },
+      "funding": {
+        "pt": "Financiamento",
+        "en": "Funding",
+        "es": "Financiación"
+      }
+    },
+    "exp": {
+      "current": {
+        "pt": "Atual",
+        "en": "Current",
+        "es": "Actual"
+      },
+      "since": {
+        "pt": "desde",
+        "en": "since",
+        "es": "desde"
+      },
+      "status_ongoing": {
+        "pt": "Em andamento",
+        "en": "Ongoing",
+        "es": "En curso"
+      },
+      "status_done": {
+        "pt": "Concluído",
+        "en": "Completed",
+        "es": "Finalizado"
+      },
+      "role_lead": {
+        "pt": "Responsável",
+        "en": "Principal investigator",
+        "es": "Responsable"
+      },
+      "kind_research": {
+        "pt": "Pesquisa",
+        "en": "Research",
+        "es": "Investigación"
+      },
+      "kind_tech": {
+        "pt": "Desenvolvimento tecnológico",
+        "en": "Technological development",
+        "es": "Desarrollo tecnológico"
+      },
+      "kind_extension": {
+        "pt": "Extensão",
+        "en": "Outreach",
+        "es": "Extensión"
+      },
+      "kind_teaching": {
+        "pt": "Ensino",
+        "en": "Teaching",
+        "es": "Docencia"
+      },
+      "ic": {
+        "pt": "Iniciação científica",
+        "en": "Undergraduate research",
+        "es": "Iniciación científica"
+      },
+      "undergrad_thesis": {
+        "pt": "TCC (graduação)",
+        "en": "Undergraduate thesis",
+        "es": "Trabajo de fin de grado"
+      }
+    },
+    "metrics": {
+      "docs": {
+        "pt": "Documentos",
+        "en": "Documents",
+        "es": "Documentos"
+      },
+      "citations": {
+        "pt": "Citações",
+        "en": "Citations",
+        "es": "Citas"
+      },
+      "h": {
+        "pt": "Índice h",
+        "en": "h-index",
+        "es": "Índice h"
+      },
+      "updated": {
+        "pt": "Dados atualizados em",
+        "en": "Data updated on",
+        "es": "Datos actualizados el"
+      },
+      "h_date": {
+        "pt": "Índice h consultado em {d}.",
+        "en": "h-index retrieved on {d}.",
+        "es": "Índice h consultado el {d}."
+      },
+      "disclaimer": {
+        "pt": "Os números variam conforme a cobertura de cada base e podem mudar a qualquer momento; consulte os perfis para os valores mais recentes.",
+        "en": "Figures vary with each database's coverage and may change at any time; see the profiles for the latest values.",
+        "es": "Las cifras varían según la cobertura de cada base y pueden cambiar en cualquier momento; consulte los perfiles para los valores más recientes."
+      },
+      "group_bib": {
+        "pt": "Produção bibliográfica",
+        "en": "Bibliographic output",
+        "es": "Producción bibliográfica"
+      },
+      "group_tec": {
+        "pt": "Produção técnica",
+        "en": "Technical output",
+        "es": "Producción técnica"
+      },
+      "group_other": {
+        "pt": "Formação de pessoas e atuação",
+        "en": "Mentoring and service",
+        "es": "Formación de personas y actividades"
+      }
+    },
+    "contact": {
+      "email": {
+        "pt": "E-mail",
+        "en": "Email",
+        "es": "Correo electrónico"
+      },
+      "email_alt": {
+        "pt": "Alternativo",
+        "en": "Alternative",
+        "es": "Alternativo"
+      },
+      "write": {
+        "pt": "Enviar e-mail",
+        "en": "Send an email",
+        "es": "Enviar correo"
+      },
+      "address": {
+        "pt": "Endereço profissional",
+        "en": "Work address",
+        "es": "Dirección profesional"
+      }
+    }
+  }
+}

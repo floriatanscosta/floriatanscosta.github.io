@@ -1,100 +1,145 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/svg+xml" href="./assets/favicon.svg">
-    <!-- Meta Tags -->
-    <title>Biografia - Floriatan Santos Costa</title>
-    <meta name="description" content="Trajetória acadêmica e profissional de Floriatan Santos Costa, pesquisador em química analítica com foco em espectrometria de massas e instrumentação laboratorial.">
-    <meta property="og:title" content="Biografia - Floriatan Santos Costa">
-    <meta property="og:description" content="Trajetória acadêmica e profissional em química analítica, instrumentação e tratamento de dados.">
-    <meta property="og:image" content="https://floriatan.com.br/assets/cover.png">
-    <meta property="og:url" content="https://floriatan.com.br/biografia">
-    <meta property="og:type" content="profile">
-    <meta name="theme-color" content="#5a729e">
-
-    <!-- Previne o piscar branco -->
-    <script>
-        if (localStorage.getItem('theme') === 'dark') {
-            document.documentElement.setAttribute('data-theme', 'dark');
-        }
-    </script>
-    
-    <link rel="stylesheet" href="./css/global.css">
-    <link rel="stylesheet" href="./css/main.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://www.googletagmanager.com; connect-src 'self' https://*.google-analytics.com https://*.analytics.google.com https://*.googletagmanager.com; img-src 'self' data: https://*.google-analytics.com https://*.googletagmanager.com; style-src 'self'; font-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self' mailto:">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <title>Biografia · Floriatan Santos Costa</title>
+  <meta name="description" content="Biografia de Floriatan Santos Costa: formação em Química (IF Baiano, UESC e UFPR), pós-doutorados, linhas de pesquisa e áreas de atuação em química analítica.">
+  <meta name="author" content="Floriatan Santos Costa">
+  <link rel="canonical" href="https://floriatan.com.br/biografia">
+  <link rel="alternate" hreflang="pt-BR" href="https://floriatan.com.br/biografia">
+  <link rel="alternate" hreflang="en" href="https://floriatan.com.br/en/biografia">
+  <link rel="alternate" hreflang="es" href="https://floriatan.com.br/es/biografia">
+  <link rel="alternate" hreflang="x-default" href="https://floriatan.com.br/biografia">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Floriatan Santos Costa">
+  <meta property="og:title" content="Biografia · Floriatan Santos Costa">
+  <meta property="og:description" content="Biografia de Floriatan Santos Costa: formação em Química (IF Baiano, UESC e UFPR), pós-doutorados, linhas de pesquisa e áreas de atuação em química analítica.">
+  <meta property="og:url" content="https://floriatan.com.br/biografia">
+  <meta property="og:image" content="https://floriatan.com.br/assets/cover.png">
+  <meta property="og:image:width" content="940">
+  <meta property="og:image:height" content="540">
+  <meta property="og:image:alt" content="Logotipo Fc de Floriatan Santos Costa">
+  <meta property="og:locale" content="pt_BR">
+  <meta property="og:locale:alternate" content="en_US">
+  <meta property="og:locale:alternate" content="es_ES">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="theme-color" content="#5a729e" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#1a1f26" media="(prefers-color-scheme: dark)">
+  <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
+  <link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png">
+  <link rel="preload" href="/assets/fonts/roboto-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <script src="/js/theme-init.js"></script>
+  <link rel="stylesheet" href="/css/global.css?v=20261017">
+  <link rel="stylesheet" href="/css/main.css?v=20261017">
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-0NDPRCLMYV"></script>
+  <script src="/js/analytics.js" defer></script>
 </head>
-
 <body>
-    <!-- Header e nav -->
-    <header>
-        <div class="container header-content">
-            <!-- Logo e nome -->
-            <div class="header-left">
-                <a href="/">
-                    <img src="/assets/logo.svg" alt="Logo Floriatan" class="logo-img">
-                </a>
-                <h1 class="site-title">Floriatan Costa</h1>
-            </div>
-            <!--  Menu -->
-            <nav id="navMenu" class="nav-content">
-                <a href="/">Início</a>
-                <a href="/biografia">Biografia</a>
-                <a href="/experiencia">Experiência</a>
-                <a href="/publicacoes">Publicações</a>
-                <a href="/premiacoes">Premiações</a>
-                <a href="/contato">Contato</a>
-            </nav>
-            <!-- Idioma e tema -->
-            <div class="header-right">
-                <div class="lang-dropdown">
-                    <button class="lang-dropbtn">PT</button>
-                    <div class="lang-dropdown-content">
-                        <button onclick="switchLanguage('pt')">Português (PT)</button>
-                        <button onclick="switchLanguage('en')">English (EN)</button>
-                    </div>
-                </div>
-                <button id="theme-toggle" class="theme-toggle" onclick="toggleTheme()" title="Alternar Tema" style="padding: 0;"><img src="/assets/icons/escuro.svg" alt="Ativar Modo Escuro" style="width: 20px; height: 20px;"></button>
-                <button class="menu-toggle" onclick="toggleMenu()">☰</button>
-            </div>
-        </div>
-    </header>
+<a class="skip-link" href="#main">Pular para o conteúdo</a>
+<header class="site-header">
+  <div class="container header-content">
+    <a class="brand" href="/" aria-label="Floriatan Santos Costa — Início">
+      <img src="/assets/logo.svg" alt="" class="logo-img" width="44" height="44">
+      <span class="site-title">Floriatan Costa</span>
+    </a>
+    <nav class="site-nav" id="site-nav" aria-label="Navegação principal">
+      <ul class="nav-content"><li><a href="/">Início</a></li><li><a href="/biografia" aria-current="page">Biografia</a></li><li><a href="/experiencia">Experiência</a></li><li><a href="/publicacoes">Publicações</a></li><li><a href="/producao">Produção</a></li><li><a href="/premiacoes">Premiações</a></li><li><a href="/contato">Contato</a></li></ul>
+    </nav>
+    <div class="header-right">
+      <details class="lang-menu">
+        <summary aria-label="Idioma: Português"><svg class="icon" aria-hidden="true" focusable="false"><use href="/assets/icons/sprite.svg#globe"></use></svg><span>PT</span></summary>
+        <ul class="lang-menu__list"><li><a href="/biografia" hreflang="pt-BR" lang="pt-BR" aria-current="true" data-lang="pt"><span class="lang-code">PT</span>Português</a></li><li><a href="/en/biografia" hreflang="en" lang="en" data-lang="en"><span class="lang-code">EN</span>English</a></li><li><a href="/es/biografia" hreflang="es" lang="es" data-lang="es"><span class="lang-code">ES</span>Español</a></li></ul>
+      </details>
+      <button type="button" class="icon-btn theme-toggle" data-theme-toggle aria-label="Alternar tema claro/escuro" aria-pressed="false" title="Alternar tema claro/escuro"><svg class="icon icon-moon" aria-hidden="true" focusable="false"><use href="/assets/icons/sprite.svg#moon"></use></svg><svg class="icon icon-sun" aria-hidden="true" focusable="false"><use href="/assets/icons/sprite.svg#sun"></use></svg></button>
+      <button type="button" class="icon-btn menu-toggle" data-menu-toggle aria-controls="site-nav" aria-expanded="false" aria-label="Abrir menu"><svg class="icon icon-menu" aria-hidden="true" focusable="false"><use href="/assets/icons/sprite.svg#menu"></use></svg><svg class="icon icon-close" aria-hidden="true" focusable="false"><use href="/assets/icons/sprite.svg#close"></use></svg></button>
+    </div>
+  </div>
+</header>
+<main id="main" tabindex="-1">
+<section class="page-hero container">
+  <p class="eyebrow">Biografia</p>
+  <h1>Floriatan Santos Costa</h1>
+  <p class="lead">Químico e pesquisador de pós-doutorado em química analítica.</p>
+</section>
 
-    <!-- CONTEÚDO EM ATUALIZAÇÃO -->
-    <main>
-        <div class="container">
-            <section class="col-1" style="text-align: center; padding: 80px 20px;">
-                <!-- Ícone de Manutenção/Atualização -->
-                <img src="./assets/icons/erro.svg" alt="Em atualização" style="width: 80px; height: 80px; margin-bottom: 20px; opacity: 0.7;">
-                <h1 class="intro-title" style="margin-bottom: 15px;">Página em Atualização</h1>
-                <p class="intro-text" style="max-width: 600px; margin: 0 auto 40px;">
-                    O conteúdo desta seção está sendo revisado e estará disponível em breve.
-                </p>
-                <div style="display: flex; gap: 15px; justify-content: center; flex-wrap: wrap;">
-                    <a href="/" class="btn">Voltar ao Início</a>
-                </div>
-            </section>
-        </div>
-    </main>
+<div class="container">
+  <section class="bio-intro section">
+    <figure class="bio-photo">
+      <img src="/assets/img/profile.webp" alt="Retrato de Floriatan Santos Costa" width="400" height="400">
+    </figure>
+    <div class="prose">
+      <p>Natural de Guanambi (BA), Floriatan Santos Costa é pesquisador de pós-doutorado na <strong>Universidad de Zaragoza</strong> (Espanha) desde 2026 e no Departamento de Química da <strong>Universidade Federal do Paraná</strong> (UFPR) desde 2024, como bolsista CAPES. Em 2024 também realizou pós-doutorado na <strong>Embrapa</strong>, com bolsa do CNPq.</p>
+      <p>É licenciado em Química pelo IF Baiano (2016), mestre em Química pela Universidade Estadual de Santa Cruz (2019) e doutor em Química pela UFPR (2023). Sua tese, dedicada aos solventes eutéticos profundos aplicados ao desenvolvimento de métodos para determinação elementar, recebeu o prêmio de Melhor Tese do PPGQ/UFPR — Prêmio Excelência Acadêmica da Pós-graduação 2024.</p>
+      <p>Sua pesquisa concentra-se em preparo de amostras com solventes alternativos, desenvolvimento de métodos de microextração e especiação, quimiometria e métricas de sustentabilidade de métodos analíticos, com determinação elementar por técnicas de espectrometria atômica. É membro afiliado da Sociedade Brasileira de Química e do EuChemS Sample Preparation Study Group and Network e atua como revisor de periódicos científicos internacionais.</p>
+      <p class="bio-links"><a class="btn" href="/experiencia">Experiência</a> <a class="btn btn-outline" href="/publicacoes">Publicações</a></p>
+    </div>
+  </section>
 
-    <!-- Rodapé -->
-    <footer>
-        <div class="container footer-content">
-            <div class="footer-left">
-                <p>&copy; <span id="year"></span> — Todos os direitos reservados.</p>
-            </div>
-            <div class="footer-right">
-                <a href="/sobre">Sobre</a>
-                <a href="/design">Design</a>
-                <a href="/contato">Contato</a>
-            </div>
-        </div>
-    </footer>
+  <section class="section" aria-labelledby="h-formacao">
+    <h2 id="h-formacao" class="section-title">Formação acadêmica</h2>
+    <ol class="tl">
+<li class="tl-item">
+  <div class="tl-head"><img class="tl-logo" src="/assets/svg/ufpr.svg" alt="" width="96" height="60" loading="lazy"><div>
+    <p class="tl-date">2019–2023</p>
+    <h3 class="tl-title">Doutorado em Química</h3>
+    <p class="tl-org">Universidade Federal do Paraná (UFPR) · Curitiba, Brasil</p>
+  </div></div>
+  <p class="tl-detail"><span class="tl-label">Título:</span> <span lang="pt">Solventes eutéticos profundos aplicados no desenvolvimento de métodos para determinação elementar em amostras de composição orgânica e inorgânica</span></p><p class="tl-detail"><span class="tl-label">Orientação:</span> Clarice Dias Britto do Amaral; coorientação: Mario Henrique Gonzalez</p><p class="tl-detail"><span class="tl-label">Financiamento:</span> CAPES</p>
+</li>
+<li class="tl-item">
+  <div class="tl-head"><span class="tl-logo tl-logo--empty" aria-hidden="true"><svg class="icon" aria-hidden="true" focusable="false"><use href="/assets/icons/sprite.svg#building"></use></svg></span><div>
+    <p class="tl-date">2017–2019</p>
+    <h3 class="tl-title">Mestrado em Química</h3>
+    <p class="tl-org">Universidade Estadual de Santa Cruz (UESC) · Ilhéus, Brasil</p>
+  </div></div>
+  <p class="tl-detail"><span class="tl-label">Título:</span> <span lang="pt">Desenvolvimento de metodologia de extração assistida por ultrassom para determinação de metais em tecidos vegetais (<i>Rhizophora mangle</i> L. e <i>Laguncularia racemosa</i> (L.) C.F.Gaertn) por Espectrometria de Absorção Atômica em Chama</span></p><p class="tl-detail"><span class="tl-label">Orientação:</span> Erik Galvão Paranhos da Silva; coorientação: Luana Novaes Santos</p><p class="tl-detail"><span class="tl-label">Financiamento:</span> FAPESB</p>
+</li>
+<li class="tl-item">
+  <div class="tl-head"><span class="tl-logo tl-logo--empty" aria-hidden="true"><svg class="icon" aria-hidden="true" focusable="false"><use href="/assets/icons/sprite.svg#building"></use></svg></span><div>
+    <p class="tl-date">2012–2016</p>
+    <h3 class="tl-title">Graduação em Química (Licenciatura)</h3>
+    <p class="tl-org">Instituto Federal de Educação, Ciência e Tecnologia Baiano (IF Baiano) · Campus Guanambi, Brasil</p>
+  </div></div>
+  
+</li>
+</ol>
+  </section>
 
-    <!-- Scripts -->
-    <script src="./js/app.js"></script>
+  <div class="grid-2 section">
+    <section class="card" aria-labelledby="h-linhas">
+      <h2 id="h-linhas" class="card-title">Linhas de pesquisa</h2>
+      <ul class="chip-list"><li class="chip">Desenvolvimento de métodos de microextração e especiação</li><li class="chip">Desenvolvimento de métodos e quimiometria</li><li class="chip">Preparo de amostra e solventes alternativos</li></ul>
+      <h3 class="card-subtitle-sm">Áreas de atuação</h3>
+      <ul class="check-list"><li>Química Analítica — Análise de Traços e Química Ambiental</li><li>Preparo de Amostra</li><li>Química Analítica — Métodos Óticos de Análise</li></ul>
+    </section>
+    <section class="card" aria-labelledby="h-ferramentas">
+      <h2 id="h-ferramentas" class="card-title">Técnicas e ferramentas</h2>
+      <ul class="chip-list"><li class="chip chip--mono">ICP-MS</li><li class="chip chip--mono">ICP OES</li><li class="chip chip--mono">FAAS</li><li class="chip chip--mono">GFAAS</li><li class="chip chip--mono">MIP OES</li></ul>
+      <h3 class="card-subtitle-sm">Palavras-chave</h3>
+      <ul class="chip-list chip-list--soft"><li class="chip" lang="en">Deep eutectic solvents (DES/NADES/HDES)</li><li class="chip" lang="en">Ultrasound-assisted extraction</li><li class="chip" lang="en">Microwave-assisted extraction</li><li class="chip" lang="en">Box-Behnken design</li><li class="chip" lang="en">Doehlert design</li><li class="chip" lang="en">Mixture design</li><li class="chip" lang="en">Kohonen self-organizing maps</li><li class="chip" lang="en">PCA</li><li class="chip" lang="en">Greenness metrics</li></ul>
+    </section>
+  </div>
 
+  <section class="section" aria-labelledby="h-complementar">
+    <h2 id="h-complementar" class="section-title">Formação complementar</h2>
+    <ul class="item-list"><li><span class="item-year">2021</span><span><span lang="pt">Curso de Comunicação e Escrita Científica</span><span class="item-sub">ACS Publications · 4 h</span></span></li><li><span class="item-year">2020</span><span><span lang="pt">Análise de Componentes Principais: Fundamentos e Aplicações</span><span class="item-sub">Universidade Tecnológica Federal do Paraná (UTFPR) · 2 h</span></span></li><li><span class="item-year">2020</span><span><span lang="pt">Ciência, comunicação científica e inovação: desafios transversais</span><span class="item-sub">ACS Publications · 2 h</span></span></li><li><span class="item-year">2013</span><span><span lang="pt">Estratégias de Ensino em Educação Química</span><span class="item-sub">IF Baiano · 4 h</span></span></li></ul>
+  </section>
+</div>
+
+</main>
+<footer class="site-footer">
+  <div class="container footer-content">
+    <div class="footer-left">
+      <p>© <span data-year>2026</span> Floriatan Santos Costa. Todos os direitos reservados.</p>
+      <p class="footer-updated">Última atualização: <time datetime="2026-10-17">17/10/2026</time></p>
+    </div>
+    <ul class="footer-profiles"><li><a href="https://orcid.org/0000-0001-7766-2860" class="footer-profile" target="_blank" rel="noopener noreferrer"><img src="/assets/icons/orcid.svg" alt="ORCID" width="22" height="22"><span class="visually-hidden"> (abre em nova aba)</span></a></li><li><a href="https://scholar.google.com/citations?user=EbyxxAoAAAAJ" class="footer-profile" target="_blank" rel="noopener noreferrer"><img src="/assets/icons/academico.svg" alt="Google Scholar" width="22" height="22"><span class="visually-hidden"> (abre em nova aba)</span></a></li><li><a href="https://www.researchgate.net/profile/Floriatan-Costa" class="footer-profile" target="_blank" rel="noopener noreferrer"><img src="/assets/icons/rg.svg" alt="ResearchGate" width="22" height="22"><span class="visually-hidden"> (abre em nova aba)</span></a></li><li><a href="http://lattes.cnpq.br/0287106268880389" class="footer-profile" target="_blank" rel="noopener noreferrer"><img src="/assets/icons/lattes.svg" alt="Lattes" width="22" height="22"><span class="visually-hidden"> (abre em nova aba)</span></a></li><li><a href="https://www.linkedin.com/in/floriatanscosta/" class="footer-profile" target="_blank" rel="noopener noreferrer"><img src="/assets/icons/linkedin.svg" alt="LinkedIn" width="22" height="22"><span class="visually-hidden"> (abre em nova aba)</span></a></li></ul>
+    <nav aria-label="Links do rodapé"><ul class="footer-right"><li><a href="/metricas">Métricas</a></li><li><a href="/sobre">Sobre</a></li><li><a href="/design">Design</a></li><li><a href="/contato">Contato</a></li><li><a href="/web/">Ferramentas</a></li></ul></nav>
+  </div>
+</footer>
+<script src="/js/app.js" defer></script>
 </body>
-
 </html>

@@ -1,112 +1,112 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/svg+xml" href="./assets/favicon.svg">
-    <!-- Meta Tags -->
-    <title>Sobre o Site - Floriatan Santos Costa</title>
-    <meta name="description" content="Bastidores do desenvolvimento, integração contínua (GitHub Pages) e tecnologias estruturais (HTML/CSS/JS) aplicadas neste portfólio estático.">
-    <meta property="og:title" content="Sobre o Site - Floriatan Santos Costa">
-    <meta property="og:description" content="Detalhes técnicos, arquitetura web e código-fonte deste portfólio.">
-    <meta property="og:image" content="https://floriatan.com.br/assets/cover.png">
-    <meta property="og:url" content="https://floriatan.com.br/sobre">
-    <meta property="og:type" content="website">
-    <meta name="theme-color" content="#5a729e">
-    
-    <!-- Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-0NDPRCLMYV"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag() { dataLayer.push(arguments); }
-        gtag('js', new Date());
-
-        gtag('config', 'G-0NDPRCLMYV');
-    </script>
-
-    <!-- Previne o piscar branco -->
-    <script>
-        if (localStorage.getItem('theme') === 'dark') {
-            document.documentElement.setAttribute('data-theme', 'dark');
-        }
-    </script>
-    <style>
-        body {background: var(--header-gradient);}
-    </style>
-    <link rel="stylesheet" href="./css/global.css">
-    <link rel="stylesheet" href="./css/main.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://www.googletagmanager.com; connect-src 'self' https://*.google-analytics.com https://*.analytics.google.com https://*.googletagmanager.com; img-src 'self' data: https://*.google-analytics.com https://*.googletagmanager.com; style-src 'self'; font-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self' mailto:">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <title>Sobre o site · Floriatan Santos Costa</title>
+  <meta name="description" content="Sobre este site: objetivo, tecnologias utilizadas, idiomas, acessibilidade e privacidade.">
+  <meta name="author" content="Floriatan Santos Costa">
+  <link rel="canonical" href="https://floriatan.com.br/sobre">
+  <link rel="alternate" hreflang="pt-BR" href="https://floriatan.com.br/sobre">
+  <link rel="alternate" hreflang="en" href="https://floriatan.com.br/en/sobre">
+  <link rel="alternate" hreflang="es" href="https://floriatan.com.br/es/sobre">
+  <link rel="alternate" hreflang="x-default" href="https://floriatan.com.br/sobre">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Floriatan Santos Costa">
+  <meta property="og:title" content="Sobre o site · Floriatan Santos Costa">
+  <meta property="og:description" content="Sobre este site: objetivo, tecnologias utilizadas, idiomas, acessibilidade e privacidade.">
+  <meta property="og:url" content="https://floriatan.com.br/sobre">
+  <meta property="og:image" content="https://floriatan.com.br/assets/cover.png">
+  <meta property="og:image:width" content="940">
+  <meta property="og:image:height" content="540">
+  <meta property="og:image:alt" content="Logotipo Fc de Floriatan Santos Costa">
+  <meta property="og:locale" content="pt_BR">
+  <meta property="og:locale:alternate" content="en_US">
+  <meta property="og:locale:alternate" content="es_ES">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="theme-color" content="#5a729e" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#1a1f26" media="(prefers-color-scheme: dark)">
+  <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
+  <link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png">
+  <link rel="preload" href="/assets/fonts/roboto-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <script src="/js/theme-init.js"></script>
+  <link rel="stylesheet" href="/css/global.css?v=20261017">
+  <link rel="stylesheet" href="/css/main.css?v=20261017">
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-0NDPRCLMYV"></script>
+  <script src="/js/analytics.js" defer></script>
 </head>
-
 <body>
-    <!-- Header e nav -->
-    <header>
-        <div class="container header-content">
-            <!-- Logo e nome -->
-            <div class="header-left">
-                <a href="/">
-                    <img src="/assets/logo.svg" alt="Logo Floriatan" class="logo-img">
-                </a>
-                <h1 class="site-title">Floriatan Costa</h1>
-            </div>
-            <!--  Menu -->
-            <nav id="navMenu" class="nav-content">
-                <a href="/">Início</a>
-                <a href="/biografia">Biografia</a>
-                <a href="/experiencia">Experiência</a>
-                <a href="/publicacoes">Publicações</a>
-                <a href="/premiacoes">Premiações</a>
-                <a href="/contato">Contato</a>
-            </nav>
-            <!-- Idioma e tema -->
-            <div class="header-right">
-                <div class="lang-dropdown">
-                    <button class="lang-dropbtn">PT</button>
-                    <div class="lang-dropdown-content">
-                        <button onclick="switchLanguage('pt')">Português (PT)</button>
-                        <button onclick="switchLanguage('en')">English (EN)</button>
-                    </div>
-                </div>
-                <button id="theme-toggle" class="theme-toggle" onclick="toggleTheme()" title="Alternar Tema" style="padding: 0;"><img src="/assets/icons/escuro.svg" alt="Ativar Modo Escuro" style="width: 20px; height: 20px;"></button>
-                <button class="menu-toggle" onclick="toggleMenu()">☰</button>
-            </div>
-        </div>
-    </header>
-    
-    <!-- Conteúdo principal -->
-    <main>
-        <div class="container" style="margin-top: 80px;">
-            <section class="grid-row grid-30-70 margin-top-5">
-                <div class="card">
-                    <img src="./assets/svg/fundo.svg" alt="Imagem de Capa" class="cover-image">
-                </div>
-                <div class="card">
-                    <h2 class="text-2xl">Bem-vindo! Welcome! Bienvenido!</h2>
-                    <p class="text-lg">Neste site, você encontrará detalhes sobre minha trajetória acadêmica, pesquisa, publicações e projetos. Explore as seções para saber mais sobre meu trabalho.</p>
-                    <p class="text-lg">Este site foi desenvolvido inteiramente com software de código aberto. Se tiver interesse em saber mais, entre em <a href="/contato" class="inline-link">contato</a>. Se notar algum problema de exibição ou organização de conteúdo, por favor me avise.</p>
-                    <p class="text-lg font-bold">Obrigado pela visita e espero que você encontre informações úteis aqui!</p>
-                </div>
-            </section>
-        </div>
-    </main>
-    
-    <!-- Rodapé -->
-    <footer>
-        <div class="container footer-content">
-            <div class="footer-left">
-                <p>&copy; <span id="year"></span> — Todos os direitos reservados.</p>
-            </div>
-            <div class="footer-right">
-                <a href="/sobre">Sobre</a>
-                <a href="/design">Design</a>
-                <a href="/contato">Contato</a>
-            </div>
-        </div>
-    </footer>
+<a class="skip-link" href="#main">Pular para o conteúdo</a>
+<header class="site-header">
+  <div class="container header-content">
+    <a class="brand" href="/" aria-label="Floriatan Santos Costa — Início">
+      <img src="/assets/logo.svg" alt="" class="logo-img" width="44" height="44">
+      <span class="site-title">Floriatan Costa</span>
+    </a>
+    <nav class="site-nav" id="site-nav" aria-label="Navegação principal">
+      <ul class="nav-content"><li><a href="/">Início</a></li><li><a href="/biografia">Biografia</a></li><li><a href="/experiencia">Experiência</a></li><li><a href="/publicacoes">Publicações</a></li><li><a href="/producao">Produção</a></li><li><a href="/premiacoes">Premiações</a></li><li><a href="/contato">Contato</a></li></ul>
+    </nav>
+    <div class="header-right">
+      <details class="lang-menu">
+        <summary aria-label="Idioma: Português"><svg class="icon" aria-hidden="true" focusable="false"><use href="/assets/icons/sprite.svg#globe"></use></svg><span>PT</span></summary>
+        <ul class="lang-menu__list"><li><a href="/sobre" hreflang="pt-BR" lang="pt-BR" aria-current="true" data-lang="pt"><span class="lang-code">PT</span>Português</a></li><li><a href="/en/sobre" hreflang="en" lang="en" data-lang="en"><span class="lang-code">EN</span>English</a></li><li><a href="/es/sobre" hreflang="es" lang="es" data-lang="es"><span class="lang-code">ES</span>Español</a></li></ul>
+      </details>
+      <button type="button" class="icon-btn theme-toggle" data-theme-toggle aria-label="Alternar tema claro/escuro" aria-pressed="false" title="Alternar tema claro/escuro"><svg class="icon icon-moon" aria-hidden="true" focusable="false"><use href="/assets/icons/sprite.svg#moon"></use></svg><svg class="icon icon-sun" aria-hidden="true" focusable="false"><use href="/assets/icons/sprite.svg#sun"></use></svg></button>
+      <button type="button" class="icon-btn menu-toggle" data-menu-toggle aria-controls="site-nav" aria-expanded="false" aria-label="Abrir menu"><svg class="icon icon-menu" aria-hidden="true" focusable="false"><use href="/assets/icons/sprite.svg#menu"></use></svg><svg class="icon icon-close" aria-hidden="true" focusable="false"><use href="/assets/icons/sprite.svg#close"></use></svg></button>
+    </div>
+  </div>
+</header>
+<main id="main" tabindex="-1">
+<section class="page-hero container">
+  <p class="eyebrow">Sobre</p>
+  <h1>Bem-vindo! Welcome! ¡Bienvenido!</h1>
+</section>
 
-    <!-- Scripts -->
-    <script src="./js/app.js"></script>
+<div class="container">
+  <section class="grid-30-70 section">
+    <div class="about-art"><img src="/assets/svg/fundo.svg" alt="" width="600" height="600" class="cover-image"></div>
+    <div class="prose">
+      <p class="text-lg">Neste site, você encontrará detalhes sobre minha trajetória acadêmica, pesquisa, publicações e projetos. Explore as seções para saber mais sobre meu trabalho.</p>
+      <p>Este site foi desenvolvido inteiramente com software de código aberto. Se tiver interesse em saber mais, entre em <a href="/contato" class="inline-link">contato</a>. Se notar algum problema de exibição ou organização de conteúdo, por favor me avise.</p>
+      <p class="font-bold">Obrigado pela visita e espero que você encontre informações úteis aqui!</p>
+    </div>
+  </section>
 
+  <div class="card-grid card-grid--3 section">
+    <section class="card" aria-labelledby="h-tec">
+      <h2 id="h-tec" class="card-title">Tecnologia</h2>
+      <p>HTML, CSS e JavaScript sem frameworks, hospedado no GitHub Pages. As páginas são geradas a partir de uma fonte única de dados, o que mantém as três versões do site consistentes.</p>
+    </section>
+    <section class="card" aria-labelledby="h-idiomas">
+      <h2 id="h-idiomas" class="card-title">Idiomas</h2>
+      <p>O conteúdo está disponível em português, inglês e espanhol. Títulos de publicações, nomes de periódicos, eventos e instituições são mantidos no idioma original.</p>
+    </section>
+    <section class="card" aria-labelledby="h-a11y">
+      <h2 id="h-a11y" class="card-title">Acessibilidade</h2>
+      <p>O site segue as diretrizes WCAG 2.1: navegação por teclado, contraste adequado, modo claro e escuro e respeito à preferência de movimento reduzido.</p>
+    </section>
+  </div>
+
+  <section class="section card" aria-labelledby="h-priv">
+    <h2 id="h-priv" class="card-title">Privacidade</h2>
+    <p>Este site usa o Google Analytics para gerar estatísticas agregadas de visitas. A preferência de tema (claro ou escuro) é salva apenas no seu navegador. Nenhum formulário coleta dados pessoais.</p>
+    <p class="text-muted">Última atualização do conteúdo: <time datetime="2026-10-17">17/10/2026</time>.</p>
+  </section>
+</div>
+
+</main>
+<footer class="site-footer">
+  <div class="container footer-content">
+    <div class="footer-left">
+      <p>© <span data-year>2026</span> Floriatan Santos Costa. Todos os direitos reservados.</p>
+      <p class="footer-updated">Última atualização: <time datetime="2026-10-17">17/10/2026</time></p>
+    </div>
+    <ul class="footer-profiles"><li><a href="https://orcid.org/0000-0001-7766-2860" class="footer-profile" target="_blank" rel="noopener noreferrer"><img src="/assets/icons/orcid.svg" alt="ORCID" width="22" height="22"><span class="visually-hidden"> (abre em nova aba)</span></a></li><li><a href="https://scholar.google.com/citations?user=EbyxxAoAAAAJ" class="footer-profile" target="_blank" rel="noopener noreferrer"><img src="/assets/icons/academico.svg" alt="Google Scholar" width="22" height="22"><span class="visually-hidden"> (abre em nova aba)</span></a></li><li><a href="https://www.researchgate.net/profile/Floriatan-Costa" class="footer-profile" target="_blank" rel="noopener noreferrer"><img src="/assets/icons/rg.svg" alt="ResearchGate" width="22" height="22"><span class="visually-hidden"> (abre em nova aba)</span></a></li><li><a href="http://lattes.cnpq.br/0287106268880389" class="footer-profile" target="_blank" rel="noopener noreferrer"><img src="/assets/icons/lattes.svg" alt="Lattes" width="22" height="22"><span class="visually-hidden"> (abre em nova aba)</span></a></li><li><a href="https://www.linkedin.com/in/floriatanscosta/" class="footer-profile" target="_blank" rel="noopener noreferrer"><img src="/assets/icons/linkedin.svg" alt="LinkedIn" width="22" height="22"><span class="visually-hidden"> (abre em nova aba)</span></a></li></ul>
+    <nav aria-label="Links do rodapé"><ul class="footer-right"><li><a href="/metricas">Métricas</a></li><li><a href="/sobre">Sobre</a></li><li><a href="/design">Design</a></li><li><a href="/contato">Contato</a></li><li><a href="/web/">Ferramentas</a></li></ul></nav>
+  </div>
+</footer>
+<script src="/js/app.js" defer></script>
 </body>
-
 </html>
