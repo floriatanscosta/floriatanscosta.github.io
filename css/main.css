@@ -181,7 +181,7 @@ cite { font-style: italic; }
 .pub-year { margin-bottom: 26px; }
 .pub-year__title { font-size: 1.1rem; font-weight: 900; margin-bottom: 10px; color: var(--heading-color); display: inline-block; padding: 2px 12px; border-radius: 999px; background: var(--nav-hover); }
 .pub-list { display: grid; gap: 12px; }
-.pub-item { background: var(--box-bg); border: 1px solid var(--border-color); border-radius: var(--radius-md); padding: 18px 20px; }
+.pub-item { background: var(--box-bg); border-radius: var(--radius-md); padding: 18px 20px; }
 .pub-title { font-size: 1.05rem; font-weight: 700; color: var(--heading-strong); line-height: 1.4; margin-bottom: 6px; }
 .pub-authors { font-size: 0.9rem; color: var(--text-muted); margin-bottom: 4px; line-height: 1.5; }
 .pub-authors .me { color: var(--text-main); font-weight: 700; }
