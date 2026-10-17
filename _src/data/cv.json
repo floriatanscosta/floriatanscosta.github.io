@@ -342,10 +342,10 @@
   ],
   "techniques": [
     "ICP-MS",
-    "ICP OES",
+    "ICP-OES",
     "FAAS",
     "GFAAS",
-    "MIP OES"
+    "MIP-OES"
   ],
   "projects": [
     {
@@ -466,11 +466,14 @@
   "reviewer": [
     {
       "since": 2026,
-      "journal": "Analytical Letters"
+      "journal": "Analytical Letters",
+      "url": "https://www.tandfonline.com/journals/lanl20"
     },
     {
       "since": 2026,
-      "journal": "Scientific Reports"
+      "journal": "Scientific Reports",
+      "url": "https://www.nature.com/srep/"
+      
     },
     {
       "since": 2025,
@@ -817,9 +820,9 @@
         "owner": "Elsevier",
         "url": "https://www.scopus.com/authid/detail.uri?authorId=57216746115",
         "docs": 44,
-        "citations": 419,
+        "citations": 421,
         "h": 14,
-        "h_date": "2026-09-16"
+        "h_date": "2026-10-17"
       },
       {
         "id": "wos",
@@ -827,8 +830,8 @@
         "owner": "Clarivate",
         "url": "https://www.webofscience.com/wos/author/record/S-1383-2018",
         "docs": 47,
-        "citations": 361,
-        "h": 14
+        "citations": 372,
+        "h": 13
       },
       {
         "id": "scholar",
@@ -836,9 +839,9 @@
         "owner": "Google",
         "url": "https://scholar.google.com/citations?user=EbyxxAoAAAAJ",
         "docs": 54,
-        "citations": 480,
+        "citations": 483,
         "h": 14,
-        "h_date": "2026-09-16"
+        "h_date": "2026-10-17"
       }
     ]
   },
