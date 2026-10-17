@@ -1,5 +1,5 @@
 ---
-version: 1.0.0
+version: 2.0.0
 name: Floriatan-Design-System
 description: "Um design system acadêmico e profissional construído com foco em legibilidade, performance e estética modular. O sistema equilibra a sobriedade da pesquisa científica (painéis brancos/escuros puros, tipografia estruturada) com toques modernos de Glassmorphism e gradientes sutis. Totalmente fluido e utilitário, ele suporta transições perfeitas para o Modo Escuro, mantendo o contraste e a hierarquia visual por meio de bordas suaves e elevações por sombra."
 
@@ -8,7 +8,12 @@ colors:
   heading-color: "#5a729e" # Dark: #FFFFFF
   btn-bg: "#5a729e" # Dark: #1F242A
   btn-bg-hover: "#4a5f7c" # Dark: #292f35
-  text-main: "#444444" # Dark: #E5E5E5
+  text-main: "#3d4350" # Dark: #E5E5E5
+  text-muted: "#5f6675" # Dark: #b3b8c2
+  link-color: "#3f5a8a" # Dark: #aec3ea
+  heading-strong: "#3f5682" # Dark: #FFFFFF
+  accent: "#666fe4"
+  accent-2: "#d13c86"
   box-bg: "#ffffff" # Dark: #23282F
   border-color: "#e2e8f0" # Dark: #2F333C
   nav-bg: "#24577f"
@@ -19,8 +24,8 @@ colors:
   header-gradient: "linear-gradient(230deg, #ebb7dd47, #0f58832e)"
 
 typography:
-  font-primary: "Roboto, Arial, Tahoma, Verdana, sans-serif"
-  font-mono: "'Courier New', monospace"
+  font-primary: "'Roboto Variable', Roboto, system-ui, -apple-system, 'Segoe UI', Arial, sans-serif"  # servida localmente em /assets/fonts
+  font-mono: "ui-monospace, SFMono-Regular, Menlo, Consolas, 'Courier New', monospace"
   display-h2:
     fontSize: "1.6rem"
     fontWeight: 700
@@ -45,7 +50,7 @@ typography:
 
 rounded:
   sm: "4px"
-  md: "8px"
+  md: "10px"
   lg: "16px"
   full: "50%"
   pill: "20px"
@@ -134,3 +139,20 @@ Um sistema expansivo de crachás (`.ui-tag`) com variantes: `solid`, `soft` (fun
 
 - `.app-container` dita a divisão 50/50 em ecrãs grandes para ferramentas como o Gerador de Assinaturas e Custom Plate XML.
 - `.project-grid` ajusta-se automaticamente (`auto-fit, minmax(300px, 1fr)`) para diretórios e portfólios, empilhando elegantemente em dispositivos móveis.
+
+### Componentes da versão 2.0 (páginas geradas)
+
+| Componente | Classe | Uso |
+|---|---|---|
+| Cabeçalho de página | `.page-hero`, `.eyebrow`, `.lead`, `.page-toc` | Título, subtítulo e atalhos de seção |
+| Título de seção | `.section`, `.section-title` | Título com filete à direita |
+| Cartão | `.card`, `.card-title`, `.card-subtitle-sm` | Blocos de conteúdo |
+| Linha do tempo | `.tl`, `.tl-item`, `.tl-logo` | Formação e atuação profissional |
+| Lista ano + texto | `.item-list`, `.item-year`, `.item-sub` | Cursos, palestras, eventos, orientações |
+| Publicações | `.pub-list`, `.pub-item`, `.pub-title`, `.pub-authors .me`, `.pub-link` | Artigos e trabalhos em eventos |
+| Prêmios | `.award-list`, `.award`, `.award-year` | Página de premiações |
+| Métricas | `.metrics-grid`, `.metric-card`, `.stat-strip`, `.totals` | Indicadores e totais |
+| Chips e selos | `.chip`, `.chip--mono`, `.badge`, `.badge--accent/ok/muted` | Linhas de pesquisa, técnicas, status |
+| Ícones | `<svg class="icon"><use href="/assets/icons/sprite.svg#nome">` | doi, external, award, mail, pin, globe, moon, sun, menu, close, building |
+
+Regras de acessibilidade: contraste mínimo AA (verificado com axe-core nos dois temas), foco visível com `--focus-ring`, nenhuma informação transmitida só por cor, animações desativadas com `prefers-reduced-motion`.

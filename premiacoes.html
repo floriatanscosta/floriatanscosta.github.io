@@ -1,112 +1,152 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/svg+xml" href="./assets/favicon.svg">
-    <!-- Meta Tags -->
-    <title>Premiações e Títulos - Floriatan Santos Costa</title>
-    <meta name="description" content="Reconhecimentos acadêmicos, prêmios científicos e títulos conquistados ao longo da trajetória na química analítica.">
-    <meta property="og:title" content="Premiações e Títulos - Floriatan Santos Costa">
-    <meta property="og:description" content="Reconhecimentos acadêmicos e prêmios na área de química e pesquisa científica.">
-    <meta property="og:image" content="https://floriatan.com.br/assets/cover.png">
-    <meta property="og:url" content="https://floriatan.com.br/premiacoes">
-    <meta property="og:type" content="website">
-    <meta name="theme-color" content="#5a729e">
-
-    <!-- Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-0NDPRCLMYV"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag() { dataLayer.push(arguments); }
-        gtag('js', new Date());
-
-        gtag('config', 'G-0NDPRCLMYV');
-    </script>
-
-    <!-- Previne o piscar branco -->
-    <script>
-        if (localStorage.getItem('theme') === 'dark') {
-            document.documentElement.setAttribute('data-theme', 'dark');
-        }
-    </script>
-    
-    <link rel="stylesheet" href="./css/global.css">
-    <link rel="stylesheet" href="./css/main.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://www.googletagmanager.com; connect-src 'self' https://*.google-analytics.com https://*.analytics.google.com https://*.googletagmanager.com; img-src 'self' data: https://*.google-analytics.com https://*.googletagmanager.com; style-src 'self'; font-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self' mailto:">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <title>Premiações · Floriatan Santos Costa</title>
+  <meta name="description" content="Prêmios e distinções recebidos por Floriatan Santos Costa, incluindo Melhor Tese PPGQ/UFPR 2024 e prêmios de melhor trabalho em congressos de química analítica.">
+  <meta name="author" content="Floriatan Santos Costa">
+  <link rel="canonical" href="https://floriatan.com.br/premiacoes">
+  <link rel="alternate" hreflang="pt-BR" href="https://floriatan.com.br/premiacoes">
+  <link rel="alternate" hreflang="en" href="https://floriatan.com.br/en/premiacoes">
+  <link rel="alternate" hreflang="es" href="https://floriatan.com.br/es/premiacoes">
+  <link rel="alternate" hreflang="x-default" href="https://floriatan.com.br/premiacoes">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Floriatan Santos Costa">
+  <meta property="og:title" content="Premiações · Floriatan Santos Costa">
+  <meta property="og:description" content="Prêmios e distinções recebidos por Floriatan Santos Costa, incluindo Melhor Tese PPGQ/UFPR 2024 e prêmios de melhor trabalho em congressos de química analítica.">
+  <meta property="og:url" content="https://floriatan.com.br/premiacoes">
+  <meta property="og:image" content="https://floriatan.com.br/assets/cover.png">
+  <meta property="og:image:width" content="940">
+  <meta property="og:image:height" content="540">
+  <meta property="og:image:alt" content="Logotipo Fc de Floriatan Santos Costa">
+  <meta property="og:locale" content="pt_BR">
+  <meta property="og:locale:alternate" content="en_US">
+  <meta property="og:locale:alternate" content="es_ES">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="theme-color" content="#5a729e" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#1a1f26" media="(prefers-color-scheme: dark)">
+  <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
+  <link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png">
+  <link rel="preload" href="/assets/fonts/roboto-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <script src="/js/theme-init.js"></script>
+  <link rel="stylesheet" href="/css/global.css?v=20261017">
+  <link rel="stylesheet" href="/css/main.css?v=20261017">
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-0NDPRCLMYV"></script>
+  <script src="/js/analytics.js" defer></script>
 </head>
-
 <body>
-    <!-- Header e nav -->
-    <header>
-        <div class="container header-content">
-            <!-- Logo e nome -->
-            <div class="header-left">
-                <a href="/">
-                    <img src="/assets/logo.svg" alt="Logo Floriatan" class="logo-img">
-                </a>
-                <h1 class="site-title">Floriatan Costa</h1>
-            </div>
-            <!--  Menu -->
-            <nav id="navMenu" class="nav-content">
-                <a href="/">Início</a>
-                <a href="/biografia">Biografia</a>
-                <a href="/experiencia">Experiência</a>
-                <a href="/publicacoes">Publicações</a>
-                <a href="/premiacoes">Premiações</a>
-                <a href="/contato">Contato</a>
-            </nav>
-            <!-- Idioma e tema -->
-            <div class="header-right">
-                <div class="lang-dropdown">
-                    <button class="lang-dropbtn">PT</button>
-                    <div class="lang-dropdown-content">
-                        <button onclick="switchLanguage('pt')">Português (PT)</button>
-                        <button onclick="switchLanguage('en')">English (EN)</button>
-                    </div>
-                </div>
-                <button id="theme-toggle" class="theme-toggle" onclick="toggleTheme()" title="Alternar Tema"
-                    style="padding: 0;"><img src="/assets/icons/escuro.svg" alt="Ativar Modo Escuro"
-                        style="width: 20px; height: 20px;"></button>
-                <button class="menu-toggle" onclick="toggleMenu()">☰</button>
-            </div>
-        </div>
-    </header>
-    <!-- CONTEÚDO EM ATUALIZAÇÃO -->
-    <main>
-        <div class="container">
-            <section class="col-1" style="text-align: center; padding: 80px 20px;">
-                <!-- Ícone de Manutenção/Atualização -->
-                <img src="./assets/icons/erro.svg" alt="Em atualização"
-                    style="width: 80px; height: 80px; margin-bottom: 20px; opacity: 0.7;">
-                <h1 class="intro-title" style="margin-bottom: 15px;">Página em Atualização</h1>
-                <p class="intro-text" style="max-width: 600px; margin: 0 auto 40px;">
-                    O conteúdo desta seção está sendo revisado e estará disponível em breve.
-                </p>
-                <div style="display: flex; gap: 15px; justify-content: center; flex-wrap: wrap;">
-                    <a href="/" class="btn">Voltar ao Início</a>
-                </div>
-            </section>
-        </div>
-    </main>
+<a class="skip-link" href="#main">Pular para o conteúdo</a>
+<header class="site-header">
+  <div class="container header-content">
+    <a class="brand" href="/" aria-label="Floriatan Santos Costa — Início">
+      <img src="/assets/logo.svg" alt="" class="logo-img" width="44" height="44">
+      <span class="site-title">Floriatan Costa</span>
+    </a>
+    <nav class="site-nav" id="site-nav" aria-label="Navegação principal">
+      <ul class="nav-content"><li><a href="/">Início</a></li><li><a href="/biografia">Biografia</a></li><li><a href="/experiencia">Experiência</a></li><li><a href="/publicacoes">Publicações</a></li><li><a href="/producao">Produção</a></li><li><a href="/premiacoes" aria-current="page">Premiações</a></li><li><a href="/contato">Contato</a></li></ul>
+    </nav>
+    <div class="header-right">
+      <details class="lang-menu">
+        <summary aria-label="Idioma: Português"><svg class="icon" aria-hidden="true" focusable="false"><use href="/assets/icons/sprite.svg#globe"></use></svg><span>PT</span></summary>
+        <ul class="lang-menu__list"><li><a href="/premiacoes" hreflang="pt-BR" lang="pt-BR" aria-current="true" data-lang="pt"><span class="lang-code">PT</span>Português</a></li><li><a href="/en/premiacoes" hreflang="en" lang="en" data-lang="en"><span class="lang-code">EN</span>English</a></li><li><a href="/es/premiacoes" hreflang="es" lang="es" data-lang="es"><span class="lang-code">ES</span>Español</a></li></ul>
+      </details>
+      <button type="button" class="icon-btn theme-toggle" data-theme-toggle aria-label="Alternar tema claro/escuro" aria-pressed="false" title="Alternar tema claro/escuro"><svg class="icon icon-moon" aria-hidden="true" focusable="false"><use href="/assets/icons/sprite.svg#moon"></use></svg><svg class="icon icon-sun" aria-hidden="true" focusable="false"><use href="/assets/icons/sprite.svg#sun"></use></svg></button>
+      <button type="button" class="icon-btn menu-toggle" data-menu-toggle aria-controls="site-nav" aria-expanded="false" aria-label="Abrir menu"><svg class="icon icon-menu" aria-hidden="true" focusable="false"><use href="/assets/icons/sprite.svg#menu"></use></svg><svg class="icon icon-close" aria-hidden="true" focusable="false"><use href="/assets/icons/sprite.svg#close"></use></svg></button>
+    </div>
+  </div>
+</header>
+<main id="main" tabindex="-1">
+<section class="page-hero container">
+  <p class="eyebrow">Premiações</p>
+  <h1>Prêmios e títulos</h1>
+  <p class="lead">Reconhecimentos recebidos por trabalhos apresentados em congressos, pela tese de doutorado e por artigo publicado.</p>
+</section>
 
-    <!-- Rodapé -->
-    <footer>
-        <div class="container footer-content">
-            <div class="footer-left">
-                <p>&copy; <span id="year"></span> — Todos os direitos reservados.</p>
-            </div>
-            <div class="footer-right">
-                <a href="/sobre">Sobre</a>
-                <a href="/design">Design</a>
-                <a href="/contato">Contato</a>
-            </div>
-        </div>
-    </footer>
+<div class="container">
+  <section class="section" aria-label="Lista de prêmios">
+    <ol class="award-list">
+<li class="award">
+  <span class="award-year">2025</span>
+  <div class="award-body">
+    <p class="award-kind"><svg class="icon" aria-hidden="true" focusable="false"><use href="/assets/icons/sprite.svg#award"></use></svg>Melhor trabalho</p>
+    
+    <p class="award-where" lang="pt">XXV Simpósio Brasileiro de Eletroquímica e Eletroanalítica</p>
+  </div>
+</li>
+<li class="award">
+  <span class="award-year">2024</span>
+  <div class="award-body">
+    <p class="award-kind"><svg class="icon" aria-hidden="true" focusable="false"><use href="/assets/icons/sprite.svg#award"></use></svg>Melhor tese</p>
+    <span class="award-name" lang="pt">Melhor Tese PPGQ UFPR — Prêmio Excelência Acadêmica da Pós-graduação 2024</span>
+    <p class="award-where" lang="pt">Universidade Federal do Paraná</p>
+  </div>
+</li>
+<li class="award">
+  <span class="award-year">2024</span>
+  <div class="award-body">
+    <p class="award-kind"><svg class="icon" aria-hidden="true" focusable="false"><use href="/assets/icons/sprite.svg#award"></use></svg>Melhor trabalho</p>
+    
+    <p class="award-where" lang="pt">47ª Reunião Anual da Sociedade Brasileira de Química — Divisão de Química Analítica da SBQ</p>
+  </div>
+</li>
+<li class="award">
+  <span class="award-year">2024</span>
+  <div class="award-body">
+    <p class="award-kind"><svg class="icon" aria-hidden="true" focusable="false"><use href="/assets/icons/sprite.svg#award"></use></svg>Melhor trabalho</p>
+    
+    <p class="award-where" lang="pt">21º Encontro Nacional de Química Analítica</p>
+  </div>
+</li>
+<li class="award">
+  <span class="award-year">2024</span>
+  <div class="award-body">
+    <p class="award-kind"><svg class="icon" aria-hidden="true" focusable="false"><use href="/assets/icons/sprite.svg#award"></use></svg>Melhor artigo</p>
+    <span class="award-name" lang="en">2024 Best Paper Awards</span>
+    <p class="award-where" lang="en">Oral Surgery, Oral Medicine, Oral Pathology and Oral Radiology (Elsevier)</p>
+  </div>
+</li>
+<li class="award">
+  <span class="award-year">2023</span>
+  <div class="award-body">
+    <p class="award-kind"><svg class="icon" aria-hidden="true" focusable="false"><use href="/assets/icons/sprite.svg#award"></use></svg>Menção honrosa</p>
+    
+    <p class="award-where" lang="pt">Semana Acadêmica de Engenharia de Alimentos da Universidade Federal do Amazonas</p>
+  </div>
+</li>
+<li class="award">
+  <span class="award-year">2022</span>
+  <div class="award-body">
+    <p class="award-kind"><svg class="icon" aria-hidden="true" focusable="false"><use href="/assets/icons/sprite.svg#award"></use></svg>Melhor trabalho</p>
+    
+    <p class="award-where" lang="pt">20º Encontro Nacional de Química Analítica</p>
+  </div>
+</li>
+<li class="award">
+  <span class="award-year">2018</span>
+  <div class="award-body">
+    <p class="award-kind"><svg class="icon" aria-hidden="true" focusable="false"><use href="/assets/icons/sprite.svg#award"></use></svg>Melhor trabalho</p>
+    
+    <p class="award-where" lang="pt">24º Seminário de Iniciação Científica da Universidade Estadual de Santa Cruz (UESC)</p>
+  </div>
+</li>
+</ol>
+  </section>
+</div>
 
-    <!-- Scripts -->
-    <script src="./js/app.js"></script>
-
+</main>
+<footer class="site-footer">
+  <div class="container footer-content">
+    <div class="footer-left">
+      <p>© <span data-year>2026</span> Floriatan Santos Costa. Todos os direitos reservados.</p>
+      <p class="footer-updated">Última atualização: <time datetime="2026-10-17">17/10/2026</time></p>
+    </div>
+    <ul class="footer-profiles"><li><a href="https://orcid.org/0000-0001-7766-2860" class="footer-profile" target="_blank" rel="noopener noreferrer"><img src="/assets/icons/orcid.svg" alt="ORCID" width="22" height="22"><span class="visually-hidden"> (abre em nova aba)</span></a></li><li><a href="https://scholar.google.com/citations?user=EbyxxAoAAAAJ" class="footer-profile" target="_blank" rel="noopener noreferrer"><img src="/assets/icons/academico.svg" alt="Google Scholar" width="22" height="22"><span class="visually-hidden"> (abre em nova aba)</span></a></li><li><a href="https://www.researchgate.net/profile/Floriatan-Costa" class="footer-profile" target="_blank" rel="noopener noreferrer"><img src="/assets/icons/rg.svg" alt="ResearchGate" width="22" height="22"><span class="visually-hidden"> (abre em nova aba)</span></a></li><li><a href="http://lattes.cnpq.br/0287106268880389" class="footer-profile" target="_blank" rel="noopener noreferrer"><img src="/assets/icons/lattes.svg" alt="Lattes" width="22" height="22"><span class="visually-hidden"> (abre em nova aba)</span></a></li><li><a href="https://www.linkedin.com/in/floriatanscosta/" class="footer-profile" target="_blank" rel="noopener noreferrer"><img src="/assets/icons/linkedin.svg" alt="LinkedIn" width="22" height="22"><span class="visually-hidden"> (abre em nova aba)</span></a></li></ul>
+    <nav aria-label="Links do rodapé"><ul class="footer-right"><li><a href="/metricas">Métricas</a></li><li><a href="/sobre">Sobre</a></li><li><a href="/design">Design</a></li><li><a href="/contato">Contato</a></li><li><a href="/web/">Ferramentas</a></li></ul></nav>
+  </div>
+</footer>
+<script src="/js/app.js" defer></script>
 </body>
-
 </html>

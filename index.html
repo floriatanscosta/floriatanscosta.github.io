@@ -1,119 +1,145 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/svg+xml" href="./assets/favicon.svg">
-    <!-- Meta Tags -->
-    <title>Floriatan Santos Costa - Portfólio</title>
-    <meta name="description" content="Portfólio acadêmico e profissional de Floriatan Santos Costa - Pesquisador em Química Analítica, tratamento de dados e desenvolvimento de métodos.">
-    <meta property="og:title" content="Floriatan Santos Costa - Portfólio">
-    <meta property="og:description" content="Portfólio acadêmico e profissional focado em química analítica, automação de dados e instrumentação.">
-    <meta property="og:image" content="https://floriatan.com.br/assets/cover.png">
-    <meta property="og:url" content="https://floriatan.com.br/">
-    <meta property="og:type" content="website">
-    <meta name="theme-color" content="#5a729e">
-    
-    <!-- Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-0NDPRCLMYV"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag() { dataLayer.push(arguments); }
-        gtag('js', new Date());
-
-        gtag('config', 'G-0NDPRCLMYV');
-    </script>
-
-    <!-- Previne o piscar branco -->
-    <script>
-        if (localStorage.getItem('theme') === 'dark') {
-            document.documentElement.setAttribute('data-theme', 'dark');
-        }
-    </script>
-    <style>
-        body {background: var(--header-gradient);}
-    </style>
-    <link rel="stylesheet" href="./css/global.css">
-    <link rel="stylesheet" href="./css/main.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://www.googletagmanager.com; connect-src 'self' https://*.google-analytics.com https://*.analytics.google.com https://*.googletagmanager.com; img-src 'self' data: https://*.google-analytics.com https://*.googletagmanager.com; style-src 'self'; font-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self' mailto:">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <title>Floriatan Santos Costa · Química Analítica</title>
+  <meta name="description" content="Portfólio acadêmico de Floriatan Santos Costa, pesquisador de pós-doutorado em química analítica: preparo de amostras, solventes eutéticos profundos, quimiometria e espectrometria atômica.">
+  <meta name="author" content="Floriatan Santos Costa">
+  <link rel="canonical" href="https://floriatan.com.br/">
+  <link rel="alternate" hreflang="pt-BR" href="https://floriatan.com.br/">
+  <link rel="alternate" hreflang="en" href="https://floriatan.com.br/en/">
+  <link rel="alternate" hreflang="es" href="https://floriatan.com.br/es/">
+  <link rel="alternate" hreflang="x-default" href="https://floriatan.com.br/">
+  <meta property="og:type" content="profile">
+  <meta property="og:site_name" content="Floriatan Santos Costa">
+  <meta property="og:title" content="Floriatan Santos Costa · Química Analítica">
+  <meta property="og:description" content="Portfólio acadêmico de Floriatan Santos Costa, pesquisador de pós-doutorado em química analítica: preparo de amostras, solventes eutéticos profundos, quimiometria e espectrometria atômica.">
+  <meta property="og:url" content="https://floriatan.com.br/">
+  <meta property="og:image" content="https://floriatan.com.br/assets/cover.png">
+  <meta property="og:image:width" content="940">
+  <meta property="og:image:height" content="540">
+  <meta property="og:image:alt" content="Logotipo Fc de Floriatan Santos Costa">
+  <meta property="og:locale" content="pt_BR">
+  <meta property="og:locale:alternate" content="en_US">
+  <meta property="og:locale:alternate" content="es_ES">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="theme-color" content="#5a729e" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#1a1f26" media="(prefers-color-scheme: dark)">
+  <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
+  <link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png">
+  <link rel="preload" href="/assets/fonts/roboto-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <script src="/js/theme-init.js"></script>
+  <link rel="stylesheet" href="/css/global.css?v=20261017">
+  <link rel="stylesheet" href="/css/main.css?v=20261017">
+  
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-0NDPRCLMYV"></script>
+  <script src="/js/analytics.js" defer></script>
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Person", "name": "Floriatan Santos Costa", "url": "https://floriatan.com.br/", "image": "https://floriatan.com.br/assets/img/profile.webp", "jobTitle": "Pesquisador de Pós-Doutorado", "affiliation": {"@type": "CollegeOrUniversity", "name": "Universidad de Zaragoza"}, "alumniOf": [{"@type": "CollegeOrUniversity", "name": "Universidade Federal do Paraná"}, {"@type": "CollegeOrUniversity", "name": "Universidade Estadual de Santa Cruz"}, {"@type": "CollegeOrUniversity", "name": "Instituto Federal Baiano"}], "knowsAbout": ["Analytical chemistry", "Sample preparation", "Deep eutectic solvents", "Chemometrics", "Atomic spectrometry"], "sameAs": ["https://orcid.org/0000-0001-7766-2860", "https://scholar.google.com/citations?user=EbyxxAoAAAAJ", "https://www.researchgate.net/profile/Floriatan-Costa", "http://lattes.cnpq.br/0287106268880389", "https://www.linkedin.com/in/floriatanscosta/"]}</script>
 </head>
-
 <body>
-    <!-- Header e nav -->
-    <header>
-        <div class="container header-content">
-            <!-- Logo e nome -->
-            <div class="header-left">
-                <a href="/">
-                    <img src="/assets/logo.svg" alt="Logo Floriatan" class="logo-img">
-                </a>
-                <h1 class="site-title">Floriatan Costa</h1>
-            </div>
-            <!--  Menu -->
-            <nav id="navMenu" class="nav-content">
-                <a href="/">Início</a>
-                <a href="/biografia">Biografia</a>
-                <a href="/experiencia">Experiência</a>
-                <a href="/publicacoes">Publicações</a>
-                <a href="/premiacoes">Premiações</a>
-                <a href="/contato">Contato</a>
-            </nav>
-            <!-- Idioma e tema -->
-            <div class="header-right">
-                <div class="lang-dropdown">
-                    <button class="lang-dropbtn">PT</button>
-                    <div class="lang-dropdown-content">
-                        <button onclick="switchLanguage('pt')">Português (PT)</button>
-                        <button onclick="switchLanguage('en')">English (EN)</button>
-                    </div>
-                </div>
-                <button id="theme-toggle" class="theme-toggle" onclick="toggleTheme()" title="Alternar tema" style="padding: 0;"><img src="/assets/icons/escuro.svg" alt="Ativar Modo Escuro" style="width: 20px; height: 20px;"></button>
-                <button class="menu-toggle" onclick="toggleMenu()">☰</button>
-            </div>
-        </div>
-    </header>
-    
-    <!-- Conteúdo principal -->
-    <main>
-        <div class="container">
-            <section class="grid-row grid-50-50 margin-top-3">
-                <div class="card">
-                    <img src="/assets/svg/fundo.svg" alt="Imagem de Capa" class="cover-image">
-                </div>
-                <div class="card">
-                    <h1 class="intro-title">Entre tubos, dados e algoritmos, um pesquisador em busca de respostas!</h1>
-                    <p class="intro-text">A ciência é um universo de possibilidades. Entre tubos, curvas analíticas, espectrômetros e dados, sigo rastros invisíveis que <a href="/vida" class="inline-link">contam histórias</a> e revelam os mistérios da natureza.</p>
-                    <div class="social-container">
-                        <a href="/metricas" class="social-box"><img src="/assets/icons/data.svg" alt="Metrics and indicators" title="Metrics and indicators"></a>
-                        <a href="https://orcid.org/0000-0001-7766-2860" class="social-box" target="_blank"><img src="/assets/icons/orcid.svg" alt="OrcID" title="OrcID Profile"></a>
-                        <a href="https://www.researchgate.net/profile/Floriatan-Costa" class="social-box" target="_blank"><img src="/assets/icons/rg.svg" alt="ResearchGate" title="ResearchGate"></a>
-                        <a href="http://lattes.cnpq.br/0287106268880389" class="social-box" target="_blank"><img src="/assets/icons/lattes.svg" alt="Lattes" title="Lattes Curriculum"></a>
-                        <a href="https://www.linkedin.com/in/floriatanscosta/" class="social-box" target="_blank"><img src="/assets/icons/linkedin.svg" alt="LinkedIn" title="LinkedIn Profile"></a>
-                        <a href="https://scholar.google.com.br/citations?user=EbyxxAoAAAAJ" class="social-box" target="_blank"><img src="/assets/icons/academico.svg" alt="Google Scholar" title="Google Scholar Profile"></a>
-                    </div>
-                </div>
-            </section>
-        </div>
-    </main>
-    
-    <!-- Rodapé -->
-    <footer>
-        <div class="container footer-content">
-            <div class="footer-left">
-                <p>&copy; <span id="year"></span> — Todos os direitos reservados.</p>
-            </div>
-            <div class="footer-right">
-                <a href="/web">Tools</a>
-                <a href="/sobre">Sobre</a>
-                <a href="/design">Design</a>
-                <a href="/contato">Contato</a>
-            </div>
-        </div>
-    </footer>
+<a class="skip-link" href="#main">Pular para o conteúdo</a>
+<header class="site-header">
+  <div class="container header-content">
+    <a class="brand" href="/" aria-label="Floriatan Santos Costa — Início">
+      <img src="/assets/logo.svg" alt="" class="logo-img" width="44" height="44">
+      <span class="site-title">Floriatan Costa</span>
+    </a>
+    <nav class="site-nav" id="site-nav" aria-label="Navegação principal">
+      <ul class="nav-content"><li><a href="/" aria-current="page">Início</a></li><li><a href="/biografia">Biografia</a></li><li><a href="/experiencia">Experiência</a></li><li><a href="/publicacoes">Publicações</a></li><li><a href="/producao">Produção</a></li><li><a href="/premiacoes">Premiações</a></li><li><a href="/contato">Contato</a></li></ul>
+    </nav>
+    <div class="header-right">
+      <details class="lang-menu">
+        <summary aria-label="Idioma: Português"><svg class="icon" aria-hidden="true" focusable="false"><use href="/assets/icons/sprite.svg#globe"></use></svg><span>PT</span></summary>
+        <ul class="lang-menu__list"><li><a href="/" hreflang="pt-BR" lang="pt-BR" aria-current="true" data-lang="pt"><span class="lang-code">PT</span>Português</a></li><li><a href="/en/" hreflang="en" lang="en" data-lang="en"><span class="lang-code">EN</span>English</a></li><li><a href="/es/" hreflang="es" lang="es" data-lang="es"><span class="lang-code">ES</span>Español</a></li></ul>
+      </details>
+      <button type="button" class="icon-btn theme-toggle" data-theme-toggle aria-label="Alternar tema claro/escuro" aria-pressed="false" title="Alternar tema claro/escuro"><svg class="icon icon-moon" aria-hidden="true" focusable="false"><use href="/assets/icons/sprite.svg#moon"></use></svg><svg class="icon icon-sun" aria-hidden="true" focusable="false"><use href="/assets/icons/sprite.svg#sun"></use></svg></button>
+      <button type="button" class="icon-btn menu-toggle" data-menu-toggle aria-controls="site-nav" aria-expanded="false" aria-label="Abrir menu"><svg class="icon icon-menu" aria-hidden="true" focusable="false"><use href="/assets/icons/sprite.svg#menu"></use></svg><svg class="icon icon-close" aria-hidden="true" focusable="false"><use href="/assets/icons/sprite.svg#close"></use></svg></button>
+    </div>
+  </div>
+</header>
+<main id="main" tabindex="-1">
+<section class="hero container">
+  <div class="hero-art">
+    <img src="/assets/svg/fundo.svg" alt="" width="600" height="600" class="cover-image">
+  </div>
+  <div class="hero-text">
+    <p class="eyebrow">Floriatan Santos Costa · Química Analítica</p>
+    <h1 class="intro-title">Entre tubos, dados e algoritmos, um pesquisador em busca de respostas!</h1>
+    <p class="intro-text">A ciência é um universo de possibilidades. Entre tubos, curvas analíticas, espectrômetros e dados, sigo rastros invisíveis que <a href="/vida" class="inline-link">contam histórias</a> e revelam os mistérios da natureza.</p>
+    <p class="current-pos"><img class="tl-logo" src="/assets/svg/unizar.svg" alt="Universidad de Zaragoza (UNIZAR)" width="96" height="60" loading="lazy"><span><strong>Pesquisador de Pós-Doutorado</strong><span>Universidad de Zaragoza (UNIZAR) · Zaragoza, España</span></span></p>
+    <ul class="profile-links">
+<li><a class="profile-link" href="/metricas"><img src="/assets/icons/data.svg" alt="" width="32" height="32"><span>Métricas</span></a></li>
+<li><a href="https://orcid.org/0000-0001-7766-2860" class="profile-link" target="_blank" rel="noopener noreferrer"><img src="/assets/icons/orcid.svg" alt="" width="32" height="32"><span>ORCID</span><span class="visually-hidden"> (abre em nova aba)</span></a></li>
+<li><a href="https://scholar.google.com/citations?user=EbyxxAoAAAAJ" class="profile-link" target="_blank" rel="noopener noreferrer"><img src="/assets/icons/academico.svg" alt="" width="32" height="32"><span>Google Scholar</span><span class="visually-hidden"> (abre em nova aba)</span></a></li>
+<li><a href="https://www.researchgate.net/profile/Floriatan-Costa" class="profile-link" target="_blank" rel="noopener noreferrer"><img src="/assets/icons/rg.svg" alt="" width="32" height="32"><span>ResearchGate</span><span class="visually-hidden"> (abre em nova aba)</span></a></li>
+<li><a href="http://lattes.cnpq.br/0287106268880389" class="profile-link" target="_blank" rel="noopener noreferrer"><img src="/assets/icons/lattes.svg" alt="" width="32" height="32"><span>Lattes</span><span class="visually-hidden"> (abre em nova aba)</span></a></li>
+<li><a href="https://www.linkedin.com/in/floriatanscosta/" class="profile-link" target="_blank" rel="noopener noreferrer"><img src="/assets/icons/linkedin.svg" alt="" width="32" height="32"><span>LinkedIn</span><span class="visually-hidden"> (abre em nova aba)</span></a></li>
+</ul>
+  </div>
+</section>
 
-    <!-- Scripts -->
-    <script src="./js/app.js"></script>
+<div class="container">
+  <section class="section" aria-label="Indicadores">
+    <dl class="stat-strip"><div><dt>Artigos em periódicos</dt><dd>44</dd></div><div><dt>Citações (Scopus)</dt><dd>419</dd></div><div><dt>Índice h (Scopus)</dt><dd>14</dd></div><div><dt>Prêmios</dt><dd>8</dd></div></dl>
+    <p class="section-more"><a class="inline-link" href="/metricas">Ver todas as métricas e fontes →</a></p>
+  </section>
 
+  <div class="grid-2 section">
+    <section class="card" aria-labelledby="h-linhas">
+      <h2 id="h-linhas" class="card-title">Linhas de pesquisa</h2>
+      <ul class="chip-list"><li class="chip">Desenvolvimento de métodos de microextração e especiação</li><li class="chip">Desenvolvimento de métodos e quimiometria</li><li class="chip">Preparo de amostra e solventes alternativos</li></ul>
+      <h3 class="card-subtitle-sm">Técnicas analíticas</h3>
+      <ul class="chip-list"><li class="chip chip--mono">ICP-MS</li><li class="chip chip--mono">ICP OES</li><li class="chip chip--mono">FAAS</li><li class="chip chip--mono">GFAAS</li><li class="chip chip--mono">MIP OES</li></ul>
+    </section>
+    <section class="card" aria-labelledby="h-recentes">
+      <h2 id="h-recentes" class="card-title">Publicações recentes</h2>
+      <ol class="pub-list pub-list--compact"><li class="pub-item" data-pub-item>
+  <p class="pub-title" lang="en">Chemometric-assisted classification of sunscreen sun protection factor using in vitro UV spectroscopy</p>
+  
+  <p class="pub-meta"><cite>Photochemical &amp; Photobiological Sciences</cite>, 2026 <span class="badge badge--accent">Aceito</span></p>
+  <a href="https://doi.org/10.1007/s43630-026-00993-y" class="pub-link" target="_blank" rel="noopener noreferrer"><svg class="icon" aria-hidden="true" focusable="false"><use href="/assets/icons/sprite.svg#doi"></use></svg><span>DOI: 10.1007/s43630-026-00993-y</span><span class="visually-hidden"> (abre em nova aba)</span></a>
+</li><li class="pub-item" data-pub-item>
+  <p class="pub-title" lang="en">Alginate-Encapsulated HDES as a Green Sorbent for Elemental Preconcentration Prior to Determination by FAAS</p>
+  
+  <p class="pub-meta"><cite>ACS Omega</cite>, v. 11, 41860–41869, 2026</p>
+  <a href="https://doi.org/10.1021/acsomega.6c01846" class="pub-link" target="_blank" rel="noopener noreferrer"><svg class="icon" aria-hidden="true" focusable="false"><use href="/assets/icons/sprite.svg#doi"></use></svg><span>DOI: 10.1021/acsomega.6c01846</span><span class="visually-hidden"> (abre em nova aba)</span></a>
+</li><li class="pub-item" data-pub-item>
+  <p class="pub-title" lang="en">Choline chloride-carboxylic acid deep eutectic solvents for lead extraction from electronic waste: A green approach</p>
+  
+  <p class="pub-meta"><cite>Sustainable Chemistry and Pharmacy</cite>, v. 49, 102300, 2026</p>
+  <a href="https://doi.org/10.1016/j.scp.2025.102300" class="pub-link" target="_blank" rel="noopener noreferrer"><svg class="icon" aria-hidden="true" focusable="false"><use href="/assets/icons/sprite.svg#doi"></use></svg><span>DOI: 10.1016/j.scp.2025.102300</span><span class="visually-hidden"> (abre em nova aba)</span></a>
+</li></ol>
+      <p class="section-more"><a class="inline-link" href="/publicacoes">Ver todos os artigos →</a></p>
+    </section>
+  </div>
+
+  <section class="section" aria-labelledby="h-explore">
+    <h2 id="h-explore" class="section-title">Explore</h2>
+    <ul class="nav-cards">
+      <li><a class="nav-card" href="/biografia"><span class="nav-card__title">Biografia</span><span class="nav-card__text">Formação, áreas de atuação e trajetória.</span></a></li>
+      <li><a class="nav-card" href="/experiencia"><span class="nav-card__title">Experiência</span><span class="nav-card__text">Pós-doutorados, projetos e revisão de periódicos.</span></a></li>
+      <li><a class="nav-card" href="/publicacoes"><span class="nav-card__title">Publicações</span><span class="nav-card__text">Artigos em periódicos com revisão por pares.</span></a></li>
+      <li><a class="nav-card" href="/producao"><span class="nav-card__title">Produção</span><span class="nav-card__text">Capítulos, trabalhos em eventos, cursos e palestras.</span></a></li>
+      <li><a class="nav-card" href="/premiacoes"><span class="nav-card__title">Premiações</span><span class="nav-card__text">Prêmios e distinções recebidos.</span></a></li>
+      <li><a class="nav-card" href="/vida"><span class="nav-card__title">Vida de cientista</span><span class="nav-card__text">Bastidores da pesquisa em imagens.</span></a></li>
+    </ul>
+  </section>
+</div>
+
+</main>
+<footer class="site-footer">
+  <div class="container footer-content">
+    <div class="footer-left">
+      <p>© <span data-year>2026</span> Floriatan Santos Costa. Todos os direitos reservados.</p>
+      <p class="footer-updated">Última atualização: <time datetime="2026-10-17">17/10/2026</time></p>
+    </div>
+    <ul class="footer-profiles"><li><a href="https://orcid.org/0000-0001-7766-2860" class="footer-profile" target="_blank" rel="noopener noreferrer"><img src="/assets/icons/orcid.svg" alt="ORCID" width="22" height="22"><span class="visually-hidden"> (abre em nova aba)</span></a></li><li><a href="https://scholar.google.com/citations?user=EbyxxAoAAAAJ" class="footer-profile" target="_blank" rel="noopener noreferrer"><img src="/assets/icons/academico.svg" alt="Google Scholar" width="22" height="22"><span class="visually-hidden"> (abre em nova aba)</span></a></li><li><a href="https://www.researchgate.net/profile/Floriatan-Costa" class="footer-profile" target="_blank" rel="noopener noreferrer"><img src="/assets/icons/rg.svg" alt="ResearchGate" width="22" height="22"><span class="visually-hidden"> (abre em nova aba)</span></a></li><li><a href="http://lattes.cnpq.br/0287106268880389" class="footer-profile" target="_blank" rel="noopener noreferrer"><img src="/assets/icons/lattes.svg" alt="Lattes" width="22" height="22"><span class="visually-hidden"> (abre em nova aba)</span></a></li><li><a href="https://www.linkedin.com/in/floriatanscosta/" class="footer-profile" target="_blank" rel="noopener noreferrer"><img src="/assets/icons/linkedin.svg" alt="LinkedIn" width="22" height="22"><span class="visually-hidden"> (abre em nova aba)</span></a></li></ul>
+    <nav aria-label="Links do rodapé"><ul class="footer-right"><li><a href="/metricas">Métricas</a></li><li><a href="/sobre">Sobre</a></li><li><a href="/design">Design</a></li><li><a href="/contato">Contato</a></li><li><a href="/web/">Ferramentas</a></li></ul></nav>
+  </div>
+</footer>
+<script src="/js/app.js" defer></script>
 </body>
-
 </html>
