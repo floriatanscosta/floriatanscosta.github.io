@@ -519,7 +519,6 @@ def head(page, lang, meta, langs_available, noindex=False):
   <script src="/js/theme-init.js"></script>
   <link rel="stylesheet" href="/css/global.css?v={BUILD_DATE.strftime("%Y%m%d")}">
   <link rel="stylesheet" href="/css/main.css?v={BUILD_DATE.strftime("%Y%m%d")}">
-  <script async src="https://www.googletagmanager.com/gtag/js?id={GA_ID}"></script>
   <script src="/js/analytics.js" defer></script>{ld}
 </head>'''
 
@@ -561,6 +560,7 @@ def header(page, lang, langs_available):
 def footer(page, lang):
     links = ''.join(f'<li><a href="{url(p, lang)}">{T("nav." + S["nav_keys"][p], lang)}</a></li>' for p in FOOTER)
     links += f'<li><a href="/web/">{T("nav.tools", lang)}</a></li>'
+    links += f'<li><button type="button" class="link-btn" data-consent-open>{T("consent.manage", lang)}</button></li>'
     profiles = ''.join(
         f'<li>{ext_link(p["url"], f"""<img src="/assets/icons/{p["icon"]}" alt="{esc(p["label"])}" width="22" height="22">""", "footer-profile")}</li>'
         for p in CV['profiles'])
@@ -573,7 +573,19 @@ def footer(page, lang):
     <ul class="footer-profiles">{profiles}</ul>
     <nav aria-label="{T("a11y.footer_nav", lang)}"><ul class="footer-right">{links}</ul></nav>
   </div>
-</footer>'''
+</footer>
+<div class="consent" id="consent" role="region" aria-labelledby="consent-title" data-ga-id="{GA_ID}" hidden>
+  <div class="container consent__inner">
+    <div class="consent__text">
+      <p id="consent-title" class="consent__title">{T("consent.title", lang)}</p>
+      <p>{T("consent.text", lang)} <a class="inline-link" href="{url("sobre", lang)}#privacidade">{T("consent.more", lang)}</a></p>
+    </div>
+    <div class="consent__actions">
+      <button type="button" class="btn btn-outline" data-consent="denied">{T("consent.reject", lang)}</button>
+      <button type="button" class="btn" data-consent="granted">{T("consent.accept", lang)}</button>
+    </div>
+  </div>
+</div>'''
 
 
 def render_page(page, lang, meta, body, langs_available, extra_scripts=(), body_class='', noindex=False):

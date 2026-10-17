@@ -15,7 +15,7 @@ Reúne trajetória, produção científica, prêmios, métricas e contato de Flo
 /js/app.js              menu móvel, tema, seletor de idioma, ano do rodapé
 /js/publications.js     filtro da lista de publicações
 /js/shutter.js          fundo animado (WebGL) da página Design
-/js/analytics.js        configuração do Google Analytics
+/js/analytics.js        aviso de consentimento + Google Analytics (só carrega após "Aceitar")
 /assets/                logo, favicon, ícones (sprite.svg), fontes Roboto, imagens e logos (svg/)
 /sitemap.xml            gerado automaticamente, com alternativas hreflang
 /_src/                  FONTE do site (não é publicada — o Jekyll ignora pastas iniciadas por "_")
@@ -51,6 +51,7 @@ Páginas de desenvolvimento (não indexadas, fora do menu): `guia.html`, `design
 - HTML, CSS e JavaScript sem frameworks nem dependências externas (exceto o Google Analytics); fonte Roboto servida localmente.
 - Acessibilidade: link "pular para o conteúdo", navegação por teclado, foco visível, `aria-current`, `aria-expanded`, contraste AA nos temas claro e escuro, respeito a `prefers-reduced-motion`. Auditoria automatizada (axe-core, WCAG 2.1 AA) sem violações.
 - SEO: título e descrição por página e idioma, `canonical`, `hreflang`, Open Graph, dados estruturados `Person` (JSON-LD) e `sitemap.xml`.
+- Privacidade: Google Analytics bloqueado até o consentimento do visitante (RGPD/LGPD); textos do aviso em `site.json` → `consent`.
 - Segurança: Content-Security-Policy via `<meta>`, `rel="noopener noreferrer"` em links externos, nenhum script inline.
 - Desempenho: imagens WebP (≈ 90 % menores que os PNG originais), dimensões declaradas, `loading="lazy"`, fonte com `preload`.
 

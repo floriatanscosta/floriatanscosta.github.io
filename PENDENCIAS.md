@@ -15,7 +15,7 @@ Itens que não puderam ser resolvidos só com os dados disponíveis (nada foi in
 ## Funcionalidades / infraestrutura
 9. **"Ferramentas" (/web/)**: aponta para outro repositório (floriatan.com.br/web/). `design-meta.html` depende de `/web/components/style.css` e `/web/css/style.css`, que não fazem parte deste repositório.
 10. **Página "Vida de cientista"**: existe apenas em português (fora do escopo de tradução); as versões EN/ES indicam isso no link.
-11. **Google Analytics e privacidade**: o site informa o uso na página Sobre, mas não há banner de consentimento. Como o autor está na Espanha (RGPD), avalie ativar o *Consent Mode* ou um aviso de cookies.
+11. **Google Analytics e privacidade**: ✅ resolvido — aviso de consentimento implementado (o GA só carrega após "Aceitar"). Recomendável ainda: no painel do Google Analytics, conferir em *Administrador → Coleta e retenção de dados* que os "Indicadores do Google" estão desativados e definir a retenção de dados (ex.: 2 meses).
 12. **Formulário de contato**: não implementado (o GitHub Pages não processa formulários). O contato é por e-mail.
 13. **Arquivos não utilizados**: `assets/background.svg` (650 KB), `assets/img/time4.png`, `assets/img/cover-google-forms.png`, `assets/img/cover.png` (duplicata de `assets/cover.png`) e os PNG originais de `time*.png`/`profile.png` (substituídos por WebP). Podem ser removidos se não forem usados em outro lugar.
 14. **Publicação**: as alterações foram feitas sobre o arquivo .zip enviado; é preciso enviá-las ao repositório `floriatanscosta.github.io` (não houve acesso ao GitHub nesta sessão).

@@ -407,6 +407,38 @@
         "en": "Work address",
         "es": "Dirección profesional"
       }
+    },
+    "consent": {
+      "title": {
+        "pt": "Privacidade e cookies",
+        "en": "Privacy and cookies",
+        "es": "Privacidad y cookies"
+      },
+      "text": {
+        "pt": "Gostaria de usar o Google Analytics para gerar estatísticas anônimas e agregadas de visitas. Os cookies de análise só são ativados se você aceitar; o site funciona normalmente se recusar.",
+        "en": "I would like to use Google Analytics to produce anonymous, aggregate visit statistics. Analytics cookies are only set if you accept; the site works normally if you decline.",
+        "es": "Me gustaría usar Google Analytics para generar estadísticas anónimas y agregadas de visitas. Las cookies de análisis solo se activan si usted acepta; el sitio funciona con normalidad si las rechaza."
+      },
+      "more": {
+        "pt": "Saiba mais",
+        "en": "Learn more",
+        "es": "Más información"
+      },
+      "accept": {
+        "pt": "Aceitar",
+        "en": "Accept",
+        "es": "Aceptar"
+      },
+      "reject": {
+        "pt": "Recusar",
+        "en": "Decline",
+        "es": "Rechazar"
+      },
+      "manage": {
+        "pt": "Preferências de cookies",
+        "en": "Cookie preferences",
+        "es": "Preferencias de cookies"
+      }
     }
   }
 }

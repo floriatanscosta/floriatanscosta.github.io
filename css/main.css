@@ -109,11 +109,11 @@ cite { font-style: italic; }
 .cover-image { width: 100%; max-width: 520px; height: auto; display: block; }
 .intro-title { font-size: clamp(2.1rem, 4.6vw, 3.3rem); line-height: 1.04; font-weight: 900; letter-spacing: -0.025em; color: var(--heading-color); margin: 0 0 22px; }
 .intro-text { font-size: clamp(1.1rem, 1.7vw, 1.3rem); line-height: 1.5; margin-bottom: 22px; }
-.current-pos { display: flex; align-items: center; gap: 14px; padding: 12px 16px; border-radius: var(--radius-md); background: var(--box-bg); border: 1px solid var(--border-color); max-width: 602px; margin-bottom: 22px; }
+.current-pos { display: flex; align-items: center; gap: 14px; padding: 12px 16px; border-radius: var(--radius-md); background: var(--box-bg); border: 1px solid var(--border-color); max-width: 520px; margin-bottom: 22px; }
 .current-pos > span { display: flex; flex-direction: column; line-height: 1.35; font-size: 0.95rem; }
 .current-pos strong { color: var(--heading-strong); }
 .current-pos .tl-logo { width: 88px; height: 55px; }
-.profile-links { display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); gap: 12px; max-width: 602px; }
+.profile-links { display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); gap: 12px; }
 .profile-link { display: flex; flex-direction: column; align-items: center; gap: 8px; padding: 14px 6px 12px; border-radius: var(--radius-md); background: var(--box-bg); border: 1px solid var(--border-color); box-shadow: var(--shadow-sm); color: var(--text-main); font-size: 0.78rem; font-weight: 600; text-align: center; transition: transform var(--transition-fast), box-shadow var(--transition-fast); }
 .profile-link:hover { transform: translateY(-3px); box-shadow: var(--shadow-md); border-color: var(--border-color); }
 .profile-link img { width: 32px; height: 32px; }
@@ -181,7 +181,7 @@ cite { font-style: italic; }
 .pub-year { margin-bottom: 26px; }
 .pub-year__title { font-size: 1.1rem; font-weight: 900; margin-bottom: 10px; color: var(--heading-color); display: inline-block; padding: 2px 12px; border-radius: 999px; background: var(--nav-hover); }
 .pub-list { display: grid; gap: 12px; }
-.pub-item { background: var(--box-bg); border-radius: var(--radius-md); padding: 18px 20px; }
+.pub-item { background: var(--box-bg); border: 1px solid var(--border-color); border-radius: var(--radius-md); padding: 18px 20px; }
 .pub-title { font-size: 1.05rem; font-weight: 700; color: var(--heading-strong); line-height: 1.4; margin-bottom: 6px; }
 .pub-authors { font-size: 0.9rem; color: var(--text-muted); margin-bottom: 4px; line-height: 1.5; }
 .pub-authors .me { color: var(--text-main); font-weight: 700; }
@@ -219,8 +219,8 @@ cite { font-style: italic; }
 /*****************************************************************/
 .award-list { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; }
 .award { display: flex; gap: 18px; align-items: flex-start; padding: 22px; background: var(--box-bg); border: 1px solid var(--border-color); border-radius: var(--radius-lg); box-shadow: var(--shadow-sm); }
-.award-year { flex-shrink: 0; display: inline-flex; align-items: center; justify-content: center; width: 72px; height: 72px; border-radius: 15px; font-size: 1.25rem; font-weight: 900; color: #fff; background: linear-gradient(101deg, #5a729e, #236085 60%, #216589); box-shadow: var(--shadow-md); }
-.award-kind { display: flex; align-items: center; gap: 8px; font-weight: 900; color: var(--heading-strong); font-size: 1.25rem; margin-bottom: 4px; }
+.award-year { flex-shrink: 0; display: inline-flex; align-items: center; justify-content: center; width: 72px; height: 72px; border-radius: 18px; font-size: 1.15rem; font-weight: 900; color: #fff; background: linear-gradient(135deg, #5a729e, #666fe4 60%, #d13c86); box-shadow: var(--shadow-md); }
+.award-kind { display: flex; align-items: center; gap: 8px; font-weight: 800; color: var(--heading-strong); font-size: 1.05rem; margin-bottom: 4px; }
 .award-kind .icon { color: #c48a12; }
 .award-name { display: block; font-weight: 600; margin-bottom: 4px; }
 .award-where { color: var(--text-muted); font-size: 0.95rem; }

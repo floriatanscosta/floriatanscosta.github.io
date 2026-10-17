@@ -1,3325 +1,3321 @@
 {
-    "articles": [
-        {
-            "year": 2026,
-            "title": "Chemometric-assisted classification of sunscreen sun protection factor using in vitro UV spectroscopy",
-            "authors": [
-                {
-                    "name": "Oliveira, C. F. S.",
-                    "me": false
-                },
-                {
-                    "name": "Costa, F. S.",
-                    "me": true
-                },
-                {
-                    "name": "Nagata, N.",
-                    "me": false
-                },
-                {
-                    "name": "Brohem, C. A.",
-                    "me": false
-                },
-                {
-                    "name": "Lorencini, M.",
-                    "me": false
-                },
-                {
-                    "name": "Amaral, C. D. B.",
-                    "me": false
-                }
-            ],
-            "journal": "Photochemical & Photobiological Sciences",
-            "volume": "",
-            "pages": "",
-            "doi": "10.1007/s43630-026-00993-y",
-            "url": null,
-            "status": "accepted"
-        },
-        {
-            "year": 2026,
-            "title": "Alginate-Encapsulated HDES as a Green Sorbent for Elemental Preconcentration Prior to Determination by FAAS",
-            "authors": [
-                {
-                    "name": "Müller, M. O.",
-                    "me": false
-                },
-                {
-                    "name": "Araújo, M. E. M.",
-                    "me": false
-                },
-                {
-                    "name": "Paiva dos Santos, A. L.",
-                    "me": false
-                },
-                {
-                    "name": "Costa, F. S.",
-                    "me": true
-                },
-                {
-                    "name": "Grassi, M. T.",
-                    "me": false
-                },
-                {
-                    "name": "Gonzalez, M. H.",
-                    "me": false
-                },
-                {
-                    "name": "Amaral, C. D. B.",
-                    "me": false
-                }
-            ],
-            "journal": "ACS Omega",
-            "volume": "11",
-            "pages": "41860–41869",
-            "doi": "10.1021/acsomega.6c01846",
-            "url": null,
-            "status": "published"
-        },
-        {
-            "year": 2026,
-            "title": "Choline chloride-carboxylic acid deep eutectic solvents for lead extraction from electronic waste: A green approach",
-            "authors": [
-                {
-                    "name": "Costa, F. S.",
-                    "me": true
-                },
-                {
-                    "name": "Moreira, L. S.",
-                    "me": false
-                },
-                {
-                    "name": "Müller, M. O.",
-                    "me": false
-                },
-                {
-                    "name": "Gonzalez, M. H.",
-                    "me": false
-                },
-                {
-                    "name": "Amaral, C. D. B.",
-                    "me": false
-                }
-            ],
-            "journal": "Sustainable Chemistry and Pharmacy",
-            "volume": "49",
-            "pages": "102300",
-            "doi": "10.1016/j.scp.2025.102300",
-            "url": null,
-            "status": "published"
-        },
-        {
-            "year": 2026,
-            "title": "L-Asparaginase Production by Fungal Coculture Under Solid-State Fermentation: Biochemical Characterization and Application in French Fries for Acrylamide Mitigation",
-            "authors": [
-                {
-                    "name": "Teixeira, J. M.",
-                    "me": false
-                },
-                {
-                    "name": "Santana, N. B.",
-                    "me": false
-                },
-                {
-                    "name": "Lima, T. S. M.",
-                    "me": false
-                },
-                {
-                    "name": "do Nascimento, I. S.",
-                    "me": false
-                },
-                {
-                    "name": "da Silva Neto, A. B.",
-                    "me": false
-                },
-                {
-                    "name": "Costa, F. S.",
-                    "me": true
-                },
-                {
-                    "name": "de Carvalho Tavares, I. M.",
-                    "me": false
-                },
-                {
-                    "name": "Pereira, R. G.",
-                    "me": false
-                },
-                {
-                    "name": "de Jesus Silva, G.",
-                    "me": false
-                },
-                {
-                    "name": "Silva, F. N.",
-                    "me": false
-                },
-                {
-                    "name": "Mussagy, C. U.",
-                    "me": false
-                },
-                {
-                    "name": "Caicedo-Paz, A. V.",
-                    "me": false
-                },
-                {
-                    "name": "Franco, M.",
-                    "me": false
-                }
-            ],
-            "journal": "Food and Bioprocess Technology",
-            "volume": "19",
-            "pages": "218",
-            "doi": "10.1007/s11947-026-04311-3",
-            "url": null,
-            "status": "published"
-        },
-        {
-            "year": 2026,
-            "title": "Multielement Determination in Green, Black, and White Tea Leaves (<i>Camellia sinensis</i>) Using Ultrasound-Assisted Extraction with Natural Deep Eutectic Solvents",
-            "authors": [
-                {
-                    "name": "Ferrari, H. B.",
-                    "me": false
-                },
-                {
-                    "name": "Moreira, L. S.",
-                    "me": false
-                },
-                {
-                    "name": "Costa, F. S.",
-                    "me": true
-                },
-                {
-                    "name": "Gireli, E. K. B.",
-                    "me": false
-                },
-                {
-                    "name": "Brandão, G. P.",
-                    "me": false
-                },
-                {
-                    "name": "Endringer, D. C.",
-                    "me": false
-                },
-                {
-                    "name": "Carneiro, M. T. W. D.",
-                    "me": false
-                }
-            ],
-            "journal": "Food Analytical Methods",
-            "volume": "19",
-            "pages": "1–18",
-            "doi": "10.1007/s12161-026-03178-6",
-            "url": null,
-            "status": "published"
-        },
-        {
-            "year": 2026,
-            "title": "Protease production by Penicillium roqueforti through solid-state fermentation of ora-pro-nóbis (Pereskia aculeata): optimization and characterization",
-            "authors": [
-                {
-                    "name": "da Silva, E. C.",
-                    "me": false
-                },
-                {
-                    "name": "Santos, M. P. F.",
-                    "me": false
-                },
-                {
-                    "name": "Teixeira, J. M.",
-                    "me": false
-                },
-                {
-                    "name": "Costa, F. S.",
-                    "me": true
-                },
-                {
-                    "name": "da Costa Ilhéu Fontan, R.",
-                    "me": false
-                },
-                {
-                    "name": "Veloso, C. M.",
-                    "me": false
-                },
-                {
-                    "name": "Franco, M.",
-                    "me": false
-                },
-                {
-                    "name": "Bonomo, R. C. F.",
-                    "me": false
-                }
-            ],
-            "journal": "Bioresource Technology Reports",
-            "volume": "34",
-            "pages": "102663",
-            "doi": "10.1016/j.biteb.2026.102663",
-            "url": null,
-            "status": "published"
-        },
-        {
-            "year": 2026,
-            "title": "Recent advances in sample preparation for the determination of mineral oil saturated (MOSH) and aromatic hydrocarbons (MOAH) in food matrices",
-            "authors": [
-                {
-                    "name": "Jano, A.",
-                    "me": false
-                },
-                {
-                    "name": "Ares, A. M.",
-                    "me": false
-                },
-                {
-                    "name": "Costa, F. S.",
-                    "me": true
-                },
-                {
-                    "name": "Custodio-Mendoza, J. A.",
-                    "me": false
-                },
-                {
-                    "name": "Bernal, J.",
-                    "me": false
-                },
-                {
-                    "name": "Fuente-Ballesteros, A.",
-                    "me": false
-                }
-            ],
-            "journal": "Microchemical Journal",
-            "volume": "225",
-            "pages": "118083",
-            "doi": "10.1016/j.microc.2026.118083",
-            "url": null,
-            "status": "published"
-        },
-        {
-            "year": 2026,
-            "title": "Salivary copper as a screening tool for pediatric Wilson's disease: A pilot study",
-            "authors": [
-                {
-                    "name": "Morais, G. F.",
-                    "me": false
-                },
-                {
-                    "name": "Kalinowski, F. C. M.",
-                    "me": false
-                },
-                {
-                    "name": "Coutinho, L.",
-                    "me": false
-                },
-                {
-                    "name": "Bonilha, P. A. A. M.",
-                    "me": false
-                },
-                {
-                    "name": "de Souza, V. C.",
-                    "me": false
-                },
-                {
-                    "name": "Brandão, I.",
-                    "me": false
-                },
-                {
-                    "name": "Costa, F. S.",
-                    "me": true
-                },
-                {
-                    "name": "Amaral, C. D. B.",
-                    "me": false
-                },
-                {
-                    "name": "Betini, B. G.",
-                    "me": false
-                },
-                {
-                    "name": "Barbosa, E. R.",
-                    "me": false
-                },
-                {
-                    "name": "Teive, H. A. G.",
-                    "me": false
-                }
-            ],
-            "journal": "Parkinsonism & Related Disorders",
-            "volume": "151",
-            "pages": "108948",
-            "doi": "10.1016/j.parkreldis.2026.108948",
-            "url": null,
-            "status": "published"
-        },
-        {
-            "year": 2026,
-            "title": "Solid-State Fermentation of Green Coconut Husk by <i>Penicillium roqueforti</i> for the Production of a Halotolerant Xylanase",
-            "authors": [
-                {
-                    "name": "Carvalho, M. S.",
-                    "me": false
-                },
-                {
-                    "name": "Pimentel, A. B.",
-                    "me": false
-                },
-                {
-                    "name": "S. S. Quinto, A.",
-                    "me": false
-                },
-                {
-                    "name": "Jesus, G. L.",
-                    "me": false
-                },
-                {
-                    "name": "Santo, E. L. E.",
-                    "me": false
-                },
-                {
-                    "name": "Costa, F. S.",
-                    "me": true
-                },
-                {
-                    "name": "Emmerich, I. T.",
-                    "me": false
-                },
-                {
-                    "name": "Silva, J. J.",
-                    "me": false
-                },
-                {
-                    "name": "Silva, G. J.",
-                    "me": false
-                },
-                {
-                    "name": "Vieira, I. R. A. S.",
-                    "me": false
-                },
-                {
-                    "name": "Tavares, I. M. C.",
-                    "me": false
-                },
-                {
-                    "name": "Franco, M.",
-                    "me": false
-                }
-            ],
-            "journal": "ACS Omega",
-            "volume": "11",
-            "pages": "27862–27874",
-            "doi": "10.1021/acsomega.5c10884",
-            "url": null,
-            "status": "published"
-        },
-        {
-            "year": 2025,
-            "title": "An eco-friendly method using NADES as catalyst in the derivatization of ammonia for air quality determination",
-            "authors": [
-                {
-                    "name": "Vela, H. S.",
-                    "me": false
-                },
-                {
-                    "name": "Dolatto, R. G.",
-                    "me": false
-                },
-                {
-                    "name": "Moreira, L. S.",
-                    "me": false
-                },
-                {
-                    "name": "Costa, F. S.",
-                    "me": true
-                },
-                {
-                    "name": "Amaral, C. D. B.",
-                    "me": false
-                },
-                {
-                    "name": "Grassi, M. T.",
-                    "me": false
-                }
-            ],
-            "journal": "Microchemical Journal",
-            "volume": "212",
-            "pages": "113307",
-            "doi": "10.1016/j.microc.2025.113307",
-            "url": null,
-            "status": "published"
-        },
-        {
-            "year": 2025,
-            "title": "Ecological risk assessment and application of a preliminary mitigation strategy for the remediation of potentially toxic elements (PTEs) in a southeastern Brazilian watershed (São Carlos, SP, Brazil)",
-            "authors": [
-                {
-                    "name": "Neris, J. B.",
-                    "me": false
-                },
-                {
-                    "name": "Costa, F. S.",
-                    "me": true
-                },
-                {
-                    "name": "Costa, J. A. S.",
-                    "me": false
-                },
-                {
-                    "name": "Paranhos, C. M.",
-                    "me": false
-                }
-            ],
-            "journal": "Environmental Monitoring and Assessment",
-            "volume": "197",
-            "pages": "1034",
-            "doi": "10.1007/s10661-025-14479-4",
-            "url": null,
-            "status": "published"
-        },
-        {
-            "year": 2025,
-            "title": "Effects of photobiomodulation and bethanechol chloride treatment on salivary composition and flow rate in head and neck cancer patients undergoing radiotherapy: longitudinal interventional experimental clinical study",
-            "authors": [
-                {
-                    "name": "Schepanski, N.",
-                    "me": false
-                },
-                {
-                    "name": "da Silva Liebl, B. M.",
-                    "me": false
-                },
-                {
-                    "name": "Mendes, R. T.",
-                    "me": false
-                },
-                {
-                    "name": "Costa, F. S.",
-                    "me": true
-                },
-                {
-                    "name": "Amaral, C. D. B.",
-                    "me": false
-                },
-                {
-                    "name": "Machado, R. C.",
-                    "me": false
-                },
-                {
-                    "name": "Nogueira, A. R. A.",
-                    "me": false
-                },
-                {
-                    "name": "Sassi, L. M.",
-                    "me": false
-                },
-                {
-                    "name": "de Araujo, M. R.",
-                    "me": false
-                }
-            ],
-            "journal": "Supportive Care in Cancer",
-            "volume": "33",
-            "pages": "113",
-            "doi": "10.1007/s00520-024-09120-y",
-            "url": null,
-            "status": "published"
-        },
-        {
-            "year": 2025,
-            "title": "Enhancing circular economy: eco-friendly starch extraction and modification using fungal crude enzymatic extract from cocoa shell waste",
-            "authors": [
-                {
-                    "name": "dos Santos Reis, N.",
-                    "me": false
-                },
-                {
-                    "name": "Sampaio, I. C. F.",
-                    "me": false
-                },
-                {
-                    "name": "Oliveira, P. C.",
-                    "me": false
-                },
-                {
-                    "name": "Costa, F. S.",
-                    "me": true
-                },
-                {
-                    "name": "de Paulo Veloso, A.",
-                    "me": false
-                },
-                {
-                    "name": "de Carvalho Tavares, I. M.",
-                    "me": false
-                },
-                {
-                    "name": "Ruiz, H. A.",
-                    "me": false
-                },
-                {
-                    "name": "de Jesus, G. L. S.",
-                    "me": false
-                },
-                {
-                    "name": "de Moura, I. V. L.",
-                    "me": false
-                },
-                {
-                    "name": "dos Anjos, P. N. M.",
-                    "me": false
-                },
-                {
-                    "name": "Franco, M.",
-                    "me": false
-                }
-            ],
-            "journal": "Biomass Conversion and Biorefinery",
-            "volume": "15",
-            "pages": "28405–28417",
-            "doi": "10.1007/s13399-024-05849-y",
-            "url": null,
-            "status": "published"
-        },
-        {
-            "year": 2025,
-            "title": "Enzymatic blend containing β-glucosidase from Penicillium roqueforti ATCC 10110 grown on cocoa pod husk: Characterization and utilization in rice husk saccharification",
-            "authors": [
-                {
-                    "name": "Chaves, J. M. S.",
-                    "me": false
-                },
-                {
-                    "name": "Sampaio, I. C. F.",
-                    "me": false
-                },
-                {
-                    "name": "Silva, F. N.",
-                    "me": false
-                },
-                {
-                    "name": "de Oliveira Sena, L.",
-                    "me": false
-                },
-                {
-                    "name": "Costa, F. S.",
-                    "me": true
-                },
-                {
-                    "name": "Ribeiro, T. A.",
-                    "me": false
-                },
-                {
-                    "name": "de Carvalho Tavares, I. M.",
-                    "me": false
-                },
-                {
-                    "name": "Emmerich, I. T.",
-                    "me": false
-                },
-                {
-                    "name": "Mendes, M. C.",
-                    "me": false
-                },
-                {
-                    "name": "Irfan, M.",
-                    "me": false
-                },
-                {
-                    "name": "Franco, M.",
-                    "me": false
-                },
-                {
-                    "name": "de Oliveira, J. R.",
-                    "me": false
-                }
-            ],
-            "journal": "Journal of the Indian Chemical Society",
-            "volume": "102",
-            "pages": "101551",
-            "doi": "10.1016/j.jics.2024.101551",
-            "url": null,
-            "status": "published"
-        },
-        {
-            "year": 2025,
-            "title": "Exploring β-mannanase by Penicillium roqueforti ATCC 10110 on cocoa bean shell, tamarind peel, and ora-pro-nobis for enhanced saccharification processes",
-            "authors": [
-                {
-                    "name": "de Oliveira Sena, L.",
-                    "me": false
-                },
-                {
-                    "name": "Silva, F. N.",
-                    "me": false
-                },
-                {
-                    "name": "Sampaio, I. C. F.",
-                    "me": false
-                },
-                {
-                    "name": "de Jesus Silva, G.",
-                    "me": false
-                },
-                {
-                    "name": "Chaves, J. M. S.",
-                    "me": false
-                },
-                {
-                    "name": "Ribeiro, T. A.",
-                    "me": false
-                },
-                {
-                    "name": "de Jesus, G. L. S.",
-                    "me": false
-                },
-                {
-                    "name": "de Moura, I. V. L.",
-                    "me": false
-                },
-                {
-                    "name": "dos Anjos, P. N. M.",
-                    "me": false
-                },
-                {
-                    "name": "Costa, F. S.",
-                    "me": true
-                },
-                {
-                    "name": "Irfan, M.",
-                    "me": false
-                },
-                {
-                    "name": "Salay, L. C.",
-                    "me": false
-                },
-                {
-                    "name": "Franco, M.",
-                    "me": false
-                }
-            ],
-            "journal": "3 Biotech",
-            "volume": "15",
-            "pages": "441",
-            "doi": "10.1007/s13205-025-04595-w",
-            "url": null,
-            "status": "published"
-        },
-        {
-            "year": 2025,
-            "title": "Green extraction using natural deep eutectic solvents for determination of As, Cd, and Pb in plant and food matrices by ICP-MS",
-            "authors": [
-                {
-                    "name": "Brito, T. A.",
-                    "me": false
-                },
-                {
-                    "name": "Costa, F. S.",
-                    "me": true
-                },
-                {
-                    "name": "Oliveira, R. C.",
-                    "me": false
-                },
-                {
-                    "name": "Amaral, C. D. B.",
-                    "me": false
-                },
-                {
-                    "name": "Labuto, G.",
-                    "me": false
-                },
-                {
-                    "name": "Gonzalez, M. H.",
-                    "me": false
-                }
-            ],
-            "journal": "Food Chemistry",
-            "volume": "464",
-            "pages": "141922",
-            "doi": "10.1016/j.foodchem.2024.141922",
-            "url": null,
-            "status": "published"
-        },
-        {
-            "year": 2025,
-            "title": "Improving the extraction yield of essential oil from <i>Pimenta dioica</i> (L.) Merr. using <i>Aspergillus niger</i> ATCC 1004 enzyme blend",
-            "authors": [
-                {
-                    "name": "Tavares, I. M. C.",
-                    "me": false
-                },
-                {
-                    "name": "Santos, R. R. C.",
-                    "me": false
-                },
-                {
-                    "name": "Costa, F. S.",
-                    "me": true
-                },
-                {
-                    "name": "Jesus, G. L. S.",
-                    "me": false
-                },
-                {
-                    "name": "Sanches, A.",
-                    "me": false
-                },
-                {
-                    "name": "Silva, F. N.",
-                    "me": false
-                },
-                {
-                    "name": "Irfan, M.",
-                    "me": false
-                },
-                {
-                    "name": "Oliveira, R. A.",
-                    "me": false
-                },
-                {
-                    "name": "Franco, M.",
-                    "me": false
-                }
-            ],
-            "journal": "Biotechnology and Applied Biochemistry",
-            "volume": "72",
-            "pages": "225–236",
-            "doi": "10.1002/bab.2658",
-            "url": null,
-            "status": "published"
-        },
-        {
-            "year": 2025,
-            "title": "Interpretating SPR-Derived Reaction Kinetics via Self-Organizing Maps for Diagnostic Applications",
-            "authors": [
-                {
-                    "name": "Volpe, J.",
-                    "me": false
-                },
-                {
-                    "name": "Costa, F. S.",
-                    "me": true
-                },
-                {
-                    "name": "Sachuk, B.",
-                    "me": false
-                },
-                {
-                    "name": "Camilo, I.",
-                    "me": false
-                },
-                {
-                    "name": "Faria, A.",
-                    "me": false
-                },
-                {
-                    "name": "de Andrade, H. M.",
-                    "me": false
-                },
-                {
-                    "name": "Silva, S. M.",
-                    "me": false
-                },
-                {
-                    "name": "Souto, D.",
-                    "me": false
-                }
-            ],
-            "journal": "ACS Sensors",
-            "volume": "10",
-            "pages": "8129–8139",
-            "doi": "10.1021/acssensors.5c03250",
-            "url": null,
-            "status": "published"
-        },
-        {
-            "year": 2025,
-            "title": "Sustainable Sugar Syrup Production from Rice Husk Using <i>Aspergillus niger</i> Carbohydrase",
-            "authors": [
-                {
-                    "name": "Silva, F. N.",
-                    "me": false
-                },
-                {
-                    "name": "Sampaio, I. C. F.",
-                    "me": false
-                },
-                {
-                    "name": "Chaves, J. M. S.",
-                    "me": false
-                },
-                {
-                    "name": "Sena, L. O.",
-                    "me": false
-                },
-                {
-                    "name": "Emmerich, I. T.",
-                    "me": false
-                },
-                {
-                    "name": "Jesus, G. L. S.",
-                    "me": false
-                },
-                {
-                    "name": "Costa, F. S.",
-                    "me": true
-                },
-                {
-                    "name": "Mendes, A. A.",
-                    "me": false
-                },
-                {
-                    "name": "dos Santos, J. B.",
-                    "me": false
-                },
-                {
-                    "name": "Moura, I. V. L.",
-                    "me": false
-                },
-                {
-                    "name": "Tavares, I. M. C.",
-                    "me": false
-                },
-                {
-                    "name": "Irfan, M.",
-                    "me": false
-                },
-                {
-                    "name": "Franco, M.",
-                    "me": false
-                }
-            ],
-            "journal": "ACS Omega",
-            "volume": "10",
-            "pages": "32161–32173",
-            "doi": "10.1021/acsomega.5c03929",
-            "url": null,
-            "status": "published"
-        },
-        {
-            "year": 2025,
-            "title": "Unlocking xylan's potential: Coffee husk-derived xylanolytic blend for sustainable bioprocessing",
-            "authors": [
-                {
-                    "name": "Ribeiro, T. A.",
-                    "me": false
-                },
-                {
-                    "name": "Sampaio, I. C. F.",
-                    "me": false
-                },
-                {
-                    "name": "de Carvalho Tavares, I. M.",
-                    "me": false
-                },
-                {
-                    "name": "de Moura, I. V. L.",
-                    "me": false
-                },
-                {
-                    "name": "Silva, F. N.",
-                    "me": false
-                },
-                {
-                    "name": "de Oliveira Sena, L.",
-                    "me": false
-                },
-                {
-                    "name": "Costa, F. S.",
-                    "me": true
-                },
-                {
-                    "name": "de Jesus, G. L. S.",
-                    "me": false
-                },
-                {
-                    "name": "Emmerich, I. T.",
-                    "me": false
-                },
-                {
-                    "name": "Cezar, K. S.",
-                    "me": false
-                },
-                {
-                    "name": "Irfan, M.",
-                    "me": false
-                },
-                {
-                    "name": "Franco, M.",
-                    "me": false
-                }
-            ],
-            "journal": "Biomass Conversion and Biorefinery",
-            "volume": "15",
-            "pages": "8203–8219",
-            "doi": "10.1007/s13399-024-06150-8",
-            "url": null,
-            "status": "published"
-        },
-        {
-            "year": 2025,
-            "title": "Valorization of agri-food by-products for laccase oxidative multienzyme extract production and dye degradation: A sustainable biodegradation approach",
-            "authors": [
-                {
-                    "name": "Santos da Silva Quinto, A.",
-                    "me": false
-                },
-                {
-                    "name": "Fontes Sampaio, I. C.",
-                    "me": false
-                },
-                {
-                    "name": "Silva de Carvalho, M.",
-                    "me": false
-                },
-                {
-                    "name": "Cézar, K. S.",
-                    "me": false
-                },
-                {
-                    "name": "Silva, F. N.",
-                    "me": false
-                },
-                {
-                    "name": "Costa, F. S.",
-                    "me": true
-                },
-                {
-                    "name": "da Silva Souza, M.",
-                    "me": false
-                },
-                {
-                    "name": "Pimentel, A. B.",
-                    "me": false
-                },
-                {
-                    "name": "Maria de Carvalho Tavares, I.",
-                    "me": false
-                },
-                {
-                    "name": "Nascimento, N. A.",
-                    "me": false
-                },
-                {
-                    "name": "Santana, E. C.",
-                    "me": false
-                },
-                {
-                    "name": "Lima, M. D.",
-                    "me": false
-                },
-                {
-                    "name": "Irfan, M.",
-                    "me": false
-                },
-                {
-                    "name": "Franco, M.",
-                    "me": false
-                }
-            ],
-            "journal": "Journal of the Indian Chemical Society",
-            "volume": "102",
-            "pages": "101717",
-            "doi": "10.1016/j.jics.2025.101717",
-            "url": null,
-            "status": "published"
-        },
-        {
-            "year": 2024,
-            "title": "A greenness evaluation of deep eutectic solvents-based conventional extraction methods for elemental determination by spectrometry techniques",
-            "authors": [
-                {
-                    "name": "Costa, F. S.",
-                    "me": true
-                },
-                {
-                    "name": "Moreira, L. S.",
-                    "me": false
-                },
-                {
-                    "name": "da Silva, E. G. P.",
-                    "me": false
-                },
-                {
-                    "name": "Gonzalez, M. H.",
-                    "me": false
-                },
-                {
-                    "name": "Amaral, C. D. B.",
-                    "me": false
-                }
-            ],
-            "journal": "TrAC Trends in Analytical Chemistry",
-            "volume": "174",
-            "pages": "117677",
-            "doi": "10.1016/j.trac.2024.117677",
-            "url": null,
-            "status": "published"
-        },
-        {
-            "year": 2024,
-            "title": "Evaluation of photobiomodulation therapy (PBMT) on salivary flow and composition in head and neck cancer patients undergoing radiation therapy",
-            "authors": [
-                {
-                    "name": "Schepanski, N.",
-                    "me": false
-                },
-                {
-                    "name": "Costa, F. S.",
-                    "me": true
-                },
-                {
-                    "name": "Machado, E. F. M.",
-                    "me": false
-                },
-                {
-                    "name": "Pacheco, M. N.",
-                    "me": false
-                },
-                {
-                    "name": "Amaral, C. D. B.",
-                    "me": false
-                },
-                {
-                    "name": "Machado, R. C.",
-                    "me": false
-                },
-                {
-                    "name": "Nogueira, A. R. A.",
-                    "me": false
-                },
-                {
-                    "name": "Brancher, J. A.",
-                    "me": false
-                },
-                {
-                    "name": "Sassi, L. M.",
-                    "me": false
-                },
-                {
-                    "name": "de Araujo, M. R.",
-                    "me": false
-                }
-            ],
-            "journal": "Oral Surgery, Oral Medicine, Oral Pathology and Oral Radiology",
-            "volume": "137",
-            "pages": "253–263",
-            "doi": "10.1016/j.oooo.2023.11.007",
-            "url": null,
-            "status": "published"
-        },
-        {
-            "year": 2024,
-            "title": "Microwave-assisted extraction based on emulsion breaking with natural deep eutectic solvent for vegetable oil sample preparation prior to elemental determination by ICP OES",
-            "authors": [
-                {
-                    "name": "Costa, F. S.",
-                    "me": true
-                },
-                {
-                    "name": "Moreira, L. S.",
-                    "me": false
-                },
-                {
-                    "name": "Ludovico, L. L.",
-                    "me": false
-                },
-                {
-                    "name": "Volpe, J.",
-                    "me": false
-                },
-                {
-                    "name": "de Oliveira, A. C.",
-                    "me": false
-                },
-                {
-                    "name": "dos Santos, M. P.",
-                    "me": false
-                },
-                {
-                    "name": "da Silva, E. G. P.",
-                    "me": false
-                },
-                {
-                    "name": "Souto, D. E. P.",
-                    "me": false
-                },
-                {
-                    "name": "Grassi, M. T.",
-                    "me": false
-                },
-                {
-                    "name": "Gonzalez, M. H.",
-                    "me": false
-                },
-                {
-                    "name": "Amaral, C. D. B.",
-                    "me": false
-                }
-            ],
-            "journal": "Talanta",
-            "volume": "266",
-            "pages": "125108",
-            "doi": "10.1016/j.talanta.2023.125108",
-            "url": null,
-            "status": "published"
-        },
-        {
-            "year": 2024,
-            "title": "Optimization of enzymatic saccharification of industrial wastes using a thermostable and halotolerant endoglucanase through Box-Behnken experimental design",
-            "authors": [
-                {
-                    "name": "Santos Gomes, M. M. O.",
-                    "me": false
-                },
-                {
-                    "name": "Nicodemos, I. S.",
-                    "me": false
-                },
-                {
-                    "name": "Costa Silva, M.",
-                    "me": false
-                },
-                {
-                    "name": "Santos, D. M. R. C.",
-                    "me": false
-                },
-                {
-                    "name": "Santos Costa, F.",
-                    "me": true
-                },
-                {
-                    "name": "Franco, M.",
-                    "me": false
-                },
-                {
-                    "name": "Pereira, H. J. V.",
-                    "me": false
-                }
-            ],
-            "journal": "Preparative Biochemistry & Biotechnology",
-            "volume": "54",
-            "pages": "1–11",
-            "doi": "10.1080/10826068.2023.2201936",
-            "url": null,
-            "status": "published"
-        },
-        {
-            "year": 2024,
-            "title": "Synthetic peptides-based SPR biosensor evaluation towards canine Visceral leishmaniasis diagnosis: A simple and effective approach",
-            "authors": [
-                {
-                    "name": "Volpe, J.",
-                    "me": false
-                },
-                {
-                    "name": "Parchen, G. P.",
-                    "me": false
-                },
-                {
-                    "name": "Costa, F. S.",
-                    "me": true
-                },
-                {
-                    "name": "Silva, A. S.",
-                    "me": false
-                },
-                {
-                    "name": "Andrade, H. M.",
-                    "me": false
-                },
-                {
-                    "name": "Amaral, C. D. B.",
-                    "me": false
-                },
-                {
-                    "name": "Silva, S. M.",
-                    "me": false
-                },
-                {
-                    "name": "Kubota, L. T.",
-                    "me": false
-                },
-                {
-                    "name": "E. P. Souto, D.",
-                    "me": false
-                }
-            ],
-            "journal": "Microchemical Journal",
-            "volume": "203",
-            "pages": "110844",
-            "doi": null,
-            "url": "https://www.sciencedirect.com/science/article/pii/S0026265X24009561",
-            "status": "published"
-        },
-        {
-            "year": 2023,
-            "title": "Application of Chemometric Methods for the Optimization Secretion of Xylanase by Aspergillus oryzae in Solid State Fermentation and Its Application in the Saccharification of Agro-industrial Waste",
-            "authors": [
-                {
-                    "name": "de Carvalho, M. S.",
-                    "me": false
-                },
-                {
-                    "name": "de Menezes, L. H. S.",
-                    "me": false
-                },
-                {
-                    "name": "Pimentel, A. B.",
-                    "me": false
-                },
-                {
-                    "name": "Costa, F. S.",
-                    "me": true
-                },
-                {
-                    "name": "Oliveira, P. C.",
-                    "me": false
-                },
-                {
-                    "name": "dos Santos, M. M. O.",
-                    "me": false
-                },
-                {
-                    "name": "de Carvalho Tavares, I. M.",
-                    "me": false
-                },
-                {
-                    "name": "Bilal, M.",
-                    "me": false
-                },
-                {
-                    "name": "Dias, J. C. T.",
-                    "me": false
-                },
-                {
-                    "name": "de Oliveira, J. R.",
-                    "me": false
-                },
-                {
-                    "name": "Franco, M.",
-                    "me": false
-                }
-            ],
-            "journal": "Waste and Biomass Valorization",
-            "volume": "14",
-            "pages": "3183–3193",
-            "doi": "10.1007/s12649-022-01832-8",
-            "url": null,
-            "status": "published"
-        },
-        {
-            "year": 2023,
-            "title": "Elevated salivary copper concentration in patients with Wilson's disease",
-            "authors": [
-                {
-                    "name": "Bonilha, P. Á. A. M.",
-                    "me": false
-                },
-                {
-                    "name": "Souza, V. C.",
-                    "me": false
-                },
-                {
-                    "name": "Brandão, I.",
-                    "me": false
-                },
-                {
-                    "name": "Costa, F. S.",
-                    "me": true
-                },
-                {
-                    "name": "Amaral, C. D. B.",
-                    "me": false
-                },
-                {
-                    "name": "Betini, B. G.",
-                    "me": false
-                },
-                {
-                    "name": "Barbosa, E. R.",
-                    "me": false
-                },
-                {
-                    "name": "Teive, H. A. G.",
-                    "me": false
-                }
-            ],
-            "journal": "Parkinsonism & Related Disorders",
-            "volume": "116",
-            "pages": "105893",
-            "doi": "10.1016/j.parkreldis.2023.105893",
-            "url": null,
-            "status": "published"
-        },
-        {
-            "year": 2023,
-            "title": "Green approaches with amino acids-based deep eutectic solvents (AADES) for determining As in medicinal herbs by ICP-MS",
-            "authors": [
-                {
-                    "name": "Guimarães, T. G. S.",
-                    "me": false
-                },
-                {
-                    "name": "Costa, F. S.",
-                    "me": true
-                },
-                {
-                    "name": "Menezes, I. M. N. R.",
-                    "me": false
-                },
-                {
-                    "name": "Santana, A. P. R.",
-                    "me": false
-                },
-                {
-                    "name": "Andrade, D. F.",
-                    "me": false
-                },
-                {
-                    "name": "Oliveira, A.",
-                    "me": false
-                },
-                {
-                    "name": "Amaral, C. D. B.",
-                    "me": false
-                },
-                {
-                    "name": "Gonzalez, M. H.",
-                    "me": false
-                }
-            ],
-            "journal": "Journal of Molecular Liquids",
-            "volume": "381",
-            "pages": "121801",
-            "doi": "10.1016/j.molliq.2023.121801",
-            "url": null,
-            "status": "published"
-        },
-        {
-            "year": 2023,
-            "title": "Removal of carbamazepine from water using mixed matrix membranes (MMMs) based on polyethersulfone and mesomaterials",
-            "authors": [
-                {
-                    "name": "Neris, J. B.",
-                    "me": false
-                },
-                {
-                    "name": "Costa, J. A. S.",
-                    "me": false
-                },
-                {
-                    "name": "Grosseli, G. M.",
-                    "me": false
-                },
-                {
-                    "name": "Costa, F. S.",
-                    "me": true
-                },
-                {
-                    "name": "Paranhos, C. M.",
-                    "me": false
-                }
-            ],
-            "journal": "Reactive & Functional Polymers",
-            "volume": "186",
-            "pages": "105566",
-            "doi": "10.1016/j.reactfunctpolym.2023.105566",
-            "url": null,
-            "status": "published"
-        },
-        {
-            "year": 2023,
-            "title": "The improvement of guava (<i>Psidium guajava</i>) juice quality using crude multi-enzymatic extracts obtained from yeasts",
-            "authors": [
-                {
-                    "name": "Santana, M. L.",
-                    "me": false
-                },
-                {
-                    "name": "Tavares, I. M. C.",
-                    "me": false
-                },
-                {
-                    "name": "Costa, F. S.",
-                    "me": true
-                },
-                {
-                    "name": "Teshima, E.",
-                    "me": false
-                },
-                {
-                    "name": "de Sena, A. R.",
-                    "me": false
-                },
-                {
-                    "name": "Franco, M.",
-                    "me": false
-                },
-                {
-                    "name": "de Assis, S. A.",
-                    "me": false
-                }
-            ],
-            "journal": "Biotechnology and Applied Biochemistry",
-            "volume": "70",
-            "pages": "1310–1319",
-            "doi": "10.1002/bab.2441",
-            "url": null,
-            "status": "published"
-        },
-        {
-            "year": 2022,
-            "title": "Enhanced extraction of arsenic and cadmium from environmental samples using a natural deep eutectic solvent and determination by inductively coupled plasma mass spectrometry",
-            "authors": [
-                {
-                    "name": "Moreira, L. S.",
-                    "me": false
-                },
-                {
-                    "name": "Santana, A. P. R.",
-                    "me": false
-                },
-                {
-                    "name": "Costa, F. S.",
-                    "me": true
-                },
-                {
-                    "name": "Vera, J. B.",
-                    "me": false
-                },
-                {
-                    "name": "Gonzalez, M. H.",
-                    "me": false
-                },
-                {
-                    "name": "da Silva, E. G. P.",
-                    "me": false
-                },
-                {
-                    "name": "Amaral, C. D. B.",
-                    "me": false
-                }
-            ],
-            "journal": "International Journal of Environmental Analytical Chemistry",
-            "volume": "102",
-            "pages": "7100–7111",
-            "doi": "10.1080/03067319.2020.1826460",
-            "url": null,
-            "status": "published"
-        },
-        {
-            "year": 2022,
-            "title": "Evaluation of Trace Elements in Marine Biological Tissues by Graphite Furnace Atomic Absorption Spectrometry After Sample Treatment with Formic Acid",
-            "authors": [
-                {
-                    "name": "Moreira, L. S.",
-                    "me": false
-                },
-                {
-                    "name": "Costa, F. S.",
-                    "me": true
-                },
-                {
-                    "name": "Lidorio, R. C.",
-                    "me": false
-                },
-                {
-                    "name": "Toledo, L. W. S.",
-                    "me": false
-                },
-                {
-                    "name": "Oliveira, A.",
-                    "me": false
-                },
-                {
-                    "name": "Gonzalez, M. H.",
-                    "me": false
-                },
-                {
-                    "name": "da Silva, E. G. P.",
-                    "me": false
-                },
-                {
-                    "name": "Amaral, C. D. B.",
-                    "me": false
-                }
-            ],
-            "journal": "Food Analytical Methods",
-            "volume": "15",
-            "pages": "1687–1694",
-            "doi": "10.1007/s12161-022-02240-3",
-            "url": null,
-            "status": "published"
-        },
-        {
-            "year": 2022,
-            "title": "Natural deep eutectic solvent-based microwave-assisted extraction in the medicinal herb sample preparation and elemental determination by ICP OES",
-            "authors": [
-                {
-                    "name": "Costa, F. S.",
-                    "me": true
-                },
-                {
-                    "name": "Moreira, L. S.",
-                    "me": false
-                },
-                {
-                    "name": "da Silva, A. M.",
-                    "me": false
-                },
-                {
-                    "name": "Silva, R. J.",
-                    "me": false
-                },
-                {
-                    "name": "dos Santos, M. P.",
-                    "me": false
-                },
-                {
-                    "name": "Paranhos da Silva, E. G.",
-                    "me": false
-                },
-                {
-                    "name": "Grassi, M. T.",
-                    "me": false
-                },
-                {
-                    "name": "Gonzalez, M. H.",
-                    "me": false
-                },
-                {
-                    "name": "Amaral, C. D. B.",
-                    "me": false
-                }
-            ],
-            "journal": "Journal of Food Composition and Analysis",
-            "volume": "109",
-            "pages": "104510",
-            "doi": null,
-            "url": "https://www.sciencedirect.com/science/article/pii/S0889157522001284",
-            "status": "published"
-        },
-        {
-            "year": 2022,
-            "title": "Thermostable trypsin-like protease by <i>Penicillium roqueforti</i> secreted in cocoa shell fermentation: Production optimization, characterization, and application in milk clotting",
-            "authors": [
-                {
-                    "name": "Nogueira, L. S.",
-                    "me": false
-                },
-                {
-                    "name": "Tavares, I. M. C.",
-                    "me": false
-                },
-                {
-                    "name": "Santana, N. B.",
-                    "me": false
-                },
-                {
-                    "name": "Ferrão, S. P. B.",
-                    "me": false
-                },
-                {
-                    "name": "Teixeira, J. M.",
-                    "me": false
-                },
-                {
-                    "name": "Costa, F. S.",
-                    "me": true
-                },
-                {
-                    "name": "Silva, T. P.",
-                    "me": false
-                },
-                {
-                    "name": "Pereira, H. J. V.",
-                    "me": false
-                },
-                {
-                    "name": "Irfan, M.",
-                    "me": false
-                },
-                {
-                    "name": "Bilal, M.",
-                    "me": false
-                },
-                {
-                    "name": "de Oliveira, J. R.",
-                    "me": false
-                },
-                {
-                    "name": "Franco, M.",
-                    "me": false
-                }
-            ],
-            "journal": "Biotechnology and Applied Biochemistry",
-            "volume": "69",
-            "pages": "2069–2080",
-            "doi": "10.1002/bab.2268",
-            "url": null,
-            "status": "published"
-        },
-        {
-            "year": 2022,
-            "title": "Unsupervised pattern-recognition and radiological risk assessment applied to the evaluation of behavior of rare earth elements, Th, and U in monazite sand",
-            "authors": [
-                {
-                    "name": "Wyatt, N. L. P.",
-                    "me": false
-                },
-                {
-                    "name": "Costa, V. C.",
-                    "me": false
-                },
-                {
-                    "name": "de Souza, J. R.",
-                    "me": false
-                },
-                {
-                    "name": "Ferde, M.",
-                    "me": false
-                },
-                {
-                    "name": "Costa, F. S.",
-                    "me": true
-                },
-                {
-                    "name": "Neris, J. B.",
-                    "me": false
-                },
-                {
-                    "name": "Brandão, G. P.",
-                    "me": false
-                },
-                {
-                    "name": "Guedes, W. N.",
-                    "me": false
-                },
-                {
-                    "name": "Carneiro, M. T. W. D.",
-                    "me": false
-                }
-            ],
-            "journal": "Environmental Science and Pollution Research",
-            "volume": "29",
-            "pages": "83417–83425",
-            "doi": "10.1007/s11356-022-21632-w",
-            "url": null,
-            "status": "published"
-        },
-        {
-            "year": 2021,
-            "title": "Application of Mixture Design and Kohonen Neural Network for Determination of Macro- and Microelement in Mullet (<i>Mugil cephalus</i>) by MIP OES",
-            "authors": [
-                {
-                    "name": "Pacheco, C. S. V.",
-                    "me": false
-                },
-                {
-                    "name": "Costa, F. S.",
-                    "me": true
-                },
-                {
-                    "name": "Guedes, W. N.",
-                    "me": false
-                },
-                {
-                    "name": "de Jesus, M. S.",
-                    "me": false
-                },
-                {
-                    "name": "das Chagas, T. P.",
-                    "me": false
-                },
-                {
-                    "name": "dos Santos, A. M. P.",
-                    "me": false
-                },
-                {
-                    "name": "de Castro Lima, D.",
-                    "me": false
-                },
-                {
-                    "name": "da Silva, E. G. P.",
-                    "me": false
-                }
-            ],
-            "journal": "Food Analytical Methods",
-            "volume": "14",
-            "pages": "1239–1249",
-            "doi": "10.1007/s12161-021-01969-7",
-            "url": null,
-            "status": "published"
-        },
-        {
-            "year": 2021,
-            "title": "Chemical characterization of the soils from black pepper (<i>Piper nigrum</i> L.) cultivation using principal component analysis (PCA) and Kohonen self-organizing map (KSOM)",
-            "authors": [
-                {
-                    "name": "Ferde, M.",
-                    "me": false
-                },
-                {
-                    "name": "Costa, V. C.",
-                    "me": false
-                },
-                {
-                    "name": "Mantovaneli, R.",
-                    "me": false
-                },
-                {
-                    "name": "Wyatt, N. L. P.",
-                    "me": false
-                },
-                {
-                    "name": "Rocha, P. A.",
-                    "me": false
-                },
-                {
-                    "name": "Brandão, G. P.",
-                    "me": false
-                },
-                {
-                    "name": "de Souza, J. R.",
-                    "me": false
-                },
-                {
-                    "name": "Gimenes, A. C. W.",
-                    "me": false
-                },
-                {
-                    "name": "Costa, F. S.",
-                    "me": true
-                },
-                {
-                    "name": "da Silva, E. G. P.",
-                    "me": false
-                },
-                {
-                    "name": "Carneiro, M. T. W. D.",
-                    "me": false
-                }
-            ],
-            "journal": "Journal of Soils and Sediments",
-            "volume": "21",
-            "pages": "3098–3106",
-            "doi": "10.1007/s11368-021-02966-3",
-            "url": null,
-            "status": "published"
-        },
-        {
-            "year": 2021,
-            "title": "Clarification of tangerine juice using cellulases from <i>Pseudoyma</i> sp.",
-            "authors": [
-                {
-                    "name": "Santana, M. L.",
-                    "me": false
-                },
-                {
-                    "name": "Bispo, J. A. C.",
-                    "me": false
-                },
-                {
-                    "name": "de Sena, A. R.",
-                    "me": false
-                },
-                {
-                    "name": "Teshima, E.",
-                    "me": false
-                },
-                {
-                    "name": "de Brito, A. R.",
-                    "me": false
-                },
-                {
-                    "name": "Costa, F. S.",
-                    "me": true
-                },
-                {
-                    "name": "Franco, M.",
-                    "me": false
-                },
-                {
-                    "name": "de Assis, S. A.",
-                    "me": false
-                }
-            ],
-            "journal": "Journal of Food Science and Technology",
-            "volume": "58",
-            "pages": "44–51",
-            "doi": "10.1007/s13197-020-04511-5",
-            "url": null,
-            "status": "published"
-        },
-        {
-            "year": 2021,
-            "title": "Multivariate optimization of ultrasound-assisted liquid-liquid microextraction based on two solvents for cadmium preconcentration prior to determination by flame atomic absorption spectrometry",
-            "authors": [
-                {
-                    "name": "Ferreira, V. J.",
-                    "me": false
-                },
-                {
-                    "name": "de Jesus, M. S.",
-                    "me": false
-                },
-                {
-                    "name": "dos Santos, M. C.",
-                    "me": false
-                },
-                {
-                    "name": "Guedes, W. N.",
-                    "me": false
-                },
-                {
-                    "name": "Lemos, V. A.",
-                    "me": false
-                },
-                {
-                    "name": "Novaes, C. G.",
-                    "me": false
-                },
-                {
-                    "name": "Costa, F. S.",
-                    "me": true
-                },
-                {
-                    "name": "Pacheco, C. S. V.",
-                    "me": false
-                },
-                {
-                    "name": "da Silva, E. G. P.",
-                    "me": false
-                },
-                {
-                    "name": "Amorim, F. A. C.",
-                    "me": false
-                }
-            ],
-            "journal": "Analytical Methods",
-            "volume": "13",
-            "pages": "267–273",
-            "doi": "10.1039/D0AY02030C",
-            "url": null,
-            "status": "published"
-        },
-        {
-            "year": 2021,
-            "title": "Oral health, organic and inorganic saliva composition of men with Schizophrenia: Case-control study",
-            "authors": [
-                {
-                    "name": "Rosa, L. K.",
-                    "me": false
-                },
-                {
-                    "name": "Costa, F. S.",
-                    "me": true
-                },
-                {
-                    "name": "Hauagge, C. M.",
-                    "me": false
-                },
-                {
-                    "name": "Mobile, R. Z.",
-                    "me": false
-                },
-                {
-                    "name": "de Lima, A. A. S.",
-                    "me": false
-                },
-                {
-                    "name": "Amaral, C. D. B.",
-                    "me": false
-                },
-                {
-                    "name": "Machado, R. C.",
-                    "me": false
-                },
-                {
-                    "name": "Nogueira, A. R. A.",
-                    "me": false
-                },
-                {
-                    "name": "Brancher, J. A.",
-                    "me": false
-                },
-                {
-                    "name": "de Araujo, M. R.",
-                    "me": false
-                }
-            ],
-            "journal": "Journal of Trace Elements in Medicine and Biology",
-            "volume": "66",
-            "pages": "126743",
-            "doi": null,
-            "url": "https://www.sciencedirect.com/science/article/pii/S0946672X2100033X",
-            "status": "published"
-        },
-        {
-            "year": 2021,
-            "title": "Self-organizing map applied to the choice of internal standards for the determination of Cd, Pb, Sn, and platinum group elements by inductively coupled plasma mass spectrometry",
-            "authors": [
-                {
-                    "name": "Moreira, L. S.",
-                    "me": false
-                },
-                {
-                    "name": "Costa, F. S.",
-                    "me": true
-                },
-                {
-                    "name": "Machado, R. C.",
-                    "me": false
-                },
-                {
-                    "name": "Nogueira, A. R. A.",
-                    "me": false
-                },
-                {
-                    "name": "Gonzalez, M. H.",
-                    "me": false
-                },
-                {
-                    "name": "da Silva, E. G. P.",
-                    "me": false
-                },
-                {
-                    "name": "Amaral, C. D. B.",
-                    "me": false
-                }
-            ],
-            "journal": "Talanta",
-            "volume": "233",
-            "pages": "122534",
-            "doi": null,
-            "url": "https://www.sciencedirect.com/science/article/pii/S0039914021004550",
-            "status": "published"
-        },
-        {
-            "year": 2020,
-            "title": "Multivariate optimization of an ultrasound-assisted extraction procedure for the determination of Cu, Fe, Mn, and Zn in plant samples by flame atomic absorption spectrometry",
-            "authors": [
-                {
-                    "name": "Costa, F. S.",
-                    "me": true
-                },
-                {
-                    "name": "Leal, R. V. P.",
-                    "me": false
-                },
-                {
-                    "name": "Pacheco, C. S. V.",
-                    "me": false
-                },
-                {
-                    "name": "Amorim, F. A. C.",
-                    "me": false
-                },
-                {
-                    "name": "de Jesus, R. M.",
-                    "me": false
-                },
-                {
-                    "name": "Santos, L. N.",
-                    "me": false
-                },
-                {
-                    "name": "da Silva, E. G. P.",
-                    "me": false
-                }
-            ],
-            "journal": "Analytical Methods",
-            "volume": "12",
-            "pages": "2509–2516",
-            "doi": null,
-            "url": "https://pubs.rsc.org/ay/article-abstract/12/19/2509/673047/Multivariate-optimization-of-an-ultrasound",
-            "status": "published"
-        },
-        {
-            "year": 2020,
-            "title": "Recent trends of micro and nanostructured conducting polymers in health and environmental applications",
-            "authors": [
-                {
-                    "name": "de Alvarenga, G.",
-                    "me": false
-                },
-                {
-                    "name": "Hryniewicz, B. M.",
-                    "me": false
-                },
-                {
-                    "name": "Jasper, I.",
-                    "me": false
-                },
-                {
-                    "name": "Silva, R. J.",
-                    "me": false
-                },
-                {
-                    "name": "Klobukoski, V.",
-                    "me": false
-                },
-                {
-                    "name": "Costa, F. S.",
-                    "me": true
-                },
-                {
-                    "name": "Cervantes, T. N. M.",
-                    "me": false
-                },
-                {
-                    "name": "Amaral, C. D. B.",
-                    "me": false
-                },
-                {
-                    "name": "Schneider, J. T.",
-                    "me": false
-                },
-                {
-                    "name": "Bach-Toledo, L.",
-                    "me": false
-                },
-                {
-                    "name": "Peralta-Zamora, P.",
-                    "me": false
-                },
-                {
-                    "name": "Valerio, T. L.",
-                    "me": false
-                },
-                {
-                    "name": "Soares, F.",
-                    "me": false
-                },
-                {
-                    "name": "Silva, B. J. G.",
-                    "me": false
-                },
-                {
-                    "name": "Vidotti, M.",
-                    "me": false
-                }
-            ],
-            "journal": "Journal of Electroanalytical Chemistry",
-            "volume": "879",
-            "pages": "114754",
-            "doi": null,
-            "url": "https://www.sciencedirect.com/science/article/pii/S1572665720309826",
-            "status": "published"
-        }
-    ],
-
-    "magazine": [
-        {
-            "year": 2026,
-            "title": "Food Chromatography Approaches for Mineral Oil Hydrocarbon Analysis",
-            "authors": [
-                {
-                    "name": "Jano, A.",
-                    "me": false
-                },
-                {
-                    "name": "Ares, A. M.",
-                    "me": false
-                },
-                {
-                    "name": "Costa, F. S.",
-                    "me": true
-                },
-                {
-                    "name": "Custodio-Mendoza, J. A.",
-                    "me": false
-                },
-                {
-                    "name": "Bernal, J.",
-                    "me": false
-                },
-                {
-                    "name": "Fuente-Ballesteros, A.",
-                    "me": false
-                }
-            ],
-            "journal": "LCGC International",
-            "url": "https://www.chromatographyonline.com/view/food-chromatography-approaches-mineral-oil-hydrocarbon-analysis"
-        }
-    ],
-
-    "events_full": [
-        {
-            "year": 2023,
-            "title": "Otimização da produção de β-mananase produzida por fermentação em estado sólido utilizando o fungo Penicillium roqueforti ATCC 10110",
-            "authors": [
-                {
-                    "name": "Sena, L. O.",
-                    "me": false
-                },
-                {
-                    "name": "Silva, F. N.",
-                    "me": false
-                },
-                {
-                    "name": "Jesus, G. L. S.",
-                    "me": false
-                },
-                {
-                    "name": "Mota, M. S.",
-                    "me": false
-                },
-                {
-                    "name": "Costa, F. S.",
-                    "me": true
-                },
-                {
-                    "name": "Franco, M.",
-                    "me": false
-                }
-            ],
-            "event": "5ª Semana de Engenharia de Alimentos e 3° Simpósio da Pós-Graduação em Engenharia e Ciência de Alimentos da UESB",
-            "city": "Itapetinga",
-            "url": null
-        },
-        {
-            "year": 2022,
-            "title": "Planejamento Doehlert para otimização das condições fermentativas na produção de endoglucanase por Aspergillus niger",
-            "authors": [
-                {
-                    "name": "Silva, F. N.",
-                    "me": false
-                },
-                {
-                    "name": "Ribeiro, D. S.",
-                    "me": false
-                },
-                {
-                    "name": "Jesus, G. L. S.",
-                    "me": false
-                },
-                {
-                    "name": "Emmerich, I. T.",
-                    "me": false
-                },
-                {
-                    "name": "Costa, F. S.",
-                    "me": true
-                },
-                {
-                    "name": "Franco, M.",
-                    "me": false
-                }
-            ],
-            "event": "II Simpósio Nacional sobre Inovação em Engenharia e Ciência de Alimentos",
-            "city": "Vitória da Conquista",
-            "url": "https://www.even3.com.br/Anais/ineca2022/587042-PLANEJAMENTO-DOEHLERT-PARA-OTIMIZACAO-DAS-CONDICOES-FERMENTATIVAS-NA-PRODUCAO-DE-ENDOGLUCANASE-POR-ASPERGILLUS-NI"
-        },
-        {
-            "year": 2021,
-            "title": "Produção de Xilanase por fermentação em estado sólido utilizando Asperillus oryzae em mistura de resíduos agroindustriais",
-            "authors": [
-                {
-                    "name": "de Carvalho, M. S.",
-                    "me": false
-                },
-                {
-                    "name": "Costa, F. S.",
-                    "me": true
-                },
-                {
-                    "name": "Pimentel, A. B.",
-                    "me": false
-                },
-                {
-                    "name": "Oliveira, P. C.",
-                    "me": false
-                },
-                {
-                    "name": "Tavares, I. M. C.",
-                    "me": false
-                },
-                {
-                    "name": "Franco, M.",
-                    "me": false
-                }
-            ],
-            "event": "II Simpósio da Pós-graduação em Engenharia e Ciência de Alimentos",
-            "city": "Itapetinga",
-            "url": "https://www.even3.com.br/anais/simpecal2021/411116-producao-de-xilanase-por-fermentacao-em-estado-solido-utilizando-asperillus-oryzae-em-mistura-de-residuos-agroind/"
-        },
-        {
-            "year": 2019,
-            "title": "Aplicação de redes neurais artificiais do tipo mapas auto-organizáveis para classificação dos teores de macro e microelementos em amostras de peixes (Mugil cephalus)",
-            "authors": [
-                {
-                    "name": "Pacheco, C. S. V.",
-                    "me": false
-                },
-                {
-                    "name": "Santos, K. M.",
-                    "me": false
-                },
-                {
-                    "name": "Costa, F. S.",
-                    "me": true
-                },
-                {
-                    "name": "Leal, R. V. P.",
-                    "me": false
-                },
-                {
-                    "name": "Santos, L. N.",
-                    "me": false
-                },
-                {
-                    "name": "Silva, E. G. P.",
-                    "me": false
-                },
-                {
-                    "name": "Chagas, T. P.",
-                    "me": false
-                },
-                {
-                    "name": "Santos, A. M. P.",
-                    "me": false
-                }
-            ],
-            "event": "X Workshop de Quimiometria",
-            "city": "Salvador",
-            "url": null
-        }
-    ],
-
-    "events_abstract": [
-        {
-            "year": 2025,
-            "title": "Alternative Green Solvents in Sample Preparation methods for Lead Extraction from Electronic Waste",
-            "authors": [
-                {
-                    "name": "Costa, F. S.",
-                    "me": true
-                },
-                {
-                    "name": "Moreira, L. S.",
-                    "me": false
-                },
-                {
-                    "name": "Müller, M. O.",
-                    "me": false
-                },
-                {
-                    "name": "Araujo, M. E. M.",
-                    "me": false
-                },
-                {
-                    "name": "Gonzalez, M. H.",
-                    "me": false
-                },
-                {
-                    "name": "Amaral, C. D. B.",
-                    "me": false
-                }
-            ],
-            "event": "4th International Meeting on Deep Eutectic Systems",
-            "city": "Lisboa",
-            "url": "https://www.dessolutio.com/wp-content/uploads/2025/06/BoA_4IMDES_June2025_Final.pdf"
-        },
-        {
-            "year": 2025,
-            "title": "Determination of Lead in Alcoholic Beverages by FAAS: A Sustainable Approach with Hydrophobic Deep Eutectic Solvents",
-            "authors": [
-                {
-                    "name": "Muller, M. O.",
-                    "me": false
-                },
-                {
-                    "name": "Sorrilha, I. H.",
-                    "me": false
-                },
-                {
-                    "name": "Costa, F. S.",
-                    "me": true
-                },
-                {
-                    "name": "Gonzalez, M. H.",
-                    "me": false
-                },
-                {
-                    "name": "Amaral, C. D. B.",
-                    "me": false
-                }
-            ],
-            "event": "48ª Reunião Anual da Sociedade Brasileira de Química",
-            "city": "Campinas",
-            "url": "https://www.sbq.org.br/48ra/"
-        },
-        {
-            "year": 2025,
-            "title": "Elemental Characterization of Brewery Waste Using Deep Eutectic Solvent and Determination by Spectrometry Techniques",
-            "authors": [
-                {
-                    "name": "Alves, A. L.",
-                    "me": false
-                },
-                {
-                    "name": "Muller, M. O.",
-                    "me": false
-                },
-                {
-                    "name": "Costa, F. S.",
-                    "me": true
-                },
-                {
-                    "name": "Gonzalez, M. H.",
-                    "me": false
-                },
-                {
-                    "name": "Amaral, C. D. B.",
-                    "me": false
-                }
-            ],
-            "event": "48ª Reunião Anual da Sociedade Brasileira de Química",
-            "city": "Campinas",
-            "url": "https://www.sbq.org.br/48ra/"
-        },
-        {
-            "year": 2025,
-            "title": "Enhancing canine visceral leishmaniasis diagnosis using plasmonic immunosensors: incorporating artificial bioreceptors and artificial intelligence",
-            "authors": [
-                {
-                    "name": "Volpe, J.",
-                    "me": false
-                },
-                {
-                    "name": "Costa, F. S.",
-                    "me": true
-                },
-                {
-                    "name": "Camilo, I. C.",
-                    "me": false
-                },
-                {
-                    "name": "Silva, B. S.",
-                    "me": false
-                },
-                {
-                    "name": "Souto, D. E. P.",
-                    "me": false
-                }
-            ],
-            "event": "48ª Reunião Anual da Sociedade Brasileira de Química",
-            "city": "Campinas",
-            "url": "https://www.sbq.org.br/48ra/"
-        },
-        {
-            "year": 2025,
-            "title": "Solid-Phase Extraction with Alginate-Encapsulated Hydrophobic Deep Eutectic Solvent for Copper Pre-Concentration in Saliva Prior to FAAS analysis",
-            "authors": [
-                {
-                    "name": "Araujo, M. E. M.",
-                    "me": false
-                },
-                {
-                    "name": "Muller, M. O.",
-                    "me": false
-                },
-                {
-                    "name": "Costa, F. S.",
-                    "me": true
-                },
-                {
-                    "name": "Gonzalez, M. H.",
-                    "me": false
-                },
-                {
-                    "name": "Amaral, C. D. B.",
-                    "me": false
-                }
-            ],
-            "event": "48ª Reunião Anual da Sociedade Brasileira de Química",
-            "city": "Campinas",
-            "url": "https://www.sbq.org.br/48ra/"
-        },
-        {
-            "year": 2025,
-            "title": "Sustainable Strategy Using Deep Eutectic Solvents for Multi-Matrix Sample Analysis by MIP-OES",
-            "authors": [
-                {
-                    "name": "Costa, F. S.",
-                    "me": true
-                },
-                {
-                    "name": "Banhos, S. G.",
-                    "me": false
-                },
-                {
-                    "name": "Tozo, M. L. L.",
-                    "me": false
-                },
-                {
-                    "name": "Araujo, M. E. M.",
-                    "me": false
-                },
-                {
-                    "name": "Muller, M. O.",
-                    "me": false
-                },
-                {
-                    "name": "Gonzalez, M. H.",
-                    "me": false
-                },
-                {
-                    "name": "Amaral, C. D. B.",
-                    "me": false
-                },
-                {
-                    "name": "Nogueira, A. R. A.",
-                    "me": false
-                }
-            ],
-            "event": "48ª Reunião Anual da Sociedade Brasileira de Química",
-            "city": "Campinas",
-            "url": "https://www.sbq.org.br/48ra/"
-        },
-        {
-            "year": 2024,
-            "title": "Disposable inserts: analytical frequency optimization and applicability in microwave radiation-assisted acid digestion of different matrices",
-            "authors": [
-                {
-                    "name": "Banhos, S. G.",
-                    "me": false
-                },
-                {
-                    "name": "Tozo, M. L. L.",
-                    "me": false
-                },
-                {
-                    "name": "Garcia Filho, A.",
-                    "me": false
-                },
-                {
-                    "name": "Costa, F. S.",
-                    "me": true
-                },
-                {
-                    "name": "Pereira Filho, E. R.",
-                    "me": false
-                },
-                {
-                    "name": "Nogueira, A. R. A.",
-                    "me": false
-                }
-            ],
-            "event": "21º Encontro Nacional de Química Analítica",
-            "city": "Belém",
-            "url": null
-        },
-        {
-            "year": 2024,
-            "title": "Encapsulation of Hydrophobic Deep Eutectic Solvent (HDES) in Alginate Beads: A Green Sorbent for Preconcentration of Inorganic Analytes",
-            "authors": [
-                {
-                    "name": "Muller, M. O.",
-                    "me": false
-                },
-                {
-                    "name": "Costa, F. S.",
-                    "me": true
-                },
-                {
-                    "name": "Gonzalez, M. H.",
-                    "me": false
-                },
-                {
-                    "name": "Amaral, C. D. B.",
-                    "me": false
-                }
-            ],
-            "event": "47ª Reunião Anual da Sociedade Brasileira de Química",
-            "city": "Águas de Lindóia",
-            "url": null
-        },
-        {
-            "year": 2024,
-            "title": "Encapsulation of Hydrophobic Deep Eutectic Solvent in Alginate for pre-concentration of copper in saliva samples prior to FAAS analysis",
-            "authors": [
-                {
-                    "name": "Araujo, M. E. M.",
-                    "me": false
-                },
-                {
-                    "name": "Muller, M. O.",
-                    "me": false
-                },
-                {
-                    "name": "Costa, F. S.",
-                    "me": true
-                },
-                {
-                    "name": "Gonzalez, M. H.",
-                    "me": false
-                },
-                {
-                    "name": "Amaral, C. D. B.",
-                    "me": false
-                }
-            ],
-            "event": "21º Encontro Nacional de Química Analítica",
-            "city": "Belém",
-            "url": null
-        },
-        {
-            "year": 2024,
-            "title": "Enhanced metal detection in fermented beverages by FAAS using Alginate encapsulated Hydrophobic Deep Eutectic Solvent",
-            "authors": [
-                {
-                    "name": "Muller, M. O.",
-                    "me": false
-                },
-                {
-                    "name": "Araujo, M. E. M.",
-                    "me": false
-                },
-                {
-                    "name": "Costa, F. S.",
-                    "me": true
-                },
-                {
-                    "name": "Gonzalez, M. H.",
-                    "me": false
-                },
-                {
-                    "name": "Amaral, C. D. B.",
-                    "me": false
-                }
-            ],
-            "event": "21º Encontro Nacional de Química Analítica",
-            "city": "Belém",
-            "url": null
-        },
-        {
-            "year": 2023,
-            "title": "A greener method for determination of arsenic and cadmium in soil by ICP-MS employing Deep Eutectic Solvents",
-            "authors": [
-                {
-                    "name": "Ferreira, S. S.",
-                    "me": false
-                },
-                {
-                    "name": "Costa, F. S.",
-                    "me": true
-                },
-                {
-                    "name": "Guimaraes, T. G. S.",
-                    "me": false
-                },
-                {
-                    "name": "Amaral, C. D. B.",
-                    "me": false
-                },
-                {
-                    "name": "Gonzalez, M. H.",
-                    "me": false
-                }
-            ],
-            "event": "16th Rio Symposium on Atomic Spectrometry",
-            "city": "Bento Gonçalves",
-            "url": "https://rsas-espeq.com.br/baixar-arquivo/documentosGerais/doc-8-18-231121_152542.pdf"
-        },
-        {
-            "year": 2023,
-            "title": "Análise da composição elementar do resíduo de disparo de arma de fogo nas mãos de atiradores",
-            "authors": [
-                {
-                    "name": "de Oliveira, A. C.",
-                    "me": false
-                },
-                {
-                    "name": "Costa, F. S.",
-                    "me": true
-                },
-                {
-                    "name": "dos Santos, M. P.",
-                    "me": false
-                },
-                {
-                    "name": "Grassi, M. T.",
-                    "me": false
-                },
-                {
-                    "name": "Amaral, C. D. B.",
-                    "me": false
-                }
-            ],
-            "event": "75ª Reunião Anual da SBPC",
-            "city": "Curitiba",
-            "url": null
-        },
-        {
-            "year": 2023,
-            "title": "Aplicação de métodos estatísticos na valorização de biomassa lignocelulósica proveniente da agroindústria na obtenção de bioproduto por meio da fermentação em estado sólido",
-            "authors": [
-                {
-                    "name": "de Carvalho, M. S.",
-                    "me": false
-                },
-                {
-                    "name": "Quinto, A. S. S.",
-                    "me": false
-                },
-                {
-                    "name": "Pimentel, A. B.",
-                    "me": false
-                },
-                {
-                    "name": "Santana, E. C.",
-                    "me": false
-                },
-                {
-                    "name": "Costa, F. S.",
-                    "me": true
-                },
-                {
-                    "name": "Jesus, G. L. S.",
-                    "me": false
-                },
-                {
-                    "name": "Mendonca, A. T. L.",
-                    "me": false
-                },
-                {
-                    "name": "Tavares, I. M. C.",
-                    "me": false
-                },
-                {
-                    "name": "Franco, M.",
-                    "me": false
-                }
-            ],
-            "event": "II Congreso Euroamericano de Procesos y Productos Alimentarios",
-            "city": "",
-            "url": "https://www.even3.com.br/anais/ceapa2023/731998-aplicacao-de-metodos-estatisticos-na-valorizacao-de-biomassa-lignocelulosica-proveniente-da-agroindustria-na-obte/"
-        },
-        {
-            "year": 2023,
-            "title": "Resíduos do processamento do (Theobroma cacao) como matéria prima para a produção de lacase por fermentação em estado sólido",
-            "authors": [
-                {
-                    "name": "Pimentel, A. B.",
-                    "me": false
-                },
-                {
-                    "name": "Quinto, A. S. S.",
-                    "me": false
-                },
-                {
-                    "name": "de Carvalho, M. S.",
-                    "me": false
-                },
-                {
-                    "name": "Santana, E. C.",
-                    "me": false
-                },
-                {
-                    "name": "Costa, F. S.",
-                    "me": true
-                },
-                {
-                    "name": "Jesus, G. L. S.",
-                    "me": false
-                },
-                {
-                    "name": "Mendonca, A. T. L.",
-                    "me": false
-                },
-                {
-                    "name": "Jesus, B. L. S.",
-                    "me": false
-                },
-                {
-                    "name": "Tavares, I. M. C.",
-                    "me": false
-                },
-                {
-                    "name": "Franco, M.",
-                    "me": false
-                }
-            ],
-            "event": "II Congreso Euroamericano de Procesos y Productos Alimentarios",
-            "city": "",
-            "url": "https://www.even3.com.br/anais/ceapa2023/731981-residuos-do-processamento-do-(theobroma-cacao)-como-materia-prima-para-a-producao-de-lacase-por-fermentacao-em-es/"
-        },
-        {
-            "year": 2023,
-            "title": "Self-organizing map and pollution indices for space-time patterns identification in a coastal ecosystem monitoring program",
-            "authors": [
-                {
-                    "name": "Moreira, L. S.",
-                    "me": false
-                },
-                {
-                    "name": "Costa, F. S.",
-                    "me": true
-                },
-                {
-                    "name": "Zardini, L. B.",
-                    "me": false
-                },
-                {
-                    "name": "Gomes, L. D.",
-                    "me": false
-                },
-                {
-                    "name": "Ferrari, H. B.",
-                    "me": false
-                },
-                {
-                    "name": "Brandão, G. P.",
-                    "me": false
-                },
-                {
-                    "name": "Rodrigues Neto, R.",
-                    "me": false
-                },
-                {
-                    "name": "Carneiro, M. T. W. D.",
-                    "me": false
-                }
-            ],
-            "event": "16th Rio Symposium on Atomic Spectrometry",
-            "city": "Bento Gonçalves",
-            "url": "https://rsas-espeq.com.br/baixar-arquivo/documentosGerais/doc-8-18-231121_152542.pdf"
-        },
-        {
-            "year": 2022,
-            "title": "A greener method for determination of As, Cd, and Pb in soil and plant tissue by ICP-MS employing NADES in sample preparation",
-            "authors": [
-                {
-                    "name": "Ferreira, S. S.",
-                    "me": false
-                },
-                {
-                    "name": "Brito, T. A.",
-                    "me": false
-                },
-                {
-                    "name": "Costa, F. S.",
-                    "me": true
-                },
-                {
-                    "name": "Guimaraes, T. G. S.",
-                    "me": false
-                },
-                {
-                    "name": "Andrade, D. F.",
-                    "me": false
-                },
-                {
-                    "name": "Lamarca, R. S.",
-                    "me": false
-                },
-                {
-                    "name": "Oliveira, A.",
-                    "me": false
-                },
-                {
-                    "name": "Amaral, C. D. B.",
-                    "me": false
-                },
-                {
-                    "name": "Gonzalez, M. H.",
-                    "me": false
-                }
-            ],
-            "event": "20th Brazilian Meeting on Analytical Chemistry and 8° Congresso Ibero-Americano de Química Analítica",
-            "city": "Bento Gonçalves",
-            "url": null
-        },
-        {
-            "year": 2022,
-            "title": "Microwave-assisted extraction induced by emulsion breaking based on NADES for elemental determination in Edible Oils by ICP OES",
-            "authors": [
-                {
-                    "name": "Costa, F. S.",
-                    "me": true
-                },
-                {
-                    "name": "Ludovico, L. L.",
-                    "me": false
-                },
-                {
-                    "name": "Moreira, L. S.",
-                    "me": false
-                },
-                {
-                    "name": "Volpe, J.",
-                    "me": false
-                },
-                {
-                    "name": "dos Santos, M. P.",
-                    "me": false
-                },
-                {
-                    "name": "da Silva, E. G. P.",
-                    "me": false
-                },
-                {
-                    "name": "Amorim, F. A. C.",
-                    "me": false
-                },
-                {
-                    "name": "Grassi, M. T.",
-                    "me": false
-                },
-                {
-                    "name": "Gonzalez, M. H.",
-                    "me": false
-                },
-                {
-                    "name": "Amaral, C. D. B.",
-                    "me": false
-                }
-            ],
-            "event": "20th Brazilian Meeting on Analytical Chemistry and 8° Congresso Ibero-Americano de Química Analítica",
-            "city": "Bento Gonçalves",
-            "url": null
-        },
-        {
-            "year": 2022,
-            "title": "Synthetic peptides-based SPR biosensors towards visceral leishmaniasis diagnosis",
-            "authors": [
-                {
-                    "name": "Volpe, J.",
-                    "me": false
-                },
-                {
-                    "name": "Silva, A. S.",
-                    "me": false
-                },
-                {
-                    "name": "Costa, F. S.",
-                    "me": true
-                },
-                {
-                    "name": "Faria, A. R.",
-                    "me": false
-                },
-                {
-                    "name": "Andrade, H. M.",
-                    "me": false
-                },
-                {
-                    "name": "Souto, D. E. P.",
-                    "me": false
-                }
-            ],
-            "event": "20th Brazilian Meeting on Analytical Chemistry and 8° Congresso Ibero-Americano de Química Analítica",
-            "city": "Bento Gonçalves",
-            "url": null
-        },
-        {
-            "year": 2021,
-            "title": "Produção de Xilanase por Fermentação em Estado Sólido utilizando Asperillus oryzae em mistura de resíduos agroindustriais",
-            "authors": [
-                {
-                    "name": "de Carvalho, M. S.",
-                    "me": false
-                },
-                {
-                    "name": "Costa, F. S.",
-                    "me": true
-                },
-                {
-                    "name": "Pimentel, A. B.",
-                    "me": false
-                },
-                {
-                    "name": "Oliveira, P. C.",
-                    "me": false
-                },
-                {
-                    "name": "Tavares, I. M. C.",
-                    "me": false
-                },
-                {
-                    "name": "Franco, M.",
-                    "me": false
-                }
-            ],
-            "event": "II Simpósio da Pós-Graduação em Engenharia e Ciência de Alimentos",
-            "city": "Itapetinga",
-            "url": null
-        },
-        {
-            "year": 2019,
-            "title": "Desenvolvimento de metodologia de extração assistida por ultrassom para determinação de metais em tecido vegetal coletado no estuário do Rio Cachoeira, Ilhéus--BA",
-            "authors": [
-                {
-                    "name": "Leal, R. V. P.",
-                    "me": false
-                },
-                {
-                    "name": "Costa, F. S.",
-                    "me": true
-                },
-                {
-                    "name": "Fontes, A. S.",
-                    "me": false
-                },
-                {
-                    "name": "Pacheco, C. S. V.",
-                    "me": false
-                },
-                {
-                    "name": "Amorim, F. A. C.",
-                    "me": false
-                },
-                {
-                    "name": "Santos, L. N.",
-                    "me": false
-                },
-                {
-                    "name": "Silva, E. G. P.",
-                    "me": false
-                }
-            ],
-            "event": "71ª Reunião Anual da SBPC",
-            "city": "Campo Grande",
-            "url": "http://reunioessbpc.org.br/campogrande/inscritos/resumos/3519_1d08d54613b295be16b3950b6f9788745.pdf"
-        },
-        {
-            "year": 2018,
-            "title": "Aplicação de matriz Doehlert na otimização da hidrólise do azeite de oliva por lipase de Candida rugosa imobilizada em Accurel MP 1000",
-            "authors": [
-                {
-                    "name": "Soares, G. A.",
-                    "me": false
-                },
-                {
-                    "name": "Moreira, L. S.",
-                    "me": false
-                },
-                {
-                    "name": "Costa, F. S.",
-                    "me": true
-                },
-                {
-                    "name": "Pacheco, C. S. V.",
-                    "me": false
-                },
-                {
-                    "name": "Oliveira, J. R.",
-                    "me": false
-                },
-                {
-                    "name": "Franco, M.",
-                    "me": false
-                }
-            ],
-            "event": "19º Encontro Nacional de Química Analítica e 7º Congresso Iberoamericano de Química Analítica",
-            "city": "Caldas Novas",
-            "url": "http://enqa2018.com.br/arquivo/ENQA2018_Anais.pdf"
-        },
-        {
-            "year": 2018,
-            "title": "Comparação de algoritmo híbrido e planejamento de mistura como estratégia de otimização no preparo de amostra",
-            "authors": [
-                {
-                    "name": "Costa, F. S.",
-                    "me": true
-                },
-                {
-                    "name": "Carneiro, L. L.",
-                    "me": false
-                },
-                {
-                    "name": "Leal, R. V. P.",
-                    "me": false
-                },
-                {
-                    "name": "Pacheco, C. S. V.",
-                    "me": false
-                },
-                {
-                    "name": "Chagas, T. P.",
-                    "me": false
-                },
-                {
-                    "name": "Silva, E. G. P.",
-                    "me": false
-                },
-                {
-                    "name": "Santos, L. N.",
-                    "me": false
-                }
-            ],
-            "event": "19º Encontro Nacional de Química Analítica e 7º Congresso Iberoamericano de Química Analítica",
-            "city": "Caldas Novas",
-            "url": "http://enqa2018.com.br/arquivo/ENQA2018_Anais.pdf"
-        },
-        {
-            "year": 2018,
-            "title": "Desenvolvimento de metodologia de extração assistida por ultrassom para determinação de Cu, Mn, Fe e Zn em material vegetal por F AAS",
-            "authors": [
-                {
-                    "name": "Leal, R. V. P.",
-                    "me": false
-                },
-                {
-                    "name": "Costa, F. S.",
-                    "me": true
-                },
-                {
-                    "name": "Fontes, A. S.",
-                    "me": false
-                },
-                {
-                    "name": "Pacheco, C. S. V.",
-                    "me": false
-                },
-                {
-                    "name": "Silva, E. G. P.",
-                    "me": false
-                },
-                {
-                    "name": "Santos, L. N.",
-                    "me": false
-                },
-                {
-                    "name": "Amorim, F. A. C.",
-                    "me": false
-                },
-                {
-                    "name": "Jesus, R. M.",
-                    "me": false
-                }
-            ],
-            "event": "19º Encontro Nacional de Química Analítica e 7º Congresso Iberoamericano de Química Analítica",
-            "city": "Caldas Novas",
-            "url": "http://enqa2018.com.br/arquivo/ENQA2018_Anais.pdf"
-        },
-        {
-            "year": 2018,
-            "title": "Desenvolvimento de metodologia de extração assistida por ultrassom para determinação de metais em tecido vegetal coletado no estuário do Rio Cachoeira, Ilhéus-BA",
-            "authors": [
-                {
-                    "name": "Leal, R. V. P.",
-                    "me": false
-                },
-                {
-                    "name": "Carneiro, L. L.",
-                    "me": false
-                },
-                {
-                    "name": "Santos, K. M.",
-                    "me": false
-                },
-                {
-                    "name": "Costa, F. S.",
-                    "me": true
-                },
-                {
-                    "name": "Pacheco, C. S. V.",
-                    "me": false
-                },
-                {
-                    "name": "Jesus, R. M.",
-                    "me": false
-                },
-                {
-                    "name": "Santos, L. N.",
-                    "me": false
-                },
-                {
-                    "name": "Silva, E. G. P.",
-                    "me": false
-                }
-            ],
-            "event": "5º Simpósio de Ensino, Extensão, Inovação, Pesquisa e Pós-Graduação 24º Seminário de Iniciação Científica",
-            "city": "Ilhéus",
-            "url": "http://propp.uesc.br/sisres/resumosanais8.php"
-        },
-        {
-            "year": 2018,
-            "title": "Emprego de algoritmo genético híbrido com rede neural (RNA-AG) para otimização da determinação do arsênio total por HG-MIP OES",
-            "authors": [
-                {
-                    "name": "Pacheco, C. S. V.",
-                    "me": false
-                },
-                {
-                    "name": "Jesus, M. S.",
-                    "me": false
-                },
-                {
-                    "name": "Carneiro, L. L.",
-                    "me": false
-                },
-                {
-                    "name": "Santos, K. M.",
-                    "me": false
-                },
-                {
-                    "name": "Costa, F. S.",
-                    "me": true
-                },
-                {
-                    "name": "Lima, D. C.",
-                    "me": false
-                },
-                {
-                    "name": "Silva, E. G. P.",
-                    "me": false
-                },
-                {
-                    "name": "Santos, A. M. P.",
-                    "me": false
-                }
-            ],
-            "event": "19º Encontro Nacional de Química Analítica e 7º Congresso Iberoamericano de Química Analítica",
-            "city": "Caldas Novas",
-            "url": "http://enqa2018.com.br/arquivo/ENQA2018_Anais.pdf"
-        },
-        {
-            "year": 2018,
-            "title": "Emprego do planejamento de misturas para a decomposição de amostras de chás",
-            "authors": [
-                {
-                    "name": "Santos, K. M.",
-                    "me": false
-                },
-                {
-                    "name": "Pacheco, C. S. V.",
-                    "me": false
-                },
-                {
-                    "name": "Costa, F. S.",
-                    "me": true
-                },
-                {
-                    "name": "Amorim, F. A. C.",
-                    "me": false
-                },
-                {
-                    "name": "Santos, L. N.",
-                    "me": false
-                },
-                {
-                    "name": "Silva, E. G. P.",
-                    "me": false
-                }
-            ],
-            "event": "19º Encontro Nacional de Química Analítica e 7º Congresso Iberoamericano de Química Analítica",
-            "city": "Caldas Novas",
-            "url": "http://enqa2018.com.br/arquivo/ENQA2018_Anais.pdf"
-        },
-        {
-            "year": 2018,
-            "title": "Microextração líquido-líquido dispersiva acoplado a separação em fase sólida para determinação em linha de cádmio por F AAS",
-            "authors": [
-                {
-                    "name": "Fontes, A. S.",
-                    "me": false
-                },
-                {
-                    "name": "Mello, B. C.",
-                    "me": false
-                },
-                {
-                    "name": "Costa, F. S.",
-                    "me": true
-                },
-                {
-                    "name": "Silva, E. G. P.",
-                    "me": false
-                },
-                {
-                    "name": "Lima, D. C.",
-                    "me": false
-                },
-                {
-                    "name": "Amorim, F. A. C.",
-                    "me": false
-                }
-            ],
-            "event": "19º Encontro Nacional de Química Analítica e 7º Congresso Iberoamericano de Química Analítica",
-            "city": "Caldas Novas",
-            "url": "http://enqa2018.com.br/arquivo/ENQA2018_Anais.pdf"
-        },
-        {
-            "year": 2018,
-            "title": "Modelagem e otimização de experimentos utilizando Clusterização fuzzy e algoritmos genéticos",
-            "authors": [
-                {
-                    "name": "Carneiro, L. L.",
-                    "me": false
-                },
-                {
-                    "name": "Costa, F. S.",
-                    "me": true
-                },
-                {
-                    "name": "Leal, R. V. P.",
-                    "me": false
-                },
-                {
-                    "name": "Santos, K. M.",
-                    "me": false
-                },
-                {
-                    "name": "Pacheco, C. S. V.",
-                    "me": false
-                },
-                {
-                    "name": "Chagas, T. P.",
-                    "me": false
-                },
-                {
-                    "name": "Silva, E. G. P.",
-                    "me": false
-                }
-            ],
-            "event": "5º Simpósio de Ensino, Extensão, Inovação, Pesquisa e Pós-Graduação 24º Seminário de Iniciação Científica",
-            "city": "Ilhéus",
-            "url": "http://propp.uesc.br/sisres/resumosanais8.php"
-        }
-    ],
-    
-    "events_expanded": [
-        {
-            "year": 2023,
-            "title": "Otimização do processo fermentativo para produção de β-mananase utilizando Matriz Doehlert",
-            "authors": [
-                {
-                    "name": "Sena, L. O.",
-                    "me": false
-                },
-                {
-                    "name": "Silva, F. N.",
-                    "me": false
-                },
-                {
-                    "name": "Jesus, G. L. S.",
-                    "me": false
-                },
-                {
-                    "name": "Mota, M. S.",
-                    "me": false
-                },
-                {
-                    "name": "Chaves, J. M. S.",
-                    "me": false
-                },
-                {
-                    "name": "Ribeiro, T. A.",
-                    "me": false
-                },
-                {
-                    "name": "Costa, F. S.",
-                    "me": true
-                },
-                {
-                    "name": "Franco, M.",
-                    "me": false
-                }
-            ],
-            "event": "VII Semana Acadêmica de Engenharia de Alimentos (VII SEMEALI)",
-            "city": "Manaus",
-            "url": "https://www.even3.com.br/anais/vii-semeali/728498-otimizacao-do-processo-fermentativo-para-producao-de-?–mananase-utilizando-matriz-doehlert"
-        }
-    ]
+ "articles": [
+  {
+   "year": 2026,
+   "title": "Chemometric-assisted classification of sunscreen sun protection factor using in vitro UV spectroscopy",
+   "authors": [
+    {
+     "name": "Oliveira, C. F. S.",
+     "me": false
+    },
+    {
+     "name": "Costa, F. S.",
+     "me": true
+    },
+    {
+     "name": "Nagata, N.",
+     "me": false
+    },
+    {
+     "name": "Brohem, C. A.",
+     "me": false
+    },
+    {
+     "name": "Lorencini, M.",
+     "me": false
+    },
+    {
+     "name": "Amaral, C. D. B.",
+     "me": false
+    }
+   ],
+   "journal": "Photochemical & Photobiological Sciences",
+   "volume": "",
+   "pages": "",
+   "doi": "10.1007/s43630-026-00993-y",
+   "url": null,
+   "status": "accepted"
+  },
+  {
+   "year": 2026,
+   "title": "Alginate-Encapsulated HDES as a Green Sorbent for Elemental Preconcentration Prior to Determination by FAAS",
+   "authors": [
+    {
+     "name": "Müller, M. O.",
+     "me": false
+    },
+    {
+     "name": "Araújo, M. E. M.",
+     "me": false
+    },
+    {
+     "name": "Paiva dos Santos, A. L.",
+     "me": false
+    },
+    {
+     "name": "Costa, F. S.",
+     "me": true
+    },
+    {
+     "name": "Grassi, M. T.",
+     "me": false
+    },
+    {
+     "name": "Gonzalez, M. H.",
+     "me": false
+    },
+    {
+     "name": "Amaral, C. D. B.",
+     "me": false
+    }
+   ],
+   "journal": "ACS Omega",
+   "volume": "11",
+   "pages": "41860–41869",
+   "doi": "10.1021/acsomega.6c01846",
+   "url": null,
+   "status": "published"
+  },
+  {
+   "year": 2026,
+   "title": "Choline chloride-carboxylic acid deep eutectic solvents for lead extraction from electronic waste: A green approach",
+   "authors": [
+    {
+     "name": "Costa, F. S.",
+     "me": true
+    },
+    {
+     "name": "Moreira, L. S.",
+     "me": false
+    },
+    {
+     "name": "Müller, M. O.",
+     "me": false
+    },
+    {
+     "name": "Gonzalez, M. H.",
+     "me": false
+    },
+    {
+     "name": "Amaral, C. D. B.",
+     "me": false
+    }
+   ],
+   "journal": "Sustainable Chemistry and Pharmacy",
+   "volume": "49",
+   "pages": "102300",
+   "doi": "10.1016/j.scp.2025.102300",
+   "url": null,
+   "status": "published"
+  },
+  {
+   "year": 2026,
+   "title": "L-Asparaginase Production by Fungal Coculture Under Solid-State Fermentation: Biochemical Characterization and Application in French Fries for Acrylamide Mitigation",
+   "authors": [
+    {
+     "name": "Teixeira, J. M.",
+     "me": false
+    },
+    {
+     "name": "Santana, N. B.",
+     "me": false
+    },
+    {
+     "name": "Lima, T. S. M.",
+     "me": false
+    },
+    {
+     "name": "do Nascimento, I. S.",
+     "me": false
+    },
+    {
+     "name": "da Silva Neto, A. B.",
+     "me": false
+    },
+    {
+     "name": "Costa, F. S.",
+     "me": true
+    },
+    {
+     "name": "de Carvalho Tavares, I. M.",
+     "me": false
+    },
+    {
+     "name": "Pereira, R. G.",
+     "me": false
+    },
+    {
+     "name": "de Jesus Silva, G.",
+     "me": false
+    },
+    {
+     "name": "Silva, F. N.",
+     "me": false
+    },
+    {
+     "name": "Mussagy, C. U.",
+     "me": false
+    },
+    {
+     "name": "Caicedo-Paz, A. V.",
+     "me": false
+    },
+    {
+     "name": "Franco, M.",
+     "me": false
+    }
+   ],
+   "journal": "Food and Bioprocess Technology",
+   "volume": "19",
+   "pages": "218",
+   "doi": "10.1007/s11947-026-04311-3",
+   "url": null,
+   "status": "published"
+  },
+  {
+   "year": 2026,
+   "title": "Multielement Determination in Green, Black, and White Tea Leaves (<i>Camellia sinensis</i>) Using Ultrasound-Assisted Extraction with Natural Deep Eutectic Solvents",
+   "authors": [
+    {
+     "name": "Ferrari, H. B.",
+     "me": false
+    },
+    {
+     "name": "Moreira, L. S.",
+     "me": false
+    },
+    {
+     "name": "Costa, F. S.",
+     "me": true
+    },
+    {
+     "name": "Gireli, E. K. B.",
+     "me": false
+    },
+    {
+     "name": "Brandão, G. P.",
+     "me": false
+    },
+    {
+     "name": "Endringer, D. C.",
+     "me": false
+    },
+    {
+     "name": "Carneiro, M. T. W. D.",
+     "me": false
+    }
+   ],
+   "journal": "Food Analytical Methods",
+   "volume": "19",
+   "pages": "1–18",
+   "doi": "10.1007/s12161-026-03178-6",
+   "url": null,
+   "status": "published"
+  },
+  {
+   "year": 2026,
+   "title": "Protease production by Penicillium roqueforti through solid-state fermentation of ora-pro-nóbis (Pereskia aculeata): optimization and characterization",
+   "authors": [
+    {
+     "name": "da Silva, E. C.",
+     "me": false
+    },
+    {
+     "name": "Santos, M. P. F.",
+     "me": false
+    },
+    {
+     "name": "Teixeira, J. M.",
+     "me": false
+    },
+    {
+     "name": "Costa, F. S.",
+     "me": true
+    },
+    {
+     "name": "da Costa Ilhéu Fontan, R.",
+     "me": false
+    },
+    {
+     "name": "Veloso, C. M.",
+     "me": false
+    },
+    {
+     "name": "Franco, M.",
+     "me": false
+    },
+    {
+     "name": "Bonomo, R. C. F.",
+     "me": false
+    }
+   ],
+   "journal": "Bioresource Technology Reports",
+   "volume": "34",
+   "pages": "102663",
+   "doi": "10.1016/j.biteb.2026.102663",
+   "url": null,
+   "status": "published"
+  },
+  {
+   "year": 2026,
+   "title": "Recent advances in sample preparation for the determination of mineral oil saturated (MOSH) and aromatic hydrocarbons (MOAH) in food matrices",
+   "authors": [
+    {
+     "name": "Jano, A.",
+     "me": false
+    },
+    {
+     "name": "Ares, A. M.",
+     "me": false
+    },
+    {
+     "name": "Costa, F. S.",
+     "me": true
+    },
+    {
+     "name": "Custodio-Mendoza, J. A.",
+     "me": false
+    },
+    {
+     "name": "Bernal, J.",
+     "me": false
+    },
+    {
+     "name": "Fuente-Ballesteros, A.",
+     "me": false
+    }
+   ],
+   "journal": "Microchemical Journal",
+   "volume": "225",
+   "pages": "118083",
+   "doi": "10.1016/j.microc.2026.118083",
+   "url": null,
+   "status": "published"
+  },
+  {
+   "year": 2026,
+   "title": "Salivary copper as a screening tool for pediatric Wilson's disease: A pilot study",
+   "authors": [
+    {
+     "name": "Morais, G. F.",
+     "me": false
+    },
+    {
+     "name": "Kalinowski, F. C. M.",
+     "me": false
+    },
+    {
+     "name": "Coutinho, L.",
+     "me": false
+    },
+    {
+     "name": "Bonilha, P. A. A. M.",
+     "me": false
+    },
+    {
+     "name": "de Souza, V. C.",
+     "me": false
+    },
+    {
+     "name": "Brandão, I.",
+     "me": false
+    },
+    {
+     "name": "Costa, F. S.",
+     "me": true
+    },
+    {
+     "name": "Amaral, C. D. B.",
+     "me": false
+    },
+    {
+     "name": "Betini, B. G.",
+     "me": false
+    },
+    {
+     "name": "Barbosa, E. R.",
+     "me": false
+    },
+    {
+     "name": "Teive, H. A. G.",
+     "me": false
+    }
+   ],
+   "journal": "Parkinsonism & Related Disorders",
+   "volume": "151",
+   "pages": "108948",
+   "doi": "10.1016/j.parkreldis.2026.108948",
+   "url": null,
+   "status": "published"
+  },
+  {
+   "year": 2026,
+   "title": "Solid-State Fermentation of Green Coconut Husk by <i>Penicillium roqueforti</i> for the Production of a Halotolerant Xylanase",
+   "authors": [
+    {
+     "name": "Carvalho, M. S.",
+     "me": false
+    },
+    {
+     "name": "Pimentel, A. B.",
+     "me": false
+    },
+    {
+     "name": "S. S. Quinto, A.",
+     "me": false
+    },
+    {
+     "name": "Jesus, G. L.",
+     "me": false
+    },
+    {
+     "name": "Santo, E. L. E.",
+     "me": false
+    },
+    {
+     "name": "Costa, F. S.",
+     "me": true
+    },
+    {
+     "name": "Emmerich, I. T.",
+     "me": false
+    },
+    {
+     "name": "Silva, J. J.",
+     "me": false
+    },
+    {
+     "name": "Silva, G. J.",
+     "me": false
+    },
+    {
+     "name": "Vieira, I. R. A. S.",
+     "me": false
+    },
+    {
+     "name": "Tavares, I. M. C.",
+     "me": false
+    },
+    {
+     "name": "Franco, M.",
+     "me": false
+    }
+   ],
+   "journal": "ACS Omega",
+   "volume": "11",
+   "pages": "27862–27874",
+   "doi": "10.1021/acsomega.5c10884",
+   "url": null,
+   "status": "published"
+  },
+  {
+   "year": 2025,
+   "title": "An eco-friendly method using NADES as catalyst in the derivatization of ammonia for air quality determination",
+   "authors": [
+    {
+     "name": "Vela, H. S.",
+     "me": false
+    },
+    {
+     "name": "Dolatto, R. G.",
+     "me": false
+    },
+    {
+     "name": "Moreira, L. S.",
+     "me": false
+    },
+    {
+     "name": "Costa, F. S.",
+     "me": true
+    },
+    {
+     "name": "Amaral, C. D. B.",
+     "me": false
+    },
+    {
+     "name": "Grassi, M. T.",
+     "me": false
+    }
+   ],
+   "journal": "Microchemical Journal",
+   "volume": "212",
+   "pages": "113307",
+   "doi": "10.1016/j.microc.2025.113307",
+   "url": null,
+   "status": "published"
+  },
+  {
+   "year": 2025,
+   "title": "Ecological risk assessment and application of a preliminary mitigation strategy for the remediation of potentially toxic elements (PTEs) in a southeastern Brazilian watershed (São Carlos, SP, Brazil)",
+   "authors": [
+    {
+     "name": "Neris, J. B.",
+     "me": false
+    },
+    {
+     "name": "Costa, F. S.",
+     "me": true
+    },
+    {
+     "name": "Costa, J. A. S.",
+     "me": false
+    },
+    {
+     "name": "Paranhos, C. M.",
+     "me": false
+    }
+   ],
+   "journal": "Environmental Monitoring and Assessment",
+   "volume": "197",
+   "pages": "1034",
+   "doi": "10.1007/s10661-025-14479-4",
+   "url": null,
+   "status": "published"
+  },
+  {
+   "year": 2025,
+   "title": "Effects of photobiomodulation and bethanechol chloride treatment on salivary composition and flow rate in head and neck cancer patients undergoing radiotherapy: longitudinal interventional experimental clinical study",
+   "authors": [
+    {
+     "name": "Schepanski, N.",
+     "me": false
+    },
+    {
+     "name": "da Silva Liebl, B. M.",
+     "me": false
+    },
+    {
+     "name": "Mendes, R. T.",
+     "me": false
+    },
+    {
+     "name": "Costa, F. S.",
+     "me": true
+    },
+    {
+     "name": "Amaral, C. D. B.",
+     "me": false
+    },
+    {
+     "name": "Machado, R. C.",
+     "me": false
+    },
+    {
+     "name": "Nogueira, A. R. A.",
+     "me": false
+    },
+    {
+     "name": "Sassi, L. M.",
+     "me": false
+    },
+    {
+     "name": "de Araujo, M. R.",
+     "me": false
+    }
+   ],
+   "journal": "Supportive Care in Cancer",
+   "volume": "33",
+   "pages": "113",
+   "doi": "10.1007/s00520-024-09120-y",
+   "url": null,
+   "status": "published"
+  },
+  {
+   "year": 2025,
+   "title": "Enhancing circular economy: eco-friendly starch extraction and modification using fungal crude enzymatic extract from cocoa shell waste",
+   "authors": [
+    {
+     "name": "dos Santos Reis, N.",
+     "me": false
+    },
+    {
+     "name": "Sampaio, I. C. F.",
+     "me": false
+    },
+    {
+     "name": "Oliveira, P. C.",
+     "me": false
+    },
+    {
+     "name": "Costa, F. S.",
+     "me": true
+    },
+    {
+     "name": "de Paulo Veloso, A.",
+     "me": false
+    },
+    {
+     "name": "de Carvalho Tavares, I. M.",
+     "me": false
+    },
+    {
+     "name": "Ruiz, H. A.",
+     "me": false
+    },
+    {
+     "name": "de Jesus, G. L. S.",
+     "me": false
+    },
+    {
+     "name": "de Moura, I. V. L.",
+     "me": false
+    },
+    {
+     "name": "dos Anjos, P. N. M.",
+     "me": false
+    },
+    {
+     "name": "Franco, M.",
+     "me": false
+    }
+   ],
+   "journal": "Biomass Conversion and Biorefinery",
+   "volume": "15",
+   "pages": "28405–28417",
+   "doi": "10.1007/s13399-024-05849-y",
+   "url": null,
+   "status": "published"
+  },
+  {
+   "year": 2025,
+   "title": "Enzymatic blend containing β-glucosidase from Penicillium roqueforti ATCC 10110 grown on cocoa pod husk: Characterization and utilization in rice husk saccharification",
+   "authors": [
+    {
+     "name": "Chaves, J. M. S.",
+     "me": false
+    },
+    {
+     "name": "Sampaio, I. C. F.",
+     "me": false
+    },
+    {
+     "name": "Silva, F. N.",
+     "me": false
+    },
+    {
+     "name": "de Oliveira Sena, L.",
+     "me": false
+    },
+    {
+     "name": "Costa, F. S.",
+     "me": true
+    },
+    {
+     "name": "Ribeiro, T. A.",
+     "me": false
+    },
+    {
+     "name": "de Carvalho Tavares, I. M.",
+     "me": false
+    },
+    {
+     "name": "Emmerich, I. T.",
+     "me": false
+    },
+    {
+     "name": "Mendes, M. C.",
+     "me": false
+    },
+    {
+     "name": "Irfan, M.",
+     "me": false
+    },
+    {
+     "name": "Franco, M.",
+     "me": false
+    },
+    {
+     "name": "de Oliveira, J. R.",
+     "me": false
+    }
+   ],
+   "journal": "Journal of the Indian Chemical Society",
+   "volume": "102",
+   "pages": "101551",
+   "doi": "10.1016/j.jics.2024.101551",
+   "url": null,
+   "status": "published"
+  },
+  {
+   "year": 2025,
+   "title": "Exploring β-mannanase by Penicillium roqueforti ATCC 10110 on cocoa bean shell, tamarind peel, and ora-pro-nobis for enhanced saccharification processes",
+   "authors": [
+    {
+     "name": "de Oliveira Sena, L.",
+     "me": false
+    },
+    {
+     "name": "Silva, F. N.",
+     "me": false
+    },
+    {
+     "name": "Sampaio, I. C. F.",
+     "me": false
+    },
+    {
+     "name": "de Jesus Silva, G.",
+     "me": false
+    },
+    {
+     "name": "Chaves, J. M. S.",
+     "me": false
+    },
+    {
+     "name": "Ribeiro, T. A.",
+     "me": false
+    },
+    {
+     "name": "de Jesus, G. L. S.",
+     "me": false
+    },
+    {
+     "name": "de Moura, I. V. L.",
+     "me": false
+    },
+    {
+     "name": "dos Anjos, P. N. M.",
+     "me": false
+    },
+    {
+     "name": "Costa, F. S.",
+     "me": true
+    },
+    {
+     "name": "Irfan, M.",
+     "me": false
+    },
+    {
+     "name": "Salay, L. C.",
+     "me": false
+    },
+    {
+     "name": "Franco, M.",
+     "me": false
+    }
+   ],
+   "journal": "3 Biotech",
+   "volume": "15",
+   "pages": "441",
+   "doi": "10.1007/s13205-025-04595-w",
+   "url": null,
+   "status": "published"
+  },
+  {
+   "year": 2025,
+   "title": "Green extraction using natural deep eutectic solvents for determination of As, Cd, and Pb in plant and food matrices by ICP-MS",
+   "authors": [
+    {
+     "name": "Brito, T. A.",
+     "me": false
+    },
+    {
+     "name": "Costa, F. S.",
+     "me": true
+    },
+    {
+     "name": "Oliveira, R. C.",
+     "me": false
+    },
+    {
+     "name": "Amaral, C. D. B.",
+     "me": false
+    },
+    {
+     "name": "Labuto, G.",
+     "me": false
+    },
+    {
+     "name": "Gonzalez, M. H.",
+     "me": false
+    }
+   ],
+   "journal": "Food Chemistry",
+   "volume": "464",
+   "pages": "141922",
+   "doi": "10.1016/j.foodchem.2024.141922",
+   "url": null,
+   "status": "published"
+  },
+  {
+   "year": 2025,
+   "title": "Improving the extraction yield of essential oil from <i>Pimenta dioica</i> (L.) Merr. using <i>Aspergillus niger</i> ATCC 1004 enzyme blend",
+   "authors": [
+    {
+     "name": "Tavares, I. M. C.",
+     "me": false
+    },
+    {
+     "name": "Santos, R. R. C.",
+     "me": false
+    },
+    {
+     "name": "Costa, F. S.",
+     "me": true
+    },
+    {
+     "name": "Jesus, G. L. S.",
+     "me": false
+    },
+    {
+     "name": "Sanches, A.",
+     "me": false
+    },
+    {
+     "name": "Silva, F. N.",
+     "me": false
+    },
+    {
+     "name": "Irfan, M.",
+     "me": false
+    },
+    {
+     "name": "Oliveira, R. A.",
+     "me": false
+    },
+    {
+     "name": "Franco, M.",
+     "me": false
+    }
+   ],
+   "journal": "Biotechnology and Applied Biochemistry",
+   "volume": "72",
+   "pages": "225–236",
+   "doi": "10.1002/bab.2658",
+   "url": null,
+   "status": "published"
+  },
+  {
+   "year": 2025,
+   "title": "Interpretating SPR-Derived Reaction Kinetics via Self-Organizing Maps for Diagnostic Applications",
+   "authors": [
+    {
+     "name": "Volpe, J.",
+     "me": false
+    },
+    {
+     "name": "Costa, F. S.",
+     "me": true
+    },
+    {
+     "name": "Sachuk, B.",
+     "me": false
+    },
+    {
+     "name": "Camilo, I.",
+     "me": false
+    },
+    {
+     "name": "Faria, A.",
+     "me": false
+    },
+    {
+     "name": "de Andrade, H. M.",
+     "me": false
+    },
+    {
+     "name": "Silva, S. M.",
+     "me": false
+    },
+    {
+     "name": "Souto, D.",
+     "me": false
+    }
+   ],
+   "journal": "ACS Sensors",
+   "volume": "10",
+   "pages": "8129–8139",
+   "doi": "10.1021/acssensors.5c03250",
+   "url": null,
+   "status": "published"
+  },
+  {
+   "year": 2025,
+   "title": "Sustainable Sugar Syrup Production from Rice Husk Using <i>Aspergillus niger</i> Carbohydrase",
+   "authors": [
+    {
+     "name": "Silva, F. N.",
+     "me": false
+    },
+    {
+     "name": "Sampaio, I. C. F.",
+     "me": false
+    },
+    {
+     "name": "Chaves, J. M. S.",
+     "me": false
+    },
+    {
+     "name": "Sena, L. O.",
+     "me": false
+    },
+    {
+     "name": "Emmerich, I. T.",
+     "me": false
+    },
+    {
+     "name": "Jesus, G. L. S.",
+     "me": false
+    },
+    {
+     "name": "Costa, F. S.",
+     "me": true
+    },
+    {
+     "name": "Mendes, A. A.",
+     "me": false
+    },
+    {
+     "name": "dos Santos, J. B.",
+     "me": false
+    },
+    {
+     "name": "Moura, I. V. L.",
+     "me": false
+    },
+    {
+     "name": "Tavares, I. M. C.",
+     "me": false
+    },
+    {
+     "name": "Irfan, M.",
+     "me": false
+    },
+    {
+     "name": "Franco, M.",
+     "me": false
+    }
+   ],
+   "journal": "ACS Omega",
+   "volume": "10",
+   "pages": "32161–32173",
+   "doi": "10.1021/acsomega.5c03929",
+   "url": null,
+   "status": "published"
+  },
+  {
+   "year": 2025,
+   "title": "Unlocking xylan's potential: Coffee husk-derived xylanolytic blend for sustainable bioprocessing",
+   "authors": [
+    {
+     "name": "Ribeiro, T. A.",
+     "me": false
+    },
+    {
+     "name": "Sampaio, I. C. F.",
+     "me": false
+    },
+    {
+     "name": "de Carvalho Tavares, I. M.",
+     "me": false
+    },
+    {
+     "name": "de Moura, I. V. L.",
+     "me": false
+    },
+    {
+     "name": "Silva, F. N.",
+     "me": false
+    },
+    {
+     "name": "de Oliveira Sena, L.",
+     "me": false
+    },
+    {
+     "name": "Costa, F. S.",
+     "me": true
+    },
+    {
+     "name": "de Jesus, G. L. S.",
+     "me": false
+    },
+    {
+     "name": "Emmerich, I. T.",
+     "me": false
+    },
+    {
+     "name": "Cezar, K. S.",
+     "me": false
+    },
+    {
+     "name": "Irfan, M.",
+     "me": false
+    },
+    {
+     "name": "Franco, M.",
+     "me": false
+    }
+   ],
+   "journal": "Biomass Conversion and Biorefinery",
+   "volume": "15",
+   "pages": "8203–8219",
+   "doi": "10.1007/s13399-024-06150-8",
+   "url": null,
+   "status": "published"
+  },
+  {
+   "year": 2025,
+   "title": "Valorization of agri-food by-products for laccase oxidative multienzyme extract production and dye degradation: A sustainable biodegradation approach",
+   "authors": [
+    {
+     "name": "Santos da Silva Quinto, A.",
+     "me": false
+    },
+    {
+     "name": "Fontes Sampaio, I. C.",
+     "me": false
+    },
+    {
+     "name": "Silva de Carvalho, M.",
+     "me": false
+    },
+    {
+     "name": "Cézar, K. S.",
+     "me": false
+    },
+    {
+     "name": "Silva, F. N.",
+     "me": false
+    },
+    {
+     "name": "Costa, F. S.",
+     "me": true
+    },
+    {
+     "name": "da Silva Souza, M.",
+     "me": false
+    },
+    {
+     "name": "Pimentel, A. B.",
+     "me": false
+    },
+    {
+     "name": "Maria de Carvalho Tavares, I.",
+     "me": false
+    },
+    {
+     "name": "Nascimento, N. A.",
+     "me": false
+    },
+    {
+     "name": "Santana, E. C.",
+     "me": false
+    },
+    {
+     "name": "Lima, M. D.",
+     "me": false
+    },
+    {
+     "name": "Irfan, M.",
+     "me": false
+    },
+    {
+     "name": "Franco, M.",
+     "me": false
+    }
+   ],
+   "journal": "Journal of the Indian Chemical Society",
+   "volume": "102",
+   "pages": "101717",
+   "doi": "10.1016/j.jics.2025.101717",
+   "url": null,
+   "status": "published"
+  },
+  {
+   "year": 2024,
+   "title": "A greenness evaluation of deep eutectic solvents-based conventional extraction methods for elemental determination by spectrometry techniques",
+   "authors": [
+    {
+     "name": "Costa, F. S.",
+     "me": true
+    },
+    {
+     "name": "Moreira, L. S.",
+     "me": false
+    },
+    {
+     "name": "da Silva, E. G. P.",
+     "me": false
+    },
+    {
+     "name": "Gonzalez, M. H.",
+     "me": false
+    },
+    {
+     "name": "Amaral, C. D. B.",
+     "me": false
+    }
+   ],
+   "journal": "TrAC Trends in Analytical Chemistry",
+   "volume": "174",
+   "pages": "117677",
+   "doi": "10.1016/j.trac.2024.117677",
+   "url": null,
+   "status": "published"
+  },
+  {
+   "year": 2024,
+   "title": "Evaluation of photobiomodulation therapy (PBMT) on salivary flow and composition in head and neck cancer patients undergoing radiation therapy",
+   "authors": [
+    {
+     "name": "Schepanski, N.",
+     "me": false
+    },
+    {
+     "name": "Costa, F. S.",
+     "me": true
+    },
+    {
+     "name": "Machado, E. F. M.",
+     "me": false
+    },
+    {
+     "name": "Pacheco, M. N.",
+     "me": false
+    },
+    {
+     "name": "Amaral, C. D. B.",
+     "me": false
+    },
+    {
+     "name": "Machado, R. C.",
+     "me": false
+    },
+    {
+     "name": "Nogueira, A. R. A.",
+     "me": false
+    },
+    {
+     "name": "Brancher, J. A.",
+     "me": false
+    },
+    {
+     "name": "Sassi, L. M.",
+     "me": false
+    },
+    {
+     "name": "de Araujo, M. R.",
+     "me": false
+    }
+   ],
+   "journal": "Oral Surgery, Oral Medicine, Oral Pathology and Oral Radiology",
+   "volume": "137",
+   "pages": "253–263",
+   "doi": "10.1016/j.oooo.2023.11.007",
+   "url": null,
+   "status": "published"
+  },
+  {
+   "year": 2024,
+   "title": "Microwave-assisted extraction based on emulsion breaking with natural deep eutectic solvent for vegetable oil sample preparation prior to elemental determination by ICP OES",
+   "authors": [
+    {
+     "name": "Costa, F. S.",
+     "me": true
+    },
+    {
+     "name": "Moreira, L. S.",
+     "me": false
+    },
+    {
+     "name": "Ludovico, L. L.",
+     "me": false
+    },
+    {
+     "name": "Volpe, J.",
+     "me": false
+    },
+    {
+     "name": "de Oliveira, A. C.",
+     "me": false
+    },
+    {
+     "name": "dos Santos, M. P.",
+     "me": false
+    },
+    {
+     "name": "da Silva, E. G. P.",
+     "me": false
+    },
+    {
+     "name": "Souto, D. E. P.",
+     "me": false
+    },
+    {
+     "name": "Grassi, M. T.",
+     "me": false
+    },
+    {
+     "name": "Gonzalez, M. H.",
+     "me": false
+    },
+    {
+     "name": "Amaral, C. D. B.",
+     "me": false
+    }
+   ],
+   "journal": "Talanta",
+   "volume": "266",
+   "pages": "125108",
+   "doi": "10.1016/j.talanta.2023.125108",
+   "url": null,
+   "status": "published"
+  },
+  {
+   "year": 2024,
+   "title": "Optimization of enzymatic saccharification of industrial wastes using a thermostable and halotolerant endoglucanase through Box-Behnken experimental design",
+   "authors": [
+    {
+     "name": "Santos Gomes, M. M. O.",
+     "me": false
+    },
+    {
+     "name": "Nicodemos, I. S.",
+     "me": false
+    },
+    {
+     "name": "Costa Silva, M.",
+     "me": false
+    },
+    {
+     "name": "Santos, D. M. R. C.",
+     "me": false
+    },
+    {
+     "name": "Santos Costa, F.",
+     "me": true
+    },
+    {
+     "name": "Franco, M.",
+     "me": false
+    },
+    {
+     "name": "Pereira, H. J. V.",
+     "me": false
+    }
+   ],
+   "journal": "Preparative Biochemistry & Biotechnology",
+   "volume": "54",
+   "pages": "1–11",
+   "doi": "10.1080/10826068.2023.2201936",
+   "url": null,
+   "status": "published"
+  },
+  {
+   "year": 2024,
+   "title": "Synthetic peptides-based SPR biosensor evaluation towards canine Visceral leishmaniasis diagnosis: A simple and effective approach",
+   "authors": [
+    {
+     "name": "Volpe, J.",
+     "me": false
+    },
+    {
+     "name": "Parchen, G. P.",
+     "me": false
+    },
+    {
+     "name": "Costa, F. S.",
+     "me": true
+    },
+    {
+     "name": "Silva, A. S.",
+     "me": false
+    },
+    {
+     "name": "Andrade, H. M.",
+     "me": false
+    },
+    {
+     "name": "Amaral, C. D. B.",
+     "me": false
+    },
+    {
+     "name": "Silva, S. M.",
+     "me": false
+    },
+    {
+     "name": "Kubota, L. T.",
+     "me": false
+    },
+    {
+     "name": "E. P. Souto, D.",
+     "me": false
+    }
+   ],
+   "journal": "Microchemical Journal",
+   "volume": "203",
+   "pages": "110844",
+   "doi": null,
+   "url": "https://www.sciencedirect.com/science/article/pii/S0026265X24009561",
+   "status": "published"
+  },
+  {
+   "year": 2023,
+   "title": "Application of Chemometric Methods for the Optimization Secretion of Xylanase by Aspergillus oryzae in Solid State Fermentation and Its Application in the Saccharification of Agro-industrial Waste",
+   "authors": [
+    {
+     "name": "de Carvalho, M. S.",
+     "me": false
+    },
+    {
+     "name": "de Menezes, L. H. S.",
+     "me": false
+    },
+    {
+     "name": "Pimentel, A. B.",
+     "me": false
+    },
+    {
+     "name": "Costa, F. S.",
+     "me": true
+    },
+    {
+     "name": "Oliveira, P. C.",
+     "me": false
+    },
+    {
+     "name": "dos Santos, M. M. O.",
+     "me": false
+    },
+    {
+     "name": "de Carvalho Tavares, I. M.",
+     "me": false
+    },
+    {
+     "name": "Bilal, M.",
+     "me": false
+    },
+    {
+     "name": "Dias, J. C. T.",
+     "me": false
+    },
+    {
+     "name": "de Oliveira, J. R.",
+     "me": false
+    },
+    {
+     "name": "Franco, M.",
+     "me": false
+    }
+   ],
+   "journal": "Waste and Biomass Valorization",
+   "volume": "14",
+   "pages": "3183–3193",
+   "doi": "10.1007/s12649-022-01832-8",
+   "url": null,
+   "status": "published"
+  },
+  {
+   "year": 2023,
+   "title": "Elevated salivary copper concentration in patients with Wilson's disease",
+   "authors": [
+    {
+     "name": "Bonilha, P. Á. A. M.",
+     "me": false
+    },
+    {
+     "name": "Souza, V. C.",
+     "me": false
+    },
+    {
+     "name": "Brandão, I.",
+     "me": false
+    },
+    {
+     "name": "Costa, F. S.",
+     "me": true
+    },
+    {
+     "name": "Amaral, C. D. B.",
+     "me": false
+    },
+    {
+     "name": "Betini, B. G.",
+     "me": false
+    },
+    {
+     "name": "Barbosa, E. R.",
+     "me": false
+    },
+    {
+     "name": "Teive, H. A. G.",
+     "me": false
+    }
+   ],
+   "journal": "Parkinsonism & Related Disorders",
+   "volume": "116",
+   "pages": "105893",
+   "doi": "10.1016/j.parkreldis.2023.105893",
+   "url": null,
+   "status": "published"
+  },
+  {
+   "year": 2023,
+   "title": "Green approaches with amino acids-based deep eutectic solvents (AADES) for determining As in medicinal herbs by ICP-MS",
+   "authors": [
+    {
+     "name": "Guimarães, T. G. S.",
+     "me": false
+    },
+    {
+     "name": "Costa, F. S.",
+     "me": true
+    },
+    {
+     "name": "Menezes, I. M. N. R.",
+     "me": false
+    },
+    {
+     "name": "Santana, A. P. R.",
+     "me": false
+    },
+    {
+     "name": "Andrade, D. F.",
+     "me": false
+    },
+    {
+     "name": "Oliveira, A.",
+     "me": false
+    },
+    {
+     "name": "Amaral, C. D. B.",
+     "me": false
+    },
+    {
+     "name": "Gonzalez, M. H.",
+     "me": false
+    }
+   ],
+   "journal": "Journal of Molecular Liquids",
+   "volume": "381",
+   "pages": "121801",
+   "doi": "10.1016/j.molliq.2023.121801",
+   "url": null,
+   "status": "published"
+  },
+  {
+   "year": 2023,
+   "title": "Removal of carbamazepine from water using mixed matrix membranes (MMMs) based on polyethersulfone and mesomaterials",
+   "authors": [
+    {
+     "name": "Neris, J. B.",
+     "me": false
+    },
+    {
+     "name": "Costa, J. A. S.",
+     "me": false
+    },
+    {
+     "name": "Grosseli, G. M.",
+     "me": false
+    },
+    {
+     "name": "Costa, F. S.",
+     "me": true
+    },
+    {
+     "name": "Paranhos, C. M.",
+     "me": false
+    }
+   ],
+   "journal": "Reactive & Functional Polymers",
+   "volume": "186",
+   "pages": "105566",
+   "doi": "10.1016/j.reactfunctpolym.2023.105566",
+   "url": null,
+   "status": "published"
+  },
+  {
+   "year": 2023,
+   "title": "The improvement of guava (<i>Psidium guajava</i>) juice quality using crude multi-enzymatic extracts obtained from yeasts",
+   "authors": [
+    {
+     "name": "Santana, M. L.",
+     "me": false
+    },
+    {
+     "name": "Tavares, I. M. C.",
+     "me": false
+    },
+    {
+     "name": "Costa, F. S.",
+     "me": true
+    },
+    {
+     "name": "Teshima, E.",
+     "me": false
+    },
+    {
+     "name": "de Sena, A. R.",
+     "me": false
+    },
+    {
+     "name": "Franco, M.",
+     "me": false
+    },
+    {
+     "name": "de Assis, S. A.",
+     "me": false
+    }
+   ],
+   "journal": "Biotechnology and Applied Biochemistry",
+   "volume": "70",
+   "pages": "1310–1319",
+   "doi": "10.1002/bab.2441",
+   "url": null,
+   "status": "published"
+  },
+  {
+   "year": 2022,
+   "title": "Enhanced extraction of arsenic and cadmium from environmental samples using a natural deep eutectic solvent and determination by inductively coupled plasma mass spectrometry",
+   "authors": [
+    {
+     "name": "Moreira, L. S.",
+     "me": false
+    },
+    {
+     "name": "Santana, A. P. R.",
+     "me": false
+    },
+    {
+     "name": "Costa, F. S.",
+     "me": true
+    },
+    {
+     "name": "Vera, J. B.",
+     "me": false
+    },
+    {
+     "name": "Gonzalez, M. H.",
+     "me": false
+    },
+    {
+     "name": "da Silva, E. G. P.",
+     "me": false
+    },
+    {
+     "name": "Amaral, C. D. B.",
+     "me": false
+    }
+   ],
+   "journal": "International Journal of Environmental Analytical Chemistry",
+   "volume": "102",
+   "pages": "7100–7111",
+   "doi": "10.1080/03067319.2020.1826460",
+   "url": null,
+   "status": "published"
+  },
+  {
+   "year": 2022,
+   "title": "Evaluation of Trace Elements in Marine Biological Tissues by Graphite Furnace Atomic Absorption Spectrometry After Sample Treatment with Formic Acid",
+   "authors": [
+    {
+     "name": "Moreira, L. S.",
+     "me": false
+    },
+    {
+     "name": "Costa, F. S.",
+     "me": true
+    },
+    {
+     "name": "Lidorio, R. C.",
+     "me": false
+    },
+    {
+     "name": "Toledo, L. W. S.",
+     "me": false
+    },
+    {
+     "name": "Oliveira, A.",
+     "me": false
+    },
+    {
+     "name": "Gonzalez, M. H.",
+     "me": false
+    },
+    {
+     "name": "da Silva, E. G. P.",
+     "me": false
+    },
+    {
+     "name": "Amaral, C. D. B.",
+     "me": false
+    }
+   ],
+   "journal": "Food Analytical Methods",
+   "volume": "15",
+   "pages": "1687–1694",
+   "doi": "10.1007/s12161-022-02240-3",
+   "url": null,
+   "status": "published"
+  },
+  {
+   "year": 2022,
+   "title": "Natural deep eutectic solvent-based microwave-assisted extraction in the medicinal herb sample preparation and elemental determination by ICP OES",
+   "authors": [
+    {
+     "name": "Costa, F. S.",
+     "me": true
+    },
+    {
+     "name": "Moreira, L. S.",
+     "me": false
+    },
+    {
+     "name": "da Silva, A. M.",
+     "me": false
+    },
+    {
+     "name": "Silva, R. J.",
+     "me": false
+    },
+    {
+     "name": "dos Santos, M. P.",
+     "me": false
+    },
+    {
+     "name": "Paranhos da Silva, E. G.",
+     "me": false
+    },
+    {
+     "name": "Grassi, M. T.",
+     "me": false
+    },
+    {
+     "name": "Gonzalez, M. H.",
+     "me": false
+    },
+    {
+     "name": "Amaral, C. D. B.",
+     "me": false
+    }
+   ],
+   "journal": "Journal of Food Composition and Analysis",
+   "volume": "109",
+   "pages": "104510",
+   "doi": null,
+   "url": "https://www.sciencedirect.com/science/article/pii/S0889157522001284",
+   "status": "published"
+  },
+  {
+   "year": 2022,
+   "title": "Thermostable trypsin-like protease by <i>Penicillium roqueforti</i> secreted in cocoa shell fermentation: Production optimization, characterization, and application in milk clotting",
+   "authors": [
+    {
+     "name": "Nogueira, L. S.",
+     "me": false
+    },
+    {
+     "name": "Tavares, I. M. C.",
+     "me": false
+    },
+    {
+     "name": "Santana, N. B.",
+     "me": false
+    },
+    {
+     "name": "Ferrão, S. P. B.",
+     "me": false
+    },
+    {
+     "name": "Teixeira, J. M.",
+     "me": false
+    },
+    {
+     "name": "Costa, F. S.",
+     "me": true
+    },
+    {
+     "name": "Silva, T. P.",
+     "me": false
+    },
+    {
+     "name": "Pereira, H. J. V.",
+     "me": false
+    },
+    {
+     "name": "Irfan, M.",
+     "me": false
+    },
+    {
+     "name": "Bilal, M.",
+     "me": false
+    },
+    {
+     "name": "de Oliveira, J. R.",
+     "me": false
+    },
+    {
+     "name": "Franco, M.",
+     "me": false
+    }
+   ],
+   "journal": "Biotechnology and Applied Biochemistry",
+   "volume": "69",
+   "pages": "2069–2080",
+   "doi": "10.1002/bab.2268",
+   "url": null,
+   "status": "published"
+  },
+  {
+   "year": 2022,
+   "title": "Unsupervised pattern-recognition and radiological risk assessment applied to the evaluation of behavior of rare earth elements, Th, and U in monazite sand",
+   "authors": [
+    {
+     "name": "Wyatt, N. L. P.",
+     "me": false
+    },
+    {
+     "name": "Costa, V. C.",
+     "me": false
+    },
+    {
+     "name": "de Souza, J. R.",
+     "me": false
+    },
+    {
+     "name": "Ferde, M.",
+     "me": false
+    },
+    {
+     "name": "Costa, F. S.",
+     "me": true
+    },
+    {
+     "name": "Neris, J. B.",
+     "me": false
+    },
+    {
+     "name": "Brandão, G. P.",
+     "me": false
+    },
+    {
+     "name": "Guedes, W. N.",
+     "me": false
+    },
+    {
+     "name": "Carneiro, M. T. W. D.",
+     "me": false
+    }
+   ],
+   "journal": "Environmental Science and Pollution Research",
+   "volume": "29",
+   "pages": "83417–83425",
+   "doi": "10.1007/s11356-022-21632-w",
+   "url": null,
+   "status": "published"
+  },
+  {
+   "year": 2021,
+   "title": "Application of Mixture Design and Kohonen Neural Network for Determination of Macro- and Microelement in Mullet (<i>Mugil cephalus</i>) by MIP OES",
+   "authors": [
+    {
+     "name": "Pacheco, C. S. V.",
+     "me": false
+    },
+    {
+     "name": "Costa, F. S.",
+     "me": true
+    },
+    {
+     "name": "Guedes, W. N.",
+     "me": false
+    },
+    {
+     "name": "de Jesus, M. S.",
+     "me": false
+    },
+    {
+     "name": "das Chagas, T. P.",
+     "me": false
+    },
+    {
+     "name": "dos Santos, A. M. P.",
+     "me": false
+    },
+    {
+     "name": "de Castro Lima, D.",
+     "me": false
+    },
+    {
+     "name": "da Silva, E. G. P.",
+     "me": false
+    }
+   ],
+   "journal": "Food Analytical Methods",
+   "volume": "14",
+   "pages": "1239–1249",
+   "doi": "10.1007/s12161-021-01969-7",
+   "url": null,
+   "status": "published"
+  },
+  {
+   "year": 2021,
+   "title": "Chemical characterization of the soils from black pepper (<i>Piper nigrum</i> L.) cultivation using principal component analysis (PCA) and Kohonen self-organizing map (KSOM)",
+   "authors": [
+    {
+     "name": "Ferde, M.",
+     "me": false
+    },
+    {
+     "name": "Costa, V. C.",
+     "me": false
+    },
+    {
+     "name": "Mantovaneli, R.",
+     "me": false
+    },
+    {
+     "name": "Wyatt, N. L. P.",
+     "me": false
+    },
+    {
+     "name": "Rocha, P. A.",
+     "me": false
+    },
+    {
+     "name": "Brandão, G. P.",
+     "me": false
+    },
+    {
+     "name": "de Souza, J. R.",
+     "me": false
+    },
+    {
+     "name": "Gimenes, A. C. W.",
+     "me": false
+    },
+    {
+     "name": "Costa, F. S.",
+     "me": true
+    },
+    {
+     "name": "da Silva, E. G. P.",
+     "me": false
+    },
+    {
+     "name": "Carneiro, M. T. W. D.",
+     "me": false
+    }
+   ],
+   "journal": "Journal of Soils and Sediments",
+   "volume": "21",
+   "pages": "3098–3106",
+   "doi": "10.1007/s11368-021-02966-3",
+   "url": null,
+   "status": "published"
+  },
+  {
+   "year": 2021,
+   "title": "Clarification of tangerine juice using cellulases from <i>Pseudoyma</i> sp.",
+   "authors": [
+    {
+     "name": "Santana, M. L.",
+     "me": false
+    },
+    {
+     "name": "Bispo, J. A. C.",
+     "me": false
+    },
+    {
+     "name": "de Sena, A. R.",
+     "me": false
+    },
+    {
+     "name": "Teshima, E.",
+     "me": false
+    },
+    {
+     "name": "de Brito, A. R.",
+     "me": false
+    },
+    {
+     "name": "Costa, F. S.",
+     "me": true
+    },
+    {
+     "name": "Franco, M.",
+     "me": false
+    },
+    {
+     "name": "de Assis, S. A.",
+     "me": false
+    }
+   ],
+   "journal": "Journal of Food Science and Technology",
+   "volume": "58",
+   "pages": "44–51",
+   "doi": "10.1007/s13197-020-04511-5",
+   "url": null,
+   "status": "published"
+  },
+  {
+   "year": 2021,
+   "title": "Multivariate optimization of ultrasound-assisted liquid-liquid microextraction based on two solvents for cadmium preconcentration prior to determination by flame atomic absorption spectrometry",
+   "authors": [
+    {
+     "name": "Ferreira, V. J.",
+     "me": false
+    },
+    {
+     "name": "de Jesus, M. S.",
+     "me": false
+    },
+    {
+     "name": "dos Santos, M. C.",
+     "me": false
+    },
+    {
+     "name": "Guedes, W. N.",
+     "me": false
+    },
+    {
+     "name": "Lemos, V. A.",
+     "me": false
+    },
+    {
+     "name": "Novaes, C. G.",
+     "me": false
+    },
+    {
+     "name": "Costa, F. S.",
+     "me": true
+    },
+    {
+     "name": "Pacheco, C. S. V.",
+     "me": false
+    },
+    {
+     "name": "da Silva, E. G. P.",
+     "me": false
+    },
+    {
+     "name": "Amorim, F. A. C.",
+     "me": false
+    }
+   ],
+   "journal": "Analytical Methods",
+   "volume": "13",
+   "pages": "267–273",
+   "doi": "10.1039/D0AY02030C",
+   "url": null,
+   "status": "published"
+  },
+  {
+   "year": 2021,
+   "title": "Oral health, organic and inorganic saliva composition of men with Schizophrenia: Case-control study",
+   "authors": [
+    {
+     "name": "Rosa, L. K.",
+     "me": false
+    },
+    {
+     "name": "Costa, F. S.",
+     "me": true
+    },
+    {
+     "name": "Hauagge, C. M.",
+     "me": false
+    },
+    {
+     "name": "Mobile, R. Z.",
+     "me": false
+    },
+    {
+     "name": "de Lima, A. A. S.",
+     "me": false
+    },
+    {
+     "name": "Amaral, C. D. B.",
+     "me": false
+    },
+    {
+     "name": "Machado, R. C.",
+     "me": false
+    },
+    {
+     "name": "Nogueira, A. R. A.",
+     "me": false
+    },
+    {
+     "name": "Brancher, J. A.",
+     "me": false
+    },
+    {
+     "name": "de Araujo, M. R.",
+     "me": false
+    }
+   ],
+   "journal": "Journal of Trace Elements in Medicine and Biology",
+   "volume": "66",
+   "pages": "126743",
+   "doi": null,
+   "url": "https://www.sciencedirect.com/science/article/pii/S0946672X2100033X",
+   "status": "published"
+  },
+  {
+   "year": 2021,
+   "title": "Self-organizing map applied to the choice of internal standards for the determination of Cd, Pb, Sn, and platinum group elements by inductively coupled plasma mass spectrometry",
+   "authors": [
+    {
+     "name": "Moreira, L. S.",
+     "me": false
+    },
+    {
+     "name": "Costa, F. S.",
+     "me": true
+    },
+    {
+     "name": "Machado, R. C.",
+     "me": false
+    },
+    {
+     "name": "Nogueira, A. R. A.",
+     "me": false
+    },
+    {
+     "name": "Gonzalez, M. H.",
+     "me": false
+    },
+    {
+     "name": "da Silva, E. G. P.",
+     "me": false
+    },
+    {
+     "name": "Amaral, C. D. B.",
+     "me": false
+    }
+   ],
+   "journal": "Talanta",
+   "volume": "233",
+   "pages": "122534",
+   "doi": null,
+   "url": "https://www.sciencedirect.com/science/article/pii/S0039914021004550",
+   "status": "published"
+  },
+  {
+   "year": 2020,
+   "title": "Multivariate optimization of an ultrasound-assisted extraction procedure for the determination of Cu, Fe, Mn, and Zn in plant samples by flame atomic absorption spectrometry",
+   "authors": [
+    {
+     "name": "Costa, F. S.",
+     "me": true
+    },
+    {
+     "name": "Leal, R. V. P.",
+     "me": false
+    },
+    {
+     "name": "Pacheco, C. S. V.",
+     "me": false
+    },
+    {
+     "name": "Amorim, F. A. C.",
+     "me": false
+    },
+    {
+     "name": "de Jesus, R. M.",
+     "me": false
+    },
+    {
+     "name": "Santos, L. N.",
+     "me": false
+    },
+    {
+     "name": "da Silva, E. G. P.",
+     "me": false
+    }
+   ],
+   "journal": "Analytical Methods",
+   "volume": "12",
+   "pages": "2509–2516",
+   "doi": null,
+   "url": "https://pubs.rsc.org/ay/article-abstract/12/19/2509/673047/Multivariate-optimization-of-an-ultrasound",
+   "status": "published"
+  },
+  {
+   "year": 2020,
+   "title": "Recent trends of micro and nanostructured conducting polymers in health and environmental applications",
+   "authors": [
+    {
+     "name": "de Alvarenga, G.",
+     "me": false
+    },
+    {
+     "name": "Hryniewicz, B. M.",
+     "me": false
+    },
+    {
+     "name": "Jasper, I.",
+     "me": false
+    },
+    {
+     "name": "Silva, R. J.",
+     "me": false
+    },
+    {
+     "name": "Klobukoski, V.",
+     "me": false
+    },
+    {
+     "name": "Costa, F. S.",
+     "me": true
+    },
+    {
+     "name": "Cervantes, T. N. M.",
+     "me": false
+    },
+    {
+     "name": "Amaral, C. D. B.",
+     "me": false
+    },
+    {
+     "name": "Schneider, J. T.",
+     "me": false
+    },
+    {
+     "name": "Bach-Toledo, L.",
+     "me": false
+    },
+    {
+     "name": "Peralta-Zamora, P.",
+     "me": false
+    },
+    {
+     "name": "Valerio, T. L.",
+     "me": false
+    },
+    {
+     "name": "Soares, F.",
+     "me": false
+    },
+    {
+     "name": "Silva, B. J. G.",
+     "me": false
+    },
+    {
+     "name": "Vidotti, M.",
+     "me": false
+    }
+   ],
+   "journal": "Journal of Electroanalytical Chemistry",
+   "volume": "879",
+   "pages": "114754",
+   "doi": null,
+   "url": "https://www.sciencedirect.com/science/article/pii/S1572665720309826",
+   "status": "published"
+  }
+ ],
+ "magazine": [
+  {
+   "year": 2026,
+   "title": "Food Chromatography Approaches for Mineral Oil Hydrocarbon Analysis",
+   "authors": [
+    {
+     "name": "Jano, A.",
+     "me": false
+    },
+    {
+     "name": "Ares, A. M.",
+     "me": false
+    },
+    {
+     "name": "Costa, F. S.",
+     "me": true
+    },
+    {
+     "name": "Custodio-Mendoza, J. A.",
+     "me": false
+    },
+    {
+     "name": "Bernal, J.",
+     "me": false
+    },
+    {
+     "name": "Fuente-Ballesteros, A.",
+     "me": false
+    }
+   ],
+   "journal": "LCGC International",
+   "url": "https://www.chromatographyonline.com/view/food-chromatography-approaches-mineral-oil-hydrocarbon-analysis"
+  }
+ ],
+ "events_full": [
+  {
+   "year": 2023,
+   "title": "Otimização da produção de β-mananase produzida por fermentação em estado sólido utilizando o fungo Penicillium roqueforti ATCC 10110",
+   "authors": [
+    {
+     "name": "Sena, L. O.",
+     "me": false
+    },
+    {
+     "name": "Silva, F. N.",
+     "me": false
+    },
+    {
+     "name": "Jesus, G. L. S.",
+     "me": false
+    },
+    {
+     "name": "Mota, M. S.",
+     "me": false
+    },
+    {
+     "name": "Costa, F. S.",
+     "me": true
+    },
+    {
+     "name": "Franco, M.",
+     "me": false
+    }
+   ],
+   "event": "5ª Semana de Engenharia de Alimentos e 3° Simpósio da Pós-Graduação em Engenharia e Ciência de Alimentos da UESB",
+   "city": "Itapetinga",
+   "url": null
+  },
+  {
+   "year": 2022,
+   "title": "Planejamento Doehlert para otimização das condições fermentativas na produção de endoglucanase por Aspergillus niger",
+   "authors": [
+    {
+     "name": "Silva, F. N.",
+     "me": false
+    },
+    {
+     "name": "Ribeiro, D. S.",
+     "me": false
+    },
+    {
+     "name": "Jesus, G. L. S.",
+     "me": false
+    },
+    {
+     "name": "Emmerich, I. T.",
+     "me": false
+    },
+    {
+     "name": "Costa, F. S.",
+     "me": true
+    },
+    {
+     "name": "Franco, M.",
+     "me": false
+    }
+   ],
+   "event": "II Simpósio Nacional sobre Inovação em Engenharia e Ciência de Alimentos",
+   "city": "Vitória da Conquista",
+   "url": "https://www.even3.com.br/Anais/ineca2022/587042-PLANEJAMENTO-DOEHLERT-PARA-OTIMIZACAO-DAS-CONDICOES-FERMENTATIVAS-NA-PRODUCAO-DE-ENDOGLUCANASE-POR-ASPERGILLUS-NI"
+  },
+  {
+   "year": 2021,
+   "title": "Produção de Xilanase por fermentação em estado sólido utilizando Asperillus oryzae em mistura de resíduos agroindustriais",
+   "authors": [
+    {
+     "name": "de Carvalho, M. S.",
+     "me": false
+    },
+    {
+     "name": "Costa, F. S.",
+     "me": true
+    },
+    {
+     "name": "Pimentel, A. B.",
+     "me": false
+    },
+    {
+     "name": "Oliveira, P. C.",
+     "me": false
+    },
+    {
+     "name": "Tavares, I. M. C.",
+     "me": false
+    },
+    {
+     "name": "Franco, M.",
+     "me": false
+    }
+   ],
+   "event": "II Simpósio da Pós-graduação em Engenharia e Ciência de Alimentos",
+   "city": "Itapetinga",
+   "url": "https://www.even3.com.br/anais/simpecal2021/411116-producao-de-xilanase-por-fermentacao-em-estado-solido-utilizando-asperillus-oryzae-em-mistura-de-residuos-agroind/"
+  },
+  {
+   "year": 2019,
+   "title": "Aplicação de redes neurais artificiais do tipo mapas auto-organizáveis para classificação dos teores de macro e microelementos em amostras de peixes (Mugil cephalus)",
+   "authors": [
+    {
+     "name": "Pacheco, C. S. V.",
+     "me": false
+    },
+    {
+     "name": "Santos, K. M.",
+     "me": false
+    },
+    {
+     "name": "Costa, F. S.",
+     "me": true
+    },
+    {
+     "name": "Leal, R. V. P.",
+     "me": false
+    },
+    {
+     "name": "Santos, L. N.",
+     "me": false
+    },
+    {
+     "name": "Silva, E. G. P.",
+     "me": false
+    },
+    {
+     "name": "Chagas, T. P.",
+     "me": false
+    },
+    {
+     "name": "Santos, A. M. P.",
+     "me": false
+    }
+   ],
+   "event": "X Workshop de Quimiometria",
+   "city": "Salvador",
+   "url": null
+  }
+ ],
+ "events_abstract": [
+  {
+   "year": 2025,
+   "title": "Alternative Green Solvents in Sample Preparation methods for Lead Extraction from Electronic Waste",
+   "authors": [
+    {
+     "name": "Costa, F. S.",
+     "me": true
+    },
+    {
+     "name": "Moreira, L. S.",
+     "me": false
+    },
+    {
+     "name": "Müller, M. O.",
+     "me": false
+    },
+    {
+     "name": "Araujo, M. E. M.",
+     "me": false
+    },
+    {
+     "name": "Gonzalez, M. H.",
+     "me": false
+    },
+    {
+     "name": "Amaral, C. D. B.",
+     "me": false
+    }
+   ],
+   "event": "4th International Meeting on Deep Eutectic Systems",
+   "city": "Lisboa",
+   "url": "https://www.dessolutio.com/wp-content/uploads/2025/06/BoA_4IMDES_June2025_Final.pdf"
+  },
+  {
+   "year": 2025,
+   "title": "Determination of Lead in Alcoholic Beverages by FAAS: A Sustainable Approach with Hydrophobic Deep Eutectic Solvents",
+   "authors": [
+    {
+     "name": "Muller, M. O.",
+     "me": false
+    },
+    {
+     "name": "Sorrilha, I. H.",
+     "me": false
+    },
+    {
+     "name": "Costa, F. S.",
+     "me": true
+    },
+    {
+     "name": "Gonzalez, M. H.",
+     "me": false
+    },
+    {
+     "name": "Amaral, C. D. B.",
+     "me": false
+    }
+   ],
+   "event": "48ª Reunião Anual da Sociedade Brasileira de Química",
+   "city": "Campinas",
+   "url": "https://www.sbq.org.br/48ra/"
+  },
+  {
+   "year": 2025,
+   "title": "Elemental Characterization of Brewery Waste Using Deep Eutectic Solvent and Determination by Spectrometry Techniques",
+   "authors": [
+    {
+     "name": "Alves, A. L.",
+     "me": false
+    },
+    {
+     "name": "Muller, M. O.",
+     "me": false
+    },
+    {
+     "name": "Costa, F. S.",
+     "me": true
+    },
+    {
+     "name": "Gonzalez, M. H.",
+     "me": false
+    },
+    {
+     "name": "Amaral, C. D. B.",
+     "me": false
+    }
+   ],
+   "event": "48ª Reunião Anual da Sociedade Brasileira de Química",
+   "city": "Campinas",
+   "url": "https://www.sbq.org.br/48ra/"
+  },
+  {
+   "year": 2025,
+   "title": "Enhancing canine visceral leishmaniasis diagnosis using plasmonic immunosensors: incorporating artificial bioreceptors and artificial intelligence",
+   "authors": [
+    {
+     "name": "Volpe, J.",
+     "me": false
+    },
+    {
+     "name": "Costa, F. S.",
+     "me": true
+    },
+    {
+     "name": "Camilo, I. C.",
+     "me": false
+    },
+    {
+     "name": "Silva, B. S.",
+     "me": false
+    },
+    {
+     "name": "Souto, D. E. P.",
+     "me": false
+    }
+   ],
+   "event": "48ª Reunião Anual da Sociedade Brasileira de Química",
+   "city": "Campinas",
+   "url": "https://www.sbq.org.br/48ra/"
+  },
+  {
+   "year": 2025,
+   "title": "Solid-Phase Extraction with Alginate-Encapsulated Hydrophobic Deep Eutectic Solvent for Copper Pre-Concentration in Saliva Prior to FAAS analysis",
+   "authors": [
+    {
+     "name": "Araujo, M. E. M.",
+     "me": false
+    },
+    {
+     "name": "Muller, M. O.",
+     "me": false
+    },
+    {
+     "name": "Costa, F. S.",
+     "me": true
+    },
+    {
+     "name": "Gonzalez, M. H.",
+     "me": false
+    },
+    {
+     "name": "Amaral, C. D. B.",
+     "me": false
+    }
+   ],
+   "event": "48ª Reunião Anual da Sociedade Brasileira de Química",
+   "city": "Campinas",
+   "url": "https://www.sbq.org.br/48ra/"
+  },
+  {
+   "year": 2025,
+   "title": "Sustainable Strategy Using Deep Eutectic Solvents for Multi-Matrix Sample Analysis by MIP-OES",
+   "authors": [
+    {
+     "name": "Costa, F. S.",
+     "me": true
+    },
+    {
+     "name": "Banhos, S. G.",
+     "me": false
+    },
+    {
+     "name": "Tozo, M. L. L.",
+     "me": false
+    },
+    {
+     "name": "Araujo, M. E. M.",
+     "me": false
+    },
+    {
+     "name": "Muller, M. O.",
+     "me": false
+    },
+    {
+     "name": "Gonzalez, M. H.",
+     "me": false
+    },
+    {
+     "name": "Amaral, C. D. B.",
+     "me": false
+    },
+    {
+     "name": "Nogueira, A. R. A.",
+     "me": false
+    }
+   ],
+   "event": "48ª Reunião Anual da Sociedade Brasileira de Química",
+   "city": "Campinas",
+   "url": "https://www.sbq.org.br/48ra/"
+  },
+  {
+   "year": 2024,
+   "title": "Disposable inserts: analytical frequency optimization and applicability in microwave radiation-assisted acid digestion of different matrices",
+   "authors": [
+    {
+     "name": "Banhos, S. G.",
+     "me": false
+    },
+    {
+     "name": "Tozo, M. L. L.",
+     "me": false
+    },
+    {
+     "name": "Garcia Filho, A.",
+     "me": false
+    },
+    {
+     "name": "Costa, F. S.",
+     "me": true
+    },
+    {
+     "name": "Pereira Filho, E. R.",
+     "me": false
+    },
+    {
+     "name": "Nogueira, A. R. A.",
+     "me": false
+    }
+   ],
+   "event": "21º Encontro Nacional de Química Analítica",
+   "city": "Belém",
+   "url": null
+  },
+  {
+   "year": 2024,
+   "title": "Encapsulation of Hydrophobic Deep Eutectic Solvent (HDES) in Alginate Beads: A Green Sorbent for Preconcentration of Inorganic Analytes",
+   "authors": [
+    {
+     "name": "Muller, M. O.",
+     "me": false
+    },
+    {
+     "name": "Costa, F. S.",
+     "me": true
+    },
+    {
+     "name": "Gonzalez, M. H.",
+     "me": false
+    },
+    {
+     "name": "Amaral, C. D. B.",
+     "me": false
+    }
+   ],
+   "event": "47ª Reunião Anual da Sociedade Brasileira de Química",
+   "city": "Águas de Lindóia",
+   "url": null
+  },
+  {
+   "year": 2024,
+   "title": "Encapsulation of Hydrophobic Deep Eutectic Solvent in Alginate for pre-concentration of copper in saliva samples prior to FAAS analysis",
+   "authors": [
+    {
+     "name": "Araujo, M. E. M.",
+     "me": false
+    },
+    {
+     "name": "Muller, M. O.",
+     "me": false
+    },
+    {
+     "name": "Costa, F. S.",
+     "me": true
+    },
+    {
+     "name": "Gonzalez, M. H.",
+     "me": false
+    },
+    {
+     "name": "Amaral, C. D. B.",
+     "me": false
+    }
+   ],
+   "event": "21º Encontro Nacional de Química Analítica",
+   "city": "Belém",
+   "url": null
+  },
+  {
+   "year": 2024,
+   "title": "Enhanced metal detection in fermented beverages by FAAS using Alginate encapsulated Hydrophobic Deep Eutectic Solvent",
+   "authors": [
+    {
+     "name": "Muller, M. O.",
+     "me": false
+    },
+    {
+     "name": "Araujo, M. E. M.",
+     "me": false
+    },
+    {
+     "name": "Costa, F. S.",
+     "me": true
+    },
+    {
+     "name": "Gonzalez, M. H.",
+     "me": false
+    },
+    {
+     "name": "Amaral, C. D. B.",
+     "me": false
+    }
+   ],
+   "event": "21º Encontro Nacional de Química Analítica",
+   "city": "Belém",
+   "url": null
+  },
+  {
+   "year": 2023,
+   "title": "A greener method for determination of arsenic and cadmium in soil by ICP-MS employing Deep Eutectic Solvents",
+   "authors": [
+    {
+     "name": "Ferreira, S. S.",
+     "me": false
+    },
+    {
+     "name": "Costa, F. S.",
+     "me": true
+    },
+    {
+     "name": "Guimaraes, T. G. S.",
+     "me": false
+    },
+    {
+     "name": "Amaral, C. D. B.",
+     "me": false
+    },
+    {
+     "name": "Gonzalez, M. H.",
+     "me": false
+    }
+   ],
+   "event": "16th Rio Symposium on Atomic Spectrometry",
+   "city": "Bento Gonçalves",
+   "url": "https://rsas-espeq.com.br/baixar-arquivo/documentosGerais/doc-8-18-231121_152542.pdf"
+  },
+  {
+   "year": 2023,
+   "title": "Análise da composição elementar do resíduo de disparo de arma de fogo nas mãos de atiradores",
+   "authors": [
+    {
+     "name": "de Oliveira, A. C.",
+     "me": false
+    },
+    {
+     "name": "Costa, F. S.",
+     "me": true
+    },
+    {
+     "name": "dos Santos, M. P.",
+     "me": false
+    },
+    {
+     "name": "Grassi, M. T.",
+     "me": false
+    },
+    {
+     "name": "Amaral, C. D. B.",
+     "me": false
+    }
+   ],
+   "event": "75ª Reunião Anual da SBPC",
+   "city": "Curitiba",
+   "url": null
+  },
+  {
+   "year": 2023,
+   "title": "Aplicação de métodos estatísticos na valorização de biomassa lignocelulósica proveniente da agroindústria na obtenção de bioproduto por meio da fermentação em estado sólido",
+   "authors": [
+    {
+     "name": "de Carvalho, M. S.",
+     "me": false
+    },
+    {
+     "name": "Quinto, A. S. S.",
+     "me": false
+    },
+    {
+     "name": "Pimentel, A. B.",
+     "me": false
+    },
+    {
+     "name": "Santana, E. C.",
+     "me": false
+    },
+    {
+     "name": "Costa, F. S.",
+     "me": true
+    },
+    {
+     "name": "Jesus, G. L. S.",
+     "me": false
+    },
+    {
+     "name": "Mendonca, A. T. L.",
+     "me": false
+    },
+    {
+     "name": "Tavares, I. M. C.",
+     "me": false
+    },
+    {
+     "name": "Franco, M.",
+     "me": false
+    }
+   ],
+   "event": "II Congreso Euroamericano de Procesos y Productos Alimentarios",
+   "city": "",
+   "url": "https://www.even3.com.br/anais/ceapa2023/731998-aplicacao-de-metodos-estatisticos-na-valorizacao-de-biomassa-lignocelulosica-proveniente-da-agroindustria-na-obte/"
+  },
+  {
+   "year": 2023,
+   "title": "Resíduos do processamento do (Theobroma cacao) como matéria prima para a produção de lacase por fermentação em estado sólido",
+   "authors": [
+    {
+     "name": "Pimentel, A. B.",
+     "me": false
+    },
+    {
+     "name": "Quinto, A. S. S.",
+     "me": false
+    },
+    {
+     "name": "de Carvalho, M. S.",
+     "me": false
+    },
+    {
+     "name": "Santana, E. C.",
+     "me": false
+    },
+    {
+     "name": "Costa, F. S.",
+     "me": true
+    },
+    {
+     "name": "Jesus, G. L. S.",
+     "me": false
+    },
+    {
+     "name": "Mendonca, A. T. L.",
+     "me": false
+    },
+    {
+     "name": "Jesus, B. L. S.",
+     "me": false
+    },
+    {
+     "name": "Tavares, I. M. C.",
+     "me": false
+    },
+    {
+     "name": "Franco, M.",
+     "me": false
+    }
+   ],
+   "event": "II Congreso Euroamericano de Procesos y Productos Alimentarios",
+   "city": "",
+   "url": "https://www.even3.com.br/anais/ceapa2023/731981-residuos-do-processamento-do-(theobroma-cacao)-como-materia-prima-para-a-producao-de-lacase-por-fermentacao-em-es/"
+  },
+  {
+   "year": 2023,
+   "title": "Self-organizing map and pollution indices for space-time patterns identification in a coastal ecosystem monitoring program",
+   "authors": [
+    {
+     "name": "Moreira, L. S.",
+     "me": false
+    },
+    {
+     "name": "Costa, F. S.",
+     "me": true
+    },
+    {
+     "name": "Zardini, L. B.",
+     "me": false
+    },
+    {
+     "name": "Gomes, L. D.",
+     "me": false
+    },
+    {
+     "name": "Ferrari, H. B.",
+     "me": false
+    },
+    {
+     "name": "Brandão, G. P.",
+     "me": false
+    },
+    {
+     "name": "Rodrigues Neto, R.",
+     "me": false
+    },
+    {
+     "name": "Carneiro, M. T. W. D.",
+     "me": false
+    }
+   ],
+   "event": "16th Rio Symposium on Atomic Spectrometry",
+   "city": "Bento Gonçalves",
+   "url": "https://rsas-espeq.com.br/baixar-arquivo/documentosGerais/doc-8-18-231121_152542.pdf"
+  },
+  {
+   "year": 2022,
+   "title": "A greener method for determination of As, Cd, and Pb in soil and plant tissue by ICP-MS employing NADES in sample preparation",
+   "authors": [
+    {
+     "name": "Ferreira, S. S.",
+     "me": false
+    },
+    {
+     "name": "Brito, T. A.",
+     "me": false
+    },
+    {
+     "name": "Costa, F. S.",
+     "me": true
+    },
+    {
+     "name": "Guimaraes, T. G. S.",
+     "me": false
+    },
+    {
+     "name": "Andrade, D. F.",
+     "me": false
+    },
+    {
+     "name": "Lamarca, R. S.",
+     "me": false
+    },
+    {
+     "name": "Oliveira, A.",
+     "me": false
+    },
+    {
+     "name": "Amaral, C. D. B.",
+     "me": false
+    },
+    {
+     "name": "Gonzalez, M. H.",
+     "me": false
+    }
+   ],
+   "event": "20th Brazilian Meeting on Analytical Chemistry and 8° Congresso Ibero-Americano de Química Analítica",
+   "city": "Bento Gonçalves",
+   "url": null
+  },
+  {
+   "year": 2022,
+   "title": "Microwave-assisted extraction induced by emulsion breaking based on NADES for elemental determination in Edible Oils by ICP OES",
+   "authors": [
+    {
+     "name": "Costa, F. S.",
+     "me": true
+    },
+    {
+     "name": "Ludovico, L. L.",
+     "me": false
+    },
+    {
+     "name": "Moreira, L. S.",
+     "me": false
+    },
+    {
+     "name": "Volpe, J.",
+     "me": false
+    },
+    {
+     "name": "dos Santos, M. P.",
+     "me": false
+    },
+    {
+     "name": "da Silva, E. G. P.",
+     "me": false
+    },
+    {
+     "name": "Amorim, F. A. C.",
+     "me": false
+    },
+    {
+     "name": "Grassi, M. T.",
+     "me": false
+    },
+    {
+     "name": "Gonzalez, M. H.",
+     "me": false
+    },
+    {
+     "name": "Amaral, C. D. B.",
+     "me": false
+    }
+   ],
+   "event": "20th Brazilian Meeting on Analytical Chemistry and 8° Congresso Ibero-Americano de Química Analítica",
+   "city": "Bento Gonçalves",
+   "url": null
+  },
+  {
+   "year": 2022,
+   "title": "Synthetic peptides-based SPR biosensors towards visceral leishmaniasis diagnosis",
+   "authors": [
+    {
+     "name": "Volpe, J.",
+     "me": false
+    },
+    {
+     "name": "Silva, A. S.",
+     "me": false
+    },
+    {
+     "name": "Costa, F. S.",
+     "me": true
+    },
+    {
+     "name": "Faria, A. R.",
+     "me": false
+    },
+    {
+     "name": "Andrade, H. M.",
+     "me": false
+    },
+    {
+     "name": "Souto, D. E. P.",
+     "me": false
+    }
+   ],
+   "event": "20th Brazilian Meeting on Analytical Chemistry and 8° Congresso Ibero-Americano de Química Analítica",
+   "city": "Bento Gonçalves",
+   "url": null
+  },
+  {
+   "year": 2021,
+   "title": "Produção de Xilanase por Fermentação em Estado Sólido utilizando Asperillus oryzae em mistura de resíduos agroindustriais",
+   "authors": [
+    {
+     "name": "de Carvalho, M. S.",
+     "me": false
+    },
+    {
+     "name": "Costa, F. S.",
+     "me": true
+    },
+    {
+     "name": "Pimentel, A. B.",
+     "me": false
+    },
+    {
+     "name": "Oliveira, P. C.",
+     "me": false
+    },
+    {
+     "name": "Tavares, I. M. C.",
+     "me": false
+    },
+    {
+     "name": "Franco, M.",
+     "me": false
+    }
+   ],
+   "event": "II Simpósio da Pós-Graduação em Engenharia e Ciência de Alimentos",
+   "city": "Itapetinga",
+   "url": null
+  },
+  {
+   "year": 2019,
+   "title": "Desenvolvimento de metodologia de extração assistida por ultrassom para determinação de metais em tecido vegetal coletado no estuário do Rio Cachoeira, Ilhéus--BA",
+   "authors": [
+    {
+     "name": "Leal, R. V. P.",
+     "me": false
+    },
+    {
+     "name": "Costa, F. S.",
+     "me": true
+    },
+    {
+     "name": "Fontes, A. S.",
+     "me": false
+    },
+    {
+     "name": "Pacheco, C. S. V.",
+     "me": false
+    },
+    {
+     "name": "Amorim, F. A. C.",
+     "me": false
+    },
+    {
+     "name": "Santos, L. N.",
+     "me": false
+    },
+    {
+     "name": "Silva, E. G. P.",
+     "me": false
+    }
+   ],
+   "event": "71ª Reunião Anual da SBPC",
+   "city": "Campo Grande",
+   "url": "http://reunioessbpc.org.br/campogrande/inscritos/resumos/3519_1d08d54613b295be16b3950b6f9788745.pdf"
+  },
+  {
+   "year": 2018,
+   "title": "Aplicação de matriz Doehlert na otimização da hidrólise do azeite de oliva por lipase de Candida rugosa imobilizada em Accurel MP 1000",
+   "authors": [
+    {
+     "name": "Soares, G. A.",
+     "me": false
+    },
+    {
+     "name": "Moreira, L. S.",
+     "me": false
+    },
+    {
+     "name": "Costa, F. S.",
+     "me": true
+    },
+    {
+     "name": "Pacheco, C. S. V.",
+     "me": false
+    },
+    {
+     "name": "Oliveira, J. R.",
+     "me": false
+    },
+    {
+     "name": "Franco, M.",
+     "me": false
+    }
+   ],
+   "event": "19º Encontro Nacional de Química Analítica e 7º Congresso Iberoamericano de Química Analítica",
+   "city": "Caldas Novas",
+   "url": "http://enqa2018.com.br/arquivo/ENQA2018_Anais.pdf"
+  },
+  {
+   "year": 2018,
+   "title": "Comparação de algoritmo híbrido e planejamento de mistura como estratégia de otimização no preparo de amostra",
+   "authors": [
+    {
+     "name": "Costa, F. S.",
+     "me": true
+    },
+    {
+     "name": "Carneiro, L. L.",
+     "me": false
+    },
+    {
+     "name": "Leal, R. V. P.",
+     "me": false
+    },
+    {
+     "name": "Pacheco, C. S. V.",
+     "me": false
+    },
+    {
+     "name": "Chagas, T. P.",
+     "me": false
+    },
+    {
+     "name": "Silva, E. G. P.",
+     "me": false
+    },
+    {
+     "name": "Santos, L. N.",
+     "me": false
+    }
+   ],
+   "event": "19º Encontro Nacional de Química Analítica e 7º Congresso Iberoamericano de Química Analítica",
+   "city": "Caldas Novas",
+   "url": "http://enqa2018.com.br/arquivo/ENQA2018_Anais.pdf"
+  },
+  {
+   "year": 2018,
+   "title": "Desenvolvimento de metodologia de extração assistida por ultrassom para determinação de Cu, Mn, Fe e Zn em material vegetal por F AAS",
+   "authors": [
+    {
+     "name": "Leal, R. V. P.",
+     "me": false
+    },
+    {
+     "name": "Costa, F. S.",
+     "me": true
+    },
+    {
+     "name": "Fontes, A. S.",
+     "me": false
+    },
+    {
+     "name": "Pacheco, C. S. V.",
+     "me": false
+    },
+    {
+     "name": "Silva, E. G. P.",
+     "me": false
+    },
+    {
+     "name": "Santos, L. N.",
+     "me": false
+    },
+    {
+     "name": "Amorim, F. A. C.",
+     "me": false
+    },
+    {
+     "name": "Jesus, R. M.",
+     "me": false
+    }
+   ],
+   "event": "19º Encontro Nacional de Química Analítica e 7º Congresso Iberoamericano de Química Analítica",
+   "city": "Caldas Novas",
+   "url": "http://enqa2018.com.br/arquivo/ENQA2018_Anais.pdf"
+  },
+  {
+   "year": 2018,
+   "title": "Desenvolvimento de metodologia de extração assistida por ultrassom para determinação de metais em tecido vegetal coletado no estuário do Rio Cachoeira, Ilhéus-BA",
+   "authors": [
+    {
+     "name": "Leal, R. V. P.",
+     "me": false
+    },
+    {
+     "name": "Carneiro, L. L.",
+     "me": false
+    },
+    {
+     "name": "Santos, K. M.",
+     "me": false
+    },
+    {
+     "name": "Costa, F. S.",
+     "me": true
+    },
+    {
+     "name": "Pacheco, C. S. V.",
+     "me": false
+    },
+    {
+     "name": "Jesus, R. M.",
+     "me": false
+    },
+    {
+     "name": "Santos, L. N.",
+     "me": false
+    },
+    {
+     "name": "Silva, E. G. P.",
+     "me": false
+    }
+   ],
+   "event": "5º Simpósio de Ensino, Extensão, Inovação, Pesquisa e Pós-Graduação 24º Seminário de Iniciação Científica",
+   "city": "Ilhéus",
+   "url": "http://propp.uesc.br/sisres/resumosanais8.php"
+  },
+  {
+   "year": 2018,
+   "title": "Emprego de algoritmo genético híbrido com rede neural (RNA-AG) para otimização da determinação do arsênio total por HG-MIP OES",
+   "authors": [
+    {
+     "name": "Pacheco, C. S. V.",
+     "me": false
+    },
+    {
+     "name": "Jesus, M. S.",
+     "me": false
+    },
+    {
+     "name": "Carneiro, L. L.",
+     "me": false
+    },
+    {
+     "name": "Santos, K. M.",
+     "me": false
+    },
+    {
+     "name": "Costa, F. S.",
+     "me": true
+    },
+    {
+     "name": "Lima, D. C.",
+     "me": false
+    },
+    {
+     "name": "Silva, E. G. P.",
+     "me": false
+    },
+    {
+     "name": "Santos, A. M. P.",
+     "me": false
+    }
+   ],
+   "event": "19º Encontro Nacional de Química Analítica e 7º Congresso Iberoamericano de Química Analítica",
+   "city": "Caldas Novas",
+   "url": "http://enqa2018.com.br/arquivo/ENQA2018_Anais.pdf"
+  },
+  {
+   "year": 2018,
+   "title": "Emprego do planejamento de misturas para a decomposição de amostras de chás",
+   "authors": [
+    {
+     "name": "Santos, K. M.",
+     "me": false
+    },
+    {
+     "name": "Pacheco, C. S. V.",
+     "me": false
+    },
+    {
+     "name": "Costa, F. S.",
+     "me": true
+    },
+    {
+     "name": "Amorim, F. A. C.",
+     "me": false
+    },
+    {
+     "name": "Santos, L. N.",
+     "me": false
+    },
+    {
+     "name": "Silva, E. G. P.",
+     "me": false
+    }
+   ],
+   "event": "19º Encontro Nacional de Química Analítica e 7º Congresso Iberoamericano de Química Analítica",
+   "city": "Caldas Novas",
+   "url": "http://enqa2018.com.br/arquivo/ENQA2018_Anais.pdf"
+  },
+  {
+   "year": 2018,
+   "title": "Microextração líquido-líquido dispersiva acoplado a separação em fase sólida para determinação em linha de cádmio por F AAS",
+   "authors": [
+    {
+     "name": "Fontes, A. S.",
+     "me": false
+    },
+    {
+     "name": "Mello, B. C.",
+     "me": false
+    },
+    {
+     "name": "Costa, F. S.",
+     "me": true
+    },
+    {
+     "name": "Silva, E. G. P.",
+     "me": false
+    },
+    {
+     "name": "Lima, D. C.",
+     "me": false
+    },
+    {
+     "name": "Amorim, F. A. C.",
+     "me": false
+    }
+   ],
+   "event": "19º Encontro Nacional de Química Analítica e 7º Congresso Iberoamericano de Química Analítica",
+   "city": "Caldas Novas",
+   "url": "http://enqa2018.com.br/arquivo/ENQA2018_Anais.pdf"
+  },
+  {
+   "year": 2018,
+   "title": "Modelagem e otimização de experimentos utilizando Clusterização fuzzy e algoritmos genéticos",
+   "authors": [
+    {
+     "name": "Carneiro, L. L.",
+     "me": false
+    },
+    {
+     "name": "Costa, F. S.",
+     "me": true
+    },
+    {
+     "name": "Leal, R. V. P.",
+     "me": false
+    },
+    {
+     "name": "Santos, K. M.",
+     "me": false
+    },
+    {
+     "name": "Pacheco, C. S. V.",
+     "me": false
+    },
+    {
+     "name": "Chagas, T. P.",
+     "me": false
+    },
+    {
+     "name": "Silva, E. G. P.",
+     "me": false
+    }
+   ],
+   "event": "5º Simpósio de Ensino, Extensão, Inovação, Pesquisa e Pós-Graduação 24º Seminário de Iniciação Científica",
+   "city": "Ilhéus",
+   "url": "http://propp.uesc.br/sisres/resumosanais8.php"
+  }
+ ],
+ "events_expanded": [
+  {
+   "year": 2023,
+   "title": "Otimização do processo fermentativo para produção de β-mananase utilizando Matriz Doehlert",
+   "authors": [
+    {
+     "name": "Sena, L. O.",
+     "me": false
+    },
+    {
+     "name": "Silva, F. N.",
+     "me": false
+    },
+    {
+     "name": "Jesus, G. L. S.",
+     "me": false
+    },
+    {
+     "name": "Mota, M. S.",
+     "me": false
+    },
+    {
+     "name": "Chaves, J. M. S.",
+     "me": false
+    },
+    {
+     "name": "Ribeiro, T. A.",
+     "me": false
+    },
+    {
+     "name": "Costa, F. S.",
+     "me": true
+    },
+    {
+     "name": "Franco, M.",
+     "me": false
+    }
+   ],
+   "event": "VII Semana Acadêmica de Engenharia de Alimentos (VII SEMEALI)",
+   "city": "Manaus",
+   "url": "https://www.even3.com.br/anais/vii-semeali/728498-otimizacao-do-processo-fermentativo-para-producao-de-?–mananase-utilizando-matriz-doehlert"
+  }
+ ]
 }

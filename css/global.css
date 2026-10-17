@@ -318,3 +318,23 @@ details.accordion .accordion-content { padding: 18px 20px 20px; border-top: 1px 
     .logo-img { height: 38px; }
     .header-content { gap: 8px; }
 }
+
+/* 12. Aviso de consentimento (cookies / Google Analytics) */
+/*****************************************************************/
+.consent { position: fixed; left: 0; right: 0; bottom: 0; z-index: var(--z-index-modal); padding: 12px 0 calc(12px + env(safe-area-inset-bottom)); background: var(--box-bg); border-top: 1px solid var(--border-color); box-shadow: 0 -10px 30px rgba(31, 45, 72, 0.14); }
+.consent[hidden] { display: none; }
+.consent__inner { display: flex; align-items: center; gap: 16px 28px; }
+.consent__text { flex: 1; font-size: 0.92rem; }
+.consent__text p { margin-bottom: 4px; line-height: 1.5; }
+.consent__title { font-weight: 800; color: var(--heading-strong); font-size: 1rem; }
+.consent__actions { display: flex; gap: 10px; flex-shrink: 0; }
+.consent__actions .btn { min-width: 112px; }
+body.has-consent { padding-bottom: 120px; }
+.link-btn { background: none; border: 0; padding: 0; font: inherit; font-weight: 500; color: var(--footer-text); cursor: pointer; }
+.link-btn:hover { color: var(--heading-strong); text-decoration: underline; }
+@media (max-width: 768px) {
+    .consent__inner { flex-direction: column; align-items: stretch; }
+    .consent__actions .btn { flex: 1; }
+    body.has-consent { padding-bottom: 230px; }
+}
+@media print { .consent { display: none !important; } }

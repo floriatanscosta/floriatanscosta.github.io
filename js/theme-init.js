@@ -1,4 +1,5 @@
-/* Aplica o tema antes da renderização para evitar o "piscar" de cor */
+/* Aplica o tema antes da renderização para evitar o "piscar" de cor.
+   Ordem: preferência salva > preferência do sistema operacional. */
 (function () {
   try {
     var t = localStorage.getItem('theme');

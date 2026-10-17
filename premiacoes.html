@@ -34,7 +34,6 @@
   <script src="/js/theme-init.js"></script>
   <link rel="stylesheet" href="/css/global.css?v=20261017">
   <link rel="stylesheet" href="/css/main.css?v=20261017">
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-0NDPRCLMYV"></script>
   <script src="/js/analytics.js" defer></script>
 </head>
 <body>
@@ -43,7 +42,7 @@
   <div class="container header-content">
     <a class="brand" href="/" aria-label="Floriatan Santos Costa — Início">
       <img src="/assets/logo.svg" alt="" class="logo-img" width="44" height="44">
-      <span class="site-title">Floriatan</span>
+      <span class="site-title">Floriatan Costa</span>
     </a>
     <nav class="site-nav" id="site-nav" aria-label="Navegação principal">
       <ul class="nav-content"><li><a href="/">Início</a></li><li><a href="/biografia">Biografia</a></li><li><a href="/experiencia">Experiência</a></li><li><a href="/publicacoes">Publicações</a></li><li><a href="/producao">Produção</a></li><li><a href="/premiacoes" aria-current="page">Premiações</a></li><li><a href="/contato">Contato</a></li></ul>
@@ -144,9 +143,21 @@
       <p class="footer-updated">Última atualização: <time datetime="2026-10-17">17/10/2026</time></p>
     </div>
     <ul class="footer-profiles"><li><a href="https://orcid.org/0000-0001-7766-2860" class="footer-profile" target="_blank" rel="noopener noreferrer"><img src="/assets/icons/orcid.svg" alt="ORCID" width="22" height="22"><span class="visually-hidden"> (abre em nova aba)</span></a></li><li><a href="https://scholar.google.com/citations?user=EbyxxAoAAAAJ" class="footer-profile" target="_blank" rel="noopener noreferrer"><img src="/assets/icons/academico.svg" alt="Google Scholar" width="22" height="22"><span class="visually-hidden"> (abre em nova aba)</span></a></li><li><a href="https://www.researchgate.net/profile/Floriatan-Costa" class="footer-profile" target="_blank" rel="noopener noreferrer"><img src="/assets/icons/rg.svg" alt="ResearchGate" width="22" height="22"><span class="visually-hidden"> (abre em nova aba)</span></a></li><li><a href="http://lattes.cnpq.br/0287106268880389" class="footer-profile" target="_blank" rel="noopener noreferrer"><img src="/assets/icons/lattes.svg" alt="Lattes" width="22" height="22"><span class="visually-hidden"> (abre em nova aba)</span></a></li><li><a href="https://www.linkedin.com/in/floriatanscosta/" class="footer-profile" target="_blank" rel="noopener noreferrer"><img src="/assets/icons/linkedin.svg" alt="LinkedIn" width="22" height="22"><span class="visually-hidden"> (abre em nova aba)</span></a></li></ul>
-    <nav aria-label="Links do rodapé"><ul class="footer-right"><li><a href="/metricas">Métricas</a></li><li><a href="/sobre">Sobre</a></li><li><a href="/design">Design</a></li><li><a href="/contato">Contato</a></li><li><a href="/web/">Ferramentas</a></li></ul></nav>
+    <nav aria-label="Links do rodapé"><ul class="footer-right"><li><a href="/metricas">Métricas</a></li><li><a href="/sobre">Sobre</a></li><li><a href="/design">Design</a></li><li><a href="/contato">Contato</a></li><li><a href="/web/">Ferramentas</a></li><li><button type="button" class="link-btn" data-consent-open>Preferências de cookies</button></li></ul></nav>
   </div>
 </footer>
+<div class="consent" id="consent" role="region" aria-labelledby="consent-title" data-ga-id="G-0NDPRCLMYV" hidden>
+  <div class="container consent__inner">
+    <div class="consent__text">
+      <p id="consent-title" class="consent__title">Privacidade e cookies</p>
+      <p>Gostaria de usar o Google Analytics para gerar estatísticas anônimas e agregadas de visitas. Os cookies de análise só são ativados se você aceitar; o site funciona normalmente se recusar. <a class="inline-link" href="/sobre#privacidade">Saiba mais</a></p>
+    </div>
+    <div class="consent__actions">
+      <button type="button" class="btn btn-outline" data-consent="denied">Recusar</button>
+      <button type="button" class="btn" data-consent="granted">Aceitar</button>
+    </div>
+  </div>
+</div>
 <script src="/js/app.js" defer></script>
 </body>
 </html>
