@@ -1,6 +1,6 @@
 # Floriatan Santos Costa — Portfólio Acadêmico
 
-Site pessoal e acadêmico publicado em **[floriatan.com.br](https://floriatan.com.br/)** (GitHub Pages, domínio próprio via `CNAME`).
+Site pessoal e acadêmico publicado em **[floriatan.com.br](https://floriatan.com.br/)**.
 Reúne trajetória, produção científica, prêmios, métricas e contato de Floriatan Santos Costa, pesquisador de pós-doutorado em química analítica, em **português, inglês e espanhol**.
 
 ## Estrutura
