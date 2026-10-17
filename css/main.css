@@ -219,8 +219,8 @@ cite { font-style: italic; }
 /*****************************************************************/
 .award-list { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; }
 .award { display: flex; gap: 18px; align-items: flex-start; padding: 22px; background: var(--box-bg); border: 1px solid var(--border-color); border-radius: var(--radius-lg); box-shadow: var(--shadow-sm); }
-.award-year { flex-shrink: 0; display: inline-flex; align-items: center; justify-content: center; width: 72px; height: 72px; border-radius: 18px; font-size: 1.15rem; font-weight: 900; color: #fff; background: linear-gradient(135deg, #5a729e, #666fe4 60%, #d13c86); box-shadow: var(--shadow-md); }
-.award-kind { display: flex; align-items: center; gap: 8px; font-weight: 800; color: var(--heading-strong); font-size: 1.05rem; margin-bottom: 4px; }
+.award-year { flex-shrink: 0; display: inline-flex; align-items: center; justify-content: center; width: 72px; height: 72px; border-radius: 15px; font-size: 1.25rem; font-weight: 900; color: #fff; background: linear-gradient(101deg, #5a729e, #236085 60%, #216589); box-shadow: var(--shadow-md); }
+.award-kind { display: flex; align-items: center; gap: 8px; font-weight: 900; color: var(--heading-strong); font-size: 1.25rem; margin-bottom: 4px; }
 .award-kind .icon { color: #c48a12; }
 .award-name { display: block; font-weight: 600; margin-bottom: 4px; }
 .award-where { color: var(--text-muted); font-size: 0.95rem; }
