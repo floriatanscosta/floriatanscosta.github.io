@@ -1,13 +1,14 @@
 # Configuração do Jekyll usada pelo GitHub Pages.
-# As páginas são HTML estático gerado por _src/build.py; o Jekyll apenas as copia.
 
 url: "https://floriatan.com.br"
 baseurl: ""
 title: "Floriatan Santos Costa"
 description: "Pesquisador de Pós-Doutorado em Química Analítica"
 author: "Floriatan Santos Costa"
+links:
+    - "https://www.linkedin.com/in/floriatanscosta/"
 lang: "pt-BR"
-timezone: "Europe/Madrid"
+timezone: "America/Sao_Paulo"
 
 # Pastas e arquivos iniciados por "_" ou "." (como _src/) já são ignorados pelo Jekyll.
 exclude:
