@@ -1,6 +1,7 @@
 User-agent: *
 Allow: /
 Disallow: /_includes/
+Disallow: /_src/
 Disallow: /test.html
 Disallow: /exemplos.html
 Disallow: /template.html
