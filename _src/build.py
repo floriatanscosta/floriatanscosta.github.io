@@ -439,7 +439,7 @@ def b_contact(lang):
 
 
 def b_latest(lang):
-    return b_articles(lang, limit=3)
+    return b_articles(lang, limit=2)
 
 
 def b_current(lang):
