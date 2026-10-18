@@ -2,7 +2,7 @@
 
 Registro do que já foi feito no site e do que ainda pode ser implementado. Nada aqui foi inventado: os itens de dados dependem de conferência com as fontes originais.
 
-_Atualizado em 18/10/2026._
+_Atualizado em 18/10/2026. O histórico detalhado das alterações está em `CHANGELOG.md`._
 
 ## Progresso geral
 

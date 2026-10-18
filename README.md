@@ -19,7 +19,7 @@ Reúne trajetória, produção científica, prêmios, métricas e contato de Flo
 /js/design.js           botões "Copiar" da paleta da página Design
 /js/vida.js             animações e galeria da página Vida de cientista
 /js/analytics.js        aviso de consentimento + Google Analytics (só carrega após "Aceitar")
-/assets/                logo, favicon, ícones (sprite.svg), fontes Roboto, imagens e logos (svg/)
+/assets/                logo, favicon, ícones (sprite.svg), fontes Roboto, imagens e logos (svg/ e img/logos/)
 /sitemap.xml            gerado automaticamente, com alternativas hreflang
 /_src/                  FONTE do site (não é publicada — o Jekyll ignora pastas iniciadas por "_")
    build.py             gerador (Python 3, apenas biblioteca padrão)
@@ -50,6 +50,7 @@ Páginas de desenvolvimento (não indexadas, fora do menu): `guia.html`, `design
 > Não edite diretamente os `.html` da raiz, `/en` ou `/es`: eles são sobrescritos pelo gerador.
 
 ### Convenções
+- **Logos de instituições** (`"logo"` em `cv.json`): arquivos `.svg` ficam em `assets/svg/`; logos em imagem (`.webp`/`.png`, para SVGs muito pesados) ficam em `assets/img/logos/`. Basta informar o nome do arquivo, por exemplo `"logo": "uesc.webp"`.
 - **Títulos de publicações, periódicos, eventos, livros e instituições ficam no idioma original** em todas as versões; DOI e autores também não são traduzidos.
 - Um artigo novo em `publications.json` precisa de `year`, `title`, `journal` e `doi` (ou `url`, quando não houver DOI); para artigo aceito, acrescente `"status": "accepted"`. Coloque-o no início da lista `articles` (os primeiros aparecem em "Publicações recentes"). Exemplo:
   ```json
