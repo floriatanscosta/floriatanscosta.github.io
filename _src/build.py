@@ -124,17 +124,11 @@ def b_articles(lang, limit=None):
 
 
 def article_item(a, lang, compact=False):
-    vol = ''
-    if a.get('volume'):
-        vol = f', v. {esc(a["volume"])}'
-        if a.get('pages'):
-            vol += f', {esc(a["pages"])}'
+    # Exibe apenas título, periódico e DOI/link (sem autores, volume, páginas ou ano)
     badge = f' <span class="badge badge--accent">{T("pub.accepted", lang)}</span>' if a.get('status') == 'accepted' else ''
-    authors = '' if compact else f'<p class="pub-authors">{authors_html(a["authors"])}</p>'
     return f'''<li class="pub-item" data-pub-item>
   <p class="pub-title" lang="{a.get('lang', 'en')}">{a["title"]}</p>
-  {authors}
-  <p class="pub-meta"><cite>{esc(a["journal"])}</cite>{vol}, {a["year"]}{badge}</p>
+  <p class="pub-meta"><cite>{esc(a["journal"])}</cite>{badge}</p>
   {doi_or_link(a, lang)}
 </li>'''
 
@@ -143,8 +137,7 @@ def b_magazine(lang):
     out = ['<ol class="pub-list">']
     for a in PUB['magazine']:
         out.append(f'''<li class="pub-item"><p class="pub-title" lang="en">{a["title"]}</p>
-<p class="pub-authors">{authors_html(a["authors"])}</p>
-<p class="pub-meta"><cite>{esc(a["journal"])}</cite>, {a["year"]}</p>{doi_or_link(a, lang)}</li>''')
+<p class="pub-meta"><cite>{esc(a["journal"])}</cite></p>{doi_or_link(a, lang)}</li>''')
     out.append('</ol>')
     return '\n'.join(out)
 
@@ -159,7 +152,6 @@ def event_list(items, lang):
     for a in items:
         place = f', {esc(a["city"])}' if a.get('city') else ''
         out.append(f'''<li class="pub-item"><p class="pub-title" lang="{guess_lang(a["title"])}">{a["title"]}</p>
-<p class="pub-authors">{authors_html(a["authors"])}</p>
 <p class="pub-meta">{esc(a["event"])}{place}, {a["year"]}</p>{doi_or_link(a, lang)}</li>''')
     out.append('</ol>')
     return '\n'.join(out)
@@ -191,7 +183,6 @@ def b_chapters(lang):
             ident = doi_or_link({'url': c['url']}, lang)
         isbn = f' ISBN {esc(c["isbn"])}.' if c.get('isbn') else ''
         out.append(f'''<li class="pub-item"><p class="pub-title" lang="{guess_lang(c["title"])}">{c["title"]}</p>
-<p class="pub-authors">{c["authors"]}</p>
 <p class="pub-meta">{T("prod.in", lang)}: <cite>{esc(c["book"])}</cite>. {esc(c["place"])}: {esc(c["publisher"])}, {c["year"]}, p. {esc(c["pages"])}.{isbn}</p>{ident}</li>''')
     out.append('</ol>')
     return '\n'.join(out)
@@ -223,7 +214,7 @@ def b_technical(lang):
         title = esc(t['title'])
         if t.get('url'):
             title = ext_link(t['url'], title, 'inline-link')
-        rows.append(f'<span class="item-year">{t["year"]}</span><span><span lang="pt">{title}</span><span class="item-sub">{T("prod.kind_" + t["kind"], lang)} · {t["authors"]}</span></span>')
+        rows.append(f'<span class="item-year">{t["year"]}</span><span><span lang="pt">{title}</span><span class="item-sub">{T("prod.kind_" + t["kind"], lang)}</span></span>')
     return simple_list(rows)
 
 
@@ -568,7 +559,6 @@ def footer(page, lang):
   <div class="container footer-content">
     <div class="footer-left">
       <p>© <span data-year>{BUILD_DATE.year}</span> {CV["person"]["name"]}. {T("footer.rights", lang)}</p>
-      <p class="footer-updated">{T("footer.updated", lang)}: {b_updated(lang)}</p>
     </div>
     <ul class="footer-profiles">{profiles}</ul>
     <nav aria-label="{T("a11y.footer_nav", lang)}"><ul class="footer-right">{links}</ul></nav>

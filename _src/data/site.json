@@ -178,9 +178,9 @@
         "es": "Filtrar publicaciones"
       },
       "filter_placeholder": {
-        "pt": "Filtrar por título, autor, periódico ou ano…",
-        "en": "Filter by title, author, journal or year…",
-        "es": "Filtrar por título, autor, revista o año…"
+        "pt": "Filtrar por título, periódico ou ano…",
+        "en": "Filter by title, journal or year…",
+        "es": "Filtrar por título, revista o año…"
       },
       "count_tpl": {
         "pt": "Mostrando {n} de {t} artigos",
