@@ -12,6 +12,7 @@ timezone: "Europe/Madrid"
 # Pastas e arquivos iniciados por "_" ou "." (como _src/) já são ignorados pelo Jekyll.
 exclude:
   - README.md
+  - LICENSE
   - CHANGELOG.md
   - PENDENCIAS.md
   - design.md

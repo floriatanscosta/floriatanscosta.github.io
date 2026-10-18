@@ -72,3 +72,20 @@ Páginas de desenvolvimento (não indexadas, fora do menu): `guia.html`, `design
 - `design.md` — design system (tokens, tipografia, componentes).
 - `CHANGELOG.md` — histórico de alterações.
 - `PENDENCIAS.md` — informações que faltam ou precisam ser conferidas.
+
+## Licença
+
+O **código** deste repositório (HTML, CSS, JavaScript e os scripts em Python de `_src/`) está sob a
+[licença MIT](LICENSE): pode ser usado, copiado e adaptado, desde que o aviso de copyright seja mantido.
+
+Ficam **fora** da licença MIT, com todos os direitos reservados:
+
+- o **conteúdo**: textos, dados do currículo (`_src/data/`), fotos e imagens (`assets/img/`) e os currículos em PDF (`assets/cv/`);
+- o **logotipo Fc** e a ilustração da identidade visual (`assets/logo.svg`, `assets/favicon.svg`, `assets/svg/fundo.svg`).
+
+Itens de terceiros seguem as próprias licenças ou regras de marca:
+
+- **Fonte Roboto**: SIL Open Font License 1.1 (`assets/fonts/License.txt` e `_src/fonts/OFL.txt`);
+- **Ícones do Material Symbols** (sol, lua, ajuda): Apache License 2.0, do Google;
+- **Logotipos de perfis, bases e instituições** (ORCID, Lattes, LinkedIn, ResearchGate, Google Scholar, DOI, UFPR, UNIZAR, Embrapa, SBQ, LAESB e outros): marcas dos respectivos titulares, usadas apenas para identificar perfis e vínculos.
+
