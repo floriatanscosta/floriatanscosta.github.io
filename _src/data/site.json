@@ -363,14 +363,14 @@
         "es": "Datos actualizados el"
       },
       "h_date": {
-        "pt": "Índice h consultado em {d}.",
+        "pt": "h-index consultado em {d}.",
         "en": "h-index retrieved on {d}.",
         "es": "Índice h consultado el {d}."
       },
       "disclaimer": {
-        "pt": "Os números variam conforme a cobertura de cada base e podem mudar a qualquer momento; consulte os perfis para os valores mais recentes.",
-        "en": "Figures vary with each database's coverage and may change at any time; see the profiles for the latest values.",
-        "es": "Las cifras varían según la cobertura de cada base y pueden cambiar en cualquier momento; consulte los perfiles para los valores más recientes."
+        "pt": "Os números variam conforme a cobertura de cada base e podem mudar a qualquer momento. Consulte os perfis para os valores mais recentes.",
+        "en": "Figures vary with each database's coverage and may change at any time. See the profiles for the latest values.",
+        "es": "Las cifras varían según la cobertura de cada base y pueden cambiar en cualquier momento. Consulte los perfiles para los valores más recientes."
       },
       "group_bib": {
         "pt": "Produção bibliográfica",
