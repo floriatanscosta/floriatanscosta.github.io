@@ -294,16 +294,57 @@ body.has-consent { padding-bottom: 120px; }
 /* #1 Versão impressa */
 /*****************************************************************/
 @media print {
-    @page { size: A4; margin: 1.6cm; }
-    body { background: #ffffff !important; color: #000000 !important; font-size: 11pt; }
-    .site-header, header, footer, .skip-link, .theme-toggle, .lang-menu, .menu-toggle, .btn, .pub-tools, .page-toc, #shutter-bg, .nav-cards { display: none !important; }
+    @page { size: A4; margin: 1.6cm 1.5cm; }
+
+    /* Paleta clara fixa: vale também quando o visitante está no tema escuro
+       ou na página Design (que tem fundo escuro próprio) */
+    :root, [data-theme="dark"], .page-design {
+        color-scheme: light;
+        --bg-color: #ffffff; --page-bg: #ffffff; --box-bg: #ffffff; --surface-2: #ffffff;
+        --color-bg-surface-1: #ffffff; --color-bg-surface-2: #ffffff;
+        --heading-color: #1f2f4d; --heading-strong: #000000; --link-color: #000000;
+        --text-main: #000000; --text-muted: #444444; --footer-text: #444444;
+        --border-color: #bbbbbb; --border-color-2: #dddddd; --nav-hover: transparent;
+        --accent: #555555; --accent-2: #555555;
+        --shadow-sm: none; --shadow-md: none; --shadow-lg: none;
+    }
+
+    /* Sem sombras, desfoques, filtros, animações nem transições */
+    *, *::before, *::after {
+        box-shadow: none !important; text-shadow: none !important;
+        filter: none !important; -webkit-backdrop-filter: none !important; backdrop-filter: none !important;
+        animation: none !important; transition: none !important;
+    }
+
+    html, body { background: #ffffff !important; color: #000000 !important; }
+    body { font-size: 11pt; line-height: 1.45; }
+    body.has-consent { padding-bottom: 0 !important; }
+
+    /* Elementos de navegação e interação não vão para o papel */
+    .site-header, header, footer, .skip-link, .theme-toggle, .lang-menu, .menu-toggle, .btn, .btn-group,
+    .pub-tools, .page-toc, #shutter-bg, .nav-cards, .consent, .modal-overlay, .custom-tooltip { display: none !important; }
     main, .container { width: 100% !important; max-width: none !important; padding: 0 !important; margin: 0 !important; }
-    .card, .project-card, .metric-card, .tl-item, .profile-img { box-shadow: none !important; background: #ffffff !important; border-color: #cccccc !important; }
-    .card, .project-card, .metric-card, .tl-item, .pub-item, .award { page-break-inside: avoid; }
-    h1, h2, h3, h4, h5, h6 { page-break-after: avoid; color: #000000 !important; }
-    details.accordion > *:not(summary) { display: block !important; }
-    a { color: #000000 !important; }
-    main a.inline-link::after { content: " (" attr(href) ")"; font-size: 0.85em; color: #555555; }
+
+    /* Quebras de página */
+    h1, h2, h3, h4, h5, h6 { color: #000000 !important; break-after: avoid; page-break-after: avoid; }
+    p, li { orphans: 3; widows: 3; }
+    img, svg, figure, table, pre, blockquote { break-inside: avoid; page-break-inside: avoid; max-width: 100% !important; }
+
+    /* Quadros expansíveis: imprime o conteúdo mesmo fechado */
+    details > *:not(summary) { display: block !important; }
+    details::details-content { display: block !important; content-visibility: visible !important; }
+    details summary::after, details summary::-webkit-details-marker { display: none !important; }
+
+    /* Links: preto, sem sublinhado decorativo; endereço completo após links externos no texto */
+    a { color: #000000 !important; border-bottom: 0 !important; text-decoration: none !important; }
+    main a.inline-link[href^="http"]::after { content: " (" attr(href) ")"; font-size: 0.85em; font-weight: 400; color: #444444; word-break: break-all; }
+
+    /* Campos de formulário legíveis no papel */
+    input, select, textarea { background: #ffffff !important; color: #000000 !important; border-color: #bbbbbb !important; }
+
+    /* Elementos que começam ocultos para animar na tela */
+    .reveal, .img-reveal-img { opacity: 1 !important; transform: none !important; }
+    .img-reveal-box::after { display: none !important; }
 }
 
 /*****************************************************************/

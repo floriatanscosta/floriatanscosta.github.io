@@ -46,6 +46,18 @@
     window.location.href = target;
   }
 
+  /* ---------- Impressão ---------- */
+  // Abre os quadros expansíveis (details.accordion) para imprimir o conteúdo e os fecha depois.
+  // Complementa o CSS de impressão em navegadores que ainda não suportam ::details-content.
+  var openedForPrint = [];
+  window.addEventListener('beforeprint', function () {
+    document.querySelectorAll('details.accordion:not([open])').forEach(function (d) { d.open = true; openedForPrint.push(d); });
+  });
+  window.addEventListener('afterprint', function () {
+    openedForPrint.forEach(function (d) { d.open = false; });
+    openedForPrint = [];
+  });
+
   // Exporta para compatibilidade com atributos onclick das páginas de desenvolvimento
   window.toggleTheme = toggleTheme;
   window.toggleMenu = toggleMenu;

@@ -452,3 +452,58 @@ textarea { resize: vertical; min-height: 120px; }
     .profile-link { font-size: 0.72rem; }
     .swatches li { grid-template-columns: 32px 80px 1fr; }
 }
+
+/*****************************************************************/
+/* #2 Versão impressa (componentes) */
+/*****************************************************************/
+/* Complementa o bloco de impressão do global.css. Fica no fim deste arquivo
+   para ter prioridade sobre as regras dos componentes acima. */
+@media print {
+    /* Cartões e caixas: só borda fina, sem fundo */
+    .card, .tl-item, .pub-item, .award, .metric-card, .stat-strip > div, .totals-group, .journal-grid li,
+    .contact-list li, .current-pos, .project-card, .col-2 > div, details.accordion, .tool-card, .result-card {
+        background: #ffffff !important; border-color: #bbbbbb !important;
+    }
+    .card, .tl-item, .pub-item, .award, .metric-card, .stat-strip > div, .totals-group, .journal-grid li,
+    .contact-list li, .item-list > li, .project, .tl-head, .metric-source, details.accordion summary {
+        break-inside: avoid; page-break-inside: avoid;
+    }
+    .card { padding: 14px 16px; }
+    .section { margin-top: 24px; }
+    .section-title::after, .tl::before, .eyebrow::before { display: none !important; }
+
+    /* Textos em degradê (fundo recortado no texto) viram texto sólido,
+       já que os fundos normalmente não são impressos */
+    .stat-strip dd, .error-code, .card-title-bold, .type-sample, .intro-title {
+        background: none !important; -webkit-background-clip: border-box !important; background-clip: border-box !important;
+        color: #000000 !important; -webkit-text-fill-color: #000000 !important;
+    }
+    .card-title-bold span { -webkit-text-fill-color: initial !important; }
+
+    /* Ano dos prêmios: era texto branco sobre fundo colorido */
+    .award-year { background: none !important; color: #000000 !important; border: 1.5px solid #000000; }
+
+    /* Selos, chips e títulos de ano: contorno em vez de fundo */
+    .badge, .chip, .pub-year__title { background: none !important; color: #000000 !important; border: 1px solid #999999 !important; }
+    .metric-number { color: #1f2f4d !important; }
+    .metric-card--h .metric-number { color: #1d6b3a !important; }
+
+    /* Página inicial: arte e links de perfis ocupam espaço sem utilidade no papel */
+    .hero { grid-template-columns: minmax(0, 1fr) !important; padding-top: 0; }
+    .hero-art, .about-art, .design-logo, .profile-links, .section-more { display: none !important; }
+
+    /* Página Design: painéis de vidro escuros viram cartões claros; amostras de cor são impressas */
+    .page-design main, .design-hero h1, .design-hero p, .design-hero .eyebrow { color: #000000 !important; }
+    .design-hero { min-height: 0; grid-template-columns: minmax(0, 1fr); }
+    .design-panels .card { background: #ffffff !important; color: #000000 !important; border-color: #bbbbbb !important; }
+    .design-panels .card-title, .swatches code, .type-mono code { color: #000000 !important; background: none !important; }
+    .swatch, .ods-1, .ods-2, .ods-3, .ods-4, .ods-5, .ods-6, .ods-7, .ods-8, .ods-9, .ods-10, .ods-11, .ods-12, .ods-13, .ods-14, .ods-15, .ods-16, .ods-17 {
+        -webkit-print-color-adjust: exact; print-color-adjust: exact;
+    }
+
+    /* Imagens da "Vida de cientista" e foto da biografia */
+    .story-row { break-inside: avoid; page-break-inside: avoid; gap: 16px; }
+    .story-img img, .bio-photo img { max-height: 9cm; width: auto; max-width: 100%; }
+    .bio-photo { max-width: 4.5cm; }
+}
+
