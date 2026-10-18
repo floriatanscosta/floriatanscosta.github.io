@@ -80,14 +80,6 @@ def icon(name, cls='icon'):
 # Blocos de dados
 # --------------------------------------------------------------------------------------
 
-def authors_html(authors):
-    out = []
-    for a in authors:
-        n = esc(a['name'])
-        out.append(f'<strong class="me">{n}</strong>' if a['me'] else n)
-    return '; '.join(out)
-
-
 def doi_or_link(item, lang):
     if item.get('doi'):
         d = item['doi']

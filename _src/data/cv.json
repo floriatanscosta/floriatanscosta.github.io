@@ -5,7 +5,7 @@
     "short_name": "Floriatan Costa",
     "email": "floriatanscosta@gmail.com",
     "email_alt": "floriatancosta@ufpr.br",
-    "hometown": "Curitba (PR), Brasil",
+    "hometown": "Curitiba (PR), Brasil",
     "address": ["Universidad de Zaragoza — Facultad de Ciencias", "Calle Pedro Cerbuna, 12", "50009 Zaragoza, España"],
     "job": {"pt": "Pesquisador de Pós-Doutorado", "en": "Postdoctoral Researcher", "es": "Investigador Posdoctoral"},
     "affiliation": "Universidad de Zaragoza",
@@ -172,7 +172,6 @@
   "chapters": [
     {
       "year": 2017,
-      "authors": "<b>Costa, F. S.</b>; Matos, E. B.; Gomes Junior, D. M.",
       "title": "A Química dos Eletrônicos: uma abordagem contextualizada para o Ensino de Química",
       "book": "Iniciação à docência: A licenciatura em Química e o ensino de ciências",
       "publisher": "EDUFBA",
@@ -192,7 +191,7 @@
   ],
   
   "technical": [
-    {"year": 2022, "kind": "website", "title": "Laboratório de Espectrometria, Sensores e Biossensores (LAESB)", "authors": "<b>Costa, F. S.</b>; Amaral, C. D. B.; Souto, D. E. P.", "url": "https://laesb.ufpr.br/"}
+    {"year": 2022, "kind": "website", "title": "Laboratório de Espectrometria, Sensores e Biossensores (LAESB)", "url": "https://laesb.ufpr.br/"}
   ],
 
   "events_organized": [

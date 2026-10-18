@@ -43,7 +43,10 @@ Páginas de desenvolvimento (não indexadas, fora do menu): `guia.html`, `design
 
 ### Convenções
 - **Títulos de publicações, periódicos, eventos, livros e instituições ficam no idioma original** em todas as versões; DOI e autores também não são traduzidos.
-- Um artigo novo em `publications.json` precisa de `year`, `title`, `authors` (com `"me": true` no próprio nome), `journal`, `volume`, `pages` e `doi` (ou `url`).
+- Um artigo novo em `publications.json` precisa de `year`, `title`, `journal` e `doi` (ou `url`, quando não houver DOI); para artigo aceito, acrescente `"status": "accepted"`. Coloque-o no início da lista `articles` (os primeiros aparecem em "Publicações recentes"). Exemplo:
+  ```json
+  {"year": 2026, "title": "Título original do artigo", "journal": "Talanta", "doi": "10.1016/j.talanta.2026.127000", "status": "published"},
+  ```
 - Os URLs são iguais nos três idiomas, com prefixo: `/biografia`, `/en/biografia`, `/es/biografia`.
 - O cabeçalho, o rodapé, os metadados (SEO, Open Graph, `hreflang`, `canonical`) e o seletor de idioma são gerados — basta criar a página em `_src/pages/<idioma>/`.
 
