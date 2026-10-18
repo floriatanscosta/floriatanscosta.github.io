@@ -8,18 +8,18 @@ _Atualizado em 18/10/2026._
 
 ```mermaid
 pie showData title Itens registrados neste arquivo
-    "Concluídos" : 14
+    "Concluídos" : 15
     "Ideias pendentes" : 31
     "Dados e infraestrutura a conferir" : 12
 ```
 
 | Grupo | Concluído | Progresso |
 |---|---:|---|
-| Revisões e entregas (fora da lista de ideias) | 10 de 10 | `████████████████████` 100% |
+| Revisões e entregas (fora da lista de ideias) | 11 de 11 | `████████████████████` 100% |
 | Ideias de melhoria | 3 de 34 | `██░░░░░░░░░░░░░░░░░░` 9% |
 | Dados a conferir | 0 de 8 | `░░░░░░░░░░░░░░░░░░░░` 0% |
 | Funcionalidades e infraestrutura | 1 de 5 | `████░░░░░░░░░░░░░░░░` 20% |
-| **Total** | 14 de 57 | `█████░░░░░░░░░░░░░░░` 25% |
+| **Total** | 15 de 58 | `█████░░░░░░░░░░░░░░░` 26% |
 
 **Ideias de melhoria por grupo**
 
@@ -49,6 +49,7 @@ pie showData title Itens registrados neste arquivo
 11. Aviso de idioma discreto, conforme o idioma do navegador, sem redirecionamento _(ideia I19)_
 12. Tema com três opções: claro, escuro e seguir o sistema _(ideia I20)_
 13. Currículo em PDF nos três idiomas, gerado a partir dos JSON (sem foto; datas de geração e de atualização no rodapé) _(ideia I7)_
+14. Ferramentas (/web): seletor de tema com três opções, menu com a página atual marcada e novas páginas "Sobre" e "Aviso de uso"
 
 ## Ideias de melhoria
 
