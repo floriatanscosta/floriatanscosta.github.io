@@ -8,7 +8,7 @@ Uso:
     python3 _src/build.py --no-pdf   # não gera os currículos em PDF (assets/cv/)
 
 O currículo em PDF (pt/en/es) é gerado por _src/cv_pdf.py e precisa do ReportLab
-(pip install reportlab). Sem ele, as páginas são geradas normalmente e os PDFs não mudam.
+(pip install reportlab svglib). Sem eles, as páginas são geradas normalmente e os PDFs não mudam.
 
 Fontes:
     _src/data/site.json          textos da interface (menus, rótulos, metadados) em pt/en/es

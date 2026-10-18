@@ -6,7 +6,8 @@ Uso:
     python3 _src/cv_pdf.py          # gera os três PDFs
     (também é chamado automaticamente por build.py, se a biblioteca estiver instalada)
 
-Requisito: ReportLab  ->  pip install reportlab
+Requisitos: ReportLab e svglib  ->  pip install reportlab svglib
+           (sem a svglib, o PDF é gerado sem os ícones e sem o logotipo)
 Fontes:    _src/fonts/Roboto-*.ttf (Roboto, licença SIL Open Font License — ver OFL.txt)
 Saída:     /assets/cv/floriatan-costa-cv-<idioma>.pdf
 
@@ -27,6 +28,11 @@ from reportlab.lib.units import mm
 from reportlab.pdfbase import pdfmetrics
 from reportlab.pdfbase.ttfonts import TTFont
 from reportlab.pdfgen import canvas as rl_canvas
+from reportlab.graphics import renderPDF
+try:
+    from svglib.svglib import svg2rlg  # converte SVG em desenho vetorial do ReportLab
+except ImportError:
+    svg2rlg = None
 from reportlab.platypus import (CondPageBreak, KeepTogether, Paragraph, SimpleDocTemplate, Spacer, Table,
                                 TableStyle)
 
@@ -52,6 +58,7 @@ L = {
     'lines': {'pt': 'Linhas de pesquisa', 'en': 'Research lines', 'es': 'Líneas de investigación'},
     'keywords': {'pt': 'Palavras-chave', 'en': 'Keywords', 'es': 'Palabras clave'},
     'techniques': {'pt': 'Técnicas', 'en': 'Techniques', 'es': 'Técnicas'},
+    'ids': {'pt': 'Identificadores', 'en': 'Identifiers', 'es': 'Identificadores'},
     'education': {'pt': 'Formação acadêmica', 'en': 'Education', 'es': 'Formación académica'},
     'positions': {'pt': 'Experiência profissional', 'en': 'Professional experience', 'es': 'Experiencia profesional'},
     'awards': {'pt': 'Prêmios e títulos', 'en': 'Awards and honours', 'es': 'Premios y distinciones'},
@@ -137,6 +144,24 @@ def x(text):
     return re.sub(r'&lt;(/?)i&gt;', r'<\1i>', s)
 
 
+def svg_icon(path, size):
+    """Ícone SVG como desenho vetorial com o tamanho pedido (ou None, sem a svglib)."""
+    if svg2rlg is None or not os.path.isfile(path):
+        return None
+    d = svg2rlg(path)
+    if d is None:
+        return None
+    k = size / max(d.width, d.height)
+    d.scale(k, k)
+    d.width, d.height = d.width * k, d.height * k
+    return d
+
+
+ICON_DIR = os.path.join(build.ROOT, 'assets', 'icons')
+LOGO = os.path.join(build.ROOT, 'assets', 'logo.svg')
+ID_PROFILES = ['orcid', 'lattes', 'linkedin']  # perfis mostrados na seção de identificadores
+
+
 def link(href, text=None):
     return f'<link href="{x(href)}" color="#1c7d9a">{x(text or href)}</link>'
 
@@ -193,10 +218,6 @@ def build_story(lang):
     d.para(f'{x(tr(p["job"], lang))} · {x(p["affiliation"])}', 'role', 2.5)
     prof = {q['id']: q for q in CV['profiles']}
     contact = [link('mailto:' + p['email'], p['email']), link('https://' + SITE, SITE)]
-    if 'orcid' in prof:
-        contact.append('ORCID ' + link(prof['orcid']['url'], prof['orcid']['handle']))
-    if 'lattes' in prof:
-        contact.append('Lattes ' + link(prof['lattes']['url'], prof['lattes']['url'].split('//')[-1]))
     d.para('  ·  '.join(contact), 'contact', 0.8)
     d.para(x(', '.join(p['address'])), 'contact', 1)
 
@@ -208,6 +229,29 @@ def build_story(lang):
         (t('keywords', lang), x(' · '.join(CV['keywords']))),
         (t('techniques', lang), x(' · '.join(CV['techniques']))),
     ])
+
+    # Identificadores (ORCID, Lattes e LinkedIn), com o ícone de cada perfil
+    ids = [prof[i] for i in ID_PROFILES if i in prof]
+    if ids:
+        d.section(t('ids', lang))
+        cells = []
+        for q in ids:
+            text = Paragraph(f'<b>{x(q["label"])}</b><br/>{link(q["url"], q["handle"])}', st['body'])
+            ico = svg_icon(os.path.join(ICON_DIR, q['icon']), 7.5 * mm)
+            inner = Table([[ico, text]] if ico else [[text]], colWidths=[10 * mm, None] if ico else [None])
+            inner.setStyle(TableStyle([
+                ('VALIGN', (0, 0), (-1, -1), 'MIDDLE'),
+                ('LEFTPADDING', (0, 0), (-1, -1), 0), ('RIGHTPADDING', (0, 0), (-1, -1), 0),
+                ('TOPPADDING', (0, 0), (-1, -1), 0), ('BOTTOMPADDING', (0, 0), (-1, -1), 0),
+            ]))
+            cells.append(inner)
+        grid = Table([cells], colWidths=[(A4[0] - 36 * mm) / len(cells)] * len(cells), hAlign='LEFT')
+        grid.setStyle(TableStyle([
+            ('VALIGN', (0, 0), (-1, -1), 'MIDDLE'),
+            ('LEFTPADDING', (0, 0), (-1, -1), 0), ('RIGHTPADDING', (0, 0), (-1, -1), 6),
+            ('TOPPADDING', (0, 0), (-1, -1), 0), ('BOTTOMPADDING', (0, 0), (-1, -1), 0),
+        ]))
+        d.flow.append(grid)
 
     # Formação
     d.section(t('education', lang))
@@ -358,6 +402,9 @@ def build_story(lang):
 # --------------------------------------------------------------------------------------
 # Página e rodapé
 # --------------------------------------------------------------------------------------
+LOGO_DRAWING = None
+
+
 def make_canvas(lang, generated, updated):
     class NumberedCanvas(rl_canvas.Canvas):
         """Desenha o rodapé depois de conhecer o total de páginas ("Página X de Y")."""
@@ -378,7 +425,10 @@ def make_canvas(lang, generated, updated):
             super().save()
 
         def footer(self, total):
-            w, _ = A4
+            w, h = A4
+            # Logotipo no canto superior direito de todas as páginas
+            if LOGO_DRAWING is not None:
+                renderPDF.draw(LOGO_DRAWING, self, w - 18 * mm - LOGO_DRAWING.width, h - 7 * mm - LOGO_DRAWING.height)
             self.setStrokeColor(RULE)
             self.setLineWidth(0.6)
             self.line(18 * mm, 14 * mm, w - 18 * mm, 14 * mm)
@@ -396,7 +446,7 @@ def generate(lang, generated, updated):
     os.makedirs(OUT_DIR, exist_ok=True)
     path = os.path.join(OUT_DIR, f'floriatan-costa-cv-{lang}.pdf')
     name = CV['person']['name']
-    doc = SimpleDocTemplate(path, pagesize=A4, leftMargin=18 * mm, rightMargin=18 * mm, topMargin=16 * mm,
+    doc = SimpleDocTemplate(path, pagesize=A4, leftMargin=18 * mm, rightMargin=18 * mm, topMargin=21 * mm,
                             bottomMargin=20 * mm, title=f'{name} — {t("title", lang)}', author=name,
                             subject=t('title', lang), creator=SITE, lang=build.HTML_LANG[lang])
     doc.build(build_story(lang), canvasmaker=make_canvas(lang, generated, updated))
@@ -407,6 +457,10 @@ def main():
     from reportlab import rl_config
     rl_config.invariant = 1  # PDF idêntico para os mesmos dados e a mesma data (evita alterações à toa no git)
     register_fonts()
+    global LOGO_DRAWING
+    LOGO_DRAWING = svg_icon(LOGO, 11 * mm)
+    if svg2rlg is None:
+        print('Aviso: svglib não instalada (pip install svglib); o PDF sai sem ícones e sem logotipo.')
     generated = build.BUILD_DATE.isoformat()
     updated = content_date()
     for lang in build.LANGS:

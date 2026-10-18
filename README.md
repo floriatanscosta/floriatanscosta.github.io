@@ -43,7 +43,7 @@ Páginas de desenvolvimento (não indexadas, fora do menu): `guia.html`, `design
    O comando regenera todas as páginas, o `sitemap.xml` e os currículos em PDF, e verifica os links internos.
    - **Currículo em PDF** (`assets/cv/floriatan-costa-cv-pt|en|es.pdf`): gerado por `_src/cv_pdf.py` a partir de
      `cv.json` e `publications.json`, sem foto. O rodapé traz a data de geração e a data da última alteração desses
-     dois arquivos. Requer o ReportLab, instalado uma única vez com `pip install reportlab`. Sem ele, o build avisa e
+     dois arquivos. Requer o ReportLab e a svglib (ícones e logotipo), instalados uma única vez com `pip install reportlab svglib`. Sem ele, o build avisa e
      gera só as páginas; para pular os PDFs de propósito, use `python3 _src/build.py --check --no-pdf`.
 3. Faça commit dos arquivos gerados e da fonte, e envie ao GitHub. O GitHub Pages publica automaticamente.
 
