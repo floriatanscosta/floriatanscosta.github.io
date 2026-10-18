@@ -37,11 +37,11 @@
      "thesis": "Solventes eutéticos profundos aplicados no desenvolvimento de métodos para determinação elementar em amostras de composição orgânica e inorgânica",
      "advisor": "Clarice Dias Britto do Amaral", "coadvisor": "Mario Henrique Gonzalez", "funding": "CAPES"},
     {"years": "2017–2019", "degree": {"pt": "Mestrado em Química", "en": "MSc in Chemistry", "es": "Máster en Química"},
-     "institution": "Universidade Estadual de Santa Cruz (UESC)", "place": "Ilhéus, Brasil",
+     "institution": "Universidade Estadual de Santa Cruz (UESC)", "place": "Ilhéus, Brasil", "logo": "uesc.webp",
      "thesis": "Desenvolvimento de metodologia de extração assistida por ultrassom para determinação de metais em tecidos vegetais (<i>Rhizophora mangle</i> L. e <i>Laguncularia racemosa</i> (L.) C.F.Gaertn) por Espectrometria de Absorção Atômica em Chama",
      "advisor": "Erik Galvão Paranhos da Silva", "coadvisor": "Luana Novaes Santos", "funding": "FAPESB"},
     {"years": "2012–2016", "degree": {"pt": "Graduação em Química (Licenciatura)", "en": "Undergraduate degree in Chemistry (Teaching)", "es": "Grado en Química (Licenciatura)"},
-     "institution": "Instituto Federal de Educação, Ciência e Tecnologia Baiano (IF Baiano)", "place": "Campus Guanambi, Brasil"}
+     "institution": "Instituto Federal de Educação, Ciência e Tecnologia Baiano (IF Baiano)", "place": "Campus Guanambi, Brasil", "logo": "ifbaiano.svg"}
   ],
 
   "complementary": [
@@ -67,10 +67,10 @@
      "role": {"pt": "Doutorando (bolsista CAPES) — Pesquisa e Desenvolvimento", "en": "PhD candidate (CAPES fellowship) — Research and Development", "es": "Doctorando (beca CAPES) — Investigación y Desarrollo"},
      "detail": {"pt": "Linhas de pesquisa: desenvolvimento de métodos e quimiometria; preparo de amostra e solventes alternativos.", "en": "Research lines: method development and chemometrics; sample preparation and alternative solvents.", "es": "Líneas de investigación: desarrollo de métodos y quimiometría; preparación de muestras y disolventes alternativos."}},
     {"years": {"pt": "2017 – 2019", "en": "2017 – 2019", "es": "2017 – 2019"},
-     "institution": "Universidade Estadual de Santa Cruz (UESC)", "place": "Ilhéus, Brasil",
+     "institution": "Universidade Estadual de Santa Cruz (UESC)", "place": "Ilhéus, Brasil", "logo": "uesc.webp",
      "role": {"pt": "Mestrando (bolsista FAPESB)", "en": "MSc student (FAPESB fellowship)", "es": "Estudiante de máster (beca FAPESB)"}},
     {"years": {"pt": "2012 – 2016", "en": "2012 – 2016", "es": "2012 – 2016"},
-     "institution": "IF Baiano — Campus Guanambi", "place": "Guanambi, Brasil",
+     "institution": "IF Baiano — Campus Guanambi", "place": "Guanambi, Brasil", "logo": "ifbaiano.svg",
      "role": {"pt": "Estudante de graduação", "en": "Undergraduate student", "es": "Estudiante de grado"},
      "detail": {"pt": "Bolsista de iniciação em extensão (2013–2014), monitor em laboratórios de Química (2013–2014), bolsista PIBID (2014–2016) e representante discente em colegiado e comissões institucionais (2014–2016).", "en": "Extension initiation fellow (2013–2014), Chemistry laboratory teaching assistant (2013–2014), PIBID teaching-initiation fellow (2014–2016) and student representative on the course board and institutional committees (2014–2016).", "es": "Becario de iniciación en extensión (2013–2014), monitor de laboratorios de Química (2013–2014), becario PIBID (2014–2016) y representante estudiantil en el consejo de la carrera y en comisiones institucionales (2014–2016)."}}
   ],

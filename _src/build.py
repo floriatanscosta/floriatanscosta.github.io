@@ -279,7 +279,9 @@ def b_awards_stats(lang):
 def logo_img(name, alt=''):
     if not name:
         return f'<span class="tl-logo tl-logo--empty" aria-hidden="true">{icon("building")}</span>'
-    return f'<img class="tl-logo" src="/assets/svg/{name}" alt="{esc(alt)}" width="96" height="60" loading="lazy">'
+    # SVG em /assets/svg/; logos em imagem (WebP/PNG, para arquivos SVG muito pesados) em /assets/img/logos/
+    folder = 'svg' if name.endswith('.svg') else 'img/logos'
+    return f'<img class="tl-logo" src="/assets/{folder}/{name}" alt="{esc(alt)}" width="96" height="60" loading="lazy">'
 
 
 def b_education(lang):

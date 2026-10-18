@@ -8,25 +8,25 @@ _Atualizado em 18/10/2026._
 
 ```mermaid
 pie showData title Itens registrados neste arquivo
-    "Concluídos" : 15
-    "Ideias pendentes" : 31
-    "Dados e infraestrutura a conferir" : 12
+    "Concluídos" : 17
+    "Ideias pendentes" : 30
+    "Dados e infraestrutura a conferir" : 11
 ```
 
 | Grupo | Concluído | Progresso |
 |---|---:|---|
 | Revisões e entregas (fora da lista de ideias) | 11 de 11 | `████████████████████` 100% |
-| Ideias de melhoria | 3 de 34 | `██░░░░░░░░░░░░░░░░░░` 9% |
-| Dados a conferir | 0 de 8 | `░░░░░░░░░░░░░░░░░░░░` 0% |
+| Ideias de melhoria | 4 de 34 | `██░░░░░░░░░░░░░░░░░░` 12% |
+| Dados a conferir | 1 de 8 | `██░░░░░░░░░░░░░░░░░░` 12% |
 | Funcionalidades e infraestrutura | 1 de 5 | `████░░░░░░░░░░░░░░░░` 20% |
-| **Total** | 15 de 58 | `█████░░░░░░░░░░░░░░░` 26% |
+| **Total** | 17 de 58 | `██████░░░░░░░░░░░░░░` 29% |
 
 **Ideias de melhoria por grupo**
 
 | Grupo | Concluído | Progresso |
 |---|---:|---|
 | Prioritárias | 0 de 5 | `░░░░░░░░░░` 0% |
-| Conteúdo | 1 de 8 | `█░░░░░░░░░` 12% |
+| Conteúdo | 2 de 8 | `██░░░░░░░░` 25% |
 | Ferramentas (/web) | 0 de 3 | `░░░░░░░░░░` 0% |
 | Contato e networking | 0 de 2 | `░░░░░░░░░░` 0% |
 | Navegação e experiência | 2 de 6 | `███░░░░░░░` 33% |
@@ -68,7 +68,7 @@ Marcadas com ✅ as já implementadas. A numeração continua a da versão anter
 - [x] I7. ✅ **Currículo em PDF para download** nos três idiomas.
 - [ ] I8. **"Vida de cientista" em inglês e espanhol.**
 - [ ] I9. **Projeto atual em destaque**, com imagem ou *graphical abstract*.
-- [ ] I10. **Logos da UESC e do IF Baiano** na linha do tempo (ver item D7).
+- [x] I10. ✅ **Logos da UESC e do IF Baiano** na linha do tempo (ver item D7).
 - [ ] I11. **Glossário de técnicas** (ICP-MS, ICP OES, FAAS, GFAAS, MIP OES, solventes eutéticos) explicado para leigos.
 - [ ] I12. **Mapa de onde a pesquisa aconteceu** (instituições, eventos, coletas), como imagem estática.
 - [ ] I13. **Rede de coautores** (gráfico). Exige guardar de novo os autores no JSON, só para o gráfico.
@@ -114,7 +114,7 @@ Marcadas com ✅ as já implementadas. A numeração continua a da versão anter
 - [ ] D4. **Artigo "Chemometric-assisted classification of sunscreen…"**: consta como aceito; quando sair o volume, mudar `status` para `published`.
 - [ ] D5. **Capítulo de 2023 (Seven Editora)**: título no Lattes repete "chemical preservatives" e "State Solid"; conferir com a publicação original.
 - [ ] D6. **Pós-doutorado na Embrapa (2024)**: o Lattes não indica a unidade nem o período exato.
-- [ ] D7. **Logos da UESC e do IF Baiano**: faltam em `assets/svg/` (aparece um ícone genérico).
+- [x] D7. ✅ **Logos da UESC e do IF Baiano**: incluídos (`assets/svg/ifbaiano.svg`; UESC em `assets/img/logos/uesc.webp`, versão leve do `uesc.svg`).
 - [ ] D8. **Participação em eventos**: o quadro de totais do Lattes soma 19, mas a lista tem 21 itens (exposição e feira não entram no total).
 
 ## Funcionalidades e infraestrutura
