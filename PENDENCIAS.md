@@ -19,3 +19,29 @@ Itens que não puderam ser resolvidos só com os dados disponíveis (nada foi in
 12. **Formulário de contato**: não implementado (o GitHub Pages não processa formulários). O contato é por e-mail.
 13. **Arquivos não utilizados**: `assets/background.svg` (650 KB), `assets/img/time4.png`, `assets/img/cover-google-forms.png`, `assets/img/cover.png` (duplicata de `assets/cover.png`) e os PNG originais de `time*.png`/`profile.png` (substituídos por WebP). Podem ser removidos se não forem usados em outro lugar.
 14. **Publicação**: as alterações foram feitas sobre o arquivo .zip enviado; é preciso enviá-las ao repositório `floriatanscosta.github.io` (não houve acesso ao GitHub nesta sessão).
+
+## Ideias de melhoria (para implementar depois)
+
+Sugestões registradas em 18/10/2026. Nenhuma foi implementada ainda.
+
+### Prioritárias
+15. **Build automático no GitHub (GitHub Actions)**: um arquivo `.github/workflows/build.yml` que roda `python3 _src/build.py --check` a cada alteração em `_src/` e salva as páginas geradas. Permite atualizar o site editando o `cv.json` ou o `publications.json` direto pelo navegador, sem Python no computador; bloqueia a publicação se houver erro de sintaxe no JSON ou link quebrado. Gratuito em repositórios públicos.
+16. **Recursos nas publicações**: botão "Citar" em cada artigo (referência formatada e BibTeX); arquivo `.bib`/`.ris` com todas as publicações para Zotero/Mendeley; selos de Acesso Aberto e link para o PDF (os ícones `openacess.svg` e `pdf.svg` já existem em `assets/icons/`).
+17. **Gráficos na página Métricas**: publicações por ano e citações por ano, gerados a partir dos dados existentes.
+18. **Ordenação automática dos artigos por ano** no `build.py`, para que a posição no `publications.json` deixe de importar (hoje os primeiros da lista aparecem em "Publicações recentes").
+
+### Conteúdo
+19. **Seção de Novidades** na página inicial (artigo aceito, palestra, prêmio…), alimentada por uma lista simples no JSON.
+20. **Currículo em PDF para download** nos três idiomas, gerado a partir dos mesmos dados do site.
+21. **"Vida de cientista" em inglês e espanhol** (hoje só em português).
+22. **Projeto atual em destaque** (saliva, HDES e nanopartículas magnéticas), com imagem ou *graphical abstract*.
+23. **Logos da UESC e do IF Baiano** na linha do tempo (ver item 7).
+
+### Automação de dados
+24. **Métricas automáticas via OpenAlex** (base aberta e gratuita): atualização semanal de citações e índice h pelo GitHub Actions, como fonte complementar ao Scopus/WoS (os números diferem um pouco).
+25. **Importar publicações do ORCID**: artigos novos registrados no ORCID entram no site sem digitação.
+
+### Visibilidade
+26. **Dados estruturados `ScholarlyArticle`** em cada publicação, para o Google e o Google Scholar reconhecerem os trabalhos.
+27. **Google Search Console**: cadastrar o site e enviar o `sitemap.xml` (requer login do proprietário).
+28. **Imagem de compartilhamento por página e idioma** (prévia própria ao postar links no LinkedIn etc.).
