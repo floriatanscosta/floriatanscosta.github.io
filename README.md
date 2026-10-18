@@ -11,10 +11,12 @@ Reúne trajetória, produção científica, prêmios, métricas e contato de Flo
 /en/  /es/              as mesmas 10 páginas principais em inglês e espanhol
 /css/global.css         tokens (cores, fontes, espaçamentos), base, cabeçalho, menu, rodapé, botões
 /css/main.css           componentes de conteúdo (cartões, linha do tempo, publicações, métricas...)
+/css/premiacoes.css     /css/design.css   /css/vida.css   estilos próprios de cada uma dessas páginas
 /js/theme-init.js       aplica o tema claro/escuro antes da renderização (evita "piscar")
 /js/app.js              menu móvel, tema, seletor de idioma, ano do rodapé
 /js/publications.js     filtro da lista de publicações
-/js/shutter.js          fundo animado (WebGL) da página Design
+/js/design.js           botões "Copiar" da paleta da página Design
+/js/vida.js             animações e galeria da página Vida de cientista
 /js/analytics.js        aviso de consentimento + Google Analytics (só carrega após "Aceitar")
 /assets/                logo, favicon, ícones (sprite.svg), fontes Roboto, imagens e logos (svg/)
 /sitemap.xml            gerado automaticamente, com alternativas hreflang

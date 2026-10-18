@@ -237,20 +237,39 @@ def b_committees(lang):
 
 
 def b_awards(lang):
-    out = ['<ol class="award-list">']
+    """Premiações agrupadas por ano (linha do tempo). Prêmios de tese e de artigo ganham destaque."""
+    years = []
     for a in CV['awards']:
-        kind = T('awards.' + a['type'], lang)
-        name = f'<span class="award-name" lang="{"en" if a["type"] == "paper" else "pt"}">{esc(a["name"])}</span>' if a.get('name') else ''
-        out.append(f'''<li class="award">
-  <span class="award-year">{a["year"]}</span>
-  <div class="award-body">
-    <p class="award-kind">{icon("award")}{kind}</p>
-    {name}
-    <p class="award-where" lang="{"en" if a["type"] == "paper" else "pt"}">{esc(a["where"])}</p>
-  </div>
-</li>''')
-    out.append('</ol>')
+        if not years or years[-1][0] != a['year']:
+            years.append((a['year'], []))
+        years[-1][1].append(a)
+    out = ['<div class="aw-timeline">']
+    for year, items in years:
+        out.append(f'<section class="aw-year" aria-labelledby="aw-{year}">\n  <h2 class="aw-year__label" id="aw-{year}">{year}</h2>\n  <ol class="aw-items">')
+        for a in items:
+            alang = 'en' if a['type'] == 'paper' else 'pt'
+            featured = ' aw-card--featured' if a['type'] in ('thesis', 'paper') else ''
+            name = f'\n      <p class="aw-name" lang="{alang}">{esc(a["name"])}</p>' if a.get('name') else ''
+            out.append(f'''    <li class="aw-card aw-card--{a["type"]}{featured}">
+      <span class="aw-medal" aria-hidden="true">{icon("award")}</span>
+      <div class="aw-body">
+      <p class="aw-kind">{T("awards." + a["type"], lang)}</p>{name}
+      <p class="aw-where" lang="{alang}">{icon("building")}<span>{esc(a["where"])}</span></p>
+      </div>
+    </li>''')
+        out.append('  </ol>\n</section>')
+    out.append('</div>')
     return '\n'.join(out)
+
+
+def b_awards_stats(lang):
+    """Resumo calculado a partir de cv.json: total, prêmios de melhor trabalho e período."""
+    aw = CV['awards']
+    ys = [a['year'] for a in aw]
+    items = [(len(aw), T('awards.total', lang)),
+             (sum(1 for a in aw if a['type'] == 'best'), T('awards.best_plural', lang)),
+             (f'{min(ys)}–{max(ys)}', T('awards.period', lang))]
+    return '<dl class="aw-stats">' + ''.join(f'<div><dt>{esc(l)}</dt><dd>{n}</dd></div>' for n, l in items) + '</dl>'
 
 
 def logo_img(name, alt=''):

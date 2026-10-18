@@ -144,7 +144,6 @@ body { display: flex; flex-direction: column; min-height: 100vh; min-height: 100
 main { flex: 1; width: 100%; padding: var(--spacing-xl) 0 var(--spacing-2xl); }
 main:focus { outline: none; }
 .container { width: 100%; max-width: 1360px; margin: 0 auto; padding-left: 24px; padding-right: 24px; font-size: var(--font-size-base); }
-#shutter-bg { position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; z-index: -1; pointer-events: none; background-color: #14161f; }
 
 /* 4. Cabeçalho (header) */
 /*****************************************************************/
@@ -298,7 +297,7 @@ body.has-consent { padding-bottom: 120px; }
 
     /* Paleta clara fixa: vale também quando o visitante está no tema escuro
        ou na página Design (que tem fundo escuro próprio) */
-    :root, [data-theme="dark"], .page-design {
+    :root, [data-theme="dark"] {
         color-scheme: light;
         --bg-color: #ffffff; --page-bg: #ffffff; --box-bg: #ffffff; --surface-2: #ffffff;
         --color-bg-surface-1: #ffffff; --color-bg-surface-2: #ffffff;
@@ -322,7 +321,7 @@ body.has-consent { padding-bottom: 120px; }
 
     /* Elementos de navegação e interação não vão para o papel */
     .site-header, header, footer, .skip-link, .theme-toggle, .lang-menu, .menu-toggle, .btn, .btn-group,
-    .pub-tools, .page-toc, #shutter-bg, .nav-cards, .consent, .modal-overlay, .custom-tooltip { display: none !important; }
+    .pub-tools, .page-toc, .nav-cards, .consent, .modal-overlay, .custom-tooltip { display: none !important; }
     main, .container { width: 100% !important; max-width: none !important; padding: 0 !important; margin: 0 !important; }
 
     /* Quebras de página */

@@ -6,7 +6,7 @@
   <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://www.googletagmanager.com; connect-src 'self' https://*.google-analytics.com https://*.analytics.google.com https://*.googletagmanager.com; img-src 'self' data: https://*.google-analytics.com https://*.googletagmanager.com; style-src 'self'; font-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self' mailto:">
   <meta name="referrer" content="strict-origin-when-cross-origin">
   <title>Diseño · Floriatan Santos Costa</title>
-  <meta name="description" content="Logotipo, paleta de colores y tipografía del sitio de Floriatan Santos Costa, inspirados en la representación de los elementos en la tabla periódica.">
+  <meta name="description" content="Identidad visual del sitio de Floriatan Santos Costa: logotipo inspirado en la tabla periódica, paleta de colores y tipografía.">
   <meta name="author" content="Floriatan Santos Costa">
   <link rel="canonical" href="https://floriatan.com.br/es/design">
   <link rel="alternate" hreflang="pt-BR" href="https://floriatan.com.br/design">
@@ -16,7 +16,7 @@
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Floriatan Santos Costa">
   <meta property="og:title" content="Diseño · Floriatan Santos Costa">
-  <meta property="og:description" content="Logotipo, paleta de colores y tipografía del sitio de Floriatan Santos Costa, inspirados en la representación de los elementos en la tabla periódica.">
+  <meta property="og:description" content="Identidad visual del sitio de Floriatan Santos Costa: logotipo inspirado en la tabla periódica, paleta de colores y tipografía.">
   <meta property="og:url" content="https://floriatan.com.br/es/design">
   <meta property="og:image" content="https://floriatan.com.br/assets/cover.png">
   <meta property="og:image:width" content="940">
@@ -34,9 +34,10 @@
   <script src="/js/theme-init.js"></script>
   <link rel="stylesheet" href="/css/global.css?v=20261018">
   <link rel="stylesheet" href="/css/main.css?v=20261018">
+  <link rel="stylesheet" href="/css/design.css?v=20261018">
   <script src="/js/analytics.js" defer></script>
 </head>
-<body class="page-design">
+<body>
 <a class="skip-link" href="#main">Saltar al contenido</a>
 <header class="site-header">
   <div class="container header-content">
@@ -58,42 +59,155 @@
   </div>
 </header>
 <main id="main" tabindex="-1">
-<canvas id="shutter-bg" aria-hidden="true"></canvas>
-<section class="container design-hero">
-  <div class="design-logo"><img src="/assets/svg/fundo.svg" alt="Logotipo Fc al estilo de un elemento de la tabla periódica" width="600" height="600" class="cover-image"></div>
-  <div class="design-text">
+<section class="container ds-hero">
+  <div class="ds-hero__text">
     <p class="eyebrow">Diseño</p>
     <h1>Logo &amp; Diseño</h1>
-    <p>El diseño y la identidad visual del logotipo se inspiraron en la clásica representación de los elementos químicos en la tabla periódica. Como toque personal, las iniciales de mi nombre forman la composición, mientras que el tradicional número atómico se sustituyó intencionadamente por mi fecha de nacimiento.</p>
-    <p>Para el diseño de las páginas, la paleta presenta tonos de azul y morado. Son mis colores favoritos y se eligieron para crear una identidad visual coherente que refleje mi personalidad y mi trabajo tanto en el laboratorio como en la programación.</p>
+    <p class="lead">La identidad visual de este sitio nace de la química: el logotipo reinterpreta la representación clásica de un elemento en la tabla periódica.</p>
+    <p>Las iniciales de mi nombre ocupan el lugar del símbolo químico y el número atómico se sustituyó por mi fecha de nacimiento. La paleta reúne tonos de azul y violeta, mis colores favoritos, para dar unidad a todo lo que hay aquí: del laboratorio a la programación.</p>
+    <nav class="ds-toc" aria-label="Secciones de esta página">
+      <a href="#logotipo">Logotipo</a>
+      <a href="#paleta">Paleta</a>
+      <a href="#tipografia">Tipografía</a>
+    </nav>
+  </div>
+  <div class="ds-hero__art">
+    <img src="/assets/svg/fundo.svg" alt="Logotipo Fc al estilo de un elemento de la tabla periódica, rodeado de anillos" width="600" height="600">
   </div>
 </section>
 
-<div class="container design-panels">
-  <section class="card" aria-labelledby="h-paleta">
-    <h2 id="h-paleta" class="card-title">Paleta</h2>
-    <ul class="swatches">
-      <li><span class="swatch sw-1"></span><code>#5A729E</code><span>Azul principal</span></li>
-      <li><span class="swatch sw-2"></span><code>#24577F</code><span>Azul profundo</span></li>
-      <li><span class="swatch sw-3"></span><code>#666FE4</code><span>Violeta</span></li>
-      <li><span class="swatch sw-4"></span><code>#D13C86</code><span>Magenta</span></li>
-      <li><span class="swatch sw-5"></span><code>#4CB96E</code><span>Verde (destacados)</span></li>
-      <li><span class="swatch sw-6"></span><code>#1A1F26</code><span>Fondo oscuro</span></li>
+<div class="container">
+  <section class="ds-section" id="logotipo" aria-labelledby="h-logo">
+    <div class="ds-section__head">
+      <span class="ds-section__num" aria-hidden="true">01</span>
+      <div>
+        <h2 id="h-logo">Logotipo</h2>
+        <p>Una celda de la tabla periódica, con información personal en lugar de las propiedades del elemento.</p>
+      </div>
+    </div>
+
+    <div class="ds-logo">
+      <figure class="ds-anatomy">
+        <div class="ds-anatomy__art">
+          <img src="/assets/logo.svg" alt="Logotipo Fc: cuadrado azul de esquinas redondeadas con el número 28 en la esquina superior izquierda y las letras Fc en el centro" width="200" height="200">
+          <span class="ds-pin ds-pin--1" aria-hidden="true">1</span>
+          <span class="ds-pin ds-pin--2" aria-hidden="true">2</span>
+          <span class="ds-pin ds-pin--3" aria-hidden="true">3</span>
+        </div>
+        <figcaption>Anatomía del logotipo</figcaption>
+      </figure>
+      <ol class="ds-legend">
+        <li>
+          <h3>Número de la esquina</h3>
+          <p>En la tabla periódica, es el lugar del número atómico. Aquí, el <strong>28</strong> hace referencia a mi fecha de nacimiento.</p>
+        </li>
+        <li>
+          <h3>Símbolo</h3>
+          <p>Las letras <strong>Fc</strong>, iniciales de Floriatan Costa, ocupan la posición del símbolo químico, con el mismo protagonismo.</p>
+        </li>
+        <li>
+          <h3>Forma y color</h3>
+          <p>Cuadrado de esquinas redondeadas con degradado radial del azul petróleo al azul profundo; las letras aparecen en azul hielo para mantener el contraste.</p>
+        </li>
+      </ol>
+    </div>
+
+    <h3 class="ds-subhead">Aplicaciones</h3>
+    <ul class="ds-uses">
+      <li>
+        <div class="ds-use ds-use--light"><img src="/assets/logo.svg" alt="" width="96" height="96"></div>
+        <p><strong>Fondo claro</strong> Versión completa, utilizada en la cabecera del sitio.</p>
+      </li>
+      <li>
+        <div class="ds-use ds-use--dark"><img src="/assets/logo.svg" alt="" width="96" height="96"></div>
+        <p><strong>Fondo oscuro</strong> La misma versión, sin ajustes: el propio cuadrado garantiza la lectura.</p>
+      </li>
+      <li>
+        <div class="ds-use ds-use--icons"><img src="/assets/favicon.svg" alt="" width="64" height="64"><img src="/assets/favicon.svg" alt="" width="32" height="32"><img src="/assets/favicon.svg" alt="" width="16" height="16"></div>
+        <p><strong>Icono del navegador</strong> El mismo diseño se usa como favicon y sigue siendo legible en tamaños pequeños.</p>
+      </li>
     </ul>
   </section>
-  <section class="card" aria-labelledby="h-tipo">
-    <h2 id="h-tipo" class="card-title">Tipografía</h2>
-    <p class="type-sample">Roboto</p>
-    <p>Una única fuente variable, servida por el propio sitio (sin dependencias externas). Interlineado amplio para una lectura cómoda, títulos en azul y datos técnicos en fuente monoespaciada.</p>
-    <p class="type-mono"><code>ICP-MS · ICP OES · FAAS</code></p>
-  </section>
-  <section class="card" aria-labelledby="h-logo">
-    <h2 id="h-logo" class="card-title">Logotipo</h2>
-    <div class="logo-variants">
-      <img src="/assets/logo.svg" alt="Logotipo Fc" width="96" height="96">
-      <img src="/assets/favicon.svg" alt="Icono Fc" width="48" height="48">
+
+  <section class="ds-section" id="paleta" aria-labelledby="h-paleta">
+    <div class="ds-section__head">
+      <span class="ds-section__num" aria-hidden="true">02</span>
+      <div>
+        <h2 id="h-paleta">Paleta</h2>
+        <p>Colores organizados por función. Selecciona un código para copiarlo.</p>
+      </div>
     </div>
-    <p>Un cuadrado de esquinas redondeadas con degradado radial azul, las letras «Fc» y el número 28 en la esquina, como la celda de un elemento químico.</p>
+
+    <h3 class="ds-subhead">Marca</h3>
+    <ul class="ds-swatches">
+      <li class="ds-sw"><span class="ds-sw__color c-1c7d9a"></span><span class="ds-sw__name">Azul petróleo</span><code>#1C7D9A</code><span class="ds-sw__role">Centro del degradado del logotipo</span><button type="button" class="ds-copy" data-copy="#1C7D9A" hidden>Copiar <span class="visually-hidden">#1C7D9A</span></button></li>
+      <li class="ds-sw"><span class="ds-sw__color c-274c77"></span><span class="ds-sw__name">Azul profundo</span><code>#274C77</code><span class="ds-sw__role">Borde del degradado del logotipo</span><button type="button" class="ds-copy" data-copy="#274C77" hidden>Copiar <span class="visually-hidden">#274C77</span></button></li>
+      <li class="ds-sw"><span class="ds-sw__color c-cce2ed"></span><span class="ds-sw__name">Azul hielo</span><code>#CCE2ED</code><span class="ds-sw__role">Letras del logotipo</span><button type="button" class="ds-copy" data-copy="#CCE2ED" hidden>Copiar <span class="visually-hidden">#CCE2ED</span></button></li>
+      <li class="ds-sw"><span class="ds-sw__color c-8682ab"></span><span class="ds-sw__name">Lavanda</span><code>#8682AB</code><span class="ds-sw__role">Ilustración del logotipo con anillos</span><button type="button" class="ds-copy" data-copy="#8682AB" hidden>Copiar <span class="visually-hidden">#8682AB</span></button></li>
+    </ul>
+
+    <h3 class="ds-subhead">Interfaz · tema claro</h3>
+    <ul class="ds-swatches">
+      <li class="ds-sw"><span class="ds-sw__color c-5a729e"></span><span class="ds-sw__name">Azul pizarra</span><code>#5A729E</code><span class="ds-sw__role">Títulos y botones</span><button type="button" class="ds-copy" data-copy="#5A729E" hidden>Copiar <span class="visually-hidden">#5A729E</span></button></li>
+      <li class="ds-sw"><span class="ds-sw__color c-3f5682"></span><span class="ds-sw__name">Azul marino</span><code>#3F5682</code><span class="ds-sw__role">Títulos destacados</span><button type="button" class="ds-copy" data-copy="#3F5682" hidden>Copiar <span class="visually-hidden">#3F5682</span></button></li>
+      <li class="ds-sw"><span class="ds-sw__color c-666fe4"></span><span class="ds-sw__name">Violeta</span><code>#666FE4</code><span class="ds-sw__role">Elementos destacados y foco del teclado</span><button type="button" class="ds-copy" data-copy="#666FE4" hidden>Copiar <span class="visually-hidden">#666FE4</span></button></li>
+      <li class="ds-sw"><span class="ds-sw__color c-1d6ee7"></span><span class="ds-sw__name">Azul vivo</span><code>#1D6EE7</code><span class="ds-sw__role">Degradados y detalles</span><button type="button" class="ds-copy" data-copy="#1D6EE7" hidden>Copiar <span class="visually-hidden">#1D6EE7</span></button></li>
+      <li class="ds-sw"><span class="ds-sw__color c-4cb96e"></span><span class="ds-sw__name">Verde</span><code>#4CB96E</code><span class="ds-sw__role">Confirmaciones e indicadores</span><button type="button" class="ds-copy" data-copy="#4CB96E" hidden>Copiar <span class="visually-hidden">#4CB96E</span></button></li>
+      <li class="ds-sw"><span class="ds-sw__color c-3d4350"></span><span class="ds-sw__name">Grafito</span><code>#3D4350</code><span class="ds-sw__role">Texto</span><button type="button" class="ds-copy" data-copy="#3D4350" hidden>Copiar <span class="visually-hidden">#3D4350</span></button></li>
+      <li class="ds-sw"><span class="ds-sw__color c-f5f7fb"></span><span class="ds-sw__name">Niebla</span><code>#F5F7FB</code><span class="ds-sw__role">Superficies secundarias</span><button type="button" class="ds-copy" data-copy="#F5F7FB" hidden>Copiar <span class="visually-hidden">#F5F7FB</span></button></li>
+    </ul>
+
+    <h3 class="ds-subhead">Interfaz · tema oscuro</h3>
+    <ul class="ds-swatches">
+      <li class="ds-sw"><span class="ds-sw__color c-1a1f26"></span><span class="ds-sw__name">Noche</span><code>#1A1F26</code><span class="ds-sw__role">Fondo</span><button type="button" class="ds-copy" data-copy="#1A1F26" hidden>Copiar <span class="visually-hidden">#1A1F26</span></button></li>
+      <li class="ds-sw"><span class="ds-sw__color c-23282f"></span><span class="ds-sw__name">Carbón</span><code>#23282F</code><span class="ds-sw__role">Tarjetas y superficies</span><button type="button" class="ds-copy" data-copy="#23282F" hidden>Copiar <span class="visually-hidden">#23282F</span></button></li>
+      <li class="ds-sw"><span class="ds-sw__color c-9aa1ff"></span><span class="ds-sw__name">Violeta claro</span><code>#9AA1FF</code><span class="ds-sw__role">Elementos destacados y foco del teclado</span><button type="button" class="ds-copy" data-copy="#9AA1FF" hidden>Copiar <span class="visually-hidden">#9AA1FF</span></button></li>
+      <li class="ds-sw"><span class="ds-sw__color c-aec3ea"></span><span class="ds-sw__name">Azul claro</span><code>#AEC3EA</code><span class="ds-sw__role">Enlaces</span><button type="button" class="ds-copy" data-copy="#AEC3EA" hidden>Copiar <span class="visually-hidden">#AEC3EA</span></button></li>
+      <li class="ds-sw"><span class="ds-sw__color c-e5e5e5"></span><span class="ds-sw__name">Gris claro</span><code>#E5E5E5</code><span class="ds-sw__role">Texto</span><button type="button" class="ds-copy" data-copy="#E5E5E5" hidden>Copiar <span class="visually-hidden">#E5E5E5</span></button></li>
+    </ul>
+    <p class="ds-status" role="status" aria-live="polite" data-copied="Código copiado:" data-failed="No se ha podido copiar. Selecciona el código manualmente."></p>
+  </section>
+
+  <section class="ds-section" id="tipografia" aria-labelledby="h-tipo">
+    <div class="ds-section__head">
+      <span class="ds-section__num" aria-hidden="true">03</span>
+      <div>
+        <h2 id="h-tipo">Tipografía</h2>
+        <p>Una única familia tipográfica, pensada para una lectura cómoda, una jerarquía clara y una carga rápida.</p>
+      </div>
+    </div>
+
+    <div class="ds-type">
+      <div class="ds-specimen">
+        <p class="ds-specimen__aa" aria-hidden="true">Aa</p>
+        <p class="ds-specimen__name">Roboto</p>
+        <p class="ds-specimen__meta">Fuente variable · pesos de 100 a 900 · normal y cursiva</p>
+        <p class="ds-specimen__chars" aria-hidden="true">ABCDEFGHIJKLMNOPQRSTUVWXYZ<br>abcdefghijklmnopqrstuvwxyz<br>0123456789 ÀÉÎÕÜÇ ñ ¿?¡!</p>
+      </div>
+      <ul class="ds-weights">
+        <li class="w-400"><span>Regular · 400</span>Química analítica</li>
+        <li class="w-500"><span>Media · 500</span>Química analítica</li>
+        <li class="w-700"><span>Negrita · 700</span>Química analítica</li>
+        <li class="w-900"><span>Black · 900</span>Química analítica</li>
+      </ul>
+    </div>
+
+    <h3 class="ds-subhead">Jerarquía</h3>
+    <dl class="ds-scale">
+      <div><dt>Título de página</dt><dd class="ds-scale__h1">Vida de científico</dd><dd class="ds-scale__spec">Black 900 · de 2 a 3 rem, según la pantalla</dd></div>
+      <div><dt>Título de sección</dt><dd class="ds-scale__h2">Publicaciones recientes</dd><dd class="ds-scale__spec">Negrita · 1,6 rem</dd></div>
+      <div><dt>Texto</dt><dd class="ds-scale__body">La espectrometría convierte la luz en información.</dd><dd class="ds-scale__spec">Regular 400 · 1 rem (16 px) · interlineado 1,6</dd></div>
+      <div><dt>Texto auxiliar</dt><dd class="ds-scale__small">Fechas, pies de foto e información complementaria</dd><dd class="ds-scale__spec">Regular 400 · 0,875 rem · gris</dd></div>
+      <div><dt>Datos técnicos</dt><dd class="ds-scale__mono">ICP-MS · ICP OES · FAAS</dd><dd class="ds-scale__spec">Monoespaciada del sistema</dd></div>
+    </dl>
+
+    <h3 class="ds-subhead">Principios</h3>
+    <ul class="ds-principles">
+      <li><h4>Una sola familia</h4><p>Roboto en todos los textos. Al ser variable, un único archivo por estilo cubre todos los pesos, del fino al extranegrita.</p></li>
+      <li><h4>Alojamiento propio</h4><p>Los archivos WOFF2 los sirve el propio sitio, sin servicios externos de fuentes, lo que favorece la privacidad y el rendimiento.</p></li>
+      <li><h4>Lectura cómoda</h4><p>Cuerpo de 16 px, interlineado amplio y líneas de longitud controlada. Los títulos en azul guían la lectura.</p></li>
+      <li><h4>Datos técnicos</h4><p>Las siglas y los códigos aparecen en la fuente monoespaciada del sistema, lo que facilita distinguir caracteres parecidos.</p></li>
+    </ul>
   </section>
 </div>
 
@@ -120,6 +234,6 @@
   </div>
 </div>
 <script src="/js/app.js" defer></script>
-<script src="/js/shutter.js" defer></script>
+<script src="/js/design.js" defer></script>
 </body>
 </html>

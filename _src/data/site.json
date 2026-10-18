@@ -260,6 +260,21 @@
         "pt": "Melhor artigo",
         "en": "Best paper award",
         "es": "Premio al mejor artículo"
+      },
+      "total": {
+        "pt": "Premiações",
+        "en": "Awards",
+        "es": "Premios"
+      },
+      "best_plural": {
+        "pt": "Prêmios de melhor trabalho",
+        "en": "Best work awards",
+        "es": "Premios al mejor trabajo"
+      },
+      "period": {
+        "pt": "Período",
+        "en": "Period",
+        "es": "Período"
       }
     },
     "bio": {

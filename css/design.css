@@ -1,0 +1,155 @@
+/* ==================================================================
+// /css/design.css
+// Estilos exclusivos da página Design (/design, /en/design, /es/design).
+// Carregado depois de global.css e main.css (campo "styles:" do fragmento).
+// Segue o tema claro/escuro do site, como as demais páginas.
+================================================================== */
+
+/* 1. Abertura */
+/*****************************************************************/
+.ds-hero { display: grid; grid-template-columns: minmax(0, 7fr) minmax(0, 5fr); gap: 48px; align-items: center; padding-top: var(--spacing-xl); padding-bottom: var(--spacing-md); }
+.ds-hero h1 { font-size: clamp(2.2rem, 5vw, 3.4rem); font-weight: 900; letter-spacing: -0.02em; margin-bottom: 18px; color: var(--heading-strong); }
+.ds-hero .lead { font-size: clamp(1.08rem, 1.6vw, 1.28rem); font-weight: 500; color: var(--text-main); margin-bottom: 14px; max-width: 60ch; }
+.ds-hero p { max-width: 64ch; }
+.ds-hero__art { display: flex; justify-content: center; }
+.ds-hero__art img { width: 100%; max-width: 440px; height: auto; }
+
+/* Atalhos para as seções */
+.ds-toc { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 26px; }
+.ds-toc a { padding: 8px 16px; border: 1px solid var(--border-color); border-radius: 999px; background: var(--box-bg); color: var(--text-main); font-size: 0.9rem; font-weight: 600; text-decoration: none; transition: border-color var(--transition-fast), color var(--transition-fast), transform var(--transition-fast); }
+.ds-toc a:hover, .ds-toc a:focus-visible { border-color: var(--accent); color: var(--heading-strong); transform: translateY(-1px); }
+
+/* 2. Seções numeradas */
+/*****************************************************************/
+.ds-section { margin-top: var(--spacing-2xl); padding: clamp(24px, 4vw, 44px); background: var(--box-bg); border: 1px solid var(--border-color); border-radius: var(--radius-lg); box-shadow: var(--shadow-sm); scroll-margin-top: 90px; }
+.ds-section__head { display: flex; gap: 20px; align-items: flex-start; margin-bottom: 32px; padding-bottom: 24px; border-bottom: 1px solid var(--border-color); }
+.ds-section__num { flex-shrink: 0; display: grid; place-items: center; width: 52px; height: 52px; border-radius: 14px; color: #ffffff; font-weight: 900; font-size: 1.05rem; font-variant-numeric: tabular-nums; background: radial-gradient(circle at 20% 90%, #1c7d9a, #274c77); }
+.ds-section__head h2 { margin: 0 0 6px; font-size: clamp(1.6rem, 2.6vw, 2rem); font-weight: 900; color: var(--heading-strong); }
+.ds-section__head p { margin: 0; color: var(--text-muted); max-width: 70ch; }
+.ds-subhead { margin: 36px 0 16px; font-size: 0.8rem; font-weight: 800; letter-spacing: 0.1em; text-transform: uppercase; color: var(--text-muted); }
+
+/* 3. Logotipo */
+/*****************************************************************/
+.ds-logo { display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); gap: 40px; align-items: center; }
+.ds-anatomy { margin: 0; padding: 36px; border-radius: var(--radius-lg); background: var(--surface-2); background-image: linear-gradient(var(--border-color) 1px, transparent 1px), linear-gradient(90deg, var(--border-color) 1px, transparent 1px); background-size: 24px 24px; background-position: center; text-align: center; }
+.ds-anatomy__art { position: relative; width: min(220px, 70%); margin: 0 auto; }
+.ds-anatomy__art img { width: 100%; height: auto; display: block; filter: drop-shadow(0 10px 22px rgba(31, 45, 72, 0.22)); }
+.ds-anatomy figcaption { margin-top: 18px; font-size: 0.85rem; color: var(--text-muted); }
+.ds-pin, .ds-legend li::before { display: grid; place-items: center; width: 28px; height: 28px; border-radius: 50%; font-size: 0.82rem; font-weight: 800; color: #ffffff; background: #3f5682; box-shadow: 0 0 0 3px var(--box-bg); }
+.ds-pin { position: absolute; }
+[data-theme="dark"] .ds-pin, [data-theme="dark"] .ds-legend li::before { color: #1a1f26; background: var(--accent); }
+.ds-pin--1 { top: 8%; left: 34%; }
+.ds-pin--2 { top: 44%; right: -12px; }
+.ds-pin--3 { bottom: -12px; left: -12px; }
+
+.ds-legend { list-style: none; counter-reset: ds; display: grid; gap: 22px; margin: 0; padding: 0; }
+.ds-legend li { counter-increment: ds; display: grid; grid-template-columns: 28px minmax(0, 1fr); gap: 4px 16px; }
+.ds-legend li::before { content: counter(ds); grid-row: span 2; box-shadow: none; }
+.ds-legend h3 { margin: 2px 0 0; font-size: 1.1rem; font-weight: 800; color: var(--heading-strong); }
+.ds-legend p { margin: 0; color: var(--text-main); }
+
+.ds-uses { list-style: none; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; margin: 0; padding: 0; }
+.ds-use { display: flex; align-items: center; justify-content: center; gap: 18px; height: 150px; border-radius: var(--radius-lg); border: 1px solid var(--border-color); }
+.ds-use img { display: block; }
+.ds-use--light { background: #ffffff; }
+.ds-use--dark { background: #1a1f26; border-color: #343a45; }
+.ds-use--icons { background: var(--surface-2); align-items: flex-end; padding-bottom: 43px; }
+.ds-uses p { margin: 12px 0 0; font-size: 0.92rem; color: var(--text-muted); }
+.ds-uses strong { display: block; color: var(--heading-strong); }
+
+/* 4. Paleta */
+/*****************************************************************/
+.ds-swatches { list-style: none; display: grid; grid-template-columns: repeat(auto-fill, minmax(140px, 1fr)); gap: 14px; margin: 0; padding: 0; }
+.ds-sw { position: relative; display: flex; flex-direction: column; gap: 2px; padding: 10px 10px 14px; border: 1px solid var(--border-color); border-radius: var(--radius-lg); background: var(--box-bg); transition: transform var(--transition-fast), box-shadow var(--transition-fast); }
+.ds-sw:hover { transform: translateY(-2px); box-shadow: var(--shadow-md); }
+.ds-sw__color { display: block; height: 84px; margin-bottom: 10px; border-radius: 8px; box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.08); }
+[data-theme="dark"] .ds-sw__color { box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.12); }
+.ds-sw__name { padding: 0 4px; font-weight: 700; color: var(--heading-strong); }
+.ds-sw code { align-self: flex-start; margin: 2px 4px; padding: 1px 6px; font-family: var(--font-mono); font-size: 0.85rem; background: var(--surface-2); color: var(--text-main); border-radius: 4px; }
+.ds-sw__role { padding: 2px 4px 0; font-size: 0.84rem; line-height: 1.4; color: var(--text-muted); }
+.ds-copy { position: absolute; top: 16px; right: 16px; padding: 4px 10px; border: 0; border-radius: 999px; background: rgba(255, 255, 255, 0.92); color: #1a1f26; font-size: 0.75rem; font-weight: 700; cursor: pointer; opacity: 0; transition: opacity var(--transition-fast); }
+.ds-sw:hover .ds-copy, .ds-copy:focus-visible, .ds-copy.is-done { opacity: 1; }
+@media (hover: none) { .ds-copy { opacity: 1; } }
+.ds-status { min-height: 1.5em; margin: 14px 0 0; font-size: 0.9rem; font-weight: 600; color: var(--success); }
+
+.c-1c7d9a { background: #1c7d9a; } .c-274c77 { background: #274c77; } .c-cce2ed { background: #cce2ed; } .c-8682ab { background: #8682ab; }
+.c-5a729e { background: #5a729e; } .c-3f5682 { background: #3f5682; } .c-666fe4 { background: #666fe4; } .c-1d6ee7 { background: #1d6ee7; }
+.c-4cb96e { background: #4cb96e; } .c-3d4350 { background: #3d4350; } .c-f5f7fb { background: #f5f7fb; }
+.c-1a1f26 { background: #1a1f26; } .c-23282f { background: #23282f; } .c-9aa1ff { background: #9aa1ff; } .c-aec3ea { background: #aec3ea; } .c-e5e5e5 { background: #e5e5e5; }
+
+/* 5. Tipografia */
+/*****************************************************************/
+.ds-type { display: grid; grid-template-columns: minmax(0, 6fr) minmax(0, 5fr); gap: 20px; }
+.ds-specimen { padding: 28px; border-radius: var(--radius-lg); color: #eef3f8; background: radial-gradient(circle at 10% 100%, #1c7d9a 0%, #274c77 70%); }
+.ds-specimen p { margin: 0; }
+.ds-specimen__aa { font-size: clamp(4.5rem, 10vw, 7rem); font-weight: 900; line-height: 0.95; letter-spacing: -0.04em; color: #cce2ed; }
+.ds-specimen__name { margin-top: 10px !important; font-size: 1.6rem; font-weight: 800; color: #ffffff; }
+.ds-specimen__meta { font-size: 0.92rem; color: #d6e6ef; }
+.ds-specimen__chars { margin-top: 18px !important; font-size: 1rem; line-height: 1.6; letter-spacing: 0.04em; color: #e3eef4; word-break: break-all; }
+.ds-weights { list-style: none; display: grid; gap: 10px; margin: 0; padding: 0; }
+.ds-weights li { display: flex; flex-direction: column; gap: 2px; padding: 14px 18px; border: 1px solid var(--border-color); border-radius: var(--radius-lg); font-size: 1.45rem; line-height: 1.2; color: var(--heading-strong); }
+.ds-weights span { font-size: 0.78rem; font-weight: 600; letter-spacing: 0.04em; color: var(--text-muted); }
+.w-400 { font-weight: 400; } .w-500 { font-weight: 500; } .w-700 { font-weight: 700; } .w-900 { font-weight: 900; }
+
+.ds-scale { margin: 0; border-top: 1px solid var(--border-color); }
+.ds-scale > div { display: grid; grid-template-columns: 170px minmax(0, 1fr) minmax(0, 260px); gap: 6px 24px; align-items: baseline; padding: 16px 0; border-bottom: 1px solid var(--border-color); }
+.ds-scale dt { font-size: 0.85rem; font-weight: 700; color: var(--text-muted); }
+.ds-scale dd { margin: 0; min-width: 0; }
+.ds-scale__h1 { font-size: clamp(1.8rem, 3.6vw, 2.6rem); font-weight: 900; letter-spacing: -0.02em; line-height: 1.1; color: var(--heading-color); }
+.ds-scale__h2 { font-size: 1.6rem; font-weight: 700; line-height: 1.2; color: var(--heading-color); }
+.ds-scale__body { font-size: 1rem; line-height: 1.6; color: var(--text-main); }
+.ds-scale__small { font-size: 0.875rem; color: var(--text-muted); }
+.ds-scale__mono { font-family: var(--font-mono); font-size: 0.95rem; color: var(--text-main); }
+.ds-scale__spec { font-size: 0.82rem; color: var(--text-muted); text-align: right; }
+
+.ds-principles { list-style: none; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; margin: 0; padding: 0; }
+.ds-principles li { padding: 18px 20px; border-radius: var(--radius-lg); background: var(--surface-2); border-left: 3px solid var(--accent); }
+.ds-principles h4 { margin: 0 0 6px; font-size: 1.02rem; font-weight: 800; color: var(--heading-strong); }
+.ds-principles p { margin: 0; font-size: 0.95rem; color: var(--text-main); }
+
+/* 6. Responsividade */
+/*****************************************************************/
+@media (max-width: 1024px) {
+    .ds-scale > div { grid-template-columns: 150px minmax(0, 1fr); }
+    .ds-scale__spec { grid-column: 2; text-align: left; }
+}
+@media (max-width: 900px) {
+    .ds-hero, .ds-logo, .ds-type { grid-template-columns: minmax(0, 1fr); }
+    .ds-hero__art { order: -1; }
+    .ds-hero__art img { max-width: 260px; }
+    .ds-uses { grid-template-columns: minmax(0, 1fr); }
+    .ds-use { height: 130px; }
+    .ds-use--icons { padding-bottom: 33px; }
+}
+@media (max-width: 600px) {
+    .ds-section { padding: 20px 16px; border-radius: var(--radius-md); }
+    .ds-section__head { gap: 14px; margin-bottom: 24px; padding-bottom: 18px; }
+    .ds-section__num { width: 42px; height: 42px; border-radius: 12px; font-size: 0.95rem; }
+    .ds-anatomy { padding: 28px 20px; }
+    .ds-swatches { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; }
+    .ds-sw__color { height: 64px; }
+    .ds-copy { top: 14px; right: 14px; }
+    .ds-scale > div { grid-template-columns: minmax(0, 1fr); gap: 4px; }
+    .ds-scale__spec { grid-column: auto; }
+    .ds-principles { grid-template-columns: minmax(0, 1fr); }
+    .ds-specimen { padding: 22px; }
+    .ds-specimen__chars { font-size: 0.86rem; letter-spacing: 0; }
+}
+
+/* 7. Impressão */
+/*****************************************************************/
+@media print {
+    .ds-toc, .ds-copy, .ds-status { display: none !important; }
+    .ds-hero { grid-template-columns: minmax(0, 1fr); padding-top: 0; }
+    .ds-hero__art { display: none; }
+    .ds-section { margin-top: 16px; padding: 12px 0; border: 0; box-shadow: none !important; background: #ffffff !important; }
+    .ds-section__head { break-after: avoid; page-break-after: avoid; }
+    .ds-section__num, .ds-pin, .ds-legend li::before { color: #000000 !important; background: none !important; border: 1.5px solid #000000; box-shadow: none !important; }
+    .ds-anatomy { background: #ffffff !important; border: 1px solid #bbbbbb; }
+    .ds-anatomy__art img { filter: none !important; }
+    .ds-sw, .ds-weights li, .ds-principles li { background: #ffffff !important; border-color: #bbbbbb !important; box-shadow: none !important; transform: none !important; break-inside: avoid; page-break-inside: avoid; }
+    .ds-sw__color, .ds-use, .ds-specimen { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    .ds-logo, .ds-type { grid-template-columns: minmax(0, 1fr); }
+    .ds-swatches { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+    .ds-uses { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+}
