@@ -146,9 +146,9 @@
     },
     "home": {
       "stat_articles": {
-        "pt": "Artigos em periódicos",
+        "pt": "Artigos",
         "en": "Journal articles",
-        "es": "Artículos en revistas"
+        "es": "Artículosen"
       },
       "stat_citations": {
         "pt": "Citações",

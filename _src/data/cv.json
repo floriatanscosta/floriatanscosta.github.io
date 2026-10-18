@@ -92,9 +92,22 @@
     {"pt": "Química Analítica — Métodos Óticos de Análise", "en": "Analytical Chemistry — Optical Methods of Analysis", "es": "Química Analítica — Métodos Ópticos de Análisis"}
   ],
 
-  "keywords": ["Deep eutectic solvents (DES/NADES/HDES)", "Ultrasound-assisted extraction", "Microwave-assisted extraction", "Box-Behnken design", "Doehlert design", "Mixture design", "Kohonen self-organizing maps", "PCA", "Greenness metrics"],
-  
-  "techniques": ["ICP-MS", "ICP-OES", "FAAS", "GFAAS", "MIP-OES"],
+  "keywords": [
+    "Deep eutectic solvents",
+    "Sample preparation",
+    "Microwave-assisted extraction",
+    "Kohonen self-organizing maps",
+    "Artificial intelligence",
+    "Greenness metrics"
+  ],
+
+  "techniques": [
+    "ICP-MS",
+    "ICP-OES",
+    "FAAS",
+    "GFAAS",
+    "MIP-OES"
+  ],
   
   "projects": [
     {"years": {"pt": "2024 – atual", "en": "2024 – present", "es": "2024 – actualidad"}, "kind": "research", "status": "ongoing", "role": "lead",
@@ -157,46 +170,41 @@
   ],
 
   "chapters": [
-    {"year": 2023, "authors": "Junqueira, L. L.; <b>Costa, F. S.</b>; Franco, M.; de Assis, S. A.",
-     "title": "Stabilization by chemical preservatives of carboxymethyl cellulase from fungus Aspergillus niger produced by State Solid fermentation in fruit residues using chemical preservatives",
-     "book": "Uniting Knowledge Integrated Scientific Research For Global Development", "publisher": "Seven Editora", "place": "São José dos Pinhais", "pages": "1–14",
-     "url": "https://sevenpublicacoes.com.br/index.php/editora/article/view/2569"},
-    {"year": 2018, "authors": "Jesus, M. S.; Moreira, L. S.; <b>Costa, F. S.</b>; Pacheco, C. S. V.; Amorim, F. A. C.",
-     "title": "Avaliação dos índices de acidez e peróxidos do óleo de soja utilizado em frituras de alimentos comercializados no centro da cidade de Ilhéus-BA",
-     "book": "Políticas públicas e o desenvolvimento da ciência", "publisher": "Atena", "place": "Ponta Grossa", "pages": "146–158", "doi": "10.22533/at.ed.95618051216"},
-    {"year": 2017, "authors": "<b>Costa, F. S.</b>; Matos, E. B.; Gomes Junior, D. M.",
-     "title": "A Química dos Eletrônicos: uma abordagem contextualizada para o Ensino de Química",
-     "book": "Iniciação à docência: A licenciatura em Química e o ensino de ciências", "publisher": "EDUFBA", "place": "Salvador", "pages": "141–155", "isbn": "9788523216221"}
+    {
+      "year": 2017,
+      "authors": "<b>Costa, F. S.</b>; Matos, E. B.; Gomes Junior, D. M.",
+      "title": "A Química dos Eletrônicos: uma abordagem contextualizada para o Ensino de Química",
+      "book": "Iniciação à docência: A licenciatura em Química e o ensino de ciências",
+      "publisher": "EDUFBA",
+      "place": "Salvador",
+      "pages": "141–155",
+      "isbn": "9788523216221"
+    }
   ],
-
   "talks": [
-    {"year": 2020, "title": "Análise Química de amostras ambientais: métodos, desafios e novas tecnologias", "event": "II Encontro de Química do IF Baiano campus Guanambi", "place": "Guanambi"},
-    {"year": 2016, "title": "A Química do chocolate", "event": "I Oficina de Ciências — Escola Municipal Professora Josefina Teixeira do Azevedo", "place": "Guanambi"},
-    {"year": 2014, "title": "Química e sociedade: a importância do plástico em nossas vidas", "event": "Projeto Mulheres Camponesas de Caetité"}
+    {"year": 2020, "title": "Análise Química de amostras ambientais: métodos, desafios e novas tecnologias", "event": "II Encontro de Química do IF Baiano campus Guanambi", "place": "Guanambi"}
   ],
 
   "courses_taught": [
     {"year": 2024, "title": "Métricas e Ferramentas para Avaliação da Sustentabilidade de Métodos Analíticos", "hours": "4 h", "with": "Ferreira, S. S."},
     {"year": 2024, "title": "Planejamento de experimentos: Aspectos gerais, estratégias e ferramentas", "hours": "4 h"},
-    {"year": 2017, "title": "Espectrometria de Absorção Atômica em Chama e com geração química de vapor", "hours": "8 h"},
-    {"year": 2016, "title": "Capacitação dos moradores da comunidade de Sanharó para o beneficiamento de frutas", "hours": {"pt": "1 dia", "en": "1 day", "es": "1 día"}},
-    {"year": 2016, "title": "Química na cozinha: da arte ao chocolate", "hours": "4 h"}
+    {"year": 2017, "title": "Espectrometria de Absorção Atômica em Chama e com geração química de vapor", "hours": "8 h"}
   ],
   
   "technical": [
-    {"year": 2022, "kind": "website", "title": "Laboratório de Espectrometria, Sensores e Biossensores (LAESB)", "authors": "<b>Costa, F. S.</b>; Amaral, C. D. B.; Souto, D. E. P.", "url": "https://laesb.ufpr.br/"},
-    {"year": 2014, "kind": "booklet", "title": "Cartilha: Mulheres Camponesas de Caetité: uma proposta dialógica entre Educação do Campo e a Química", "authors": "Matos, E. B.; <b>Costa, F. S.</b>; Santos, J. G.; Souza, R. O.; Jesus, F. P."}
+    {"year": 2022, "kind": "website", "title": "Laboratório de Espectrometria, Sensores e Biossensores (LAESB)", "authors": "<b>Costa, F. S.</b>; Amaral, C. D. B.; Souto, D. E. P.", "url": "https://laesb.ufpr.br/"}
   ],
 
   "events_organized": [
     {"year": 2017, "title": "I Workshop de Espectrometria Atômica"},
     {"year": 2016, "title": "I Oficina de Ciências"},
-    {"year": 2014, "title": "III Encontro de Licenciatura em Química (III ELIQUIM)"},
+    {"year": 2014, "title": "III Encontro de Licenciatura em Química"},
     {"year": 2013, "title": "I Mostra de Produção Científica e Cultural"},
-    {"year": 2013, "title": "II Simpósio de Ensino de Química (II SiEnQ)"}
+    {"year": 2013, "title": "II Simpósio de Ensino de Química"}
   ],
+
   "events_attended": [
-    {"year": 2025, "title": "48ª Reunião Anual da Sociedade Brasileira de Química", "poster": "Sustainable Strategy Using Deep Eutectic Solvents for Multi-Matrix Sample Analysis by MIP-OES"},
+    {"year": 2025, "title": "48ª Reunião Anual da Sociedade Brasileira de Química"},
     {"year": 2023, "title": "14ª Semana Integrada de Ensino, Pesquisa e Extensão da UFPR"},
     {"year": 2023, "title": "75ª Reunião Anual da Sociedade Brasileira para o Progresso da Ciência"},
     {"year": 2022, "title": "13ª Semana Integrada de Ensino, Pesquisa e Extensão da UFPR"},
@@ -204,7 +212,7 @@
     {"year": 2021, "title": "XII Workshop de Quimiometria"},
     {"year": 2019, "title": "11ª Semana Integrada de Ensino, Pesquisa e Extensão"},
     {"year": 2019, "title": "Workshop CAS e UFPR: O impacto da informação científica e tecnológica no desenvolvimento da sua pesquisa"},
-    {"year": 2018, "title": "19º Encontro Nacional de Química Analítica e 7º Congresso Iberoamericano de Química Analítica", "poster": "Comparação de algoritmo híbrido e planejamento de mistura como estratégia de otimização no preparo de amostra"},
+    {"year": 2018, "title": "19º Encontro Nacional de Química Analítica e 7º Congresso Iberoamericano de Química Analítica"},
     {"year": 2015, "title": "II Mostra de Iniciação Científica e Cultural do Colégio Estadual Antônio Batista"},
     {"year": 2014, "title": "II Semana Acadêmica"},
     {"year": 2014, "title": "II Seminário de Iniciação Científica e Inovação Tecnológica"},
@@ -213,9 +221,9 @@
     {"year": 2013, "title": "I Reunião de Fóruns e Seminários dos Cursos Superiores do IF Baiano"},
     {"year": 2013, "title": "I Semana Acadêmica do IF Baiano Campus Guanambi"},
     {"year": 2013, "title": "I Seminário Internacional de Educação do Campo"},
-    {"year": 2013, "title": "I Seminário de Educação e II Encontro da Rede de Gestão Interdepartamental A & B", "poster": "Educação Popular: um estudo do movimento de mulheres camponesas no município de Caetité-BA"},
+    {"year": 2013, "title": "I Seminário de Educação e II Encontro da Rede de Gestão Interdepartamental A & B"},
     {"year": 2013, "title": "II Simpósio de Ensino de Química"},
-    {"year": 2013, "title": "III Simpósio Baiano de Licenciaturas", "poster": "Contextualizando a História do Grupo Escolar Getúlio Vargas em Guanambi-BA"},
+    {"year": 2013, "title": "III Simpósio Baiano de Licenciaturas"},
     {"year": 2012, "title": "I Encontro de Licenciatura em Química"}
   ],
 
