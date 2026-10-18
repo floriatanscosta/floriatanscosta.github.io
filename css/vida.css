@@ -101,7 +101,7 @@ html:not(.v-js) .v-progress { display: none; }
 
 /* Texto */
 .v-heading { font-size: clamp(1.9rem, 3.6vw, 2.8rem); font-weight: 900; line-height: 1.1; letter-spacing: -0.02em; margin-bottom: 16px; color: var(--heading-strong); }
-.v-subtitle { font-size: 1.2rem; font-weight: 600; font-style: italic; color: var(--heading-color); border-left: 3px solid var(--v-accent); padding-left: 12px; margin-bottom: 16px; }
+.v-subtitle { font-size: 1.2rem; font-weight: 600; font-style: italic; color: var(--heading-color); padding-left: 12px; margin-bottom: 16px; }
 .v-text p + p { margin-top: 12px; }
 .v-tags { list-style: none; display: flex; flex-wrap: wrap; gap: 8px; margin: 20px 0 0; padding: 0; }
 .v-tags li { padding: 5px 12px; border-radius: 999px; background: var(--surface-2); border: 1px solid var(--border-color); font-family: var(--font-mono); font-size: 0.8rem; font-weight: 600; color: var(--heading-strong); }

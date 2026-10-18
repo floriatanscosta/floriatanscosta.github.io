@@ -103,7 +103,7 @@
 .ds-scale__spec { font-size: 0.82rem; color: var(--text-muted); text-align: right; }
 
 .ds-principles { list-style: none; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; margin: 0; padding: 0; }
-.ds-principles li { padding: 18px 20px; border-radius: var(--radius-lg); background: var(--surface-2); border-left: 3px solid var(--accent); }
+.ds-principles li { padding: 18px 20px; border-radius: var(--radius-lg); background: var(--surface-2);}
 .ds-principles h4 { margin: 0 0 6px; font-size: 1.02rem; font-weight: 800; color: var(--heading-strong); }
 .ds-principles p { margin: 0; font-size: 0.95rem; color: var(--text-main); }
 

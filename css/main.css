@@ -286,8 +286,7 @@ textarea { resize: vertical; min-height: 120px; }
 .story-row:hover .story-img img { transform: scale(1.02); }
 .card-title-bold { font-size: clamp(2rem, 4vw, 3rem); font-weight: 900; letter-spacing: -0.5px; line-height: 1.1; background: linear-gradient(135deg, var(--heading-color) 0%, #8fa9d6 100%); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; margin-bottom: 14px; }
 .card-title-bold span { -webkit-text-fill-color: initial; }
-.card-subtitle { font-size: 1.3rem; font-weight: 600; color: var(--text-main); margin-bottom: 18px; line-height: 1.4; border-left: 3px solid var(--heading-color); padding-left: 12px; }
-
+.card-subtitle { font-size: 1.3rem; font-weight: 600; color: var(--text-main); margin-bottom: 18px; line-height: 1.4; padding-left: 12px; }
 
 /* 15. Legado: páginas especiais e exemplos */
 /*****************************************************************/
