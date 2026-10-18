@@ -11,7 +11,6 @@ Requisitos: ReportLab e svglib  ->  pip install reportlab svglib
 Fontes:    _src/fonts/Roboto-*.ttf (Roboto, licença SIL Open Font License — ver OFL.txt)
 Saída:     /assets/cv/floriatan-costa-cv-<idioma>.pdf
 
-Regras: sem foto; títulos de trabalhos, periódicos, eventos e instituições no idioma original;
 rodapé com a data de geração e a data da última atualização dos dados (_src/data/).
 """
 import os, re, subprocess, sys

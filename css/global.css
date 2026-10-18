@@ -234,12 +234,12 @@ footer, .site-footer { width: 100%; margin-top: auto; padding: 28px 0; backgroun
 
 /* 8. Alertas e Tags (Sucesso, Aviso, Erro, Info) */
 /*****************************************************************/
-.alert-box { padding: 15px 20px; border-radius: var(--radius-md); border-left: 4px solid transparent; margin-bottom: 20px; font-size: 0.95rem; line-height: 1.5; display: flex; align-items: flex-start; gap: 10px; color: var(--text-main); }
+.alert-box { padding: 15px 20px; border-radius: var(--radius-md); margin-bottom: 20px; font-size: 0.95rem; line-height: 1.5; display: flex; align-items: flex-start; gap: 10px; color: var(--text-main); }
 .alert-box strong { font-weight: 700; color: inherit; }
 .alert-info { border-left-color: var(--heading-color); background-color: rgba(90, 114, 158, 0.08); }
-.alert-success { border-left-color: #4CB96E; background-color: rgba(76, 185, 110, 0.08); }
-.alert-warning { border-left-color: #d97706; background-color: rgba(217, 119, 6, 0.08); }
-.alert-error { border-left-color: #dc2626; background-color: rgba(220, 38, 38, 0.08); }
+.alert-success { background-color: rgba(76, 185, 110, 0.08); }
+.alert-warning { background-color: rgba(217, 119, 6, 0.08); }
+.alert-error { background-color: rgba(220, 38, 38, 0.08); }
 .tag-badge { display: inline-flex; align-items: center; padding: 4px 10px; border-radius: 20px; font-size: 0.75rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; border: 1px solid transparent; }
 .tag-info { background-color: rgba(90, 114, 158, 0.1); color: var(--heading-color); border-color: rgba(90, 114, 158, 0.2); }
 .tag-success { background-color: rgba(76, 185, 110, 0.1); color: #2ea053; border-color: rgba(76, 185, 110, 0.2); }
