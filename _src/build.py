@@ -461,6 +461,8 @@ def head(page, lang, meta, langs_available, noindex=False):
         alts += f'\n  <link rel="alternate" hreflang="x-default" href="{SITE_URL + url(page, "pt")}">'
     og_alt = ''.join(f'\n  <meta property="og:locale:alternate" content="{OG_LOCALE[l]}">' for l in langs_available if l != lang)
     robots = '\n  <meta name="robots" content="noindex">' if noindex else ''
+    # Folhas de estilo próprias da página (campo "styles:" no cabeçalho do fragmento)
+    extra_css = ''.join(f'\n  <link rel="stylesheet" href="{c}?v={BUILD_DATE.strftime("%Y%m%d")}">' for c in meta.get('styles', '').split() if c)
     ld = ''
     if page == 'index':
         person = {
@@ -501,7 +503,7 @@ def head(page, lang, meta, langs_available, noindex=False):
   <link rel="preload" href="/assets/fonts/roboto-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
   <script src="/js/theme-init.js"></script>
   <link rel="stylesheet" href="/css/global.css?v={BUILD_DATE.strftime("%Y%m%d")}">
-  <link rel="stylesheet" href="/css/main.css?v={BUILD_DATE.strftime("%Y%m%d")}">
+  <link rel="stylesheet" href="/css/main.css?v={BUILD_DATE.strftime("%Y%m%d")}">{extra_css}
   <script src="/js/analytics.js" defer></script>{ld}
 </head>'''
 

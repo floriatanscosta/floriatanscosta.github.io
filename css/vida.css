@@ -1,0 +1,215 @@
+/* ==================================================================
+// /css/vida.css
+// Estilos exclusivos da página "Vida de cientista" (/vida).
+// Carregado depois de global.css e main.css (campo "styles:" do fragmento).
+// Os efeitos que dependem de JavaScript só são ativados quando /js/vida.js
+// adiciona a classe "v-js" ao <html>; sem JS, todo o conteúdo fica visível.
+================================================================== */
+
+.page-vida { --v-accent: var(--accent); --v-accent-2: var(--accent-2); --v-ease: cubic-bezier(0.2, 0.8, 0.2, 1); --v-ease-out: cubic-bezier(0.16, 1, 0.3, 1); }
+.page-vida main { overflow-x: clip; }
+
+/* 1. Barra de progresso da leitura */
+/*****************************************************************/
+.v-progress { position: fixed; top: 0; left: 0; right: 0; height: 3px; z-index: 1100; pointer-events: none; }
+.v-progress span { display: block; height: 100%; transform-origin: 0 50%; transform: scaleX(var(--p, 0)); background: linear-gradient(90deg, var(--v-accent), var(--v-accent-2)); }
+html:not(.v-js) .v-progress { display: none; }
+
+/* 2. Abertura (hero) */
+/*****************************************************************/
+.v-hero { position: relative; isolation: isolate; min-height: min(86vh, 760px); display: flex; flex-direction: column; justify-content: center; padding: var(--spacing-xl, 64px) 0 96px; }
+.v-hero__inner { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.1fr); gap: 48px; align-items: center; }
+.v-kicker { display: inline-block; margin-bottom: 14px; font-size: 0.8rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: var(--heading-strong); }
+.v-title { font-size: clamp(2.6rem, 6.4vw, 5rem); font-weight: 900; line-height: 1.02; letter-spacing: -0.03em; margin-bottom: 18px; color: var(--heading-strong); }
+.v-title__accent { background: linear-gradient(100deg, var(--v-accent) 0%, var(--v-accent-2) 45%, var(--v-accent) 90%); background-size: 200% 100%; -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; animation: v-shine 6s linear infinite; }
+.v-hero .lead { font-size: clamp(1.05rem, 1.6vw, 1.3rem); max-width: 44ch; color: var(--text-main); margin-bottom: 28px; }
+
+/* Entrada dos elementos da abertura (só CSS: termina sempre visível) */
+.v-in { animation: v-rise 0.9s var(--v-ease-out) both; }
+.v-hero__text .v-in:nth-child(2) { animation-delay: 0.08s; }
+.v-hero__text .v-in:nth-child(3) { animation-delay: 0.16s; }
+.v-hero__text .v-in:nth-child(4) { animation-delay: 0.24s; }
+.v-hero__art.v-in { animation: v-zoom 1.2s var(--v-ease-out) 0.15s both; }
+
+/* Sumário em "pílulas" */
+.v-chapters ol { list-style: none; display: flex; flex-wrap: wrap; gap: 8px; margin: 0; padding: 0; }
+.v-chapters a { display: inline-flex; align-items: center; gap: 8px; padding: 7px 14px 7px 8px; border: 1px solid var(--border-color); border-radius: 999px; background: var(--box-bg); color: var(--text-main); font-size: 0.88rem; font-weight: 600; text-decoration: none; transition: transform var(--transition-fast), border-color var(--transition-fast), box-shadow var(--transition-fast); }
+.v-chapters a span { display: inline-grid; place-items: center; min-width: 26px; height: 26px; border-radius: 999px; background: var(--surface-2); color: var(--heading-strong); font-size: 0.72rem; font-weight: 800; font-variant-numeric: tabular-nums; }
+.v-chapters a:hover, .v-chapters a:focus-visible { transform: translateY(-2px); border-color: var(--v-accent); box-shadow: var(--shadow-md); }
+
+/* Imagem da abertura: flutua e acompanha a rolagem (parallax) */
+.v-hero__art { translate: 0 var(--py, 0px); }
+.v-hero__art img { width: 100%; height: auto; display: block; animation: v-float 9s ease-in-out infinite; filter: drop-shadow(0 18px 30px rgba(31, 45, 72, 0.18)); }
+
+/* Fundo animado: manchas de cor e círculos (mesmo estilo das montagens) */
+.v-hero__bg { position: absolute; inset: 0; z-index: -1; overflow: hidden; pointer-events: none; -webkit-mask-image: linear-gradient(to bottom, transparent 0, #000 22%, #000 78%, transparent 100%); mask-image: linear-gradient(to bottom, transparent 0, #000 22%, #000 78%, transparent 100%); }
+.v-blob { position: absolute; border-radius: 50%; filter: blur(60px); opacity: 0.35; animation: v-drift 18s ease-in-out infinite alternate; }
+.v-blob--1 { width: 420px; height: 420px; top: -80px; left: -120px; background: var(--v-accent); }
+.v-blob--2 { width: 360px; height: 360px; bottom: -60px; right: 5%; background: var(--v-accent-2); animation-duration: 22s; animation-delay: -6s; opacity: 0.25; }
+.v-blob--3 { width: 260px; height: 260px; top: 30%; left: 45%; background: #c78bd8; animation-duration: 26s; animation-delay: -12s; opacity: 0.22; }
+[data-theme="dark"] .v-blob { opacity: 0.18; }
+.v-deco { position: absolute; border-radius: 50%; animation: v-bob 7s ease-in-out infinite; }
+.v-deco--ring { border: 4px solid color-mix(in srgb, var(--v-accent) 45%, transparent); }
+.v-deco--dot { background: color-mix(in srgb, var(--v-accent-2) 55%, transparent); }
+.v-deco--a { width: 70px; height: 70px; top: 14%; right: 8%; }
+.v-deco--b { width: 16px; height: 16px; top: 22%; left: 40%; animation-delay: -2s; }
+.v-deco--c { width: 22px; height: 22px; bottom: 22%; left: 6%; animation-delay: -4s; }
+.v-deco--d { width: 46px; height: 46px; bottom: 12%; left: 52%; animation-delay: -1s; }
+.v-deco--e { width: 12px; height: 12px; top: 64%; right: 4%; animation-delay: -5s; }
+
+/* Indicador de rolagem */
+.v-scroll { position: absolute; left: 50%; bottom: 24px; translate: -50% 0; display: grid; place-items: center; width: 44px; height: 44px; border-radius: 50%; }
+.v-scroll__mouse { position: relative; width: 24px; height: 38px; border: 2px solid var(--heading-strong); border-radius: 14px; opacity: 0.7; }
+.v-scroll__mouse::after { content: ''; position: absolute; left: 50%; top: 7px; width: 4px; height: 8px; margin-left: -2px; border-radius: 2px; background: var(--heading-strong); animation: v-wheel 1.8s ease-in-out infinite; }
+
+/* 3. Indicador lateral dos capítulos (só telas largas) */
+/*****************************************************************/
+.v-rail { position: fixed; right: 22px; top: 50%; translate: 0 -50%; z-index: 50; display: none; flex-direction: column; gap: 12px; opacity: 0; transition: opacity var(--transition-normal); pointer-events: none; }
+.v-rail span { width: 8px; height: 8px; border-radius: 999px; background: var(--border-color); transition: height 0.4s var(--v-ease), background-color 0.4s; }
+.v-rail span.is-active { height: 28px; background: var(--v-accent); }
+.v-rail.is-visible { opacity: 1; }
+@media (min-width: 1200px) { .v-js .v-rail { display: flex; } }
+
+/* 4. Capítulos */
+/*****************************************************************/
+.v-story { display: grid; gap: clamp(72px, 10vw, 140px); padding-top: 32px; padding-bottom: 32px; }
+.v-chapter { position: relative; display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr); gap: clamp(28px, 5vw, 64px); align-items: center; scroll-margin-top: 90px; }
+.v-chapter--reverse { grid-template-columns: minmax(0, 1fr) minmax(0, 1.1fr); }
+.v-chapter--reverse .v-media { order: 2; }
+
+/* Número grande do capítulo, ao fundo */
+.v-num { position: absolute; top: -0.45em; left: -0.05em; z-index: -1; font-size: clamp(6rem, 16vw, 13rem); font-weight: 900; line-height: 1; letter-spacing: -0.05em; color: transparent; -webkit-text-stroke: 2px color-mix(in srgb, var(--heading-color) 22%, transparent); translate: 0 var(--py, 0px); user-select: none; }
+.v-chapter--reverse .v-num { left: auto; right: -0.05em; }
+
+/* Mídia: moldura com leve inclinação 3D ao passar o mouse */
+.v-media { position: relative; perspective: 1000px; }
+.v-slides { position: relative; display: grid; translate: 0 var(--py, 0px); transform: rotateX(var(--rx, 0deg)) rotateY(var(--ry, 0deg)); transition: transform 0.5s var(--v-ease); transform-style: preserve-3d; }
+.v-slide { grid-area: 1 / 1; width: 100%; height: auto; display: block; filter: drop-shadow(0 16px 26px rgba(31, 45, 72, 0.14)); }
+[data-theme="dark"] .v-slide, [data-theme="dark"] .v-hero__art img { filter: drop-shadow(0 16px 26px rgba(0, 0, 0, 0.45)); }
+
+/* Apresentação automática (2+ imagens): troca suave com zoom lento */
+.v-slides.is-slideshow .v-slide { opacity: 0; transform: scale(1.04); transition: opacity 1s ease, transform 6s linear; }
+.v-slides.is-slideshow .v-slide.is-current { opacity: 1; transform: scale(1); }
+.v-slides.is-slideshow .v-slide:not(.is-current) { pointer-events: none; }
+.v-controls { display: flex; align-items: center; gap: 10px; margin-top: 14px; }
+.v-controls__dots { display: flex; gap: 6px; }
+.v-dot { width: 24px; height: 24px; padding: 0; border: 0; background: transparent; cursor: pointer; display: grid; place-items: center; }
+.v-dot::before { content: ''; width: 10px; height: 10px; border-radius: 999px; background: var(--border-color); transition: width 0.3s var(--v-ease), background-color 0.3s; }
+.v-dot[aria-current="true"]::before { width: 22px; background: var(--v-accent); }
+.v-pause { min-width: 36px; height: 36px; padding: 0 12px; border: 1px solid var(--border-color); border-radius: 999px; background: var(--box-bg); color: var(--text-main); font-size: 0.8rem; font-weight: 600; cursor: pointer; }
+.v-pause:hover, .v-dot:hover::before { border-color: var(--v-accent); }
+
+/* Texto */
+.v-heading { font-size: clamp(1.9rem, 3.6vw, 2.8rem); font-weight: 900; line-height: 1.1; letter-spacing: -0.02em; margin-bottom: 16px; color: var(--heading-strong); }
+.v-subtitle { font-size: 1.2rem; font-weight: 600; font-style: italic; color: var(--heading-color); border-left: 3px solid var(--v-accent); padding-left: 12px; margin-bottom: 16px; }
+.v-text p + p { margin-top: 12px; }
+.v-tags { list-style: none; display: flex; flex-wrap: wrap; gap: 8px; margin: 20px 0 0; padding: 0; }
+.v-tags li { padding: 5px 12px; border-radius: 999px; background: var(--surface-2); border: 1px solid var(--border-color); font-family: var(--font-mono); font-size: 0.8rem; font-weight: 600; color: var(--heading-strong); }
+
+/* 5. Revelação ao rolar (ativada pelo JS) */
+/*****************************************************************/
+.v-js [data-reveal] { opacity: 0; translate: 0 32px; transition: opacity 0.9s var(--v-ease-out), translate 0.9s var(--v-ease-out); transition-delay: var(--d, 0s); }
+.v-js [data-reveal].is-in { opacity: 1; translate: 0 0; }
+.v-js .v-media[data-reveal] { translate: -40px 0; clip-path: inset(0 100% 0 0 round var(--radius-lg)); transition: opacity 0.6s ease, translate 1.1s var(--v-ease-out), clip-path 1.2s var(--v-ease-out); }
+.v-js .v-chapter--reverse .v-media[data-reveal] { translate: 40px 0; clip-path: inset(0 0 0 100% round var(--radius-lg)); }
+.v-js .v-media[data-reveal].is-in { translate: 0 0; clip-path: inset(-10% -10% -10% -10%); }
+
+/* 6. Galeria em movimento contínuo */
+/*****************************************************************/
+.v-gallery { padding: clamp(64px, 9vw, 120px) 0 32px; }
+.v-gallery__head { display: flex; flex-wrap: wrap; align-items: flex-end; justify-content: space-between; gap: 16px; margin-bottom: 28px; }
+.v-gallery__lead { color: var(--text-muted); max-width: 60ch; }
+.v-marquee { overflow-x: auto; scroll-snap-type: x mandatory; padding: 12px 0 20px; }
+.v-marquee__track { list-style: none; display: flex; gap: 20px; width: max-content; margin: 0; padding: 0 20px; }
+.v-marquee__track li { scroll-snap-align: center; }
+.v-thumb { display: block; width: clamp(240px, 32vw, 420px); padding: 0; border: 1px solid var(--border-color); border-radius: var(--radius-lg); overflow: hidden; background: var(--surface-2); cursor: zoom-in; transition: transform 0.5s var(--v-ease), box-shadow 0.5s var(--v-ease), border-color 0.3s; }
+.v-thumb img { width: 100%; height: auto; aspect-ratio: 940 / 540; object-fit: cover; display: block; transition: transform 0.8s var(--v-ease); }
+.v-thumb:hover, .v-thumb:focus-visible { transform: translateY(-6px) rotate(-0.6deg); box-shadow: var(--shadow-md); border-color: var(--v-accent); }
+.v-thumb:hover img, .v-thumb:focus-visible img { transform: scale(1.06); }
+/* Com JS: a faixa desliza sozinha (pausa ao passar o mouse, ao focar ou pelo botão) */
+.v-js .v-marquee.is-running { overflow: hidden; mask-image: linear-gradient(90deg, transparent, #000 6%, #000 94%, transparent); }
+.v-js .v-marquee.is-running .v-marquee__track { animation: v-marquee var(--v-duration, 60s) linear infinite; }
+.v-js .v-marquee.is-running:hover .v-marquee__track,
+.v-js .v-marquee.is-running:focus-within .v-marquee__track,
+.v-js .v-marquee.is-paused .v-marquee__track { animation-play-state: paused; }
+
+/* 7. Encerramento */
+/*****************************************************************/
+.v-outro { text-align: center; padding-top: clamp(48px, 7vw, 96px); padding-bottom: clamp(48px, 7vw, 96px); }
+.v-outro .v-heading { margin-bottom: 24px; }
+.v-outro__actions { display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; }
+
+/* 8. Imagem ampliada (lightbox) */
+/*****************************************************************/
+.v-lightbox { margin: auto; inset: 0; width: min(1100px, 94vw); max-width: none; max-height: 92vh; padding: 0; border: 0; border-radius: var(--radius-lg); background: var(--box-bg); color: var(--text-main); overflow: visible; }
+.v-lightbox::backdrop { background: rgba(10, 14, 22, 0.78); backdrop-filter: blur(4px); }
+.v-lightbox[open] { animation: v-zoom 0.4s var(--v-ease-out); }
+.v-lightbox__fig { margin: 0; padding: 16px 16px 12px; }
+.v-lightbox__fig img { width: 100%; height: auto; max-height: calc(92vh - 90px); object-fit: contain; display: block; border-radius: var(--radius-md); }
+.v-lightbox__fig figcaption { padding: 10px 4px 0; font-size: 0.92rem; color: var(--text-muted); text-align: center; }
+.v-lightbox__btn { position: absolute; display: grid; place-items: center; width: 44px; height: 44px; border: 1px solid var(--border-color); border-radius: 50%; background: var(--box-bg); color: var(--heading-strong); font-size: 1.6rem; line-height: 1; cursor: pointer; box-shadow: var(--shadow-md); }
+.v-lightbox__btn:hover { border-color: var(--v-accent); }
+.v-lightbox__close { top: -14px; right: -14px; }
+.v-lightbox__prev { top: 50%; left: -22px; translate: 0 -50%; }
+.v-lightbox__next { top: 50%; right: -22px; translate: 0 -50%; }
+
+/* 9. Animações */
+/*****************************************************************/
+@keyframes v-rise { from { opacity: 0; transform: translateY(26px); } to { opacity: 1; transform: none; } }
+@keyframes v-zoom { from { opacity: 0; transform: scale(0.94); } to { opacity: 1; transform: none; } }
+@keyframes v-float { 0%, 100% { transform: translateY(0) rotate(0deg); } 50% { transform: translateY(-14px) rotate(-0.6deg); } }
+@keyframes v-drift { 0% { transform: translate(0, 0) scale(1); } 50% { transform: translate(60px, 30px) scale(1.12); } 100% { transform: translate(-30px, 50px) scale(0.95); } }
+@keyframes v-bob { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-18px); } }
+@keyframes v-shine { to { background-position: -200% 0; } }
+@keyframes v-wheel { 0% { opacity: 0; transform: translateY(-3px); } 40% { opacity: 1; } 100% { opacity: 0; transform: translateY(10px); } }
+@keyframes v-marquee { to { transform: translateX(-50%); } }
+
+/* 10. Responsividade */
+/*****************************************************************/
+@media (max-width: 900px) {
+    .v-hero { min-height: 0; padding-bottom: 88px; }
+    .v-hero__inner, .v-chapter, .v-chapter--reverse { grid-template-columns: minmax(0, 1fr); }
+    .v-hero__art { max-width: 620px; }
+    .v-chapter--reverse .v-media { order: 0; }
+    .v-num { top: -0.55em; font-size: clamp(5rem, 24vw, 8rem); }
+    .v-lightbox__prev { left: 6px; }
+    .v-lightbox__next { right: 6px; }
+    .v-lightbox__close { top: 6px; right: 6px; }
+}
+@media (max-width: 560px) {
+    .v-scroll, .v-deco--a, .v-deco--b { display: none; }
+    .v-hero { padding-bottom: 40px; }
+    .v-chapters a { font-size: 0.82rem; }
+}
+
+/* 11. Movimento reduzido: sem parallax, inclinação, deslizamento ou apresentação automática */
+/*****************************************************************/
+@media (prefers-reduced-motion: reduce) {
+    .v-in, .v-hero__art img, .v-blob, .v-deco, .v-title__accent, .v-scroll__mouse::after { animation: none !important; }
+    .v-js [data-reveal], .v-js .v-media[data-reveal] { opacity: 1; translate: none; clip-path: none; transition: none; }
+    .v-hero__art, .v-num, .v-slides { translate: none; transform: none; }
+}
+
+/* 12. Impressão */
+/*****************************************************************/
+@media print {
+    .v-progress, .v-rail, .v-hero__bg, .v-scroll, .v-controls, .v-gallery__toggle, .v-lightbox, .v-num, .v-outro, .v-chapters, [data-clone] { display: none !important; }
+    .v-hero { min-height: 0; padding: 0 0 12px; }
+    .v-hero__inner, .v-chapter, .v-chapter--reverse { grid-template-columns: minmax(0, 1fr); gap: 12px; }
+    .v-chapter--reverse .v-media { order: 0; }
+    .v-hero__art { max-width: 12cm; }
+    .v-title__accent { -webkit-text-fill-color: currentColor; background: none; color: #000; }
+    [data-reveal], .v-media[data-reveal] { opacity: 1 !important; translate: none !important; clip-path: none !important; }
+    .v-hero__art, .v-num, .v-slides { translate: none !important; transform: none !important; }
+    .v-slide, .v-hero__art img { filter: none !important; }
+    .v-slides.is-slideshow .v-slide { opacity: 1; transform: none; }
+    .v-slides.is-slideshow .v-slide:not(:first-child) { display: none; }
+    .v-story { gap: 24px; }
+    .v-chapter { break-inside: avoid; page-break-inside: avoid; }
+    .v-slide, .v-hero__art img { max-height: 9cm; width: auto; max-width: 100%; }
+    .v-marquee, .v-js .v-marquee.is-running { overflow: visible; mask-image: none; }
+    .v-marquee__track { width: auto; flex-wrap: wrap; gap: 8px; padding: 0; animation: none !important; transform: none !important; }
+    .v-thumb { width: 5.5cm; border-color: #bbb; background: #fff; }
+    .v-chapters a, .v-tags li { background: #fff; border-color: #999; color: #000; }
+    .v-chapters a span { background: #fff; }
+}

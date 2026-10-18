@@ -30,9 +30,10 @@
   <script src="/js/theme-init.js"></script>
   <link rel="stylesheet" href="/css/global.css?v=20261018">
   <link rel="stylesheet" href="/css/main.css?v=20261018">
+  <link rel="stylesheet" href="/css/vida.css?v=20261018">
   <script src="/js/analytics.js" defer></script>
 </head>
-<body>
+<body class="page-vida">
 <a class="skip-link" href="#main">Pular para o conteúdo</a>
 <header class="site-header">
   <div class="container header-content">
@@ -54,60 +55,169 @@
   </div>
 </header>
 <main id="main" tabindex="-1">
-<section class="page-hero page-hero--center container">
-  <h1>Vida de cientista...</h1>
-  <p class="lead">Coisas fascinantes sobre os bastidores da vida na pesquisa.</p>
+<!--
+  COMO ADICIONAR IMAGENS NESTA PÁGINA
+  1. Salve as fotos em WebP na pasta /assets/img/vida/ (ex.: plasma-icp.webp).
+     Tamanho sugerido: 1200 px no lado maior, até ~200 KB.
+  2. Capítulos: coloque mais de um <img class="v-slide"> dentro de <div class="v-slides">.
+     Com duas ou mais imagens, o capítulo vira uma apresentação automática
+     (com botões de pausa e de troca de imagem).
+  3. Galeria: copie um <li> da lista "v-marquee" e troque src, alt, width e height.
+  4. Sempre escreva um texto alternativo (alt) que descreva a foto.
+-->
+<div class="v-progress" aria-hidden="true"><span></span></div>
+
+<section class="v-hero" aria-labelledby="v-title">
+  <div class="v-hero__bg" aria-hidden="true">
+    <span class="v-blob v-blob--1"></span>
+    <span class="v-blob v-blob--2"></span>
+    <span class="v-blob v-blob--3"></span>
+    <span class="v-deco v-deco--ring v-deco--a"></span>
+    <span class="v-deco v-deco--dot v-deco--b"></span>
+    <span class="v-deco v-deco--dot v-deco--c"></span>
+    <span class="v-deco v-deco--ring v-deco--d"></span>
+    <span class="v-deco v-deco--dot v-deco--e"></span>
+  </div>
+  <div class="container v-hero__inner">
+    <div class="v-hero__text">
+      <p class="v-kicker v-in">Bastidores da pesquisa</p>
+      <h1 id="v-title" class="v-title v-in">Vida de <span class="v-title__accent">cientista</span>...</h1>
+      <p class="lead v-in">Coisas fascinantes sobre os bastidores da vida na pesquisa.</p>
+      <nav class="v-chapters v-in" aria-label="Capítulos desta página">
+        <ol>
+          <li><a href="#espectros"><span>01</span> Espectros e Luzes</a></li>
+          <li><a href="#conhecimento"><span>02</span> Compartilhando Conhecimento</a></li>
+          <li><a href="#amostras"><span>03</span> Amostras</a></li>
+          <li><a href="#quimica-verde"><span>04</span> Química Verde</a></li>
+          <li><a href="#campo"><span>05</span> Coleta em Campo</a></li>
+        </ol>
+      </nav>
+    </div>
+    <div class="v-hero__art v-in" data-parallax="0.12">
+      <img src="/assets/img/time4.webp" alt="Montagem de fotos de equipamentos de laboratório e plasmas de espectrômetros" width="940" height="540" fetchpriority="high">
+    </div>
+  </div>
+  <a class="v-scroll" href="#espectros"><span class="v-scroll__mouse" aria-hidden="true"></span><span class="visually-hidden">Ir para o primeiro capítulo</span></a>
 </section>
 
-<div class="container story">
-  <section class="story-row">
-    <div class="story-img"><img src="/assets/img/time5.webp" alt="Montagem de fotos de plasmas e chamas em espectrômetros" width="940" height="540" loading="lazy"></div>
-    <div class="story-text">
-      <h2 class="card-title-bold">Espectros e Luzes <span aria-hidden="true">✨</span></h2>
-      <p>Quem trabalha com espectrometria sabe: é um verdadeiro espetáculo visual. Plasmas brilhantes e chamas intensas com cores que fazem qualquer um parar para admirar.</p>
-      <p>Já explorei este universo operando diversos equipamentos, como ICP-MS, ICP-OES, FAAS, GFAAS e MIP OES. E a lista continua crescendo.</p>
+<div class="v-rail" aria-hidden="true"><span data-for="espectros"></span><span data-for="conhecimento"></span><span data-for="amostras"></span><span data-for="quimica-verde"></span><span data-for="campo"></span></div>
+
+<div class="container v-story">
+  <section class="v-chapter" id="espectros" aria-labelledby="t-espectros">
+    <span class="v-num" aria-hidden="true" data-parallax="-0.08">01</span>
+    <div class="v-media" data-reveal>
+      <div class="v-slides" data-parallax="-0.04">
+        <img class="v-slide" src="/assets/img/time5.webp" alt="Montagem de fotos de plasmas e chamas em espectrômetros" width="940" height="540" loading="lazy">
+      </div>
+    </div>
+    <div class="v-text">
+      <h2 id="t-espectros" class="v-heading" data-reveal>Espectros e Luzes <span aria-hidden="true">✨</span></h2>
+      <p data-reveal>Quem trabalha com espectrometria sabe: é um verdadeiro espetáculo visual. Plasmas brilhantes e chamas intensas com cores que fazem qualquer um parar para admirar.</p>
+      <p data-reveal>Já explorei este universo operando diversos equipamentos, como ICP-MS, ICP-OES, FAAS, GFAAS e MIP OES. E a lista continua crescendo.</p>
+      <ul class="v-tags" data-reveal aria-label="Técnicas">
+        <li>ICP-MS</li><li>ICP-OES</li><li>FAAS</li><li>GFAAS</li><li>MIP OES</li>
+      </ul>
     </div>
   </section>
 
-  <section class="story-row story-row--reverse">
-    <div class="story-img"><img src="/assets/img/time6.webp" alt="Montagem de fotos de apresentações, aulas e laboratório" width="940" height="540" loading="lazy"></div>
-    <div class="story-text">
-      <h2 class="card-title-bold">Compartilhando Conhecimento <span aria-hidden="true">📣</span></h2>
-      <p class="card-subtitle">A ciência só avança quando é compartilhada.</p>
-      <p>Um dado isolado é apenas um número, mas quando discutido, torna-se uma descoberta.</p>
-      <p>Ao longo da minha trajetória, ministrei cursos e aulas, <a href="/publicacoes" class="inline-link">escrevi artigos</a> e atuei como <a href="/experiencia#revisor" class="inline-link">revisor de periódicos</a>. Cada conversa, curso ou aula é uma experiência de aprendizado contínuo, tanto para quem ensina quanto para quem aprende.</p>
+  <section class="v-chapter v-chapter--reverse" id="conhecimento" aria-labelledby="t-conhecimento">
+    <span class="v-num" aria-hidden="true" data-parallax="-0.08">02</span>
+    <div class="v-media" data-reveal>
+      <div class="v-slides" data-parallax="-0.04">
+        <img class="v-slide" src="/assets/img/time6.webp" alt="Montagem de fotos de apresentações, aulas e laboratório" width="940" height="540" loading="lazy">
+      </div>
+    </div>
+    <div class="v-text">
+      <h2 id="t-conhecimento" class="v-heading" data-reveal>Compartilhando Conhecimento <span aria-hidden="true">📣</span></h2>
+      <p class="v-subtitle" data-reveal>A ciência só avança quando é compartilhada.</p>
+      <p data-reveal>Um dado isolado é apenas um número, mas quando discutido, torna-se uma descoberta.</p>
+      <p data-reveal>Ao longo da minha trajetória, ministrei cursos e aulas, <a href="/publicacoes" class="inline-link">escrevi artigos</a> e atuei como <a href="/experiencia#revisor" class="inline-link">revisor de periódicos</a>. Cada conversa, curso ou aula é uma experiência de aprendizado contínuo, tanto para quem ensina quanto para quem aprende.</p>
     </div>
   </section>
 
-  <section class="story-row">
-    <div class="story-img"><img src="/assets/img/time2.webp" alt="Montagem de fotos de tubos e frascos com amostras" width="940" height="540" loading="lazy"></div>
-    <div class="story-text">
-      <h2 class="card-title-bold">Amostras e mais amostras...</h2>
-      <p class="card-subtitle">Se eu fosse colecionar algo, seriam amostras.</p>
-      <p>Na química analítica, absolutamente tudo pode ser analisado. Desde a água gelada da Antártica até amostras de sangue de ovelhas.</p>
-      <p>Cada matriz traz um novo desafio e exige extrema precisão para garantir resultados confiáveis e a máxima qualidade analítica possível.</p>
+  <section class="v-chapter" id="amostras" aria-labelledby="t-amostras">
+    <span class="v-num" aria-hidden="true" data-parallax="-0.08">03</span>
+    <div class="v-media" data-reveal>
+      <div class="v-slides" data-parallax="-0.04">
+        <img class="v-slide" src="/assets/img/time2.webp" alt="Montagem de fotos de tubos e frascos com amostras" width="940" height="540" loading="lazy">
+      </div>
+    </div>
+    <div class="v-text">
+      <h2 id="t-amostras" class="v-heading" data-reveal>Amostras e mais amostras...</h2>
+      <p class="v-subtitle" data-reveal>Se eu fosse colecionar algo, seriam amostras.</p>
+      <p data-reveal>Na química analítica, absolutamente tudo pode ser analisado. Desde a água gelada da Antártica até amostras de sangue de ovelhas.</p>
+      <p data-reveal>Cada matriz traz um novo desafio e exige extrema precisão para garantir resultados confiáveis e a máxima qualidade analítica possível.</p>
     </div>
   </section>
 
-  <section class="story-row story-row--reverse">
-    <div class="story-img"><img src="/assets/img/time3.webp" alt="Montagem de fotos de frascos com solventes eutéticos profundos" width="940" height="540" loading="lazy"></div>
-    <div class="story-text">
-      <h2 class="card-title-bold">Química Verde <span aria-hidden="true">🌿</span></h2>
-      <p class="card-subtitle">...sustentáveis, amarelos e eficientes.</p>
-      <p>Durante o meu Doutorado, mergulhei no estudo dos solventes eutéticos profundos, uma alternativa ecológica e inteligente aos solventes tradicionais.</p>
-      <p>Eles são biodegradáveis, atóxicos e altamente customizáveis, permitindo o desenvolvimento de novas e limpas abordagens dentro da química analítica.</p>
+  <section class="v-chapter v-chapter--reverse" id="quimica-verde" aria-labelledby="t-quimica-verde">
+    <span class="v-num" aria-hidden="true" data-parallax="-0.08">04</span>
+    <div class="v-media" data-reveal>
+      <div class="v-slides" data-parallax="-0.04">
+        <img class="v-slide" src="/assets/img/time3.webp" alt="Montagem de fotos de frascos com solventes eutéticos profundos" width="940" height="540" loading="lazy">
+      </div>
+    </div>
+    <div class="v-text">
+      <h2 id="t-quimica-verde" class="v-heading" data-reveal>Química Verde <span aria-hidden="true">🌿</span></h2>
+      <p class="v-subtitle" data-reveal>...sustentáveis, amarelos e eficientes.</p>
+      <p data-reveal>Durante o meu Doutorado, mergulhei no estudo dos solventes eutéticos profundos, uma alternativa ecológica e inteligente aos solventes tradicionais.</p>
+      <p data-reveal>Eles são biodegradáveis, atóxicos e altamente customizáveis, permitindo o desenvolvimento de novas e limpas abordagens dentro da química analítica.</p>
     </div>
   </section>
 
-  <section class="story-row">
-    <div class="story-img"><img src="/assets/img/time1.webp" alt="Montagem de fotos de coleta de amostras em manguezal" width="940" height="540" loading="lazy"></div>
-    <div class="story-text">
-      <h2 class="card-title-bold">Coleta em Campo <span aria-hidden="true">🌱</span></h2>
-      <p>Uma grande parte do trabalho de pesquisa acontece fora do laboratório, em busca de amostras diretamente no ambiente real.</p>
-      <p>Durante o meu Mestrado, tive a oportunidade de atuar ativamente na análise de amostras de biota marinha coletadas em ecossistemas de manguezais.</p>
+  <section class="v-chapter" id="campo" aria-labelledby="t-campo">
+    <span class="v-num" aria-hidden="true" data-parallax="-0.08">05</span>
+    <div class="v-media" data-reveal>
+      <div class="v-slides" data-parallax="-0.04">
+        <img class="v-slide" src="/assets/img/time1.webp" alt="Montagem de fotos de coleta de amostras em manguezal" width="940" height="540" loading="lazy">
+      </div>
+    </div>
+    <div class="v-text">
+      <h2 id="t-campo" class="v-heading" data-reveal>Coleta em Campo <span aria-hidden="true">🌱</span></h2>
+      <p data-reveal>Uma grande parte do trabalho de pesquisa acontece fora do laboratório, em busca de amostras diretamente no ambiente real.</p>
+      <p data-reveal>Durante o meu Mestrado, tive a oportunidade de atuar ativamente na análise de amostras de biota marinha coletadas em ecossistemas de manguezais.</p>
     </div>
   </section>
 </div>
+
+<section class="v-gallery" aria-labelledby="t-galeria">
+  <div class="container v-gallery__head">
+    <div data-reveal>
+      <h2 id="t-galeria" class="v-heading">Galeria</h2>
+      <p class="v-gallery__lead">Registros do dia a dia: laboratório, campo e sala de aula. Selecione uma imagem para ampliar.</p>
+    </div>
+    <button type="button" class="btn btn-outline v-gallery__toggle" data-marquee-toggle aria-pressed="false" hidden>Pausar galeria</button>
+  </div>
+  <div class="v-marquee" data-marquee>
+    <ul class="v-marquee__track">
+      <li><button type="button" class="v-thumb"><img src="/assets/img/time5.webp" alt="Montagem de fotos de plasmas e chamas em espectrômetros" width="940" height="540" loading="lazy"></button></li>
+      <li><button type="button" class="v-thumb"><img src="/assets/img/time6.webp" alt="Montagem de fotos de apresentações, aulas e laboratório" width="940" height="540" loading="lazy"></button></li>
+      <li><button type="button" class="v-thumb"><img src="/assets/img/time2.webp" alt="Montagem de fotos de tubos e frascos com amostras" width="940" height="540" loading="lazy"></button></li>
+      <li><button type="button" class="v-thumb"><img src="/assets/img/time4.webp" alt="Montagem de fotos de equipamentos de laboratório e plasmas de espectrômetros" width="940" height="540" loading="lazy"></button></li>
+      <li><button type="button" class="v-thumb"><img src="/assets/img/time3.webp" alt="Montagem de fotos de frascos com solventes eutéticos profundos" width="940" height="540" loading="lazy"></button></li>
+      <li><button type="button" class="v-thumb"><img src="/assets/img/time1.webp" alt="Montagem de fotos de coleta de amostras em manguezal" width="940" height="540" loading="lazy"></button></li>
+    </ul>
+  </div>
+</section>
+
+<section class="container v-outro" data-reveal aria-labelledby="t-outro">
+  <h2 id="t-outro" class="v-heading">Quer conhecer mais da minha trajetória?</h2>
+  <div class="v-outro__actions">
+    <a class="btn" href="/experiencia">Experiência</a>
+    <a class="btn btn-outline" href="/publicacoes">Publicações</a>
+    <a class="btn btn-outline" href="/contato">Contato</a>
+  </div>
+</section>
+
+<dialog class="v-lightbox" aria-label="Imagem ampliada">
+  <figure class="v-lightbox__fig">
+    <img src="/assets/img/time5.webp" alt="" width="940" height="540">
+    <figcaption></figcaption>
+  </figure>
+  <button type="button" class="v-lightbox__btn v-lightbox__prev" data-lb="prev" aria-label="Imagem anterior">‹</button>
+  <button type="button" class="v-lightbox__btn v-lightbox__next" data-lb="next" aria-label="Próxima imagem">›</button>
+  <button type="button" class="v-lightbox__btn v-lightbox__close" data-lb="close" aria-label="Fechar">×</button>
+</dialog>
 
 </main>
 <footer class="site-footer">
@@ -132,5 +242,6 @@
   </div>
 </div>
 <script src="/js/app.js" defer></script>
+<script src="/js/vida.js" defer></script>
 </body>
 </html>
