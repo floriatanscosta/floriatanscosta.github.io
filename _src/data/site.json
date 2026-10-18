@@ -4,6 +4,7 @@
     "en": "English",
     "es": "Español"
   },
+
   "nav_keys": {
     "index": "home",
     "biografia": "bio",
@@ -18,6 +19,7 @@
     "vida": "life",
     "404": "home"
   },
+  
   "ui": {
     "nav": {
       "home": {

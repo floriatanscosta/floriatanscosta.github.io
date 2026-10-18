@@ -5,7 +5,7 @@
     "short_name": "Floriatan Costa",
     "email": "floriatanscosta@gmail.com",
     "email_alt": "floriatancosta@ufpr.br",
-    "hometown": "Guanambi (BA), Brasil",
+    "hometown": "Curitba (PR), Brasil",
     "address": ["Universidad de Zaragoza — Facultad de Ciencias", "Calle Pedro Cerbuna, 12", "50009 Zaragoza, España"],
     "job": {"pt": "Pesquisador de Pós-Doutorado", "en": "Postdoctoral Researcher", "es": "Investigador Posdoctoral"},
     "affiliation": "Universidad de Zaragoza",
@@ -50,6 +50,7 @@
     {"year": 2020, "title": "Ciência, comunicação científica e inovação: desafios transversais", "org": "ACS Publications", "hours": 2},
     {"year": 2013, "title": "Estratégias de Ensino em Educação Química", "org": "IF Baiano", "hours": 4}
   ],
+
   "positions": [
     {"years": {"pt": "2026 – atual", "en": "2026 – present", "es": "2026 – actualidad"}, "current": true, "logo": "unizar.svg",
      "institution": "Universidad de Zaragoza (UNIZAR)", "place": "Zaragoza, España",
@@ -229,11 +230,11 @@
   ],
 
   "metrics": {
-    "date": "2026-10-17",
+    "date": "2026-10-18",
     "sources": [
-      {"id": "scopus", "label": "Scopus®", "owner": "Elsevier", "url": "https://www.scopus.com/authid/detail.uri?authorId=57216746115", "docs": 44, "citations": 421, "h": 14, "h_date": "2026-10-17"},
-      {"id": "wos", "label": "Web of Science™", "owner": "Clarivate", "url": "https://www.webofscience.com/wos/author/record/S-1383-2018", "docs": 47, "citations": 361, "h": 14},
-      {"id": "scholar", "label": "Google Scholar", "owner": "Google", "url": "https://scholar.google.com/citations?user=EbyxxAoAAAAJ", "docs": 54, "citations": 482, "h": 14, "h_date": "2026-10-17"}
+      {"id": "scopus", "label": "Scopus®", "owner": "Elsevier", "url": "https://www.scopus.com/authid/detail.uri?authorId=57216746115", "docs": 44, "citations": 421, "h": 14},
+      {"id": "wos", "label": "Web of Science™", "owner": "Clarivate", "url": "https://www.webofscience.com/wos/author/record/S-1383-2018", "docs": 47, "citations": 372, "h": 13},
+      {"id": "scholar", "label": "Google Scholar", "owner": "Google", "url": "https://scholar.google.com/citations?user=EbyxxAoAAAAJ", "docs": 54, "citations": 483, "h": 14}
     ]
   },
 
