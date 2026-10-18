@@ -5,6 +5,10 @@ Gerador estático do site floriatan.com.br (somente biblioteca padrão do Python
 Uso:
     python3 _src/build.py            # gera todas as páginas
     python3 _src/build.py --check    # gera e verifica links internos
+    python3 _src/build.py --no-pdf   # não gera os currículos em PDF (assets/cv/)
+
+O currículo em PDF (pt/en/es) é gerado por _src/cv_pdf.py e precisa do ReportLab
+(pip install reportlab). Sem ele, as páginas são geradas normalmente e os PDFs não mudam.
 
 Fontes:
     _src/data/site.json          textos da interface (menus, rótulos, metadados) em pt/en/es
@@ -454,6 +458,15 @@ def b_updated(lang):
     return f'<time datetime="{iso}">{fmt_date(iso, lang)}</time>'
 
 
+def b_cv_pdf(lang):
+    """Botão de download do currículo em PDF (gerado por _src/cv_pdf.py)."""
+    rel = f'assets/cv/floriatan-costa-cv-{lang}.pdf'
+    path = os.path.join(ROOT, rel)
+    size = f' <span class="btn-meta">({os.path.getsize(path) // 1024} KB)</span>' if os.path.isfile(path) else ''
+    return (f'<a class="btn btn-outline btn-cv" href="/{rel}" download type="application/pdf" '
+            f'title="{esc(T("cv.download_title", lang))}">{icon("download")}{T("cv.download", lang)}{size}</a>')
+
+
 def b_counts(lang):
     return str(len(PUB['articles']))
 
@@ -554,7 +567,14 @@ def header(page, lang, langs_available):
         <summary aria-label="{T("a11y.language", lang)}: {S["lang_names"][lang]}">{icon("globe")}<span>{lang.upper()}</span></summary>
         <ul class="lang-menu__list">{"".join(lang_items)}</ul>
       </details>
-      <button type="button" class="icon-btn theme-toggle" data-theme-toggle aria-label="{T("a11y.theme", lang)}" aria-pressed="false" title="{T("a11y.theme", lang)}">{icon("moon", "icon icon-moon")}{icon("sun", "icon icon-sun")}</button>
+      <details class="lang-menu theme-menu">
+        <summary aria-label="{T("a11y.theme", lang)}" title="{T("a11y.theme", lang)}">{icon("sun", "icon tm-light")}{icon("moon", "icon tm-dark")}{icon("contrast", "icon tm-system")}</summary>
+        <ul class="lang-menu__list theme-menu__list">
+          <li><button type="button" data-theme-set="light" aria-pressed="false">{icon("sun")}{T("a11y.theme_light", lang)}</button></li>
+          <li><button type="button" data-theme-set="dark" aria-pressed="false">{icon("moon")}{T("a11y.theme_dark", lang)}</button></li>
+          <li><button type="button" data-theme-set="system" aria-pressed="false">{icon("contrast")}{T("a11y.theme_system", lang)}</button></li>
+        </ul>
+      </details>
       <button type="button" class="icon-btn menu-toggle" data-menu-toggle aria-controls="site-nav" aria-expanded="false" aria-label="{T("a11y.menu", lang)}">{icon("menu", "icon icon-menu")}{icon("close", "icon icon-close")}</button>
     </div>
   </div>
@@ -701,7 +721,21 @@ def check_links():
     return not bad
 
 
+def make_pdfs():
+    """Gera os currículos em PDF (precisa da biblioteca ReportLab: pip install reportlab)."""
+    try:
+        import cv_pdf
+    except ImportError:
+        print('PDF do currículo NÃO atualizado: instale o ReportLab (pip install reportlab) '
+              'ou rode com --no-pdf para pular esta etapa.')
+        return
+    cv_pdf.main()
+
+
 if __name__ == '__main__':
+    if '--no-pdf' not in sys.argv:
+        sys.path.insert(0, SRC)
+        make_pdfs()
     build()
     if '--check' in sys.argv:
         sys.exit(0 if check_links() else 1)

@@ -52,7 +52,14 @@
         <summary aria-label="Idioma: Español"><svg class="icon" aria-hidden="true" focusable="false"><use href="/assets/icons/sprite.svg#globe"></use></svg><span>ES</span></summary>
         <ul class="lang-menu__list"><li><a href="/experiencia" hreflang="pt-BR" lang="pt-BR" data-lang="pt"><span class="lang-code">PT</span>Português</a></li><li><a href="/en/experiencia" hreflang="en" lang="en" data-lang="en"><span class="lang-code">EN</span>English</a></li><li><a href="/es/experiencia" hreflang="es" lang="es" aria-current="true" data-lang="es"><span class="lang-code">ES</span>Español</a></li></ul>
       </details>
-      <button type="button" class="icon-btn theme-toggle" data-theme-toggle aria-label="Cambiar tema claro/oscuro" aria-pressed="false" title="Cambiar tema claro/oscuro"><svg class="icon icon-moon" aria-hidden="true" focusable="false"><use href="/assets/icons/sprite.svg#moon"></use></svg><svg class="icon icon-sun" aria-hidden="true" focusable="false"><use href="/assets/icons/sprite.svg#sun"></use></svg></button>
+      <details class="lang-menu theme-menu">
+        <summary aria-label="Tema" title="Tema"><svg class="icon tm-light" aria-hidden="true" focusable="false"><use href="/assets/icons/sprite.svg#sun"></use></svg><svg class="icon tm-dark" aria-hidden="true" focusable="false"><use href="/assets/icons/sprite.svg#moon"></use></svg><svg class="icon tm-system" aria-hidden="true" focusable="false"><use href="/assets/icons/sprite.svg#contrast"></use></svg></summary>
+        <ul class="lang-menu__list theme-menu__list">
+          <li><button type="button" data-theme-set="light" aria-pressed="false"><svg class="icon" aria-hidden="true" focusable="false"><use href="/assets/icons/sprite.svg#sun"></use></svg>Claro</button></li>
+          <li><button type="button" data-theme-set="dark" aria-pressed="false"><svg class="icon" aria-hidden="true" focusable="false"><use href="/assets/icons/sprite.svg#moon"></use></svg>Oscuro</button></li>
+          <li><button type="button" data-theme-set="system" aria-pressed="false"><svg class="icon" aria-hidden="true" focusable="false"><use href="/assets/icons/sprite.svg#contrast"></use></svg>Seguir el sistema</button></li>
+        </ul>
+      </details>
       <button type="button" class="icon-btn menu-toggle" data-menu-toggle aria-controls="site-nav" aria-expanded="false" aria-label="Abrir menú"><svg class="icon icon-menu" aria-hidden="true" focusable="false"><use href="/assets/icons/sprite.svg#menu"></use></svg><svg class="icon icon-close" aria-hidden="true" focusable="false"><use href="/assets/icons/sprite.svg#close"></use></svg></button>
     </div>
   </div>

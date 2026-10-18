@@ -105,9 +105,24 @@
         "es": "Idioma"
       },
       "theme": {
-        "pt": "Alternar tema claro/escuro",
-        "en": "Toggle light/dark theme",
-        "es": "Cambiar tema claro/oscuro"
+        "pt": "Tema",
+        "en": "Theme",
+        "es": "Tema"
+      },
+      "theme_light": {
+        "pt": "Claro",
+        "en": "Light",
+        "es": "Claro"
+      },
+      "theme_dark": {
+        "pt": "Escuro",
+        "en": "Dark",
+        "es": "Oscuro"
+      },
+      "theme_system": {
+        "pt": "Seguir o sistema",
+        "en": "Use system setting",
+        "es": "Seguir el sistema"
       },
       "menu": {
         "pt": "Abrir menu",
@@ -238,6 +253,18 @@
         "pt": "Cartilha (extensão tecnológica)",
         "en": "Booklet (technological extension)",
         "es": "Cartilla (extensión tecnológica)"
+      }
+    },
+    "cv": {
+      "download": {
+        "pt": "Currículo em PDF",
+        "en": "CV in PDF",
+        "es": "Currículum en PDF"
+      },
+      "download_title": {
+        "pt": "Baixar o currículo em PDF",
+        "en": "Download the CV as a PDF",
+        "es": "Descargar el currículum en PDF"
       }
     },
     "awards": {

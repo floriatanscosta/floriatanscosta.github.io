@@ -12,8 +12,9 @@ Reúne trajetória, produção científica, prêmios, métricas e contato de Flo
 /css/global.css         tokens (cores, fontes, espaçamentos), base, cabeçalho, menu, rodapé, botões
 /css/main.css           componentes de conteúdo (cartões, linha do tempo, publicações, métricas...)
 /css/premiacoes.css     /css/design.css   /css/vida.css   estilos próprios de cada uma dessas páginas
-/js/theme-init.js       aplica o tema claro/escuro antes da renderização (evita "piscar")
-/js/app.js              menu móvel, tema, seletor de idioma, ano do rodapé
+/js/theme-init.js       aplica o tema (claro, escuro ou seguir o sistema) antes da renderização (evita "piscar")
+/js/app.js              menu móvel, seletor de tema e de idioma, aviso de idioma, ano do rodapé
+/assets/cv/             currículos em PDF (pt, en, es), gerados por _src/cv_pdf.py
 /js/publications.js     filtro da lista de publicações
 /js/design.js           botões "Copiar" da paleta da página Design
 /js/vida.js             animações e galeria da página Vida de cientista
@@ -22,6 +23,7 @@ Reúne trajetória, produção científica, prêmios, métricas e contato de Flo
 /sitemap.xml            gerado automaticamente, com alternativas hreflang
 /_src/                  FONTE do site (não é publicada — o Jekyll ignora pastas iniciadas por "_")
    build.py             gerador (Python 3, apenas biblioteca padrão)
+   cv_pdf.py            currículo em PDF (requer ReportLab); fontes Roboto em fonts/ (licença OFL)
    data/site.json       textos da interface (menu, rótulos, botões) em pt/en/es
    data/cv.json         dados do currículo: prêmios, formação, experiência, projetos, revisões, métricas...
    data/publications.json  artigos e trabalhos em eventos (títulos no idioma original)
@@ -38,7 +40,11 @@ Páginas de desenvolvimento (não indexadas, fora do menu): `guia.html`, `design
    ```bash
    python3 _src/build.py --check
    ```
-   O comando regenera todas as páginas e o `sitemap.xml` e verifica links internos.
+   O comando regenera todas as páginas, o `sitemap.xml` e os currículos em PDF, e verifica os links internos.
+   - **Currículo em PDF** (`assets/cv/floriatan-costa-cv-pt|en|es.pdf`): gerado por `_src/cv_pdf.py` a partir de
+     `cv.json` e `publications.json`, sem foto. O rodapé traz a data de geração e a data da última alteração desses
+     dois arquivos. Requer o ReportLab, instalado uma única vez com `pip install reportlab`. Sem ele, o build avisa e
+     gera só as páginas; para pular os PDFs de propósito, use `python3 _src/build.py --check --no-pdf`.
 3. Faça commit dos arquivos gerados e da fonte, e envie ao GitHub. O GitHub Pages publica automaticamente.
 
 > Não edite diretamente os `.html` da raiz, `/en` ou `/es`: eles são sobrescritos pelo gerador.

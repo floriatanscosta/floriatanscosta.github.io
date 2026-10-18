@@ -173,6 +173,34 @@ main:focus { outline: none; }
 .lang-menu__list a[aria-current="true"] { color: var(--heading-strong); font-weight: 700; background: var(--nav-hover); }
 .lang-code { display: inline-block; min-width: 28px; font-size: 0.75rem; font-weight: 800; letter-spacing: 0.04em; color: var(--heading-strong); }
 
+/* ==== Seletor de tema (claro, escuro, seguir o sistema) ==== */
+/* Usa a mesma aparência do seletor de idioma (.lang-menu). O ícone mostra o modo atual. */
+.theme-menu summary { width: 42px; padding: 0; justify-content: center; }
+.theme-menu summary .tm-dark, .theme-menu summary .tm-system { display: none; }
+[data-theme-mode="dark"] .theme-menu summary .tm-light, [data-theme-mode="system"] .theme-menu summary .tm-light { display: none; }
+[data-theme-mode="dark"] .theme-menu summary .tm-dark, [data-theme-mode="system"] .theme-menu summary .tm-system { display: inline-block; }
+.theme-menu__list { min-width: 220px; }
+.theme-menu__list button { white-space: nowrap; }
+.theme-menu__list button { display: flex; align-items: center; gap: 10px; width: 100%; padding: 10px 12px; border: 0; border-radius: 8px; background: none; color: var(--text-main); font: inherit; font-weight: 500; text-align: left; cursor: pointer; }
+.theme-menu__list button:hover { background: var(--nav-hover); }
+.theme-menu__list button[aria-pressed="true"] { color: var(--heading-strong); font-weight: 700; background: var(--nav-hover); }
+.theme-menu__list button[aria-pressed="true"]::after { content: ""; width: 8px; height: 8px; margin-left: auto; border-radius: 50%; background: var(--accent); }
+
+/* ==== Aviso de idioma (criado por app.js; nunca redireciona) ==== */
+.lang-notice { display: flex; align-items: center; justify-content: center; gap: 8px; width: fit-content; max-width: calc(100% - 32px); margin: 12px auto 0; padding: 6px 6px 6px 16px; border: 1px solid var(--border-color); border-radius: 999px; background: var(--box-bg); box-shadow: var(--shadow-sm); font-size: 0.88rem; color: var(--text-main); animation: lang-notice-in 0.35s ease both; }
+.lang-notice p { margin: 0; }
+.lang-notice a { font-weight: 700; color: var(--link-color); text-decoration: underline; text-underline-offset: 3px; }
+.lang-notice__close { display: inline-grid; place-items: center; flex-shrink: 0; width: 32px; height: 32px; border: 0; border-radius: 50%; background: none; color: var(--text-muted); cursor: pointer; }
+.lang-notice__close:hover { background: var(--nav-hover); color: var(--heading-strong); }
+.lang-notice__close .icon { width: 16px; height: 16px; }
+@keyframes lang-notice-in { from { opacity: 0; transform: translateY(-6px); } to { opacity: 1; transform: none; } }
+@media (max-width: 600px) { .lang-notice { border-radius: var(--radius-lg); align-items: flex-start; padding: 8px 6px 8px 14px; } }
+
+/* ==== Botão do currículo em PDF ==== */
+.btn .icon { width: 18px; height: 18px; }
+.btn-meta { font-weight: 500; opacity: 0.8; }
+.hero-cv, .contact-cv { margin-top: 18px; }
+
 /* Seletor de idioma antigo (páginas de exemplo) */
 .lang-dropdown { position: relative; display: inline-block; }
 .lang-dropbtn { display: flex; align-items: center; gap: 5px; padding: var(--spacing-xs) 10px; background: none; border: none; color: var(--heading-color); font-size: 0.95rem; font-weight: bold; cursor: pointer; }
@@ -320,7 +348,7 @@ body.has-consent { padding-bottom: 120px; }
     body.has-consent { padding-bottom: 0 !important; }
 
     /* Elementos de navegação e interação não vão para o papel */
-    .site-header, header, footer, .skip-link, .theme-toggle, .lang-menu, .menu-toggle, .btn, .btn-group,
+    .site-header, header, footer, .skip-link, .theme-toggle, .lang-menu, .lang-notice, .menu-toggle, .btn, .btn-group,
     .pub-tools, .page-toc, .nav-cards, .consent, .modal-overlay, .custom-tooltip { display: none !important; }
     main, .container { width: 100% !important; max-width: none !important; padding: 0 !important; margin: 0 !important; }
 

@@ -1,47 +1,130 @@
-# Pendências e pontos a conferir
+# Pendências, ideias e progresso
 
-Itens que não puderam ser resolvidos só com os dados disponíveis (nada foi inventado).
+Registro do que já foi feito no site e do que ainda pode ser implementado. Nada aqui foi inventado: os itens de dados dependem de conferência com as fontes originais.
 
-## Dados
-1. **Telefone profissional**: o Lattes traz "34 97676100" (8 dígitos após o código do país; números espanhóis têm 9). Não foi publicado — informe o número correto se quiser exibi-lo em Contato (`_src/data/cv.json` → `person`).
-2. **Índice h do Scopus e do Google Scholar**: o Lattes de 06/10/2026 traz citações e documentos, mas não o índice h dessas bases. Foi mantido o valor do site anterior (14, consultado em 16/09/2026), indicado na página.
-3. **Artigos sem DOI no Lattes** (ligados à página da editora): Microchemical Journal 2024 (SPR biosensor), J. Food Compos. Anal. 2022, J. Trace Elem. Med. Biol. 2021, Talanta 2021, Analytical Methods 2020 e J. Electroanal. Chem. 2020. Basta preencher o campo `doi` em `publications.json`.
-4. **Artigo "Chemometric-assisted classification of sunscreen…"**: consta como "aceito" no Lattes, mas já tem DOI (10.1007/s43630-026-00993-y). Ao sair o volume/páginas, atualize `status`, `volume` e `pages`.
-5. **Capítulo de 2023 (Seven Editora)**: o título no Lattes repete "chemical preservatives" e "State Solid" — conferir com a publicação original.
-6. **Pós-doutorado na Embrapa (2024)**: o Lattes não indica a unidade/centro nem o período exato.
-7. **Logos**: não há logos da UESC e do IF Baiano em `assets/svg/` (aparece um ícone genérico). Adicione os arquivos e o campo `logo` em `cv.json`.
-8. **Participação em eventos**: o quadro de totais do Lattes soma 19, mas a lista tem 21 itens (exposição e feira não entram no total). O site mostra os 21 itens listados.
+_Atualizado em 18/10/2026._
 
-## Funcionalidades / infraestrutura
-9. **"Ferramentas" (/web/)**: aponta para outro repositório (floriatan.com.br/web/). `design-meta.html` depende de `/web/components/style.css` e `/web/css/style.css`, que não fazem parte deste repositório.
-10. **Página "Vida de cientista"**: existe apenas em português (fora do escopo de tradução); as versões EN/ES indicam isso no link.
-11. **Google Analytics e privacidade**: ✅ resolvido — aviso de consentimento implementado (o GA só carrega após "Aceitar"). Recomendável ainda: no painel do Google Analytics, conferir em *Administrador → Coleta e retenção de dados* que os "Indicadores do Google" estão desativados e definir a retenção de dados (ex.: 2 meses).
-12. **Formulário de contato**: não implementado (o GitHub Pages não processa formulários). O contato é por e-mail.
-13. **Arquivos não utilizados**: `assets/background.svg` (650 KB), `assets/img/time4.png`, `assets/img/cover-google-forms.png`, `assets/img/cover.png` (duplicata de `assets/cover.png`) e os PNG originais de `time*.png`/`profile.png` (substituídos por WebP). Podem ser removidos se não forem usados em outro lugar.
-14. **Publicação**: as alterações foram feitas sobre o arquivo .zip enviado; é preciso enviá-las ao repositório `floriatanscosta.github.io` (não houve acesso ao GitHub nesta sessão).
+## Progresso geral
 
-## Ideias de melhoria (para implementar depois)
+```mermaid
+pie showData title Itens registrados neste arquivo
+    "Concluídos" : 14
+    "Ideias pendentes" : 31
+    "Dados e infraestrutura a conferir" : 12
+```
 
-Sugestões registradas em 18/10/2026. Nenhuma foi implementada ainda.
+| Grupo | Concluído | Progresso |
+|---|---:|---|
+| Revisões e entregas (fora da lista de ideias) | 10 de 10 | `████████████████████` 100% |
+| Ideias de melhoria | 3 de 34 | `██░░░░░░░░░░░░░░░░░░` 9% |
+| Dados a conferir | 0 de 8 | `░░░░░░░░░░░░░░░░░░░░` 0% |
+| Funcionalidades e infraestrutura | 1 de 5 | `████░░░░░░░░░░░░░░░░` 20% |
+| **Total** | 14 de 57 | `█████░░░░░░░░░░░░░░░` 25% |
+
+**Ideias de melhoria por grupo**
+
+| Grupo | Concluído | Progresso |
+|---|---:|---|
+| Prioritárias | 0 de 5 | `░░░░░░░░░░` 0% |
+| Conteúdo | 1 de 8 | `█░░░░░░░░░` 12% |
+| Ferramentas (/web) | 0 de 3 | `░░░░░░░░░░` 0% |
+| Contato e networking | 0 de 2 | `░░░░░░░░░░` 0% |
+| Navegação e experiência | 2 de 6 | `███░░░░░░░` 33% |
+| Automação de dados | 0 de 2 | `░░░░░░░░░░` 0% |
+| Visibilidade | 0 de 4 | `░░░░░░░░░░` 0% |
+| Qualidade automática | 0 de 4 | `░░░░░░░░░░` 0% |
+
+## ✅ Já feito
+
+1. Revisão completa do site: estrutura, conteúdo do Lattes, versões PT/EN/ES, SEO, acessibilidade (WCAG 2.1 AA) e segurança (CSP)
+2. Gerador estático `_src/build.py` (dados em JSON, páginas nos três idiomas, sitemap e verificação de links)
+3. Aviso de consentimento do Google Analytics (o GA só carrega após "Aceitar")
+4. Diretório /web (Ferramentas) refeito com o mesmo design, sem build em Python, preservando Assinatura e Custom Plate
+5. Publicações e produção simplificadas (título, revista e DOI/link); autores removidos do site e dos JSON
+6. Data de atualização removida do rodapé
+7. Versão impressa corrigida (sem sombras, cores legíveis, seções expansíveis abertas)
+8. Nova página "Vida de cientista" com animações, apresentação automática e galeria
+9. Novo design da página Premiações (resumo calculado e linha do tempo por ano)
+10. Página Design reformulada (sem WebGL, segue o tema, paleta atualizada, textos de Tipografia e Logo revisados)
+11. Aviso de idioma discreto, conforme o idioma do navegador, sem redirecionamento _(ideia I19)_
+12. Tema com três opções: claro, escuro e seguir o sistema _(ideia I20)_
+13. Currículo em PDF nos três idiomas, gerado a partir dos JSON (sem foto; datas de geração e de atualização no rodapé) _(ideia I7)_
+
+## Ideias de melhoria
+
+Marcadas com ✅ as já implementadas. A numeração continua a da versão anterior deste arquivo (itens 15–28) e acrescenta as ideias novas.
+
 
 ### Prioritárias
-15. **Build automático no GitHub (GitHub Actions)**: um arquivo `.github/workflows/build.yml` que roda `python3 _src/build.py --check` a cada alteração em `_src/` e salva as páginas geradas. Permite atualizar o site editando o `cv.json` ou o `publications.json` direto pelo navegador, sem Python no computador; bloqueia a publicação se houver erro de sintaxe no JSON ou link quebrado. Gratuito em repositórios públicos.
-16. **Recursos nas publicações**: botão "Citar" em cada artigo (referência formatada e BibTeX); arquivo `.bib`/`.ris` com todas as publicações para Zotero/Mendeley; selos de Acesso Aberto e link para o PDF (os ícones `openacess.svg` e `pdf.svg` já existem em `assets/icons/`).
-17. **Gráficos na página Métricas**: publicações por ano e citações por ano, gerados a partir dos dados existentes.
-18. **Ordenação automática dos artigos por ano** no `build.py`, para que a posição no `publications.json` deixe de importar (hoje os primeiros da lista aparecem em "Publicações recentes").
+- [ ] I1. **Build automático no GitHub (GitHub Actions)**: gerar o site (e os PDFs) a cada alteração em `_src/`, permitindo editar os JSON pelo navegador e bloqueando a publicação se houver erro.
+- [ ] I2. **Recursos nas publicações**: botão "Citar" (referência e BibTeX), arquivo `.bib`/`.ris` com tudo, selo de Acesso Aberto e link para o PDF.
+- [ ] I3. **Gráficos na página Métricas**: publicações por ano e citações por ano.
+- [ ] I4. **Ordenação automática dos artigos por ano** no `build.py`.
+- [ ] I5. **Totais da página Métricas calculados automaticamente** a partir dos JSON (hoje são manuais em `cv.json` → `totals`).
 
 ### Conteúdo
-19. **Seção de Novidades** na página inicial (artigo aceito, palestra, prêmio…), alimentada por uma lista simples no JSON.
-20. **Currículo em PDF para download** nos três idiomas, gerado a partir dos mesmos dados do site.
-21. **"Vida de cientista" em inglês e espanhol** (hoje só em português).
-22. **Projeto atual em destaque** (saliva, HDES e nanopartículas magnéticas), com imagem ou *graphical abstract*.
-23. **Logos da UESC e do IF Baiano** na linha do tempo (ver item 7).
+- [ ] I6. **Seção de Novidades** na página inicial, alimentada por uma lista no JSON.
+- [x] I7. ✅ **Currículo em PDF para download** nos três idiomas.
+- [ ] I8. **"Vida de cientista" em inglês e espanhol.**
+- [ ] I9. **Projeto atual em destaque**, com imagem ou *graphical abstract*.
+- [ ] I10. **Logos da UESC e do IF Baiano** na linha do tempo (ver item D7).
+- [ ] I11. **Glossário de técnicas** (ICP-MS, ICP OES, FAAS, GFAAS, MIP OES, solventes eutéticos) explicado para leigos.
+- [ ] I12. **Mapa de onde a pesquisa aconteceu** (instituições, eventos, coletas), como imagem estática.
+- [ ] I13. **Rede de coautores** (gráfico). Exige guardar de novo os autores no JSON, só para o gráfico.
+
+### Ferramentas (/web)
+- [ ] I14. **Calculadora de diluições e preparo de soluções** (C₁V₁ = C₂V₂, diluições seriadas, curva de calibração).
+- [ ] I15. **Conversor de concentração** (mg L⁻¹, µg L⁻¹, ppm, ppb, mol L⁻¹).
+- [ ] I16. **Calculadora de LOD/LOQ e regressão linear** a partir dos pontos da curva.
+
+### Contato e networking
+- [ ] I17. **Cartão de visita digital (/cartao)** com QR code e botão "Salvar contato" (vCard).
+- [ ] I18. **Botão "Copiar e-mail"** na página Contato, com proteção contra spam.
+
+### Navegação e experiência
+- [x] I19. ✅ **Aviso de idioma** discreto, sem redirecionar.
+- [x] I20. ✅ **Tema com três opções**: claro, escuro e seguir o sistema.
+- [ ] I21. **Busca no site inteiro** (publicações, eventos, prêmios), sem servidor.
+- [ ] I22. **Linha do tempo interativa na Biografia**, com movimento suave.
+- [ ] I23. **Página 404 mais útil**, com busca e sugestões.
+- [ ] I24. **Rótulo de cookies consistente** nos três idiomas (hoje: "Preferências" / "Cookie preferences" / "Preferencias").
 
 ### Automação de dados
-24. **Métricas automáticas via OpenAlex** (base aberta e gratuita): atualização semanal de citações e índice h pelo GitHub Actions, como fonte complementar ao Scopus/WoS (os números diferem um pouco).
-25. **Importar publicações do ORCID**: artigos novos registrados no ORCID entram no site sem digitação.
+- [ ] I25. **Métricas automáticas via OpenAlex** (atualização semanal).
+- [ ] I26. **Importar publicações do ORCID.**
 
 ### Visibilidade
-26. **Dados estruturados `ScholarlyArticle`** em cada publicação, para o Google e o Google Scholar reconhecerem os trabalhos.
-27. **Google Search Console**: cadastrar o site e enviar o `sitemap.xml` (requer login do proprietário).
-28. **Imagem de compartilhamento por página e idioma** (prévia própria ao postar links no LinkedIn etc.).
+- [ ] I27. **Dados estruturados `ScholarlyArticle`** em cada publicação.
+- [ ] I28. **Google Search Console** com envio do `sitemap.xml` (requer login do proprietário).
+- [ ] I29. **Imagem de compartilhamento por página e idioma.**
+- [ ] I30. **Feed RSS** das publicações e novidades.
+
+### Qualidade automática
+- [ ] I31. **Teste de acessibilidade (axe) a cada alteração**, no GitHub Actions.
+- [ ] I32. **Verificação semanal de links externos** (DOIs e páginas de editoras).
+- [ ] I33. **Relatório de desempenho (Lighthouse)** a cada publicação.
+- [ ] I34. **Limpeza do repositório web**: `assets/`, `js/`, `robots.txt` e `components/style.css` sem uso.
+
+## Dados a conferir
+
+- [ ] D1. **Telefone profissional**: o Lattes traz "34 97676100" (8 dígitos após o código do país; números espanhóis têm 9). Não publicado; informe o número correto em `cv.json` → `person`.
+- [ ] D2. **Índice h do Scopus e do Google Scholar**: conferir periodicamente nos perfis (valores em `cv.json` → `metrics`).
+- [ ] D3. **Artigos sem DOI no Lattes** (ligados à página da editora): Microchemical Journal 2024 (SPR biosensor), J. Food Compos. Anal. 2022, J. Trace Elem. Med. Biol. 2021, Talanta 2021, Analytical Methods 2020 e J. Electroanal. Chem. 2020. Basta preencher `doi` em `publications.json`.
+- [ ] D4. **Artigo "Chemometric-assisted classification of sunscreen…"**: consta como aceito; quando sair o volume, mudar `status` para `published`.
+- [ ] D5. **Capítulo de 2023 (Seven Editora)**: título no Lattes repete "chemical preservatives" e "State Solid"; conferir com a publicação original.
+- [ ] D6. **Pós-doutorado na Embrapa (2024)**: o Lattes não indica a unidade nem o período exato.
+- [ ] D7. **Logos da UESC e do IF Baiano**: faltam em `assets/svg/` (aparece um ícone genérico).
+- [ ] D8. **Participação em eventos**: o quadro de totais do Lattes soma 19, mas a lista tem 21 itens (exposição e feira não entram no total).
+
+## Funcionalidades e infraestrutura
+
+- [ ] F1. **Ferramentas (/web/)** ficam em outro repositório (floriatan.com.br/web/). `design-meta.html` depende de arquivos de lá.
+- [ ] F2. **Google Analytics e privacidade**: consentimento implementado. Recomendável ainda conferir, no painel do GA, que os "Indicadores do Google" estão desativados e definir a retenção de dados (ex.: 2 meses).
+- [ ] F3. **Formulário de contato**: não implementado (o GitHub Pages não processa formulários); o contato é por e-mail.
+- [ ] F4. **Arquivos antigos**: `assets/img/cover.png` (duplicata de `assets/cover.png`, usada só em `exemplos.html`) e `assets/img/profile.png` (substituído por `profile.webp`) ainda existem. Os demais arquivos sem uso já foram removidos.
+- [x] F5. **Publicação no GitHub**: ✅ resolvido; as alterações são enviadas direto ao repositório.
+
+## Como manter este arquivo
+
+- Ao concluir um item, marque `[x]` e mova a descrição para "Já feito", se for uma entrega relevante.
+- O gráfico e as tabelas de progresso refletem as contagens desta página; atualize os números ao marcar itens.
