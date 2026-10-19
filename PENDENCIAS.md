@@ -105,7 +105,7 @@ Marcadas com ✅ as já implementadas. A numeração continua a da versão anter
 - [ ] I31. **Teste de acessibilidade (axe) a cada alteração**, no GitHub Actions.
 - [ ] I32. **Verificação semanal de links externos** (DOIs e páginas de editoras).
 - [ ] I33. **Relatório de desempenho (Lighthouse)** a cada publicação.
-- [ ] I34. **Limpeza do repositório web**: `assets/`, `js/`, `robots.txt` e `components/style.css` sem uso.
+- [ ] I34. **Limpeza do repositório web**: `assets/`, `js/` e `components/style.css` não são usados pelas Ferramentas, e o `robots.txt` de `/web/` não tem efeito (só vale o da raiz do domínio). Antes de apagar `components/style.css`, ajustar `design-meta.html` (ver F1).
 
 ## Dados a conferir
 
@@ -120,7 +120,7 @@ Marcadas com ✅ as já implementadas. A numeração continua a da versão anter
 
 ## Funcionalidades e infraestrutura
 
-- [ ] F1. **Ferramentas (/web/)** ficam em outro repositório (floriatan.com.br/web/). `design-meta.html` depende de arquivos de lá.
+- [ ] F1. **Ferramentas (/web/)** ficam em outro repositório (floriatan.com.br/web/). `design-meta.html` depende de `/web/components/style.css` e `/web/css/style.css`, que ficam lá.
 - [ ] F2. **Google Analytics e privacidade**: consentimento implementado. Recomendável ainda conferir, no painel do GA, que os "Indicadores do Google" estão desativados e definir a retenção de dados (ex.: 2 meses).
 - [ ] F3. **Formulário de contato**: não implementado (o GitHub Pages não processa formulários); o contato é por e-mail.
 - [ ] F4. **Arquivos antigos**: `assets/img/cover.png` (duplicata de `assets/cover.png`, usada só em `exemplos.html`) e `assets/img/profile.png` (substituído por `profile.webp`) ainda existem. Os demais arquivos sem uso já foram removidos.

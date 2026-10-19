@@ -1,5 +1,5 @@
 ---
-version: 2.1.0
+version: 2.1.1
 name: Floriatan-Design-System
 description: "Um design system acadêmico e profissional construído com foco em legibilidade, performance e estética modular. O sistema equilibra a sobriedade da pesquisa científica (painéis brancos/escuros puros, tipografia estruturada) com toques modernos de Glassmorphism e gradientes sutis. Totalmente fluido e utilitário, ele suporta transições perfeitas para o Modo Escuro, mantendo o contraste e a hierarquia visual por meio de bordas suaves e elevações por sombra."
 
@@ -49,9 +49,9 @@ typography:
     textTransform: "uppercase"
 
 rounded:
-  sm: "4px"
-  md: "10px"
-  lg: "16px"
+  sm: "3px"   # --radius-sm
+  md: "8px"   # --radius-md
+  lg: "10px"  # --radius-lg
   full: "50%"
   pill: "20px"
 
@@ -94,7 +94,7 @@ components:
 
 ## Visão Geral
 
-Ao contrário do sistema puramente monocromático e focado em blocos de cores pastel[cite: 13], o Design System "Floriatan" baseia-se num contraste dual (Claro/Escuro) governado por variáveis CSS unificadas. O layout é desenhado para ferramentas de produtividade e perfis académicos, utilizando contentores modulares (`.card`, `.project-card`, `.form-panel`) assentes em fundos neutros (`box-bg`).
+Ao contrário do sistema puramente monocromático e focado em blocos de cores pastel, o Design System "Floriatan" baseia-se num contraste dual (Claro/Escuro) governado por variáveis CSS unificadas. O layout é desenhado para ferramentas de produtividade e perfis académicos, utilizando contentores modulares (`.card`, `.project-card`, `.form-panel`) assentes em fundos neutros (`box-bg`).
 
 A distinção visual é alcançada através de:
 
@@ -112,7 +112,7 @@ O sistema está alicerçado em variáveis responsivas ao tema do utilizador (`[d
 
 ## Tipografia
 
-A hierarquia não depende exclusivamente de alterações de peso[cite: 13], mas de uma combinação rigorosa de tamanho e cor semântica.
+A hierarquia não depende exclusivamente de alterações de peso, mas de uma combinação rigorosa de tamanho e cor semântica.
 
 - **Títulos (H1-H6):** Utilizam sempre `--heading-color` e margens inferiores generosas (40px) para separar secções.
 - **Texto Base:** A cor `--text-main` (#3d4350 ou #E5E5E5) garante contraste AA (ou superior) em parágrafos.
@@ -123,7 +123,7 @@ A hierarquia não depende exclusivamente de alterações de peso[cite: 13], mas 
 - **Level 0 (Flat):** Fundo da página e painéis de aviso em linha.
 - **Level 1 (Bordas + Box-bg):** Cartões de projeto, painéis de formulário, e caixas de visualização (`.preview-box`).
 - **Level 2 (Shadow-md no Hover):** Botões primários e `.project-card:hover`. O cartão sobe 5px no eixo Y, criando uma sensação tátil de interatividade.
-- **Level 3 (Glassmorphism):** Utilizado em painéis especiais (`.glass-panel`). Combina transparência e desfoque (`backdrop-filter`) para criar uma profundidade simulada sob imagens ou fundos gradientes.
+- **Level 3 (Glassmorphism, legado):** Utilizado em painéis especiais (`.glass-panel`), hoje só nas páginas de exemplo. Combina transparência e desfoque (`backdrop-filter`) para criar uma profundidade simulada sob imagens ou fundos gradientes.
 
 ## Componentes Chave
 

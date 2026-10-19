@@ -17,11 +17,11 @@ páginas e idiomas.
 
 ## Funcionalidades
 
-- **Páginas:** início, biografia, experiência, publicações, produção, premiações, métricas, contato, sobre, design, *Vida de cientista* (só em português) e página de erro 404.
+- **Páginas:** início, biografia, experiência, publicações, produção, premiações, mídia, métricas, contato, sobre, design, *Vida de cientista* (só em português) e página de erro 404.
 - **Três idiomas** com os mesmos endereços (`/biografia`, `/en/biografia`, `/es/biografia`), seletor de idioma e aviso discreto quando o navegador usa outro idioma.
 - **Tema claro, escuro ou "seguir o sistema"**, aplicado antes da renderização para não piscar.
 - **Currículo em PDF** em pt, en e es, gerado dos mesmos dados do site.
-- **Filtro de publicações**, resumo de premiações calculado dos dados e paleta com botão "Copiar" na página Design.
+- **Filtro de publicações**, resumo de premiações calculado dos dados, página **Mídia** organizada por tipo de conteúdo e paleta com botão "Copiar" na página Design.
 - **Google Analytics só após consentimento** do visitante.
 
 ## Tecnologias
@@ -51,14 +51,14 @@ _src/pages/<idioma>/ ─┘          │
 | Parte | Responsabilidade |
 |---|---|
 | `_src/` | **Fonte** do site, não publicada (o Jekyll ignora pastas iniciadas por `_`) |
-| `_src/build.py` | Gerador: monta cabeçalho, rodapé, metadados e seletor de idioma; com `--check`, verifica links internos |
-| `_src/cv_pdf.py` | Currículo em PDF (requer ReportLab); fontes Roboto em `_src/fonts/` (licença OFL) |
+| `_src/build.py` | Gerador: monta cabeçalho, rodapé, metadados e seletor de idioma; com `--check`, verifica links internos; com `--no-pdf`, não gera os currículos |
+| `_src/cv_pdf.py` | Currículo em PDF (requer ReportLab e svglib); fontes Roboto em `_src/fonts/` (licença OFL) |
 | `_src/data/site.json` | Textos da interface (menu, rótulos, botões) em pt/en/es |
 | `_src/data/cv.json` | Dados do currículo: prêmios, formação, experiência, projetos, revisões, métricas… |
 | `_src/data/publications.json` | Artigos e trabalhos em eventos (títulos no idioma original) |
 | `_src/data/media.json` | Mídia e divulgação: revistas de divulgação, notícias, entrevistas, podcasts e menções (página Mídia) |
 | `_src/pages/pt\|en\|es/*.html` | Conteúdo de cada página; blocos de dados entram como `{{nome_do_bloco}}` |
-| `/*.html`, `/en/`, `/es/` | Páginas **geradas**, em português na raiz e as 10 principais em inglês e espanhol |
+| `/*.html`, `/en/`, `/es/` | Páginas **geradas**, em português na raiz e as 11 principais em inglês e espanhol |
 | `css/global.css` | Tokens (cores, fontes, espaçamentos), base, cabeçalho, menu, rodapé, botões |
 | `css/main.css` | Componentes de conteúdo (cartões, linha do tempo, publicações, métricas…) |
 | `css/premiacoes.css`, `css/design.css`, `css/vida.css` | Estilos próprios de cada uma dessas páginas |
@@ -158,7 +158,7 @@ Páginas de desenvolvimento (não indexadas, fora do menu): `guia.html`, `design
 ### Convenções
 
 - **Logos de instituições** (`"logo"` em `cv.json`): arquivos `.svg` ficam em `assets/svg/`; logos em imagem (`.webp`/`.png`, para SVGs muito pesados) ficam em `assets/img/logos/`. Basta informar o nome do arquivo, por exemplo `"logo": "uesc.webp"`.
-- **Títulos de publicações, periódicos, eventos, livros e instituições ficam no idioma original** em todas as versões; DOI e autores também não são traduzidos.
+- **Títulos de publicações, periódicos, eventos, livros e instituições ficam no idioma original** em todas as versões; o DOI também não é traduzido. As listas de autores não são exibidas no site nem guardadas nos JSON.
 - Um artigo novo em `publications.json` precisa de `year`, `title`, `journal` e `doi` (ou `url`, quando não houver DOI); para artigo aceito, acrescente `"status": "accepted"`. Coloque-o no início da lista `articles` (os primeiros aparecem em "Publicações recentes"). Exemplo:
   ```json
   {"year": 2026, "title": "Título original do artigo", "journal": "Talanta", "doi": "10.1016/j.talanta.2026.127000", "status": "published"},
@@ -170,13 +170,13 @@ Páginas de desenvolvimento (não indexadas, fora do menu): `guia.html`, `design
   {"type": "interview", "date": "2026-11-05", "title": "Título original", "source": "Nome do veículo", "url": "https://...", "lang": "pt"}
   ```
 - No cabeçalho de um fragmento, além de `title:` e `description:`, podem ser usados `styles:` (CSS próprio da página), `scripts:` (JS próprio) e `body_class:`. Exemplo: a página "Vida de cientista" usa `styles: /css/vida.css` e `scripts: /js/vida.js`.
-- **Imagens da página "Vida de cientista"** (`_src/pages/pt/vida.html`): salve as fotos em WebP em `assets/img/vida/`. Para transformar um capítulo em apresentação automática, coloque duas ou mais `<img class="v-slide">` dentro do mesmo `<div class="v-slides">`; para a galeria, copie um `<li>` da lista `v-marquee`. Sempre preencha `alt`, `width` e `height`.
+- **Imagens da página "Vida de cientista"** (`_src/pages/pt/vida.html`): salve as fotos em WebP em `assets/img/vida/` (crie a pasta na primeira vez). Para transformar um capítulo em apresentação automática, coloque duas ou mais `<img class="v-slide">` dentro do mesmo `<div class="v-slides">`; para a galeria, copie um `<li>` da lista `v-marquee`. Sempre preencha `alt`, `width` e `height`.
 
 ## Documentação adicional
 
 - [`design.md`](design.md) — design system (tokens, tipografia, componentes).
 - [`CHANGELOG.md`](CHANGELOG.md) — histórico de alterações.
-- [`PENDENCIAS.md`](PENDENCIAS.md) — informações que faltam ou precisam ser conferidas.
+- [`PENDENCIAS.md`](PENDENCIAS.md) — o que já foi feito, ideias de melhoria com progresso e dados a conferir.
 
 ## Licença
 

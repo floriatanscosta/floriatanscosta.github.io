@@ -6,6 +6,7 @@
 - O artigo "Food Chromatography Approaches for Mineral Oil Hydrocarbon Analysis" (LCGC International) saiu de Publicações (bloco `magazine` de `publications.json`) e passou para Mídia.
 - "Mídia" incluída no menu principal, entre Premiações e Contato; Publicações e Mídia têm links entre si.
 - Currículo em PDF: a seção de revista de divulgação virou "Mídia e divulgação", lida de `media.json`.
+- Documentação revisada (README, design.md, PENDENCIAS); descrição de Publicações para buscadores sem a menção a autores; `robots.txt` sem regras para arquivos inexistentes.
 
 ## 2026-10-18 — Novas páginas, currículo em PDF e ajustes gerais
 
