@@ -12,6 +12,7 @@
     "publicacoes": "publications",
     "producao": "production",
     "premiacoes": "awards",
+    "midia": "media",
     "contato": "contact",
     "metricas": "metrics",
     "sobre": "about",
@@ -51,6 +52,11 @@
         "pt": "Premiações",
         "en": "Awards",
         "es": "Premios"
+      },
+      "media": {
+        "pt": "Mídia",
+        "en": "Media",
+        "es": "Medios"
       },
       "contact": {
         "pt": "Contato",
@@ -253,6 +259,83 @@
         "pt": "Cartilha (extensão tecnológica)",
         "en": "Booklet (technological extension)",
         "es": "Cartilla (extensión tecnológica)"
+      }
+    },
+    "media": {
+      "magazine": {
+        "pt": "Artigo em revista de divulgação",
+        "en": "Magazine article",
+        "es": "Artículo en revista de divulgación"
+      },
+      "magazine_plural": {
+        "pt": "Artigos em revistas de divulgação",
+        "en": "Magazine articles",
+        "es": "Artículos en revistas de divulgación"
+      },
+      "news_plural": {
+        "pt": "Notícias e reportagens",
+        "en": "News and features",
+        "es": "Noticias y reportajes"
+      },
+      "news": {
+        "pt": "Notícia",
+        "en": "News",
+        "es": "Noticia"
+      },
+      "interview_plural": {
+        "pt": "Entrevistas e programas",
+        "en": "Interviews and programmes",
+        "es": "Entrevistas y programas"
+      },
+      "interview": {
+        "pt": "Entrevista",
+        "en": "Interview",
+        "es": "Entrevista"
+      },
+      "podcast_plural": {
+        "pt": "Podcasts",
+        "en": "Podcasts",
+        "es": "Pódcasts"
+      },
+      "podcast": {
+        "pt": "Podcast",
+        "en": "Podcast",
+        "es": "Pódcast"
+      },
+      "mention_plural": {
+        "pt": "Repostagens e menções",
+        "en": "Reposts and mentions",
+        "es": "Republicaciones y menciones"
+      },
+      "mention": {
+        "pt": "Menção",
+        "en": "Mention",
+        "es": "Mención"
+      },
+      "other_plural": {
+        "pt": "Outros conteúdos",
+        "en": "Other content",
+        "es": "Otros contenidos"
+      },
+      "other": {
+        "pt": "Outro",
+        "en": "Other",
+        "es": "Otro"
+      },
+      "access": {
+        "pt": "Acessar conteúdo",
+        "en": "View content",
+        "es": "Ver contenido"
+      },
+      "empty": {
+        "pt": "Nenhum conteúdo cadastrado no momento.",
+        "en": "No content listed at the moment.",
+        "es": "No hay contenidos registrados por el momento."
+      },
+      "toc": {
+        "pt": "Tipos de conteúdo",
+        "en": "Content types",
+        "es": "Tipos de contenido"
       }
     },
     "cv": {

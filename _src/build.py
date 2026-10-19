@@ -14,6 +14,7 @@ Fontes:
     _src/data/site.json          textos da interface (menus, rótulos, metadados) em pt/en/es
     _src/data/cv.json            dados do currículo (prêmios, formação, experiência...)
     _src/data/publications.json  artigos e trabalhos em eventos (títulos no idioma original)
+    _src/data/media.json         mídia e divulgação: revistas, notícias, entrevistas, menções (página /midia)
     _src/pages/<lang>/<page>.html  conteúdo de cada página; blocos de dados entram com {{bloco}}
 
 Saída (HTML estático, servido pelo GitHub Pages):
@@ -41,6 +42,7 @@ def load(name):
 S = load('site.json')
 CV = load('cv.json')
 PUB = load('publications.json')
+MEDIA = load('media.json')
 esc = lambda s: html.escape(str(s), quote=True)
 
 
@@ -129,13 +131,61 @@ def article_item(a, lang, compact=False):
 </li>'''
 
 
-def b_magazine(lang):
-    out = ['<ol class="pub-list">']
-    for a in PUB['magazine']:
-        out.append(f'''<li class="pub-item"><p class="pub-title" lang="en">{a["title"]}</p>
-<p class="pub-meta"><cite>{esc(a["journal"])}</cite></p>{doi_or_link(a, lang)}</li>''')
-    out.append('</ol>')
+MEDIA_TYPES = ['magazine', 'news', 'interview', 'podcast', 'mention', 'other']  # ordem das seções em /midia
+
+
+def media_type(m):
+    """Tipo do item de mídia; tipos desconhecidos entram em "other"."""
+    t = m.get('type', 'other')
+    return t if t in MEDIA_TYPES else 'other'
+
+
+def media_groups():
+    """Itens de media.json agrupados por tipo, na ordem de MEDIA_TYPES (tipos sem itens ficam de fora)."""
+    items = MEDIA.get('items', [])
+    groups = [(t, [m for m in items if media_type(m) == t]) for t in MEDIA_TYPES]
+    return [(t, ms) for t, ms in groups if ms]
+
+
+def media_item(m, lang):
+    t = media_type(m)
+    when = fmt_date(m['date'], lang) if m.get('date') else (str(m['year']) if m.get('year') else '')
+    meta = f'<cite>{esc(m["source"])}</cite>' if m.get('source') else ''
+    meta += f' · {when}' if meta and when else when
+    desc = f'\n  <p class="pub-desc">{esc(tr(m["description"], lang))}</p>' if m.get('description') else ''
+    label = T('pub.access', lang) if t == 'magazine' else T('media.access', lang)
+    link = ext_link(m['url'], f'{icon("external")}<span>{label}</span>', 'pub-link') if m.get('url') else ''
+    return f'''<li class="pub-item media-item">
+  <p class="media-type"><span class="badge">{T("media." + t, lang)}</span></p>
+  <p class="pub-title" lang="{m.get('lang', 'pt')}">{m["title"]}</p>
+  <p class="pub-meta">{meta}</p>{desc}
+  {link}
+</li>'''
+
+
+def b_media(lang):
+    """Página Mídia: uma seção por tipo de conteúdo, com os itens de media.json."""
+    groups = media_groups()
+    if not groups:
+        return f'<p class="text-muted">{T("media.empty", lang)}</p>'
+    out = []
+    for t, items in groups:
+        out.append(f'''<section class="section" id="{t}" aria-labelledby="h-{t}">
+  <h2 id="h-{t}" class="section-title">{T("media." + t + "_plural", lang)} <span class="badge">{len(items)}</span></h2>
+  <ol class="pub-list">
+  {"".join(media_item(m, lang) for m in items)}
+  </ol>
+</section>''')
     return '\n'.join(out)
+
+
+def b_media_toc(lang):
+    """Atalhos para os tipos de conteúdo (só aparecem quando houver mais de um tipo)."""
+    groups = media_groups()
+    if len(groups) < 2:
+        return ''
+    links = ''.join(f'<a href="#{t}">{T("media." + t + "_plural", lang)}</a>' for t, _ in groups)
+    return f'<nav class="page-toc" aria-label="{T("media.toc", lang)}">{links}</nav>'
 
 
 def guess_lang(title):
@@ -479,7 +529,7 @@ BLOCKS = {name[2:]: fn for name, fn in globals().items() if name.startswith('b_'
 # Layout
 # --------------------------------------------------------------------------------------
 
-NAV = ['index', 'biografia', 'experiencia', 'publicacoes', 'producao', 'premiacoes', 'contato']
+NAV = ['index', 'biografia', 'experiencia', 'publicacoes', 'producao', 'premiacoes', 'midia', 'contato']
 FOOTER = ['metricas', 'sobre', 'design', 'contato']
 
 

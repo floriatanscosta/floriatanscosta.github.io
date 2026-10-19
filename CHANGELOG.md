@@ -1,5 +1,12 @@
 # Histórico de alterações
 
+## 2026-10-19 — Página Mídia
+- Nova página **Mídia** (`/midia`, `/en/midia`, `/es/midia`) para divulgação científica, notícias, entrevistas, podcasts e menções, com uma seção por tipo de conteúdo, selo do tipo, fonte, ano e link "Acessar publicação"/"Acessar conteúdo" em nova aba (`rel="noopener noreferrer"`).
+- Nova fonte de dados `_src/data/media.json`; textos dos tipos em `site.json`; blocos `{{media}}` e `{{media_toc}}` no `build.py`.
+- O artigo "Food Chromatography Approaches for Mineral Oil Hydrocarbon Analysis" (LCGC International) saiu de Publicações (bloco `magazine` de `publications.json`) e passou para Mídia.
+- "Mídia" incluída no menu principal, entre Premiações e Contato; Publicações e Mídia têm links entre si.
+- Currículo em PDF: a seção de revista de divulgação virou "Mídia e divulgação", lida de `media.json`.
+
 ## 2026-10-18 — Novas páginas, currículo em PDF e ajustes gerais
 
 ### Conteúdo e dados

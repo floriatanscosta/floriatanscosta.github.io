@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Gera o currículo em PDF (pt, en, es) a partir dos mesmos dados do site.
+Gera o currículo em PDF (pt, en, es) a partir dos mesmos dados do site (cv.json, publications.json e media.json).
 
 Uso:
     python3 _src/cv_pdf.py          # gera os três PDFs
@@ -64,7 +64,7 @@ L = {
     'metrics': {'pt': 'Métricas de citação', 'en': 'Citation metrics', 'es': 'Métricas de citas'},
     'database': {'pt': 'Base', 'en': 'Database', 'es': 'Base'},
     'articles': {'pt': 'Artigos completos em periódicos', 'en': 'Journal articles', 'es': 'Artículos en revistas'},
-    'magazine': {'pt': 'Artigos em revista de divulgação', 'en': 'Articles in trade magazines', 'es': 'Artículos en revistas de divulgación'},
+    'media': {'pt': 'Mídia e divulgação', 'en': 'Media and outreach', 'es': 'Medios y divulgación'},
     'chapters': {'pt': 'Capítulos de livro', 'en': 'Book chapters', 'es': 'Capítulos de libro'},
     'projects': {'pt': 'Projetos', 'en': 'Projects', 'es': 'Proyectos'},
     'reviewer': {'pt': 'Revisor de periódicos', 'en': 'Journal reviewer', 'es': 'Revisor de revistas'},
@@ -92,10 +92,10 @@ t = lambda key, lang: L[key][lang]
 # Datas
 # --------------------------------------------------------------------------------------
 def content_date():
-    """Data da última alteração dos dados do currículo (cv.json e publications.json): último commit (ou hoje, se houver
+    """Data da última alteração dos dados do currículo (cv.json, publications.json e media.json): último commit (ou hoje, se houver
     alterações ainda não registradas no git). Sem git, usa a data de modificação dos arquivos."""
     data_dir = os.path.join(build.SRC, 'data')
-    files = [os.path.join(data_dir, f) for f in ('cv.json', 'publications.json')]
+    files = [os.path.join(data_dir, f) for f in ('cv.json', 'publications.json', 'media.json')]
     try:
         dirty = subprocess.run(['git', 'status', '--porcelain', '--', *files], cwd=build.ROOT,
                                capture_output=True, text=True, check=True).stdout.strip()
@@ -317,10 +317,18 @@ def build_story(lang):
         rows.append((str(a['year']), h))
     d.rows(rows)
 
-    if PUB.get('magazine'):
-        d.section(t('magazine', lang), len(PUB['magazine']))
-        d.rows([(str(a['year']), f'{x(a["title"])}. <i>{x(a["journal"])}</i>.' + (' ' + link(a['url']) if a.get('url') else ''))
-                for a in PUB['magazine']])
+    # Mídia e divulgação (media.json, a mesma fonte da página /midia)
+    media = [m for _, ms in build.media_groups() for m in ms]
+    if media:
+        d.section(t('media', lang), len(media))
+        rows = []
+        for m in media:
+            when = build.fmt_date(m['date'], lang) if m.get('date') else str(m.get('year', ''))
+            h = f'<b>{x(T("media." + build.media_type(m), lang))}:</b> {x(m["title"])}.'
+            h += f' <i>{x(m["source"])}</i>.' if m.get('source') else ''
+            h += ' ' + link(m['url']) if m.get('url') else ''
+            rows.append((when, h))
+        d.rows(rows)
 
     if CV.get('chapters'):
         d.section(t('chapters', lang), len(CV['chapters']))

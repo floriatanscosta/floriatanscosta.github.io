@@ -150,6 +150,7 @@ Um sistema expansivo de crachás (`.ui-tag`) com variantes: `solid`, `soft` (fun
 | Linha do tempo | `.tl`, `.tl-item`, `.tl-logo` | Formação e atuação profissional |
 | Lista ano + texto | `.item-list`, `.item-year`, `.item-sub` | Cursos, palestras, eventos, orientações |
 | Publicações | `.pub-list`, `.pub-item`, `.pub-title`, `.pub-link` | Artigos e trabalhos em eventos (sem lista de autores) |
+| Mídia | `.media-item`, `.media-type` (com `.pub-list`, `.pub-item`, `.badge`) | Página `/midia`, uma seção por tipo de conteúdo |
 | Prêmios | `.aw-stats`, `.aw-timeline`, `.aw-year`, `.aw-card`, `.aw-card--featured` | Página de premiações (`css/premiacoes.css`) |
 | Métricas | `.metrics-grid`, `.metric-card`, `.stat-strip`, `.totals` | Indicadores e totais |
 | Chips e selos | `.chip`, `.chip--mono`, `.badge`, `.badge--accent/ok/muted` | Linhas de pesquisa, técnicas, status |

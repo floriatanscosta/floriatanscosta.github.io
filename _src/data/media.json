@@ -1,0 +1,6 @@
+{
+  "_comment": "Mídia e divulgação (página /midia). Cada item: type (magazine, news, interview, podcast, mention ou other), title (no idioma original), source (veículo, site ou programa), url e, quando houver, year, date (AAAA-MM-DD), lang (idioma do título: en, pt, es) e description {pt,en,es}. Não preencha campos sem informação confirmada.",
+  "items": [
+    {"type": "magazine", "year": 2026, "title": "Food Chromatography Approaches for Mineral Oil Hydrocarbon Analysis", "source": "LCGC International", "url": "https://www.chromatographyonline.com/view/food-chromatography-approaches-mineral-oil-hydrocarbon-analysis", "lang": "en"}
+  ]
+}

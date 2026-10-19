@@ -56,6 +56,7 @@ _src/pages/<idioma>/ ─┘          │
 | `_src/data/site.json` | Textos da interface (menu, rótulos, botões) em pt/en/es |
 | `_src/data/cv.json` | Dados do currículo: prêmios, formação, experiência, projetos, revisões, métricas… |
 | `_src/data/publications.json` | Artigos e trabalhos em eventos (títulos no idioma original) |
+| `_src/data/media.json` | Mídia e divulgação: revistas de divulgação, notícias, entrevistas, podcasts e menções (página Mídia) |
 | `_src/pages/pt\|en\|es/*.html` | Conteúdo de cada página; blocos de dados entram como `{{nome_do_bloco}}` |
 | `/*.html`, `/en/`, `/es/` | Páginas **geradas**, em português na raiz e as 10 principais em inglês e espanhol |
 | `css/global.css` | Tokens (cores, fontes, espaçamentos), base, cabeçalho, menu, rodapé, botões |
@@ -81,13 +82,14 @@ floriatanscosta.github.io/
 ├── _src/                       # fonte (não publicada)
 │   ├── data/
 │   │   ├── cv.json
+│   │   ├── media.json
 │   │   ├── publications.json
 │   │   └── site.json
 │   ├── fonts/                  # Roboto .ttf para o PDF + OFL.txt
 │   ├── pages/
-│   │   ├── en/                 # 10 páginas
-│   │   ├── es/                 # 10 páginas
-│   │   └── pt/                 # 12 páginas (inclui 404 e vida)
+│   │   ├── en/                 # 11 páginas
+│   │   ├── es/                 # 11 páginas
+│   │   └── pt/                 # 13 páginas (inclui 404 e vida)
 │   ├── build.py
 │   └── cv_pdf.py
 ├── assets/
@@ -117,7 +119,7 @@ floriatanscosta.github.io/
 │   ├── theme-init.js
 │   └── vida.js
 ├── index.html, biografia.html, experiencia.html, publicacoes.html, producao.html,
-│   premiacoes.html, metricas.html, contato.html, sobre.html, design.html, vida.html, 404.html
+│   premiacoes.html, midia.html, metricas.html, contato.html, sobre.html, design.html, vida.html, 404.html
 ├── guia.html, design-meta.html, exemplos.html     # páginas de desenvolvimento
 ├── .gitignore
 ├── _config.yml                 # configuração do Jekyll / GitHub Pages
@@ -146,8 +148,8 @@ Páginas de desenvolvimento (não indexadas, fora do menu): `guia.html`, `design
    ```
    O comando regenera todas as páginas, o `sitemap.xml` e os currículos em PDF, e verifica os links internos.
    - **Currículo em PDF** (`assets/cv/floriatan-costa-cv-pt|en|es.pdf`): gerado por `_src/cv_pdf.py` a partir de
-     `cv.json` e `publications.json`, sem foto. O rodapé traz a data de geração e a data da última alteração desses
-     dois arquivos. Requer o ReportLab e a svglib (ícones e logotipo), instalados uma única vez com `pip install reportlab svglib`. Sem eles, o build avisa e
+     `cv.json`, `publications.json` e `media.json`, sem foto. O rodapé traz a data de geração e a data da última alteração desses
+     arquivos. Requer o ReportLab e a svglib (ícones e logotipo), instalados uma única vez com `pip install reportlab svglib`. Sem eles, o build avisa e
      gera só as páginas; para pular os PDFs de propósito, use `python3 _src/build.py --check --no-pdf`.
 3. Faça commit dos arquivos gerados e da fonte, e envie ao GitHub. O GitHub Pages publica automaticamente.
 
@@ -163,6 +165,10 @@ Páginas de desenvolvimento (não indexadas, fora do menu): `guia.html`, `design
   ```
 - Os URLs são iguais nos três idiomas, com prefixo: `/biografia`, `/en/biografia`, `/es/biografia`.
 - O cabeçalho, o rodapé, os metadados (SEO, Open Graph, `hreflang`, `canonical`) e o seletor de idioma são gerados — basta criar a página em `_src/pages/<idioma>/`.
+- **Página Mídia** (`/midia`): cada conteúdo é um item em `_src/data/media.json` com `type` (`magazine`, `news`, `interview`, `podcast`, `mention` ou `other`), `title` (no idioma original), `source` e `url`; opcionais: `year` ou `date` (AAAA-MM-DD), `lang` (idioma do título) e `description` (`{"pt", "en", "es"}`). A página cria uma seção por tipo, com atalhos quando houver mais de um, e o link abre em nova aba. Exemplo:
+  ```json
+  {"type": "interview", "date": "2026-11-05", "title": "Título original", "source": "Nome do veículo", "url": "https://...", "lang": "pt"}
+  ```
 - No cabeçalho de um fragmento, além de `title:` e `description:`, podem ser usados `styles:` (CSS próprio da página), `scripts:` (JS próprio) e `body_class:`. Exemplo: a página "Vida de cientista" usa `styles: /css/vida.css` e `scripts: /js/vida.js`.
 - **Imagens da página "Vida de cientista"** (`_src/pages/pt/vida.html`): salve as fotos em WebP em `assets/img/vida/`. Para transformar um capítulo em apresentação automática, coloque duas ou mais `<img class="v-slide">` dentro do mesmo `<div class="v-slides">`; para a galeria, copie um `<li>` da lista `v-marquee`. Sempre preencha `alt`, `width` e `height`.
 

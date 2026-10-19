@@ -2,24 +2,24 @@
 
 Registro do que já foi feito no site e do que ainda pode ser implementado. Nada aqui foi inventado: os itens de dados dependem de conferência com as fontes originais.
 
-_Atualizado em 18/10/2026. O histórico detalhado das alterações está em `CHANGELOG.md`._
+_Atualizado em 19/10/2026. O histórico detalhado das alterações está em `CHANGELOG.md`._
 
 ## Progresso geral
 
 ```mermaid
 pie showData title Itens registrados neste arquivo
-    "Concluídos" : 17
+    "Concluídos" : 18
     "Ideias pendentes" : 30
     "Dados e infraestrutura a conferir" : 11
 ```
 
 | Grupo | Concluído | Progresso |
 |---|---:|---|
-| Revisões e entregas (fora da lista de ideias) | 11 de 11 | `████████████████████` 100% |
+| Revisões e entregas (fora da lista de ideias) | 12 de 12 | `████████████████████` 100% |
 | Ideias de melhoria | 4 de 34 | `██░░░░░░░░░░░░░░░░░░` 12% |
 | Dados a conferir | 1 de 8 | `██░░░░░░░░░░░░░░░░░░` 12% |
 | Funcionalidades e infraestrutura | 1 de 5 | `████░░░░░░░░░░░░░░░░` 20% |
-| **Total** | 17 de 58 | `██████░░░░░░░░░░░░░░` 29% |
+| **Total** | 18 de 59 | `██████░░░░░░░░░░░░░░` 31% |
 
 **Ideias de melhoria por grupo**
 
@@ -50,6 +50,7 @@ pie showData title Itens registrados neste arquivo
 12. Tema com três opções: claro, escuro e seguir o sistema _(ideia I20)_
 13. Currículo em PDF nos três idiomas, gerado a partir dos JSON (sem foto; datas de geração e de atualização no rodapé) _(ideia I7)_
 14. Ferramentas (/web): seletor de tema com três opções, menu com a página atual marcada e novas páginas "Sobre" e "Aviso de uso"
+15. Página **Mídia** (`/midia`) com dados em `media.json`; o artigo da LCGC International saiu de Publicações e passou para Mídia
 
 ## Ideias de melhoria
 
