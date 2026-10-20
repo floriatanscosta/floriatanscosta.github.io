@@ -9,7 +9,7 @@
     "address": ["Universidad de Zaragoza — Facultad de Ciencias", "Calle Pedro Cerbuna, 12", "50009 Zaragoza, España"],
     "job": {"pt": "Pesquisador de Pós-Doutorado", "en": "Postdoctoral Researcher", "es": "Investigador Posdoctoral"},
     "affiliation": "Universidad de Zaragoza",
-    "citation_names": "COSTA, F. S.; COSTA, FLORIATAN SANTOS; COSTA, FLORIATAN S.; SANTOS COSTA, FLORIATAN; COSTA, F. SANTOS"
+    "citation_names": "COSTA, F. S.; COSTA, FLORIATAN SANTOS"
   },
   
   "profiles": [
@@ -239,7 +239,7 @@
   "metrics": {
     "date": "2026-10-18",
     "sources": [
-      {"id": "scopus", "label": "Scopus®", "owner": "Elsevier", "url": "https://www.scopus.com/authid/detail.uri?authorId=57216746115", "docs": 44, "citations": 421, "h": 14},
+      {"id": "scopus", "label": "Scopus®", "owner": "Elsevier", "url": "https://www.scopus.com/authid/detail.uri?authorId=57216746115", "docs": 44, "citations": 422, "h": 14},
       {"id": "wos", "label": "Web of Science™", "owner": "Clarivate", "url": "https://www.webofscience.com/wos/author/record/S-1383-2018", "docs": 47, "citations": 372, "h": 13},
       {"id": "scholar", "label": "Google Scholar", "owner": "Google", "url": "https://scholar.google.com/citations?user=EbyxxAoAAAAJ", "docs": 54, "citations": 483, "h": 14}
     ]

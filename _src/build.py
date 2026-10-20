@@ -89,7 +89,7 @@ def icon(name, cls='icon'):
 def doi_or_link(item, lang):
     if item.get('doi'):
         d = item['doi']
-        return ext_link(f'https://doi.org/{d}', f'{icon("doi")}<span>DOI: {esc(d)}</span>', 'pub-link')
+        return ext_link(f'https://doi.org/{d}', f'{icon("doi")}<span> {esc(d)}</span>', 'pub-link')
     if item.get('url'):
         return ext_link(item['url'], f'{icon("external")}<span>{T("pub.access", lang)}</span>', 'pub-link')
     return ''
