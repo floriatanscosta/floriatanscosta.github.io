@@ -20,7 +20,7 @@ Fontes:
 Saída (HTML estático, servido pelo GitHub Pages):
     /<page>.html (pt), /en/<page>.html, /es/<page>.html, /404.html, /sitemap.xml
 """
-import html, json, os, re, sys
+import base64, html, json, os, re, sys
 from datetime import date
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -479,15 +479,26 @@ def b_profiles_table(lang):
     return '\n'.join(out)
 
 
+def email_code(address):
+    """Codifica o e-mail para não aparecer no HTML (invertido + Base64); js/app.js decodifica no navegador."""
+    return base64.b64encode(address[::-1].encode('utf-8')).decode('ascii')
+
+
+def protected_email(address, cls, lang):
+    """Link de e-mail protegido contra robôs coletores: o endereço só é montado pelo JavaScript."""
+    return (f'<a class="{cls}" data-email="{email_code(address)}" data-email-text>'
+            f'{T("contact.email_hidden", lang)}</a>')
+
+
 def b_contact(lang):
     p = CV['person']
     addr = '<br>'.join(esc(x) for x in p['address'])
     return f'''<div class="card-grid card-grid--2">
   <section class="card contact-card" aria-labelledby="c-email">
     <h2 id="c-email" class="card-title">{icon("mail")}{T("contact.email", lang)}</h2>
-    <p><a class="contact-email" href="mailto:{p["email"]}">{p["email"]}</a></p>
-    <p class="text-muted">{T("contact.email_alt", lang)}: <a class="inline-link" href="mailto:{p["email_alt"]}">{p["email_alt"]}</a></p>
-    <p><a class="btn" href="mailto:{p["email"]}">{icon("mail")}{T("contact.write", lang)}</a></p>
+    <p>{protected_email(p["email"], "contact-email", lang)}</p>
+    <p class="text-muted">{T("contact.email_alt", lang)}: {protected_email(p["email_alt"], "inline-link", lang)}</p>
+    <p><a class="btn" data-email="{email_code(p["email"])}" hidden>{icon("mail")}{T("contact.write", lang)}</a></p>
   </section>
   <section class="card contact-card" aria-labelledby="c-addr">
     <h2 id="c-addr" class="card-title">{icon("pin")}{T("contact.address", lang)}</h2>

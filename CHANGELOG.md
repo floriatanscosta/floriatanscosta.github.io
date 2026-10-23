@@ -1,5 +1,9 @@
 # Histórico de alterações
 
+## 2026-10-23 — Proteção dos e-mails contra robôs
+- Página Contato (pt, en, es): os dois endereços de e-mail não aparecem mais no HTML. Ficam codificados (invertidos e em Base64) no atributo `data-email`, sem "@" nem "mailto:", e o `js/app.js` monta os links no navegador. Sem JavaScript, aparece o aviso "ative o JavaScript para ver o endereço" e o botão "Enviar e-mail" fica oculto.
+- `build.py`: funções `email_code()` e `protected_email()`; novo texto `contact.email_hidden` em `site.json`; regra `.btn[hidden]` em `global.css`.
+
 ## 2026-10-19 — Página Mídia
 - Nova página **Mídia** (`/midia`, `/en/midia`, `/es/midia`) para divulgação científica, notícias, entrevistas, podcasts e menções, com uma seção por tipo de conteúdo, selo do tipo, fonte, ano e link "Acessar publicação"/"Acessar conteúdo" em nova aba (`rel="noopener noreferrer"`).
 - Nova fonte de dados `_src/data/media.json`; textos dos tipos em `site.json`; blocos `{{media}}` e `{{media_toc}}` no `build.py`.

@@ -143,8 +143,24 @@
   window.toggleMenu = toggleMenu;
   window.switchLanguage = switchLanguage;
 
+  /* ---------- E-mails protegidos contra robôs ---------- */
+  // O HTML traz o endereço codificado (invertido + Base64) em data-email, sem "@" nem "mailto:".
+  // Aqui ele é decodificado e vira um link normal; data-email-text também troca o texto exibido.
+  function revealEmails() {
+    document.querySelectorAll('[data-email]').forEach(function (el) {
+      var address;
+      try { address = window.atob(el.getAttribute('data-email')).split('').reverse().join(''); } catch (e) { return; }
+      if (!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(address)) return;
+      el.setAttribute('href', 'mailto:' + address);
+      if (el.hasAttribute('data-email-text')) el.textContent = address;
+      el.hidden = false;
+      el.removeAttribute('data-email');
+    });
+  }
+
   document.addEventListener('DOMContentLoaded', function () {
     applyTheme();
+    revealEmails();
     languageNotice();
 
     document.querySelectorAll('[data-theme-toggle]').forEach(function (b) {

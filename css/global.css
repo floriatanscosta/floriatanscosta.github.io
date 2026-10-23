@@ -289,6 +289,7 @@ details.accordion .accordion-content { padding: 18px 20px 20px; border-top: 1px 
 .btn, .contact-form button { display: inline-flex; align-items: center; justify-content: center; gap: 8px; background-color: var(--btn-bg); color: var(--btn-text); padding: 11px 22px; border: 1px solid transparent; border-radius: var(--radius-md); font-size: 0.95rem; font-weight: 600; text-decoration: none; cursor: pointer; transition: transform var(--transition-fast), box-shadow var(--transition-fast), background-color var(--transition-fast); line-height: 1.2; font-family: inherit; }
 .btn:hover, .contact-form button:hover { background-color: var(--btn-bg-hover); transform: translateY(-1px); box-shadow: var(--shadow-md); color: var(--btn-text); }
 .btn:active, .contact-form button:active { transform: translateY(0); box-shadow: var(--shadow-sm); }
+.btn[hidden] { display: none; } /* ex.: botão "Enviar e-mail", exibido só depois que o JavaScript monta o endereço */
 .btn:disabled { background-color: var(--border-color); color: var(--text-main); opacity: 0.6; cursor: not-allowed; transform: none; box-shadow: none; }
 .btn-outline { background-color: transparent; color: var(--link-color); border-color: currentColor; }
 .btn-outline:hover { background-color: var(--nav-hover); color: var(--link-color); box-shadow: none; }

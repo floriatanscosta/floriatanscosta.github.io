@@ -529,6 +529,11 @@
         "en": "Send an email",
         "es": "Enviar correo"
       },
+      "email_hidden": {
+        "pt": "ative o JavaScript para ver o endereço",
+        "en": "enable JavaScript to see the address",
+        "es": "active JavaScript para ver la dirección"
+      },
       "address": {
         "pt": "Endereço profissional",
         "en": "Work address",
