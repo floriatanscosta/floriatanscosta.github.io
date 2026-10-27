@@ -237,11 +237,11 @@
   ],
 
   "metrics": {
-    "date": "2026-10-18",
+    "date": "2026-10-26",
     "sources": [
-      {"id": "scopus", "label": "Scopus®", "owner": "Elsevier", "url": "https://www.scopus.com/authid/detail.uri?authorId=57216746115", "docs": 44, "citations": 422, "h": 14},
-      {"id": "wos", "label": "Web of Science™", "owner": "Clarivate", "url": "https://www.webofscience.com/wos/author/record/S-1383-2018", "docs": 47, "citations": 372, "h": 13},
-      {"id": "scholar", "label": "Google Scholar", "owner": "Google", "url": "https://scholar.google.com/citations?user=EbyxxAoAAAAJ", "docs": 54, "citations": 483, "h": 14}
+      {"id": "scopus", "label": "Scopus®", "owner": "Elsevier", "url": "https://www.scopus.com/authid/detail.uri?authorId=57216746115", "docs": 44, "citations": 424, "h": 14},
+      {"id": "wos", "label": "Web of Science™", "owner": "Clarivate", "url": "https://www.webofscience.com/wos/author/record/S-1383-2018", "docs": 47, "citations": 374, "h": 13},
+      {"id": "scholar", "label": "Google Scholar", "owner": "Google", "url": "https://scholar.google.com/citations?user=EbyxxAoAAAAJ", "docs": 54, "citations": 486, "h": 14}
     ]
   },
 
