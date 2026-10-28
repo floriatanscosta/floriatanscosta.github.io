@@ -1,17 +1,22 @@
 title: Floriatan Santos Costa · Química Analítica
 description: Portfólio acadêmico de Floriatan Santos Costa, pesquisador de pós-doutorado em química analítica: preparo de amostras, solventes eutéticos profundos, quimiometria e espectrometria atômica.
 ---
-<section class="hero container">
-  <div class="hero-art">
-    <img src="/assets/svg/fundo.svg" alt="" width="600" height="600" class="cover-image">
-  </div>
-  <div class="hero-text">
-    <p class="eyebrow">Floriatan Santos Costa · Química Analítica</p>
-    <h1 class="intro-title">Entre tubos, dados e algoritmos, um pesquisador em busca de respostas!</h1>
-    <p class="intro-text">A ciência é um universo de possibilidades. Entre tubos, curvas analíticas, espectrômetros e dados, sigo rastros invisíveis que <a href="/vida" class="inline-link">contam histórias</a> e revelam os mistérios da natureza.</p>
-    {{current}}
-    {{profiles}}
-    <p class="hero-cv">{{cv_pdf}}</p>
+<section class="home-hero" aria-labelledby="home-title">
+  <div class="container home-hero__inner">
+    <div class="home-hero__text">
+      <p class="eyebrow">Floriatan Santos Costa · Química Analítica</p>
+      <h1 id="home-title" class="home-title">Entre tubos, dados e algoritmos, <span class="home-title__hl">um pesquisador em busca de respostas!</span></h1>
+      <p class="home-lead">A ciência é um universo de possibilidades. Entre tubos, curvas analíticas, espectrômetros e dados, sigo rastros invisíveis que <a href="/vida" class="inline-link">contam histórias</a> e revelam os mistérios da natureza.</p>
+      {{current}}
+      <div class="home-actions">
+        <a class="btn" href="/publicacoes">Ver publicações</a>
+        {{cv_pdf}}
+      </div>
+      {{profiles}}
+    </div>
+    <div class="home-hero__art">
+      <img src="/assets/svg/fundo.svg" alt="" width="600" height="600">
+    </div>
   </div>
 </section>
 

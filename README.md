@@ -59,8 +59,9 @@ _src/pages/<idioma>/ ─┘          │
 | `_src/data/media.json` | Mídia e divulgação: revistas de divulgação, notícias, entrevistas, podcasts e menções (página Mídia) |
 | `_src/pages/pt\|en\|es/*.html` | Conteúdo de cada página; blocos de dados entram como `{{nome_do_bloco}}` |
 | `/*.html`, `/en/`, `/es/` | Páginas **geradas**, em português na raiz e as 11 principais em inglês e espanhol |
-| `css/global.css` | Tokens (cores, fontes, espaçamentos), base, cabeçalho, menu, rodapé, botões |
-| `css/main.css` | Componentes de conteúdo (cartões, linha do tempo, publicações, métricas…) |
+| `css/global.css` | Tokens (cores do logotipo, escala tipográfica, pesos, raios, sombras), base, cabeçalho, menu, rodapé, botões |
+| `css/main.css` | Componentes de conteúdo (abertura da página inicial, cartões, linha do tempo, publicações, métricas…) |
+| `css/exemplos.css` | Componentes antigos usados só nas páginas de desenvolvimento (`exemplos.html`, `guia.html`, `design-meta.html`) |
 | `css/premiacoes.css`, `css/design.css`, `css/vida.css` | Estilos próprios de cada uma dessas páginas |
 | `js/theme-init.js` | Aplica o tema (claro, escuro ou seguir o sistema) antes da renderização (evita "piscar") |
 | `js/app.js` | Menu móvel, seletor de tema e de idioma, aviso de idioma, ano do rodapé |
@@ -105,6 +106,7 @@ floriatanscosta.github.io/
 │   └── logo.svg
 ├── css/
 │   ├── design.css
+│   ├── exemplos.css            # só páginas de desenvolvimento
 │   ├── global.css
 │   ├── main.css
 │   ├── premiacoes.css
@@ -136,7 +138,7 @@ floriatanscosta.github.io/
 Para resumir, a árvore mostra só as pastas das páginas em `_src/pages/`, `en/`, `es/` e dos
 ícones e imagens em `assets/`, sem listar cada arquivo.
 
-Páginas de desenvolvimento (não indexadas, fora do menu): `guia.html`, `design-meta.html` e `exemplos.html`.
+Páginas de desenvolvimento (não indexadas, fora do menu): `guia.html`, `design-meta.html` e `exemplos.html`. Só elas carregam `css/exemplos.css`.
 
 ## Como atualizar o conteúdo
 
@@ -156,6 +158,8 @@ Páginas de desenvolvimento (não indexadas, fora do menu): `guia.html`, `design
 > Não edite diretamente os `.html` da raiz, `/en` ou `/es`: eles são sobrescritos pelo gerador.
 
 ### Convenções
+
+- **Estilos:** cores, tamanhos de fonte, pesos e raios vêm sempre dos tokens de `css/global.css` (ver [`design.md`](design.md)). Não escreva valores fixos nos CSS.
 
 - **Logos de instituições** (`"logo"` em `cv.json`): arquivos `.svg` ficam em `assets/svg/`; logos em imagem (`.webp`/`.png`, para SVGs muito pesados) ficam em `assets/img/logos/`. Basta informar o nome do arquivo, por exemplo `"logo": "uesc.webp"`.
 - **Títulos de publicações, periódicos, eventos, livros e instituições ficam no idioma original** em todas as versões; o DOI também não é traduzido. As listas de autores não são exibidas no site nem guardadas nos JSON.

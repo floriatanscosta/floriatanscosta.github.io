@@ -41,12 +41,12 @@ FONT_DIR = os.path.join(build.SRC, 'fonts')
 SITE = 'floriatan.com.br'
 
 # Cores da identidade visual (página Design)
-NAVY = colors.HexColor('#3f5682')
-SLATE = colors.HexColor('#5a729e')
-TEAL = colors.HexColor('#1c7d9a')
-TEXT = colors.HexColor('#3d4350')
-MUTED = colors.HexColor('#5f6675')
-RULE = colors.HexColor('#d5dbe6')
+NAVY = colors.HexColor('#1b3a5e')
+SLATE = colors.HexColor('#274c77')
+TEAL = colors.HexColor('#17738e')
+TEXT = colors.HexColor('#2f3747')
+MUTED = colors.HexColor('#5b6474')
+RULE = colors.HexColor('#e1e7ef')
 
 # --------------------------------------------------------------------------------------
 # Textos próprios do PDF (os demais vêm de site.json)

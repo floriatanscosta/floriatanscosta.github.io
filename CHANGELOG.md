@@ -1,5 +1,15 @@
 # Histórico de alterações
 
+## 2026-10-28 — Design v3: paleta do logotipo e CSS padronizado
+- **Paleta do logotipo:** os tokens passaram a derivar do logotipo Fc (azul-marinho `#274c77`, petróleo `#1c7d9a`/`#17738e`, lavanda `#8682ab`), com um único degradê de marca. Saíram `#5a729e`, `#666fe4` e `#1d6ee7`. Contraste AA conferido nos dois temas.
+- **Tema escuro:** títulos (`#eef3f9`) e destaques (`#ffffff`) voltaram a ter níveis diferentes; novo fundo `#12161c` e cartões `#1a2029`.
+- **Tokens únicos:** novas escalas de tamanho de fonte (`--fs-*`), pesos (`--fw-*`: 400, 500, 700, 800) e raios (6 / 10 / 16 / 999 px); estados (`--success`, `--warning`, `--danger`, `--medal`). Removidos os tokens duplicados ou sem uso; `--color-bg-surface-1`, `--text-color-error` e `--bg-error` ficaram só como apelidos para as Ferramentas (`/web`).
+- **Sem valores fixos:** cores, tamanhos, pesos e raios de `global.css`, `main.css`, `design.css`, `premiacoes.css` e `vida.css` agora vêm dos tokens.
+- **Novo `css/exemplos.css`:** o CSS usado só por `exemplos.html`, `guia.html` e `design-meta.html` saiu de `global.css`/`main.css`; classes sem uso foram apagadas.
+- **Página inicial:** nova abertura (pt, en, es) com botão principal "Ver publicações", cargo atual em linha compacta, perfis em pílulas e fundo de pontos; no celular o título aparece primeiro e a ilustração vira um selo pequeno. As demais seções não mudaram.
+- **Página Design:** paleta da interface e pesos atualizados nos três idiomas. Currículo em PDF e `theme-color` com as novas cores.
+- `design.md` reescrito (v3.0, português do Brasil).
+
 ## 2026-10-23 — Proteção dos e-mails contra robôs
 - Página Contato (pt, en, es): os dois endereços de e-mail não aparecem mais no HTML. Ficam codificados (invertidos e em Base64) no atributo `data-email`, sem "@" nem "mailto:", e o `js/app.js` monta os links no navegador. Sem JavaScript, aparece o aviso "ative o JavaScript para ver o endereço" e o botão "Enviar e-mail" fica oculto.
 - `build.py`: funções `email_code()` e `protected_email()`; novo texto `contact.email_hidden` em `site.json`; regra `.btn[hidden]` em `global.css`.

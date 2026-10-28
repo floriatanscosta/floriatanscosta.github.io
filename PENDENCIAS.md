@@ -2,24 +2,24 @@
 
 Registro do que já foi feito no site e do que ainda pode ser implementado. Nada aqui foi inventado: os itens de dados dependem de conferência com as fontes originais.
 
-_Atualizado em 28/10/2026. O histórico detalhado das alterações está em `CHANGELOG.md`._
+_Atualizado em 28/10/2026 (design v3). O histórico detalhado das alterações está em `CHANGELOG.md`._
 
 ## Progresso geral
 
 ```mermaid
 pie showData title Itens registrados neste arquivo
-    "Concluídos" : 19
+    "Concluídos" : 20
     "Ideias pendentes" : 30
     "Dados e infraestrutura a conferir" : 11
 ```
 
 | Grupo | Concluído | Progresso |
 |---|---:|---|
-| Revisões e entregas (fora da lista de ideias) | 13 de 13 | `████████████████████` 100% |
+| Revisões e entregas (fora da lista de ideias) | 14 de 14 | `████████████████████` 100% |
 | Ideias de melhoria | 4 de 34 | `██░░░░░░░░░░░░░░░░░░` 12% |
 | Dados a conferir | 1 de 8 | `██░░░░░░░░░░░░░░░░░░` 12% |
 | Funcionalidades e infraestrutura | 1 de 5 | `████░░░░░░░░░░░░░░░░` 20% |
-| **Total** | 19 de 60 | `██████░░░░░░░░░░░░░░` 32% |
+| **Total** | 20 de 61 | `███████░░░░░░░░░░░░░` 33% |
 
 **Ideias de melhoria por grupo**
 
@@ -52,6 +52,7 @@ pie showData title Itens registrados neste arquivo
 14. Ferramentas (/web): seletor de tema com três opções, menu com a página atual marcada e novas páginas "Sobre" e "Aviso de uso"
 15. Página **Mídia** (`/midia`) com dados em `media.json`; o artigo da LCGC International saiu de Publicações e passou para Mídia
 16. E-mails da página Contato (pt, en, es) protegidos contra robôs coletores: codificados no atributo `data-email` e montados pelo `js/app.js` no navegador, com aviso quando o JavaScript está desativado
+17. Design v3: paleta derivada do logotipo, tokens únicos (cores, fontes, pesos, raios), CSS das páginas de exemplo separado em `css/exemplos.css` e nova abertura da página inicial
 
 ## Ideias de melhoria
 

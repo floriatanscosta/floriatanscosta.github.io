@@ -463,10 +463,11 @@ def b_totals(lang):
 
 
 def b_profiles(lang):
-    out = ['<ul class="profile-links">']
-    out.append(f'<li><a class="profile-link" href="{url("metricas", lang)}"><img src="/assets/icons/data.svg" alt="" width="32" height="32"><span>{T("nav.metrics", lang)}</span></a></li>')
+    """Perfis acadêmicos da abertura da página inicial, em pílulas compactas."""
+    label = {'pt': 'Perfis acadêmicos', 'en': 'Academic profiles', 'es': 'Perfiles académicos'}[lang]
+    out = [f'<ul class="profile-pills" aria-label="{label}">']
     for p in CV['profiles']:
-        out.append(f'<li>{ext_link(p["url"], f"""<img src="/assets/icons/{p["icon"]}" alt="" width="32" height="32"><span>{esc(p["label"])}</span>""", "profile-link")}</li>')
+        out.append(f'<li>{ext_link(p["url"], f"""<img src="/assets/icons/{p["icon"]}" alt="" width="20" height="20">{esc(p["label"])}""")}</li>')
     out.append('</ul>')
     return '\n'.join(out)
 
@@ -512,8 +513,16 @@ def b_latest(lang):
 
 
 def b_current(lang):
+    """Cargo atual da abertura da página inicial: linha compacta com o logotipo."""
     cur = CV['positions'][0]
-    return f'<p class="current-pos">{logo_img(cur.get("logo"), cur["institution"])}<span><strong>{esc(tr(cur["role"], lang))}</strong><span>{esc(cur["institution"])} · {esc(cur["place"])}</span></span></p>'
+    logo = cur.get('logo')
+    img = ''
+    if logo:
+        folder = 'svg' if logo.endswith('.svg') else 'img/logos'
+        img = f'<img class="now-pill__logo" src="/assets/{folder}/{logo}" alt="{esc(cur["institution"])}" width="56" height="35">'
+    return (f'<p class="now-pill"><span class="now-pill__dot" aria-hidden="true"></span>{img}'
+            f'<span class="now-pill__text"><strong>{esc(tr(cur["role"], lang))}</strong>'
+            f'<span>{esc(cur["institution"])} · {esc(cur["place"])}</span></span></p>')
 
 
 def b_updated(lang):
@@ -591,8 +600,8 @@ def head(page, lang, meta, langs_available, noindex=False):
   <meta property="og:image:alt" content="{esc(T("meta.og_image_alt", lang))}">
   <meta property="og:locale" content="{OG_LOCALE[lang]}">{og_alt}
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="theme-color" content="#5a729e" media="(prefers-color-scheme: light)">
-  <meta name="theme-color" content="#1a1f26" media="(prefers-color-scheme: dark)">
+  <meta name="theme-color" content="#274c77" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#12161c" media="(prefers-color-scheme: dark)">
   <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
   <link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png">
   <link rel="preload" href="/assets/fonts/roboto-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>

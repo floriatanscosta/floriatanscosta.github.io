@@ -6,54 +6,50 @@
 ================================================================== */
 
 /* Cor de cada tipo de prêmio (medalha e detalhes) */
-.aw-card { --aw-c: #c48a12; }
+.aw-card { --aw-c: var(--medal); }
 .aw-card--thesis { --aw-c: var(--accent); }
 .aw-card--paper { --aw-c: var(--accent-2); }
-.aw-card--honorable { --aw-c: #1c7d9a; }
-[data-theme="dark"] .aw-card { --aw-c: #e8b54a; }
-[data-theme="dark"] .aw-card--thesis { --aw-c: var(--accent); }
-[data-theme="dark"] .aw-card--paper { --aw-c: #6aa6ff; }
-[data-theme="dark"] .aw-card--honorable { --aw-c: #4fc1dc; }
+.aw-card--honorable { --aw-c: var(--brand-lavender); }
 
 /* 1. Resumo (total, melhores trabalhos e período) */
 /*****************************************************************/
 .aw-stats { display: flex; flex-wrap: wrap; gap: 12px; margin: 28px 0 0; }
 .aw-stats > div { display: flex; flex-direction: column-reverse; gap: 2px; min-width: 150px; padding: 14px 20px; background: var(--box-bg); border: 1px solid var(--border-color); border-radius: var(--radius-lg); box-shadow: var(--shadow-sm); }
-.aw-stats dt { font-size: 0.82rem; font-weight: 600; color: var(--text-muted); }
-.aw-stats dd { margin: 0; font-size: 1.9rem; font-weight: 900; line-height: 1.1; letter-spacing: -0.02em; color: var(--heading-strong); font-variant-numeric: tabular-nums; }
+.aw-stats dt { font-size: var(--fs-sm); font-weight: var(--fw-bold); color: var(--text-muted); }
+.aw-stats dd { margin: 0; font-size: var(--fs-2xl); font-weight: var(--fw-black); line-height: 1.1; letter-spacing: -0.02em; color: var(--heading-strong); font-variant-numeric: tabular-nums; }
 
 /* 2. Linha do tempo por ano */
 /*****************************************************************/
 .aw-section { padding-top: 8px; }
 .aw-timeline { position: relative; display: grid; gap: 40px; max-width: 1100px; }
 .aw-year { display: grid; grid-template-columns: 132px minmax(0, 1fr); gap: 0 32px; align-items: start; }
-.aw-year__label { position: sticky; top: 96px; margin: 0; padding-top: 10px; font-size: clamp(2rem, 3.4vw, 2.6rem); font-weight: 900; line-height: 1; letter-spacing: -0.03em; color: var(--heading-strong); font-variant-numeric: tabular-nums; }
-.aw-year__label::after { content: ''; display: block; width: 36px; height: 4px; margin-top: 12px; border-radius: 999px; background: linear-gradient(90deg, var(--accent), var(--accent-2)); }
+.aw-year__label { position: sticky; top: 96px; margin: 0; padding-top: 10px; font-size: clamp(2rem, 3.4vw, 2.6rem); font-weight: var(--fw-black); line-height: 1; letter-spacing: -0.03em; color: var(--heading-strong); font-variant-numeric: tabular-nums; }
+.aw-year__label::after { content: ''; display: block; width: 36px; height: 4px; margin-top: 12px; border-radius: var(--radius-pill); background: var(--brand-gradient); }
 
 /* Itens de um ano: linha vertical à esquerda, com um ponto por prêmio */
 .aw-items { position: relative; display: grid; grid-template-columns: minmax(0, 1fr); gap: 14px; margin: 0; padding: 0 0 0 28px; list-style: none; }
-.aw-items::before { content: ''; position: absolute; left: 0; top: 6px; bottom: 6px; width: 2px; border-radius: 2px; background: var(--border-color); }
+.aw-items::before { content: ''; position: absolute; left: 0; top: 6px; bottom: 6px; width: 2px; border-radius: var(--radius-sm); background: var(--border-color); }
 
 /* 3. Cartão de prêmio */
 /*****************************************************************/
 .aw-card { position: relative; display: grid; grid-template-columns: 48px minmax(0, 1fr); gap: 16px; align-items: start; padding: 20px 22px; background: var(--box-bg); border: 1px solid var(--border-color); border-radius: var(--radius-lg); box-shadow: var(--shadow-sm); transition: transform var(--transition-fast), box-shadow var(--transition-fast), border-color var(--transition-fast); }
-.aw-card::before { content: ''; position: absolute; left: -33px; top: 30px; width: 12px; height: 12px; border-radius: 50%; background: var(--box-bg); border: 3px solid var(--aw-c); }
+.aw-card::before { content: ''; position: absolute; left: -33px; top: 30px; width: 12px; height: 12px; border-radius: var(--radius-full); background: var(--box-bg); border: 3px solid var(--aw-c); }
 .aw-card:hover { transform: translateY(-2px); box-shadow: var(--shadow-md); border-color: color-mix(in srgb, var(--aw-c) 45%, var(--border-color)); }
 
-.aw-medal { display: grid; place-items: center; width: 48px; height: 48px; border-radius: 50%; color: var(--aw-c); background: color-mix(in srgb, var(--aw-c) 14%, transparent); box-shadow: inset 0 0 0 1px color-mix(in srgb, var(--aw-c) 30%, transparent); }
+.aw-medal { display: grid; place-items: center; width: 48px; height: 48px; border-radius: var(--radius-full); color: var(--aw-c); background: color-mix(in srgb, var(--aw-c) 14%, transparent); box-shadow: inset 0 0 0 1px color-mix(in srgb, var(--aw-c) 30%, transparent); }
 .aw-medal .icon { width: 24px; height: 24px; }
 .aw-body { min-width: 0; }
-.aw-kind { margin: 0 0 4px; font-size: 1.12rem; font-weight: 800; line-height: 1.3; color: var(--heading-strong); }
-.aw-name { margin: 0 0 6px; font-weight: 600; color: var(--text-main); }
-.aw-where { display: flex; gap: 8px; align-items: flex-start; margin: 0; font-size: 0.93rem; color: var(--text-muted); }
+.aw-kind { margin: 0 0 4px; font-size: var(--fs-md); font-weight: var(--fw-black); line-height: 1.3; color: var(--heading-strong); }
+.aw-name { margin: 0 0 6px; font-weight: var(--fw-bold); color: var(--text-main); }
+.aw-where { display: flex; gap: 8px; align-items: flex-start; margin: 0; font-size: var(--fs-sm); color: var(--text-muted); }
 .aw-where .icon { flex-shrink: 0; width: 16px; height: 16px; margin-top: 3px; opacity: 0.8; }
 
 /* Destaques (melhor tese e melhor artigo): ocupam a linha inteira */
 .aw-card--featured { grid-template-columns: 64px minmax(0, 1fr); padding: 24px 26px; background: linear-gradient(120deg, color-mix(in srgb, var(--aw-c) 10%, var(--box-bg)) 0%, var(--box-bg) 60%); border-color: color-mix(in srgb, var(--aw-c) 35%, var(--border-color)); }
-.aw-card--featured .aw-medal { width: 64px; height: 64px; color: #fff; background: linear-gradient(135deg, var(--aw-c), color-mix(in srgb, var(--aw-c) 60%, #1a1f26)); box-shadow: 0 6px 16px color-mix(in srgb, var(--aw-c) 35%, transparent); }
+.aw-card--featured .aw-medal { width: 64px; height: 64px; color: #ffffff; background: linear-gradient(135deg, var(--aw-c), color-mix(in srgb, var(--aw-c) 60%, var(--brand-navy-deep))); box-shadow: 0 6px 16px color-mix(in srgb, var(--aw-c) 35%, transparent); }
 .aw-card--featured .aw-medal .icon { width: 30px; height: 30px; }
-.aw-card--featured .aw-kind { font-size: 0.8rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--text-muted); }
-.aw-card--featured .aw-name { font-size: 1.2rem; font-weight: 800; line-height: 1.35; color: var(--heading-strong); }
+.aw-card--featured .aw-kind { font-size: var(--fs-xs); font-weight: var(--fw-bold); letter-spacing: 0.08em; text-transform: uppercase; color: var(--text-muted); }
+.aw-card--featured .aw-name { font-size: var(--fs-lg); font-weight: var(--fw-black); line-height: 1.35; color: var(--heading-strong); }
 .aw-card--featured::before { top: 36px; }
 
 /* 4. Responsividade */
@@ -61,7 +57,7 @@
 @media (max-width: 768px) {
     .aw-timeline { gap: 32px; }
     .aw-year { grid-template-columns: minmax(0, 1fr); gap: 14px; }
-    .aw-year__label { position: static; padding-top: 0; font-size: 1.9rem; display: flex; align-items: center; gap: 12px; }
+    .aw-year__label { position: static; padding-top: 0; font-size: var(--fs-2xl); display: flex; align-items: center; gap: 12px; }
     .aw-year__label::after { flex: 1; width: auto; height: 2px; margin: 0; background: var(--border-color); }
     .aw-items { padding-left: 0; }
     .aw-items::before, .aw-card::before { display: none; }
@@ -70,9 +66,9 @@
     .aw-medal .icon { width: 20px; height: 20px; }
     .aw-card--featured { grid-template-columns: 48px minmax(0, 1fr); padding: 18px; }
     .aw-card--featured .aw-medal { width: 48px; height: 48px; }
-    .aw-card--featured .aw-name { font-size: 1.05rem; }
+    .aw-card--featured .aw-name { font-size: var(--fs-base); }
     .aw-stats > div { flex: 1 1 140px; min-width: 0; padding: 12px 16px; }
-    .aw-stats dd { font-size: 1.6rem; }
+    .aw-stats dd { font-size: var(--fs-xl); }
 }
 
 /* 5. Impressão */

@@ -1,166 +1,203 @@
 ---
-version: 2.1.1
+version: 3.0.0
 name: Floriatan-Design-System
-description: "Um design system acadêmico e profissional construído com foco em legibilidade, performance e estética modular. O sistema equilibra a sobriedade da pesquisa científica (painéis brancos/escuros puros, tipografia estruturada) com toques modernos de Glassmorphism e gradientes sutis. Totalmente fluido e utilitário, ele suporta transições perfeitas para o Modo Escuro, mantendo o contraste e a hierarquia visual por meio de bordas suaves e elevações por sombra."
+description: "Design system do portfólio acadêmico floriatan.com.br. As cores vêm do logotipo Fc (azul-marinho, petróleo e lavanda); tipografia Roboto com escala fixa; superfícies claras ou escuras com bordas finas e sombras suaves no tom do azul-marinho. Todos os valores de cor, tamanho de fonte, peso e raio são tokens definidos em css/global.css."
 
 colors:
-  bg-color: "#ffffff" # Dark: #1A1F26
-  heading-color: "#5a729e" # Dark: #FFFFFF
-  btn-bg: "#5a729e" # Dark: #3a4a68
-  btn-bg-hover: "#4a5f7c" # Dark: #46597c
-  text-main: "#3d4350" # Dark: #E5E5E5
-  text-muted: "#5f6675" # Dark: #b3b8c2
-  link-color: "#3f5a8a" # Dark: #aec3ea
-  heading-strong: "#3f5682" # Dark: #FFFFFF
-  accent: "#666fe4" # Dark: #9aa1ff
-  accent-2: "#1d6ee7"
-  box-bg: "#ffffff" # Dark: #23282F
-  border-color: "#e2e8f0" # Dark: #343a45
-  nav-bg: "#24577f"
-  footer-bg: "#ffffff" # Dark: #1F242A
-  semantic-success: "#4CB96E"
-  semantic-warning: "#d97706"
-  semantic-error: "#dc2626"
-  header-gradient: "linear-gradient(230deg, #ebb7dd47, #0f58832e)"
+  brand-navy: "#274c77"        # logotipo; títulos e botões
+  brand-navy-deep: "#1b3a5e"   # destaques; botão ao passar o mouse
+  brand-teal: "#1c7d9a"        # logotipo (centro do gradiente)
+  brand-ice: "#cce2ed"         # letras do logotipo
+  brand-lavender: "#8682ab"    # ilustração do logotipo
+  brand-gradient: "linear-gradient(120deg, #1c7d9a, #3b63a8, #6a6fc4)"  # escuro: #5cc3dc → #8fb0ff → #b3b0f0
+  bg-color: "#f5f7fb"          # escuro: #12161c
+  box-bg: "#ffffff"            # escuro: #1a2029
+  surface-2: "#eef3f8"         # escuro: #222a35
+  border-color: "#e1e7ef"      # escuro: #2a323e
+  heading-color: "#274c77"     # escuro: #eef3f9
+  heading-strong: "#1b3a5e"    # escuro: #ffffff
+  text-main: "#2f3747"         # escuro: #dfe4ea
+  text-muted: "#5b6474"        # escuro: #a9b2bf
+  link-color: "#17738e"        # escuro: #5cc3dc
+  accent: "#17738e"            # escuro: #5cc3dc
+  accent-2: "#4f5fc4"          # escuro: #9aa5ff
+  btn-bg: "#274c77"            # escuro: #2b5c8c
+  btn-bg-hover: "#1b3a5e"      # escuro: #336ba2
+  focus-ring: "#17738e"        # escuro: #5cc3dc
+  success: "#217a41"           # escuro: #7fe0a3
+  warning: "#9a5b00"           # escuro: #fcd34d
+  danger: "#c62828"            # escuro: #fca5a5
+  medal: "#a8730d"             # escuro: #e8b54a
 
 typography:
-  font-primary: "'Roboto Variable', Roboto, system-ui, -apple-system, 'Segoe UI', Arial, sans-serif"  # servida localmente em /assets/fonts
+  font-primary: "'Roboto Variable', Roboto, system-ui, -apple-system, 'Segoe UI', Arial, sans-serif"  # servida em /assets/fonts
   font-mono: "ui-monospace, SFMono-Regular, Menlo, Consolas, 'Courier New', monospace"
-  display-h2:
-    fontSize: "1.6rem"
-    fontWeight: 700
-    lineHeight: 1.2
-  display-h3:
-    fontSize: "1.5rem"
-    fontWeight: 700
-    lineHeight: 1.2
-  body-text-base:
-    fontSize: "16px"
-    fontWeight: 400
-    lineHeight: 1.6
-  body-text-sm:
-    fontSize: "0.875rem"
-    fontWeight: 400
-    lineHeight: 1.5
-  ui-tag:
-    fontSize: "0.75rem"
-    fontWeight: 700
-    letterSpacing: "0.5px"
-    textTransform: "uppercase"
+  sizes:
+    fs-xs: "0.75rem"
+    fs-sm: "0.875rem"
+    fs-base: "1rem"
+    fs-md: "1.125rem"
+    fs-lg: "1.25rem"
+    fs-xl: "1.5rem"
+    fs-2xl: "2rem"
+    fs-3xl: "clamp(2rem, 4.2vw, 3rem)"        # títulos de página
+    fs-display: "clamp(2.25rem, 4.8vw, 3.5rem)" # abertura da página inicial
+    fs-number: "clamp(2rem, 3.6vw, 2.75rem)"   # números de destaque
+  weights:
+    fw-regular: 400
+    fw-medium: 500
+    fw-bold: 700
+    fw-black: 800
 
 rounded:
-  sm: "3px"   # --radius-sm
-  md: "8px"   # --radius-md
-  lg: "10px"  # --radius-lg
-  full: "50%"
-  pill: "20px"
+  radius-sm: "6px"
+  radius-md: "10px"
+  radius-lg: "16px"
+  radius-pill: "999px"
+  radius-full: "50%"   # só para círculos
 
 spacing:
-  xs: "4px"
-  sm: "8px"
-  md: "16px"
-  lg: "24px"
-  xl: "32px"
+  spacing-xs: "4px"
+  spacing-sm: "8px"
+  spacing-md: "16px"
+  spacing-lg: "24px"
+  spacing-xl: "32px"
+  spacing-2xl: "56px"
+
+shadow:
+  shadow-sm: "0 1px 2px rgba(23,42,66,.06), 0 1px 1px rgba(23,42,66,.03)"
+  shadow-md: "0 10px 24px -10px rgba(23,42,66,.22)"
+  shadow-lg: "0 24px 48px -16px rgba(23,42,66,.28)"
+
+motion:
+  transition-fast: "0.15s ease"
+  transition-normal: "0.3s ease"
+  ease-out: "cubic-bezier(0.16, 1, 0.3, 1)"
 
 components:
   button-primary:
     backgroundColor: "{colors.btn-bg}"
     textColor: "#ffffff"
-    rounded: "{rounded.md}"
-    padding: "12px 24px"
-    shadow: "{shadow-sm}"
+    rounded: "{rounded.radius-md}"
+    padding: "12px 22px"
+    fontWeight: "{typography.weights.fw-bold}"
   button-outline:
-    backgroundColor: "transparent"
-    borderColor: "{colors.heading-color}"
-    textColor: "{colors.heading-color}"
-    rounded: "{rounded.md}"
-  card-default:
     backgroundColor: "{colors.box-bg}"
     borderColor: "{colors.border-color}"
-    rounded: "{rounded.md}"
-    padding: "20px"
-    shadow: "{shadow-sm}"
-  glass-panel:
-    backgroundColor: "rgba(255, 255, 255, 0.15)"
-    backdropFilter: "blur(20px) saturate(180%)"
-    borderColor: "rgba(255, 255, 255, 0.3)"
-    rounded: "{rounded.lg}"
-  ui-tag-solid:
-    backgroundColor: "{colors.heading-color}"
-    textColor: "#ffffff"
-    rounded: "{rounded.pill}"
-    padding: "4px 12px"
+    textColor: "{colors.heading-color}"
+    rounded: "{rounded.radius-md}"
+  card:
+    backgroundColor: "{colors.box-bg}"
+    borderColor: "{colors.border-color}"
+    rounded: "{rounded.radius-lg}"
+    padding: "26px"
+    shadow: "{shadow.shadow-sm}"
+  badge:
+    rounded: "{rounded.radius-pill}"
+    fontSize: "{typography.sizes.fs-xs}"
+    fontWeight: "{typography.weights.fw-bold}"
 ---
 
-## Visão Geral
+# Design system — floriatan.com.br (v3.0)
 
-Ao contrário do sistema puramente monocromático e focado em blocos de cores pastel, o Design System "Floriatan" baseia-se num contraste dual (Claro/Escuro) governado por variáveis CSS unificadas. O layout é desenhado para ferramentas de produtividade e perfis académicos, utilizando contentores modulares (`.card`, `.project-card`, `.form-panel`) assentes em fundos neutros (`box-bg`).
+## Visão geral
 
-A distinção visual é alcançada através de:
+A identidade parte do logotipo **Fc**: o gradiente de **petróleo** (`#1c7d9a`) a **azul-marinho** (`#274c77`), as letras em **azul-gelo** (`#cce2ed`) e a ilustração em **lavanda** (`#8682ab`). A interface usa essas cores em papéis fixos: o azul-marinho comanda títulos e botões, o petróleo marca links, destaques e foco, e um único degradê de marca (`--brand-gradient`) aparece em detalhes (filetes, sublinhado do menu, trecho destacado do título da página inicial).
 
-- **Bordas finas e sombras sutis:** O sistema utiliza `{colors.border-color}` de 1px e `--shadow-sm` para definir fronteiras, evitando blocos de cor invasivos.
-- **Tipografia funcional:** Utilização do `Roboto` (fonte variável, servida pelo próprio site) para a interface e da fonte monoespaçada do sistema (`--font-mono`) para dados técnicos, XML e siglas laboratoriais.
-- **Glassmorphism:** Empregues em secções de herói (`.hero-content-glass`) e tags (`.ui-tag-glass`) para adicionar profundidade e modernidade sem sacrificar a legibilidade técnica.
+Superfícies são claras e neutras (ou escuras no tema escuro), separadas por bordas finas de 1 px e sombras suaves no tom do azul-marinho. Não há cores fora dos tokens.
+
+## Regras
+
+1. **Cor, tamanho de fonte, peso e raio sempre por token** (`var(--…)`). Exceções aceitas: amostras da paleta na página Design, fundos de demonstração do logotipo, cores oficiais dos ODS (em `exemplos.css`), máscaras (`#000` em `mask-image`), fundo branco atrás de logotipos institucionais e a paleta fixa da versão impressa.
+2. **Quatro pesos:** 400 (texto), 500 (rótulos, menu), 700 (links, botões, subtítulos), 800 (títulos e números).
+3. **Quatro raios:** 6 px (campos, itens de menu), 10 px (botões, caixas pequenas), 16 px (cartões), 999 px (pílulas e selos). Círculos usam `--radius-full`.
+4. **Escala tipográfica:** `--fs-xs` a `--fs-2xl` para texto e interface; `--fs-3xl` para títulos de página, `--fs-display` só para a abertura da página inicial, `--fs-number` para números de destaque.
+5. **Texto em degradê** só no trecho destacado do título da página inicial, no título da página "Vida de cientista" e no código da página 404.
 
 ## Cores
 
-O sistema está alicerçado em variáveis responsivas ao tema do utilizador (`[data-theme="dark"]`). O tema tem três modos — claro, escuro e seguir o sistema — guardados em `localStorage` ("theme") e aplicados por `js/theme-init.js` antes da renderização (`<html data-theme-mode>` indica o modo escolhido). A paleta completa, por função, está documentada na página `/design`.
+| Papel | Token | Claro | Escuro |
+|---|---|---|---|
+| Fundo da página | `--bg-color` | `#f5f7fb` | `#12161c` |
+| Cartões | `--box-bg` | `#ffffff` | `#1a2029` |
+| Superfície de realce | `--surface-2` | `#eef3f8` | `#222a35` |
+| Bordas | `--border-color` | `#e1e7ef` | `#2a323e` |
+| Títulos | `--heading-color` | `#274c77` | `#eef3f9` |
+| Títulos de destaque | `--heading-strong` | `#1b3a5e` | `#ffffff` |
+| Texto | `--text-main` | `#2f3747` | `#dfe4ea` |
+| Texto secundário | `--text-muted` | `#5b6474` | `#a9b2bf` |
+| Links e destaques | `--link-color`, `--accent`, `--focus-ring` | `#17738e` | `#5cc3dc` |
+| Detalhes, fim do degradê | `--accent-2` | `#4f5fc4` | `#9aa5ff` |
+| Botão | `--btn-bg` / `--btn-bg-hover` | `#274c77` / `#1b3a5e` | `#2b5c8c` / `#336ba2` |
+| Estados | `--success`, `--warning`, `--danger` | `#217a41`, `#9a5b00`, `#c62828` | `#7fe0a3`, `#fcd34d`, `#fca5a5` |
+| Prêmios | `--medal` | `#a8730d` | `#e8b54a` |
 
-- **Base de Superfície:** `--bg-color` (Branco ou #1A1F26) atua como o fundo do ecrã, enquanto `--box-bg` (Branco ou #23282F) eleva os cartões e formulários.
-- **Identidade e Interação:** `--heading-color` (#5a729e / Branco) comanda todos os títulos, botões primários e links de texto.
-- **Feedback Semântico:** Verde (#4CB96E), Laranja (#d97706) e Vermelho (#dc2626) são padronizados em `.alert-box` e `.ui-tag`.
+No tema escuro os títulos (`#eef3f9`) ficam um nível abaixo dos destaques (`#ffffff`), para manter a hierarquia.
+
+**Contraste (WCAG 2.1):** texto 11,1:1; texto secundário 5,6:1; links/acento 5,1:1 sobre o fundo e 4,9:1 sobre `--surface-2`; botão 8,8:1. No escuro: texto 14,2:1, secundário 7,7:1, acento 8,9:1, botão 7,0:1. Estados: 5,3–5,6:1 no claro.
+
+**Apelidos de compatibilidade** (só para as Ferramentas em `/web`, não usar em código novo): `--color-bg-surface-1` → `--surface-2`, `--text-color-error` → `--danger`, `--bg-error` → `--danger` a 18 %.
+
+O tema tem três modos — claro, escuro e seguir o sistema — guardados em `localStorage` ("theme") e aplicados por `js/theme-init.js` antes da renderização (`<html data-theme>` e `data-theme-mode`). A paleta completa está documentada na página `/design`.
 
 ## Tipografia
 
-A hierarquia não depende exclusivamente de alterações de peso, mas de uma combinação rigorosa de tamanho e cor semântica.
+Roboto variável servida pelo próprio site (WOFF2 em `/assets/fonts`). Monoespaçada do sistema para siglas e dados técnicos.
 
-- **Títulos (H1-H6):** Utilizam sempre `--heading-color` e margens inferiores generosas (40px) para separar secções.
-- **Texto Base:** A cor `--text-main` (#3d4350 ou #E5E5E5) garante contraste AA (ou superior) em parágrafos.
-- **Utilitários (`text-sm`, `text-muted`):** Guiam o utilizador em formulários e legendas sem poluir a interface primária.
+| Uso | Tamanho | Peso |
+|---|---|---|
+| Abertura da página inicial | `--fs-display` | 800 |
+| Título de página (`.page-hero h1`) | `--fs-3xl` | 800 |
+| Título de seção (`.section-title`, `h2`) | `--fs-xl` | 800 |
+| Título de cartão | `--fs-lg` | 800 |
+| Texto | `--fs-base`, entrelinha 1,6 | 400 |
+| Texto auxiliar, menu, botões | `--fs-sm` | 400–700 |
+| Rótulos em caixa-alta (`.eyebrow`, `.card-subtitle-sm`) | `--fs-xs`, espaçamento 0,1 em | 700 |
 
-## Elevação e Profundidade (Depth)
+## Elevação
 
-- **Level 0 (Flat):** Fundo da página e painéis de aviso em linha.
-- **Level 1 (Bordas + Box-bg):** Cartões de projeto, painéis de formulário, e caixas de visualização (`.preview-box`).
-- **Level 2 (Shadow-md no Hover):** Botões primários e `.project-card:hover`. O cartão sobe 5px no eixo Y, criando uma sensação tátil de interatividade.
-- **Level 3 (Glassmorphism, legado):** Utilizado em painéis especiais (`.glass-panel`), hoje só nas páginas de exemplo. Combina transparência e desfoque (`backdrop-filter`) para criar uma profundidade simulada sob imagens ou fundos gradientes.
+- **Nível 0:** fundo da página, listas compactas.
+- **Nível 1:** cartões e caixas — borda de 1 px + `--shadow-sm`.
+- **Nível 2:** ao passar o mouse e elementos fixos (filtro de publicações) — `--shadow-md`, cartão sobe 2–3 px.
+- **Nível 3:** menus suspensos, aviso de cookies — `--shadow-lg`.
 
-## Componentes Chave
+## Arquivos
 
-### Botões e Formulários
+| Arquivo | Conteúdo |
+|---|---|
+| `css/global.css` | Tokens, base, cabeçalho, menus, rodapé, botões, alertas, sanfona, dicas, modal, aviso de cookies, impressão. Carregado também pelas Ferramentas. |
+| `css/main.css` | Componentes de conteúdo e a página inicial. Carregado também pelas Ferramentas. |
+| `css/premiacoes.css`, `css/design.css`, `css/vida.css` | Estilos de cada uma dessas páginas (campo `styles:` do fragmento). |
+| `css/exemplos.css` | Componentes antigos usados só em `exemplos.html`, `guia.html` e `design-meta.html`. |
 
-Centralizados globalmente. Todos os inputs possuem `border-radius: var(--radius-sm)` e transicionam o contorno para a `--heading-color` ao focar, projetando uma ligeira aura (`box-shadow`). Botões partilham o mesmo padrão de altura, utilizando `display: inline-flex` com `gap: 8px` para alinhar texto e ícones nativamente.
-
-### Etiquetas de Sistema (UI Tags)
-
-Um sistema expansivo de crachás (`.ui-tag`) com variantes: `solid`, `soft` (fundo com 15% de opacidade), `outline`, `gradient` e `glow`. Utilizados para categorizar publicações, ferramentas ou estados operativos.
-
-### Paineis e Grelhas (Layout)
-
-- `.app-container` dita a divisão 50/50 em ecrãs grandes para ferramentas como o Gerador de Assinaturas e Custom Plate XML.
-- `.project-grid` ajusta-se automaticamente (`auto-fit, minmax(300px, 1fr)`) para diretórios e portfólios, empilhando elegantemente em dispositivos móveis.
-
-### Componentes da versão 2.0 (páginas geradas)
+## Componentes
 
 | Componente | Classe | Uso |
 |---|---|---|
+| Abertura da página inicial | `.home-hero`, `.home-title`, `.home-title__hl`, `.home-lead`, `.home-actions` | Texto à esquerda e arte à direita; no celular o texto vem primeiro e a arte vira um selo de 128 px |
+| Cargo atual | `.now-pill` | Linha compacta com ponto verde, logotipo e cargo (bloco `{{current}}`) |
+| Perfis acadêmicos | `.profile-pills` | Pílulas pequenas com ícone (bloco `{{profiles}}`) |
 | Cabeçalho de página | `.page-hero`, `.eyebrow`, `.lead`, `.page-toc` | Título, subtítulo e atalhos de seção |
 | Título de seção | `.section`, `.section-title` | Título com filete à direita |
 | Cartão | `.card`, `.card-title`, `.card-subtitle-sm` | Blocos de conteúdo |
 | Linha do tempo | `.tl`, `.tl-item`, `.tl-logo` | Formação e atuação profissional |
 | Lista ano + texto | `.item-list`, `.item-year`, `.item-sub` | Cursos, palestras, eventos, orientações |
-| Publicações | `.pub-list`, `.pub-item`, `.pub-title`, `.pub-link` | Artigos e trabalhos em eventos (sem lista de autores) |
-| Mídia | `.media-item`, `.media-type` (com `.pub-list`, `.pub-item`, `.badge`) | Página `/midia`, uma seção por tipo de conteúdo |
-| Prêmios | `.aw-stats`, `.aw-timeline`, `.aw-year`, `.aw-card`, `.aw-card--featured` | Página de premiações (`css/premiacoes.css`) |
-| Métricas | `.metrics-grid`, `.metric-card`, `.stat-strip`, `.totals` | Indicadores e totais |
+| Publicações | `.pub-list`, `.pub-item`, `.pub-title`, `.pub-link` | Artigos e trabalhos em eventos |
+| Mídia | `.media-item`, `.media-type` (com `.pub-list`, `.pub-item`, `.badge`) | Página `/midia` |
+| Prêmios | `.aw-stats`, `.aw-timeline`, `.aw-card`, `.aw-card--featured` | Página de premiações (`css/premiacoes.css`) |
+| Métricas | `.stat-strip`, `.metrics-grid`, `.metric-card`, `.totals` | Indicadores e totais |
 | Chips e selos | `.chip`, `.chip--mono`, `.badge`, `.badge--accent/ok/muted` | Linhas de pesquisa, técnicas, status |
-| Página Design | `.ds-hero`, `.ds-section`, `.ds-swatches`, `.ds-sw`, `.ds-type`, `.ds-scale` | Identidade visual (`css/design.css`) |
-| Vida de cientista | `.v-hero`, `.v-chapter`, `.v-slides`, `.v-marquee`, `.v-lightbox`, `[data-reveal]`, `[data-parallax]` | Página `/vida` (`css/vida.css`, `js/vida.js`) |
-| Seletor de tema | `details.theme-menu`, `[data-theme-set]` | Claro, escuro, seguir o sistema |
+| Botões | `.btn`, `.btn-outline`, `.btn-cv`, `.btn-block`, `.btn-group` | Ação principal (cheio) e secundária (contorno) |
+| Página Design | `.ds-hero`, `.ds-section`, `.ds-swatches`, `.ds-sw`, `.ds-type`, `.ds-scale` | `css/design.css` |
+| Vida de cientista | `.v-hero`, `.v-chapter`, `.v-slides`, `.v-marquee`, `.v-lightbox` | `css/vida.css`, `js/vida.js` |
+| Seletores | `details.lang-menu`, `details.theme-menu` | Idioma e tema |
 | Aviso de idioma | `.lang-notice` | Criado por `js/app.js`, sem redirecionar |
-| Botão do currículo | `.btn-cv` | Download do PDF no idioma da página |
 | Ícones | `<svg class="icon"><use href="/assets/icons/sprite.svg#nome">` | doi, external, award, mail, pin, globe, moon, sun, contrast, download, menu, close, building |
 
-Regras de acessibilidade: contraste mínimo AA (verificado com axe-core nos dois temas), foco visível com `--focus-ring`, nenhuma informação transmitida só por cor, animações desativadas com `prefers-reduced-motion`.
+## Acessibilidade
 
-Versão impressa (`@media print` em `global.css`, `main.css` e nos CSS de página): paleta clara, sem sombras nem filtros, textos em degradê convertidos em texto sólido, navegação e botões ocultos e seções expansíveis abertas.
+Contraste mínimo AA nos dois temas, foco visível com `--focus-ring`, nenhuma informação transmitida só por cor, animações desligadas com `prefers-reduced-motion`.
+
+## Impressão
+
+`@media print` em `global.css`, `main.css` e nos CSS de página: paleta clara fixa, sem sombras nem filtros, textos em degradê convertidos em texto sólido, navegação e botões ocultos e seções expansíveis abertas.
