@@ -1,5 +1,5 @@
 {
-  "_comment": "Dados extraídos do Currículo Lattes (versão de 06/10/2026). Campos com {pt,en,es} são traduzidos; títulos de trabalhos, nomes de instituições, eventos e periódicos ficam no idioma original.",
+  "_comment": "Campos com {pt,en,es} são traduzidos; títulos de trabalhos, nomes de instituições, eventos e periódicos ficam no idioma original.",
   "person": {
     "name": "Floriatan Santos Costa",
     "short_name": "Floriatan Costa",
@@ -237,7 +237,7 @@
   ],
 
   "metrics": {
-    "date": "2026-10-26",
+    "date": "2026-10-28",
     "sources": [
       {"id": "scopus", "label": "Scopus®", "owner": "Elsevier", "url": "https://www.scopus.com/authid/detail.uri?authorId=57216746115", "docs": 44, "citations": 424, "h": 14},
       {"id": "wos", "label": "Web of Science™", "owner": "Clarivate", "url": "https://www.webofscience.com/wos/author/record/S-1383-2018", "docs": 47, "citations": 374, "h": 13},
