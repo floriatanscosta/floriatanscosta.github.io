@@ -2,24 +2,24 @@
 
 Registro do que já foi feito no site e do que ainda pode ser implementado. Nada aqui foi inventado: os itens de dados dependem de conferência com as fontes originais.
 
-_Atualizado em 19/10/2026. O histórico detalhado das alterações está em `CHANGELOG.md`._
+_Atualizado em 28/10/2026. O histórico detalhado das alterações está em `CHANGELOG.md`._
 
 ## Progresso geral
 
 ```mermaid
 pie showData title Itens registrados neste arquivo
-    "Concluídos" : 18
+    "Concluídos" : 19
     "Ideias pendentes" : 30
     "Dados e infraestrutura a conferir" : 11
 ```
 
 | Grupo | Concluído | Progresso |
 |---|---:|---|
-| Revisões e entregas (fora da lista de ideias) | 12 de 12 | `████████████████████` 100% |
+| Revisões e entregas (fora da lista de ideias) | 13 de 13 | `████████████████████` 100% |
 | Ideias de melhoria | 4 de 34 | `██░░░░░░░░░░░░░░░░░░` 12% |
 | Dados a conferir | 1 de 8 | `██░░░░░░░░░░░░░░░░░░` 12% |
 | Funcionalidades e infraestrutura | 1 de 5 | `████░░░░░░░░░░░░░░░░` 20% |
-| **Total** | 18 de 59 | `██████░░░░░░░░░░░░░░` 31% |
+| **Total** | 19 de 60 | `██████░░░░░░░░░░░░░░` 32% |
 
 **Ideias de melhoria por grupo**
 
@@ -51,6 +51,7 @@ pie showData title Itens registrados neste arquivo
 13. Currículo em PDF nos três idiomas, gerado a partir dos JSON (sem foto; datas de geração e de atualização no rodapé) _(ideia I7)_
 14. Ferramentas (/web): seletor de tema com três opções, menu com a página atual marcada e novas páginas "Sobre" e "Aviso de uso"
 15. Página **Mídia** (`/midia`) com dados em `media.json`; o artigo da LCGC International saiu de Publicações e passou para Mídia
+16. E-mails da página Contato (pt, en, es) protegidos contra robôs coletores: codificados no atributo `data-email` e montados pelo `js/app.js` no navegador, com aviso quando o JavaScript está desativado
 
 ## Ideias de melhoria
 
@@ -81,7 +82,7 @@ Marcadas com ✅ as já implementadas. A numeração continua a da versão anter
 
 ### Contato e networking
 - [ ] I17. **Cartão de visita digital (/cartao)** com QR code e botão "Salvar contato" (vCard).
-- [ ] I18. **Botão "Copiar e-mail"** na página Contato, com proteção contra spam.
+- [ ] I18. **Botão "Copiar e-mail"** na página Contato, com proteção contra spam. _A proteção já foi feita (item 16 de "Já feito"); falta o botão "Copiar"._
 
 ### Navegação e experiência
 - [x] I19. ✅ **Aviso de idioma** discreto, sem redirecionar.
