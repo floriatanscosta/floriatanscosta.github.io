@@ -96,7 +96,6 @@
     "Deep eutectic solvents",
     "Sample preparation",
     "Microwave-assisted extraction",
-    "Kohonen self-organizing maps",
     "Artificial intelligence",
     "Greenness metrics"
   ],
@@ -237,11 +236,11 @@
   ],
 
   "metrics": {
-    "date": "2026-11-08",
+    "date": "2026-11-12",
     "sources": [
       {"id": "scopus", "label": "Scopus®", "owner": "Elsevier", "url": "https://www.scopus.com/authid/detail.uri?authorId=57216746115", "docs": 44, "citations": 431, "h": 14},
-      {"id": "wos", "label": "Web of Science™", "owner": "Clarivate", "url": "https://www.webofscience.com/wos/author/record/S-1383-2018", "docs": 47, "citations": 377, "h": 13},
-      {"id": "scholar", "label": "Google Scholar", "owner": "Google", "url": "https://scholar.google.com/citations?user=EbyxxAoAAAAJ", "docs": 54, "citations": 495, "h": 14}
+      {"id": "wos", "label": "Web of Science™", "owner": "Clarivate", "url": "https://www.webofscience.com/wos/author/record/S-1383-2018", "docs": 47, "citations": 380, "h": 13},
+      {"id": "scholar", "label": "Google Scholar", "owner": "Google", "url": "https://scholar.google.com/citations?user=EbyxxAoAAAAJ", "docs": 54, "citations": 496, "h": 14}
     ]
   },
 
