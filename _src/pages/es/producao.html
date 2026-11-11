@@ -1,0 +1,46 @@
+title: Producción
+description: Producción técnica y científica de Floriatan Santos Costa: capítulos de libros, trabajos en congresos, cursos impartidos, charlas, producción técnica y eventos.
+---
+<section class="page-hero container">
+  <p class="eyebrow">Producción</p>
+  <h1>Producción técnica y científica</h1>
+  <p class="lead">Capítulos de libros, trabajos presentados en congresos, cursos, charlas y otras contribuciones. Los artículos en revistas están en <a class="inline-link" href="{{url:publicacoes}}">Publicaciones</a>. Los títulos se mantienen en su idioma original.</p>
+  <nav class="page-toc" aria-label="En esta página">
+    <a href="#capitulos">Capítulos</a><a href="#eventos">Trabajos en congresos</a><a href="#cursos">Cursos impartidos</a><a href="#palestras">Charlas</a><a href="#tecnica">Producción técnica</a><a href="#organizacao">Eventos</a>
+  </nav>
+</section>
+
+<div class="container">
+  <section class="section" id="capitulos" aria-labelledby="h-capitulos">
+    <h2 id="h-capitulos" class="section-title">Capítulos de libros</h2>
+    {{chapters}}
+  </section>
+
+  <section class="section" id="eventos" aria-labelledby="h-eventos">
+    <h2 id="h-eventos" class="section-title">Trabajos en actas de congresos</h2>
+    {{events_papers}}
+  </section>
+
+  <div class="grid-2 section">
+    <section id="cursos" aria-labelledby="h-cursos">
+      <h2 id="h-cursos" class="section-title">Cursos cortos impartidos</h2>
+      {{courses_taught}}
+    </section>
+    <section id="palestras" aria-labelledby="h-palestras">
+      <h2 id="h-palestras" class="section-title">Charlas</h2>
+      {{talks}}
+    </section>
+  </div>
+
+  <section class="section" id="tecnica" aria-labelledby="h-tecnica">
+    <h2 id="h-tecnica" class="section-title">Producción técnica</h2>
+    {{technical}}
+  </section>
+
+  <section class="section" id="organizacao" aria-labelledby="h-organizacao">
+    <h2 id="h-organizacao" class="section-title">Organización y participación en eventos</h2>
+    <h3 class="card-subtitle-sm">Eventos organizados</h3>
+    {{events_organized}}
+    {{events_attended}}
+  </section>
+</div>

@@ -1,0 +1,46 @@
+title: Output
+description: Technical and scientific output of Floriatan Santos Costa: book chapters, conference papers, courses taught, talks, technical output and events.
+---
+<section class="page-hero container">
+  <p class="eyebrow">Output</p>
+  <h1>Technical and scientific output</h1>
+  <p class="lead">Book chapters, conference contributions, courses, talks and other work. Journal articles are listed under <a class="inline-link" href="{{url:publicacoes}}">Publications</a>. Titles are kept in their original language.</p>
+  <nav class="page-toc" aria-label="On this page">
+    <a href="#capitulos">Chapters</a><a href="#eventos">Conference papers</a><a href="#cursos">Courses taught</a><a href="#palestras">Talks</a><a href="#tecnica">Technical output</a><a href="#organizacao">Events</a>
+  </nav>
+</section>
+
+<div class="container">
+  <section class="section" id="capitulos" aria-labelledby="h-capitulos">
+    <h2 id="h-capitulos" class="section-title">Book chapters</h2>
+    {{chapters}}
+  </section>
+
+  <section class="section" id="eventos" aria-labelledby="h-eventos">
+    <h2 id="h-eventos" class="section-title">Papers in conference proceedings</h2>
+    {{events_papers}}
+  </section>
+
+  <div class="grid-2 section">
+    <section id="cursos" aria-labelledby="h-cursos">
+      <h2 id="h-cursos" class="section-title">Short courses taught</h2>
+      {{courses_taught}}
+    </section>
+    <section id="palestras" aria-labelledby="h-palestras">
+      <h2 id="h-palestras" class="section-title">Talks</h2>
+      {{talks}}
+    </section>
+  </div>
+
+  <section class="section" id="tecnica" aria-labelledby="h-tecnica">
+    <h2 id="h-tecnica" class="section-title">Technical output</h2>
+    {{technical}}
+  </section>
+
+  <section class="section" id="organizacao" aria-labelledby="h-organizacao">
+    <h2 id="h-organizacao" class="section-title">Event organisation and participation</h2>
+    <h3 class="card-subtitle-sm">Events organised</h3>
+    {{events_organized}}
+    {{events_attended}}
+  </section>
+</div>
