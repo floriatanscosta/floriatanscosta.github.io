@@ -6,7 +6,7 @@
     "email": "floriatanscosta@gmail.com",
     "email_alt": "floriatancosta@ufpr.br",
     "hometown": "Curitiba, Paraná, Brasil",
-    "address": ["Universidad de Zaragoza — Facultad de Ciencias", "Calle Pedro Cerbuna, 12", "50009 Zaragoza, España"],
+    "address": ["Universidad de Zaragoza, Facultad de Ciencias", "Calle Pedro Cerbuna, 12", "50009 Zaragoza, España"],
     "job": {"pt": "Pesquisador de Pós-Doutorado", "en": "Postdoctoral Researcher", "es": "Investigador Posdoctoral"},
     "affiliation": "Universidad de Zaragoza",
     "citation_names": "COSTA, F. S.; COSTA, FLORIATAN SANTOS"
@@ -238,7 +238,7 @@
   "metrics": {
     "date": "2026-11-12",
     "sources": [
-      {"id": "scopus", "label": "Scopus®", "owner": "Elsevier", "url": "https://www.scopus.com/authid/detail.uri?authorId=57216746115", "docs": 44, "citations": 431, "h": 14},
+      {"id": "scopus", "label": "Scopus®", "owner": "Elsevier", "url": "https://www.scopus.com/authid/detail.uri?authorId=57216746115", "docs": 44, "citations": 432, "h": 14},
       {"id": "wos", "label": "Web of Science™", "owner": "Clarivate", "url": "https://www.webofscience.com/wos/author/record/S-1383-2018", "docs": 47, "citations": 380, "h": 13},
       {"id": "scholar", "label": "Google Scholar", "owner": "Google", "url": "https://scholar.google.com/citations?user=EbyxxAoAAAAJ", "docs": 54, "citations": 496, "h": 14}
     ]
