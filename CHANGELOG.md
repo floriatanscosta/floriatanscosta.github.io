@@ -1,5 +1,10 @@
 # Histórico de alterações
 
+## 2026-11-14 — Licença: todos os direitos reservados
+- `LICENSE`: a licença MIT foi substituída por uma licença proprietária (todos os direitos reservados, Leis nº 9.610/1998 e nº 9.609/1998), que cobre código, textos, dados, imagens, PDFs, logotipo e documentação. Copiar, modificar, redistribuir, republicar ou usar comercialmente depende de autorização por escrito; continuam permitidos a visita ao site, o que os Termos de Serviço do GitHub exigem e a citação de trechos curtos com a fonte.
+- Itens de terceiros (fonte Roboto, ícones do Material Symbols, logotipos de instituições e perfis) continuam com as próprias licenças.
+- README: seção de licença reescrita, com a observação sobre as cópias obtidas enquanto valia a MIT.
+
 ## 2026-10-28 — Design v3: paleta do logotipo e CSS padronizado
 - **Paleta do logotipo:** os tokens passaram a derivar do logotipo Fc (azul-marinho `#274c77`, petróleo `#1c7d9a`/`#17738e`, lavanda `#8682ab`), com um único degradê de marca. Saíram `#5a729e`, `#666fe4` e `#1d6ee7`. Contraste AA conferido nos dois temas.
 - **Tema escuro:** títulos (`#eef3f9`) e destaques (`#ffffff`) voltaram a ter níveis diferentes; novo fundo `#12161c` e cartões `#1a2029`.

@@ -184,16 +184,23 @@ Páginas de desenvolvimento (não indexadas, fora do menu): `guia.html`, `design
 
 ## Licença
 
-O **código** deste repositório (HTML, CSS, JavaScript e os scripts em Python de `_src/`) está sob a
-[licença MIT](LICENSE): pode ser usado, copiado e adaptado, desde que o aviso de copyright seja mantido.
+**Todos os direitos reservados.** O código (HTML, CSS, JavaScript e os scripts em Python de `_src/`),
+os textos, os dados do currículo (`_src/data/`), as fotos e imagens (`assets/img/`), os currículos em
+PDF (`assets/cv/`), o logotipo Fc e a identidade visual (`assets/logo.svg`, `assets/favicon.svg`,
+`assets/svg/fundo.svg`), o sistema de design e a documentação deste repositório são de Floriatan
+Santos Costa e **não podem ser copiados, modificados, redistribuídos, republicados ou usados
+comercialmente sem autorização prévia e por escrito**. Os termos estão em [`LICENSE`](LICENSE).
 
-Ficam **fora** da licença MIT, com todos os direitos reservados:
+Sem autorização, é permitido apenas: visitar o site em `floriatan.com.br`, ver e fazer *fork* no
+GitHub nos limites dos Termos de Serviço do GitHub e citar trechos curtos com indicação da fonte.
+Pedidos de autorização: [floriatan.com.br/contato](https://floriatan.com.br/contato).
 
-- o **conteúdo**: textos, dados do currículo (`_src/data/`), fotos e imagens (`assets/img/`) e os currículos em PDF (`assets/cv/`);
-- o **logotipo Fc** e a ilustração da identidade visual (`assets/logo.svg`, `assets/favicon.svg`, `assets/svg/fundo.svg`).
-
-Itens de terceiros seguem as próprias licenças ou regras de marca:
+Itens de terceiros não são do autor e seguem as próprias licenças ou regras de marca:
 
 - **Fonte Roboto**: SIL Open Font License 1.1 (`assets/fonts/License.txt` e `_src/fonts/OFL.txt`);
 - **Ícones do Material Symbols** (sol, lua, ajuda): Apache License 2.0, do Google;
 - **Logotipos de perfis, bases e instituições** (ORCID, Lattes, LinkedIn, ResearchGate, Google Scholar, DOI, UFPR, UNIZAR, Embrapa, SBQ, LAESB e outros): marcas dos respectivos titulares, usadas apenas para identificar perfis e vínculos.
+
+> Até 13/11/2026 o código deste repositório esteve sob a licença MIT. Quem obteve uma cópia
+> naquele período mantém, para aquela versão, as permissões da MIT; a nova licença vale para
+> as versões publicadas a partir de 14/11/2026.
