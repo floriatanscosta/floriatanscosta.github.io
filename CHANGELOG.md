@@ -1,5 +1,9 @@
 # Histórico de alterações
 
+## 2026-11-14 — Repositório `web` reduzido ao legado da Assinatura
+- O repositório `floriatanscosta/web` passou a guardar só as imagens das assinaturas de e-mail (`components/assinatura/assets/` e `components/gerador/`), a página `assinatura.html` (redireciona `/web/assinatura` para `/ferramentas/assinatura/`), `_config.yml`, README e a licença v2. As demais páginas, códigos e documentos foram apagados; os endereços antigos `/web/`, `/web/custom-plate`, `/web/fluidodinamica`, `/web/sobre` e `/web/aviso` deixam de existir.
+- `docs/arquitetura.md`, `ferramentas/README.md`, `ferramentas/fluidodinamica/README.md` e `PENDENCIAS.md` atualizados.
+
 ## 2026-11-14 — Revisão da arquitetura e licença v2
 - `LICENSE` (versão 2): continua com todos os direitos reservados e agora diz expressamente que usar o código, ou trechos dele, em **outros softwares**, sites, produtos ou serviços, e usar textos, dados, imagens, logotipo ou design em **outros materiais** (publicações, aulas, apresentações, redes sociais etc.) depende de autorização prévia e por escrito. Também define o que vale como autorização por escrito, proíbe raspagem e uso para treinar modelos de IA, deixa claro que o repositório público não concede licença e inclui as Ferramentas e o uso livre dos resultados gerados por elas.
 - `README.md`: seção de licença reescrita conforme a versão 2; link para `ferramentas/README.md`.

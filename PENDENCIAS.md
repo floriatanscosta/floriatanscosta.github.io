@@ -107,7 +107,7 @@ Marcadas com ✅ as já implementadas. A numeração continua a da versão anter
 - [ ] I31. **Teste de acessibilidade (axe) a cada alteração**, no GitHub Actions.
 - [ ] I32. **Verificação semanal de links externos** (DOIs e páginas de editoras).
 - [ ] I33. **Relatório de desempenho (Lighthouse)** a cada publicação.
-- [x] I34. ✅ **Limpeza do repositório web**: as Ferramentas vieram para `ferramentas/` (14/11/2026); o repositório `web` fica só com as imagens das assinaturas e os redirecionamentos dos endereços antigos. `design-meta.html` não depende mais dele.
+- [x] I34. ✅ **Limpeza do repositório web**: as Ferramentas vieram para `ferramentas/` (14/11/2026); o repositório `web` fica só com os arquivos legados da Assinatura (imagens das assinaturas e redirecionamento de `/web/assinatura`). `design-meta.html` não depende mais dele.
 
 ## Dados a conferir
 
