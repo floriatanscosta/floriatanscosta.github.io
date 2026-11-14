@@ -48,12 +48,12 @@ _src/pages/<idioma>/ ─┘          │
 | `js/publications.js` | Filtro da lista de publicações |
 | `js/design.js` | Botões "Copiar" da paleta da página Design |
 | `js/vida.js` | Animações e galeria da página Vida de cientista |
-| `js/analytics.js` | Aviso de consentimento + Google Analytics (só carrega após "Aceitar") |
+| `js/analytics.js` | Aviso de consentimento + Google Analytics (só carrega após "Aceitar") + eventos `pdf_download` e `tool_action` |
 | `assets/` | Logo, favicon, ícones (`sprite.svg`), fontes Roboto, imagens e logos (`svg/` e `img/logos/`) |
 | `assets/_docs/License.txt` | Aviso que remete ao `LICENSE` da raiz (pasta com `_`, não publicada) |
 | `assets/cv/` | Currículos em PDF (pt, en, es), gerados por `_src/cv_pdf.py` |
 | `sitemap.xml` | Gerado automaticamente, com alternativas `hreflang` |
-| `ferramentas/` | **Ferramentas** (assinatura de e-mail, Custom Plate, fluidodinâmica): HTML estático, fora do gerador e sem tradução; usam a mesma base visual (`/css`, `/js`, `/assets`) mais `ferramentas/css/ferramentas.css` e o `style.css` de cada ferramenta. Não carregam o Google Analytics. Ver [`ferramentas/README.md`](../ferramentas/README.md) |
+| `ferramentas/` | **Ferramentas** (assinatura de e-mail, Custom Plate, fluidodinâmica): HTML estático, fora do gerador e sem tradução; usam a mesma base visual (`/css`, `/js`, `/assets`) mais `ferramentas/css/ferramentas.css` e o `style.css` de cada ferramenta. Carregam o mesmo `js/analytics.js` (Google Analytics só após consentimento). Ver [`ferramentas/README.md`](../ferramentas/README.md) |
 | `guia.html`, `design-meta.html`, `exemplos.html` | Páginas de desenvolvimento, escritas à mão (fora do gerador), com `Disallow` no `robots.txt` |
 | `_testes/` | Protótipo da página inicial (design v2) e `RELATORIO-DESIGN.md` (auditoria de 28/10/2026); não publicado |
 | `docs/` | Documentação técnica (este arquivo e `atualizacao.md`); excluída da publicação no `_config.yml` |
