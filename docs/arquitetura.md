@@ -50,9 +50,9 @@ _src/pages/<idioma>/ ─┘          │
 | `assets/` | Logo, favicon, ícones (`sprite.svg`), fontes Roboto, imagens e logos (`svg/` e `img/logos/`) |
 | `assets/cv/` | Currículos em PDF (pt, en, es), gerados por `_src/cv_pdf.py` |
 | `sitemap.xml` | Gerado automaticamente, com alternativas `hreflang` |
+| `ferramentas/` | **Ferramentas** (assinatura de e-mail, Custom Plate, fluidodinâmica): HTML estático, fora do gerador e sem tradução; usam a mesma base visual (`/css`, `/js`, `/assets`) mais `ferramentas/css/ferramentas.css` e o `style.css` de cada ferramenta. Ver [`ferramentas/README.md`](../ferramentas/README.md) |
 
-A base visual (`/css`, `/js`, `/assets`) também é carregada pelas ferramentas do repositório
-[`web`](https://github.com/floriatanscosta/web), publicadas em `floriatan.com.br/web/`.
+As Ferramentas ficavam no repositório [`web`](https://github.com/floriatanscosta/web) (`floriatan.com.br/web/`) até 14/11/2026. Ele continua público **só como legado**: guarda as imagens usadas pelas assinaturas de e-mail já enviadas (`components/assinatura/assets/` e `components/gerador/`) e redireciona os endereços antigos para `/ferramentas/`.
 
 ## Estrutura do repositório
 
@@ -91,6 +91,15 @@ floriatanscosta.github.io/
 │   └── vida.css
 ├── en/                         # páginas geradas em inglês
 ├── es/                         # páginas geradas em espanhol
+├── ferramentas/                # Ferramentas (HTML estático, ver ferramentas/README.md)
+│   ├── _modelo/                # ponto de partida para uma ferramenta nova (não publicado)
+│   ├── css/ferramentas.css     # estilos comuns das Ferramentas
+│   ├── assinatura/             # index.html, app.js, style.css, cover.png, README.md, assets/
+│   ├── custom-plate/           # idem (assets/slide.svg)
+│   ├── fluidodinamica/         # idem (em teste)
+│   ├── index.html, sobre.html, aviso.html
+│   ├── CHANGELOG.md
+│   └── README.md
 ├── js/
 │   ├── analytics.js
 │   ├── app.js

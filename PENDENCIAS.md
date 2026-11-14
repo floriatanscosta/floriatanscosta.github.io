@@ -8,18 +8,18 @@ _Atualizado em 28/10/2026 (design v3). O histórico detalhado das alterações e
 
 ```mermaid
 pie showData title Itens registrados neste arquivo
-    "Concluídos" : 20
-    "Ideias pendentes" : 30
-    "Dados e infraestrutura a conferir" : 11
+    "Concluídos" : 22
+    "Ideias pendentes" : 29
+    "Dados e infraestrutura a conferir" : 10
 ```
 
 | Grupo | Concluído | Progresso |
 |---|---:|---|
 | Revisões e entregas (fora da lista de ideias) | 14 de 14 | `████████████████████` 100% |
-| Ideias de melhoria | 4 de 34 | `██░░░░░░░░░░░░░░░░░░` 12% |
+| Ideias de melhoria | 5 de 34 | `███░░░░░░░░░░░░░░░░░` 15% |
 | Dados a conferir | 1 de 8 | `██░░░░░░░░░░░░░░░░░░` 12% |
-| Funcionalidades e infraestrutura | 1 de 5 | `████░░░░░░░░░░░░░░░░` 20% |
-| **Total** | 20 de 61 | `███████░░░░░░░░░░░░░` 33% |
+| Funcionalidades e infraestrutura | 2 de 5 | `████████░░░░░░░░░░░░` 40% |
+| **Total** | 22 de 61 | `███████░░░░░░░░░░░░░` 36% |
 
 **Ideias de melhoria por grupo**
 
@@ -27,12 +27,12 @@ pie showData title Itens registrados neste arquivo
 |---|---:|---|
 | Prioritárias | 0 de 5 | `░░░░░░░░░░` 0% |
 | Conteúdo | 2 de 8 | `██░░░░░░░░` 25% |
-| Ferramentas (/web) | 0 de 3 | `░░░░░░░░░░` 0% |
+| Ferramentas (/ferramentas) | 0 de 3 | `░░░░░░░░░░` 0% |
 | Contato e networking | 0 de 2 | `░░░░░░░░░░` 0% |
 | Navegação e experiência | 2 de 6 | `███░░░░░░░` 33% |
 | Automação de dados | 0 de 2 | `░░░░░░░░░░` 0% |
 | Visibilidade | 0 de 4 | `░░░░░░░░░░` 0% |
-| Qualidade automática | 0 de 4 | `░░░░░░░░░░` 0% |
+| Qualidade automática | 1 de 4 | `██░░░░░░░░` 25% |
 
 ## ✅ Já feito
 
@@ -76,7 +76,7 @@ Marcadas com ✅ as já implementadas. A numeração continua a da versão anter
 - [ ] I12. **Mapa de onde a pesquisa aconteceu** (instituições, eventos, coletas), como imagem estática.
 - [ ] I13. **Rede de coautores** (gráfico). Exige guardar de novo os autores no JSON, só para o gráfico.
 
-### Ferramentas (/web)
+### Ferramentas (/ferramentas)
 - [ ] I14. **Calculadora de diluições e preparo de soluções** (C₁V₁ = C₂V₂, diluições seriadas, curva de calibração).
 - [ ] I15. **Conversor de concentração** (mg L⁻¹, µg L⁻¹, ppm, ppb, mol L⁻¹).
 - [ ] I16. **Calculadora de LOD/LOQ e regressão linear** a partir dos pontos da curva.
@@ -107,7 +107,7 @@ Marcadas com ✅ as já implementadas. A numeração continua a da versão anter
 - [ ] I31. **Teste de acessibilidade (axe) a cada alteração**, no GitHub Actions.
 - [ ] I32. **Verificação semanal de links externos** (DOIs e páginas de editoras).
 - [ ] I33. **Relatório de desempenho (Lighthouse)** a cada publicação.
-- [ ] I34. **Limpeza do repositório web**: `assets/`, `js/` e `components/style.css` não são usados pelas Ferramentas, e o `robots.txt` de `/web/` não tem efeito (só vale o da raiz do domínio). Antes de apagar `components/style.css`, ajustar `design-meta.html` (ver F1).
+- [x] I34. ✅ **Limpeza do repositório web**: as Ferramentas vieram para `ferramentas/` (14/11/2026); o repositório `web` fica só com as imagens das assinaturas e os redirecionamentos dos endereços antigos. `design-meta.html` não depende mais dele.
 
 ## Dados a conferir
 
@@ -122,7 +122,7 @@ Marcadas com ✅ as já implementadas. A numeração continua a da versão anter
 
 ## Funcionalidades e infraestrutura
 
-- [ ] F1. **Ferramentas (/web/)** ficam em outro repositório (floriatan.com.br/web/). `design-meta.html` depende de `/web/components/style.css` e `/web/css/style.css`, que ficam lá.
+- [x] F1. ✅ **Ferramentas** integradas a este repositório em `ferramentas/` (floriatan.com.br/ferramentas/). O repositório `web` continua público só como legado (imagens das assinaturas já enviadas; ver `ferramentas/README.md`).
 - [ ] F2. **Google Analytics e privacidade**: consentimento implementado. Recomendável ainda conferir, no painel do GA, que os "Indicadores do Google" estão desativados e definir a retenção de dados (ex.: 2 meses).
 - [ ] F3. **Formulário de contato**: não implementado (o GitHub Pages não processa formulários); o contato é por e-mail.
 - [ ] F4. **Arquivos antigos**: `assets/img/cover.png` (duplicata de `assets/cover.png`, usada só em `exemplos.html`) e `assets/img/profile.png` (substituído por `profile.webp`) ainda existem. Os demais arquivos sem uso já foram removidos.

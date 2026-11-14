@@ -1,0 +1,64 @@
+/* ==================================================================
+// © 2026 Todos os direitos reservados. Ver LICENSE.
+// /ferramentas/custom-plate/style.css
+// Estilos do Custom Plate Design XML Generator. Carregado depois de
+// /ferramentas/css/ferramentas.css, só em /ferramentas/custom-plate/.
+//
+// Sumário
+//   1. Variáveis
+//   2. Lâmina e grade de gotas
+//   3. Legenda, ID e total
+//   4. Código XML gerado
+//   5. Exportar PDF: lâmina, configurações e XML
+================================================================== */
+
+/* 1. Variáveis */
+/*****************************************************************/
+:root {
+    --plate-droplet: #4a90e2;
+    --plate-a1: #B04D9B;
+    --plate-a1-ring: rgba(224, 116, 224, 0.35);
+    --plate-slide-bg: #eef2f5;
+}
+
+/* 2. Lâmina e grade de gotas (escala definida pelo script: 1 mm = 6 px) */
+/*****************************************************************/
+.glass-slide-wrapper { overflow: auto; background: var(--plate-slide-bg); border: 1px solid var(--border-color); border-radius: var(--radius-md); display: flex; justify-content: center; align-items: flex-start; min-height: 250px; }
+.glass-slide { position: relative; flex-shrink: 0; overflow: hidden; background: url("assets/slide.svg") no-repeat center / 100% 100%; }
+.droplet-grid { position: absolute; display: grid; }
+.droplet-cell { display: flex; justify-content: center; align-items: center; }
+.droplet { background-color: var(--plate-droplet); border-radius: 50%; box-shadow: inset -1px -1px 2px rgba(0, 0, 0, 0.3); transition: width 0.3s, height 0.3s; }
+.droplet--a1 { background-color: var(--plate-a1); box-shadow: 0 0 0 2px var(--plate-a1-ring); }
+
+/* 3. Legenda, ID e total */
+/*****************************************************************/
+.grid-legend { display: flex; align-items: center; gap: 6px; margin: 6px 0 0; font-size: 0.85rem; color: var(--text-muted); }
+.grid-legend__a1 { width: 10px; height: 10px; border-radius: 50%; background: var(--plate-a1); }
+.plate-id-display { margin-top: 18px; color: var(--text-main); }
+.plate-id-display strong { color: var(--heading-strong); }
+.plate-total { font-weight: 700; color: var(--link-color); font-variant-numeric: tabular-nums; }
+
+/* 4. Código XML gerado */
+/*****************************************************************/
+.xml-output { width: 100%; height: 260px; padding: 18px; margin-bottom: 15px; font-family: var(--font-mono); font-size: 0.85em; line-height: 1.5; background: var(--web-code-bg); color: var(--web-code-text); border: none; border-radius: var(--radius-sm); resize: vertical; white-space: pre; overflow-x: auto; }
+.xml-output:focus { background: var(--web-code-bg); }
+
+/* 5. Exportar PDF: lâmina à esquerda; configurações e XML à direita (cabe em uma
+      página A4). Partes comuns em ferramentas.css, seção 9. */
+/*****************************************************************/
+@media print {
+    .print-sheet--plate .print-sheet__head { margin-bottom: 14px; }
+    .print-sheet--plate .print-sheet__h2 { margin: 14px 0 8px; }
+    .print-sheet__plate { display: flex; gap: 24px; align-items: flex-start; }
+    .print-sheet__slide { flex: 0 0 auto; width: 190px; break-inside: avoid; }
+    .print-sheet__slide .glass-slide { width: 180px !important; height: 480px !important; overflow: hidden; border: 1px solid var(--print-line); }
+    .print-sheet__settings { flex: 1 1 auto; min-width: 0; }
+    .print-sheet__note { margin: 8px 0 0; font-size: 8.5pt; color: var(--print-muted); }
+    .print-sheet__warn { margin: 8px 0 0; font-size: 8.5pt; font-weight: 700; color: var(--print-warning); }
+    .print-sheet__table { width: 100%; border-collapse: collapse; font-size: 9.5pt; }
+    .print-sheet__table th, .print-sheet__table td { padding: 3px 8px; text-align: left; border-bottom: 1px solid var(--print-line); vertical-align: top; }
+    .print-sheet__table th { font-size: 8.5pt; text-transform: uppercase; letter-spacing: 0.05em; color: var(--print-accent); }
+    .print-sheet__mono, .print-sheet__code { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; }
+    .print-sheet__mono { font-size: 8.5pt; color: var(--print-muted); }
+    .print-sheet__code { margin: 0; padding: 10px 12px; font-size: 8pt; line-height: 1.35; white-space: pre-wrap; word-break: break-all; color: var(--print-ink); background: var(--print-code-bg); border: 1px solid var(--print-line); border-radius: 6px; break-inside: auto; }
+}

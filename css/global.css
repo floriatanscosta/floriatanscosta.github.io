@@ -2,7 +2,7 @@
 // global.css
 // Fontes, variáveis (tokens), base, cabeçalho, navegação, rodapé,
 // botões e componentes comuns. Também é carregado pelas Ferramentas
-// (/web). Ver design.md para o sistema completo.
+// (/ferramentas/). Ver design.md para o sistema completo.
 // Regra: cores, tamanhos de fonte, pesos e raios vêm sempre dos tokens.
 ================================================================== */
 
@@ -61,7 +61,7 @@
     --danger: #c62828;
     --medal: #a8730d;             /* prêmios (Premiações) */
 
-    /* Compatibilidade com as Ferramentas (/web): apelidos, não usar em código novo */
+    /* Compatibilidade com as Ferramentas (/ferramentas/): apelidos, não usar em código novo */
     --color-bg-surface-1: var(--surface-2);
     --text-color-error: var(--danger);
     --bg-error: color-mix(in srgb, var(--danger) 18%, transparent);

@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; font-src 'self'; connect-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <title>Gerador de assinatura de e-mail · Floriatan Santos Costa</title>
+  <meta name="description" content="Gerador de assinaturas de e-mail institucionais com logotipo, Lattes e ORCID.">
+  <meta name="author" content="Floriatan Santos Costa">
+  <meta name="robots" content="noindex, nofollow">
+  <link rel="canonical" href="https://floriatan.com.br/ferramentas/assinatura/">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Floriatan Santos Costa">
+  <meta property="og:title" content="Gerador de assinatura de e-mail · Floriatan Santos Costa">
+  <meta property="og:description" content="Gerador de assinaturas de e-mail institucionais com logotipo, Lattes e ORCID.">
+  <meta property="og:url" content="https://floriatan.com.br/ferramentas/assinatura/">
+  <meta property="og:image" content="https://floriatan.com.br/ferramentas/assinatura/cover.png">
+  <meta property="og:locale" content="pt_BR">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="theme-color" content="#5a729e" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#1a1f26" media="(prefers-color-scheme: dark)">
+  <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
+  <link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png">
+  <link rel="preload" href="/assets/fonts/roboto-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <!-- Base visual compartilhada com o site principal (mesmo domínio) -->
+  <script src="/js/theme-init.js"></script>
+  <link rel="stylesheet" href="/css/global.css">
+  <link rel="stylesheet" href="/css/main.css">
+  <!-- Estilos comuns das Ferramentas (todas as páginas) -->
+  <link rel="stylesheet" href="/ferramentas/css/ferramentas.css">
+  <!-- Estilos próprios desta ferramenta -->
+  <link rel="stylesheet" href="/ferramentas/assinatura/style.css">
+</head>
+<body>
+<a class="skip-link" href="#main">Pular para o conteúdo</a>
+<header class="site-header">
+  <div class="container header-content">
+    <a class="brand" href="/ferramentas/" aria-label="Ferramentas — Floriatan Santos Costa">
+      <img src="/assets/logo.svg" alt="" class="logo-img" width="44" height="44">
+      <span class="site-title">Floriatan Costa <span class="site-subtitle">· Ferramentas</span></span>
+    </a>
+    <nav class="site-nav" id="site-nav" aria-label="Navegação principal">
+      <ul class="nav-content">
+        <li><a href="/ferramentas/">Ferramentas</a></li>
+        <li><a href="/ferramentas/assinatura/" aria-current="page">Assinatura</a></li>
+        <li><a href="/ferramentas/custom-plate/">Custom Plate</a></li>
+        <li><a href="/ferramentas/sobre">Sobre</a></li>
+      </ul>
+    </nav>
+    <div class="header-right">
+      <details class="lang-menu theme-menu">
+        <summary aria-label="Tema" title="Tema"><svg class="icon tm-light" aria-hidden="true" focusable="false"><use href="/assets/icons/sprite.svg#sun"></use></svg><svg class="icon tm-dark" aria-hidden="true" focusable="false"><use href="/assets/icons/sprite.svg#moon"></use></svg><svg class="icon tm-system" aria-hidden="true" focusable="false"><use href="/assets/icons/sprite.svg#contrast"></use></svg></summary>
+        <ul class="lang-menu__list theme-menu__list">
+          <li><button type="button" data-theme-set="light" aria-pressed="false"><svg class="icon" aria-hidden="true" focusable="false"><use href="/assets/icons/sprite.svg#sun"></use></svg>Claro</button></li>
+          <li><button type="button" data-theme-set="dark" aria-pressed="false"><svg class="icon" aria-hidden="true" focusable="false"><use href="/assets/icons/sprite.svg#moon"></use></svg>Escuro</button></li>
+          <li><button type="button" data-theme-set="system" aria-pressed="false"><svg class="icon" aria-hidden="true" focusable="false"><use href="/assets/icons/sprite.svg#contrast"></use></svg>Seguir o sistema</button></li>
+        </ul>
+      </details>
+      <button type="button" class="icon-btn menu-toggle" data-menu-toggle aria-controls="site-nav" aria-expanded="false" aria-label="Abrir menu"><svg class="icon icon-menu" aria-hidden="true" focusable="false"><use href="/assets/icons/sprite.svg#menu"></use></svg><svg class="icon icon-close" aria-hidden="true" focusable="false"><use href="/assets/icons/sprite.svg#close"></use></svg></button>
+    </div>
+  </div>
+</header>
+<main id="main" tabindex="-1">
+<section class="page-hero container">
+  <p class="eyebrow">Ferramentas</p>
+  <h1>Gerador de assinatura de e-mail</h1>
+  <p class="lead">Preencha os campos, confira a pré-visualização e copie a assinatura para colar nas configurações do seu cliente de e-mail.</p>
+</section>
+<div class="container">
+  <div class="app-container">
+    <section class="card" aria-labelledby="h-dados">
+      <h2 id="h-dados" class="card-title">Dados da assinatura</h2>
+      <form id="assinaturaForm" class="form-grid" novalidate>
+        <div class="form-group full-width">
+          <label for="select-logo">Logo</label>
+          <select id="select-logo">
+            <option value="logo-ufpr.png">Logo 1 - UFPR</option>
+            <option value="logo-ufpr-quimica.png">Logo 2 - UFPR e Dep. Química</option>
+            <option value="logo-ufpr-laesb.png">Logo 3 - UFPR e LaESB</option>
+            <option value="logo-ufpr-zaragoza.png">Logo 4 - UFPR e Universidad de Zaragoza</option>
+          </select>
+        </div>
+        <div class="form-group full-width">
+          <label for="input-nome">Nome <span class="field-required">(obrigatório)</span></label>
+          <input type="text" id="input-nome" value="" placeholder="Ex.: Maria da Silva" autocomplete="name" required aria-describedby="erro-nome">
+          <p class="field-error" id="erro-nome" role="alert" hidden></p>
+        </div>
+        <div class="form-group full-width">
+          <label for="input-cargo">Cargo ou título</label>
+          <input type="text" id="input-cargo" value="" placeholder="Ex.: Doutoranda em Química" autocomplete="organization-title">
+        </div>
+        <div class="form-group">
+          <label for="input-lab1">Laboratório</label>
+          <input type="text" id="input-lab1" value="Laboratório de Espectrometria, Sensores e Biossensores">
+        </div>
+        <div class="form-group">
+          <label for="input-inst1">Instituição</label>
+          <input type="text" id="input-inst1" value="Universidade Federal do Paraná" autocomplete="organization">
+        </div>
+        <div class="form-group">
+          <label for="input-lab2">Laboratório (se houver) <span class="custom-tooltip" tabindex="0" role="img" aria-label="Apague o conteúdo para ocultar este campo na assinatura." data-tooltip="Apague o conteúdo para ocultar este campo na assinatura.">ⓘ</span></label>
+          <input type="text" id="input-lab2" value="">
+        </div>
+        <div class="form-group">
+          <label for="input-inst2">Instituição (se houver) <span class="custom-tooltip" tabindex="0" role="img" aria-label="Apague o conteúdo para ocultar este campo na assinatura." data-tooltip="Apague o conteúdo para ocultar este campo na assinatura.">ⓘ</span></label>
+          <input type="text" id="input-inst2" value="">
+        </div>
+        <div class="form-group">
+          <label for="input-email">E-mail (se houver) <span class="custom-tooltip" tabindex="0" role="img" aria-label="Apague o conteúdo para ocultar este campo na assinatura." data-tooltip="Apague o conteúdo para ocultar este campo na assinatura.">ⓘ</span></label>
+          <input type="email" id="input-email" value="" placeholder="nome@ufpr.br" autocomplete="email" autocapitalize="off" spellcheck="false" aria-describedby="erro-email">
+          <p class="field-error" id="erro-email" role="alert" hidden></p>
+        </div>
+        <div class="form-group">
+          <label for="input-telefone">Telefone (se houver) <span class="custom-tooltip" tabindex="0" role="img" aria-label="Apague o conteúdo para ocultar este campo na assinatura." data-tooltip="Apague o conteúdo para ocultar este campo na assinatura.">ⓘ</span></label>
+          <input type="tel" id="input-telefone" value="" placeholder="+55 41 3361-0000" autocomplete="tel" aria-describedby="erro-telefone">
+          <p class="field-error" id="erro-telefone" role="alert" hidden></p>
+        </div>
+        <div class="form-group full-width">
+          <label for="input-url-web">Site pessoal (se houver) <span class="custom-tooltip" tabindex="0" role="img" aria-label="Apague o conteúdo para ocultar este campo na assinatura." data-tooltip="Apague o conteúdo para ocultar este campo na assinatura.">ⓘ</span></label>
+          <input type="url" id="input-url-web" value="" inputmode="url" placeholder="https://www.exemplo.com.br" autocomplete="url" autocapitalize="off" spellcheck="false" aria-describedby="erro-url-web">
+          <p class="field-error" id="erro-url-web" role="alert" hidden></p>
+        </div>
+        <div class="form-group">
+          <label for="input-url-lattes">Currículo Lattes <span class="custom-tooltip" tabindex="0" role="img" aria-label="Endereço do currículo (http://lattes.cnpq.br/ + 16 dígitos) ou só os 16 dígitos. Apague o conteúdo para ocultar este campo na assinatura." data-tooltip="Endereço do currículo (http://lattes.cnpq.br/ + 16 dígitos) ou só os 16 dígitos. Apague o conteúdo para ocultar este campo na assinatura.">ⓘ</span></label>
+          <input type="url" id="input-url-lattes" value="" inputmode="url" placeholder="http://lattes.cnpq.br/0000000000000000" autocapitalize="off" spellcheck="false" aria-describedby="erro-url-lattes">
+          <p class="field-error" id="erro-url-lattes" role="alert" hidden></p>
+        </div>
+        <div class="form-group">
+          <label for="input-url-orcid">Link do ORCID <span class="custom-tooltip" tabindex="0" role="img" aria-label="Endereço https://orcid.org/0000-0000-0000-0000 ou só o identificador; o dígito verificador é conferido. Apague o conteúdo para ocultar este campo na assinatura." data-tooltip="Endereço https://orcid.org/0000-0000-0000-0000 ou só o identificador; o dígito verificador é conferido. Apague o conteúdo para ocultar este campo na assinatura.">ⓘ</span></label>
+          <input type="url" id="input-url-orcid" value="" inputmode="url" placeholder="https://orcid.org/0000-0000-0000-0000" autocapitalize="off" spellcheck="false" aria-describedby="erro-url-orcid">
+          <p class="field-error" id="erro-url-orcid" role="alert" hidden></p>
+        </div>
+        <div class="form-group full-width">
+          <label class="check-field" for="lembrar-dados"><input type="checkbox" id="lembrar-dados"> Lembrar meus dados neste navegador</label>
+          <p class="field-hint">Os dados ficam salvos só neste navegador e não são enviados a lugar nenhum. Desmarque para apagá-los.</p>
+        </div>
+      </form>
+    </section>
+    <div class="preview-panel">
+      <section class="card" aria-labelledby="h-preview">
+        <h2 id="h-preview" class="card-title">Pré-visualização</h2>
+        <div class="preview-box" id="preview-container"></div>
+        <div class="btn-group">
+          <button type="button" id="copyBtn" class="btn">Copiar assinatura</button>
+          <button type="button" id="copyHtmlBtn" class="btn btn-outline">Copiar HTML</button>
+          <button type="button" id="pdfBtn" class="btn btn-outline">Exportar PDF</button>
+        </div>
+        <p class="field-hint">“Copiar assinatura” serve para a maioria dos clientes. “Copiar HTML” copia o código, para quem cola a assinatura em HTML. “Exportar PDF” abre a impressão do navegador: escolha “Salvar como PDF”.</p>
+      </section>
+      <section class="card" aria-labelledby="h-instalar">
+        <h2 id="h-instalar" class="card-title">Como instalar</h2>
+        <details class="install-step">
+          <summary>Gmail (navegador)</summary>
+          <ol class="prose-list prose-list--ordered">
+            <li>Clique em “Copiar assinatura”.</li>
+            <li>No Gmail, abra a engrenagem → <strong>Ver todas as configurações</strong> → aba <strong>Geral</strong> → <strong>Assinatura</strong> → <strong>Criar nova</strong>.</li>
+            <li>Cole (Ctrl+V ou ⌘+V) no quadro da assinatura.</li>
+            <li>Escolha a assinatura em “Padrões de assinatura” e clique em <strong>Salvar alterações</strong>, no fim da página.</li>
+          </ol>
+        </details>
+        <details class="install-step">
+          <summary>Outlook na web e novo Outlook</summary>
+          <ol class="prose-list prose-list--ordered">
+            <li>Clique em “Copiar assinatura”.</li>
+            <li>Abra <strong>Configurações</strong> → <strong>Contas</strong> → <strong>Assinaturas</strong> → <strong>Nova assinatura</strong>.</li>
+            <li>Dê um nome, cole a assinatura e clique em <strong>Salvar</strong>.</li>
+            <li>Em “Selecionar assinaturas padrão”, escolha a nova assinatura para mensagens novas e respostas.</li>
+          </ol>
+        </details>
+        <details class="install-step">
+          <summary>Outlook clássico (Windows)</summary>
+          <ol class="prose-list prose-list--ordered">
+            <li>Clique em “Copiar assinatura”.</li>
+            <li>Abra <strong>Arquivo</strong> → <strong>Opções</strong> → <strong>Email</strong> → <strong>Assinaturas</strong> → <strong>Novo</strong>.</li>
+            <li>Cole no quadro “Editar assinatura”, escolha a assinatura padrão e clique em <strong>OK</strong>.</li>
+            <li>Se as imagens não aparecerem para quem recebe, peça que libere o download de imagens: o Outlook bloqueia imagens externas por padrão.</li>
+          </ol>
+        </details>
+        <details class="install-step">
+          <summary>Apple Mail (Mac)</summary>
+          <ol class="prose-list prose-list--ordered">
+            <li>Clique em “Copiar assinatura”.</li>
+            <li>No Mail, abra <strong>Mail</strong> → <strong>Ajustes</strong> (ou Preferências) → <strong>Assinaturas</strong> e clique em <strong>+</strong>.</li>
+            <li>Desmarque “Sempre usar a fonte padrão da mensagem” e cole no quadro à direita.</li>
+          </ol>
+        </details>
+        <details class="install-step">
+          <summary>Thunderbird</summary>
+          <ol class="prose-list prose-list--ordered">
+            <li>Clique em “Copiar HTML”.</li>
+            <li>Abra <strong>Configurações de conta</strong> e selecione o endereço de e-mail.</li>
+            <li>Marque <strong>Usar HTML</strong> e cole o código em “Texto da assinatura”.</li>
+          </ol>
+        </details>
+      </section>
+    </div>
+  </div>
+  <div class="alert-box alert-warning tool-note" role="note">
+    <div><strong>Aviso:</strong> Esta ferramenta está em desenvolvimento. Algumas funcionalidades podem passar por instabilidades ou receber atualizações sem aviso prévio. Veja o <a class="inline-link" href="/ferramentas/aviso">Aviso de uso</a>.</div>
+  </div>
+  <p class="tool-version">Versão <span id="versao-ferramenta">2.1.0</span> · <a class="inline-link" href="https://github.com/floriatanscosta/floriatanscosta.github.io/blob/main/ferramentas/assinatura/README.md#hist%C3%B3rico-de-vers%C3%B5es" target="_blank" rel="noopener noreferrer">histórico de versões<span class="visually-hidden"> (abre em nova aba)</span></a></p>
+</div>
+
+<div id="customModal" class="modal-overlay" role="dialog" aria-modal="true" aria-labelledby="modalTitle" aria-describedby="modalMessage" hidden>
+  <div class="modal-content">
+    <button type="button" class="modal-close" data-modal-close aria-label="Fechar">&times;</button>
+    <h2 id="modalTitle" class="modal-title">Sucesso!</h2>
+    <p id="modalMessage" class="modal-message">A assinatura foi copiada.</p>
+    <button type="button" class="btn btn-block" data-modal-close>OK</button>
+  </div>
+</div>
+</main>
+<footer class="site-footer">
+  <div class="container footer-content">
+    <div class="footer-left">
+      <p>© <span data-year>2026</span> Floriatan Santos Costa. Todos os direitos reservados.</p>
+    </div>
+    <ul class="footer-profiles">
+      <li><a class="footer-profile" href="/"><img src="/assets/favicon.svg" alt="Site de Floriatan Santos Costa" width="22" height="22"></a></li>
+      <li><a class="footer-profile" href="http://lattes.cnpq.br/0287106268880389" target="_blank" rel="noopener noreferrer"><img src="/assets/icons/lattes.svg" alt="Currículo Lattes" width="22" height="22"><span class="visually-hidden"> (abre em nova aba)</span></a></li>
+    </ul>
+    <nav aria-label="Links do rodapé"><ul class="footer-right"><li><a href="/">Site principal</a></li><li><a href="/ferramentas/">Ferramentas</a></li><li><a href="/ferramentas/sobre">Sobre</a></li><li><a href="/ferramentas/aviso">Aviso de uso</a></li><li><a href="/contato">Contato</a></li></ul></nav>
+  </div>
+</footer>
+<script src="/js/app.js" defer></script>
+<script src="/ferramentas/assinatura/app.js?v=2.1.0" defer></script>
+</body>
+</html>

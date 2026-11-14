@@ -38,7 +38,7 @@
       legacy.setAttribute('aria-label', isDark() ? 'Ativar modo claro' : 'Ativar modo escuro');
     }
   }
-  // Botão único (usado nas Ferramentas /web/ e em páginas antigas): alterna entre claro e escuro
+  // Botão único (usado nas Ferramentas (/ferramentas/) e em páginas antigas): alterna entre claro e escuro
   function toggleTheme() { setThemeMode(isDark() ? 'light' : 'dark'); }
   // No modo "seguir o sistema", acompanha a mudança do sistema operacional com a página aberta
   if (systemDark) {

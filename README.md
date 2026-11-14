@@ -21,6 +21,7 @@ em todo o site.
 - **Tema claro, escuro ou "seguir o sistema"**, aplicado antes da renderização para não piscar.
 - **Currículo em PDF** em pt, en e es, gerado dos mesmos dados do site.
 - **Filtro de publicações**, resumo de premiações calculado dos dados, página **Mídia** organizada por tipo de conteúdo e paleta com botão "Copiar" na página Design.
+- **Ferramentas** em `/ferramentas/`: gerador de assinatura de e-mail, Custom Plate Design XML (Tecan) e calculadora de fluidodinâmica ICP-MS, tudo no navegador ([`ferramentas/README.md`](ferramentas/README.md)).
 - **Google Analytics só após consentimento** do visitante.
 - **Acessível e bem indexado:** navegação por teclado, contraste AA nos dois temas, metadados de SEO e dados estruturados em todas as páginas.
 

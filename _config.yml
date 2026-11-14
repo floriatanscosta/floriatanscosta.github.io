@@ -17,6 +17,9 @@ exclude:
   - CHANGELOG.md
   - PENDENCIAS.md
   - design.md
+  - ferramentas/README.md
+  - ferramentas/CHANGELOG.md
+  - "ferramentas/*/README.md"
   - .gitignore
   - node_modules/
   - package.json

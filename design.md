@@ -136,7 +136,7 @@ No tema escuro os títulos (`#eef3f9`) ficam um nível abaixo dos destaques (`#f
 
 **Contraste (WCAG 2.1):** texto 11,1:1; texto secundário 5,6:1; links/acento 5,1:1 sobre o fundo e 4,9:1 sobre `--surface-2`; botão 8,8:1. No escuro: texto 14,2:1, secundário 7,7:1, acento 8,9:1, botão 7,0:1. Estados: 5,3–5,6:1 no claro.
 
-**Apelidos de compatibilidade** (só para as Ferramentas em `/web`, não usar em código novo): `--color-bg-surface-1` → `--surface-2`, `--text-color-error` → `--danger`, `--bg-error` → `--danger` a 18 %.
+**Apelidos de compatibilidade** (só para as Ferramentas em `/ferramentas/`, não usar em código novo): `--color-bg-surface-1` → `--surface-2`, `--text-color-error` → `--danger`, `--bg-error` → `--danger` a 18 %.
 
 O tema tem três modos — claro, escuro e seguir o sistema — guardados em `localStorage` ("theme") e aplicados por `js/theme-init.js` antes da renderização (`<html data-theme>` e `data-theme-mode`). A paleta completa está documentada na página `/design`.
 

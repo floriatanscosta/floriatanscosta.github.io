@@ -1,5 +1,11 @@
 # Histórico de alterações
 
+## 2026-11-14 — Ferramentas integradas ao site
+- Conteúdo do repositório `floriatanscosta/web` trazido para a nova pasta **`ferramentas/`**, publicada em `floriatan.com.br/ferramentas/`: lista, Sobre, Aviso de uso, Gerador de assinatura, Custom Plate e Calculadora de fluidodinâmica. Uma pasta por ferramenta com `index.html`, `app.js`, `style.css`, `cover.png`, `README.md` e `assets/`; estilos comuns em `ferramentas/css/ferramentas.css`. Detalhes em `ferramentas/README.md` e `ferramentas/CHANGELOG.md`.
+- Rodapé de todas as páginas: link "Ferramentas" aponta para `/ferramentas/` (gerado por `_src/build.py`). O verificador de links (`--check`) passa a cobrir as Ferramentas.
+- `design-meta.html` deixa de carregar CSS do repositório `web`; usa `ferramentas/css/ferramentas.css` e o painel `.form-panel` foi para `css/exemplos.css`.
+- `_config.yml`: README e CHANGELOG de `ferramentas/` fora da publicação.
+
 ## 2026-11-14 — Documentação reorganizada
 - `README.md` resumido: sobre o projeto, principais funcionalidades, documentação adicional e licença.
 - Detalhes técnicos movidos para a nova pasta `docs/`: `docs/arquitetura.md` (tecnologias, qualidade, arquitetura e estrutura) e `docs/atualizacao.md` (como atualizar o conteúdo e convenções). A pasta não é publicada no site (`exclude` no `_config.yml`).

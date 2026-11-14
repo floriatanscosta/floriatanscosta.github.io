@@ -655,7 +655,7 @@ def header(page, lang, langs_available):
 
 def footer(page, lang):
     links = ''.join(f'<li><a href="{url(p, lang)}">{T("nav." + S["nav_keys"][p], lang)}</a></li>' for p in FOOTER)
-    links += f'<li><a href="/web/">{T("nav.tools", lang)}</a></li>'
+    links += f'<li><a href="/ferramentas/">{T("nav.tools", lang)}</a></li>'
     links += f'<li><button type="button" class="link-btn" data-consent-open>{T("consent.manage", lang)}</button></li>'
     profiles = ''.join(
         f'<li>{ext_link(p["url"], f"""<img src="/assets/icons/{p["icon"]}" alt="{esc(p["label"])}" width="22" height="22">""", "footer-profile")}</li>'
