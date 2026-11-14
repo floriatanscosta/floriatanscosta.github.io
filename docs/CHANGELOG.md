@@ -1,5 +1,14 @@
 # Histórico de alterações
 
+## 2026-11-14 — Documentação em `docs/`, README e licença 2.1
+- **Documentação reunida em `docs/`** (`arquitetura.md`, `atualizacao.md`, `design.md`, `PENDENCIAS.md`, `CHANGELOG.md`) e conferida com os arquivos: links e caminhos corrigidos no README, nos CSS e nos README das Ferramentas; removidas as menções às páginas apagadas `guia.html` e `design-meta.html` e ao redirecionamento `ferramentas/custom-plate/`.
+- `docs/arquitetura.md`: árvore do repositório atualizada (`docs/`, `CLAUDE.md`, `ferramentas/_fluidodinamica/`), contagem das páginas geradas, nova seção **Medição de audiência (Google Analytics)** e aviso de que o GitHub Pages publica qualquer `.md` fora do `exclude`.
+- **`CLAUDE.md` deixou de ser publicado** (aparecia em `floriatan.com.br/CLAUDE.html`): incluído no `exclude` do `_config.yml`, de onde saíram os caminhos antigos `CHANGELOG.md`, `PENDENCIAS.md` e `design.md`.
+- **README reescrito**: o que é o repositório, objetivos, funcionalidades, resumo do funcionamento, tabela da documentação e resumo da licença.
+- **`LICENSE` versão 2.1**: definições (Autor, Repositório, Site, Ferramentas, Resultados), caminho `docs/design.md`, proibição de incorporar em outra página e de sugerir endosso, logotipos institucionais nas assinaturas, Google Analytics entre os serviços de terceiros, limitação de responsabilidade sobre os resultados das Ferramentas e regra para versões futuras. Os usos permitidos não mudaram.
+- `css/exemplos.css`: removida a classe `.form-panel`, usada só pela antiga `design-meta.html`.
+- `docs/PENDENCIAS.md`: novos itens F6 (Fluidodinâmica despublicada), F7 (endereço antigo do Custom Plate dá 404), F8 (`CLAUDE.md`, resolvido) e I35 (Ferramentas no sitemap); F2 com as dimensões personalizadas do GA4; contagens refeitas.
+
 ## 2026-11-14 — Google Analytics nas Ferramentas e medição de downloads de PDF
 - `js/analytics.js`: além do consentimento e do GA4, envia **`pdf_download`** a cada clique em link para PDF (currículo, PDFs internos e externos, inclusive pelo botão do meio do mouse) com `file_name`, `link_url`, `link_text`, `link_domain`, `outbound`, `pdf_type` (`curriculo`, `interno`, `externo`, `gerado_ferramenta`) e `link_location`; e **`tool_action`** nas Ferramentas (botões com `data-track` e `form_used`, sem os valores digitados). Todos os eventos levam `site_section`, `content_group`, `page_language` e, nas Ferramentas, `tool_name`. Nada é enviado sem consentimento.
 - **Ferramentas** (lista, Sobre, Aviso, Assinatura, Custom Plate, Fluidodinâmica e `_modelo/`): passam a carregar `js/analytics.js`, com aviso de consentimento, botão "Preferências" no rodapé e CSP liberada para o Google Analytics. Botões medidos: Assinatura (`copy_signature`, `copy_html`, `export_pdf`) e Custom Plate (`copy_xml`, `download_xml`, `export_pdf`).

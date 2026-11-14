@@ -17,11 +17,11 @@ Passo a passo para editar dados e páginas, gerar o site e publicar, e as conven
    Para conferir antes, sirva o site localmente com `python3 -m http.server 8765` na raiz e abra `http://localhost:8765/`.
 
 > Não edite diretamente os `.html` gerados (raiz, `/en` e `/es`): eles são sobrescritos pelo gerador.
-> As exceções, escritas à mão, são `guia.html`, `design-meta.html`, `exemplos.html` e tudo em `ferramentas/`.
+> As exceções, escritas à mão, são `exemplos.html` (página de desenvolvimento) e tudo em `ferramentas/`.
 
 ## Convenções
 
-- **Estilos:** cores, tamanhos de fonte, pesos e raios vêm sempre dos tokens de `css/global.css` (ver [`design.md`](../design.md)). Não escreva valores fixos nos CSS.
+- **Estilos:** cores, tamanhos de fonte, pesos e raios vêm sempre dos tokens de `css/global.css` (ver [`design.md`](design.md)). Não escreva valores fixos nos CSS.
 
 - **Logos de instituições** (`"logo"` em `cv.json`): arquivos `.svg` ficam em `assets/svg/`; logos em imagem (`.webp`/`.png`, para SVGs muito pesados) ficam em `assets/img/logos/`. Basta informar o nome do arquivo, por exemplo `"logo": "uesc.webp"`.
 - **Títulos de publicações, periódicos, eventos, livros e instituições ficam no idioma original** em todas as versões; o DOI também não é traduzido. As listas de autores não são exibidas no site nem guardadas nos JSON.

@@ -2,24 +2,24 @@
 
 Registro do que já foi feito no site e do que ainda pode ser implementado. Nada aqui foi inventado: os itens de dados dependem de conferência com as fontes originais.
 
-_Atualizado em 14/11/2026 (revisão da arquitetura e licença v2). O histórico detalhado das alterações está em `CHANGELOG.md`._
+_Atualizado em 14/11/2026 (documentação reunida em `docs/`, licença 2.1 e Google Analytics nas Ferramentas). O histórico detalhado das alterações está em [`CHANGELOG.md`](CHANGELOG.md)._
 
 ## Progresso geral
 
 ```mermaid
 pie showData title Itens registrados neste arquivo
-    "Concluídos" : 22
-    "Ideias pendentes" : 29
-    "Dados e infraestrutura a conferir" : 10
+    "Concluídos" : 25
+    "Ideias pendentes" : 30
+    "Dados e infraestrutura a conferir" : 12
 ```
 
 | Grupo | Concluído | Progresso |
 |---|---:|---|
-| Revisões e entregas (fora da lista de ideias) | 14 de 14 | `████████████████████` 100% |
-| Ideias de melhoria | 5 de 34 | `███░░░░░░░░░░░░░░░░░` 15% |
+| Revisões e entregas (fora da lista de ideias) | 16 de 16 | `████████████████████` 100% |
+| Ideias de melhoria | 5 de 35 | `███░░░░░░░░░░░░░░░░░` 14% |
 | Dados a conferir | 1 de 8 | `██░░░░░░░░░░░░░░░░░░` 12% |
-| Funcionalidades e infraestrutura | 2 de 5 | `████████░░░░░░░░░░░░` 40% |
-| **Total** | 22 de 61 | `███████░░░░░░░░░░░░░` 36% |
+| Funcionalidades e infraestrutura | 3 de 8 | `████████░░░░░░░░░░░░` 38% |
+| **Total** | 25 de 67 | `███████░░░░░░░░░░░░░` 37% |
 
 **Ideias de melhoria por grupo**
 
@@ -31,7 +31,7 @@ pie showData title Itens registrados neste arquivo
 | Contato e networking | 0 de 2 | `░░░░░░░░░░` 0% |
 | Navegação e experiência | 2 de 6 | `███░░░░░░░` 33% |
 | Automação de dados | 0 de 2 | `░░░░░░░░░░` 0% |
-| Visibilidade | 0 de 4 | `░░░░░░░░░░` 0% |
+| Visibilidade | 0 de 5 | `░░░░░░░░░░` 0% |
 | Qualidade automática | 1 de 4 | `██░░░░░░░░` 25% |
 
 ## ✅ Já feito
@@ -53,6 +53,8 @@ pie showData title Itens registrados neste arquivo
 15. Página **Mídia** (`/midia`) com dados em `media.json`; o artigo da LCGC International saiu de Publicações e passou para Mídia
 16. E-mails da página Contato (pt, en, es) protegidos contra robôs coletores: codificados no atributo `data-email` e montados pelo `js/app.js` no navegador, com aviso quando o JavaScript está desativado
 17. Design v3: paleta derivada do logotipo, tokens únicos (cores, fontes, pesos, raios), CSS das páginas de exemplo separado em `css/exemplos.css` e nova abertura da página inicial
+18. Google Analytics também nas Ferramentas (com o mesmo aviso de consentimento) e eventos `pdf_download` (currículo, PDFs internos e externos, PDF exportado) e `tool_action` (botões das Ferramentas)
+19. Documentação reunida em `docs/` e revisada (arquitetura, atualização, design, pendências, histórico), README reescrito com objetivos e licença 2.1
 
 ## Ideias de melhoria
 
@@ -102,6 +104,7 @@ Marcadas com ✅ as já implementadas. A numeração continua a da versão anter
 - [ ] I28. **Google Search Console** com envio do `sitemap.xml` (requer login do proprietário).
 - [ ] I29. **Imagem de compartilhamento por página e idioma.**
 - [ ] I30. **Feed RSS** das publicações e novidades.
+- [ ] I35. **Ferramentas no `sitemap.xml`**: a lista, "Sobre" e "Aviso de uso" podem ser indexadas, mas o sitemap (gerado pelo `build.py`) só inclui as páginas geradas.
 
 ### Qualidade automática
 - [ ] I31. **Teste de acessibilidade (axe) a cada alteração**, no GitHub Actions.
@@ -123,10 +126,13 @@ Marcadas com ✅ as já implementadas. A numeração continua a da versão anter
 ## Funcionalidades e infraestrutura
 
 - [x] F1. ✅ **Ferramentas** integradas a este repositório em `ferramentas/` (floriatan.com.br/ferramentas/). O repositório `web` continua público só como legado (imagens das assinaturas já enviadas; ver `ferramentas/README.md`).
-- [ ] F2. **Google Analytics e privacidade**: consentimento implementado. Recomendável ainda conferir, no painel do GA, que os "Indicadores do Google" estão desativados e definir a retenção de dados (ex.: 2 meses).
+- [ ] F2. **Google Analytics e privacidade**: consentimento e eventos implementados no site e nas Ferramentas. Falta, no painel do GA4: cadastrar as dimensões personalizadas (escopo Evento) `pdf_type`, `link_location`, `outbound`, `tool_name`, `tool_action`, `site_section` e `page_language`; conferir que os "Indicadores do Google" estão desativados; definir a retenção de dados (ex.: 2 meses).
 - [ ] F3. **Formulário de contato**: não implementado (o GitHub Pages não processa formulários); o contato é por e-mail.
 - [ ] F4. **Arquivos antigos**: `assets/img/cover.png` (duplicata de `assets/cover.png`, usada só em `exemplos.html`) e `assets/img/profile.png` (substituído por `profile.webp`) ainda existem. Os demais arquivos sem uso já foram removidos.
 - [x] F5. **Publicação no GitHub**: ✅ resolvido; as alterações são enviadas direto ao repositório.
+- [ ] F6. **Calculadora de fluidodinâmica despublicada**: a pasta virou `ferramentas/_fluidodinamica/` (o Jekyll ignora `_`), mas o `index.html` ainda aponta para `/ferramentas/fluidodinamica/style.css` e `app.js`, então ela também não abre no servidor local. Para publicar, basta renomear a pasta de volta para `fluidodinamica/`.
+- [ ] F7. **Endereço antigo do Custom Plate**: o redirecionamento `ferramentas/custom-plate/index.html` foi apagado; `floriatan.com.br/ferramentas/custom-plate/` dá erro 404. Recriar se o endereço antigo já tiver sido divulgado.
+- [x] F8. ✅ **`CLAUDE.md` fora do site**: aparecia em `floriatan.com.br/CLAUDE.html`; entrou no `exclude` do `_config.yml` (14/11/2026).
 
 ## Como manter este arquivo
 

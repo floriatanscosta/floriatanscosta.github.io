@@ -1,7 +1,7 @@
 /* ==================================================================
 // exemplos.css
-// Componentes usados só nas páginas de desenvolvimento
-// (exemplos.html, guia.html e design-meta.html). Não é carregado
+// Componentes usados só na página de desenvolvimento
+// exemplos.html. Não é carregado
 // nas páginas do site nem nas Ferramentas (/ferramentas/).
 // Carregue depois de global.css e main.css.
 ================================================================== */
@@ -64,8 +64,6 @@ ul.custom-list li, ol.custom-list li { margin-bottom: 6px; }
 .contact-form button:hover { background-color: var(--btn-bg-hover); }
 .form-check { display: flex; align-items: center; gap: 8px; margin-bottom: 8px; cursor: pointer; font-size: var(--fs-sm); }
 .form-check input[type="checkbox"], .form-check input[type="radio"] { width: 18px; height: 18px; accent-color: var(--heading-color); }
-/* Painel de formulário antigo das Ferramentas (vinha de /web/components/style.css; só design-meta.html) */
-.form-panel { background-color: var(--surface-2); padding: 20px; border: 1px solid var(--border-color); border-radius: var(--radius-md); box-shadow: var(--shadow-sm); }
 
 /* 5. Listas antigas: artigos, projetos, perfil, habilidades, linha do tempo */
 /*****************************************************************/

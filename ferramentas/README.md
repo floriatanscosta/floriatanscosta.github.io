@@ -16,7 +16,7 @@ para `/ferramentas/assinatura/`. Os outros endereços antigos de `/web/` foram r
 |---|---|---|
 | Gerador de assinatura de e-mail | [`/ferramentas/assinatura/`](https://floriatan.com.br/ferramentas/assinatura/) | [`assinatura/README.md`](assinatura/README.md) |
 | Custom Plate Design XML (Tecan) | [`/ferramentas/plate/`](https://floriatan.com.br/ferramentas/plate/) | [`plate/README.md`](plate/README.md) |
-| Calculadora de fluidodinâmica ICP-MS (em teste, fora da lista) | [`/ferramentas/fluidodinamica/`](https://floriatan.com.br/ferramentas/fluidodinamica/) | [`fluidodinamica/README.md`](fluidodinamica/README.md) |
+| Calculadora de fluidodinâmica ICP-MS (**em desenvolvimento, não publicada**) | — (pasta `_fluidodinamica/`) | [`_fluidodinamica/README.md`](_fluidodinamica/README.md) |
 
 Páginas de apoio: lista (`index.html`), [Sobre](https://floriatan.com.br/ferramentas/sobre) e
 [Aviso de uso](https://floriatan.com.br/ferramentas/aviso).
@@ -36,8 +36,7 @@ ferramentas/
 │   ├── README.md            # descrição, verificações e versões (não publicado)
 │   └── style.css            # estilos só desta ferramenta
 ├── plate/                   # Custom Plate, mesmo padrão (assets/slide.svg = desenho da lâmina)
-├── custom-plate/index.html  # redireciona o endereço antigo para /ferramentas/plate/
-├── fluidodinamica/          # mesmo padrão (ainda sem capa)
+├── _fluidodinamica/         # NÃO publicado: calculadora em desenvolvimento (ver o README da pasta)
 ├── aviso.html               # /ferramentas/aviso
 ├── index.html               # /ferramentas/ (lista)
 ├── sobre.html               # /ferramentas/sobre
@@ -69,11 +68,13 @@ de `/ferramentas/`.
   branch `main` e mantenha aquele repositório público.
 - `ferramentas/<ferramenta>/cover.png`: imagens de compartilhamento (`og:image`).
 - Os endereços `/ferramentas/<ferramenta>/`, depois de divulgados. Se precisar mudar um, deixe uma página de
-  redirecionamento no endereço antigo, como `custom-plate/index.html` (Custom Plate → `/ferramentas/plate/`, 14/11/2026).
+  redirecionamento no endereço antigo (uma página `index.html` com `<meta http-equiv="refresh">` e `rel="canonical"`
+  para o endereço novo). Em 14/11/2026 o Custom Plate mudou de `/ferramentas/custom-plate/` para `/ferramentas/plate/`;
+  o redirecionamento foi criado e depois apagado, e o endereço antigo hoje dá erro 404 (ver `docs/PENDENCIAS.md`, F7).
 
 ## Medição de uso (Google Analytics)
 
-Todas as páginas de `/ferramentas/` (inclusive `_modelo/`) carregam `/js/analytics.js`, trazem o aviso
+Todas as páginas de `/ferramentas/` (inclusive `_modelo/` e `_fluidodinamica/`) carregam `/js/analytics.js`, trazem o aviso
 de consentimento (`#consent`) antes de `/js/app.js`, o botão “Preferências” no rodapé e a
 Content-Security-Policy liberada para `googletagmanager.com` e `google-analytics.com`. Ao criar uma
 ferramenta a partir de `_modelo/`, mantenha esses quatro itens.
