@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; font-src 'self'; connect-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://www.googletagmanager.com; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; font-src 'self'; connect-src 'self' https://*.google-analytics.com https://*.analytics.google.com https://*.googletagmanager.com; object-src 'none'; base-uri 'self'; form-action 'self'">
   <meta name="referrer" content="strict-origin-when-cross-origin">
   <title>Aviso de uso · Floriatan Santos Costa</title>
   <meta name="description" content="Aviso de uso das Ferramentas: as funções podem ser alteradas ou ficar indisponíveis sem aviso prévio, sem garantias, e os resultados devem ser conferidos.">
@@ -24,6 +24,8 @@
   <link rel="preload" href="/assets/fonts/roboto-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
   <!-- Base visual compartilhada com o site principal (mesmo domínio) -->
   <script src="/js/theme-init.js"></script>
+  <!-- Consentimento + Google Analytics (só carrega após "Aceitar") -->
+  <script src="/js/analytics.js" defer></script>
   <link rel="stylesheet" href="/css/global.css">
   <link rel="stylesheet" href="/css/main.css">
   <!-- Estilos comuns das Ferramentas (todas as páginas) -->
@@ -90,7 +92,7 @@
     </section>
     <section class="card" aria-labelledby="h-priv">
       <h2 id="h-priv" class="card-title">Privacidade</h2>
-      <p>Os dados digitados são processados no seu navegador e não são enviados a servidores. As Ferramentas não usam Google Analytics nem cookies. Ficam salvos no seu navegador apenas a preferência de tema e, se você marcar essa opção na Assinatura, os dados da assinatura (desmarque para apagá-los).</p>
+      <p>Os dados digitados são processados no seu navegador e não são enviados a servidores. Com o seu consentimento, o Google Analytics 4 registra estatísticas anônimas de uso (páginas vistas e botões acionados, sem os valores digitados); sem consentimento, nenhum cookie é criado. Ficam salvos no seu navegador a preferência de tema, a escolha sobre os cookies de análise e, se você marcar essa opção na Assinatura, os dados da assinatura (desmarque para apagá-los).</p>
     </section>
     <section class="card" aria-labelledby="h-dir">
       <h2 id="h-dir" class="card-title">Direitos autorais</h2>
@@ -127,9 +129,21 @@
       <li><a class="footer-profile" href="/"><img src="/assets/favicon.svg" alt="Site de Floriatan Santos Costa" width="22" height="22"></a></li>
       <li><a class="footer-profile" href="http://lattes.cnpq.br/0287106268880389" target="_blank" rel="noopener noreferrer"><img src="/assets/icons/lattes.svg" alt="Currículo Lattes" width="22" height="22"><span class="visually-hidden"> (abre em nova aba)</span></a></li>
     </ul>
-    <nav aria-label="Links do rodapé"><ul class="footer-right"><li><a href="/">Site principal</a></li><li><a href="/ferramentas/">Ferramentas</a></li><li><a href="/ferramentas/sobre">Sobre</a></li><li><a href="/ferramentas/aviso">Aviso de uso</a></li><li><a href="/contato">Contato</a></li></ul></nav>
+    <nav aria-label="Links do rodapé"><ul class="footer-right"><li><a href="/">Site principal</a></li><li><a href="/ferramentas/">Ferramentas</a></li><li><a href="/ferramentas/sobre">Sobre</a></li><li><a href="/ferramentas/aviso">Aviso de uso</a></li><li><a href="/contato">Contato</a></li><li><button type="button" class="link-btn" data-consent-open>Preferências</button></li></ul></nav>
   </div>
 </footer>
+<div class="consent" id="consent" role="region" aria-labelledby="consent-title" data-ga-id="G-0NDPRCLMYV" hidden>
+  <div class="container consent__inner">
+    <div class="consent__text">
+      <p id="consent-title" class="consent__title">Privacidade e cookies</p>
+      <p>Gostaria de usar o Google Analytics para gerar estatísticas anônimas e agregadas de uso das Ferramentas. Os dados que você digita nunca são enviados. Os cookies de análise só são ativados se você aceitar; as ferramentas funcionam normalmente se recusar. <a class="inline-link" href="/ferramentas/sobre#privacidade">Saiba mais</a></p>
+    </div>
+    <div class="consent__actions">
+      <button type="button" class="btn btn-outline" data-consent="denied">Recusar</button>
+      <button type="button" class="btn" data-consent="granted">Aceitar</button>
+    </div>
+  </div>
+</div>
 <script src="/js/app.js" defer></script>
 </body>
 </html>

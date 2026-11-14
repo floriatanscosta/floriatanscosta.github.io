@@ -4,6 +4,11 @@
 > no Git; o histórico resumido está em [`assinatura/README.md`](assinatura/README.md#histórico-de-versões).
 > Os títulos abaixo indicam a versão quando a mudança é da Assinatura.
 
+## 2026-11-14 — Google Analytics nas Ferramentas e medição de downloads de PDF
+- `js/analytics.js`: além do consentimento e do GA4, envia **`pdf_download`** a cada clique em link para PDF (currículo, PDFs internos e externos, inclusive pelo botão do meio do mouse) com `file_name`, `link_url`, `link_text`, `link_domain`, `outbound`, `pdf_type` (`curriculo`, `interno`, `externo`, `gerado_ferramenta`) e `link_location`; e **`tool_action`** nas Ferramentas (botões com `data-track` e `form_used`, sem os valores digitados). Todos os eventos levam `site_section`, `content_group`, `page_language` e, nas Ferramentas, `tool_name`. Nada é enviado sem consentimento.
+- **Ferramentas** (lista, Sobre, Aviso, Assinatura, Custom Plate, Fluidodinâmica e `_modelo/`): passam a carregar `js/analytics.js`, com aviso de consentimento, botão "Preferências" no rodapé e CSP liberada para o Google Analytics. Botões medidos: Assinatura (`copy_signature`, `copy_html`, `export_pdf`) e Custom Plate (`copy_xml`, `download_xml`, `export_pdf`).
+- Textos de privacidade atualizados: `/sobre#privacidade` (pt, en, es), Ferramentas "Sobre" e "Aviso de uso", lista das Ferramentas, `ferramentas/README.md` (nova seção "Medição de uso") e `docs/arquitetura.md`.
+
 ## 2026-11-14 — Custom Plate: endereço `/ferramentas/plate/`
 - A ferramenta Custom Plate mudou de `/ferramentas/custom-plate/` para **`/ferramentas/plate/`** (pasta `ferramentas/plate/`). Links atualizados no menu de todas as páginas das Ferramentas, na lista, em "Sobre", no modelo `_modelo/`, no canonical, `og:url`, `og:image`, no rodapé do PDF e nos README.
 - `ferramentas/custom-plate/index.html` passou a ser só um redirecionamento para o endereço novo, para não quebrar links já divulgados.

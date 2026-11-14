@@ -1,7 +1,9 @@
 # Ferramentas — floriatan.com.br/ferramentas/
 
 Pequenas aplicações web para o laboratório e a comunicação acadêmica, que rodam inteiramente
-no navegador: nenhum dado é enviado a servidores, sem Google Analytics nem cookies.
+no navegador: os dados digitados nunca são enviados a servidores. O Google Analytics (o mesmo `js/analytics.js`
+do site principal) só é carregado após o consentimento do visitante e mede páginas vistas e os botões
+marcados com `data-track` (ver “Medição de uso” abaixo).
 
 Até 14/11/2026 ficavam no repositório próprio [`floriatanscosta/web`](https://github.com/floriatanscosta/web),
 publicado em `floriatan.com.br/web/`. Aquele repositório continua no ar **só como legado**: guarda as
@@ -68,6 +70,19 @@ de `/ferramentas/`.
 - `ferramentas/<ferramenta>/cover.png`: imagens de compartilhamento (`og:image`).
 - Os endereços `/ferramentas/<ferramenta>/`, depois de divulgados. Se precisar mudar um, deixe uma página de
   redirecionamento no endereço antigo, como `custom-plate/index.html` (Custom Plate → `/ferramentas/plate/`, 14/11/2026).
+
+## Medição de uso (Google Analytics)
+
+Todas as páginas de `/ferramentas/` (inclusive `_modelo/`) carregam `/js/analytics.js`, trazem o aviso
+de consentimento (`#consent`) antes de `/js/app.js`, o botão “Preferências” no rodapé e a
+Content-Security-Policy liberada para `googletagmanager.com` e `google-analytics.com`. Ao criar uma
+ferramenta a partir de `_modelo/`, mantenha esses quatro itens.
+
+- Os eventos levam `site_section = ferramentas`, `content_group = Ferramentas` e `tool_name` (nome da pasta).
+- Para medir um botão, acrescente `data-track="nome_da_acao"` (ex.: `copy_html`, `download_xml`).
+  `data-track="export_pdf"` também gera o evento `pdf_download` com `pdf_type = gerado_ferramenta`.
+- `tool_action = form_used` é enviado uma vez por página quando o visitante altera um campo.
+- Nunca envie ao GA o conteúdo digitado pelo usuário.
 
 ## Indexação
 
