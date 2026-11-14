@@ -14,8 +14,10 @@ Passo a passo para editar dados e páginas, gerar o site e publicar, e as conven
      arquivos. Requer o ReportLab e a svglib (ícones e logotipo), instalados uma única vez com `pip install reportlab svglib`. Sem eles, o build avisa e
      gera só as páginas; para pular os PDFs de propósito, use `python3 _src/build.py --check --no-pdf`.
 3. Faça commit dos arquivos gerados e da fonte, e envie ao GitHub. O GitHub Pages publica automaticamente.
+   Para conferir antes, sirva o site localmente com `python3 -m http.server 8765` na raiz e abra `http://localhost:8765/`.
 
-> Não edite diretamente os `.html` da raiz, `/en` ou `/es`: eles são sobrescritos pelo gerador.
+> Não edite diretamente os `.html` gerados (raiz, `/en` e `/es`): eles são sobrescritos pelo gerador.
+> As exceções, escritas à mão, são `guia.html`, `design-meta.html`, `exemplos.html` e tudo em `ferramentas/`.
 
 ## Convenções
 
@@ -35,3 +37,5 @@ Passo a passo para editar dados e páginas, gerar o site e publicar, e as conven
   ```
 - No cabeçalho de um fragmento, além de `title:` e `description:`, podem ser usados `styles:` (CSS próprio da página), `scripts:` (JS próprio) e `body_class:`. Exemplo: a página "Vida de cientista" usa `styles: /css/vida.css` e `scripts: /js/vida.js`.
 - **Imagens da página "Vida de cientista"** (`_src/pages/pt/vida.html`): salve as fotos em WebP em `assets/img/vida/` (crie a pasta na primeira vez). Para transformar um capítulo em apresentação automática, coloque duas ou mais `<img class="v-slide">` dentro do mesmo `<div class="v-slides">`; para a galeria, copie um `<li>` da lista `v-marquee`. Sempre preencha `alt`, `width` e `height`.
+- **Ferramentas** (`ferramentas/`): não passam pelo gerador; para criar uma nova, copie `ferramentas/_modelo/` e siga [`ferramentas/README.md`](../ferramentas/README.md). Ao mudar o menu, atualize todas as páginas de `/ferramentas/`.
+- **Licença:** todo o conteúdo novo (código, textos, imagens) fica sob o [`LICENSE`](../LICENSE), com todos os direitos reservados. Ao incluir material de terceiros (fonte, ícone, logotipo), registre a licença dele no `LICENSE` e no README.

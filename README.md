@@ -27,9 +27,10 @@ em todo o site.
 
 ## Documentação adicional
 
-- [`docs/arquitetura.md`](docs/arquitetura.md) — tecnologias, qualidade (acessibilidade, SEO, privacidade, segurança, desempenho), arquitetura e estrutura do repositório.
+- [`docs/arquitetura.md`](docs/arquitetura.md) — tecnologias, qualidade (acessibilidade, SEO, privacidade, segurança, desempenho), arquitetura, estrutura do repositório e o que é ou não publicado.
 - [`docs/atualizacao.md`](docs/atualizacao.md) — como atualizar o conteúdo, gerar o site e publicar; convenções.
 - [`design.md`](design.md) — design system (tokens, tipografia, componentes).
+- [`ferramentas/README.md`](ferramentas/README.md) — Ferramentas: estrutura, visual e caminhos que não podem mudar.
 - [`CHANGELOG.md`](CHANGELOG.md) — histórico de alterações.
 - [`PENDENCIAS.md`](PENDENCIAS.md) — o que já foi feito, ideias de melhoria com progresso e dados a conferir.
 
@@ -38,20 +39,30 @@ em todo o site.
 **Todos os direitos reservados.** O código (HTML, CSS, JavaScript e os scripts em Python de `_src/`),
 os textos, os dados do currículo (`_src/data/`), as fotos e imagens (`assets/img/`), os currículos em
 PDF (`assets/cv/`), o logotipo Fc e a identidade visual (`assets/logo.svg`, `assets/favicon.svg`,
-`assets/svg/fundo.svg`), o sistema de design e a documentação deste repositório são de Floriatan
-Santos Costa e **não podem ser copiados, modificados, redistribuídos, republicados ou usados
-comercialmente sem autorização prévia e por escrito**. Os termos estão em [`LICENSE`](LICENSE).
+`assets/svg/fundo.svg`), o sistema de design, as Ferramentas (`ferramentas/`) e a documentação deste
+repositório são de Floriatan Santos Costa. Os termos completos estão em [`LICENSE`](LICENSE).
 
-Sem autorização, é permitido apenas: visitar o site em `floriatan.com.br`, ver e fazer *fork* no
-GitHub nos limites dos Termos de Serviço do GitHub e citar trechos curtos com indicação da fonte.
-Pedidos de autorização: [floriatan.com.br/contato](https://floriatan.com.br/contato).
+O repositório ser público **não concede nenhuma licença**. Dependem de **autorização prévia e por escrito**
+do autor, no todo ou em parte, com ou sem fins lucrativos:
+
+- copiar, modificar, adaptar, traduzir, redistribuir ou republicar o conteúdo ou o código;
+- **usar o código, ou qualquer trecho dele, em outros softwares**, sites, aplicativos, produtos ou serviços;
+- **usar textos, dados, imagens, o logotipo ou o design em outros materiais** (publicações, aulas,
+  apresentações, pôsteres, vídeos, redes sociais, documentos institucionais etc.);
+- usar comercialmente, extrair dados de forma automatizada ou usar o conteúdo para treinar modelos de IA.
+
+A autorização só vale se for dada pelo autor por escrito (documento ou e-mail) e descrever o conteúdo,
+a finalidade, o meio e o prazo do uso. Sem autorização, é permitido apenas: visitar o site em
+`floriatan.com.br`, usar as Ferramentas no próprio site e os resultados gerados por elas, compartilhar
+links, ver e fazer *fork* no GitHub nos limites dos Termos de Serviço do GitHub e citar trechos curtos
+com indicação da fonte. Pedidos de autorização: [floriatan.com.br/contato](https://floriatan.com.br/contato).
 
 Itens de terceiros não são do autor e seguem as próprias licenças ou regras de marca:
 
 - **Fonte Roboto**: SIL Open Font License 1.1 (`assets/fonts/License.txt` e `_src/fonts/OFL.txt`);
 - **Ícones do Material Symbols** (sol, lua, ajuda): Apache License 2.0, do Google;
-- **Logotipos de perfis, bases e instituições** (ORCID, Lattes, LinkedIn, ResearchGate, Google Scholar, DOI, UFPR, UNIZAR, Embrapa, SBQ, LAESB e outros): marcas dos respectivos titulares, usadas apenas para identificar perfis e vínculos.
+- **Logotipos de perfis, bases, fabricantes e instituições** (ORCID, Lattes, LinkedIn, ResearchGate, Google Scholar, DOI, UFPR, UNIZAR, Embrapa, SBQ, LAESB, Tecan e outros): marcas dos respectivos titulares, usadas apenas para identificar perfis e vínculos.
 
 > Até 13/11/2026 o código deste repositório esteve sob a licença MIT. Quem obteve uma cópia
-> naquele período mantém, para aquela versão, as permissões da MIT; a nova licença vale para
+> naquele período mantém, apenas para aquela cópia, as permissões da MIT; a licença atual vale para
 > as versões publicadas a partir de 14/11/2026.

@@ -1,1 +1,6 @@
-- Test
+Este arquivo não contém licença própria.
+Os termos de uso deste repositório e do site estão em /LICENSE
+(todos os direitos reservados, Floriatan Santos Costa):
+https://github.com/floriatanscosta/floriatanscosta.github.io/blob/main/LICENSE
+
+A licença da fonte Roboto está em assets/fonts/License.txt.

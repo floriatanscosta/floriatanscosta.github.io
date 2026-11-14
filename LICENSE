@@ -1,63 +1,124 @@
 Copyright (c) 2026 Floriatan Santos Costa. Todos os direitos reservados.
 All rights reserved.
 
-LICENÇA DE USO — SITE PESSOAL (floriatan.com.br)
-Vigente a partir de 14/11/2026. Substitui a licença MIT antes adotada neste
-repositório.
+LICENÇA DE USO — SITE PESSOAL (floriatan.com.br) E FERRAMENTAS
+Versão 2, vigente a partir de 14/11/2026. Substitui a licença MIT antes adotada
+neste repositório e a versão 1 desta licença.
 
 1. Titularidade
-   Todo o conteúdo deste repositório e do site floriatan.com.br — código
-   (HTML, CSS, JavaScript e scripts em Python), textos, dados (incluindo os
-   arquivos de _src/data/), fotos, imagens, ilustrações, logotipo,
-   currículos em PDF, documentação, sistema de design e a organização do
-   conjunto — é obra protegida de Floriatan Santos Costa, nos termos da
-   Lei nº 9.610/1998 (direitos autorais), da Lei nº 9.609/1998 (programas de
-   computador) e da Convenção de Berna.
+   Todo o conteúdo deste repositório e do site floriatan.com.br, incluindo as
+   Ferramentas em floriatan.com.br/ferramentas/, é obra protegida de
+   Floriatan Santos Costa, nos termos da Lei nº 9.610/1998 (direitos
+   autorais), da Lei nº 9.609/1998 (programas de computador) e da Convenção
+   de Berna. Isso abrange, sem se limitar a:
+   a) o código-fonte e o código gerado (HTML, CSS, JavaScript e os scripts em
+      Python de _src/), inclusive trechos, funções, algoritmos e a estrutura
+      do gerador;
+   b) os textos, nos três idiomas, e as traduções;
+   c) os dados e a forma como estão organizados (arquivos de _src/data/);
+   d) fotos, imagens, ilustrações, capas e ícones próprios;
+   e) o logotipo Fc, a identidade visual e o sistema de design (tokens,
+      paleta, componentes e design.md);
+   f) os currículos em PDF e a documentação (arquivos .md e docs/);
+   g) a seleção, a organização e o conjunto do site.
 
-2. O que é proibido sem autorização prévia e por escrito do autor
-   Copiar, reproduzir, modificar, adaptar, traduzir, criar obras derivadas,
-   distribuir, publicar, hospedar em outro endereço, sublicenciar, vender ou
-   usar comercialmente, no todo ou em parte, qualquer conteúdo deste
-   repositório ou do site, por qualquer meio. Nenhuma licença ou direito é
-   concedido de forma implícita.
+2. Todos os direitos reservados
+   Nenhuma licença é concedida, de forma expressa ou implícita, pelo simples
+   fato de o repositório ser público, de o código poder ser lido no
+   navegador ou de existir uma cópia (fork) no GitHub. Tudo o que não está
+   expressamente permitido no item 4 é proibido.
 
-3. O que é permitido
-   a) Visitar e ler o site pelo endereço oficial (floriatan.com.br), pelo
-      navegador.
-   b) Ver o código e criar uma cópia (fork) no próprio GitHub, apenas na medida
-      exigida pelos Termos de Serviço do GitHub. Isso não autoriza nenhum dos
-      usos do item 2 fora dessa plataforma.
-   c) Citar trechos curtos com indicação de autoria e da fonte, nos limites do
-      art. 46 da Lei nº 9.610/1998.
+3. Usos que exigem autorização prévia e por escrito do autor
+   Depende de autorização prévia e por escrito, no todo ou em parte, por
+   qualquer meio ou formato, com ou sem fins lucrativos:
+   a) copiar, reproduzir, modificar, adaptar, traduzir ou criar obras
+      derivadas;
+   b) usar o código ou qualquer trecho dele em outros softwares, sites,
+      aplicativos, bibliotecas, extensões, sistemas, produtos ou serviços,
+      inclusive internos, acadêmicos, institucionais ou de código aberto;
+   c) usar textos, dados, imagens, o logotipo, a identidade visual ou o
+      sistema de design em outros materiais, como sites, publicações,
+      artigos, livros, apostilas, aulas, cursos, apresentações, pôsteres,
+      vídeos, redes sociais, peças de divulgação e documentos institucionais;
+   d) distribuir, publicar, republicar, hospedar em outro endereço,
+      espelhar, sublicenciar, alugar, vender ou explorar comercialmente;
+   e) extrair dados de forma automatizada (raspagem) para reutilização, ou
+      usar o conteúdo ou o código para treinar, ajustar ou avaliar modelos
+      de inteligência artificial ou para compor bases de dados;
+   f) remover ou alterar avisos de direitos autorais, de autoria ou desta
+      licença.
 
-4. Conteúdo de terceiros
+4. Usos permitidos sem autorização
+   a) Visitar, ler e imprimir para uso pessoal as páginas do site no
+      endereço oficial (floriatan.com.br), pelo navegador.
+   b) Ver o código e criar uma cópia (fork) no próprio GitHub, apenas na
+      medida exigida pelos Termos de Serviço do GitHub. Isso não autoriza
+      nenhum dos usos do item 3 fora dessa plataforma.
+   c) Citar trechos curtos, com indicação de autoria e da fonte, nos limites
+      do art. 46 da Lei nº 9.610/1998.
+   d) Usar as Ferramentas no endereço oficial (floriatan.com.br/ferramentas/)
+      e usar livremente os resultados que você gerar com elas, como o
+      arquivo XML ou a sua assinatura de e-mail. Isso não inclui o código,
+      os textos ou as imagens das Ferramentas.
+   e) Compartilhar links para as páginas do site.
+
+5. Autorização por escrito
+   a) Só vale a autorização dada pelo autor por escrito, em documento ou
+      e-mail enviado por ele, que identifique quem a recebe, o conteúdo
+      autorizado, a finalidade, o meio, o prazo e o território do uso.
+   b) A autorização é pessoal e intransferível, vale apenas para o que nela
+      estiver descrito e deve ser interpretada de forma restritiva (art. 4º
+      da Lei nº 9.610/1998). Silêncio, demora na resposta ou tolerância a um
+      uso não equivalem a autorização.
+   c) Salvo acordo diferente, todo uso autorizado deve indicar a autoria:
+      "Floriatan Santos Costa — floriatan.com.br".
+
+6. Conteúdo de terceiros
    Os itens abaixo não são do autor, não são licenciados aqui e seguem as
    próprias licenças ou regras de marca:
    a) Fonte Roboto: SIL Open Font License 1.1 (assets/fonts/License.txt e
       _src/fonts/OFL.txt).
    b) Ícones do Material Symbols (sol, lua, ajuda): Apache License 2.0, do
       Google.
-   c) Nomes, marcas e logotipos de perfis, bases, editoras e instituições
-      (como ORCID, Lattes, LinkedIn, ResearchGate, Google Scholar, DOI, UFPR,
-      UNIZAR, Embrapa e SBQ): pertencem aos respectivos titulares e são usados
-      apenas para identificar perfis e vínculos.
+   c) Nomes, marcas e logotipos de perfis, bases, editoras, fabricantes e
+      instituições (como ORCID, Lattes, LinkedIn, ResearchGate, Google
+      Scholar, DOI, UFPR, UNIZAR, Embrapa, SBQ e Tecan): pertencem aos
+      respectivos titulares e são usados apenas para identificar perfis,
+      vínculos e equipamentos.
    d) Artigos e outras obras citadas: os direitos pertencem aos respectivos
       autores e editoras; o site apenas lista as referências.
 
-5. Ausência de garantias
-   O conteúdo é oferecido no estado em que se encontra, sem garantia de
-   qualquer tipo. O autor não responde por danos decorrentes do uso.
+7. Versões anteriores
+   Até 13/11/2026 o código deste repositório esteve sob a licença MIT. Quem
+   obteve uma cópia naquele período mantém, apenas para aquela cópia, as
+   permissões da MIT. Esta licença vale para todas as versões publicadas a
+   partir de 14/11/2026.
 
-6. Pedidos de autorização
-   https://floriatan.com.br/contato
+8. Ausência de garantias
+   O conteúdo e as Ferramentas são oferecidos no estado em que se encontram,
+   sem garantia de qualquer tipo. O autor não responde por danos decorrentes
+   do uso.
+
+9. Violações e foro
+   O uso sem autorização sujeita o infrator às sanções civis e penais
+   previstas em lei, inclusive à remoção do conteúdo e à indenização. Aplica-se
+   a legislação brasileira.
+
+10. Pedidos de autorização
+    https://floriatan.com.br/contato
 
 ---
 
-English summary: Copyright (c) 2026 Floriatan Santos Costa. All rights reserved.
-No part of this repository or of floriatan.com.br (code, text, data, photos,
-images, logo, PDF CVs, documentation) may be copied, modified, distributed,
-republished or used commercially without the author's prior written permission.
-You may browse the site at its official address, view and fork the code on
-GitHub only as required by GitHub's Terms of Service, and quote short excerpts
-with attribution. Third-party fonts, icons and trademarks keep their own
-licenses. The Portuguese text above prevails.
+English summary: Copyright (c) 2026 Floriatan Santos Costa. All rights
+reserved. No license is granted, expressly or by implication. No part of this
+repository or of floriatan.com.br (code, text, data, photos, images, logo,
+visual identity, design system, PDF CVs, documentation) may be copied,
+modified, adapted, distributed, republished, used in other software, websites,
+products or services, used in other materials (publications, courses,
+presentations, social media, etc.), scraped, or used to train AI models,
+without the author's prior written permission, which must state its scope.
+You may browse the site at its official address, use the Tools there and freely
+use the results you generate, view and fork the code on GitHub only as required
+by GitHub's Terms of Service, share links, and quote short excerpts with
+attribution. Third-party fonts, icons and trademarks keep their own licenses.
+The Portuguese text above prevails.
