@@ -9,7 +9,7 @@
      site_section   "site" ou "ferramentas"
      content_group  "Site principal" ou "Ferramentas" (agrupamento de conteúdo nativo do GA4)
      page_language  idioma da página (atributo lang do <html>): pt-BR, en, es
-     tool_name      só em /ferramentas/: assinatura, plate, fluidodinamica, lista, sobre, aviso
+     tool_name      só em /ferramentas/: nome da pasta (ex.: assinatura, plate) ou lista, sobre, aviso
 
    Eventos personalizados (só com consentimento):
      pdf_download   clique em link para .pdf (inclui botão do meio do mouse) ou "Exportar PDF"
