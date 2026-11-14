@@ -2,7 +2,7 @@
 
 Página: **https://floriatan.com.br/ferramentas/fluidodinamica/** (`index.html`)
 Pasta: `ferramentas/fluidodinamica/` · Script: `app.js` · Estilos: `style.css` (+ comuns em `ferramentas/css/ferramentas.css`)
-Endereços antigos: `/web/test-gota` e `/web/fluidodinamica` (redirecionam para o novo)
+Endereços antigos: `/web/test-gota` e `/web/fluidodinamica` (removidos em 14/11/2026, sem redirecionamento)
 
 Ferramenta em teste, fora da lista de ferramentas e sem indexação nos buscadores
 (`noindex`). Calcula, para uma câmara de nebulização cilíndrica, o volume interno, a

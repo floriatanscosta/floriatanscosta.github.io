@@ -5,7 +5,8 @@ no navegador: nenhum dado é enviado a servidores, sem Google Analytics nem cook
 
 Até 14/11/2026 ficavam no repositório próprio [`floriatanscosta/web`](https://github.com/floriatanscosta/web),
 publicado em `floriatan.com.br/web/`. Aquele repositório continua no ar **só como legado**: guarda as
-imagens das assinaturas de e-mail já enviadas e redireciona os endereços antigos para cá.
+imagens das assinaturas de e-mail (as já enviadas e as do gerador atual) e redireciona `/web/assinatura`
+para `/ferramentas/assinatura/`. Os outros endereços antigos de `/web/` foram removidos.
 
 ## Ferramentas
 

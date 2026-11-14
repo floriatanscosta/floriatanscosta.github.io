@@ -60,7 +60,7 @@ _src/pages/<idioma>/ ─┘          │
 | `.claude/launch.json` | Configuração do servidor local de visualização (`python -m http.server 8765`); não publicada |
 | `LICENSE` | Licença: todos os direitos reservados (ver a seção [Licença](#licença)) |
 
-As Ferramentas ficavam no repositório [`web`](https://github.com/floriatanscosta/web) (`floriatan.com.br/web/`) até 14/11/2026. Ele continua público **só como legado**: guarda as imagens usadas pelas assinaturas de e-mail já enviadas (`components/assinatura/assets/` e `components/gerador/`) e redireciona os endereços antigos para `/ferramentas/`.
+As Ferramentas ficavam no repositório [`web`](https://github.com/floriatanscosta/web) (`floriatan.com.br/web/`) até 14/11/2026. Ele continua público **só como legado**: guarda as imagens usadas pelas assinaturas de e-mail já enviadas (`components/assinatura/assets/` e `components/gerador/`) e a página `assinatura.html`, que leva o endereço antigo `/web/assinatura` para `/ferramentas/assinatura/`. Os demais endereços antigos de `/web/` (lista, Custom Plate, fluidodinâmica, Sobre, Aviso) foram removidos em 14/11/2026 e dão erro 404.
 
 ## Estrutura do repositório
 
@@ -158,7 +158,7 @@ Os arquivos não publicados continuam visíveis no GitHub, porque o repositório
 | Repositório | Papel |
 |---|---|
 | [`floriatanscosta/floriatanscosta.github.io`](https://github.com/floriatanscosta/floriatanscosta.github.io) | **Principal**: site, fonte, Ferramentas e documentação; publicado em `floriatan.com.br` |
-| [`floriatanscosta/web`](https://github.com/floriatanscosta/web) | **Legado**: imagens das assinaturas de e-mail já enviadas e redirecionamentos de `floriatan.com.br/web/` para `/ferramentas/`. Não mover nem renomear os arquivos de imagem |
+| [`floriatanscosta/web`](https://github.com/floriatanscosta/web) | **Legado**, só para a Assinatura: imagens das assinaturas de e-mail já enviadas (também usadas pelo gerador atual) e redirecionamento de `/web/assinatura`. Manter público, com o branch `main` e o GitHub Pages ativos; não mover nem renomear os arquivos de imagem |
 
 ## Licença
 

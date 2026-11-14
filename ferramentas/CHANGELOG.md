@@ -4,6 +4,10 @@
 > no Git; o histórico resumido está em [`assinatura/README.md`](assinatura/README.md#histórico-de-versões).
 > Os títulos abaixo indicam a versão quando a mudança é da Assinatura.
 
+## 2026-11-14 — Repositório `web` reduzido ao legado da Assinatura
+- O repositório `floriatanscosta/web` passou a guardar só as imagens das assinaturas de e-mail (`components/assinatura/assets/` e `components/gerador/`), a página `assinatura.html` (redireciona `/web/assinatura` para `/ferramentas/assinatura/`), `_config.yml`, README e a licença v2. As demais páginas, códigos e documentos foram apagados; os endereços antigos `/web/`, `/web/custom-plate`, `/web/fluidodinamica`, `/web/sobre` e `/web/aviso` deixam de existir.
+- `docs/arquitetura.md`, `ferramentas/README.md`, `ferramentas/fluidodinamica/README.md` e `PENDENCIAS.md` atualizados.
+
 ## 2026-11-14 — Licença v2 e documentação
 - "Aviso de uso" → "Direitos autorais": usar o código em outros softwares ou textos e imagens em outros materiais depende de autorização prévia e por escrito, conforme a versão 2 do `LICENSE` do repositório principal.
 - Link para o histórico da Assinatura corrigido (`assinatura/README.md`).
