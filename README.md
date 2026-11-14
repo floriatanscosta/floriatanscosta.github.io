@@ -104,7 +104,3 @@ Itens de terceiros não são do autor e seguem as próprias licenças ou regras 
 - **Fonte Roboto**: SIL Open Font License 1.1 (`assets/fonts/License.txt` e `_src/fonts/OFL.txt`);
 - **Ícones do Material Symbols** (sol, lua, ajuda): Apache License 2.0, do Google;
 - **Logotipos de perfis, bases, fabricantes e instituições** (ORCID, Lattes, LinkedIn, ResearchGate, Google Scholar, DOI, UFPR, UNIZAR, Embrapa, SBQ, LAESB, Tecan e outros): marcas dos respectivos titulares, usadas apenas para identificar perfis e vínculos.
-
-> Até 13/11/2026 o código deste repositório esteve sob a licença MIT. Quem obteve uma cópia
-> naquele período mantém, apenas para aquela cópia, as permissões da MIT. A licença atual vale para
-> as versões publicadas a partir de 14/11/2026.
