@@ -1,7 +1,7 @@
 # Custom Plate Design XML Generator
 
-Página: **https://floriatan.com.br/ferramentas/custom-plate/** (`index.html`)
-Pasta: `ferramentas/custom-plate/` · Script: `app.js` · Estilos: `style.css` (+ comuns em `ferramentas/css/ferramentas.css`)
+Página: **https://floriatan.com.br/ferramentas/plate/** (`index.html`)
+Pasta: `ferramentas/plate/` · Script: `app.js` · Estilos: `style.css` (+ comuns em `ferramentas/css/ferramentas.css`)
 
 Gera o arquivo XML de uma placa personalizada (`<HPDDPlate>`) para o **Tecan Uno Dispenser**
 e mostra, em escala, a grade de gotas sobre uma lâmina de vidro. Tudo roda no navegador:

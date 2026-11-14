@@ -4,6 +4,10 @@
 > no Git; o histórico resumido está em [`assinatura/README.md`](assinatura/README.md#histórico-de-versões).
 > Os títulos abaixo indicam a versão quando a mudança é da Assinatura.
 
+## 2026-11-14 — Custom Plate: endereço `/ferramentas/plate/`
+- A ferramenta Custom Plate mudou de `/ferramentas/custom-plate/` para **`/ferramentas/plate/`** (pasta `ferramentas/plate/`). Links atualizados no menu de todas as páginas das Ferramentas, na lista, em "Sobre", no modelo `_modelo/`, no canonical, `og:url`, `og:image`, no rodapé do PDF e nos README.
+- `ferramentas/custom-plate/index.html` passou a ser só um redirecionamento para o endereço novo, para não quebrar links já divulgados.
+
 ## 2026-11-14 — Repositório `web` reduzido ao legado da Assinatura
 - O repositório `floriatanscosta/web` passou a guardar só as imagens das assinaturas de e-mail (`components/assinatura/assets/` e `components/gerador/`), a página `assinatura.html` (redireciona `/web/assinatura` para `/ferramentas/assinatura/`), `_config.yml`, README e a licença v2. As demais páginas, códigos e documentos foram apagados; os endereços antigos `/web/`, `/web/custom-plate`, `/web/fluidodinamica`, `/web/sobre` e `/web/aviso` deixam de existir.
 - `docs/arquitetura.md`, `ferramentas/README.md`, `ferramentas/fluidodinamica/README.md` e `PENDENCIAS.md` atualizados.
