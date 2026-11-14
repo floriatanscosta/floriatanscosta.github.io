@@ -4,6 +4,11 @@
 > no Git; o histórico resumido está em [`assinatura/README.md`](assinatura/README.md#histórico-de-versões).
 > Os títulos abaixo indicam a versão quando a mudança é da Assinatura.
 
+## 2026-11-14 — Documentação das Ferramentas revisada
+- `README.md`: a Calculadora de fluidodinâmica aparece como **em desenvolvimento, não publicada** (pasta `_fluidodinamica/`); removido o redirecionamento `custom-plate/` da estrutura, com nota de que o endereço antigo hoje dá 404.
+- `_fluidodinamica/README.md`: aviso de que a pasta não é publicada e de como voltar a publicá-la.
+- `assinatura/README.md`: link para este `CHANGELOG.md`.
+
 ## 2026-11-14 — Google Analytics nas Ferramentas e medição de downloads de PDF
 - `js/analytics.js`: além do consentimento e do GA4, envia **`pdf_download`** a cada clique em link para PDF (currículo, PDFs internos e externos, inclusive pelo botão do meio do mouse) com `file_name`, `link_url`, `link_text`, `link_domain`, `outbound`, `pdf_type` (`curriculo`, `interno`, `externo`, `gerado_ferramenta`) e `link_location`; e **`tool_action`** nas Ferramentas (botões com `data-track` e `form_used`, sem os valores digitados). Todos os eventos levam `site_section`, `content_group`, `page_language` e, nas Ferramentas, `tool_name`. Nada é enviado sem consentimento.
 - **Ferramentas** (lista, Sobre, Aviso, Assinatura, Custom Plate, Fluidodinâmica e `_modelo/`): passam a carregar `js/analytics.js`, com aviso de consentimento, botão "Preferências" no rodapé e CSP liberada para o Google Analytics. Botões medidos: Assinatura (`copy_signature`, `copy_html`, `export_pdf`) e Custom Plate (`copy_xml`, `download_xml`, `export_pdf`).

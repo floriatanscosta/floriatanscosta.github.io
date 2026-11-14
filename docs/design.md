@@ -168,7 +168,7 @@ Roboto variável servida pelo próprio site (WOFF2 em `/assets/fonts`). Monoespa
 | `css/global.css` | Tokens, base, cabeçalho, menus, rodapé, botões, alertas, sanfona, dicas, modal, aviso de cookies, impressão. Carregado também pelas Ferramentas. |
 | `css/main.css` | Componentes de conteúdo e a página inicial. Carregado também pelas Ferramentas. |
 | `css/premiacoes.css`, `css/design.css`, `css/vida.css` | Estilos de cada uma dessas páginas (campo `styles:` do fragmento). |
-| `css/exemplos.css` | Componentes antigos usados só em `exemplos.html`, `guia.html` e `design-meta.html`. |
+| `css/exemplos.css` | Componentes antigos usados só na página de desenvolvimento `exemplos.html`. |
 
 ## Componentes
 

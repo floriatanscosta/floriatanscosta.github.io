@@ -1,7 +1,12 @@
-# Calculadora de fluidodinâmica para ICP-MS (em teste)
+# Calculadora de fluidodinâmica para ICP-MS (em desenvolvimento)
 
-Página: **https://floriatan.com.br/ferramentas/fluidodinamica/** (`index.html`)
-Pasta: `ferramentas/fluidodinamica/` · Script: `app.js` · Estilos: `style.css` (+ comuns em `ferramentas/css/ferramentas.css`)
+> **Não publicada.** A pasta foi renomeada para `_fluidodinamica/` em 14/11/2026; o Jekyll ignora pastas
+> iniciadas por `_`, então `floriatan.com.br/ferramentas/fluidodinamica/` dá erro 404. O `index.html` ainda
+> aponta para `/ferramentas/fluidodinamica/style.css` e `app.js`: para publicar, renomeie a pasta de volta
+> para `fluidodinamica/` (os caminhos voltam a funcionar sem outra mudança).
+
+Endereço previsto: `https://floriatan.com.br/ferramentas/fluidodinamica/` (`index.html`)
+Pasta: `ferramentas/_fluidodinamica/` · Script: `app.js` · Estilos: `style.css` (+ comuns em `ferramentas/css/ferramentas.css`)
 Endereços antigos: `/web/test-gota` e `/web/fluidodinamica` (removidos em 14/11/2026, sem redirecionamento)
 
 Ferramenta em teste, fora da lista de ferramentas e sem indexação nos buscadores

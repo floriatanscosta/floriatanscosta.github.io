@@ -88,7 +88,7 @@ Ao lançar uma versão:
 
 1. atualize `VERSAO` em `app.js` e o `?v=` do `<script>` em `index.html` (força o navegador a baixar o script novo);
 2. atualize o número fixo de `#versao-ferramenta` em `index.html` e a "Versão atual" acima;
-3. acrescente a versão na tabela abaixo e no `CHANGELOG.md`;
+3. acrescente a versão na tabela abaixo e no [`ferramentas/CHANGELOG.md`](../CHANGELOG.md);
 4. depois do commit, crie e envie a tag: `git tag -a assinatura-vX.Y.Z -m "Assinatura X.Y.Z" && git push origin assinatura-vX.Y.Z`.
 
 ## Histórico de versões
