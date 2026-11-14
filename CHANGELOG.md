@@ -1,5 +1,13 @@
 # Histórico de alterações
 
+## 2026-11-14 — Revisão da arquitetura e licença v2
+- `LICENSE` (versão 2): continua com todos os direitos reservados e agora diz expressamente que usar o código, ou trechos dele, em **outros softwares**, sites, produtos ou serviços, e usar textos, dados, imagens, logotipo ou design em **outros materiais** (publicações, aulas, apresentações, redes sociais etc.) depende de autorização prévia e por escrito. Também define o que vale como autorização por escrito, proíbe raspagem e uso para treinar modelos de IA, deixa claro que o repositório público não concede licença e inclui as Ferramentas e o uso livre dos resultados gerados por elas.
+- `README.md`: seção de licença reescrita conforme a versão 2; link para `ferramentas/README.md`.
+- `docs/arquitetura.md` conferido com os arquivos: incluídos `_testes/`, `.claude/launch.json`, `docs/`, páginas de desenvolvimento, sufixo `?v=` de cache, arquivos antigos de `assets/img/`, as novas seções "O que é publicado", "Repositórios" e "Licença"; corrigida a descrição de `ferramentas/fluidodinamica/` (sem capa nem `assets/`).
+- `docs/atualizacao.md`: visualização local, páginas escritas à mão, Ferramentas e licença do conteúdo novo.
+- `assets/_docs/License.txt`: o texto provisório foi trocado por um aviso que remete ao `LICENSE`.
+- Ferramentas, "Aviso de uso": a seção "Direitos autorais" menciona o uso em outros softwares e materiais.
+
 ## 2026-11-14 — Ferramentas integradas ao site
 - Conteúdo do repositório `floriatanscosta/web` trazido para a nova pasta **`ferramentas/`**, publicada em `floriatan.com.br/ferramentas/`: lista, Sobre, Aviso de uso, Gerador de assinatura, Custom Plate e Calculadora de fluidodinâmica. Uma pasta por ferramenta com `index.html`, `app.js`, `style.css`, `cover.png`, `README.md` e `assets/`; estilos comuns em `ferramentas/css/ferramentas.css`. Detalhes em `ferramentas/README.md` e `ferramentas/CHANGELOG.md`.
 - Rodapé de todas as páginas: link "Ferramentas" aponta para `/ferramentas/` (gerado por `_src/build.py`). O verificador de links (`--check`) passa a cobrir as Ferramentas.

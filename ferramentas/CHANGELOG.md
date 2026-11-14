@@ -1,8 +1,12 @@
 # Histórico de alterações — Ferramentas (/ferramentas, antes /web)
 
 > **Versões das ferramentas.** A Assinatura tem versão própria (SemVer), com tag `assinatura-vX.Y.Z`
-> no Git; o histórico resumido está em [`components/assinatura/README.md`](components/assinatura/README.md#histórico-de-versões).
+> no Git; o histórico resumido está em [`assinatura/README.md`](assinatura/README.md#histórico-de-versões).
 > Os títulos abaixo indicam a versão quando a mudança é da Assinatura.
+
+## 2026-11-14 — Licença v2 e documentação
+- "Aviso de uso" → "Direitos autorais": usar o código em outros softwares ou textos e imagens em outros materiais depende de autorização prévia e por escrito, conforme a versão 2 do `LICENSE` do repositório principal.
+- Link para o histórico da Assinatura corrigido (`assinatura/README.md`).
 
 ## 2026-11-14 — Ferramentas integradas ao site principal
 - Conteúdo do repositório `floriatanscosta/web` trazido para a pasta **`ferramentas/`** do repositório principal; endereços passam de `/web/…` para **`/ferramentas/…`** (`/ferramentas/assinatura/`, `/ferramentas/custom-plate/`, `/ferramentas/fluidodinamica/`, `/ferramentas/sobre`, `/ferramentas/aviso`).

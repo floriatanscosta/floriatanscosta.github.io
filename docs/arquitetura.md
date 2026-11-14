@@ -8,6 +8,8 @@ Como o site [floriatan.com.br](https://floriatan.com.br/) é construído: tecnol
 - Gerador em **Python 3** (`_src/build.py`, só a biblioteca padrão).
 - Currículo em PDF com **ReportLab** e **svglib** (`_src/cv_pdf.py`).
 - Hospedagem no **GitHub Pages** (Jekyll apenas copia os arquivos; ver `_config.yml`) com domínio próprio (`CNAME`).
+- Sem etapa de build no servidor: as páginas geradas são versionadas junto com a fonte, e o GitHub Pages publica o que estiver no branch `main`.
+- Cache: o gerador acrescenta `?v=AAAAMMDD` (data do build) aos CSS das páginas geradas, para que o navegador busque a versão nova após cada publicação. As Ferramentas e as páginas de desenvolvimento, escritas à mão, não recebem esse sufixo automaticamente.
 
 ### Qualidade
 
@@ -48,9 +50,15 @@ _src/pages/<idioma>/ ─┘          │
 | `js/vida.js` | Animações e galeria da página Vida de cientista |
 | `js/analytics.js` | Aviso de consentimento + Google Analytics (só carrega após "Aceitar") |
 | `assets/` | Logo, favicon, ícones (`sprite.svg`), fontes Roboto, imagens e logos (`svg/` e `img/logos/`) |
+| `assets/_docs/License.txt` | Aviso que remete ao `LICENSE` da raiz (pasta com `_`, não publicada) |
 | `assets/cv/` | Currículos em PDF (pt, en, es), gerados por `_src/cv_pdf.py` |
 | `sitemap.xml` | Gerado automaticamente, com alternativas `hreflang` |
-| `ferramentas/` | **Ferramentas** (assinatura de e-mail, Custom Plate, fluidodinâmica): HTML estático, fora do gerador e sem tradução; usam a mesma base visual (`/css`, `/js`, `/assets`) mais `ferramentas/css/ferramentas.css` e o `style.css` de cada ferramenta. Ver [`ferramentas/README.md`](../ferramentas/README.md) |
+| `ferramentas/` | **Ferramentas** (assinatura de e-mail, Custom Plate, fluidodinâmica): HTML estático, fora do gerador e sem tradução; usam a mesma base visual (`/css`, `/js`, `/assets`) mais `ferramentas/css/ferramentas.css` e o `style.css` de cada ferramenta. Não carregam o Google Analytics. Ver [`ferramentas/README.md`](../ferramentas/README.md) |
+| `guia.html`, `design-meta.html`, `exemplos.html` | Páginas de desenvolvimento, escritas à mão (fora do gerador), com `Disallow` no `robots.txt` |
+| `_testes/` | Protótipo da página inicial (design v2) e `RELATORIO-DESIGN.md` (auditoria de 28/10/2026); não publicado |
+| `docs/` | Documentação técnica (este arquivo e `atualizacao.md`); excluída da publicação no `_config.yml` |
+| `.claude/launch.json` | Configuração do servidor local de visualização (`python -m http.server 8765`); não publicada |
+| `LICENSE` | Licença: todos os direitos reservados (ver a seção [Licença](#licença)) |
 
 As Ferramentas ficavam no repositório [`web`](https://github.com/floriatanscosta/web) (`floriatan.com.br/web/`) até 14/11/2026. Ele continua público **só como legado**: guarda as imagens usadas pelas assinaturas de e-mail já enviadas (`components/assinatura/assets/` e `components/gerador/`) e redireciona os endereços antigos para `/ferramentas/`.
 
@@ -58,6 +66,7 @@ As Ferramentas ficavam no repositório [`web`](https://github.com/floriatanscost
 
 ```text
 floriatanscosta.github.io/
+├── .claude/launch.json         # servidor local de visualização (não publicado)
 ├── _src/                       # fonte (não publicada)
 │   ├── data/
 │   │   ├── cv.json
@@ -71,12 +80,17 @@ floriatanscosta.github.io/
 │   │   └── pt/                 # 13 páginas (inclui 404 e vida)
 │   ├── build.py
 │   └── cv_pdf.py
+├── _testes/                    # protótipo da página inicial e auditoria de design (não publicado)
+│   ├── css/                    # home-v2.css, tokens-v2.css
+│   ├── index.html
+│   └── RELATORIO-DESIGN.md
 ├── assets/
-│   ├── _docs/License.txt
+│   ├── _docs/License.txt       # aviso que remete ao LICENSE da raiz
 │   ├── cv/                     # floriatan-costa-cv-pt|en|es.pdf (gerados)
 │   ├── fonts/                  # Roboto .woff2 + License.txt
 │   ├── icons/                  # ícones SVG e sprite.svg
-│   ├── img/                    # foto, capas, fotos da linha do tempo (.webp)
+│   ├── img/                    # foto (profile.webp), apple-touch-icon, fotos da linha do tempo (time1–6.webp)
+│   │                           # + cover.png e profile.png antigos (ver PENDENCIAS F4)
 │   │   └── logos/              # logos institucionais em imagem
 │   ├── svg/                    # logos institucionais e ilustração de fundo
 │   ├── cover.png
@@ -96,7 +110,7 @@ floriatanscosta.github.io/
 │   ├── css/ferramentas.css     # estilos comuns das Ferramentas
 │   ├── assinatura/             # index.html, app.js, style.css, cover.png, README.md, assets/
 │   ├── custom-plate/           # idem (assets/slide.svg)
-│   ├── fluidodinamica/         # idem (em teste)
+│   ├── fluidodinamica/         # index.html, app.js, style.css, README.md (em teste, ainda sem capa nem assets/)
 │   ├── index.html, sobre.html, aviso.html
 │   ├── CHANGELOG.md
 │   └── README.md
@@ -114,9 +128,11 @@ floriatanscosta.github.io/
 ├── _config.yml                 # configuração do Jekyll / GitHub Pages
 ├── CHANGELOG.md
 ├── docs/                       # documentação técnica (não publicada)
+│   ├── arquitetura.md
+│   └── atualizacao.md
 ├── CNAME                       # floriatan.com.br
 ├── design.md
-├── LICENSE
+├── LICENSE                     # todos os direitos reservados
 ├── PENDENCIAS.md
 ├── README.md
 ├── robots.txt
@@ -127,3 +143,26 @@ Para resumir, a árvore mostra só as pastas das páginas em `_src/pages/`, `en/
 ícones e imagens em `assets/`, sem listar cada arquivo.
 
 Páginas de desenvolvimento (não indexadas, fora do menu): `guia.html`, `design-meta.html` e `exemplos.html`. Só elas carregam `css/exemplos.css`.
+
+## O que é publicado
+
+O GitHub Pages publica o conteúdo do branch `main`, com estas exceções:
+
+- pastas e arquivos iniciados por `_` ou `.` (`_src/`, `_testes/`, `assets/_docs/`, `ferramentas/_modelo/`, `.claude/`), ignorados pelo Jekyll;
+- os itens da lista `exclude` do `_config.yml`: `README.md`, `docs/`, `LICENSE`, `CHANGELOG.md`, `PENDENCIAS.md`, `design.md` e os README e CHANGELOG de `ferramentas/`.
+
+Os arquivos não publicados continuam visíveis no GitHub, porque o repositório é público.
+
+## Repositórios
+
+| Repositório | Papel |
+|---|---|
+| [`floriatanscosta/floriatanscosta.github.io`](https://github.com/floriatanscosta/floriatanscosta.github.io) | **Principal**: site, fonte, Ferramentas e documentação; publicado em `floriatan.com.br` |
+| [`floriatanscosta/web`](https://github.com/floriatanscosta/web) | **Legado**: imagens das assinaturas de e-mail já enviadas e redirecionamentos de `floriatan.com.br/web/` para `/ferramentas/`. Não mover nem renomear os arquivos de imagem |
+
+## Licença
+
+Todo o conteúdo e o código deste repositório são de Floriatan Santos Costa, com **todos os direitos
+reservados**. Usar o código em outros softwares, ou o conteúdo em outros materiais, depende de
+autorização prévia e por escrito. Termos completos em [`LICENSE`](../LICENSE); resumo no
+[README](../README.md#licença).
