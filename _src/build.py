@@ -1,0 +1,813 @@
+#!/usr/bin/env python3
+"""
+Gerador estático do site floriatan.com.br (somente biblioteca padrão do Python 3.8+).
+
+Uso:
+    python3 _src/build.py            # gera todas as páginas
+    python3 _src/build.py --check    # gera e verifica links internos
+    python3 _src/build.py --no-pdf   # não gera os currículos em PDF (assets/cv/)
+
+O currículo em PDF (pt/en/es) é gerado por _src/cv_pdf.py e precisa do ReportLab
+(pip install reportlab svglib). Sem eles, as páginas são geradas normalmente e os PDFs não mudam.
+
+Fontes:
+    _src/data/site.json          textos da interface (menus, rótulos, metadados) em pt/en/es
+    _src/data/cv.json            dados do currículo (prêmios, formação, experiência...)
+    _src/data/publications.json  artigos e trabalhos em eventos (títulos no idioma original)
+    _src/data/media.json         mídia e divulgação: revistas, notícias, entrevistas, menções (página /midia)
+    _src/pages/<lang>/<page>.html  conteúdo de cada página; blocos de dados entram com {{bloco}}
+
+Saída (HTML estático, servido pelo GitHub Pages):
+    /<page>.html (pt), /en/<page>.html, /es/<page>.html, /404.html, /sitemap.xml
+"""
+import base64, html, json, os, re, sys
+from datetime import date
+
+ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+SRC = os.path.join(ROOT, '_src')
+SITE_URL = 'https://floriatan.com.br'
+LANGS = ['pt', 'en', 'es']
+HTML_LANG = {'pt': 'pt-BR', 'en': 'en', 'es': 'es'}
+OG_LOCALE = {'pt': 'pt_BR', 'en': 'en_US', 'es': 'es_ES'}
+PREFIX = {'pt': '', 'en': '/en', 'es': '/es'}
+GA_ID = 'G-0NDPRCLMYV'
+BUILD_DATE = date.today()
+
+
+def load(name):
+    with open(os.path.join(SRC, 'data', name), encoding='utf-8') as f:
+        return json.load(f)
+
+
+S = load('site.json')
+CV = load('cv.json')
+PUB = load('publications.json')
+MEDIA = load('media.json')
+esc = lambda s: html.escape(str(s), quote=True)
+
+
+def T(key, lang):
+    """Texto da interface. Chaves aninhadas com ponto: 'nav.home'."""
+    node = S['ui']
+    for k in key.split('.'):
+        node = node[k]
+    return node[lang] if isinstance(node, dict) and lang in node else node
+
+
+def tr(v, lang):
+    """Campo traduzível {pt,en,es} ou texto simples."""
+    return v.get(lang, v.get('pt')) if isinstance(v, dict) else v
+
+
+def url(page, lang):
+    p = PREFIX[lang] + '/'
+    return p if page == 'index' else p + page
+
+
+def fmt_date(iso, lang):
+    y, m, d = iso.split('-')
+    if lang == 'en':
+        months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August',
+                  'September', 'October', 'November', 'December']
+        return f'{months[int(m) - 1]} {int(d)}, {y}'
+    return f'{d}/{m}/{y}'
+
+
+def ext_link(href, text, cls=''):
+    c = f' class="{cls}"' if cls else ''
+    return f'<a href="{esc(href)}"{c} target="_blank" rel="noopener noreferrer">{text}<span class="visually-hidden"> {{NEWTAB}}</span></a>'
+
+
+def icon(name, cls='icon'):
+    return f'<svg class="{cls}" aria-hidden="true" focusable="false"><use href="/assets/icons/sprite.svg#{name}"></use></svg>'
+
+
+# --------------------------------------------------------------------------------------
+# Blocos de dados
+# --------------------------------------------------------------------------------------
+
+def doi_or_link(item, lang):
+    if item.get('doi'):
+        d = item['doi']
+        return ext_link(f'https://doi.org/{d}', f'{icon("doi")}<span> {esc(d)}</span>', 'pub-link')
+    if item.get('url'):
+        return ext_link(item['url'], f'{icon("external")}<span>{T("pub.access", lang)}</span>', 'pub-link')
+    return ''
+
+
+def b_articles(lang, limit=None):
+    arts = PUB['articles']
+    if limit:
+        return '<ol class="pub-list pub-list--compact">' + ''.join(article_item(a, lang, compact=True) for a in arts[:limit]) + '</ol>'
+    years = []
+    for a in arts:
+        if a['year'] not in years:
+            years.append(a['year'])
+    parts = [f'''<div class="pub-tools" role="search">
+  <label for="pub-filter" class="visually-hidden">{T("pub.filter_label", lang)}</label>
+  <input type="search" id="pub-filter" class="pub-filter" placeholder="{T("pub.filter_placeholder", lang)}" autocomplete="off" data-pub-filter>
+  <p class="pub-count" aria-live="polite" data-pub-count data-tpl="{esc(T("pub.count_tpl", lang))}">{T("pub.count_tpl", lang).replace("{n}", str(len(arts))).replace("{t}", str(len(arts)))}</p>
+</div>''']
+    n = len(arts)
+    for y in years:
+        items = [a for a in arts if a['year'] == y]
+        parts.append(f'<section class="pub-year" data-pub-year aria-labelledby="y{y}"><h3 class="pub-year__title" id="y{y}">{y}</h3>')
+        parts.append(f'<ol class="pub-list" reversed start="{n}">')
+        for a in items:
+            parts.append(article_item(a, lang))
+        n -= len(items)
+        parts.append('</ol></section>')
+    parts.append(f'<p class="pub-empty" hidden data-pub-empty>{T("pub.empty", lang)}</p>')
+    return '\n'.join(parts)
+
+
+def article_item(a, lang, compact=False):
+    # Exibe apenas título, periódico e DOI/link (sem autores, volume, páginas ou ano)
+    badge = f' <span class="badge badge--accent">{T("pub.accepted", lang)}</span>' if a.get('status') == 'accepted' else ''
+    return f'''<li class="pub-item" data-pub-item>
+  <p class="pub-title" lang="{a.get('lang', 'en')}">{a["title"]}</p>
+  <p class="pub-meta"><cite>{esc(a["journal"])}</cite>{badge}</p>
+  {doi_or_link(a, lang)}
+</li>'''
+
+
+MEDIA_TYPES = ['magazine', 'news', 'interview', 'podcast', 'mention', 'other']  # ordem das seções em /midia
+
+
+def media_type(m):
+    """Tipo do item de mídia; tipos desconhecidos entram em "other"."""
+    t = m.get('type', 'other')
+    return t if t in MEDIA_TYPES else 'other'
+
+
+def media_groups():
+    """Itens de media.json agrupados por tipo, na ordem de MEDIA_TYPES (tipos sem itens ficam de fora)."""
+    items = MEDIA.get('items', [])
+    groups = [(t, [m for m in items if media_type(m) == t]) for t in MEDIA_TYPES]
+    return [(t, ms) for t, ms in groups if ms]
+
+
+def media_item(m, lang):
+    t = media_type(m)
+    when = fmt_date(m['date'], lang) if m.get('date') else (str(m['year']) if m.get('year') else '')
+    meta = f'<cite>{esc(m["source"])}</cite>' if m.get('source') else ''
+    meta += f' · {when}' if meta and when else when
+    desc = f'\n  <p class="pub-desc">{esc(tr(m["description"], lang))}</p>' if m.get('description') else ''
+    label = T('pub.access', lang) if t == 'magazine' else T('media.access', lang)
+    link = ext_link(m['url'], f'{icon("external")}<span>{label}</span>', 'pub-link') if m.get('url') else ''
+    return f'''<li class="pub-item media-item">
+  <p class="media-type"><span class="badge">{T("media." + t, lang)}</span></p>
+  <p class="pub-title" lang="{m.get('lang', 'pt')}">{m["title"]}</p>
+  <p class="pub-meta">{meta}</p>{desc}
+  {link}
+</li>'''
+
+
+def b_media(lang):
+    """Página Mídia: uma seção por tipo de conteúdo, com os itens de media.json."""
+    groups = media_groups()
+    if not groups:
+        return f'<p class="text-muted">{T("media.empty", lang)}</p>'
+    out = []
+    for t, items in groups:
+        out.append(f'''<section class="section" id="{t}" aria-labelledby="h-{t}">
+  <h2 id="h-{t}" class="section-title">{T("media." + t + "_plural", lang)} <span class="badge">{len(items)}</span></h2>
+  <ol class="pub-list">
+  {"".join(media_item(m, lang) for m in items)}
+  </ol>
+</section>''')
+    return '\n'.join(out)
+
+
+def b_media_toc(lang):
+    """Atalhos para os tipos de conteúdo (só aparecem quando houver mais de um tipo)."""
+    groups = media_groups()
+    if len(groups) < 2:
+        return ''
+    links = ''.join(f'<a href="#{t}">{T("media." + t + "_plural", lang)}</a>' for t, _ in groups)
+    return f'<nav class="page-toc" aria-label="{T("media.toc", lang)}">{links}</nav>'
+
+
+def guess_lang(title):
+    pt_markers = r'\b(de|da|do|em|para|por|na|no|uma|um|dos|das|com|e)\b|ção|ções|ã'
+    return 'pt' if re.search(pt_markers, title) else 'en'
+
+
+def event_list(items, lang):
+    out = ['<ol class="pub-list">']
+    for a in items:
+        place = f', {esc(a["city"])}' if a.get('city') else ''
+        out.append(f'''<li class="pub-item"><p class="pub-title" lang="{guess_lang(a["title"])}">{a["title"]}</p>
+<p class="pub-meta">{esc(a["event"])}{place}, {a["year"]}</p>{doi_or_link(a, lang)}</li>''')
+    out.append('</ol>')
+    return '\n'.join(out)
+
+
+def accordion(title, count, body, open_=False):
+    o = ' open' if open_ else ''
+    return f'''<details class="accordion"{o}>
+<summary><span>{title}</span><span class="badge">{count}</span></summary>
+<div class="accordion-content">{body}</div>
+</details>'''
+
+
+def b_events_papers(lang):
+    return '\n'.join([
+        accordion(T('prod.events_full', lang), len(PUB['events_full']), event_list(PUB['events_full'], lang)),
+        accordion(T('prod.events_expanded', lang), len(PUB['events_expanded']), event_list(PUB['events_expanded'], lang)),
+        accordion(T('prod.events_abstract', lang), len(PUB['events_abstract']), event_list(PUB['events_abstract'], lang)),
+    ])
+
+
+def b_chapters(lang):
+    out = ['<ol class="pub-list">']
+    for c in CV['chapters']:
+        ident = ''
+        if c.get('doi'):
+            ident = doi_or_link({'doi': c['doi']}, lang)
+        elif c.get('url'):
+            ident = doi_or_link({'url': c['url']}, lang)
+        isbn = f' ISBN {esc(c["isbn"])}.' if c.get('isbn') else ''
+        out.append(f'''<li class="pub-item"><p class="pub-title" lang="{guess_lang(c["title"])}">{c["title"]}</p>
+<p class="pub-meta">{T("prod.in", lang)}: <cite>{esc(c["book"])}</cite>. {esc(c["place"])}: {esc(c["publisher"])}, {c["year"]}, p. {esc(c["pages"])}.{isbn}</p>{ident}</li>''')
+    out.append('</ol>')
+    return '\n'.join(out)
+
+
+def simple_list(rows):
+    return '<ul class="item-list">' + ''.join(f'<li>{r}</li>' for r in rows) + '</ul>'
+
+
+def b_talks(lang):
+    rows = []
+    for t in CV['talks']:
+        place = f', {esc(t["place"])}' if t.get('place') else ''
+        rows.append(f'<span class="item-year">{t["year"]}</span><span><span lang="pt">{esc(t["title"])}</span><span class="item-sub">{esc(t["event"])}{place}</span></span>')
+    return simple_list(rows)
+
+
+def b_courses_taught(lang):
+    rows = []
+    for c in CV['courses_taught']:
+        w = f' · {T("prod.with", lang)} {esc(c["with"])}' if c.get('with') else ''
+        rows.append(f'<span class="item-year">{c["year"]}</span><span><span lang="pt">{esc(c["title"])}</span><span class="item-sub">{esc(tr(c["hours"], lang))}{w}</span></span>')
+    return simple_list(rows)
+
+
+def b_technical(lang):
+    rows = []
+    for t in CV['technical']:
+        title = esc(t['title'])
+        if t.get('url'):
+            title = ext_link(t['url'], title, 'inline-link')
+        rows.append(f'<span class="item-year">{t["year"]}</span><span><span lang="pt">{title}</span><span class="item-sub">{T("prod.kind_" + t["kind"], lang)}</span></span>')
+    return simple_list(rows)
+
+
+def b_events_organized(lang):
+    return simple_list([f'<span class="item-year">{e["year"]}</span><span lang="pt">{esc(e["title"])}</span>' for e in CV['events_organized']])
+
+
+def b_events_attended(lang):
+    rows = []
+    for e in CV['events_attended']:
+        p = f'<span class="item-sub">{T("prod.poster", lang)}: <span lang="{guess_lang(e["poster"])}">{esc(e["poster"])}</span></span>' if e.get('poster') else ''
+        rows.append(f'<span class="item-year">{e["year"]}</span><span><span lang="pt">{esc(e["title"])}</span>{p}</span>')
+    return accordion(T('prod.events_attended', lang), len(rows), simple_list(rows))
+
+
+def b_supervisions(lang):
+    rows = []
+    for s in CV['supervisions']:
+        rows.append(f'<span class="item-year">{s["year"]}</span><span><span class="item-main"><strong>{esc(s["student"])}</strong> — <span lang="pt">{s["title"]}</span></span><span class="item-sub">{T("exp.ic", lang)} · {esc(s["course"])} · {esc(s["funding"])}</span></span>')
+    return simple_list(rows)
+
+
+def b_committees(lang):
+    rows = []
+    for s in CV['committees']:
+        rows.append(f'<span class="item-year">{s["year"]}</span><span><span class="item-main"><strong>{esc(s["candidate"])}</strong> — <span lang="pt">{s["title"]}</span></span><span class="item-sub">{T("exp.undergrad_thesis", lang)} · {esc(s["institution"])}</span></span>')
+    return simple_list(rows)
+
+
+def b_awards(lang):
+    """Premiações agrupadas por ano (linha do tempo). Prêmios de tese e de artigo ganham destaque."""
+    years = []
+    for a in CV['awards']:
+        if not years or years[-1][0] != a['year']:
+            years.append((a['year'], []))
+        years[-1][1].append(a)
+    out = ['<div class="aw-timeline">']
+    for year, items in years:
+        out.append(f'<section class="aw-year" aria-labelledby="aw-{year}">\n  <h2 class="aw-year__label" id="aw-{year}">{year}</h2>\n  <ol class="aw-items">')
+        for a in items:
+            alang = 'en' if a['type'] == 'paper' else 'pt'
+            featured = ' aw-card--featured' if a['type'] in ('thesis', 'paper') else ''
+            name = f'\n      <p class="aw-name" lang="{alang}">{esc(a["name"])}</p>' if a.get('name') else ''
+            out.append(f'''    <li class="aw-card aw-card--{a["type"]}{featured}">
+      <span class="aw-medal" aria-hidden="true">{icon("award")}</span>
+      <div class="aw-body">
+      <p class="aw-kind">{T("awards." + a["type"], lang)}</p>{name}
+      <p class="aw-where" lang="{alang}">{icon("building")}<span>{esc(a["where"])}</span></p>
+      </div>
+    </li>''')
+        out.append('  </ol>\n</section>')
+    out.append('</div>')
+    return '\n'.join(out)
+
+
+def b_awards_stats(lang):
+    """Resumo calculado a partir de cv.json: total, prêmios de melhor trabalho e período."""
+    aw = CV['awards']
+    ys = [a['year'] for a in aw]
+    items = [(len(aw), T('awards.total', lang)),
+             (sum(1 for a in aw if a['type'] == 'best'), T('awards.best_plural', lang)),
+             (f'{min(ys)}–{max(ys)}', T('awards.period', lang))]
+    return '<dl class="aw-stats">' + ''.join(f'<div><dt>{esc(l)}</dt><dd>{n}</dd></div>' for n, l in items) + '</dl>'
+
+
+def logo_img(name, alt=''):
+    if not name:
+        return f'<span class="tl-logo tl-logo--empty" aria-hidden="true">{icon("building")}</span>'
+    # SVG em /assets/svg/; logos em imagem (WebP/PNG, para arquivos SVG muito pesados) em /assets/img/logos/
+    folder = 'svg' if name.endswith('.svg') else 'img/logos'
+    return f'<img class="tl-logo" src="/assets/{folder}/{name}" alt="{esc(alt)}" width="96" height="60" loading="lazy">'
+
+
+def b_education(lang):
+    out = ['<ol class="tl">']
+    for e in CV['education']:
+        extra = []
+        if e.get('thesis'):
+            extra.append(f'<p class="tl-detail"><span class="tl-label">{T("bio.thesis", lang)}:</span> <span lang="pt">{e["thesis"]}</span></p>')
+        if e.get('advisor'):
+            co = f'; {T("bio.coadvisor", lang)}: {esc(e["coadvisor"])}' if e.get('coadvisor') else ''
+            extra.append(f'<p class="tl-detail"><span class="tl-label">{T("bio.advisor", lang)}:</span> {esc(e["advisor"])}{co}</p>')
+        if e.get('funding'):
+            extra.append(f'<p class="tl-detail"><span class="tl-label">{T("bio.funding", lang)}:</span> {esc(e["funding"])}</p>')
+        out.append(f'''<li class="tl-item">
+  <div class="tl-head">{logo_img(e.get("logo"))}<div>
+    <p class="tl-date">{esc(e["years"])}</p>
+    <h3 class="tl-title">{esc(tr(e["degree"], lang))}</h3>
+    <p class="tl-org">{esc(e["institution"])} · {esc(e["place"])}</p>
+  </div></div>
+  {"".join(extra)}
+</li>''')
+    out.append('</ol>')
+    return '\n'.join(out)
+
+
+def b_positions(lang):
+    out = ['<ol class="tl">']
+    for p in CV['positions']:
+        cur = f' <span class="badge badge--accent">{T("exp.current", lang)}</span>' if p.get('current') else ''
+        det = f'<p class="tl-detail">{esc(tr(p["detail"], lang))}</p>' if p.get('detail') else ''
+        out.append(f'''<li class="tl-item{" tl-item--current" if p.get("current") else ""}">
+  <div class="tl-head">{logo_img(p.get("logo"))}<div>
+    <p class="tl-date">{esc(tr(p["years"], lang))}{cur}</p>
+    <h3 class="tl-title">{esc(tr(p["role"], lang))}</h3>
+    <p class="tl-org">{esc(p["institution"])} · {esc(p["place"])}</p>
+  </div></div>
+  {det}
+</li>''')
+    out.append('</ol>')
+    return '\n'.join(out)
+
+
+def b_complementary(lang):
+    return simple_list([f'<span class="item-year">{c["year"]}</span><span><span lang="pt">{esc(c["title"])}</span><span class="item-sub">{esc(c["org"])} · {c["hours"]} h</span></span>' for c in CV['complementary']])
+
+
+def b_research_lines(lang):
+    return '<ul class="chip-list">' + ''.join(f'<li class="chip">{esc(tr(r, lang))}</li>' for r in CV['research_lines']) + '</ul>'
+
+
+def b_areas(lang):
+    return '<ul class="check-list">' + ''.join(f'<li>{esc(tr(r, lang))}</li>' for r in CV['areas']) + '</ul>'
+
+
+def b_keywords(lang):
+    return '<ul class="chip-list chip-list--soft">' + ''.join(f'<li class="chip" lang="en">{esc(k)}</li>' for k in CV['keywords']) + '</ul>'
+
+
+def b_techniques(lang):
+    return '<ul class="chip-list">' + ''.join(f'<li class="chip chip--mono">{esc(k)}</li>' for k in CV['techniques']) + '</ul>'
+
+
+def b_projects(lang):
+    out = ['<div class="card-grid card-grid--2">']
+    for p in CV['projects']:
+        status = T('exp.status_' + p['status'], lang)
+        role = f'<span class="badge badge--accent">{T("exp.role_lead", lang)}</span>' if p['role'] == 'lead' else ''
+        fund = f' · {T("bio.funding", lang)}: {esc(p["funding"])}' if p.get('funding') else ''
+        out.append(f'''<article class="card project">
+  <p class="project-meta"><span class="badge">{T("exp.kind_" + p["kind"], lang)}</span><span class="badge badge--{"ok" if p["status"] == "ongoing" else "muted"}">{status}</span>{role}</p>
+  <h3 class="project-title" lang="pt">{esc(p["title"])}</h3>
+  <p class="project-summary">{esc(tr(p["summary"], lang))}</p>
+  <p class="project-foot">{esc(tr(p["years"], lang))}{fund}</p>
+</article>''')
+    out.append('</div>')
+    return '\n'.join(out)
+
+
+def b_reviewer(lang):
+    out = ['<ul class="journal-grid">']
+    for r in CV['reviewer']:
+        name = ext_link(r['url'], esc(r['journal'])) if r.get('url') else esc(r['journal'])
+        out.append(f'<li><span class="journal-name">{name}</span><span class="journal-since">{T("exp.since", lang)} {r["since"]}</span></li>')
+    out.append('</ul>')
+    return '\n'.join(out)
+
+
+def b_memberships(lang):
+    rows = [f'<span class="item-year">{m["since"]}</span><span><strong>{esc(m["name"])}</strong><span class="item-sub">{esc(tr(m["role"], lang))} · {T("exp.since", lang)} {m["since"]}</span></span>' for m in CV['memberships']]
+    return simple_list(rows)
+
+
+def b_metrics(lang):
+    m = CV['metrics']
+    out = ['<div class="metric-sources">']
+    for s in m['sources']:
+        note = ''
+        if s.get('h_date'):
+            note = f'<p class="metric-note">{T("metrics.h_date", lang).replace("{d}", fmt_date(s["h_date"], lang))}</p>'
+        out.append(f'''<section class="metric-source" aria-labelledby="m-{s["id"]}">
+  <h3 id="m-{s["id"]}" class="metric-source__title">{ext_link(s["url"], esc(s["label"]))} <span class="metric-owner">{esc(s["owner"])}</span></h3>
+  <dl class="metrics-grid">
+    <div class="metric-card"><dt class="metric-label">{T("metrics.docs", lang)}</dt><dd class="metric-number">{s["docs"]}</dd></div>
+    <div class="metric-card"><dt class="metric-label">{T("metrics.citations", lang)}</dt><dd class="metric-number">{s["citations"]}</dd></div>
+    <div class="metric-card metric-card--h"><dt class="metric-label">{T("metrics.h", lang)}</dt><dd class="metric-number">{s["h"]}</dd></div>
+  </dl>
+  {note}
+</section>''')
+    out.append('</div>')
+    out.append(f'<p class="metrics-sources">{T("metrics.updated", lang)} <time datetime="{m["date"]}">{fmt_date(m["date"], lang)}</time>. {T("metrics.disclaimer", lang)}</p>')
+    return '\n'.join(out)
+
+
+def b_metrics_mini(lang):
+    s = {x['id']: x for x in CV['metrics']['sources']}['scopus']
+    items = [(len(PUB['articles']), T('home.stat_articles', lang)), (s['citations'], T('home.stat_citations', lang) + ' (Scopus)'),
+             (s['h'], T('metrics.h', lang) + ' (Scopus)'), (len(CV['awards']), T('home.stat_awards', lang))]
+    return '<dl class="stat-strip">' + ''.join(f'<div><dt>{esc(l)}</dt><dd>{n}</dd></div>' for n, l in items) + '</dl>'
+
+
+def b_totals(lang):
+    out = []
+    for g in ['bib', 'tec', 'other']:
+        rows = [t for t in CV['totals'] if t['group'] == g]
+        out.append(f'<section class="totals-group"><h3>{T("metrics.group_" + g, lang)}</h3><dl class="totals">')
+        out += [f'<div><dt>{esc(tr(t["label"], lang))}</dt><dd>{t["n"]}</dd></div>' for t in rows]
+        out.append('</dl></section>')
+    return '<div class="totals-wrap">' + '\n'.join(out) + '</div>'
+
+
+def b_profiles(lang):
+    """Perfis acadêmicos da abertura da página inicial, em pílulas compactas."""
+    label = {'pt': 'Perfis acadêmicos', 'en': 'Academic profiles', 'es': 'Perfiles académicos'}[lang]
+    out = [f'<ul class="profile-pills" aria-label="{label}">']
+    for p in CV['profiles']:
+        out.append(f'<li>{ext_link(p["url"], f"""<img src="/assets/icons/{p["icon"]}" alt="" width="20" height="20">{esc(p["label"])}""")}</li>')
+    out.append('</ul>')
+    return '\n'.join(out)
+
+
+def b_profiles_table(lang):
+    out = ['<ul class="contact-list">']
+    for p in CV['profiles']:
+        out.append(f'<li><img src="/assets/icons/{p["icon"]}" alt="" width="24" height="24"><span><span class="contact-label">{esc(p["label"])}</span>{ext_link(p["url"], esc(p["handle"]), "inline-link")}</span></li>')
+    out.append('</ul>')
+    return '\n'.join(out)
+
+
+def email_code(address):
+    """Codifica o e-mail para não aparecer no HTML (invertido + Base64); js/app.js decodifica no navegador."""
+    return base64.b64encode(address[::-1].encode('utf-8')).decode('ascii')
+
+
+def protected_email(address, cls, lang):
+    """Link de e-mail protegido contra robôs coletores: o endereço só é montado pelo JavaScript."""
+    return (f'<a class="{cls}" data-email="{email_code(address)}" data-email-text>'
+            f'{T("contact.email_hidden", lang)}</a>')
+
+
+def b_contact(lang):
+    p = CV['person']
+    addr = '<br>'.join(esc(x) for x in p['address'])
+    return f'''<div class="card-grid card-grid--2">
+  <section class="card contact-card" aria-labelledby="c-email">
+    <h2 id="c-email" class="card-title">{icon("mail")}{T("contact.email", lang)}</h2>
+    <p>{protected_email(p["email"], "contact-email", lang)}</p>
+    <p class="text-muted">{T("contact.email_alt", lang)}: {protected_email(p["email_alt"], "inline-link", lang)}</p>
+    <p><a class="btn" data-email="{email_code(p["email"])}" hidden>{icon("mail")}{T("contact.write", lang)}</a></p>
+  </section>
+  <section class="card contact-card" aria-labelledby="c-addr">
+    <h2 id="c-addr" class="card-title">{icon("pin")}{T("contact.address", lang)}</h2>
+    <address>{addr}</address>
+  </section>
+</div>'''
+
+
+def b_latest(lang):
+    return b_articles(lang, limit=2)
+
+
+def b_current(lang):
+    """Cargo atual da abertura da página inicial: linha compacta com o logotipo."""
+    cur = CV['positions'][0]
+    logo = cur.get('logo')
+    img = ''
+    if logo:
+        folder = 'svg' if logo.endswith('.svg') else 'img/logos'
+        img = f'<img class="now-pill__logo" src="/assets/{folder}/{logo}" alt="{esc(cur["institution"])}" width="56" height="35">'
+    return (f'<p class="now-pill"><span class="now-pill__dot" aria-hidden="true"></span>{img}'
+            f'<span class="now-pill__text"><strong>{esc(tr(cur["role"], lang))}</strong>'
+            f'<span>{esc(cur["institution"])} · {esc(cur["place"])}</span></span></p>')
+
+
+def b_updated(lang):
+    iso = BUILD_DATE.isoformat()
+    return f'<time datetime="{iso}">{fmt_date(iso, lang)}</time>'
+
+
+def b_cv_pdf(lang):
+    """Botão de download do currículo em PDF (gerado por _src/cv_pdf.py)."""
+    rel = f'assets/cv/floriatan-costa-cv-{lang}.pdf'
+    path = os.path.join(ROOT, rel)
+    size = f' <span class="btn-meta">({os.path.getsize(path) // 1024} KB)</span>' if os.path.isfile(path) else ''
+    return (f'<a class="btn btn-outline btn-cv" href="/{rel}" download type="application/pdf" '
+            f'title="{esc(T("cv.download_title", lang))}">{icon("download")}{T("cv.download", lang)}{size}</a>')
+
+
+def b_counts(lang):
+    return str(len(PUB['articles']))
+
+
+BLOCKS = {name[2:]: fn for name, fn in globals().items() if name.startswith('b_') and callable(fn)}
+
+# --------------------------------------------------------------------------------------
+# Layout
+# --------------------------------------------------------------------------------------
+
+NAV = ['index', 'biografia', 'experiencia', 'publicacoes', 'producao', 'premiacoes', 'midia', 'contato']
+FOOTER = ['metricas', 'sobre', 'design', 'contato']
+
+
+def head(page, lang, meta, langs_available, noindex=False):
+    title = meta['title']
+    full_title = title if page == 'index' else f'{title} · {CV["person"]["name"]}'
+    desc = meta['description']
+    canonical = SITE_URL + url(page, lang)
+    alts = ''
+    if not noindex:
+        for l in langs_available:
+            alts += f'\n  <link rel="alternate" hreflang="{HTML_LANG[l]}" href="{SITE_URL + url(page, l)}">'
+        alts += f'\n  <link rel="alternate" hreflang="x-default" href="{SITE_URL + url(page, "pt")}">'
+    og_alt = ''.join(f'\n  <meta property="og:locale:alternate" content="{OG_LOCALE[l]}">' for l in langs_available if l != lang)
+    robots = '\n  <meta name="robots" content="noindex">' if noindex else ''
+    # Folhas de estilo próprias da página (campo "styles:" no cabeçalho do fragmento)
+    extra_css = ''.join(f'\n  <link rel="stylesheet" href="{c}?v={BUILD_DATE.strftime("%Y%m%d")}">' for c in meta.get('styles', '').split() if c)
+    ld = ''
+    if page == 'index':
+        person = {
+            '@context': 'https://schema.org', '@type': 'Person', 'name': CV['person']['name'],
+            'url': SITE_URL + url('index', lang), 'image': SITE_URL + '/assets/img/profile.webp',
+            'jobTitle': tr(CV['person']['job'], lang),
+            'affiliation': {'@type': 'CollegeOrUniversity', 'name': CV['person']['affiliation']},
+            'alumniOf': [{'@type': 'CollegeOrUniversity', 'name': n} for n in
+                         ['Universidade Federal do Paraná', 'Universidade Estadual de Santa Cruz', 'Instituto Federal Baiano']],
+            'knowsAbout': ['Analytical chemistry', 'Sample preparation', 'Deep eutectic solvents', 'Chemometrics', 'Atomic spectrometry'],
+            'sameAs': [p['url'] for p in CV['profiles']],
+        }
+        ld = '\n  <script type="application/ld+json">' + json.dumps(person, ensure_ascii=False) + '</script>'
+    return f'''<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://www.googletagmanager.com; connect-src 'self' https://*.google-analytics.com https://*.analytics.google.com https://*.googletagmanager.com; img-src 'self' data: https://*.google-analytics.com https://*.googletagmanager.com; style-src 'self'; font-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self' mailto:">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <title>{esc(full_title)}</title>
+  <meta name="description" content="{esc(desc)}">
+  <meta name="author" content="{CV["person"]["name"]}">{robots}
+  <link rel="canonical" href="{canonical}">{alts}
+  <meta property="og:type" content="{"profile" if page == "index" else "website"}">
+  <meta property="og:site_name" content="{CV["person"]["name"]}">
+  <meta property="og:title" content="{esc(full_title)}">
+  <meta property="og:description" content="{esc(desc)}">
+  <meta property="og:url" content="{canonical}">
+  <meta property="og:image" content="{SITE_URL}/assets/cover.png">
+  <meta property="og:image:width" content="940">
+  <meta property="og:image:height" content="540">
+  <meta property="og:image:alt" content="{esc(T("meta.og_image_alt", lang))}">
+  <meta property="og:locale" content="{OG_LOCALE[lang]}">{og_alt}
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="theme-color" content="#274c77" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#12161c" media="(prefers-color-scheme: dark)">
+  <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
+  <link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png">
+  <link rel="preload" href="/assets/fonts/roboto-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <script src="/js/theme-init.js"></script>
+  <link rel="stylesheet" href="/css/global.css?v={BUILD_DATE.strftime("%Y%m%d")}">
+  <link rel="stylesheet" href="/css/main.css?v={BUILD_DATE.strftime("%Y%m%d")}">{extra_css}
+  <script src="/js/analytics.js" defer></script>{ld}
+</head>'''
+
+
+def header(page, lang, langs_available):
+    links = []
+    for p in NAV:
+        cur = ' aria-current="page"' if p == page else ''
+        links.append(f'<li><a href="{url(p, lang)}"{cur}>{T("nav." + S["nav_keys"][p], lang)}</a></li>')
+    lang_items = []
+    for l in LANGS:
+        target = page if l in langs_available else 'index'
+        cur = ' aria-current="true"' if l == lang else ''
+        lang_items.append(
+            f'<li><a href="{url(target, l)}" hreflang="{HTML_LANG[l]}" lang="{HTML_LANG[l]}"{cur} data-lang="{l}">'
+            f'<span class="lang-code">{l.upper()}</span>{S["lang_names"][l]}</a></li>')
+    return f'''<a class="skip-link" href="#main">{T("a11y.skip", lang)}</a>
+<header class="site-header">
+  <div class="container header-content">
+    <a class="brand" href="{url("index", lang)}" aria-label="{esc(CV["person"]["name"])} — {T("nav.home", lang)}">
+      <img src="/assets/logo.svg" alt="" class="logo-img" width="44" height="44">
+      <span class="site-title">{CV["person"]["short_name"]}</span>
+    </a>
+    <nav class="site-nav" id="site-nav" aria-label="{T("a11y.main_nav", lang)}">
+      <ul class="nav-content">{"".join(links)}</ul>
+    </nav>
+    <div class="header-right">
+      <details class="lang-menu">
+        <summary aria-label="{T("a11y.language", lang)}: {S["lang_names"][lang]}">{icon("globe")}<span>{lang.upper()}</span></summary>
+        <ul class="lang-menu__list">{"".join(lang_items)}</ul>
+      </details>
+      <details class="lang-menu theme-menu">
+        <summary aria-label="{T("a11y.theme", lang)}" title="{T("a11y.theme", lang)}">{icon("sun", "icon tm-light")}{icon("moon", "icon tm-dark")}{icon("contrast", "icon tm-system")}</summary>
+        <ul class="lang-menu__list theme-menu__list">
+          <li><button type="button" data-theme-set="light" aria-pressed="false">{icon("sun")}{T("a11y.theme_light", lang)}</button></li>
+          <li><button type="button" data-theme-set="dark" aria-pressed="false">{icon("moon")}{T("a11y.theme_dark", lang)}</button></li>
+          <li><button type="button" data-theme-set="system" aria-pressed="false">{icon("contrast")}{T("a11y.theme_system", lang)}</button></li>
+        </ul>
+      </details>
+      <button type="button" class="icon-btn menu-toggle" data-menu-toggle aria-controls="site-nav" aria-expanded="false" aria-label="{T("a11y.menu", lang)}">{icon("menu", "icon icon-menu")}{icon("close", "icon icon-close")}</button>
+    </div>
+  </div>
+</header>'''
+
+
+def footer(page, lang):
+    links = ''.join(f'<li><a href="{url(p, lang)}">{T("nav." + S["nav_keys"][p], lang)}</a></li>' for p in FOOTER)
+    links += f'<li><a href="/ferramentas/">{T("nav.tools", lang)}</a></li>'
+    links += f'<li><button type="button" class="link-btn" data-consent-open>{T("consent.manage", lang)}</button></li>'
+    profiles = ''.join(
+        f'<li>{ext_link(p["url"], f"""<img src="/assets/icons/{p["icon"]}" alt="{esc(p["label"])}" width="22" height="22">""", "footer-profile")}</li>'
+        for p in CV['profiles'])
+    return f'''<footer class="site-footer">
+  <div class="container footer-content">
+    <div class="footer-left">
+      <p>© <span data-year>{BUILD_DATE.year}</span> {CV["person"]["name"]}. {T("footer.rights", lang)}</p>
+    </div>
+    <ul class="footer-profiles">{profiles}</ul>
+    <nav aria-label="{T("a11y.footer_nav", lang)}"><ul class="footer-right">{links}</ul></nav>
+  </div>
+</footer>
+<div class="consent" id="consent" role="region" aria-labelledby="consent-title" data-ga-id="{GA_ID}" hidden>
+  <div class="container consent__inner">
+    <div class="consent__text">
+      <p id="consent-title" class="consent__title">{T("consent.title", lang)}</p>
+      <p>{T("consent.text", lang)} <a class="inline-link" href="{url("sobre", lang)}#privacidade">{T("consent.more", lang)}</a></p>
+    </div>
+    <div class="consent__actions">
+      <button type="button" class="btn btn-outline" data-consent="denied">{T("consent.reject", lang)}</button>
+      <button type="button" class="btn" data-consent="granted">{T("consent.accept", lang)}</button>
+    </div>
+  </div>
+</div>'''
+
+
+def render_page(page, lang, meta, body, langs_available, extra_scripts=(), body_class='', noindex=False):
+    scripts = ''.join(f'\n<script src="{s}" defer></script>' for s in ['/js/app.js', *extra_scripts])
+    bc = f' class="{body_class}"' if body_class else ''
+    out = f'''<!DOCTYPE html>
+<html lang="{HTML_LANG[lang]}">
+{head(page, lang, meta, langs_available, noindex)}
+<body{bc}>
+{header(page, lang, langs_available)}
+<main id="main" tabindex="-1">
+{body}
+</main>
+{footer(page, lang)}{scripts}
+</body>
+</html>
+'''
+    return out.replace('{NEWTAB}', T('a11y.new_tab', lang))
+
+
+def parse_fragment(path):
+    with open(path, encoding='utf-8') as f:
+        raw = f.read()
+    meta_raw, body = raw.split('\n---\n', 1)
+    meta = {}
+    for line in meta_raw.strip().splitlines():
+        k, v = line.split(':', 1)
+        meta[k.strip()] = v.strip()
+    return meta, body
+
+
+def fill(body, lang):
+    def rep(m):
+        name = m.group(1)
+        if name.startswith('t:'):
+            return T(name[2:], lang)
+        if name.startswith('url:'):
+            return url(name[4:], lang)
+        if name not in BLOCKS:
+            raise KeyError(f'Bloco desconhecido: {name}')
+        return BLOCKS[name](lang)
+    return re.sub(r'\{\{\s*([\w:.\-]+)\s*\}\}', rep, body)
+
+
+def write(path, content):
+    full = os.path.join(ROOT, path.lstrip('/'))
+    os.makedirs(os.path.dirname(full), exist_ok=True)
+    with open(full, 'w', encoding='utf-8') as f:
+        f.write(content)
+
+
+def build():
+    pages_dir = os.path.join(SRC, 'pages')
+    available = {}
+    for lang in LANGS:
+        d = os.path.join(pages_dir, lang)
+        for fn in sorted(os.listdir(d)):
+            if fn.endswith('.html'):
+                available.setdefault(fn[:-5], []).append(lang)
+    generated = []
+    for page, langs in available.items():
+        langs = [l for l in LANGS if l in langs]
+        for lang in langs:
+            meta, body = parse_fragment(os.path.join(pages_dir, lang, page + '.html'))
+            extra = [s for s in meta.get('scripts', '').split() if s]
+            content = render_page(page, lang, meta, fill(body, lang), langs, extra, meta.get('body_class', ''),
+                                  noindex=page == '404')
+            out = (PREFIX[lang] + '/' + page + '.html').lstrip('/')
+            write(out, content)
+            generated.append((page, lang, langs))
+    # sitemap
+    sm = ['<?xml version="1.0" encoding="UTF-8"?>',
+          '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">']
+    for page, lang, langs in generated:
+        if page == '404':
+            continue
+        sm.append(f'  <url>\n    <loc>{SITE_URL + url(page, lang)}</loc>\n    <lastmod>{BUILD_DATE.isoformat()}</lastmod>')
+        for l in langs:
+            sm.append(f'    <xhtml:link rel="alternate" hreflang="{HTML_LANG[l]}" href="{SITE_URL + url(page, l)}"/>')
+        sm.append(f'    <xhtml:link rel="alternate" hreflang="x-default" href="{SITE_URL + url(page, "pt")}"/>')
+        sm.append('  </url>')
+    sm.append('</urlset>\n')
+    write('sitemap.xml', '\n'.join(sm))
+    print(f'{len(generated)} páginas geradas + sitemap.xml')
+    return generated
+
+
+def check_links():
+    """Verifica links e recursos internos (href/src começando com /) em todo HTML publicado."""
+    bad = []
+    for dirpath, dirnames, files in os.walk(ROOT):
+        dirnames[:] = [d for d in dirnames if not d.startswith(('_', '.', 'node_modules'))]
+        for fn in files:
+            if not fn.endswith('.html'):
+                continue
+            path = os.path.join(dirpath, fn)
+            txt = open(path, encoding='utf-8').read()
+            for ref in re.findall(r'(?:href|src)="(/[^"#?]*)', txt):
+                if ref.startswith('//') or ref.startswith('/web'):
+                    continue
+                target = os.path.join(ROOT, ref.lstrip('/'))
+                ok = (os.path.isfile(target) or os.path.isfile(target + '.html') or
+                      os.path.isfile(os.path.join(target, 'index.html')))
+                if not ok:
+                    bad.append(f'{os.path.relpath(path, ROOT)} -> {ref}')
+            for ref in re.findall(r'href="#([^"]+)"', txt):
+                if f'id="{ref}"' not in txt:
+                    bad.append(f'{os.path.relpath(path, ROOT)} -> #{ref} (âncora inexistente)')
+    print('\n'.join(bad) if bad else 'Links internos: OK')
+    return not bad
+
+
+def make_pdfs():
+    """Gera os currículos em PDF (precisa da biblioteca ReportLab: pip install reportlab)."""
+    try:
+        import cv_pdf
+    except ImportError:
+        print('PDF do currículo NÃO atualizado: instale o ReportLab (pip install reportlab) '
+              'ou rode com --no-pdf para pular esta etapa.')
+        return
+    cv_pdf.main()
+
+
+if __name__ == '__main__':
+    if '--no-pdf' not in sys.argv:
+        sys.path.insert(0, SRC)
+        make_pdfs()
+    build()
+    if '--check' in sys.argv:
+        sys.exit(0 if check_links() else 1)

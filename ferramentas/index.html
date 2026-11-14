@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; font-src 'self'; connect-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <title>Ferramentas · Floriatan Santos Costa</title>
+  <meta name="description" content="Ferramentas e aplicações web simples desenvolvidas por Floriatan Santos Costa: gerador de assinatura de e-mail e gerador de XML para placas do Tecan Dispenser.">
+  <meta name="author" content="Floriatan Santos Costa">
+  <link rel="canonical" href="https://floriatan.com.br/ferramentas/">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Floriatan Santos Costa">
+  <meta property="og:title" content="Ferramentas · Floriatan Santos Costa">
+  <meta property="og:description" content="Ferramentas e aplicações web simples desenvolvidas por Floriatan Santos Costa: gerador de assinatura de e-mail e gerador de XML para placas do Tecan Dispenser.">
+  <meta property="og:url" content="https://floriatan.com.br/ferramentas/">
+  <meta property="og:image" content="https://floriatan.com.br/assets/cover.png">
+  <meta property="og:locale" content="pt_BR">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="theme-color" content="#5a729e" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#1a1f26" media="(prefers-color-scheme: dark)">
+  <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
+  <link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png">
+  <link rel="preload" href="/assets/fonts/roboto-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <!-- Base visual compartilhada com o site principal (mesmo domínio) -->
+  <script src="/js/theme-init.js"></script>
+  <link rel="stylesheet" href="/css/global.css">
+  <link rel="stylesheet" href="/css/main.css">
+  <!-- Estilos comuns das Ferramentas (todas as páginas) -->
+  <link rel="stylesheet" href="/ferramentas/css/ferramentas.css">
+</head>
+<body>
+<a class="skip-link" href="#main">Pular para o conteúdo</a>
+<header class="site-header">
+  <div class="container header-content">
+    <a class="brand" href="/ferramentas/" aria-label="Ferramentas — Floriatan Santos Costa">
+      <img src="/assets/logo.svg" alt="" class="logo-img" width="44" height="44">
+      <span class="site-title">Floriatan Costa <span class="site-subtitle">· Ferramentas</span></span>
+    </a>
+    <nav class="site-nav" id="site-nav" aria-label="Navegação principal">
+      <ul class="nav-content">
+        <li><a href="/ferramentas/" aria-current="page">Ferramentas</a></li>
+        <li><a href="/ferramentas/assinatura/">Assinatura</a></li>
+        <li><a href="/ferramentas/plate/">Custom Plate</a></li>
+        <li><a href="/ferramentas/sobre">Sobre</a></li>
+      </ul>
+    </nav>
+    <div class="header-right">
+      <details class="lang-menu theme-menu">
+        <summary aria-label="Tema" title="Tema"><svg class="icon tm-light" aria-hidden="true" focusable="false"><use href="/assets/icons/sprite.svg#sun"></use></svg><svg class="icon tm-dark" aria-hidden="true" focusable="false"><use href="/assets/icons/sprite.svg#moon"></use></svg><svg class="icon tm-system" aria-hidden="true" focusable="false"><use href="/assets/icons/sprite.svg#contrast"></use></svg></summary>
+        <ul class="lang-menu__list theme-menu__list">
+          <li><button type="button" data-theme-set="light" aria-pressed="false"><svg class="icon" aria-hidden="true" focusable="false"><use href="/assets/icons/sprite.svg#sun"></use></svg>Claro</button></li>
+          <li><button type="button" data-theme-set="dark" aria-pressed="false"><svg class="icon" aria-hidden="true" focusable="false"><use href="/assets/icons/sprite.svg#moon"></use></svg>Escuro</button></li>
+          <li><button type="button" data-theme-set="system" aria-pressed="false"><svg class="icon" aria-hidden="true" focusable="false"><use href="/assets/icons/sprite.svg#contrast"></use></svg>Seguir o sistema</button></li>
+        </ul>
+      </details>
+      <button type="button" class="icon-btn menu-toggle" data-menu-toggle aria-controls="site-nav" aria-expanded="false" aria-label="Abrir menu"><svg class="icon icon-menu" aria-hidden="true" focusable="false"><use href="/assets/icons/sprite.svg#menu"></use></svg><svg class="icon icon-close" aria-hidden="true" focusable="false"><use href="/assets/icons/sprite.svg#close"></use></svg></button>
+    </div>
+  </div>
+</header>
+<main id="main" tabindex="-1">
+<section class="page-hero container">
+  <p class="eyebrow">Ferramentas</p>
+  <h1>Ferramentas e aplicações</h1>
+  <p class="lead">Utilitários simples para o dia a dia do laboratório e da comunicação acadêmica. Tudo funciona direto no navegador, sem instalar nada e sem enviar dados a servidores.</p>
+</section>
+<div class="container">
+  <section class="section" aria-label="Lista de ferramentas">
+    <ul class="tool-grid">
+      <li>
+        <article class="tool-card">
+          <div class="tool-card__cover"><img src="/ferramentas/assinatura/cover.png" alt="" width="940" height="470" loading="lazy"></div>
+          <div class="tool-card__body">
+            <h2 class="tool-card__title">Gerador de assinatura de e-mail</h2>
+            <p>Configure e gere a sua assinatura institucional padronizada, com links e logotipos, em HTML limpo para clientes de e-mail.</p>
+            <a href="/ferramentas/assinatura/" class="btn">Acessar</a>
+          </div>
+        </article>
+      </li>
+      <li>
+        <article class="tool-card">
+          <div class="tool-card__cover"><img src="/ferramentas/plate/cover.png" alt="" width="940" height="470" loading="lazy"></div>
+          <div class="tool-card__body">
+            <h2 class="tool-card__title" lang="en">Custom Plate Design XML</h2>
+            <p>Configure parâmetros de microplacas, pré-visualize a grade de gotas e gere o código XML para o Tecan Dispenser.</p>
+            <a href="/ferramentas/plate/" class="btn">Acessar</a>
+          </div>
+        </article>
+      </li>
+    </ul>
+  </section>
+  <div class="alert-box alert-warning tool-note" role="note">
+    <div>As ferramentas podem ser alteradas ou ficar indisponíveis sem aviso prévio. Antes de usar os resultados, leia o <a class="inline-link" href="/ferramentas/aviso">Aviso de uso</a>.</div>
+  </div>
+</div>
+</main>
+<footer class="site-footer">
+  <div class="container footer-content">
+    <div class="footer-left">
+      <p>© <span data-year>2026</span> Floriatan Santos Costa. Todos os direitos reservados.</p>
+    </div>
+    <ul class="footer-profiles">
+      <li><a class="footer-profile" href="/"><img src="/assets/favicon.svg" alt="Site de Floriatan Santos Costa" width="22" height="22"></a></li>
+      <li><a class="footer-profile" href="http://lattes.cnpq.br/0287106268880389" target="_blank" rel="noopener noreferrer"><img src="/assets/icons/lattes.svg" alt="Currículo Lattes" width="22" height="22"><span class="visually-hidden"> (abre em nova aba)</span></a></li>
+    </ul>
+    <nav aria-label="Links do rodapé"><ul class="footer-right"><li><a href="/">Site principal</a></li><li><a href="/ferramentas/">Ferramentas</a></li><li><a href="/ferramentas/sobre">Sobre</a></li><li><a href="/ferramentas/aviso">Aviso de uso</a></li><li><a href="/contato">Contato</a></li></ul></nav>
+  </div>
+</footer>
+<script src="/js/app.js" defer></script>
+</body>
+</html>

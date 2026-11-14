@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; font-src 'self'; connect-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <title>Calculadora de fluidodinâmica para ICP-MS · Floriatan Santos Costa</title>
+  <meta name="description" content="Calculadora de volume, velocidade linear, tempo de residência e número de Reynolds para otimização de câmaras de nebulização em sp-ICP-MS.">
+  <meta name="author" content="Floriatan Santos Costa">
+  <meta name="robots" content="noindex, nofollow">
+  <link rel="canonical" href="https://floriatan.com.br/ferramentas/fluidodinamica/">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Floriatan Santos Costa">
+  <meta property="og:title" content="Calculadora de fluidodinâmica para ICP-MS · Floriatan Santos Costa">
+  <meta property="og:description" content="Calculadora de volume, velocidade linear, tempo de residência e número de Reynolds para otimização de câmaras de nebulização em sp-ICP-MS.">
+  <meta property="og:url" content="https://floriatan.com.br/ferramentas/fluidodinamica/">
+  <meta property="og:image" content="https://floriatan.com.br/assets/cover.png">
+  <meta property="og:locale" content="pt_BR">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="theme-color" content="#5a729e" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#1a1f26" media="(prefers-color-scheme: dark)">
+  <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
+  <link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png">
+  <link rel="preload" href="/assets/fonts/roboto-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <!-- Base visual compartilhada com o site principal (mesmo domínio) -->
+  <script src="/js/theme-init.js"></script>
+  <link rel="stylesheet" href="/css/global.css">
+  <link rel="stylesheet" href="/css/main.css">
+  <!-- Estilos comuns das Ferramentas (todas as páginas) -->
+  <link rel="stylesheet" href="/ferramentas/css/ferramentas.css">
+  <!-- Estilos próprios desta ferramenta -->
+  <link rel="stylesheet" href="/ferramentas/fluidodinamica/style.css">
+</head>
+<body>
+<a class="skip-link" href="#main">Pular para o conteúdo</a>
+<header class="site-header">
+  <div class="container header-content">
+    <a class="brand" href="/ferramentas/" aria-label="Ferramentas — Floriatan Santos Costa">
+      <img src="/assets/logo.svg" alt="" class="logo-img" width="44" height="44">
+      <span class="site-title">Floriatan Costa <span class="site-subtitle">· Ferramentas</span></span>
+    </a>
+    <nav class="site-nav" id="site-nav" aria-label="Navegação principal">
+      <ul class="nav-content">
+        <li><a href="/ferramentas/">Ferramentas</a></li>
+        <li><a href="/ferramentas/assinatura/">Assinatura</a></li>
+        <li><a href="/ferramentas/plate/">Custom Plate</a></li>
+        <li><a href="/ferramentas/sobre">Sobre</a></li>
+      </ul>
+    </nav>
+    <div class="header-right">
+      <details class="lang-menu theme-menu">
+        <summary aria-label="Tema" title="Tema"><svg class="icon tm-light" aria-hidden="true" focusable="false"><use href="/assets/icons/sprite.svg#sun"></use></svg><svg class="icon tm-dark" aria-hidden="true" focusable="false"><use href="/assets/icons/sprite.svg#moon"></use></svg><svg class="icon tm-system" aria-hidden="true" focusable="false"><use href="/assets/icons/sprite.svg#contrast"></use></svg></summary>
+        <ul class="lang-menu__list theme-menu__list">
+          <li><button type="button" data-theme-set="light" aria-pressed="false"><svg class="icon" aria-hidden="true" focusable="false"><use href="/assets/icons/sprite.svg#sun"></use></svg>Claro</button></li>
+          <li><button type="button" data-theme-set="dark" aria-pressed="false"><svg class="icon" aria-hidden="true" focusable="false"><use href="/assets/icons/sprite.svg#moon"></use></svg>Escuro</button></li>
+          <li><button type="button" data-theme-set="system" aria-pressed="false"><svg class="icon" aria-hidden="true" focusable="false"><use href="/assets/icons/sprite.svg#contrast"></use></svg>Seguir o sistema</button></li>
+        </ul>
+      </details>
+      <button type="button" class="icon-btn menu-toggle" data-menu-toggle aria-controls="site-nav" aria-expanded="false" aria-label="Abrir menu"><svg class="icon icon-menu" aria-hidden="true" focusable="false"><use href="/assets/icons/sprite.svg#menu"></use></svg><svg class="icon icon-close" aria-hidden="true" focusable="false"><use href="/assets/icons/sprite.svg#close"></use></svg></button>
+    </div>
+  </div>
+</header>
+<main id="main" tabindex="-1">
+<section class="page-hero container">
+  <p class="eyebrow">Ferramentas · em teste</p>
+  <h1>Calculadora de fluidodinâmica para ICP-MS</h1>
+  <p class="lead">Otimização de câmara (<i lang="en">low volume / high efficiency</i>): volume interno, velocidade linear, tempo de residência e regime de fluxo.</p>
+</section>
+<div class="container">
+  <section class="card" aria-labelledby="h-param">
+    <h2 id="h-param" class="card-title">Parâmetros</h2>
+    <form id="calcForm" class="calc-inputs" novalidate>
+        <div class="form-group">
+          <label for="gasType">Gás de arraste/bainha</label>
+          <select id="gasType">
+            <option value="argon" selected>Argônio (Ar)</option>
+            <option value="helium">Hélio (He)</option>
+            <option value="nitrogen">Nitrogênio (N₂)</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="nebFlow">Vazão do nebulizador (L/min)</label>
+          <input type="number" id="nebFlow" value="0.30" min="0.01" step="0.01">
+        </div>
+        <div class="form-group">
+          <label for="auxFlow">Vazão de bainha / make-up (L/min)</label>
+          <input type="number" id="auxFlow" value="0.70" min="0.00" step="0.01">
+        </div>
+        <div class="form-group">
+          <label for="chamberDia">Diâmetro interno médio (mm)</label>
+          <input type="number" id="chamberDia" value="12.0" min="1.0" step="0.5">
+        </div>
+        <div class="form-group">
+          <label for="chamberLen">Comprimento útil da câmara (mm)</label>
+          <input type="number" id="chamberLen" value="65.0" min="5.0" step="1.0">
+        </div>
+    </form>
+  </section>
+  <section class="card section" aria-labelledby="h-res">
+    <h2 id="h-res" class="card-title">Resultados</h2>
+    <div class="result-grid" aria-live="polite">
+      <div class="result-card"><span class="result-label">Volume interno livre</span><span class="result-value" id="resVolume">0.00 mL</span></div>
+      <div class="result-card"><span class="result-label">Velocidade linear</span><span class="result-value" id="resVelocity">0.00 m/s</span></div>
+      <div class="result-card"><span class="result-label">Tempo de residência</span><span class="result-value" id="resTime">0 ms</span></div>
+      <div class="result-card"><span class="result-label">Número de Reynolds (Re)</span><span class="result-value" id="resReynolds">0</span></div>
+    </div>
+    <div class="status-container">
+      <p id="flowStatus" class="status-badge laminar" aria-live="polite">Fluxo laminar</p>
+    </div>
+  </section>
+  <div class="alert-box alert-warning tool-note" role="note">
+    <div><strong>Em teste:</strong> os resultados são estimativas e a ferramenta pode mudar ou ficar indisponível sem aviso prévio. Veja o <a class="inline-link" href="/ferramentas/aviso">Aviso de uso</a>.</div>
+  </div>
+</div>
+</main>
+<footer class="site-footer">
+  <div class="container footer-content">
+    <div class="footer-left">
+      <p>© <span data-year>2026</span> Floriatan Santos Costa. Todos os direitos reservados.</p>
+    </div>
+    <ul class="footer-profiles">
+      <li><a class="footer-profile" href="/"><img src="/assets/favicon.svg" alt="Site de Floriatan Santos Costa" width="22" height="22"></a></li>
+      <li><a class="footer-profile" href="http://lattes.cnpq.br/0287106268880389" target="_blank" rel="noopener noreferrer"><img src="/assets/icons/lattes.svg" alt="Currículo Lattes" width="22" height="22"><span class="visually-hidden"> (abre em nova aba)</span></a></li>
+    </ul>
+    <nav aria-label="Links do rodapé"><ul class="footer-right"><li><a href="/">Site principal</a></li><li><a href="/ferramentas/">Ferramentas</a></li><li><a href="/ferramentas/sobre">Sobre</a></li><li><a href="/ferramentas/aviso">Aviso de uso</a></li><li><a href="/contato">Contato</a></li></ul></nav>
+  </div>
+</footer>
+<script src="/js/app.js" defer></script>
+<script src="/ferramentas/fluidodinamica/app.js" defer></script>
+</body>
+</html>

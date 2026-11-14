@@ -1,0 +1,98 @@
+/* ==================================================================
+// tokens-v2.css  (VERSÃO DE TESTE)
+// Proposta de tokens alinhados às cores do logotipo Fc
+// (azul-marinho #274c77, petróleo #1c7d9a, lavanda #8682ab).
+// Carregado depois de global.css e main.css: só redefine variáveis,
+// por isso cabeçalho, rodapé e componentes existentes herdam a nova paleta.
+// Fica dentro de @media screen para não sobrescrever a paleta de impressão.
+================================================================== */
+
+@media screen {
+    :root {
+        /* Marca (do logotipo) */
+        --brand-navy: #274c77;
+        --brand-navy-deep: #1b3a5e;
+        --brand-teal: #1c7d9a;
+        --brand-lavender: #8682ab;
+        --brand-gradient: linear-gradient(120deg, #1c7d9a 0%, #3b63a8 55%, #6a6fc4 100%);
+
+        /* Papéis de cor */
+        --bg-color: #f5f7fb;
+        --page-bg: #f5f7fb;
+        --box-bg: #ffffff;
+        --surface-2: #eef3f8;
+        --heading-color: #274c77;
+        --heading-strong: #1b3a5e;
+        --text-main: #2f3747;
+        --text-muted: #5b6474;
+        --link-color: #1a6a85;
+        --accent: #17738e; /* petróleo do logo, escurecido para AA em texto pequeno */
+        --accent-2: #4f5fc4;
+        --btn-bg: #274c77;
+        --btn-bg-hover: #1b3a5e;
+        --border-color: #e1e7ef;
+        --border-color-2: #edf1f6;
+        --nav-links: #2f3747;
+        --nav-hover: rgba(39, 76, 119, 0.08);
+        --header-bg: rgba(245, 247, 251, 0.82);
+        --footer-bg: #ffffff;
+        --focus-ring: #17738e;
+
+        /* Escala tipográfica (só estes tamanhos e pesos) */
+        --fs-xs: 0.75rem;
+        --fs-sm: 0.875rem;
+        --fs-base: 1rem;
+        --fs-md: 1.125rem;
+        --fs-lg: 1.25rem;
+        --fs-xl: 1.5rem;
+        --fs-2xl: 2rem;
+        --fs-display: clamp(2.25rem, 4.8vw, 3.5rem);
+        --fw-regular: 400;
+        --fw-medium: 500;
+        --fw-bold: 700;
+        --fw-black: 800;
+
+        /* Raios: quatro valores */
+        --radius-sm: 6px;
+        --radius-md: 10px;
+        --radius-lg: 16px;
+        --radius-pill: 999px;
+
+        /* Sombras com tom do azul-marinho */
+        --shadow-sm: 0 1px 2px rgba(23, 42, 66, 0.06), 0 1px 1px rgba(23, 42, 66, 0.03);
+        --shadow-md: 0 10px 24px -10px rgba(23, 42, 66, 0.22);
+        --shadow-lg: 0 24px 48px -16px rgba(23, 42, 66, 0.28);
+
+        /* Movimento */
+        --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+        --dur-fast: 150ms;
+        --dur-base: 260ms;
+    }
+
+    [data-theme="dark"] {
+        --brand-gradient: linear-gradient(120deg, #5cc3dc 0%, #8fb0ff 55%, #b3b0f0 100%);
+        --bg-color: #12161c;
+        --page-bg: #12161c;
+        --box-bg: #1a2029;
+        --surface-2: #222a35;
+        --heading-color: #eef3f9;
+        --heading-strong: #ffffff;
+        --text-main: #dfe4ea;
+        --text-muted: #a9b2bf;
+        --link-color: #7fd0e4;
+        --accent: #5cc3dc;
+        --accent-2: #9aa5ff;
+        --btn-bg: #2b5c8c;
+        --btn-bg-hover: #336ba2;
+        --border-color: #2a323e;
+        --border-color-2: #222a35;
+        --nav-links: #dfe4ea;
+        --nav-hover: rgba(255, 255, 255, 0.06);
+        --header-bg: rgba(18, 22, 28, 0.82);
+        --footer-bg: #161b22;
+        --focus-ring: #5cc3dc;
+        --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.45);
+        --shadow-md: 0 10px 24px -10px rgba(0, 0, 0, 0.6);
+        --shadow-lg: 0 24px 48px -16px rgba(0, 0, 0, 0.7);
+    }
+}
