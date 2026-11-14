@@ -109,7 +109,8 @@ floriatanscosta.github.io/
 │   ├── _modelo/                # ponto de partida para uma ferramenta nova (não publicado)
 │   ├── css/ferramentas.css     # estilos comuns das Ferramentas
 │   ├── assinatura/             # index.html, app.js, style.css, cover.png, README.md, assets/
-│   ├── custom-plate/           # idem (assets/slide.svg)
+│   ├── plate/                  # Custom Plate, idem (assets/slide.svg)
+│   ├── custom-plate/           # só index.html: redireciona para /ferramentas/plate/
 │   ├── fluidodinamica/         # index.html, app.js, style.css, README.md (em teste, ainda sem capa nem assets/)
 │   ├── index.html, sobre.html, aviso.html
 │   ├── CHANGELOG.md

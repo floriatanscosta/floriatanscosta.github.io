@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; font-src 'self'; connect-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <title>Custom Plate Design XML Generator · Floriatan Santos Costa</title>
+  <meta name="description" content="Web tool for configuring micro-dispensing plate parameters and generating XML code for the Tecan Uno Dispenser.">
+  <meta name="author" content="Floriatan Santos Costa">
+  <meta name="robots" content="noindex, nofollow">
+  <link rel="canonical" href="https://floriatan.com.br/ferramentas/plate/">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Floriatan Santos Costa">
+  <meta property="og:title" content="Custom Plate Design XML Generator · Floriatan Santos Costa">
+  <meta property="og:description" content="Web tool for configuring micro-dispensing plate parameters and generating XML code for the Tecan Uno Dispenser.">
+  <meta property="og:url" content="https://floriatan.com.br/ferramentas/plate/">
+  <meta property="og:image" content="https://floriatan.com.br/ferramentas/plate/cover.png">
+  <meta property="og:locale" content="pt_BR">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="theme-color" content="#5a729e" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#1a1f26" media="(prefers-color-scheme: dark)">
+  <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
+  <link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png">
+  <link rel="preload" href="/assets/fonts/roboto-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <!-- Base visual compartilhada com o site principal (mesmo domínio) -->
+  <script src="/js/theme-init.js"></script>
+  <link rel="stylesheet" href="/css/global.css">
+  <link rel="stylesheet" href="/css/main.css">
+  <!-- Estilos comuns das Ferramentas (todas as páginas) -->
+  <link rel="stylesheet" href="/ferramentas/css/ferramentas.css">
+  <!-- Estilos próprios desta ferramenta -->
+  <link rel="stylesheet" href="/ferramentas/plate/style.css">
+</head>
+<body>
+<a class="skip-link" href="#main">Pular para o conteúdo</a>
+<header class="site-header">
+  <div class="container header-content">
+    <a class="brand" href="/ferramentas/" aria-label="Ferramentas — Floriatan Santos Costa">
+      <img src="/assets/logo.svg" alt="" class="logo-img" width="44" height="44">
+      <span class="site-title">Floriatan Costa <span class="site-subtitle">· Ferramentas</span></span>
+    </a>
+    <nav class="site-nav" id="site-nav" aria-label="Navegação principal">
+      <ul class="nav-content">
+        <li><a href="/ferramentas/">Ferramentas</a></li>
+        <li><a href="/ferramentas/assinatura/">Assinatura</a></li>
+        <li><a href="/ferramentas/plate/" aria-current="page">Custom Plate</a></li>
+        <li><a href="/ferramentas/sobre">Sobre</a></li>
+      </ul>
+    </nav>
+    <div class="header-right">
+      <details class="lang-menu theme-menu">
+        <summary aria-label="Tema" title="Tema"><svg class="icon tm-light" aria-hidden="true" focusable="false"><use href="/assets/icons/sprite.svg#sun"></use></svg><svg class="icon tm-dark" aria-hidden="true" focusable="false"><use href="/assets/icons/sprite.svg#moon"></use></svg><svg class="icon tm-system" aria-hidden="true" focusable="false"><use href="/assets/icons/sprite.svg#contrast"></use></svg></summary>
+        <ul class="lang-menu__list theme-menu__list">
+          <li><button type="button" data-theme-set="light" aria-pressed="false"><svg class="icon" aria-hidden="true" focusable="false"><use href="/assets/icons/sprite.svg#sun"></use></svg>Claro</button></li>
+          <li><button type="button" data-theme-set="dark" aria-pressed="false"><svg class="icon" aria-hidden="true" focusable="false"><use href="/assets/icons/sprite.svg#moon"></use></svg>Escuro</button></li>
+          <li><button type="button" data-theme-set="system" aria-pressed="false"><svg class="icon" aria-hidden="true" focusable="false"><use href="/assets/icons/sprite.svg#contrast"></use></svg>Seguir o sistema</button></li>
+        </ul>
+      </details>
+      <button type="button" class="icon-btn menu-toggle" data-menu-toggle aria-controls="site-nav" aria-expanded="false" aria-label="Abrir menu"><svg class="icon icon-menu" aria-hidden="true" focusable="false"><use href="/assets/icons/sprite.svg#menu"></use></svg><svg class="icon icon-close" aria-hidden="true" focusable="false"><use href="/assets/icons/sprite.svg#close"></use></svg></button>
+    </div>
+  </div>
+</header>
+<main id="main" tabindex="-1">
+<section class="page-hero container" lang="en">
+  <p class="eyebrow">Tools</p>
+  <h1>Custom Plate Design XML Generator</h1>
+  <p class="lead">Configure the plate parameters, preview the droplet grid on the slide and generate the XML file for the Tecan Uno Dispenser.</p>
+</section>
+<div class="container" lang="en">
+  <div class="app-container">
+    <section class="card" aria-labelledby="h-params">
+      <h2 id="h-params" class="card-title">Parameters</h2>
+      <form id="plateForm" class="form-grid">
+        <div class="form-group full-width">
+          <label for="plateId">ID / Name <span class="custom-tooltip" tabindex="0" role="img" aria-label="Unique identifier and name for the plate." data-tooltip="Unique identifier and name for the plate.">ⓘ</span></label>
+          <input type="text" id="plateId" value="1A_240" required>
+        </div>
+        <div class="form-group">
+          <label for="rows">Rows <span class="custom-tooltip" tabindex="0" role="img" aria-label="Number of rows in the microplate matrix." data-tooltip="Number of rows in the microplate matrix.">ⓘ</span></label>
+          <input type="number" id="rows" value="20" min="1" step="1" required>
+        </div>
+        <div class="form-group">
+          <label for="cols">Cols <span class="custom-tooltip" tabindex="0" role="img" aria-label="Number of columns in the microplate matrix." data-tooltip="Number of columns in the microplate matrix.">ⓘ</span></label>
+          <input type="number" id="cols" value="12" min="1" step="1" required>
+        </div>
+        <div class="form-group">
+          <label for="rowpitch">Row pitch (mm) <span class="custom-tooltip" tabindex="0" role="img" aria-label="Distance (in mm) between the centers of adjacent rows." data-tooltip="Distance (in mm) between the centers of adjacent rows.">ⓘ</span></label>
+          <input type="number" id="rowpitch" value="2" step="0.01" min="0.1" required>
+        </div>
+        <div class="form-group">
+          <label for="colpitch">Col pitch (mm) <span class="custom-tooltip" tabindex="0" role="img" aria-label="Distance (in mm) between the centers of adjacent columns." data-tooltip="Distance (in mm) between the centers of adjacent columns.">ⓘ</span></label>
+          <input type="number" id="colpitch" value="2" step="0.01" min="0.1" required>
+        </div>
+        <div class="form-group">
+          <label for="a1offsetx">A1 Offset X (mm) <span class="custom-tooltip" tabindex="0" role="img" aria-label="X-axis coordinate offset for the first position (A1). Moves the grid left/right in the preview." data-tooltip="X-axis coordinate offset for the first position (A1). Moves the grid left/right in the preview.">ⓘ</span></label>
+          <input type="number" id="a1offsetx" value="-1.35" step="0.01" required>
+        </div>
+        <div class="form-group">
+          <label for="a1offsety">A1 Offset Y (mm) <span class="custom-tooltip" tabindex="0" role="img" aria-label="Y-axis coordinate offset for the first position (A1). Moves the grid up/down in the preview." data-tooltip="Y-axis coordinate offset for the first position (A1). Moves the grid up/down in the preview.">ⓘ</span></label>
+          <input type="number" id="a1offsety" value="8" step="0.01" required>
+        </div>
+        <div class="form-group">
+          <label for="defaultassayvolume">Default volume <span class="custom-tooltip" tabindex="0" role="img" aria-label="Default dispensing volume per well/spot." data-tooltip="Default dispensing volume per well/spot.">ⓘ</span></label>
+          <input type="number" id="defaultassayvolume" value="0" min="0" step="any" required>
+        </div>
+        <div class="form-group">
+          <label for="shaketype">Shake type <span class="custom-tooltip" tabindex="0" role="img" aria-label="Type of shaking required for the plate." data-tooltip="Type of shaking required for the plate.">ⓘ</span></label>
+          <select id="shaketype"><option value="Never" selected>Never</option><option value="Small">Small</option><option value="Large">Large</option></select>
+        </div>
+        <div class="form-group">
+          <label for="shakedefault">Shake default <span class="custom-tooltip" tabindex="0" role="img" aria-label="Sets whether shaking is enabled by default." data-tooltip="Sets whether shaking is enabled by default.">ⓘ</span></label>
+          <select id="shakedefault"><option value="False" selected>False</option><option value="True">True</option></select>
+        </div>
+        <div class="form-group">
+          <label for="moveaccel">Move acceleration <span class="custom-tooltip" tabindex="0" role="img" aria-label="Acceleration speed for robotic movements." data-tooltip="Acceleration speed for robotic movements.">ⓘ</span></label>
+          <select id="moveaccel"><option value="Slow" selected>Slow</option><option value="Fast">Fast</option></select>
+        </div>
+        <div class="form-group">
+          <label for="customa1">Custom A1 <span class="custom-tooltip" tabindex="0" role="img" aria-label="Determines if a custom offset is used for A1." data-tooltip="Determines if a custom offset is used for A1.">ⓘ</span></label>
+          <select id="customa1"><option value="False" selected>False</option><option value="True">True</option></select>
+        </div>
+        <div class="form-group">
+          <label for="nozzlemask">Nozzle mask <span class="custom-tooltip" tabindex="0" role="img" aria-label="Active nozzle configuration during dispensing." data-tooltip="Active nozzle configuration during dispensing.">ⓘ</span></label>
+          <select id="nozzlemask"><option value="One">One</option><option value="Small" selected>Small</option><option value="Large">Large</option></select>
+        </div>
+        <div class="form-group">
+          <label for="horizontaloffset">Horizontal offset <span class="custom-tooltip" tabindex="0" role="img" aria-label="Instrument parameter: global horizontal offset applied by the dispenser. Written to the XML; it does not change the preview." data-tooltip="Instrument parameter: global horizontal offset applied by the dispenser. Written to the XML; it does not change the preview.">ⓘ</span></label>
+          <input type="number" id="horizontaloffset" value="0" step="0.01" required>
+        </div>
+        <div class="form-group full-width">
+          <label for="dropletsize">Preview droplet size <span class="custom-tooltip" tabindex="0" role="img" aria-label="Change the visual droplet size for the grid preview (does not affect XML)." data-tooltip="Change the visual droplet size for the grid preview (does not affect XML).">ⓘ</span></label>
+          <select id="dropletsize"><option value="small">Small</option><option value="medium" selected>Medium</option><option value="large">Large</option></select>
+        </div>
+      </form>
+    </section>
+    <div class="preview-panel">
+      <section class="card" aria-labelledby="h-plate-preview">
+        <h2 id="h-plate-preview" class="card-title">Preview</h2>
+        <div class="glass-slide-wrapper">
+          <div id="glassSlide" class="glass-slide" role="img" aria-label="Droplet grid on the glass slide">
+            <div id="dropletGrid" class="droplet-grid"></div>
+          </div>
+        </div>
+        <p id="gridWarning" class="grid-warning" role="alert" hidden></p>
+        <p id="gridNotice" class="grid-notice" role="status" hidden></p>
+        <p id="gridInfo" class="grid-info" aria-live="polite"></p>
+        <p class="grid-legend"><span class="grid-legend__a1" aria-hidden="true"></span> A1 (first droplet)</p>
+        <p class="plate-id-display">
+          <strong>Plate:</strong> <span id="idText"></span> ·
+          <strong>Total droplets:</strong> <span id="displayTotalDroplets" class="plate-total">240</span>
+        </p>
+      </section>
+      <section class="card" aria-labelledby="h-xml">
+        <h2 id="h-xml" class="card-title">XML</h2>
+        <label for="xmlOutput" class="visually-hidden">Generated XML code</label>
+        <textarea id="xmlOutput" class="xml-output" readonly spellcheck="false"></textarea>
+        <div class="btn-group">
+          <button type="button" id="copyBtn" class="btn">Copy code</button>
+          <button type="button" id="downloadBtn" class="btn btn-outline">Download</button>
+          <button type="button" id="pdfBtn" class="btn btn-outline">Export PDF</button>
+        </div>
+        <p class="field-hint">“Export PDF” opens the browser print dialog with the slide preview, the settings and the XML on an A4 page: choose “Save as PDF”.</p>
+      </section>
+    </div>
+  </div>
+  <div class="alert-box alert-warning tool-note" role="note">
+    <div>Always check the generated file in the instrument software before dispensing samples or reagents. This tool may change or become unavailable without notice. See the <a class="inline-link" href="/ferramentas/aviso" hreflang="pt-BR">terms of use</a> (in Portuguese).</div>
+  </div>
+</div>
+<div lang="en">
+<div id="customModal" class="modal-overlay" role="dialog" aria-modal="true" aria-labelledby="modalTitle" aria-describedby="modalMessage" hidden>
+  <div class="modal-content">
+    <button type="button" class="modal-close" data-modal-close aria-label="Close">&times;</button>
+    <h2 id="modalTitle" class="modal-title">Notice</h2>
+    <p id="modalMessage" class="modal-message"></p>
+    <button type="button" class="btn btn-block" data-modal-close>OK</button>
+  </div>
+</div></div>
+</main>
+<footer class="site-footer">
+  <div class="container footer-content">
+    <div class="footer-left">
+      <p>© <span data-year>2026</span> Floriatan Santos Costa. Todos os direitos reservados.</p>
+    </div>
+    <ul class="footer-profiles">
+      <li><a class="footer-profile" href="/"><img src="/assets/favicon.svg" alt="Site de Floriatan Santos Costa" width="22" height="22"></a></li>
+      <li><a class="footer-profile" href="http://lattes.cnpq.br/0287106268880389" target="_blank" rel="noopener noreferrer"><img src="/assets/icons/lattes.svg" alt="Currículo Lattes" width="22" height="22"><span class="visually-hidden"> (abre em nova aba)</span></a></li>
+    </ul>
+    <nav aria-label="Links do rodapé"><ul class="footer-right"><li><a href="/">Site principal</a></li><li><a href="/ferramentas/">Ferramentas</a></li><li><a href="/ferramentas/sobre">Sobre</a></li><li><a href="/ferramentas/aviso">Aviso de uso</a></li><li><a href="/contato">Contato</a></li></ul></nav>
+  </div>
+</footer>
+<script src="/js/app.js" defer></script>
+<script src="/ferramentas/plate/app.js?v=20261114" defer></script>
+</body>
+</html>

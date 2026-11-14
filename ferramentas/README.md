@@ -13,7 +13,7 @@ para `/ferramentas/assinatura/`. Os outros endereços antigos de `/web/` foram r
 | Ferramenta | Endereço | Descrição |
 |---|---|---|
 | Gerador de assinatura de e-mail | [`/ferramentas/assinatura/`](https://floriatan.com.br/ferramentas/assinatura/) | [`assinatura/README.md`](assinatura/README.md) |
-| Custom Plate Design XML (Tecan) | [`/ferramentas/custom-plate/`](https://floriatan.com.br/ferramentas/custom-plate/) | [`custom-plate/README.md`](custom-plate/README.md) |
+| Custom Plate Design XML (Tecan) | [`/ferramentas/plate/`](https://floriatan.com.br/ferramentas/plate/) | [`plate/README.md`](plate/README.md) |
 | Calculadora de fluidodinâmica ICP-MS (em teste, fora da lista) | [`/ferramentas/fluidodinamica/`](https://floriatan.com.br/ferramentas/fluidodinamica/) | [`fluidodinamica/README.md`](fluidodinamica/README.md) |
 
 Páginas de apoio: lista (`index.html`), [Sobre](https://floriatan.com.br/ferramentas/sobre) e
@@ -33,7 +33,8 @@ ferramentas/
 │   ├── index.html           # página: /ferramentas/assinatura/
 │   ├── README.md            # descrição, verificações e versões (não publicado)
 │   └── style.css            # estilos só desta ferramenta
-├── custom-plate/            # mesmo padrão (assets/slide.svg = desenho da lâmina)
+├── plate/                   # Custom Plate, mesmo padrão (assets/slide.svg = desenho da lâmina)
+├── custom-plate/index.html  # redireciona o endereço antigo para /ferramentas/plate/
 ├── fluidodinamica/          # mesmo padrão (ainda sem capa)
 ├── aviso.html               # /ferramentas/aviso
 ├── index.html               # /ferramentas/ (lista)
@@ -65,7 +66,8 @@ de `/ferramentas/`.
   `components/gerador/*.png` (assinaturas até a 2.0.1). Não mova esses arquivos, não renomeie o
   branch `main` e mantenha aquele repositório público.
 - `ferramentas/<ferramenta>/cover.png`: imagens de compartilhamento (`og:image`).
-- Os endereços `/ferramentas/<ferramenta>/`, depois de divulgados.
+- Os endereços `/ferramentas/<ferramenta>/`, depois de divulgados. Se precisar mudar um, deixe uma página de
+  redirecionamento no endereço antigo, como `custom-plate/index.html` (Custom Plate → `/ferramentas/plate/`, 14/11/2026).
 
 ## Indexação
 
