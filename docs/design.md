@@ -200,7 +200,7 @@ Roboto variável servida pelo próprio site (WOFF2 em `/assets/fonts`). Monoespa
 
 | Componente | Classe | Uso |
 |---|---|---|
-| Abertura da página inicial | `.home-hero`, `.home-title`, `.home-title__hl`, `.home-lead`, `.home-actions` | Abre direto no título, sem `.eyebrow`; texto à esquerda e arte à direita; no celular o texto vem primeiro e a arte vira um selo de 128 px |
+| Abertura da página inicial | `.home-hero`, `.home-title`, `.home-title__hl`, `.home-lead`, `.home-actions` | Abre direto no título, sem `.eyebrow`; texto à esquerda e arte à direita; no tablet (até 1024 px) as duas colunas ficam iguais e a arte cresce; no celular a arte vem antes do título, com cerca de 200 px |
 | Perfis acadêmicos | `.profile-pills` | Pílulas pequenas com ícone (bloco `{{profiles}}`) |
 | Cabeçalho do site | `.site-header`, `.site-nav`, `.nav-content`, `.menu-toggle` | Cabeçalho compacto ao rolar e menu em gaveta (ver "Layout e cabeçalho") |
 | Cabeçalho de página | `.page-hero`, `.eyebrow`, `.lead`, `.page-hero__links`, `.page-toc` | Título, subtítulo (`--fs-lg`), linha de links complementares (`--fs-base`, cinza) e atalhos de seção (todas as páginas, menos a inicial) |

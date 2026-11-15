@@ -217,18 +217,19 @@ textarea { resize: vertical; min-height: 120px; }
 /* #1 Responsividade (media queries) */
 /*****************************************************************/
 @media (max-width: 1024px) {
-    .home-hero__inner { gap: 32px; }
+    .home-hero__inner { gap: 24px; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); } /* tablet: arte maior, em colunas iguais */
+    .home-hero__art img { margin: -24px; }
     .nav-cards, .totals-wrap, .card-grid--3 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
     .stat-strip { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 }
 
 @media (max-width: 768px) {
     .grid-2, .grid-30-70, .card-grid--2, .card-grid--3, .bio-intro, .nav-cards, .totals-wrap { grid-template-columns: minmax(0, 1fr); }
-    /* No celular o nome e o título aparecem primeiro; a arte vira um selo pequeno */
+    /* No celular a arte vem antes do título, em tamanho reduzido */
     .home-hero { padding: 24px 0 32px; }
     .home-hero__inner { grid-template-columns: minmax(0, 1fr); gap: 20px; }
     .home-hero__art { order: -1; justify-content: flex-start; }
-    .home-hero__art img { max-width: 147px; margin: -10px; animation: none; }
+    .home-hero__art img { max-width: 230px; margin: -15px; animation: none; }
     .home-title { max-width: none; }
     .home-actions .btn { flex: 1 1 auto; }
     .about-art .cover-image { max-width: 200px; }

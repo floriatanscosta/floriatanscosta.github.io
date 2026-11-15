@@ -4,6 +4,7 @@
 - **Página inicial:** removido o cargo atual (`.now-pill`, bloco `{{current}}` e seus estilos). A arte passou a ser `assets/svg/fundo-animado.svg`, com órbitas girando, elétrons percorrendo os anéis e partículas flutuando (parada com `prefers-reduced-motion`).
 - **Bordas no hover:** saíram as bordas coloridas de `.profile-pills`, `.nav-card`, `.page-toc` (agora com fundo `--surface-2`), atalhos da página Design, capítulos e fotos da Vida, cartões de Premiações e das Ferramentas. Botões contornados mantêm a borda no hover, num tom mais claro.
 - `.page-hero__links` (Publicações e Mídia) de 14 para 16 px.
+- Arte da página inicial maior no tablet (colunas iguais até 1024 px) e no celular (de ~128 para ~200 px).
 - **Sitemap com datas reais:** o `build.py` guarda em `_src/data/lastmod.json` a impressão digital do `<main>` de cada página e só muda a data quando o conteúdo muda. Datas iniciais tiradas do histórico do git. A "Última atualização do conteúdo" (página Sobre) mostra a data mais recente entre as páginas.
 
 ## 2026-11-15 — Cabeçalho, menu, margens e currículo em PDF
