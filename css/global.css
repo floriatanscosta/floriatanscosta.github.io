@@ -71,6 +71,8 @@
     --font-mono: ui-monospace, "SFMono-Regular", Menlo, Consolas, "Courier New", monospace;
     --fs-xs: 0.75rem;
     --fs-sm: 0.875rem;
+    --fs-nav: 0.8125rem;        /* itens do menu no desktop */
+    --fs-nav-drawer: 0.9375rem; /* itens do menu na gaveta (celular/tablet) */
     --fs-base: 1rem;
     --fs-md: 1.125rem;
     --fs-lg: 1.25rem;
@@ -241,7 +243,7 @@ main:focus { outline: none; }
 /*****************************************************************/
 .site-nav { flex: 1; display: flex; justify-content: flex-end; min-width: 0; }
 .nav-content { display: flex; align-items: center; gap: 2px; }
-.nav-content a { display: block; padding: 8px 12px; color: var(--nav-links); font-weight: var(--fw-medium); font-size: 0.8125rem; text-transform: uppercase; letter-spacing: 0.04em; text-decoration: none; border-radius: var(--radius-md); border: 0; white-space: nowrap; transition: background-color var(--transition-fast), color var(--transition-fast); position: relative; }
+.nav-content a { display: block; padding: 8px 12px; color: var(--nav-links); font-weight: var(--fw-medium); font-size: var(--fs-nav); text-transform: uppercase; letter-spacing: 0.04em; text-decoration: none; border-radius: var(--radius-md); border: 0; white-space: nowrap; transition: background-color var(--transition-fast), color var(--transition-fast); position: relative; }
 /* Hover e página atual: só a cor do texto muda */
 .nav-content a:hover, .nav-content a[aria-current="page"] { color: var(--accent); }
 
@@ -402,7 +404,7 @@ body.has-consent { padding-bottom: 120px; }
     .lang-notice { max-width: calc(100% - 60px); }
     main { overflow-x: clip; } /* nada (nem dicas ocultas) cria rolagem lateral */
     .site-nav .nav-content { flex-direction: column; align-items: stretch; padding: 10px 30px 16px 16px; gap: 2px; }
-    .nav-content a { padding: 12px 14px; font-size: 0.9375rem; }
+    .nav-content a { padding: 12px 14px; font-size: var(--fs-nav-drawer); }
     .site-title { display: inline; }
 }
 

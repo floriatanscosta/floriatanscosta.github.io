@@ -1,5 +1,14 @@
 # Histórico de alterações
 
+## 2026-11-15 — Cabeçalho, menu, margens e currículo em PDF
+- **Menu em caixa-alta**, alinhado à direita e com fonte menor (novos tokens `--fs-nav`, 13 px, e `--fs-nav-drawer`, 15 px). Ao passar o mouse e na página atual, **só a cor do texto muda** (`--accent`): saíram o fundo, o sublinhado em degradê e o negrito.
+- **Gaveta no celular/tablet (até 960 px):** o menu sai da direita, com fundo escurecido; fecha com ✕, Esc, toque fora ou ao escolher um item, e trava a rolagem da página. O desfoque do cabeçalho passou para `.site-header::before`.
+- **Cabeçalho compacto ao rolar:** `js/app.js` acrescenta `.is-compact` e o cabeçalho vai de 68 para 54 px (novo token `--header-h-compact`), com logo menor e sombra leve.
+- **Margem lateral de 30 px** até 960 px em todo o conteúdo (antes 24 px e 16 px), inclusive Ferramentas, aviso de cookies e página 404. Até 420 px o cabeçalho mostra só o logo. A galeria da página Vida continua de borda a borda, começando e terminando a 30 px. `main` usa `overflow-x: clip` para dicas ocultas não criarem rolagem lateral.
+- **Página inicial sem eyebrow** nos três idiomas.
+- **Currículo em PDF abre numa nova aba** (sem o atributo `download`), com ícone `external` e dica "Abrir o currículo em PDF (nova aba)".
+- Guia visual atualizado: `docs/design.md` (tokens de layout, seção "Layout e cabeçalho", tipografia do menu, componentes) e página Design (linha "Menu" na hierarquia tipográfica, nos três idiomas).
+
 ## 2026-11-14 — Documentação em `docs/`, README e licença 2.1
 - **Documentação reunida em `docs/`** (`arquitetura.md`, `atualizacao.md`, `design.md`, `PENDENCIAS.md`, `CHANGELOG.md`) e conferida com os arquivos: links e caminhos corrigidos no README, nos CSS e nos README das Ferramentas; removidas as menções às páginas apagadas `guia.html` e `design-meta.html` e ao redirecionamento `ferramentas/custom-plate/`.
 - `docs/arquitetura.md`: árvore do repositório atualizada (`docs/`, `CLAUDE.md`, `ferramentas/_fluidodinamica/`), contagem das páginas geradas, nova seção **Medição de audiência (Google Analytics)** e aviso de que o GitHub Pages publica qualquer `.md` fora do `exclude`.

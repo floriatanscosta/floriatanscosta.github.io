@@ -48,7 +48,7 @@ ferramentas/**  (HTML escrito à mão, fora do gerador) ──▶ publicado como
 | `css/exemplos.css` | Componentes antigos usados só na página de desenvolvimento `exemplos.html` |
 | `css/premiacoes.css`, `css/design.css`, `css/vida.css` | Estilos próprios de cada uma dessas páginas |
 | `js/theme-init.js` | Aplica o tema (claro, escuro ou seguir o sistema) antes da renderização (evita "piscar") |
-| `js/app.js` | Menu móvel, seletor de tema e de idioma, aviso de idioma, e-mails protegidos da página Contato, ano do rodapé |
+| `js/app.js` | Cabeçalho compacto ao rolar, menu em gaveta (celular/tablet), seletor de tema e de idioma, aviso de idioma, e-mails protegidos da página Contato, ano do rodapé |
 | `js/publications.js` | Filtro da lista de publicações |
 | `js/design.js` | Botões "Copiar" da paleta da página Design |
 | `js/vida.js` | Animações e galeria da página Vida de cientista |

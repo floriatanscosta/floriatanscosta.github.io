@@ -86,7 +86,7 @@ do autor, no todo ou em parte, com ou sem fins lucrativos:
 
 **Sem autorização, é permitido:**
 
-- visitar o site em `floriatan.com.br` e baixar o currículo para leitura;
+- visitar o site em `floriatan.com.br` e abrir o currículo em PDF para leitura;
 - usar as Ferramentas no próprio site e usar livremente os resultados gerados por elas (o XML, a sua assinatura, o PDF exportado);
 - compartilhar links;
 - ver o código e fazer *fork* no GitHub, nos limites dos Termos de Serviço do GitHub;

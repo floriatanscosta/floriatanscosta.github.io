@@ -35,6 +35,8 @@ typography:
   sizes:
     fs-xs: "0.75rem"
     fs-sm: "0.875rem"
+    fs-nav: "0.8125rem"         # itens do menu (desktop)
+    fs-nav-drawer: "0.9375rem"  # itens do menu na gaveta
     fs-base: "1rem"
     fs-md: "1.125rem"
     fs-lg: "1.25rem"
@@ -63,6 +65,12 @@ spacing:
   spacing-lg: "24px"
   spacing-xl: "32px"
   spacing-2xl: "56px"
+layout:
+  container-max: "1360px"
+  gutter-desktop: "24px"     # margem lateral do .container acima de 960px
+  gutter-mobile: "30px"      # margem lateral até 960px (celular e tablet)
+  header-h: "68px"           # cabeçalho no topo da página
+  header-h-compact: "54px"   # cabeçalho depois de rolar
 
 shadow:
   shadow-sm: "0 1px 2px rgba(23,42,66,.06), 0 1px 1px rgba(23,42,66,.03)"
@@ -102,7 +110,7 @@ components:
 
 ## Visão geral
 
-A identidade parte do logotipo **Fc**: o gradiente de **petróleo** (`#1c7d9a`) a **azul-marinho** (`#274c77`), as letras em **azul-gelo** (`#cce2ed`) e a ilustração em **lavanda** (`#8682ab`). A interface usa essas cores em papéis fixos: o azul-marinho comanda títulos e botões, o petróleo marca links, destaques e foco, e um único degradê de marca (`--brand-gradient`) aparece em detalhes (filetes, sublinhado do menu, trecho destacado do título da página inicial).
+A identidade parte do logotipo **Fc**: o gradiente de **petróleo** (`#1c7d9a`) a **azul-marinho** (`#274c77`), as letras em **azul-gelo** (`#cce2ed`) e a ilustração em **lavanda** (`#8682ab`). A interface usa essas cores em papéis fixos: o azul-marinho comanda títulos e botões, o petróleo marca links, destaques e foco, e um único degradê de marca (`--brand-gradient`) aparece em detalhes (filetes, trecho destacado do título da página inicial).
 
 Superfícies são claras e neutras (ou escuras no tema escuro), separadas por bordas finas de 1 px e sombras suaves no tom do azul-marinho. Não há cores fora dos tokens.
 
@@ -151,8 +159,16 @@ Roboto variável servida pelo próprio site (WOFF2 em `/assets/fonts`). Monoespa
 | Título de seção (`.section-title`, `h2`) | `--fs-xl` | 800 |
 | Título de cartão | `--fs-lg` | 800 |
 | Texto | `--fs-base`, entrelinha 1,6 | 400 |
-| Texto auxiliar, menu, botões | `--fs-sm` | 400–700 |
+| Texto auxiliar, botões | `--fs-sm` | 400–700 |
+| Menu principal (caixa-alta, espaçamento 0,04 em) | `--fs-nav` (desktop), `--fs-nav-drawer` (gaveta) | 500 |
 | Rótulos em caixa-alta (`.eyebrow`, `.card-subtitle-sm`) | `--fs-xs`, espaçamento 0,1 em | 700 |
+
+## Layout e cabeçalho
+- **Margem lateral:** o `.container` (largura máxima 1360 px) tem 24 px de cada lado no desktop e **30 px até 960 px** (celular e tablet). Nenhum texto, imagem ou botão fica mais perto da borda; a única exceção é a faixa da galeria da página Vida (`.v-marquee`), que corre de borda a borda e começa e termina a 30 px.
+- **Cabeçalho fixo e compacto:** fica preso no topo (`position: sticky`) com 68 px de altura. Ao rolar a página, `js/app.js` acrescenta `.is-compact` e ele encolhe para 54 px (logo de 44 para 36 px, sombra `--shadow-sm`), com transição de 0,3 s; volta ao tamanho original no topo. O desfoque do fundo fica em `.site-header::before`, para não prender a gaveta dentro do cabeçalho.
+- **Menu no desktop (acima de 960 px):** itens em caixa-alta, alinhados à direita, ao lado dos seletores de idioma e tema. Entre 961 e 1100 px o nome ao lado do logo some.
+- **Menu no celular e tablet (até 960 px):** gaveta que sai da direita (`width: min(320px, 85vw)`), com fundo escurecido (`--overlay`). Fecha com o botão ✕, com Esc, ao tocar fora ou ao escolher um item; a página atrás não rola enquanto ela está aberta. Até 420 px o cabeçalho mostra só o logo, sem o nome.
+- **Estados do menu:** ao passar o mouse e na página atual (`aria-current="page"`), **só a cor do texto muda**, para `--accent`. Sem fundo, sublinhado, filete ou mudança de peso, no desktop e na gaveta.
 
 ## Elevação
 
@@ -174,10 +190,11 @@ Roboto variável servida pelo próprio site (WOFF2 em `/assets/fonts`). Monoespa
 
 | Componente | Classe | Uso |
 |---|---|---|
-| Abertura da página inicial | `.home-hero`, `.home-title`, `.home-title__hl`, `.home-lead`, `.home-actions` | Texto à esquerda e arte à direita; no celular o texto vem primeiro e a arte vira um selo de 128 px |
+| Abertura da página inicial | `.home-hero`, `.home-title`, `.home-title__hl`, `.home-lead`, `.home-actions` | Abre direto no título, sem `.eyebrow`; texto à esquerda e arte à direita; no celular o texto vem primeiro e a arte vira um selo de 128 px |
 | Cargo atual | `.now-pill` | Linha compacta com ponto verde, logotipo e cargo (bloco `{{current}}`) |
 | Perfis acadêmicos | `.profile-pills` | Pílulas pequenas com ícone (bloco `{{profiles}}`) |
-| Cabeçalho de página | `.page-hero`, `.eyebrow`, `.lead`, `.page-toc` | Título, subtítulo e atalhos de seção |
+| Cabeçalho do site | `.site-header`, `.site-nav`, `.nav-content`, `.menu-toggle` | Cabeçalho compacto ao rolar e menu em gaveta (ver "Layout e cabeçalho") |
+| Cabeçalho de página | `.page-hero`, `.eyebrow`, `.lead`, `.page-toc` | Título, subtítulo e atalhos de seção (todas as páginas, menos a inicial) |
 | Título de seção | `.section`, `.section-title` | Título com filete à direita |
 | Cartão | `.card`, `.card-title`, `.card-subtitle-sm` | Blocos de conteúdo |
 | Linha do tempo | `.tl`, `.tl-item`, `.tl-logo` | Formação e atuação profissional |
@@ -187,7 +204,7 @@ Roboto variável servida pelo próprio site (WOFF2 em `/assets/fonts`). Monoespa
 | Prêmios | `.aw-stats`, `.aw-timeline`, `.aw-card`, `.aw-card--featured` | Página de premiações (`css/premiacoes.css`) |
 | Métricas | `.stat-strip`, `.metrics-grid`, `.metric-card`, `.totals` | Indicadores e totais |
 | Chips e selos | `.chip`, `.chip--mono`, `.badge`, `.badge--accent/ok/muted` | Linhas de pesquisa, técnicas, status |
-| Botões | `.btn`, `.btn-outline`, `.btn-cv`, `.btn-block`, `.btn-group` | Ação principal (cheio) e secundária (contorno) |
+| Botões | `.btn`, `.btn-outline`, `.btn-cv`, `.btn-block`, `.btn-group` | Ação principal (cheio) e secundária (contorno). `.btn-cv` abre o currículo em PDF numa nova aba (ícone `external`), sem baixar |
 | Página Design | `.ds-hero`, `.ds-section`, `.ds-swatches`, `.ds-sw`, `.ds-type`, `.ds-scale` | `css/design.css` |
 | Vida de cientista | `.v-hero`, `.v-chapter`, `.v-slides`, `.v-marquee`, `.v-lightbox` | `css/vida.css`, `js/vida.js` |
 | Seletores | `details.lang-menu`, `details.theme-menu` | Idioma e tema |
