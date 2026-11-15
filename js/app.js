@@ -179,6 +179,22 @@
       });
     }
 
+    // Cabeçalho compacto ao rolar (com folga entre ligar e desligar, para não oscilar)
+    var header = document.querySelector('.site-header');
+    if (header) {
+      var compact = false, ticking = false;
+      var onScroll = function () {
+        ticking = false;
+        var y = window.pageYOffset || document.documentElement.scrollTop;
+        var next = compact ? y > 4 : y > 40;
+        if (next !== compact) { compact = next; header.classList.toggle('is-compact', compact); }
+      };
+      window.addEventListener('scroll', function () {
+        if (!ticking) { ticking = true; window.requestAnimationFrame(onScroll); }
+      }, { passive: true });
+      onScroll();
+    }
+
     var menuBtn = document.querySelector('[data-menu-toggle]');
     if (menuBtn) {
       menuBtn.addEventListener('click', toggleMenu);
