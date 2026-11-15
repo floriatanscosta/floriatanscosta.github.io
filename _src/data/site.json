@@ -345,9 +345,9 @@
         "es": "Currículum en PDF"
       },
       "download_title": {
-        "pt": "Baixar o currículo em PDF",
-        "en": "Download the CV as a PDF",
-        "es": "Descargar el currículum en PDF"
+        "pt": "Abrir o currículo em PDF (nova aba)",
+        "en": "Open the CV as a PDF (new tab)",
+        "es": "Abrir el currículum en PDF (nueva pestaña)"
       }
     },
     "awards": {

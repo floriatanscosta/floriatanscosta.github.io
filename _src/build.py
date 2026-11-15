@@ -531,12 +531,12 @@ def b_updated(lang):
 
 
 def b_cv_pdf(lang):
-    """Botão de download do currículo em PDF (gerado por _src/cv_pdf.py)."""
+    """Botão que abre o currículo em PDF numa nova aba (gerado por _src/cv_pdf.py)."""
     rel = f'assets/cv/floriatan-costa-cv-{lang}.pdf'
     path = os.path.join(ROOT, rel)
     size = f' <span class="btn-meta">({os.path.getsize(path) // 1024} KB)</span>' if os.path.isfile(path) else ''
-    return (f'<a class="btn btn-outline btn-cv" href="/{rel}" download type="application/pdf" '
-            f'title="{esc(T("cv.download_title", lang))}">{icon("download")}{T("cv.download", lang)}{size}</a>')
+    return (f'<a class="btn btn-outline btn-cv" href="/{rel}" target="_blank" rel="noopener" type="application/pdf" '
+            f'title="{esc(T("cv.download_title", lang))}">{icon("external")}{T("cv.download", lang)}{size}</a>')
 
 
 def b_counts(lang):
