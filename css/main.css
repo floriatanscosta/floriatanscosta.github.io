@@ -97,7 +97,7 @@ cite { font-style: italic; }
 .stat-strip dd { font-size: var(--fs-number); font-weight: var(--fw-black); line-height: 1; letter-spacing: -0.02em; color: var(--heading-color); font-variant-numeric: tabular-nums; }
 .nav-cards { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; }
 .nav-card { display: flex; flex-direction: column; gap: 4px; height: 100%; padding: 20px 22px; border-radius: var(--radius-lg); background: var(--box-bg); border: 1px solid var(--border-color); box-shadow: var(--shadow-sm); color: var(--text-main); transition: transform var(--transition-fast), box-shadow var(--transition-fast); }
-.nav-card:hover { transform: translateY(-3px); box-shadow: var(--shadow-md); }
+.nav-card:hover { transform: translateY(-3px); box-shadow: var(--shadow-md); border-color: var(--border-color); } /* anula o sublinhado de a:hover */
 .nav-card__title { font-size: var(--fs-md); font-weight: var(--fw-black); color: var(--heading-strong); }
 .nav-card__title::after { content: " →"; color: var(--accent); }
 .nav-card__text { font-size: var(--fs-sm); font-weight: var(--fw-regular); color: var(--text-muted); }
