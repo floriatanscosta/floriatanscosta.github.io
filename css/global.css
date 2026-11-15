@@ -392,19 +392,22 @@ body.has-consent { padding-bottom: 120px; }
     .site-header::after { content: ""; position: fixed; inset: 0; background: var(--overlay); opacity: 0; visibility: hidden; transition: opacity 0.3s ease, visibility 0s linear 0.3s; }
     body.menu-open .site-header::after { opacity: 1; visibility: visible; transition: opacity 0.3s ease, visibility 0s; }
     body.menu-open { overflow: hidden; }
-    .site-nav .nav-content { flex-direction: column; align-items: stretch; padding: 10px 16px 16px; gap: 2px; }
+    /* Celular/tablet: 30px entre todo o conteúdo e a borda da tela */
+    .container { padding-left: 30px; padding-right: 30px; }
+    .lang-notice { max-width: calc(100% - 60px); }
+    main { overflow-x: clip; } /* nada (nem dicas ocultas) cria rolagem lateral */
+    .site-nav .nav-content { flex-direction: column; align-items: stretch; padding: 10px 30px 16px 16px; gap: 2px; }
     .nav-content a { padding: 12px 14px; font-size: var(--fs-base); }
     .site-title { display: inline; }
 }
 
 @media (max-width: 768px) {
-    .container { padding-left: 16px; padding-right: 16px; }
     .footer-content { flex-direction: column; text-align: center; }
     .footer-right { justify-content: center; }
 }
 
 @media (max-width: 420px) {
-    .site-title { font-size: var(--fs-md); }
+    .site-title { display: none; }
     .logo-img { height: 38px; }
     .header-content { gap: 8px; }
 }

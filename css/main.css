@@ -212,7 +212,7 @@ textarea { resize: vertical; min-height: 120px; }
 
 /* 12. Página 404 */
 /*****************************************************************/
-.error-404-section { text-align: center; padding: 60px 24px; max-width: 640px; }
+.error-404-section { text-align: center; padding-top: 60px; padding-bottom: 60px; max-width: 640px; }
 .error-code { font-size: clamp(5rem, 16vw, 8rem); font-weight: var(--fw-black); line-height: 1; letter-spacing: -0.04em; margin-bottom: 8px; background: var(--brand-gradient); -webkit-background-clip: text; background-clip: text; color: transparent; }
 .error-404-section h1 { font-size: var(--fs-2xl); margin-bottom: 14px; }
 .error-404-section .btn { margin-top: 10px; }

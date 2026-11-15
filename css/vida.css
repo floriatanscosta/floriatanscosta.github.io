@@ -213,3 +213,6 @@ html:not(.v-js) .v-progress { display: none; }
     .v-chapters a, .v-tags li { background: #fff; border-color: #999; color: #000; }
     .v-chapters a span { background: #fff; }
 }
+
+/* Celular/tablet: a faixa da galeria continua de borda a borda, mas começa e termina a 30px da tela */
+@media (max-width: 960px) { .v-marquee__track { padding: 0 30px; } }
