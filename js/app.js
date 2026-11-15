@@ -185,6 +185,11 @@
       document.querySelectorAll('#site-nav a').forEach(function (a) {
         a.addEventListener('click', function () { setMenu(false); });
       });
+      // Toque fora da gaveta (no fundo escurecido) fecha o menu
+      document.addEventListener('click', function (e) {
+        var nav = document.getElementById('site-nav');
+        if (nav && nav.classList.contains('active') && !nav.contains(e.target) && !menuBtn.contains(e.target)) setMenu(false);
+      });
     }
 
     var langMenu = document.querySelector('.lang-menu:not(.theme-menu)');
