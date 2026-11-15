@@ -237,9 +237,8 @@ main:focus { outline: none; }
 .site-nav { flex: 1; display: flex; justify-content: center; min-width: 0; }
 .nav-content { display: flex; align-items: center; gap: 2px; }
 .nav-content a { display: block; padding: 8px 12px; color: var(--nav-links); font-weight: var(--fw-medium); font-size: var(--fs-sm); text-transform: uppercase; letter-spacing: 0.04em; text-decoration: none; border-radius: var(--radius-md); border: 0; white-space: nowrap; transition: background-color var(--transition-fast), color var(--transition-fast); position: relative; }
-.nav-content a:hover { background: var(--nav-hover); }
-.nav-content a[aria-current="page"] { color: var(--heading-strong); font-weight: var(--fw-bold); }
-.nav-content a[aria-current="page"]::after { content: ""; position: absolute; left: 12px; right: 12px; bottom: 2px; height: 3px; border-radius: var(--radius-pill); background: var(--brand-gradient); }
+/* Hover e página atual: só a cor do texto muda */
+.nav-content a:hover, .nav-content a[aria-current="page"] { color: var(--accent); }
 
 /* 6. Rodapé (footer) */
 /*****************************************************************/
@@ -395,10 +394,6 @@ body.has-consent { padding-bottom: 120px; }
     body.menu-open { overflow: hidden; }
     .site-nav .nav-content { flex-direction: column; align-items: stretch; padding: 10px 16px 16px; gap: 2px; }
     .nav-content a { padding: 12px 14px; font-size: var(--fs-base); }
-    /* Hover e página atual: só a cor do texto muda */
-    .nav-content a:hover { background: none; color: var(--accent); }
-    .nav-content a[aria-current="page"] { color: var(--accent); font-weight: var(--fw-medium); }
-    .nav-content a[aria-current="page"]::after { content: none; }
     .site-title { display: inline; }
 }
 
