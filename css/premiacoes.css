@@ -34,7 +34,7 @@
 /*****************************************************************/
 .aw-card { position: relative; display: grid; grid-template-columns: 48px minmax(0, 1fr); gap: 16px; align-items: start; padding: 20px 22px; background: var(--box-bg); border: 1px solid var(--border-color); border-radius: var(--radius-lg); box-shadow: var(--shadow-sm); transition: transform var(--transition-fast), box-shadow var(--transition-fast), border-color var(--transition-fast); }
 .aw-card::before { content: ''; position: absolute; left: -33px; top: 30px; width: 12px; height: 12px; border-radius: var(--radius-full); background: var(--box-bg); border: 3px solid var(--aw-c); }
-.aw-card:hover { transform: translateY(-2px); box-shadow: var(--shadow-md); border-color: color-mix(in srgb, var(--aw-c) 45%, var(--border-color)); }
+.aw-card:hover { transform: translateY(-2px); box-shadow: var(--shadow-md); }
 
 .aw-medal { display: grid; place-items: center; width: 48px; height: 48px; border-radius: var(--radius-full); color: var(--aw-c); background: color-mix(in srgb, var(--aw-c) 14%, transparent); box-shadow: inset 0 0 0 1px color-mix(in srgb, var(--aw-c) 30%, transparent); }
 .aw-medal .icon { width: 24px; height: 24px; }

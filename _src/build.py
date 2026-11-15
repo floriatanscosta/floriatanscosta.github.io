@@ -20,7 +20,7 @@ Fontes:
 Saída (HTML estático, servido pelo GitHub Pages):
     /<page>.html (pt), /en/<page>.html, /es/<page>.html, /404.html, /sitemap.xml
 """
-import base64, html, json, os, re, sys
+import base64, hashlib, html, json, os, re, sys
 from datetime import date
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -512,22 +512,12 @@ def b_latest(lang):
     return b_articles(lang, limit=2)
 
 
-def b_current(lang):
-    """Cargo atual da abertura da página inicial: linha compacta com o logotipo."""
-    cur = CV['positions'][0]
-    logo = cur.get('logo')
-    img = ''
-    if logo:
-        folder = 'svg' if logo.endswith('.svg') else 'img/logos'
-        img = f'<img class="now-pill__logo" src="/assets/{folder}/{logo}" alt="{esc(cur["institution"])}" width="56" height="35">'
-    return (f'<p class="now-pill"><span class="now-pill__dot" aria-hidden="true"></span>{img}'
-            f'<span class="now-pill__text"><strong>{esc(tr(cur["role"], lang))}</strong>'
-            f'<span>{esc(cur["institution"])} · {esc(cur["place"])}</span></span></p>')
+UPDATED_MARK = '@@SITE_UPDATED@@'
 
 
 def b_updated(lang):
-    iso = BUILD_DATE.isoformat()
-    return f'<time datetime="{iso}">{fmt_date(iso, lang)}</time>'
+    """Data da última mudança de conteúdo do site (a mais recente do sitemap); preenchida em build()."""
+    return f'<time datetime="{UPDATED_MARK}">{UPDATED_MARK}</time>'
 
 
 def b_cv_pdf(lang):
@@ -732,6 +722,26 @@ def write(path, content):
         f.write(content)
 
 
+LASTMOD_FILE = os.path.join(SRC, 'data', 'lastmod.json')
+
+
+def content_hash(html):
+    """Impressão digital do conteúdo próprio da página (só o <main>), sem cabeçalho, rodapé,
+    versão do CSS nem a data de "última atualização" da página Sobre."""
+    m = re.search(r'<main\b[^>]*>(.*)</main>', html, re.S)
+    body = m.group(1) if m else html
+    body = re.sub(r'<time datetime="[^"]*">[^<]*</time>(\.</p>)', r'<time></time>\1', body)
+    return hashlib.sha256(body.encode('utf-8')).hexdigest()[:16]
+
+
+def load_lastmod():
+    try:
+        with open(LASTMOD_FILE, encoding='utf-8') as f:
+            return json.load(f)
+    except FileNotFoundError:
+        return {}
+
+
 def build():
     pages_dir = os.path.join(SRC, 'pages')
     available = {}
@@ -741,6 +751,7 @@ def build():
             if fn.endswith('.html'):
                 available.setdefault(fn[:-5], []).append(lang)
     generated = []
+    rendered = {}
     for page, langs in available.items():
         langs = [l for l in LANGS if l in langs]
         for lang in langs:
@@ -749,15 +760,32 @@ def build():
             content = render_page(page, lang, meta, fill(body, lang), langs, extra, meta.get('body_class', ''),
                                   noindex=page == '404')
             out = (PREFIX[lang] + '/' + page + '.html').lstrip('/')
-            write(out, content)
+            rendered[out] = content
             generated.append((page, lang, langs))
+    # Data real de cada página: muda só quando o conteúdo do <main> muda (_src/data/lastmod.json)
+    old_lm = load_lastmod()
+    lastmod = {}
+    for out, content in rendered.items():
+        h = content_hash(content)
+        prev = old_lm.get(out)
+        lastmod[out] = prev if prev and prev['hash'] == h else {'hash': h, 'date': BUILD_DATE.isoformat()}
+    with open(LASTMOD_FILE, 'w', encoding='utf-8') as f:
+        json.dump(dict(sorted(lastmod.items())), f, ensure_ascii=False, indent=2)
+        f.write('\n')
+    site_updated = max(v['date'] for k, v in lastmod.items() if not k.endswith('404.html'))
+    for out, content in rendered.items():
+        lang = next((l for l in LANGS if PREFIX[l] and out.startswith(PREFIX[l].lstrip('/') + '/')), 'pt')
+        content = content.replace(f'<time datetime="{UPDATED_MARK}">{UPDATED_MARK}</time>',
+                                  f'<time datetime="{site_updated}">{fmt_date(site_updated, lang)}</time>')
+        write(out, content)
     # sitemap
     sm = ['<?xml version="1.0" encoding="UTF-8"?>',
           '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">']
     for page, lang, langs in generated:
         if page == '404':
             continue
-        sm.append(f'  <url>\n    <loc>{SITE_URL + url(page, lang)}</loc>\n    <lastmod>{BUILD_DATE.isoformat()}</lastmod>')
+        out = (PREFIX[lang] + '/' + page + '.html').lstrip('/')
+        sm.append(f'  <url>\n    <loc>{SITE_URL + url(page, lang)}</loc>\n    <lastmod>{lastmod[out]["date"]}</lastmod>')
         for l in langs:
             sm.append(f'    <xhtml:link rel="alternate" hreflang="{HTML_LANG[l]}" href="{SITE_URL + url(page, l)}"/>')
         sm.append(f'    <xhtml:link rel="alternate" hreflang="x-default" href="{SITE_URL + url(page, "pt")}"/>')

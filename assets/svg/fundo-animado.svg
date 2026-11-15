@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-45 -45 690 690" width="690" height="690" shape-rendering="geometricPrecision">
+<!-- Versão animada de fundo.svg, usada só na abertura da página inicial.
+     Anéis e selos giram em órbita, elétrons percorrem os anéis e as partículas flutuam.
+     Tudo fica parado com prefers-reduced-motion. -->
+<style>
+.spin{transform-box:view-box;animation:spin linear infinite}
+.o-lav{transform-origin:200.6px 255px;animation-duration:80s}
+.o-blue{transform-origin:399.4px 334.5px;animation-duration:100s;animation-direction:reverse}
+.keep-up{transform-origin:504px 487px;animation-duration:100s}
+.e-lav-1{transform-origin:200.6px 255px;animation-duration:16s}
+.e-lav-2{transform-origin:200.6px 255px;animation-duration:26s;animation-direction:reverse}
+.e-blue-1{transform-origin:399.4px 334.5px;animation-duration:20s;animation-direction:reverse}
+.e-blue-2{transform-origin:399.4px 334.5px;animation-duration:31s}
+.float{transform-box:fill-box;transform-origin:center;animation:drift 14s ease-in-out infinite alternate}
+.f2{animation-duration:11s;animation-delay:-4s}
+.f3{animation-duration:17s;animation-delay:-9s}
+.bob{animation:bob 6s ease-in-out infinite alternate}
+.b2{animation-duration:7.5s;animation-delay:-3s}
+.b3{animation-duration:5s;animation-delay:-1.5s}
+.halo{transform-box:fill-box;transform-origin:center;animation:pulse 7s ease-in-out infinite}
+.glow{animation:glow 9s ease-in-out infinite}
+@keyframes spin{to{transform:rotate(360deg)}}
+@keyframes drift{from{transform:translate(0,0) rotate(0)}to{transform:translate(8px,-16px) rotate(90deg)}}
+@keyframes bob{from{transform:translate(0,0)}to{transform:translate(0,-12px)}}
+@keyframes pulse{0%,100%{transform:scale(1);opacity:1}50%{transform:scale(1.18);opacity:.55}}
+@keyframes glow{0%,100%{opacity:1}50%{opacity:.7}}
+@media (prefers-reduced-motion:reduce){*{animation:none!important}}
+</style>
+<defs><mask id="A"><radialGradient id="B" gradientUnits="userSpaceOnUse" cx="300" cy="300" r="283.69" fx="300" fy="300"><stop offset="0" stop-color="#fff"/><stop offset="1" stop-opacity="0" stop-color="#fff"/></radialGradient><path d="M-1.18-1.18h602.36v602.36H-1.18z" fill="url(#B)"/></mask><linearGradient id="C" gradientUnits="userSpaceOnUse" x1="224.82" y1="307.5" x2="456.65" y2="397.74"><stop offset="0" stop-color="#8682ab"/><stop offset="1" stop-color="#1c7d9a"/></linearGradient><radialGradient id="D" gradientUnits="userSpaceOnUse" gradientTransform="matrix(1.93638 -1.96231 1.96231 1.93638 -1024 -127)" cx="149.92" cy="450.08" r="153.27" fx="149.92" fy="450.08"><stop offset="0" stop-color="#1c7d9a"/><stop offset="1" stop-color="#274c77"/></radialGradient><radialGradient id="E" gradientTransform="matrix(1.93634 -1.96227 1.96227 1.93634 -1466 422)" href="#D" cx="465.68" cy="524.87" r="38.73" fx="465.68" fy="524.87"/></defs>
+<path class="glow" d="M0 0h600v600H0z" fill="url(#C)" mask="url(#A)"/>
+<g fill-rule="nonzero">
+<path class="halo" fill="#cce2ed" d="M469.4 31.98c9.41 0 17.96 3.83 24.16 10.02l.03.03c6.19 6.2 10.02 14.75 10.02 24.17 0 9.44-3.83 18-10.02 24.19s-14.75 10.02-24.19 10.02c-9.43 0-17.98-3.83-24.17-10.02l-.02-.03c-6.19-6.19-10.03-14.73-10.03-24.16 0-9.45 3.84-18 10.03-24.2 6.19-6.19 14.74-10.02 24.19-10.02zm15.7 18.49a22.09 22.09 0 0 0-15.7-6.49c-6.14 0-11.69 2.49-15.71 6.51s-6.51 9.57-6.51 15.71 2.49 11.7 6.5 15.71a22.14 22.14 0 0 0 15.72 6.5c6.13 0 11.68-2.49 15.7-6.51s6.51-9.57 6.51-15.7c0-6.15-2.48-11.71-6.48-15.71l-.03-.02z"/>
+<path class="float" fill="#e2eaf0" d="M83.06 490.62l10.54 6.08 10.53 6.08v12.17 12.16l-10.53 6.08-10.54 6.08-10.53-6.08L62 527.11v-12.16-12.17l10.53-6.08z"/>
+<path class="float f2" fill="#e1e0ea" d="M123.05 506.81l6.13 3.54 6.12 3.54v7.08 7.07l-6.12 3.54-6.13 3.54-6.13-3.54-6.13-3.54v-7.07-7.08l6.13-3.54z"/>
+<path class="float f3" fill="#f2e5f1" d="M64.37 42.77l6.13 3.54 6.13 3.53v7.08V64l-6.13 3.54-6.13 3.54-6.13-3.54L52.12 64v-7.08-7.08l6.12-3.53z"/>
+<g class="bob" fill="url(#E)"><path d="M120.77 115.24c4.73 0 8.57 3.84 8.57 8.57a8.58 8.58 0 0 1-8.57 8.58 8.58 8.58 0 0 1-8.58-8.58 8.58 8.58 0 0 1 8.58-8.57z"/></g>
+<g class="bob b2" fill="url(#E)"><path d="M456.68 541.24a8.58 8.58 0 0 1 8.57 8.58c0 4.73-3.84 8.57-8.57 8.57a8.58 8.58 0 0 1-8.58-8.57 8.58 8.58 0 0 1 8.58-8.58z"/></g>
+<g class="bob b3" fill="url(#E)"><path d="M427.83 88.81c5.63 0 10.2 4.56 10.2 10.19s-4.57 10.2-10.2 10.2-10.19-4.57-10.19-10.2a10.19 10.19 0 0 1 10.19-10.19z"/></g>
+</g>
+<g class="spin o-blue">
+  <circle cx="399.4" cy="334.5" r="185" fill="none" stroke="#718fc8" stroke-width="18.5"/>
+  <circle cx="504" cy="487" r="52.5" fill="#fefefe"/>
+  <circle cx="504" cy="487" r="40" fill="url(#E)"/>
+  <g class="spin keep-up"><path fill="#a7c4d2" fill-rule="nonzero" d="M488.03 506.11c-1.89 0-3.24-.84-4.03-2.53-.8-1.69-.61-3.25.58-4.7l12.35-15.02v-13.35h-2.22c-.63 0-1.16-.22-1.59-.64-.43-.43-.64-.96-.64-1.59s.21-1.16.64-1.59c.43-.42.96-.64 1.59-.63h17.8c.63 0 1.16.21 1.59.63.42.43.64.96.64 1.59s-.22 1.16-.64 1.59c-.43.42-.96.64-1.59.64h-2.22v13.35l12.35 15.02c1.18 1.45 1.38 3.01.58 4.7s-2.14 2.53-4.03 2.53h-31.16zm0-4.45h31.16l-13.36-16.24v-14.91h-4.45v14.91l-13.35 16.24z"/></g>
+</g>
+<g class="spin o-lav">
+  <circle cx="200.6" cy="255" r="185" fill="none" stroke="#8682ab" stroke-width="18"/>
+  <circle cx="57" cy="138" r="37" fill="#fefefe"/>
+  <circle cx="57" cy="138" r="24.5" fill="#274c77"/>
+</g>
+<g fill="#ffffff">
+  <g class="spin e-lav-1"><circle cx="69.8" cy="385.8" r="14" opacity=".35"/><circle cx="69.8" cy="385.8" r="7"/></g>
+  <g class="spin e-lav-2"><circle cx="168.5" cy="72.8" r="5"/></g>
+  <g class="spin e-blue-1"><circle cx="530.2" cy="203.7" r="14" opacity=".35"/><circle cx="530.2" cy="203.7" r="7"/></g>
+  <g class="spin e-blue-2"><circle cx="367.3" cy="516.7" r="5"/></g>
+</g>
+<circle cx="300" cy="300" r="173.5" fill="#fefefe"/>
+<path fill="url(#D)" d="M300 140.35c88.17 0 159.65 71.48 159.65 159.65S388.17 459.65 300 459.65 140.35 388.17 140.35 300 211.83 140.35 300 140.35z"/>
+<path fill="#cce2ed" fill-rule="nonzero" d="M356.48 367.45c-7.19 0-13.88-1.32-20.06-3.95-6.17-2.64-11.48-6.21-15.91-10.71-4.44-4.49-7.92-9.77-10.44-15.83-2.52-6.05-3.78-12.5-3.78-19.33v-.36c0-6.84 1.26-13.31 3.78-19.43s6-11.45 10.44-16.01c4.43-4.56 9.74-8.15 15.91-10.79 6.18-2.64 12.99-3.96 20.42-3.96 9.11 0 16.67 1.44 22.67 4.32 5.99 2.88 11.27 6.83 15.82 11.87l-16.72 17.99c-3.12-3.24-6.33-5.82-9.63-7.74s-7.4-2.88-12.32-2.88c-3.48 0-6.62.69-9.44 2.07s-5.28 3.27-7.38 5.67-3.72 5.19-4.85 8.37c-1.14 3.17-1.71 6.56-1.71 10.16v.36c0 3.71.57 7.19 1.71 10.43 1.13 3.24 2.78 6.06 4.94 8.45 2.16 2.4 4.74 4.29 7.74 5.67 2.99 1.38 6.35 2.07 10.07 2.07 4.56 0 8.54-.93 11.96-2.79s6.81-4.35 10.17-7.46l16 16.18c-4.67 5.16-10.01 9.39-16 12.69-6 3.29-13.8 4.94-23.39 4.94zM216.42 227.84h-11.88v-1.19l6.5-7.37c1.08-1.25 1.82-2.27 2.24-3.08.41-.81.62-1.59.62-2.35 0-1.2-.35-2.15-1.05-2.85s-1.67-1.05-2.9-1.05c-1.28 0-2.31.41-3.1 1.22-.78.82-1.17 1.88-1.17 3.18h-1.55c0-1.06.23-2.04.72-2.91a5.13 5.13 0 0 1 2.06-2.07c.89-.5 1.9-.75 3.04-.75 1.73 0 3.09.46 4.06 1.37.98.91 1.47 2.15 1.47 3.72 0 .89-.28 1.86-.83 2.91s-1.52 2.36-2.91 3.93l-5.29 5.99h9.97v1.3zm14.07-14.08c0 .98-.29 1.86-.86 2.64a5.05 5.05 0 0 1-2.27 1.71c1.09.37 1.97.98 2.63 1.82.66.82.99 1.79.99 2.89 0 1.63-.55 2.91-1.65 3.86-1.1.96-2.56 1.43-4.38 1.43-1.83 0-3.29-.47-4.39-1.42-1.09-.95-1.65-2.24-1.65-3.87 0-1.08.32-2.04.96-2.88.63-.85 1.5-1.46 2.6-1.83a4.81 4.81 0 0 1-2.24-1.71c-.56-.78-.84-1.66-.84-2.64 0-1.57.51-2.82 1.52-3.75s2.35-1.39 4.02-1.39 3.01.47 4.03 1.4c1.02.94 1.53 2.19 1.53 3.74zm-1.07 9.08c0-1.19-.42-2.16-1.26-2.92s-1.92-1.14-3.23-1.14-2.39.37-3.22 1.12-1.25 1.73-1.25 2.94c0 1.2.4 2.17 1.21 2.89.81.71 1.91 1.07 3.28 1.07 1.35 0 2.43-.35 3.25-1.07.81-.71 1.22-1.68 1.22-2.89zm-.49-9.09c0-1.08-.38-1.99-1.13-2.71-.75-.73-1.71-1.09-2.87-1.09-1.18 0-2.14.35-2.87 1.05-.74.7-1.1 1.62-1.1 2.75 0 1.11.36 2 1.1 2.68.73.68 1.69 1.02 2.88 1.02 1.17 0 2.13-.35 2.87-1.03s1.12-1.57 1.12-2.67zm-24.8 27.79H300v25h-68.17v27.16h60.08v25.01h-60.08v48.74h-27.7V241.54z"/>
+</svg>

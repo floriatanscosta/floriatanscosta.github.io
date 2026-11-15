@@ -306,7 +306,7 @@ details.accordion .accordion-content { padding: 18px 20px 20px; border-top: 1px 
 .btn[hidden] { display: none; } /* ex.: botão "Enviar e-mail", exibido só depois que o JavaScript monta o endereço */
 .btn:disabled { background-color: var(--border-color); color: var(--text-main); opacity: 0.6; cursor: not-allowed; transform: none; box-shadow: none; }
 .btn-outline { background-color: var(--box-bg); color: var(--heading-color); border-color: var(--border-color); }
-.btn-outline:hover { background-color: var(--box-bg); color: var(--heading-color); border-color: var(--heading-color); }
+.btn-outline:hover { background-color: var(--box-bg); color: var(--heading-color); border-color: color-mix(in srgb, var(--heading-color) 35%, var(--border-color)); }
 .btn-block { width: 100%; display: flex; }
 .btn-group { display: flex; gap: 10px; width: 100%; flex-wrap: wrap; }
 .btn-group .btn { flex: 1; min-width: 120px; }

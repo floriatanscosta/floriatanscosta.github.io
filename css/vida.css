@@ -35,7 +35,7 @@ html:not(.v-js) .v-progress { display: none; }
 .v-chapters ol { list-style: none; display: flex; flex-wrap: wrap; gap: 8px; margin: 0; padding: 0; }
 .v-chapters a { display: inline-flex; align-items: center; gap: 8px; padding: 7px 14px 7px 8px; border: 1px solid var(--border-color); border-radius: var(--radius-pill); background: var(--box-bg); color: var(--text-main); font-size: var(--fs-sm); font-weight: var(--fw-bold); text-decoration: none; transition: transform var(--transition-fast), border-color var(--transition-fast), box-shadow var(--transition-fast); }
 .v-chapters a span { display: inline-grid; place-items: center; min-width: 26px; height: 26px; border-radius: var(--radius-pill); background: var(--surface-2); color: var(--heading-strong); font-size: var(--fs-xs); font-weight: var(--fw-black); font-variant-numeric: tabular-nums; }
-.v-chapters a:hover, .v-chapters a:focus-visible { transform: translateY(-2px); border-color: var(--v-accent); box-shadow: var(--shadow-md); }
+.v-chapters a:hover, .v-chapters a:focus-visible { transform: translateY(-2px); box-shadow: var(--shadow-md); }
 
 /* Imagem da abertura: flutua e acompanha a rolagem (parallax) */
 .v-hero__art { translate: 0 var(--py, 0px); }
@@ -97,7 +97,8 @@ html:not(.v-js) .v-progress { display: none; }
 .v-dot::before { content: ''; width: 10px; height: 10px; border-radius: var(--radius-pill); background: var(--border-color); transition: width 0.3s var(--v-ease), background-color 0.3s; }
 .v-dot[aria-current="true"]::before { width: 22px; background: var(--v-accent); }
 .v-pause { min-width: 36px; height: 36px; padding: 0 12px; border: 1px solid var(--border-color); border-radius: var(--radius-pill); background: var(--box-bg); color: var(--text-main); font-size: var(--fs-xs); font-weight: var(--fw-bold); cursor: pointer; }
-.v-pause:hover, .v-dot:hover::before { border-color: var(--v-accent); }
+.v-pause:hover { border-color: color-mix(in srgb, var(--v-accent) 40%, var(--border-color)); }
+.v-dot:not([aria-current="true"]):hover::before { background: color-mix(in srgb, var(--v-accent) 40%, var(--border-color)); }
 
 /* Texto */
 .v-heading { font-size: clamp(1.9rem, 3.6vw, 2.8rem); font-weight: var(--fw-black); line-height: 1.1; letter-spacing: -0.02em; margin-bottom: 16px; color: var(--heading-strong); }
@@ -124,7 +125,7 @@ html:not(.v-js) .v-progress { display: none; }
 .v-marquee__track li { scroll-snap-align: center; }
 .v-thumb { display: block; width: clamp(240px, 32vw, 420px); padding: 0; border: 1px solid var(--border-color); border-radius: var(--radius-lg); overflow: hidden; background: var(--surface-2); cursor: zoom-in; transition: transform 0.5s var(--v-ease), box-shadow 0.5s var(--v-ease), border-color 0.3s; }
 .v-thumb img { width: 100%; height: auto; aspect-ratio: 940 / 540; object-fit: cover; display: block; transition: transform 0.8s var(--v-ease); }
-.v-thumb:hover, .v-thumb:focus-visible { transform: translateY(-6px) rotate(-0.6deg); box-shadow: var(--shadow-md); border-color: var(--v-accent); }
+.v-thumb:hover, .v-thumb:focus-visible { transform: translateY(-6px) rotate(-0.6deg); box-shadow: var(--shadow-md); }
 .v-thumb:hover img, .v-thumb:focus-visible img { transform: scale(1.06); }
 /* Com JS: a faixa desliza sozinha (pausa ao passar o mouse, ao focar ou pelo botão) */
 .v-js .v-marquee.is-running { overflow: hidden; mask-image: linear-gradient(90deg, transparent, #000 6%, #000 94%, transparent); }
@@ -148,7 +149,7 @@ html:not(.v-js) .v-progress { display: none; }
 .v-lightbox__fig img { width: 100%; height: auto; max-height: calc(92vh - 90px); object-fit: contain; display: block; border-radius: var(--radius-md); }
 .v-lightbox__fig figcaption { padding: 10px 4px 0; font-size: var(--fs-sm); color: var(--text-muted); text-align: center; }
 .v-lightbox__btn { position: absolute; display: grid; place-items: center; width: 44px; height: 44px; border: 1px solid var(--border-color); border-radius: var(--radius-full); background: var(--box-bg); color: var(--heading-strong); font-size: var(--fs-xl); line-height: 1; cursor: pointer; box-shadow: var(--shadow-md); }
-.v-lightbox__btn:hover { border-color: var(--v-accent); }
+.v-lightbox__btn:hover { border-color: color-mix(in srgb, var(--v-accent) 40%, var(--border-color)); }
 .v-lightbox__close { top: -14px; right: -14px; }
 .v-lightbox__prev { top: 50%; left: -22px; translate: 0 -50%; }
 .v-lightbox__next { top: 50%; right: -22px; translate: 0 -50%; }

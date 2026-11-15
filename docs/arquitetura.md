@@ -38,6 +38,7 @@ ferramentas/**  (HTML escrito à mão, fora do gerador) ──▶ publicado como
 | `_src/build.py` | Gerador: monta cabeçalho, rodapé, metadados e seletor de idioma; com `--check`, verifica links internos; com `--no-pdf`, não gera os currículos |
 | `_src/cv_pdf.py` | Currículo em PDF (requer ReportLab e svglib); fontes Roboto em `_src/fonts/` (licença OFL) |
 | `_src/data/site.json` | Textos da interface (menu, rótulos, botões, aviso de cookies) em pt/en/es |
+| `_src/data/lastmod.json` | Gerado pelo `build.py`: impressão digital do conteúdo (`<main>`) e data da última mudança de cada página. Alimenta o `<lastmod>` do sitemap e a "Última atualização do conteúdo" da página Sobre. Versionar junto com as páginas |
 | `_src/data/cv.json` | Dados do currículo: prêmios, formação, experiência, projetos, revisões, métricas… |
 | `_src/data/publications.json` | Artigos e trabalhos em eventos (títulos no idioma original) |
 | `_src/data/media.json` | Mídia e divulgação: revistas de divulgação, notícias, entrevistas, podcasts e menções (página Mídia) |
@@ -56,7 +57,7 @@ ferramentas/**  (HTML escrito à mão, fora do gerador) ──▶ publicado como
 | `assets/` | Logo, favicon, ícones (`sprite.svg`), fontes Roboto, imagens e logos (`svg/` e `img/logos/`) |
 | `assets/_docs/License.txt` | Aviso que remete ao `LICENSE` da raiz (pasta com `_`, não publicada) |
 | `assets/cv/` | Currículos em PDF (pt, en, es), gerados por `_src/cv_pdf.py` |
-| `sitemap.xml` | Gerado automaticamente, com alternativas `hreflang` (só as páginas geradas; as Ferramentas não entram) |
+| `sitemap.xml` | Gerado automaticamente, com alternativas `hreflang` e `<lastmod>` igual à data real da última mudança de conteúdo de cada página (não a data do build); só as páginas geradas, as Ferramentas não entram |
 | `ferramentas/` | **Ferramentas** (Assinatura de e-mail e Custom Plate publicadas; Fluidodinâmica em desenvolvimento): HTML estático, fora do gerador e sem tradução; usam a mesma base visual (`/css`, `/js`, `/assets`) mais `ferramentas/css/ferramentas.css` e o `style.css` de cada ferramenta, e o mesmo `js/analytics.js`. Ver [`ferramentas/README.md`](../ferramentas/README.md) |
 | `exemplos.html` | Página de desenvolvimento escrita à mão (fora do gerador e do menu), com `Disallow` no `robots.txt` |
 | `_testes/` | Protótipo da página inicial (design v2) e `RELATORIO-DESIGN.md` (auditoria de 28/10/2026); não publicado |

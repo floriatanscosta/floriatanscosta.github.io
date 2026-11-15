@@ -17,7 +17,7 @@
 /* Atalhos para as seções */
 .ds-toc { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 26px; }
 .ds-toc a { padding: 8px 16px; border: 1px solid var(--border-color); border-radius: var(--radius-pill); background: var(--box-bg); color: var(--text-main); font-size: var(--fs-sm); font-weight: var(--fw-bold); text-decoration: none; transition: border-color var(--transition-fast), color var(--transition-fast), transform var(--transition-fast); }
-.ds-toc a:hover, .ds-toc a:focus-visible { border-color: var(--accent); color: var(--heading-strong); transform: translateY(-1px); }
+.ds-toc a:hover, .ds-toc a:focus-visible { color: var(--heading-strong); transform: translateY(-1px); }
 
 /* 2. Seções numeradas */
 /*****************************************************************/

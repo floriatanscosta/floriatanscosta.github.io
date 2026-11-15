@@ -51,7 +51,7 @@
 /*****************************************************************/
 .tool-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 20px; }
 .tool-card { height: stretch; display: flex; flex-direction: column; overflow: hidden; background: var(--box-bg); border: 1px solid var(--border-color); border-radius: var(--radius-lg); box-shadow: var(--shadow-sm); transition: transform var(--transition-fast), box-shadow var(--transition-fast), border-color var(--transition-fast); }
-.tool-card:hover { transform: translateY(-3px); box-shadow: var(--shadow-md); border-color: var(--heading-color); }
+.tool-card:hover { transform: translateY(-3px); box-shadow: var(--shadow-md); }
 .tool-card__cover { aspect-ratio: 2 / 1; overflow: hidden; background: var(--surface-2); border-bottom: 1px solid var(--border-color); }
 .tool-card__cover img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform var(--transition-normal); }
 .tool-card:hover .tool-card__cover img { transform: scale(1.04); }

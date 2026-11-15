@@ -170,11 +170,21 @@ Roboto variável servida pelo próprio site (WOFF2 em `/assets/fonts`). Monoespa
 - **Menu no celular e tablet (até 960 px):** gaveta que sai da direita (`width: min(320px, 85vw)`), com fundo escurecido (`--overlay`). Fecha com o botão ✕, com Esc, ao tocar fora ou ao escolher um item; a página atrás não rola enquanto ela está aberta. Até 420 px o cabeçalho mostra só o logo, sem o nome.
 - **Estados do menu:** ao passar o mouse e na página atual (`aria-current="page"`), **só a cor do texto muda**, para `--accent`. Sem fundo, sublinhado, filete ou mudança de peso, no desktop e na gaveta.
 
+## Arte animada da página inicial
+`assets/svg/fundo-animado.svg` é a versão em camadas de `assets/svg/fundo.svg` (que continua estática nas páginas Design e Sobre). A animação é CSS dentro do próprio SVG:
+- **Órbitas:** o anel lavanda (80 s, sentido horário) e o azul (100 s, anti-horário) giram levando seus selos; o frasco gira ao contrário para ficar sempre de pé. Os selos passam por trás do círculo Fc.
+- **Elétrons:** quatro pontos brancos percorrem os anéis em 16 a 31 s.
+- **Partículas:** hexágonos derivam e giram, pontos sobem e descem, o anel claro do canto pulsa e o brilho de fundo respira.
+- A área de desenho é 690 × 690 (600 + folga para as órbitas não serem cortadas); por isso a imagem tem margem negativa em `.home-hero__art img`.
+- Tudo para com `prefers-reduced-motion: reduce`.
+
 ## Elevação
 
 - **Nível 0:** fundo da página, listas compactas.
 - **Nível 1:** cartões e caixas — borda de 1 px + `--shadow-sm`.
 - **Nível 2:** ao passar o mouse e elementos fixos (filtro de publicações) — `--shadow-md`, cartão sobe 2–3 px.
+
+**Bordas:** 1 px em `--border-color`, sempre neutras. Ao passar o mouse, cartões, pílulas, atalhos e fotos **não mudam a cor da borda**: o retorno vem só da elevação (sombra e leve subida) ou de um fundo `--surface-2`. A exceção são os botões contornados (`.btn-outline`, botões redondos da página Vida), cuja borda escurece num tom suave (`color-mix` de 35–40 % da cor de título ou de destaque com `--border-color`).
 - **Nível 3:** menus suspensos, aviso de cookies — `--shadow-lg`.
 
 ## Arquivos
@@ -191,10 +201,9 @@ Roboto variável servida pelo próprio site (WOFF2 em `/assets/fonts`). Monoespa
 | Componente | Classe | Uso |
 |---|---|---|
 | Abertura da página inicial | `.home-hero`, `.home-title`, `.home-title__hl`, `.home-lead`, `.home-actions` | Abre direto no título, sem `.eyebrow`; texto à esquerda e arte à direita; no celular o texto vem primeiro e a arte vira um selo de 128 px |
-| Cargo atual | `.now-pill` | Linha compacta com ponto verde, logotipo e cargo (bloco `{{current}}`) |
 | Perfis acadêmicos | `.profile-pills` | Pílulas pequenas com ícone (bloco `{{profiles}}`) |
 | Cabeçalho do site | `.site-header`, `.site-nav`, `.nav-content`, `.menu-toggle` | Cabeçalho compacto ao rolar e menu em gaveta (ver "Layout e cabeçalho") |
-| Cabeçalho de página | `.page-hero`, `.eyebrow`, `.lead`, `.page-toc` | Título, subtítulo e atalhos de seção (todas as páginas, menos a inicial) |
+| Cabeçalho de página | `.page-hero`, `.eyebrow`, `.lead`, `.page-hero__links`, `.page-toc` | Título, subtítulo (`--fs-lg`), linha de links complementares (`--fs-base`, cinza) e atalhos de seção (todas as páginas, menos a inicial) |
 | Título de seção | `.section`, `.section-title` | Título com filete à direita |
 | Cartão | `.card`, `.card-title`, `.card-subtitle-sm` | Blocos de conteúdo |
 | Linha do tempo | `.tl`, `.tl-item`, `.tl-logo` | Formação e atuação profissional |

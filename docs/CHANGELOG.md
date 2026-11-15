@@ -1,5 +1,11 @@
 # Histórico de alterações
 
+## 2026-11-15 — Arte animada, bordas, sitemap com datas reais
+- **Página inicial:** removido o cargo atual (`.now-pill`, bloco `{{current}}` e seus estilos). A arte passou a ser `assets/svg/fundo-animado.svg`, com órbitas girando, elétrons percorrendo os anéis e partículas flutuando (parada com `prefers-reduced-motion`).
+- **Bordas no hover:** saíram as bordas coloridas de `.profile-pills`, `.nav-card`, `.page-toc` (agora com fundo `--surface-2`), atalhos da página Design, capítulos e fotos da Vida, cartões de Premiações e das Ferramentas. Botões contornados mantêm a borda no hover, num tom mais claro.
+- `.page-hero__links` (Publicações e Mídia) de 14 para 16 px.
+- **Sitemap com datas reais:** o `build.py` guarda em `_src/data/lastmod.json` a impressão digital do `<main>` de cada página e só muda a data quando o conteúdo muda. Datas iniciais tiradas do histórico do git. A "Última atualização do conteúdo" (página Sobre) mostra a data mais recente entre as páginas.
+
 ## 2026-11-15 — Cabeçalho, menu, margens e currículo em PDF
 - **Menu em caixa-alta**, alinhado à direita e com fonte menor (novos tokens `--fs-nav`, 13 px, e `--fs-nav-drawer`, 15 px). Ao passar o mouse e na página atual, **só a cor do texto muda** (`--accent`): saíram o fundo, o sublinhado em degradê e o negrito.
 - **Gaveta no celular/tablet (até 960 px):** o menu sai da direita, com fundo escurecido; fecha com ✕, Esc, toque fora ou ao escolher um item, e trava a rolagem da página. O desfoque do cabeçalho passou para `.site-header::before`.
