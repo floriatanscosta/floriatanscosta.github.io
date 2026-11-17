@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+Disallow: /exemplos.html
+
+Sitemap: https://floriatan.com.br/sitemap.xml

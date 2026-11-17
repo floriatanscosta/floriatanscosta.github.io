@@ -1,0 +1,142 @@
+{
+  "404.html": {
+    "hash": "c1741064529152f7",
+    "date": "2026-11-14"
+  },
+  "biografia.html": {
+    "hash": "0e2777437d69aeb7",
+    "date": "2026-11-15"
+  },
+  "contato.html": {
+    "hash": "80f65366e9b59e6e",
+    "date": "2026-11-15"
+  },
+  "design.html": {
+    "hash": "550601e430d62f19",
+    "date": "2026-11-15"
+  },
+  "en/biografia.html": {
+    "hash": "200969f3f1f32ef2",
+    "date": "2026-11-15"
+  },
+  "en/contato.html": {
+    "hash": "b12990ea3e7ed01b",
+    "date": "2026-11-15"
+  },
+  "en/design.html": {
+    "hash": "9276cb8e2361fc89",
+    "date": "2026-11-15"
+  },
+  "en/experiencia.html": {
+    "hash": "b029cd7a6f47af92",
+    "date": "2026-11-14"
+  },
+  "en/index.html": {
+    "hash": "2b49b2ba8d7767cc",
+    "date": "2026-11-17"
+  },
+  "en/metricas.html": {
+    "hash": "42ad5c85eb46ee64",
+    "date": "2026-11-17"
+  },
+  "en/midia.html": {
+    "hash": "eacf3ed165e25f36",
+    "date": "2026-11-14"
+  },
+  "en/premiacoes.html": {
+    "hash": "d88e40a2b6605f8a",
+    "date": "2026-11-14"
+  },
+  "en/producao.html": {
+    "hash": "41b0d9cc7b8ae403",
+    "date": "2026-11-14"
+  },
+  "en/publicacoes.html": {
+    "hash": "84a8915badcf0ab8",
+    "date": "2026-11-15"
+  },
+  "en/sobre.html": {
+    "hash": "e0edd536f8b5416d",
+    "date": "2026-11-14"
+  },
+  "es/biografia.html": {
+    "hash": "e9b9c20895f7a72e",
+    "date": "2026-11-15"
+  },
+  "es/contato.html": {
+    "hash": "3710f2d0242d3ecd",
+    "date": "2026-11-15"
+  },
+  "es/design.html": {
+    "hash": "5a18069790352f2d",
+    "date": "2026-11-15"
+  },
+  "es/experiencia.html": {
+    "hash": "24888392052bbf8f",
+    "date": "2026-11-14"
+  },
+  "es/index.html": {
+    "hash": "fa5171ffba249115",
+    "date": "2026-11-17"
+  },
+  "es/metricas.html": {
+    "hash": "e48556144406e65d",
+    "date": "2026-11-17"
+  },
+  "es/midia.html": {
+    "hash": "d37d763fbcf0d325",
+    "date": "2026-11-14"
+  },
+  "es/premiacoes.html": {
+    "hash": "887633aea07b6e08",
+    "date": "2026-11-14"
+  },
+  "es/producao.html": {
+    "hash": "270c7988ee9d1bd9",
+    "date": "2026-11-14"
+  },
+  "es/publicacoes.html": {
+    "hash": "95af35ff8260de5d",
+    "date": "2026-11-15"
+  },
+  "es/sobre.html": {
+    "hash": "fa3ebaebf2921de2",
+    "date": "2026-11-14"
+  },
+  "experiencia.html": {
+    "hash": "19eaa5c5d63f3379",
+    "date": "2026-11-14"
+  },
+  "index.html": {
+    "hash": "de05f7465db7234d",
+    "date": "2026-11-17"
+  },
+  "metricas.html": {
+    "hash": "9d045b4a4b3caf08",
+    "date": "2026-11-17"
+  },
+  "midia.html": {
+    "hash": "573b8e6b71ea9218",
+    "date": "2026-11-14"
+  },
+  "premiacoes.html": {
+    "hash": "0ce60275c94981dd",
+    "date": "2026-11-14"
+  },
+  "producao.html": {
+    "hash": "3e0f55838aebd731",
+    "date": "2026-11-14"
+  },
+  "publicacoes.html": {
+    "hash": "6843e45149825c0f",
+    "date": "2026-11-15"
+  },
+  "sobre.html": {
+    "hash": "e70d636a957462e8",
+    "date": "2026-11-14"
+  },
+  "vida.html": {
+    "hash": "5973c4f82cc8c08e",
+    "date": "2026-11-14"
+  }
+}

@@ -1,0 +1,32 @@
+/* ==================================================================
+// © 2026 Todos os direitos reservados. Ver LICENSE.
+// /ferramentas/assinatura/style.css
+// Estilos do Gerador de assinatura de e-mail. Carregado depois de
+// /ferramentas/css/ferramentas.css, só em /ferramentas/assinatura/.
+//
+// Sumário
+//   1. Pré-visualização da assinatura
+//   2. "Como instalar"
+//   3. Exportar PDF: moldura e lista de dados
+================================================================== */
+
+/* 1. Pré-visualização: fundo branco fixo (também no modo escuro), como a
+      assinatura aparece nos clientes de e-mail */
+/*****************************************************************/
+.preview-box { border: 1px dashed var(--border-color); padding: 20px; background: #ffffff; color: #333333; border-radius: var(--radius-md); min-height: 200px; overflow-x: auto; margin-bottom: 20px; }
+
+/* 2. "Como instalar": um quadro expansível por cliente de e-mail */
+/*****************************************************************/
+.install-step { border-top: 1px solid var(--border-color); padding: 10px 0; }
+.install-step:last-child { padding-bottom: 0; }
+.install-step summary { cursor: pointer; font-weight: 600; color: var(--heading-strong); }
+.install-step .prose-list { margin-top: 10px; }
+
+/* 3. Exportar PDF: moldura e lista de dados (partes comuns em ferramentas.css, seção 9) */
+/*****************************************************************/
+@media print {
+    .print-sheet__box { padding: 18px; border: 1px solid var(--print-line); border-radius: 6px; }
+    .print-sheet__list { display: grid; grid-template-columns: max-content 1fr; gap: 6px 18px; margin: 0; font-size: 10.5pt; }
+    .print-sheet__list dt { font-weight: 700; color: var(--print-muted); }
+    .print-sheet__list dd { margin: 0; word-break: break-all; }
+}
