@@ -1,0 +1,375 @@
+<title>Hero ICP OES</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;800&family=Roboto+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: hero com o caminho óptico de um ICP OES em canvas à direita; texto à esquerda sobre um véu; abaixo, a legenda da ideia em 4 etapas do caminho da luz. */
+:root {
+  --bg: #f5f7fb;
+  --bg-rgb: 245, 247, 251;
+  --surface: #ffffff;
+  --border: #e1e7ef;
+  --heading: #274c77;
+  --heading-strong: #1b3a5e;
+  --text: #2f3747;
+  --muted: #5b6474;
+  --accent: #17738e;
+  --btn-bg: #274c77;
+  --btn-text: #ffffff;
+  --hl: #3b63a8;
+  --font-text: "Roboto", system-ui, -apple-system, "Segoe UI", Arial, sans-serif;
+  --font-mono: "Roboto Mono", ui-monospace, Menlo, Consolas, monospace;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #070b14; --bg-rgb: 7, 11, 20; --surface: #0e1522; --border: #1e2a3d;
+    --heading: #cfe0f0; --heading-strong: #e8f1fa; --text: #d3dae6; --muted: #98a3b6;
+    --accent: #5cc3dd; --btn-bg: #cce2ed; --btn-text: #0c1a2b; --hl: #9fb6ff;
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #070b14; --bg-rgb: 7, 11, 20; --surface: #0e1522; --border: #1e2a3d;
+  --heading: #cfe0f0; --heading-strong: #e8f1fa; --text: #d3dae6; --muted: #98a3b6;
+  --accent: #5cc3dd; --btn-bg: #cce2ed; --btn-text: #0c1a2b; --hl: #9fb6ff;
+  color-scheme: dark;
+}
+* { box-sizing: border-box; }
+body { background: var(--bg); color: var(--text); font-family: var(--font-text); font-size: 16px; line-height: 1.6; }
+.wrap { max-width: 1200px; margin: 0 auto; padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); }
+
+.topbar { border-bottom: 1px solid var(--border); }
+.topbar .wrap { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding-block: 14px; }
+.brand { font-weight: 700; color: var(--heading-strong); letter-spacing: .2px; }
+.theme-btn { font: 500 13px var(--font-text); color: var(--text); background: var(--surface); border: 1px solid var(--border); border-radius: 999px; padding: 6px 14px; cursor: pointer; }
+.theme-btn:focus-visible, .btn:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+
+.hero { position: relative; overflow: hidden; isolation: isolate; min-height: 620px; display: flex; align-items: center; }
+.hero canvas { position: absolute; inset: 0; width: 100%; height: 100%; display: block; z-index: -2; }
+.hero .veil { position: absolute; inset: 0; z-index: -1; pointer-events: none;
+  background:
+    linear-gradient(90deg, rgba(var(--bg-rgb), .94) 0%, rgba(var(--bg-rgb), .78) 34%, rgba(var(--bg-rgb), 0) 58%),
+    linear-gradient(0deg, rgba(var(--bg-rgb), .7) 0%, rgba(var(--bg-rgb), 0) 22%); }
+.hero .wrap { width: 100%; padding-block: 72px; }
+.hero-text { max-width: 560px; display: flex; flex-direction: column; gap: 20px; }
+.home-title { margin: 0; font-size: clamp(2.1rem, 4.6vw, 3.4rem); line-height: 1.08; font-weight: 800; color: var(--heading-strong); letter-spacing: -.5px; text-wrap: balance; }
+.home-title span { color: var(--hl); }
+.home-lead { margin: 0; font-size: 1.125rem; color: var(--muted); max-width: 34em; }
+.actions { display: flex; flex-wrap: wrap; gap: 12px; }
+.btn { display: inline-flex; align-items: center; height: 46px; padding: 0 22px; border-radius: 8px; font-weight: 500; text-decoration: none; background: var(--btn-bg); color: var(--btn-text); }
+.btn.line { background: transparent; color: var(--heading); border: 1px solid var(--border); }
+
+.readout { position: absolute; right: max(16px, env(safe-area-inset-right, 0px)); top: 24px; font: 500 12px/1.5 var(--font-mono); color: var(--muted); text-align: right; pointer-events: none; font-variant-numeric: tabular-nums; }
+.readout b { display: block; font-size: 15px; font-weight: 500; color: var(--heading-strong); }
+
+.idea { padding-block: 56px 72px; }
+.idea h2 { margin: 0 0 8px; font-size: 1.5rem; color: var(--heading-strong); text-wrap: balance; }
+.idea > .wrap > p { margin: 0 0 28px; color: var(--muted); max-width: 62ch; }
+.steps { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 24px; counter-reset: s; }
+.steps li { min-width: 0; border-top: 2px solid var(--border); padding-top: 14px; counter-increment: s; }
+.steps li::before { content: "0" counter(s); font: 500 12px var(--font-mono); color: var(--accent); letter-spacing: 1px; }
+.steps h3 { margin: 4px 0 6px; font-size: 1rem; color: var(--heading); }
+.steps p { margin: 0; font-size: .9375rem; color: var(--muted); }
+
+@media (max-width: 900px) {
+  .steps { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .hero { min-height: 0; align-items: flex-start; }
+  .hero .veil { background: linear-gradient(180deg, rgba(var(--bg-rgb), .92) 0%, rgba(var(--bg-rgb), .8) 55%, rgba(var(--bg-rgb), 0) 68%); }
+  .hero .wrap { padding-top: 40px; padding-bottom: min(92vw, 400px); }
+  .readout { top: auto; bottom: 10px; }
+}
+@media (max-width: 520px) { .steps { grid-template-columns: minmax(0, 1fr); } .readout { left: max(16px, env(safe-area-inset-left, 0px)); text-align: left; } }
+</style>
+
+<header class="topbar">
+  <div class="wrap">
+    <span class="brand">Floriatan Santos Costa</span>
+    <button class="theme-btn" id="themeBtn" type="button">Alternar tema</button>
+  </div>
+</header>
+
+<section class="hero" aria-labelledby="home-title">
+  <canvas id="icpField" aria-hidden="true"></canvas>
+  <div class="veil"></div>
+  <div class="wrap">
+    <div class="hero-text">
+      <h1 id="home-title" class="home-title">Entre tubos, dados e algoritmos, <span>um pesquisador em busca de respostas!</span></h1>
+      <p class="home-lead">A ciência é um universo de possibilidades. Entre tubos, curvas analíticas, espectrômetros e dados, sigo rastros invisíveis que contam histórias e revelam os mistérios da natureza.</p>
+      <div class="actions">
+        <a class="btn" href="#ideia">Ver publicações</a>
+        <a class="btn line" href="#ideia">Baixar CV</a>
+      </div>
+    </div>
+  </div>
+  <div class="readout" id="readout" aria-hidden="true"><b>Cu I · 324,754 nm</b>linha de emissão · ICP OES</div>
+</section>
+
+<section class="idea" id="ideia">
+  <div class="wrap">
+    <h2>A ideia: o caminho da luz num ICP OES</h2>
+    <p>O fundo do hero mostra o que acontece dentro do espectrômetro. Passe o cursor sobre o arco para ler as linhas; parado, o equipamento varre os elementos sozinho.</p>
+    <ol class="steps">
+      <li><h3>Plasma de argônio</h3><p>A tocha com a bobina de indução tremula à direita e emite luz policromática, com núcleo branco e bordas azul e rosa.</p></li>
+      <li><h3>Fenda e rede</h3><p>O feixe branco passa pela fenda de entrada e chega à rede de difração côncava, que o decompõe.</p></li>
+      <li><h3>Círculo de Rowland</h3><p>O leque do espectro se abre do UV (165 nm) ao vermelho (780 nm) sobre o arco dos detectores, com escala em nm.</p></li>
+      <li><h3>Linhas de emissão</h3><p>Cada raio é uma linha real de um elemento (Zn 213,857; Cd 228,802; Na 588,995…). A altura do pico mostra o sinal.</p></li>
+    </ol>
+  </div>
+</section>
+
+<script>
+(function () {
+  var cv = document.getElementById("icpField"), ctx = cv.getContext("2d");
+  var readout = document.getElementById("readout");
+  var reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  var L0 = 165, L1 = 780;
+
+  // Linhas de emissão usadas em ICP OES (nm) e sinal relativo ilustrativo.
+  var LINES = [
+    { el: "As", ion: "I",  nm: 188.979, I: .35 }, { el: "Se", ion: "I",  nm: 196.026, I: .30 },
+    { el: "Zn", ion: "I",  nm: 213.857, I: .80 }, { el: "Pb", ion: "II", nm: 220.353, I: .45 },
+    { el: "Cd", ion: "II", nm: 228.802, I: .70 }, { el: "Ni", ion: "II", nm: 231.604, I: .50 },
+    { el: "Mn", ion: "II", nm: 257.610, I: .85 }, { el: "Fe", ion: "II", nm: 259.940, I: .75 },
+    { el: "Cr", ion: "II", nm: 267.716, I: .60 }, { el: "Mg", ion: "II", nm: 279.553, I: 1.0 },
+    { el: "Mg", ion: "I",  nm: 285.213, I: .55 }, { el: "Cu", ion: "I",  nm: 324.754, I: .80 },
+    { el: "Ca", ion: "II", nm: 393.366, I: .95 }, { el: "Al", ion: "I",  nm: 396.152, I: .55 },
+    { el: "Sr", ion: "II", nm: 407.771, I: .70 }, { el: "Ba", ion: "II", nm: 455.403, I: .75 },
+    { el: "Na", ion: "I",  nm: 588.995, I: .90 }, { el: "Na", ion: "I",  nm: 589.592, I: .60 },
+    { el: "H",  ion: "α",  nm: 656.279, I: .50 }, { el: "Li", ion: "I",  nm: 670.784, I: .65 },
+    { el: "K",  ion: "I",  nm: 766.491, I: .60 }
+  ];
+  var ORDER = ["Zn", "Cd", "Pb", "Mn", "Fe", "Mg", "Cu", "Ca", "Sr", "Ba", "Na", "Li", "K", "As", "Se", "Ni", "Cr", "Al", "H"];
+  LINES.forEach(function (l) { l.act = 0; l.rgb = wl2rgb(l.nm); });
+
+  function clamp(x) { return Math.max(0, Math.min(1, x)); }
+  // Comprimento de onda → cor; abaixo de 380 nm (UV) usa um lilás convencional.
+  function wl2rgb(w) {
+    var r = 0, g = 0, b = 0, f = 1;
+    if (w < 380) { var t = clamp((w - L0) / (380 - L0)); return [Math.round(150 - 20 * t), Math.round(130 - 80 * t), Math.round(215 - 5 * t)]; }
+    if (w < 440) { r = -(w - 440) / 60; b = 1; }
+    else if (w < 490) { g = (w - 440) / 50; b = 1; }
+    else if (w < 510) { g = 1; b = -(w - 510) / 20; }
+    else if (w < 580) { r = (w - 510) / 70; g = 1; }
+    else if (w < 645) { r = 1; g = -(w - 645) / 65; }
+    else { r = 1; }
+    if (w < 420) f = .45 + .55 * (w - 380) / 40; else if (w > 700) f = .45 + .55 * (780 - w) / 80;
+    function s(c) { return Math.round(255 * Math.pow(clamp(c * f), .8)); }
+    return [s(r), s(g), s(b)];
+  }
+  function rgba(c, a) { return "rgba(" + c[0] + "," + c[1] + "," + c[2] + "," + a.toFixed(3) + ")"; }
+
+  var W = 1, H = 1, dpr = 1, G = {}, fan = null, dark = false;
+  var A0 = 200 * Math.PI / 180, A1 = 338 * Math.PI / 180; // arco do detector: UV à esquerda, vermelho à direita
+  function ang(nm) { return A0 + (nm - L0) / (L1 - L0) * (A1 - A0); }
+  function onArc(a, r) { return { x: G.cx + Math.cos(a) * r, y: G.cy + Math.sin(a) * r }; }
+
+  function isDark() {
+    var t = document.documentElement.getAttribute("data-theme");
+    if (t) return t === "dark";
+    return window.matchMedia("(prefers-color-scheme: dark)").matches;
+  }
+
+  function layout() {
+    var r = cv.getBoundingClientRect();
+    W = Math.max(1, r.width); H = Math.max(1, r.height);
+    dpr = Math.min(window.devicePixelRatio || 1, 2);
+    cv.width = Math.round(W * dpr); cv.height = Math.round(H * dpr);
+    dark = isDark();
+    var narrow = W < 900;
+    G.R = narrow ? Math.min(W * .34, 150) : Math.min(H * .36, W * .2);
+    G.cx = narrow ? W * .42 : W * .64;
+    G.cy = narrow ? H - G.R - 40 : H * .5;
+    G.grA = 100 * Math.PI / 180; G.gr = onArc(G.grA, G.R);          // rede de difração
+    G.slA = 12 * Math.PI / 180; G.sl = onArc(G.slA, G.R);           // fenda de entrada
+    var d = G.R * (narrow ? .55 : .9);
+    G.pl = { x: G.sl.x + Math.cos(G.slA) * d, y: G.sl.y + Math.sin(G.slA) * d };
+    buildFan();
+  }
+
+  // Leque do espectro pré-renderizado: fatias finas da rede até o arco, com máscara radial.
+  function buildFan() {
+    fan = document.createElement("canvas"); fan.width = cv.width; fan.height = cv.height;
+    var f = fan.getContext("2d"); f.setTransform(dpr, 0, 0, dpr, 0, 0);
+    for (var w = L0; w < L1; w += 1.5) {
+      var p = onArc(ang(w), G.R), q = onArc(ang(w + 1.8), G.R), c = wl2rgb(w);
+      f.fillStyle = rgba(c, w < 380 ? .75 : 1);
+      f.beginPath(); f.moveTo(G.gr.x, G.gr.y); f.lineTo(p.x, p.y); f.lineTo(q.x, q.y); f.closePath(); f.fill();
+    }
+    f.globalCompositeOperation = "destination-in";
+    var m = f.createRadialGradient(G.gr.x, G.gr.y, 0, G.gr.x, G.gr.y, G.R * 2);
+    m.addColorStop(0, "rgba(0,0,0,.05)"); m.addColorStop(.55, "rgba(0,0,0,.45)"); m.addColorStop(1, "rgba(0,0,0,1)");
+    f.fillStyle = m; f.fillRect(0, 0, W, H);
+  }
+
+  // Cursor
+  var ptr = { on: false, t: 0, el: null, nm: null };
+  function pick(x, y) {
+    var r = cv.getBoundingClientRect(); x -= r.left; y -= r.top;
+    var dx = x - G.cx, dy = y - G.cy, dist = Math.hypot(dx, dy);
+    if (dist < G.R * .45 || dist > G.R * 1.5) { ptr.on = false; return; }
+    var a = Math.atan2(dy, dx); if (a < 0) a += Math.PI * 2;
+    if (a < A0 - .05 || a > A1 + .05) { ptr.on = false; return; }
+    var best = null, bd = 1e9;
+    LINES.forEach(function (l) { var d = Math.abs(ang(l.nm) - a); if (d < bd) { bd = d; best = l; } });
+    ptr.on = true; ptr.t = performance.now();
+    ptr.el = bd < .06 ? best.el : null; ptr.line = bd < .06 ? best : null;
+    ptr.nm = L0 + (a - A0) / (A1 - A0) * (L1 - L0);
+    if (reduce) draw(performance.now());
+  }
+  window.addEventListener("pointermove", function (e) { pick(e.clientX, e.clientY); }, { passive: true });
+  window.addEventListener("pointerdown", function (e) { pick(e.clientX, e.clientY); }, { passive: true });
+  window.addEventListener("resize", function () { layout(); if (reduce) draw(performance.now()); });
+  new MutationObserver(function () { layout(); if (reduce) draw(performance.now()); }).observe(document.documentElement, { attributes: true, attributeFilter: ["data-theme"] });
+  window.matchMedia("(prefers-color-scheme: dark)").addEventListener("change", function () { layout(); if (reduce) draw(performance.now()); });
+
+  var lastLabel = "";
+  function setReadout(l, nm) {
+    var txt = l ? l.el + " " + l.ion + " · " + l.nm.toLocaleString("pt-BR", { minimumFractionDigits: 3 }) + " nm"
+                : "λ " + nm.toLocaleString("pt-BR", { maximumFractionDigits: 1, minimumFractionDigits: 1 }) + " nm";
+    var sub = l ? "linha de emissão · ICP OES" : (nm < 380 ? "região UV" : "região visível");
+    var key = txt + sub; if (key === lastLabel) return; lastLabel = key;
+    readout.innerHTML = "<b></b>"; readout.firstChild.textContent = txt; readout.appendChild(document.createTextNode(sub));
+  }
+
+  function plasma(t) {
+    var P = G.pl, s = G.R, flick = reduce ? 1 : 1 + .05 * Math.sin(t * 7.3) + .035 * Math.sin(t * 13.1 + 1) + .02 * Math.sin(t * 29);
+    var a = Math.atan2(G.sl.y - P.y, G.sl.x - P.x);
+    ctx.save(); ctx.translate(P.x, P.y); ctx.rotate(a);
+    var Lt = s * .6, tw = s * .1;
+    // tubo de quartzo
+    ctx.strokeStyle = dark ? "rgba(200,215,240,.22)" : "rgba(39,76,119,.25)"; ctx.lineWidth = 1;
+    ctx.beginPath(); ctx.moveTo(-Lt * 1.4, -tw); ctx.lineTo(-Lt * .15, -tw); ctx.moveTo(-Lt * 1.4, tw); ctx.lineTo(-Lt * .15, tw); ctx.stroke();
+    // plasma
+    ctx.globalCompositeOperation = dark ? "lighter" : "source-over";
+    function blob(x, rx, ry, stops) {
+      ctx.save(); ctx.translate(x, 0); ctx.scale(rx, ry);
+      var g = ctx.createRadialGradient(0, 0, 0, 0, 0, 1);
+      stops.forEach(function (st) { g.addColorStop(st[0], st[1]); });
+      ctx.fillStyle = g; ctx.beginPath(); ctx.arc(0, 0, 1, 0, Math.PI * 2); ctx.fill(); ctx.restore();
+    }
+    blob(-Lt * .55, Lt * .95 * flick, tw * 3.2, [[0, dark ? "rgba(140,150,255,.35)" : "rgba(59,99,168,.22)"], [1, "rgba(80,90,200,0)"]]);
+    blob(-Lt * .5, Lt * .75 * flick, tw * 1.25, [[0, dark ? "rgba(255,255,255,.95)" : "rgba(235,240,255,1)"], [.45, dark ? "rgba(200,205,255,.7)" : "rgba(150,165,235,.85)"], [1, "rgba(120,130,240,0)"]]);
+    blob(-Lt * .02, tw * 1.1, tw * 1.9 * flick, [[0, "rgba(90,200,255,.85)"], [1, "rgba(60,150,255,0)"]]);
+    blob(Lt * .08, tw * .8, tw * 2.3 * flick, [[0, "rgba(255,70,150,.75)"], [1, "rgba(255,60,140,0)"]]);
+    ctx.globalCompositeOperation = "source-over";
+    // bobina de indução
+    ctx.lineWidth = Math.max(2, tw * .45);
+    for (var i = 0; i < 3; i++) {
+      var x = -Lt * (.32 + i * .26);
+      ctx.strokeStyle = dark ? "rgba(70,62,72,.95)" : "rgba(120,86,60,.75)";
+      ctx.beginPath(); ctx.ellipse(x, 0, tw * .5, tw * 2.4, 0, Math.PI * .5, Math.PI * 1.5); ctx.stroke();
+      ctx.strokeStyle = dark ? "rgba(150,120,110,.9)" : "rgba(184,120,70,.9)";
+      ctx.beginPath(); ctx.ellipse(x, 0, tw * .5, tw * 2.4, 0, -Math.PI * .5, Math.PI * .5); ctx.stroke();
+    }
+    ctx.restore();
+  }
+
+  var scanI = 0, scanT = 0, phot = 0;
+  function draw(now) {
+    var t = reduce ? 0 : now / 1000;
+    ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+    ctx.clearRect(0, 0, W, H);
+    var ink = dark ? [210, 225, 245] : [39, 76, 119];
+
+    // elemento ativo: cursor ou varredura automática
+    var useP = ptr.on && performance.now() - ptr.t < 2500;
+    if (!useP && !reduce && now - scanT > 1700) { scanT = now; scanI = (scanI + 1) % ORDER.length; }
+    var activeEl = useP ? ptr.el : (reduce ? "Cu" : ORDER[scanI]);
+    LINES.forEach(function (l) { var tg = l.el === activeEl ? 1 : 0; l.act += (tg - l.act) * (reduce ? 1 : .08); });
+
+    // círculo de Rowland
+    ctx.strokeStyle = rgba(ink, .12); ctx.lineWidth = 1;
+    ctx.beginPath(); ctx.arc(G.cx, G.cy, G.R, 0, Math.PI * 2); ctx.stroke();
+
+    // leque
+    ctx.globalAlpha = (dark ? .42 : .3) * (reduce ? 1 : .92 + .08 * Math.sin(t * .9));
+    ctx.drawImage(fan, 0, 0, W, H); ctx.globalAlpha = 1;
+
+    // feixe policromático: plasma → fenda → rede
+    var beam = dark ? [255, 255, 255] : [27, 58, 94];
+    ctx.strokeStyle = rgba(beam, dark ? .75 : .55); ctx.lineWidth = 1.4;
+    ctx.beginPath(); ctx.moveTo(G.pl.x, G.pl.y); ctx.lineTo(G.sl.x, G.sl.y); ctx.lineTo(G.gr.x, G.gr.y); ctx.stroke();
+    // fótons no feixe
+    if (!reduce) {
+      phot = (t * .35) % 1;
+      for (var k = 0; k < 4; k++) {
+        var u = (phot + k / 4) % 1, a1 = Math.hypot(G.sl.x - G.pl.x, G.sl.y - G.pl.y), a2 = Math.hypot(G.gr.x - G.sl.x, G.gr.y - G.sl.y), d = u * (a1 + a2), px, py;
+        if (d < a1) { px = G.pl.x + (G.sl.x - G.pl.x) * d / a1; py = G.pl.y + (G.sl.y - G.pl.y) * d / a1; }
+        else { var e = (d - a1) / a2; px = G.sl.x + (G.gr.x - G.sl.x) * e; py = G.sl.y + (G.gr.y - G.sl.y) * e; }
+        ctx.fillStyle = rgba(beam, .9); ctx.beginPath(); ctx.arc(px, py, 1.8, 0, Math.PI * 2); ctx.fill();
+      }
+    }
+
+    // fenda
+    var tn = G.slA + Math.PI / 2;
+    ctx.strokeStyle = rgba(ink, .7); ctx.lineWidth = 2;
+    [[-1, -.35], [.35, 1]].forEach(function (seg) {
+      ctx.beginPath(); ctx.moveTo(G.sl.x + Math.cos(tn) * G.R * .06 * seg[0], G.sl.y + Math.sin(tn) * G.R * .06 * seg[0]);
+      ctx.lineTo(G.sl.x + Math.cos(tn) * G.R * .06 * seg[1], G.sl.y + Math.sin(tn) * G.R * .06 * seg[1]); ctx.stroke();
+    });
+
+    // raios das linhas de emissão
+    if (dark) ctx.globalCompositeOperation = "lighter";
+    LINES.forEach(function (l) {
+      var p = onArc(ang(l.nm), G.R);
+      ctx.strokeStyle = rgba(l.rgb, (dark ? .16 : .3) + .8 * l.act);
+      ctx.lineWidth = .8 + 1.4 * l.act;
+      ctx.beginPath(); ctx.moveTo(G.gr.x, G.gr.y); ctx.lineTo(p.x, p.y); ctx.stroke();
+      if (l.act > .05 && !reduce) {
+        var u = (t * .9 + l.nm) % 1;
+        ctx.fillStyle = rgba(dark ? [255, 255, 255] : l.rgb, l.act);
+        ctx.beginPath(); ctx.arc(G.gr.x + (p.x - G.gr.x) * u, G.gr.y + (p.y - G.gr.y) * u, 2, 0, Math.PI * 2); ctx.fill();
+      }
+    });
+    ctx.globalCompositeOperation = "source-over";
+
+    // arco dos detectores, escala em nm e picos de sinal
+    ctx.strokeStyle = rgba(ink, .55); ctx.lineWidth = 2;
+    ctx.beginPath(); ctx.arc(G.cx, G.cy, G.R, A0, A1); ctx.stroke();
+    ctx.font = "500 10px 'Roboto Mono', ui-monospace, monospace"; ctx.textAlign = "center"; ctx.textBaseline = "middle";
+    for (var w = 200; w <= 750; w += 50) {
+      var a = ang(w), big = w % 100 === 0, p0 = onArc(a, G.R), p1 = onArc(a, G.R - (big ? 8 : 4));
+      ctx.strokeStyle = rgba(ink, .5); ctx.lineWidth = 1;
+      ctx.beginPath(); ctx.moveTo(p0.x, p0.y); ctx.lineTo(p1.x, p1.y); ctx.stroke();
+      if (big && G.R > 110) { var pl = onArc(a, G.R - 20); ctx.fillStyle = rgba(ink, .6); ctx.fillText(String(w), pl.x, pl.y); }
+    }
+    LINES.forEach(function (l) {
+      var a = ang(l.nm), n = reduce ? 0 : .06 * Math.sin(t * 3 + l.nm), h = G.R * .22 * l.I * (.55 + .45 * l.act + n);
+      var p0 = onArc(a, G.R + 3), p1 = onArc(a, G.R + 3 + h);
+      ctx.strokeStyle = rgba(l.rgb, .5 + .5 * l.act); ctx.lineWidth = 1.5 + l.act;
+      ctx.beginPath(); ctx.moveTo(p0.x, p0.y); ctx.lineTo(p1.x, p1.y); ctx.stroke();
+      if (l.act > .3) {
+        var pt = onArc(a, G.R + 16 + h);
+        ctx.font = "700 13px 'Roboto', system-ui, sans-serif"; ctx.fillStyle = rgba(ink, l.act);
+        ctx.fillText(l.el, pt.x, pt.y);
+      }
+    });
+
+    // rede de difração
+    var gt = G.grA + Math.PI / 2, gw = G.R * .09;
+    ctx.save(); ctx.translate(G.gr.x, G.gr.y); ctx.rotate(gt);
+    ctx.fillStyle = dark ? "#1a2232" : "#c7d3e2"; ctx.fillRect(-gw, -3, gw * 2, 7);
+    ctx.strokeStyle = rgba(ink, .6); ctx.lineWidth = .6;
+    for (var x = -gw + 2; x < gw; x += 3) { ctx.beginPath(); ctx.moveTo(x, -3); ctx.lineTo(x, 0); ctx.stroke(); }
+    ctx.restore();
+
+    plasma(t);
+
+    // leitura
+    var shown = useP ? (ptr.line || null) : LINES.filter(function (l) { return l.el === activeEl; })[0];
+    setReadout(shown, useP ? ptr.nm : (shown ? shown.nm : 500));
+
+    if (!reduce) requestAnimationFrame(draw);
+  }
+
+  // Botão de tema do protótipo
+  document.getElementById("themeBtn").addEventListener("click", function () {
+    var next = isDark() ? "light" : "dark";
+    document.documentElement.setAttribute("data-theme", next);
+  });
+
+  layout();
+  if (reduce) draw(performance.now()); else requestAnimationFrame(draw);
+})();
+</script>
