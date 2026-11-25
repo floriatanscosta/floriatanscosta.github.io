@@ -16,7 +16,7 @@
     {"id": "orcid", "label": "ORCID", "url": "https://orcid.org/0000-0001-7766-2860", "icon": "orcid.svg", "handle": "0000-0001-7766-2860"},
     {"id": "scholar", "label": "Google Scholar", "url": "https://scholar.google.com/citations?user=EbyxxAoAAAAJ", "icon": "academico.svg", "handle": "EbyxxAoAAAAJ"},
     {"id": "researchgate", "label": "ResearchGate", "url": "https://www.researchgate.net/profile/Floriatan-Costa", "icon": "rg.svg", "handle": "Floriatan-Costa"},
-    {"id": "lattes", "label": "Lattes", "url": "http://lattes.cnpq.br/0287106268880389", "icon": "lattes.svg", "handle": "0287106268880389"},
+    {"id": "lattes", "label": "Lattes", "url": "https://busca-cv-lattes.cnpq.br/curriculo/0287106268880389", "icon": "lattes.svg", "handle": "0287106268880389"},
     {"id": "linkedin", "label": "LinkedIn", "url": "https://www.linkedin.com/in/floriatanscosta/", "icon": "linkedin.svg", "handle": "floriatanscosta"}
   ],
 

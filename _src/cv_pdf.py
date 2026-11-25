@@ -17,7 +17,7 @@ import os, re, subprocess, sys
 from datetime import date
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
-import build  # noqa: E402  (reaproveita dados, textos e funções do gerador do site)
+import build  # reaproveita dados, textos e funções do gerador do site
 
 from reportlab.lib import colors
 from reportlab.lib.enums import TA_LEFT
