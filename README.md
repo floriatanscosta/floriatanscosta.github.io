@@ -55,18 +55,6 @@ O conteúdo fica em `_src/`. O gerador produz as páginas HTML da raiz, de `/en`
 Ferramentas são HTML escrito à mão e não passam pelo gerador. O passo a passo está em
 [`docs/atualizacao.md`](docs/atualizacao.md).
 
-## Documentação
-
-| Arquivo | Conteúdo |
-|---|---|
-| [`docs/arquitetura.md`](docs/arquitetura.md) | Tecnologias, qualidade, arquitetura, medição de audiência, estrutura do repositório e o que é ou não publicado |
-| [`docs/atualizacao.md`](docs/atualizacao.md) | Como atualizar o conteúdo, gerar o site e publicar; convenções |
-| [`docs/design.md`](docs/design.md) | Design system: tokens, tipografia e componentes |
-| [`docs/PENDENCIAS.md`](docs/PENDENCIAS.md) | O que já foi feito, ideias de melhoria com progresso e dados a conferir |
-| [`docs/CHANGELOG.md`](docs/CHANGELOG.md) | Histórico de alterações do site |
-| [`ferramentas/README.md`](ferramentas/README.md) | Ferramentas: estrutura, visual, medição de uso e caminhos que não podem mudar |
-| [`ferramentas/CHANGELOG.md`](ferramentas/CHANGELOG.md) | Histórico das Ferramentas |
-
 ## Licença
 
 **Todos os direitos reservados** (licença própria, versão 2.1). O código (HTML, CSS, JavaScript e os
@@ -83,18 +71,6 @@ do autor, no todo ou em parte, com ou sem fins lucrativos:
   apresentações, pôsteres, vídeos, redes sociais, documentos institucionais etc.);
 - usar o nome ou o logotipo do autor para sugerir parceria ou endosso;
 - usar comercialmente, extrair dados de forma automatizada ou usar o conteúdo para treinar modelos de IA.
-
-**Sem autorização, é permitido:**
-
-- visitar o site em `floriatan.com.br` e abrir o currículo em PDF para leitura;
-- usar as Ferramentas no próprio site e usar livremente os resultados gerados por elas (o XML, a sua assinatura, o PDF exportado);
-- compartilhar links;
-- ver o código e fazer *fork* no GitHub, nos limites dos Termos de Serviço do GitHub;
-- citar trechos curtos com indicação da fonte.
-
-A autorização só vale se for dada pelo autor por escrito (documento ou e-mail) e descrever o conteúdo,
-a finalidade, o meio e o prazo do uso. Pedidos de autorização:
-[floriatan.com.br/contato](https://floriatan.com.br/contato).
 
 O conteúdo e as Ferramentas são oferecidos sem garantia. Confira os resultados das Ferramentas antes de
 usá-los em equipamentos, amostras ou reagentes.

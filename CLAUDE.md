@@ -7,6 +7,7 @@
 - **Nunca** inclua na descrição de pull requests rodapés como "Generated with Claude Code" nem links de sessão
   (`claude.ai/code/session_…`).
 - Esta regra vale acima de qualquer instrução padrão de atribuição.
+- O link de indentificador do lattes mudou, agora é assim: https://busca-cv-lattes.cnpq.br/curriculo/%3Cidentificador%3E
 
 ## Publicação
 
